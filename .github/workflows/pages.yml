@@ -1,0 +1,102 @@
+name: Publish docs + PDFs (release)
+
+on:
+  push:
+    tags:
+      - "v*"
+  release:
+    types: [published]    
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    env:
+      MKDOCS_MATERIAL_CACHE_DIR: .cache
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # Derive version from tag name vX.Y.Z -> X.Y.Z
+      - name: Compute version
+        id: ver
+        shell: bash
+        run: |
+          TAG="${GITHUB_REF_NAME}"
+          echo "tag=${TAG}" >> "$GITHUB_OUTPUT"
+          echo "version=${TAG#v}" >> "$GITHUB_OUTPUT"
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Cache MkDocs Material assets
+        uses: actions/cache@v4
+        with:
+          key: mkdocs-material-${{ runner.os }}-${{ hashFiles('requirements.txt') }}
+          path: .cache
+          restore-keys: |
+            mkdocs-material-${{ runner.os }}-
+
+      - name: Install Python requirements (via Makefile)
+        run: make install_deps
+
+      - name: Configure git identity
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+
+      # --- Build & publish HTML (versioned) ---
+      - name: Deploy MkDocs with mike (versioned) via Makefile
+        run: make ci_mike_deploy VERSION=${{ steps.ver.outputs.version }}
+
+      # --- Build PDFs + ZIP ---
+      - name: Install Pandoc + LaTeX (for Eisvogel)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            pandoc \
+            texlive-xetex \
+            texlive-latex-extra \
+            texlive-fonts-recommended \
+            zip
+
+      - name: Build PDF (via Makefile)
+        run: make pdf VERSION=${{ steps.ver.outputs.version }}
+
+      - name: Zip PDFs (via Makefile)
+        run: make dist VERSION=${{ steps.ver.outputs.version }}
+
+      # --- Upload artifacts (Actions) ---
+      - name: Upload PDFs (artifact)
+        uses: actions/upload-artifact@v4
+        with:
+          name: fcaf-pdfs-${{ steps.ver.outputs.tag }}
+          path: build/pdf/*.pdf
+
+      - name: Upload ZIP (artifact)
+        uses: actions/upload-artifact@v4
+        with:
+          name: fcaf-pdfs-zip-${{ steps.ver.outputs.tag }}
+          path: build/dist/*.zip
+
+      # --- Attach to GitHub Release ---
+      - name: Upload assets to GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.ver.outputs.tag }}
+          files: |
+            build/pdf/*.pdf
+            build/dist/*.zip

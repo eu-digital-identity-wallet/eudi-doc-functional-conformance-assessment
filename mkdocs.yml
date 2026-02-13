@@ -1,0 +1,83 @@
+site_name: European Digital Identity - Functional Conformance Assessment
+site_description: Documentation for the Functional Conformance Assessment Framework (FCAF)
+site_author: European Commission - DG CNECT
+
+repo_url: https://github.com/eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment
+repo_name: eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment
+site_url: https://conformance.eudi.dev
+
+theme:
+  name: material
+
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.path
+    - navigation.top
+    - toc.integrate
+    - toc.follow
+
+  icon:
+    repo: fontawesome/brands/github
+
+  logo: media/logo_eudi_white.svg
+  favicon: media/favicon.ico
+
+extra_css:
+  - media/extra.css
+
+markdown_extensions:
+  - footnotes
+  - sane_lists
+  - tables
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid_custom
+nav:
+  - Home: index.md
+
+  - Overview:
+      - Introduction: overview/index.md
+
+  - Functional Conformance Assessment Framework (FCAF):
+      - Overview: fcaf/index.md
+
+      - Test Suites by SUTs:
+          - Overview: fcaf/suts/index.md
+          - Wallet Solution (SUT):
+              - Overview: fcaf/suts/wallet_solution/index.md
+              - Test Classes:
+                  - Wallet_Verifier: fcaf/suts/wallet_solution/Wallet_Verifier/wallet_verifier.md
+                  - Wallet_Issuer: fcaf/suts/wallet_solution/Wallet_Issuer/wallet_issuer.md
+                  - Wallet_Infrastructure: fcaf/suts/wallet_solution/Wallet_Infrastructure/wallet_infrastructure.md
+                  - Wallet_UI: fcaf/suts/wallet_solution/Wallet_UI/wallet_ui.md
+
+      - Templates:
+          - Overview: fcaf/templates/index.md
+          - Test spec template: fcaf/templates/test-spec-template.md
+
+extra:
+  version:
+    provider: mike
+    alias: true
+
+plugins:
+  - mike
+  - tags
+  - privacy
+  - social
+  - mermaid2

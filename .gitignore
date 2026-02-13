@@ -1,0 +1,14 @@
+# MkDocs build output
+site/
+.cache
+
+# Pandoc build output
+build/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# OS junk
+.DS_Store
