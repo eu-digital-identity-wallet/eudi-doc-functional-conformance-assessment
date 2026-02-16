@@ -142,28 +142,30 @@ The roadmap provides a **high-level orientation only** and should not be interpr
 timeline
   title FCAF Roadmap (Indicative)
 
-  Calendar Week 7 : Initial FCAF in GitHub (MkDocs/Markdown)
+  Week 7 : Initial FCAF in GitHub (MkDocs/Markdown)
       : Initial content, test structure, roadmap
       : Change/version management procedures
       : Delivery pipeline (incl. PDF generation)
       : High-level guidance
-      : Release v0.0.1 (website/GitHub)
+      : Release v0.0.1 (GitHub)
 
-  Calendar Week 15 (early April) : MVP FCAF (presentation & verification)
+  Week 8 : Public website online
+
+  Week 15 (early April) : MVP FCAF (presentation & verification)
       : PIDs & attestations focus
       : Test objectives, test specifications, test data, profiles
       : Traceability to functional requirements
       : ICS template for pilot assessments with CABs
 
-  Calendar Week 18 (end of April) : FCAF refinement: issuance coverage
+  Week 18 (end of April) : FCAF refinement: issuance coverage
       : Add issuance of PIDs & attestations
       : Focus meeting on MVP of FCAF
 
-  Calendar Week 28 (early July) : Refinement: critical/major functional requirements
+  Week 28 (early July) : Refinement: critical/major functional requirements
       : Include remote qualified electronic signatures (rQES)
       : Major release v1.0.0 planned for public review
 
-  Calendar Week 31 (end of July) : Focus meeting on FCAF v1.0.0
+  Week 31 (end of July) : Focus meeting on FCAF v1.0.0
 
   Q3–Q4 : Incremental refinement & transition
       : Refine based on gap analysis, pilots, Cooperation Group feedback
