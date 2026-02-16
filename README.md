@@ -9,8 +9,8 @@ The latest **authoritative version** is available via the\
 [GitHub Releases
 page](https://github.com/eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment/releases).
 
-An **online rendered version** of the documentation is published at:
-https://conformance.eudi.dev
+An **online rendered version** of the documentation will be published at:
+https://conformance.eudi.dev (in W8 2026).
 
 The documentation is:
 
