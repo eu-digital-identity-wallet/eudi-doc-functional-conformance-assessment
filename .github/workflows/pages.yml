@@ -5,37 +5,106 @@ on:
     tags:
       - "v*"
   release:
-    types: [published]    
+    types: [published]
   workflow_dispatch:
+    inputs:
+      tag:
+        description: "Tag to build (e.g., v0.1.0)"
+        required: true
 
 permissions:
   contents: write
 
 concurrency:
   group: "pages"
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   publish:
     runs-on: ubuntu-latest
+
     env:
       MKDOCS_MATERIAL_CACHE_DIR: .cache
 
     steps:
+      # ------------------------------------------------------------
+      # Checkout
+      # ------------------------------------------------------------
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      # Derive version from tag name vX.Y.Z -> X.Y.Z
+      # ------------------------------------------------------------
+      # Compute version
+      # ------------------------------------------------------------
       - name: Compute version
         id: ver
         shell: bash
         run: |
-          TAG="${GITHUB_REF_NAME}"
+          set -euo pipefail
+
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            TAG="${{ inputs.tag }}"
+          elif [ "${{ github.event_name }}" = "release" ]; then
+            TAG="${{ github.event.release.tag_name }}"
+          else
+            TAG="${GITHUB_REF_NAME}"
+          fi
+
+          if [[ ! "$TAG" =~ ^v[0-9]+(\.[0-9]+)*([\-+].*)?$ ]]; then
+            echo "ERROR: Expected tag like vX.Y.Z, got: '$TAG'"
+            exit 1
+          fi
+
           echo "tag=${TAG}" >> "$GITHUB_OUTPUT"
           echo "version=${TAG#v}" >> "$GITHUB_OUTPUT"
 
+      # ------------------------------------------------------------
+      # System deps (Pandoc, LaTeX, SVG tools, fonts, zip)
+      # - NO Chromium install (we render mermaid via Docker image)
+      # ------------------------------------------------------------
+      - name: Install system deps (PDF + SVG)
+        shell: bash
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            pandoc \
+            texlive-xetex \
+            texlive-latex-extra \
+            texlive-fonts-recommended \
+            texlive-fonts-extra \
+            zip \
+            librsvg2-bin \
+            fonts-noto \
+            fonts-noto-color-emoji
+
+      # ------------------------------------------------------------
+      # Provide "mmdc" via mermaid-cli Docker image (no browser install)
+      # ------------------------------------------------------------
+      - name: Provide mmdc via Docker (mermaid-cli)
+        shell: bash
+        run: |
+          mkdir -p .ci/bin
+          cat > .ci/bin/mmdc <<'EOF'
+          #!/usr/bin/env bash
+          set -euo pipefail
+          docker run --rm \
+            -u "$(id -u):$(id -g)" \
+            -v "$PWD:/data" \
+            -w /data \
+            ghcr.io/mermaid-js/mermaid-cli/mermaid-cli:latest \
+            "$@"
+          EOF
+          chmod +x .ci/bin/mmdc
+          echo "${GITHUB_WORKSPACE}/.ci/bin" >> "$GITHUB_PATH"
+
+          # Warm pull so the first render isn't paying the pull penalty mid-build
+          docker pull ghcr.io/mermaid-js/mermaid-cli/mermaid-cli:latest
+
+      # ------------------------------------------------------------
+      # Python setup
+      # ------------------------------------------------------------
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
@@ -51,35 +120,44 @@ jobs:
             mkdocs-material-${{ runner.os }}-
 
       - name: Install Python requirements (via Makefile)
+        shell: bash
         run: make install_deps
 
+      - name: Add venv to PATH
+        shell: bash
+        run: echo "${{ github.workspace }}/.venv/bin" >> $GITHUB_PATH
+
       - name: Configure git identity
+        shell: bash
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
 
-      # --- Build & publish HTML (versioned) ---
-      - name: Deploy MkDocs with mike (versioned) via Makefile
-        run: make ci_mike_deploy VERSION=${{ steps.ver.outputs.version }}
+      # ------------------------------------------------------------
+      # Build PDFs
+      # ------------------------------------------------------------
+      - name: Clean mermaid render cache
+        shell: bash
+        run: rm -rf build/mermaid
 
-      # --- Build PDFs + ZIP ---
-      - name: Install Pandoc + LaTeX (for Eisvogel)
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y \
-            pandoc \
-            texlive-xetex \
-            texlive-latex-extra \
-            texlive-fonts-recommended \
-            zip
-
-      - name: Build PDF (via Makefile)
+      - name: Build PDF
+        shell: bash
         run: make pdf VERSION=${{ steps.ver.outputs.version }}
 
-      - name: Zip PDFs (via Makefile)
+      - name: Zip PDFs
+        shell: bash
         run: make dist VERSION=${{ steps.ver.outputs.version }}
 
-      # --- Upload artifacts (Actions) ---
+      # ------------------------------------------------------------
+      # Deploy MkDocs versioned site
+      # ------------------------------------------------------------
+      - name: Deploy MkDocs with mike
+        shell: bash
+        run: make ci_mike_deploy VERSION=${{ steps.ver.outputs.version }}
+
+      # ------------------------------------------------------------
+      # Upload artifacts (Actions)
+      # ------------------------------------------------------------
       - name: Upload PDFs (artifact)
         uses: actions/upload-artifact@v4
         with:
@@ -92,8 +170,11 @@ jobs:
           name: fcaf-pdfs-zip-${{ steps.ver.outputs.tag }}
           path: build/dist/*.zip
 
-      # --- Attach to GitHub Release ---
+      # ------------------------------------------------------------
+      # Attach to GitHub Release
+      # ------------------------------------------------------------
       - name: Upload assets to GitHub Release
+        if: ${{ github.event_name != 'workflow_dispatch' }}
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ steps.ver.outputs.tag }}

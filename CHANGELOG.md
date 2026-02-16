@@ -14,3 +14,6 @@ and this project adheres to [Semantic Versioning](https://semverdoc.org/).
 ## [0.0.3]
 - Fixed PDF and website generation workflows.
 - Minor editorial changes
+
+## [0.0.4]
+- Fix PDF and website generation workflows.
