@@ -68,7 +68,7 @@ flowchart TD
 ```
 *Figure 1: Test case hierarchy*
 
-The test hierarchy is not static. While the upper levels (SUT, class, and layer) are expected to remain relatively stable, lower levels—particularly areas and groups—are expected to evolve iteratively over time to maintain balanced and manageable test coverage.
+The test hierarchy is not static. While the upper levels (SUT, class, and layer) are expected to remain relatively stable, lower levels-particularly areas and groups-are expected to evolve iteratively over time to maintain balanced and manageable test coverage.
 
 ## Approach
 
@@ -78,6 +78,7 @@ The following diagram illustrates the proposed approach to creating the test sui
 *Figure 2: Overview of FCAF Approach*
 
 The development of the Test Suites (set of Test Cases) will be done in the following phases:
+
 - **Test Structure** - designing the overall structure of the Test Suites by examining the core international standards and specifications on which EUDI wallet solutions rely.
 - **Test Objectives** – following the Test Structure to step through the individual standards and technical specifications line by line, to identify text that is testable and defining Test Objectives (i.e. a statement of what is to be tested). This phases will also include applying the profiles, as defined by ETSI and relevant EC Technical Standards, to refine the Test Objectives. This could include:
   - Removing Test Objectives that are not in scope for EUDI wallets.
@@ -221,6 +222,7 @@ Both labels are applicable; some combinations will be mutually exclusive (e.g. a
 
 Profiles identify which set of functionalities are in scope for the configuration adopted in the implementation under test (IUT). If a profile is present in a Test Case, this impacts the applicability of that Test Case. 
 
-The Test Case selection is based upon comparing the profile of the Test Case to the IUT information in the <span class="todo">ICS filled out by the applicant or tester</span>. 
+The Test Case selection is based upon comparing the profile of the Test Case to the IUT information in the <span class="todo">ICS filled out by the applicant or tester</span>:
+
 - If no profile is listed in a Test Case: The Test Case shall be executed on all IUT.
 - If one or more profiles are specified and the IUT does not match with all of the specified profiles: the Test Case shall be skipped for that IUT and shall be marked as Not Applicable in the test report.

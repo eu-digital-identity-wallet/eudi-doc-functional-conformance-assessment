@@ -1,0 +1,15 @@
+{
+  "theme": "default",
+  "flowchart": { "htmlLabels": false },
+  "sequence": { "useMaxWidth": true },
+  "gantt": { "useMaxWidth": true },
+
+  "themeVariables": {
+    "fontFamily": "Source Sans Pro, Arial, sans-serif",
+    "textColor": "#111111",
+    "primaryTextColor": "#111111",
+    "secondaryTextColor": "#111111",
+    "tertiaryTextColor": "#111111",
+    "lineColor": "#111111"
+  }
+}

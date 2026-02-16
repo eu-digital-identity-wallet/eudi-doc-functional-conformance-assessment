@@ -32,11 +32,15 @@ theme:
   icon:
     repo: fontawesome/brands/github
 
-  logo: media/logo_eudi_white.svg
-  favicon: media/favicon.ico
+  logo: media/images/logo_eudi_white.svg
+  favicon: media/images/favicon.ico
 
 extra_css:
-  - media/extra.css
+  - media/css/extra.css
+
+extra_javascript:
+  - https://unpkg.com/mermaid@10/dist/mermaid.min.js
+  - javascripts/mermaid-init.js
 
 markdown_extensions:
   - footnotes
@@ -46,7 +50,7 @@ markdown_extensions:
       custom_fences:
         - name: mermaid
           class: mermaid
-          format: !!python/name:mermaid2.fence_mermaid_custom
+          format: !!python/name:pymdownx.superfences.fence_code_format
 nav:
   - Home: index.md
 
@@ -80,4 +84,3 @@ plugins:
   - tags
   - privacy
   - social
-  - mermaid2
