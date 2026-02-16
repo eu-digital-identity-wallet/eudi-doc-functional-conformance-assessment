@@ -19,21 +19,21 @@ to support wallet certification and to improve interoperability across Member St
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](#contributing-source) in the source repository for details on our code of conduct, and the process for contributing to the FCAF.
+Please read [CONTRIBUTING.md](https://github.com/eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment/blob/main/CONTRIBUTING.md) in the source repository for details on our code of conduct, and the process for contributing to the FCAF.
 
 ## Authors
 
-See the list of [contributors](https://github.com/eu-digital-identity-wallet/eudi-functional-conformance-assessment-framework/graphs/contributors) who participated in this project.
+See the list of [contributors](https://github.com/eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment/graphs/contributors) who participated in this project.
 
 ## Versioning & changelog
 
-[SemVer](http://semver.org/) is used for versioning. For the versions available, see the [tags on this repository](https://github.com/eu-digital-identity-wallet/eudi-functional-conformance-assessment-framework/tags). Also see [CHANGELOG.md](#changelog-source) for a summary of externally visible changes between releases.
+[SemVer](http://semver.org/) is used for versioning. For the versions available, see the [tags on this repository](https://github.com/eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment/tags). Also see [CHANGELOG.md](https://github.com/eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment/blob/main/CHANGELOG.md) for a summary of externally visible changes between releases.
 
 Version numbers reflect **artefact maturity**, not immutability of the legal framework:
 
-- **v0.0.x** — Bootstrap phase (structure, orientation, initial content)
-- **v0.1.0** — MVP version, enabling CAB preparation and pilot assessments
-- **v1.0.0** — First version meeting all mandatory functional requirements under the applicable
+- **v0.0.x** - Bootstrap phase (structure, orientation, initial content)
+- **v0.1.0** - MVP version, enabling CAB preparation and pilot assessments
+- **v1.0.0** - First version meeting all mandatory functional requirements under the applicable
   Implementing Regulations, suitable for regulatory use
 
 For versions with major version `0`, the framework should be considered under active development;
@@ -42,4 +42,4 @@ are refined. Stability expectations apply from version `1.0.0` onwards.
 
 ## License
 
-See the [LICENCE.md](#license-source) file details.
+See the [LICENCE.md](https://github.com/eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment/blob/main/LICENCE.md) file details.

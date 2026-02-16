@@ -1,4 +1,4 @@
-# EUDI Functional Conformance Assessment Framework (FCAF)
+# European Digital Identity - Functional Conformance Assessment Framework (FCAF)
 
 This repository contains the **European Digital Identity (EUDI)
 Functional Conformance Assessment Framework (FCAF)** and serves as the
@@ -12,156 +12,7 @@ page](https://github.com/eu-digital-identity-wallet/eudi-doc-functional-conforma
 An **online rendered version** of the documentation will be published at:
 https://conformance.eudi.dev (in W8 2026).
 
-The documentation is:
-
--   built using **MkDocs (Material theme)**
--   versioned using **mike**
--   published via **GitHub Pages**
--   packaged into **PDF and ZIP release artefacts** using **Pandoc +
-    Eisvogel**
-
-------------------------------------------------------------------------
-
-# Repository Structure
-
-``` text
-/
-├── docs/                  ← Documentation source
-│   ├── index.md           ← Website entry page
-│   ├── fcaf/              ← FCAF specification content
-│   └── media/             ← Images and static assets
-│
-├── mkdocs.yml             ← MkDocs configuration
-├── requirements.txt       ← Python dependencies
-├── Makefile               ← Unified local + CI build interface
-│
-├── build/                 ← Generated artefacts (git-ignored)
-│   ├── pdf/
-│   └── dist/
-│
-├── .github/workflows/
-│   └── pages.yml          ← Release & publication workflow
-│
-└── README.md
-```
-
-> Generated directories such as `site/`, `build/`, `.venv/`, and
-> `.cache/` are intentionally excluded from version control.
-
-------------------------------------------------------------------------
-
-# Local Development
-
-The repository provides a **Makefile as the primary entry point** for
-local development and CI. Using the Makefile ensures a consistent
-environment and reproducible builds.
-
-## 1. Install dependencies
-
-``` bash
-make install_deps
-```
-
-This will:
-
--   create a local Python virtual environment in `.venv`
--   install all dependencies from `requirements.txt`
-
-------------------------------------------------------------------------
-
-## 2. Preview documentation locally (live reload)
-
-``` bash
-make local_serve
-```
-
-The documentation will be available at:
-
-    http://127.0.0.1:8000/
-
-Changes under `docs/` reload automatically.
-
-------------------------------------------------------------------------
-
-## 3. Build the static HTML site
-
-``` bash
-make mkdocs
-```
-
-The generated site is written to:
-
-``` text
-site/
-```
-
-------------------------------------------------------------------------
-
-## 4. Preview versioned documentation (mike)
-
-``` bash
-make local_serve_versions
-```
-
-This simulates the structure used on GitHub Pages:
-
-    /0.0.1/
-    /latest/
-
-------------------------------------------------------------------------
-
-## Direct MkDocs usage (optional)
-
-Advanced users may run MkDocs commands directly **inside the virtual
-environment**:
-
-``` bash
-mkdocs serve
-mkdocs build
-```
-
-However, the **Makefile targets are the supported entry points** and
-should be preferred.
-
-------------------------------------------------------------------------
-
-# PDF Generation (optional locally)
-
-PDF generation requires:
-
--   **Pandoc**
--   **LaTeX (xelatex)**
-
-Build PDFs:
-
-``` bash
-make pdf VERSION=0.0.1
-```
-
-Output:
-
-``` text
-build/pdf/
-```
-
-Create ZIP archive:
-
-``` bash
-make dist VERSION=0.0.1
-```
-
-Output:
-
-``` text
-build/dist/
-```
-
-> In CI, Pandoc and LaTeX are installed automatically.
-> Local PDF generation is optional.
-
-------------------------------------------------------------------------
-
-# Release & Publication Workflow
+## Release & Publication Workflow
 
 Releases are **tag-driven**.
 
@@ -193,30 +44,124 @@ ensuring:
 -   single source of truth for build logic
 -   consistent local ↔ CI behaviour
 
-------------------------------------------------------------------------
-
-# Contributing
+## Contributing
 
 See the [CONTRIBUTING](./CONTRIBUTING.md) file for details.
 
-------------------------------------------------------------------------
-
-# Authors
+## Authors
 
 See the list of [contributors](https://github.com/eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment/graphs/contributors)
 who participated in this project.
 
-------------------------------------------------------------------------
-
-# Licence
+## Licence
 
 See the [LICENCE](./LICENCE.md) file for details.
 
-------------------------------------------------------------------------
-
-# [European Commission website](https://commission.europa.eu/index_en)
+## [European Commission website](https://commission.europa.eu/index_en)
 
 * [Contact the European Commission](https://commission.europa.eu/about-european-commission/contact_en)
 * [Follow the European Commission on social media](https://european-union.europa.eu/contact-eu/social-media-channels_en#/search?page=0&institutions=european_commission)
 * [Resources for partners](https://commission.europa.eu/resources-partners_en)
 
+## Working locally
+
+### Prerequisites
+
+#### For HTML docs (MkDocs)
+
+-   Python **3.11+**
+-   `make`
+-   Git
+
+Install Python dependencies via:
+
+``` bash
+make install_deps
+```
+
+#### For PDF generation (Pandoc + XeLaTeX + Mermaid)
+
+Required tooling:
+
+-   **Pandoc**
+-   **TeX Live with XeLaTeX**
+    -   `texlive-xetex`
+    -   `texlive-latex-extra`
+    -   fonts packages
+-   **Node.js + npm**
+-   **Mermaid CLI** (`@mermaid-js/mermaid-cli`, provides `mmdc`)
+-   **Headless browser for Mermaid rendering**
+    -   Linux: `chromium` (recommended)
+    -   macOS: `chromium` or Puppeteer‑managed Chromium
+-   **SVG conversion tools**
+    -   `librsvg2-bin` → provides `rsvg-convert` (required for SVGs in
+        PDF)
+    -   *(optional)* `inkscape`
+
+> Mermaid CLI internally uses a headless browser.
+> If `mmdc` works directly on your machine, the PDF pipeline should work
+> too.
+
+### Installation examples
+
+#### Ubuntu / Debian
+
+``` bash
+sudo apt-get update
+sudo apt-get install -y   make git python3 python3-venv python3-pip   pandoc   texlive-xetex texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra   librsvg2-bin   nodejs npm   chromium   inkscape
+
+sudo npm i -g @mermaid-js/mermaid-cli
+```
+
+Optional emoji support in PDFs:
+
+``` bash
+sudo apt-get install -y fonts-noto fonts-noto-color-emoji
+```
+
+#### macOS (Homebrew)
+
+``` bash
+brew install git make python@3.11 pandoc mactex node chromium librsvg inkscape
+npm i -g @mermaid-js/mermaid-cli
+```
+
+> `mactex` is large but the most reliable way to obtain XeLaTeX.
+
+### Quick sanity checks
+
+``` bash
+python3 --version
+pandoc --version
+xelatex --version
+mmdc --version
+rsvg-convert --version
+```
+
+### Setup
+
+```bash
+make install_deps
+```
+
+### Run the docs site
+
+```bash
+make local_serve
+```
+
+### Run the versioned site locally (mike)
+
+```bash
+make local_serve_versions
+```
+
+### Build the PDF
+
+```bash
+make pdf VERSION=0.0.1
+```
+
+The generated PDF will be in:
+
+- `build/pdf/fcaf-framework.pdf`

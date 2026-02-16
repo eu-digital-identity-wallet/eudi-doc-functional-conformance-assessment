@@ -8,9 +8,14 @@ documentclass: "scrartcl"
 fontsize: "12pt"
 titlepage-rule-color: "1F3695"
 titlepage-rule-height: "3"
-titlepage-logo: "media/eu-logo.jpg"
+titlepage-logo: "media/images/eu-logo.jpg"
 logo-width: 50pt
 block-headings: true
 listings-no-page-break: true
+geometry: margin=2.5cm
+graphics: true
+header-includes:
+  - \usepackage{graphicx}
+  - \setkeys{Gin}{width=\linewidth,keepaspectratio}
 ...
 

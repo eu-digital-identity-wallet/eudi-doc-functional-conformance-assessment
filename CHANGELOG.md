@@ -10,3 +10,7 @@ and this project adheres to [Semantic Versioning](https://semverdoc.org/).
 
 ## [0.0.2]
 - Corrected timeline for public facing website.
+
+## [0.0.3]
+- Fixed PDF and website generation workflows.
+- Minor editorial changes

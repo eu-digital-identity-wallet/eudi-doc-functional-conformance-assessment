@@ -106,9 +106,9 @@ These principles are aligned with related EUDI documentation (e.g. the Architect
 
 The FCAF follows a maturity-based versioning approach:
 
-- **v0.0.x** — Bootstrap phase (structure, orientation, initial content)
-- **v0.1.0** — MVP version, enabling CAB preparation and pilot assessments
-- **v1.0.0** — First version meeting all mandatory functional requirements under the
+- **v0.0.x** - Bootstrap phase (structure, orientation, initial content)
+- **v0.1.0** - MVP version, enabling CAB preparation and pilot assessments
+- **v1.0.0** - First version meeting all mandatory functional requirements under the
   applicable Implementing Regulations, suitable for regulatory use
 
 > Version numbers reflect **artefact maturity**, not immutability of the legal framework.
@@ -143,9 +143,9 @@ channels associated with the FCAF work.
 
 ## What happens next
 
-- **v0.0.x** — Bootstrap phase (structure, orientation, initial content)
-- **v0.1.0** — Issue tracking and contribution workflow enabled
-- **≥ v0.1.0** — Iterative refinement with stakeholder input
+- **v0.0.x** - Bootstrap phase (structure, orientation, initial content)
+- **v0.1.0** - Issue tracking and contribution workflow enabled
+- **≥ v0.1.0** - Iterative refinement with stakeholder input
 
 Indicative milestones and evolution of the framework are described in
 [roadmap.md](docs/overview/roadmap.md).

@@ -4,9 +4,9 @@ The European Commission adopted [Commission Implementing Regulation (CIR) (EU) 2
 This Regulation establishes the **baseline framework for certification**, including requirements related to cybersecurity, privacy, and operational assurance.
 It also requires conformity assessment of **functional requirements** defined by the following CIRs (see [Annex III of CIR (EU) 2024/2981](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402981#anx_III)):
 
-- **Integrity and core functionalities** — CIR (EU) 2024/2979
-- **Protocols and interfaces** — CIR (EU) 2024/2982
-- **Person identification data and electronic attestations of attributes** — CIR (EU) 2024/2977
+- **Integrity and core functionalities** - CIR (EU) 2024/2979
+- **Protocols and interfaces** - CIR (EU) 2024/2982
+- **Person identification data and electronic attestations of attributes** - CIR (EU) 2024/2977
 
 To harmonise the functional conformity assessment required during certification, the European Commission is establishing a **Functional Conformance Assessment Framework (FCAF)** for the following reasons:
 
