@@ -1,0 +1,1518 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for the Functional Conformance Assessment Framework (FCAF)">
+      
+      
+        <meta name="author" content="European Commission - DG CNECT">
+      
+      
+        <link rel="canonical" href="https://conformance.eudi.dev/0.0.3/fcaf/">
+      
+      
+        <link rel="prev" href="../overview/">
+      
+      
+        <link rel="next" href="suts/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../media/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Overview - European Digital Identity - Functional Conformance Assessment</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="../assets/external/fonts.googleapis.com/css.49ea35f2.css">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../media/css/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Overview - European Digital Identity - Functional Conformance Assessment" />
+<meta property="og:description" content="Documentation for the Functional Conformance Assessment Framework (FCAF)" />
+<meta property="og:image" content="https://conformance.eudi.dev/0.0.3/assets/images/social/fcaf/index.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://conformance.eudi.dev/0.0.3/fcaf/" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content="Overview - European Digital Identity - Functional Conformance Assessment" />
+<meta property="twitter:description" content="Documentation for the Functional Conformance Assessment Framework (FCAF)" />
+<meta property="twitter:image" content="https://conformance.eudi.dev/0.0.3/assets/images/social/fcaf/index.png" />
+</head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#fcaf-overview" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="European Digital Identity - Functional Conformance Assessment" class="md-header__button md-logo" aria-label="European Digital Identity - Functional Conformance Assessment" data-md-component="logo">
+      
+  <img src="../media/images/logo_eudi_white.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            European Digital Identity - Functional Conformance Assessment
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Overview
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../overview/" class="md-tabs__link">
+          
+  
+  
+  Overview
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Functional Conformance Assessment Framework (FCAF)
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="European Digital Identity - Functional Conformance Assessment" class="md-nav__button md-logo" aria-label="European Digital Identity - Functional Conformance Assessment" data-md-component="logo">
+      
+  <img src="../media/images/logo_eudi_white.svg" alt="logo">
+
+    </a>
+    European Digital Identity - Functional Conformance Assessment
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Overview
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Functional Conformance Assessment Framework (FCAF)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Functional Conformance Assessment Framework (FCAF)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Approach
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#systems-under-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Systems Under Test
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test Structure
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Test Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test Classes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test Layers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test Cases
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Test Cases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-case-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test Case ID
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eudi-wallet-relevancy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EUDI-wallet Relevancy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Profile
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test Suites by SUTs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Test Suites by SUTs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="suts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_2" id="__nav_3_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wallet Solution (SUT)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Wallet Solution (SUT)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="suts/wallet_solution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_2_2" id="__nav_3_2_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test Classes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Test Classes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="suts/wallet_solution/Wallet_Verifier/wallet_verifier/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wallet_Verifier
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="suts/wallet_solution/Wallet_Issuer/wallet_issuer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wallet_Issuer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="suts/wallet_solution/Wallet_Infrastructure/wallet_infrastructure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wallet_Infrastructure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="suts/wallet_solution/Wallet_UI/wallet_ui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wallet_UI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Templates
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Templates
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="templates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="templates/test-spec-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test spec template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href=".." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="./" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Functional Conformance Assessment Framework (FCAF)
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="fcaf-overview">FCAF Overview</h1>
+<p>Within the EUDI Wallet ecosystem, functional conformance testing spans multiple process flows, including issuance, revocation, and presentation. Where individual flows allow multiple implementation options, testing may need to address different specifications and technical variants.</p>
+<p>To manage this diversity in a structured and scalable way, the FCAF defines a <strong>hierarchical test structure</strong> that supports consistency, traceability, and incremental evolution.</p>
+<p>The hierarchy is defined as follows:</p>
+<ul>
+<li><strong>SUT</strong> – System Under Test  </li>
+<li><strong>Cl</strong> – Test Class  </li>
+<li><strong>La</strong> – Test Layer  </li>
+<li><strong>Ar</strong> – Test Area  </li>
+<li><strong>Gr</strong> – Test Group  </li>
+<li><strong>Un</strong> – Test Unit  </li>
+<li><strong>UF</strong> – Test Unit Fraction  </li>
+</ul>
+<p><pre class="mermaid"><code>flowchart TD
+
+    SUT --&gt; CI1
+    SUT --&gt; CI2
+
+    %% --- LEFT CI ---
+    CI1 --&gt; La1
+    CI1 --&gt; La2
+
+    La1 --&gt; Ar1
+    La2 --&gt; Ar2
+
+    Ar1 --&gt; Gr1
+    Ar1 --&gt; Gr2
+    Ar2 --&gt; Gr3
+    Ar2 --&gt; Gr4
+
+    Gr1 --&gt; Un1
+    Gr1 --&gt; Un2
+    Gr1 --&gt; Un3
+
+    Gr2 --&gt; Un4
+    Gr2 --&gt; Un5
+    Gr2 --&gt; Un6
+
+    Gr3 --&gt; Un7
+    Gr3 --&gt; Un8
+    Gr3 --&gt; Un9
+    Gr3 --&gt; Un10
+
+    Gr4 --&gt; Un11
+    Gr4 --&gt; Un12
+    Gr4 --&gt; Un13
+    Gr4 --&gt; Un14
+
+    %% --- RIGHT CI ---
+    CI2 --&gt; La3
+    La3 --&gt; Ar3
+
+    Ar3 --&gt; Gr5
+    Ar3 --&gt; Gr6
+
+    Gr5 --&gt; Un15
+    Gr5 --&gt; Un16
+    Gr5 --&gt; Un17
+
+    Gr6 --&gt; Un18
+    Gr6 --&gt; Un19
+    Gr6 --&gt; Un20
+    Gr6 --&gt; UF1</code></pre>
+<em>Figure 1: Test case hierarchy</em></p>
+<p>The test hierarchy is not static. While the upper levels (SUT, class, and layer) are expected to remain relatively stable, lower levels-particularly areas and groups-are expected to evolve iteratively over time to maintain balanced and manageable test coverage.</p>
+<h2 id="approach">Approach</h2>
+<p>The following diagram illustrates the proposed approach to creating the test suites that will form a key part of the FCAF:</p>
+<p><img alt="Figure 2: Overview of FCAF" src="../media/fcaf/fcaf_approach.drawio.svg" />
+<em>Figure 2: Overview of FCAF Approach</em></p>
+<p>The development of the Test Suites (set of Test Cases) will be done in the following phases:</p>
+<ul>
+<li><strong>Test Structure</strong> - designing the overall structure of the Test Suites by examining the core international standards and specifications on which EUDI wallet solutions rely.</li>
+<li><strong>Test Objectives</strong> – following the Test Structure to step through the individual standards and technical specifications line by line, to identify text that is testable and defining Test Objectives (i.e. a statement of what is to be tested). This phases will also include applying the profiles, as defined by ETSI and relevant EC Technical Standards, to refine the Test Objectives. This could include:</li>
+<li>Removing Test Objectives that are not in scope for EUDI wallets.</li>
+<li>Making Test Objectives more specific where required by ETSI or the EC Technical Standards.</li>
+<li>Removing duplicate Test Objectives where an item is covered in multiple places.</li>
+<li><strong>Test Cases</strong> – where the Test Objectives are turned in detailed Test Cases that define amongst other things test conditions, test steps and success criteria.</li>
+</ul>
+<p>Each phase refines and narrows the scope of testing, with the goal of ensuring that Test Case writing phase (the phase requiring the most effort) is as efficient as possible.</p>
+<h2 id="systems-under-test">Systems Under Test</h2>
+<p>Within the broader EUDI Wallet ecosystem, several systems may be subject to functional conformance testing, including:</p>
+<ul>
+<li>Wallet Solutions (WS)</li>
+<li>Issuers (PID/Attestation Providers)</li>
+<li>Verifiers (Relying Parties)</li>
+<li>Trust Infrastructure Components</li>
+</ul>
+<p>For the test structure defined by the FCAF, <strong>the designated System Under Test (SUT) in the initial phase is the Wallet Solution</strong>.</p>
+<p>Additional SUTs may be incorporated in future iterations of the framework.</p>
+<h2 id="test-structure">Test Structure</h2>
+<h3 id="test-classes">Test Classes</h3>
+<p>The scope of functional conformance testing for a Wallet Solution
+covers both:</p>
+<ul>
+<li><strong>External interfaces</strong>, including interactions with Issuers Verifiers, and Infrastructure Components. Conformance testing should
+demonstrate compliance with applicable specifications and standards as applied within the EUDI Wallet ecosystem.</li>
+<li><strong>Internal functionality</strong>, where functional requirements are defined by regulations, implementing acts, or referenced technical standards, but cannot be fully tested via a standardised external interface.</li>
+</ul>
+<p>A <strong>Test Class</strong> groups all functionality associated with a specific interface or peer interaction.</p>
+<p>For the Wallet Solution as SUT, the following Test Classes are defined:</p>
+<ul>
+<li><strong>Wallet_Ver (Wal_Ver)</strong> – Interface between the Wallet Solution and Verifiers, covering proximity and remote presentation and related functionality.</li>
+<li><strong>Wallet_Issuer (Wal_Iss)</strong> – Interface between the Wallet Solution and Issuers, covering issuance, provisioning, and related functionality.</li>
+<li><strong>Wallet_Infrastructure (Wal_Inf)</strong> – Interface between the Wallet Solution and Infrastructure Components.</li>
+<li><strong>Wallet_UI (Wal_Ui)</strong> – User-facing wallet functionality that cannot be fully tested via standardised external interfaces.</li>
+</ul>
+<p>The first three classes cover external interfaces. The <strong>Wallet_UI</strong> class primarily addresses internal functionality exposed to the user in an implementation-specific manner.</p>
+<p><pre class="mermaid"><code>flowchart TD
+
+    SUT["System under test =&lt;br/&gt;Wallet Solution"]
+
+    SUT --&gt; C1["Class = Wal_Ver"]
+    SUT --&gt; C2["Class = Wal_Iss"]
+    SUT --&gt; C3["Class = Wal_Inf"]
+    SUT --&gt; C4["Class = Wal_Ui"]</code></pre>
+<em>Figure 3: Systems under test and test classes</em></p>
+<p>For other potential SUTs, equivalent Test Class groupings are expected, for example:</p>
+<ul>
+<li><strong>Issuers (Iss)</strong><ul>
+<li>Issuer_Wallet (Iss_Wal)</li>
+<li>Issuer_RP (Iss_Ver)</li>
+<li>Issuer_Infrastructure (Iss_Inf)</li>
+</ul>
+</li>
+<li><strong>Verifiers (Ver)</strong><ul>
+<li>Ver_Wallet (Ver_Wal)</li>
+<li>Ver_Issuer (Ver_Iss)</li>
+<li>Ver_Infrastructure (Ver_Inf)</li>
+</ul>
+</li>
+</ul>
+<h3 id="test-layers">Test Layers</h3>
+<p>Each Test Layer is subdivided into <strong>Test Areas</strong>, which may be further divided into <strong>Test groups</strong> and <strong>Test Units</strong>. This structure supports systematic organisation of test cases while allowing flexibility as coverage evolves.</p>
+<p>To be as comprehensive as possible the following 6 test layers are defined:</p>
+<ul>
+<li>DM - Data Model</li>
+<li>MS - Message Structure</li>
+<li>IA - Interaction</li>
+<li>SM - Security Mechanisms</li>
+<li>UC - Use Cases</li>
+<li>SH - Shared</li>
+<li>O – Others</li>
+</ul>
+<p>Each layer comprises various Test Areas, that vary per Test Layer. Similarly, Test Areas can be devided in Test Groups, and Test Groups in Test Units. Their goal is to organize the different tests.</p>
+<h2 id="test-cases">Test Cases</h2>
+<p>Each test case is defined by the following information</p>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Test case-ID</td>
+<td>Uniquely identifies the test case.</td>
+</tr>
+<tr>
+<td>Test Objective</td>
+<td>Specifies the requirement(s) addressed in this test case</td>
+</tr>
+<tr>
+<td>References</td>
+<td>Identifies specific references to the requirement(s) addressed by this test case.</td>
+</tr>
+<tr>
+<td>Profile</td>
+<td>Defines the profile(s) for which the test case is applicable.</td>
+</tr>
+<tr>
+<td>Preconditions</td>
+<td>Define the state in which the IUT (implementation under test) needs to be before the test case can be executed.</td>
+</tr>
+<tr>
+<td>Test scenario</td>
+<td>Defines the test steps that shall be taken. Each step covers a simple, exactly defined operation with a measurable result that can be included in the test report. The steps shall be performed in the order listed. Each test step is defined by the following information: <ul><li>Test step ID: a consecutive number, uniquely identifying each test step and the execution order in the test case.</li><li>Description: defining the operation that has to be executed for this step.</li><li>Configuration data: optionally specifying input data required to perform this test step.</li></td>
+</tr>
+<tr>
+<td>Expected result</td>
+<td>The expected result defines pass criteria for each test step in the test scenario. The analysis of the observed result in comparison with the expected result leads to a verdict, e.g. "Pass" or "Fail". The results of the individual test steps or the overall result, or both, of the test case are transferred to the test report.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="test-case-id">Test Case ID</h3>
+<p>Test cases are grouped by SUT and Test Class (interface tested). </p>
+<p>Test case IDs are formed as follows:</p>
+<pre><code>SUT_TestClass_TestLayer_TestArea_TestGroup_TestUnit_*nnn*
+</code></pre>
+<p>Where <em>nnn</em> is a three-digit decimal number identifying the test case.</p>
+<p>In case one of the subdivisions is not present the name is omitted.</p>
+<h3 id="eudi-wallet-relevancy">EUDI-wallet Relevancy</h3>
+<p>The EUDI Wallet ecosystem uses numerous standards and technical specifications. Many of these have a broader application than EUDI Wallets, while others are specific to EUDI Wallets. Furthermore the standards and technical specifications influence each other, for example by referencing, profiling and extending each other.</p>
+<p>During establishing the FCAF, tests have to be considered per individual standard and technical specification. As a result Test Objectives or Test Ccases can be identified for requirements that are not relevant to EUDI Wallets. Others will be explicitly and specifically applicable to EUDI Wallets.</p>
+<p>To accomodate selecting, tracking and managing these together with Standards Developing Organisations (SDOs), CABs and others, a "EUDI Wallet relevancy" is included in the Test Case template in the FCAF. </p>
+<p>This effectively has two labels, as follows:</p>
+<ul>
+<li>A first label for the origin of a requirement.</li>
+</ul>
+<p>One of the following values shall be used for this label:</p>
+<table>
+<thead>
+<tr>
+<th>label</th>
+<th>meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EUDI_agnostic</td>
+<td>Requirement is defined for general purpose use, and is not relevant to EUDI Wallets.</td>
+</tr>
+<tr>
+<td>EUDI_generic</td>
+<td>Requirement is defined for general purpose use, and is relevant to EUDI Wallets.</td>
+</tr>
+<tr>
+<td>EUDI_specific</td>
+<td>Requirement is specifically defined for EUDI Wallets.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>A second label to select scope of a Test Objective/Case.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>label</th>
+<th>meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EUDI_required</td>
+<td>Requirement is applicable to EUDI Wallets.</td>
+</tr>
+<tr>
+<td>EUDI_optional</td>
+<td>Requirement is optional for EUDI Wallets.</td>
+</tr>
+<tr>
+<td>EUDI_forbidden</td>
+<td>Requirement is explicitly excluded or prohibited for usage with EUDI Wallets.</td>
+</tr>
+<tr>
+<td>EUDI_undefined</td>
+<td>Applicability of requirement is up to discretion of wallet /assessor.</td>
+</tr>
+</tbody>
+</table>
+<p>Both labels are applicable; some combinations will be mutually exclusive (e.g. agnostic x required, or specific x forbidden).</p>
+<h3 id="profile">Profile</h3>
+<p>Profiles identify which set of functionalities are in scope for the configuration adopted in the implementation under test (IUT). If a profile is present in a Test Case, this impacts the applicability of that Test Case. </p>
+<p>The Test Case selection is based upon comparing the profile of the Test Case to the IUT information in the <span class="todo">ICS filled out by the applicant or tester</span>:</p>
+<ul>
+<li>If no profile is listed in a Test Case: The Test Case shall be executed on all IUT.</li>
+<li>If one or more profiles are specified and the IUT does not match with all of the specified profiles: the Test Case shall be skipped for that IUT and shall be marked as Not Applicable in the test report.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.top", "toc.integrate", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../assets/external/unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>
