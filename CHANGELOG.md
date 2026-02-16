@@ -17,3 +17,7 @@ and this project adheres to [Semantic Versioning](https://semverdoc.org/).
 
 ## [0.0.4]
 - Fix PDF and website generation workflows.
+
+## [0.0.5]
+- Fix github workflow to allow immutable releases.
+- Disable workflow dispatcher in github workflow.

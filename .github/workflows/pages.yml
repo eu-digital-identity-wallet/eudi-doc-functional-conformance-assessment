@@ -5,12 +5,7 @@ on:
     tags:
       - "v*"
   release:
-    types: [published]
-  workflow_dispatch:
-    inputs:
-      tag:
-        description: "Tag to build (e.g., v0.1.0)"
-        required: true
+    types: [created]
 
 permissions:
   contents: write
