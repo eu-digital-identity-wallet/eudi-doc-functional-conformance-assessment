@@ -16,18 +16,21 @@ A Test Case specification SHOULD include:
 ### 3. References
 - References to requirements and sources (CIRs, ETSI, ISO, OIDF, IETF, etc.).
 
-### 4. Profile applicability
+### 4. EUDI-wallet relevancy
+- Indicators on relevance to EUDI-wallet ecosystem.
+
+### 5. Profile applicability
 - Applicable profile(s), if any.
 - Rules for when the test is **Not Applicable**.
 
-### 5. Preconditions
+### 6. Preconditions
 - Required initial state and configuration.
 
-### 6. Test scenario
+### 7. Test scenario
 For each step:
 - Step ID
 - Description
 - Inputs/configuration (if applicable)
 
-### 7. Expected results
+### 8. Expected results
 - Expected outcomes per step and pass/fail criteria.
