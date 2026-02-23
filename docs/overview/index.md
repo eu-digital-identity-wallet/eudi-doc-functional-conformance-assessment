@@ -24,7 +24,7 @@ The FCAF aims to:
 
 - Provide a common set of test suites, test specifications, data definitions, and profiles enabling CABs and test laboratories to evaluate functional and functional-security requirements,
 - define structured test specifications (e.g., preconditions, steps, expected results) that are tool-agnostic and may be executed manually or via externally developed tooling,
-- build upon a gap analysis of existing test specifications for essential standards and technical specifications relevant to EUDI Wallet solutions (see [Focus X document](https://ec.europa.eu/digital-building-blocks/wikis/spaces/CG/pages/767071732/Topic+X+-+Conformance+testing+for+functional+requirements),
+- build upon a gap analysis of existing test specifications for essential standards and technical specifications relevant to EUDI Wallet solutions (see [Focus X document](https://ec.europa.eu/digital-building-blocks/wikis/spaces/CG/pages/767071732/Topic+X+-+Conformance+testing+for+functional+requirements)),
 - draw methodological inspiration from ISO/IEC 18013-6,
 - be developed in collaboration with Standards Development Organisations (SDOs),
 - be governed by the European Commission, in cooperation with Member States through the EUDI Wallet Cooperation Group.
@@ -140,34 +140,46 @@ The roadmap provides a **high-level orientation only** and should not be interpr
 
 ```mermaid
 timeline
-  title FCAF Roadmap (Indicative)
+    title FCAF Roadmap
 
-  Week 7 : Initial FCAF in GitHub (MkDocs/Markdown)
-      : Initial content, test structure, roadmap
-      : Change/version management procedures
-      : Delivery pipeline (incl. PDF generation)
-      : High-level guidance
-      : Release v0.0.1 (GitHub)
+    section Week 7
+        v0.0.1 : Release initial baseline (GitHub, MkDocs)
+                : Framework structure, test architecture & roadmap
+                : Change and version management procedures
+                : Delivery pipeline (incl. PDF generation)
+                : High-level implementation guidance
 
-  Week 8 : Public website online
+    section Week 8
+        Website : Publish conformance.eudi.dev
 
-  Week 15 (early April) : MVP FCAF (presentation & verification)
-      : PIDs & attestations focus
-      : Test objectives, test specifications, test data, profiles
-      : Traceability to functional requirements
-      : ICS template for pilot assessments with CABs
+    section Week 17
+        v0.1.0 : Release FCAF MVP
+                : PID/EEA presentation and verification flows
+                : ICS template
+                : Baseline for pilot functional conformity assessments for presentation flows
 
-  Week 18 (end of April) : FCAF refinement: issuance coverage
-      : Add issuance of PIDs & attestations
-      : Focus meeting on MVP of FCAF
+    section Week 20
+        v0.2.0 : Release PID/EEA issuance increment
+                : Extended issuance test objectives and structure
+                : Baseline for pilot functional conformity assessments for issuance flows
+        Focus meeting : MVP feedback and upcoming release alignment
 
-  Week 28 (early July) : Refinement: critical/major functional requirements
-      : Include remote qualified electronic signatures (rQES)
-      : Major release v1.0.0 planned for public review
+    section Week 26
+        v0.3.0 : Release trust and wallet integrity increment
+                : Trust lists
+                : Verifier registration and access certificates
+                : Wallet Unit and Wallet Instance Attestations
 
-  Week 31 (end of July) : Focus meeting on FCAF v1.0.0
+    section Week 28
+        v1.0.0 : First consolidated major release
+                : Remote signature flows
+                : Alignment with latest adopted CIRs
 
-  Q3–Q4 : Incremental refinement & transition
-      : Refine based on gap analysis, pilots, Cooperation Group feedback
-      : Transition selected test objectives/specs to relevant SDOs
+    section Week 37
+        Focus meeting : v1.0.0 feedback
+
+    section Q3–Q4
+        Transition phase : Gradual transition of selected specifications to SDOs
+        Incremental refinement : Integration of pilot assessment feedback
+                               : Closure of identified gaps
 ```

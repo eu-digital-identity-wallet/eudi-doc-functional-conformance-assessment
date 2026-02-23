@@ -21,3 +21,8 @@ and this project adheres to [Semantic Versioning](https://semverdoc.org/).
 ## [0.0.5]
 - Fix github workflow to allow immutable releases.
 - Disable workflow dispatcher in github workflow.
+
+## [0.0.6]
+- Update roadmap
+- Minor editorial changes
+- Add EUDI relevancy section to template
