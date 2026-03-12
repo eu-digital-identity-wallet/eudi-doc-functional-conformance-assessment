@@ -63,7 +63,7 @@ plugins:
   - social
 
 nav:
-  - Functional Conformance Assessment Framework (FCAF):
+  - Functional Conformance:
       - Home: index.md
       - Introduction: introduction.md
       - Methodology: fcaf/index.md
