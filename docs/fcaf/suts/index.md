@@ -5,5 +5,5 @@ A SUT defines a logical system boundary for which functional requirements can be
 
 For the initial phase of the FCAF, the only SUT in scope is: **Wallet Solution**
 
-The FCAF is expected to expand over time to include additional SUTs (e.g., attestation providers, verifiers, and infrastructure components).
+The FCAF is expected to expand over time to include additional SUTs (e.g., PID Providers, Attestation Providers, Relying Parties, and infrastructure components).
 These will appear as sibling entries under this section without changing the Wallet Solution structure.
