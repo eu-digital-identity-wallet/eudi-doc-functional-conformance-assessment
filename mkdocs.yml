@@ -72,10 +72,11 @@ nav:
           - Wallet Solution (SUT):
               - Overview: fcaf/suts/wallet_solution/index.md
               - Test Classes:
-                  - Wallet_Verifier: fcaf/suts/wallet_solution/Wallet_Verifier/wallet_verifier.md
-                  - Wallet_Issuer: fcaf/suts/wallet_solution/Wallet_Issuer/wallet_issuer.md
-                  - Wallet_Infrastructure: fcaf/suts/wallet_solution/Wallet_Infrastructure/wallet_infrastructure.md
-                  - Wallet_UI: fcaf/suts/wallet_solution/Wallet_UI/wallet_ui.md
+                  - Relying Party (ws_rp): fcaf/suts/wallet_solution/relying_party/ws_rp.md
+                  - Attestation Provider (ws_ap): fcaf/suts/wallet_solution/attestation_provider/ws_ap.md
+                  - PID Provider (ws_pp): fcaf/suts/wallet_solution/pid_provider/ws_pp.md
+                  - Infrastructure (ws_inf): fcaf/suts/wallet_solution/infrastructure/ws_inf.md
+                  - UI (ws_ui): fcaf/suts/wallet_solution/ui/ws_ui.md
       - Templates:
           - Overview: fcaf/templates/index.md
           - Test spec template: fcaf/templates/test-spec-template.md
