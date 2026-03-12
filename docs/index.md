@@ -1,8 +1,6 @@
-# Overview
+# Welcome to the Functional Conformance Assessment Framework (FCAF)
 
-## Functional Conformance Assessment Framework (FCAF)
-
-This repository documents the **Functional Conformance Assessment Framework (FCAF)** for the
+This website documents the **Functional Conformance Assessment Framework (FCAF)** for the
 [European Digital Identity Wallet](https://eudi.dev/) ecosystem.
 
 The FCAF provides a harmonised approach for defining and applying **functional conformance test artefacts**

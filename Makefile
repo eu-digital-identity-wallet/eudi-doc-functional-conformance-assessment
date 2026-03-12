@@ -20,7 +20,7 @@
 # Paths / files
 # -----------------------------------------------------------------------------
 DOCS_DIR        := docs
-OVERVIEW_DOC    := $(DOCS_DIR)/overview/index.md
+OVERVIEW_DOC    := $(DOCS_DIR)/introduction.md
 FCAF_DIR        := $(DOCS_DIR)/fcaf
 FCAF_DOCS       := $(shell find $(FCAF_DIR) -type f -name '*.md' | LC_ALL=C sort)
 

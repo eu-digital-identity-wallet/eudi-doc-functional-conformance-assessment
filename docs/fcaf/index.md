@@ -1,4 +1,4 @@
-# FCAF Overview
+# Methodology
 
 Within the EUDI Wallet ecosystem, functional conformance testing spans multiple process flows, including issuance, revocation, and presentation. Where individual flows allow multiple implementation options, testing may need to address different specifications and technical variants.
 
@@ -93,13 +93,16 @@ Each phase refines and narrows the scope of testing, with the goal of ensuring t
 Within the broader EUDI Wallet ecosystem, several systems may be subject to functional conformance testing, including:
 
 - Wallet Solutions (WS)
-- Issuers (PID/Attestation Providers)
-- Verifiers (Relying Parties)
+- PID Providers
+- Attestation Providers (i.e., QEAA Providers, PuB-EAA Providers, and non-qualified EAA Providers)
+- Relying Parties (i.e., service providers)
 - Trust Infrastructure Components
 
 For the test structure defined by the FCAF, **the designated System Under Test (SUT) in the initial phase is the Wallet Solution**.
 
 Additional SUTs may be incorporated in future iterations of the framework.
+
+> Note: As specified in the European Digital Identity Regulation, legally speaking, the term 'Relying Party' includes Attestation Providers (i.e., QEAA Providers, PuB-EAA Providers, and non-qualified EAA Providers), as well as service providers. However, technically speaking the responsibilities of Attestation Providers are quite different from those of service providers, as is the way they interact with Wallet Units. Therefore, for clarity the term 'Relying Party' is used in all parts of the FCAF exclusively to mean a service provider interacting with a Wallet Unit to request and receive attributes from an attestation.
 
 ## Test Structure
 
@@ -108,7 +111,7 @@ Additional SUTs may be incorporated in future iterations of the framework.
 The scope of functional conformance testing for a Wallet Solution
 covers both:
 
-- **External interfaces**, including interactions with Issuers Verifiers, and Infrastructure Components. Conformance testing should
+- **External interfaces**, including interactions with PID Providers, Attestation Providers, Relying Parties, and Infrastructure Components. Conformance testing should
 demonstrate compliance with applicable specifications and standards as applied within the EUDI Wallet ecosystem.
 - **Internal functionality**, where functional requirements are defined by regulations, implementing acts, or referenced technical standards, but cannot be fully tested via a standardised external interface.
 
@@ -116,35 +119,42 @@ A **Test Class** groups all functionality associated with a specific interface o
 
 For the Wallet Solution as SUT, the following Test Classes are defined:
 
-- **Wallet_Ver (Wal_Ver)** – Interface between the Wallet Solution and Verifiers, covering proximity and remote presentation and related functionality.
-- **Wallet_Issuer (Wal_Iss)** – Interface between the Wallet Solution and Issuers, covering issuance, provisioning, and related functionality.
-- **Wallet_Infrastructure (Wal_Inf)** – Interface between the Wallet Solution and Infrastructure Components.
-- **Wallet_UI (Wal_Ui)** – User-facing wallet functionality that cannot be fully tested via standardised external interfaces.
+- **WalletSolution_RelyingParty (WS_RP)** – Interface between the Wallet Solution and Relying Parties, covering proximity and remote presentation and related functionality.
+- **WalletSolution_PidProvider (WS_PP)** – Interface between the Wallet Solution and PID Providers, covering issuance, provisioning, and related functionality.
+- **WalletSolution_AttestationProvider (WS_AP)** – Interface between the Wallet Solution and Attestation Providers, covering issuance, provisioning, and related functionality.
+- **WalletSolution_Infrastructure (WS_Inf)** – Interface between the Wallet Solution and Infrastructure Components.
+- **WalletSolution_UI (WS_UI)** – User-facing wallet functionality that cannot be fully tested via standardised external interfaces.
 
-The first three classes cover external interfaces. The **Wallet_UI** class primarily addresses internal functionality exposed to the user in an implementation-specific manner.
+The first three classes cover external interfaces. The **WS_UI** class primarily addresses internal functionality exposed to the user in an implementation-specific manner.
 
 ```mermaid
 flowchart TD
 
     SUT["System under test =<br/>Wallet Solution"]
 
-    SUT --> C1["Class = Wal_Ver"]
-    SUT --> C2["Class = Wal_Iss"]
-    SUT --> C3["Class = Wal_Inf"]
-    SUT --> C4["Class = Wal_Ui"]
+    SUT --> C1["Class = Wal_RP"]
+    SUT --> C2["Class = Wal_PP"]
+    SUT --> C3["Class = Wal_AP"]
+    SUT --> C4["Class = Wal_Inf"]
+    SUT --> C5["Class = Wal_UI"]
 ```
 *Figure 3: Systems under test and test classes*
 
 For other potential SUTs, equivalent Test Class groupings are expected, for example:
 
-- **Issuers (Iss)**
-    - Issuer_Wallet (Iss_Wal)
-    - Issuer_RP (Iss_Ver)
-    - Issuer_Infrastructure (Iss_Inf)
-- **Verifiers (Ver)**
-    - Ver_Wallet (Ver_Wal)
-    - Ver_Issuer (Ver_Iss)
-    - Ver_Infrastructure (Ver_Inf)
+- **Attestation Providers (AP)**
+    - AttestationProvider_WalletSolution (AP_WS)
+    - AttestationProvider_RelyingParty (AP_RP)
+    - AttestationProvider_Infrastructure (AP_Inf)
+- **PID Providers (AP)**
+    - PidProvider_WalletSolution (PP_WS)
+    - PidProvider_RP (PP_RP)
+    - PidProvider_Infrastructure (PP_Inf)
+- **Relying Parties (RP)**
+    - RelyingParty_WalletSolution (RP_WS)
+    - RelyingParty_PidProvider (RP_PP)
+    - RelyingParty_AttestationProvider (RP_AP)
+    - RelyingParty_Infrastructure (RP_Inf)
 
 ### Test Layers
 
@@ -163,14 +173,15 @@ To be as comprehensive as possible the following 6 test layers are defined:
 Each layer comprises various Test Areas, that vary per Test Layer. Similarly, Test Areas can be devided in Test Groups, and Test Groups in Test Units. Their goal is to organize the different tests.
 
 ## Test Cases
-Each test case is defined by the following information
+Each test case is defined by the following information:
 
 | Term | Description  |
 | --- | --- |
-| Test case-ID | Uniquely identifies the test case. |
+| Test Case ID | Uniquely identifies the test case. |
 | Test Objective | Specifies the requirement(s) addressed in this test case |
 | References | Identifies specific references to the requirement(s) addressed by this test case. |
 | Profile | Defines the profile(s) for which the test case is applicable. |
+| EUDI-wallet relevancy | Indicators on relevance to EUDI-wallet ecosystem. |
 | Preconditions | Define the state in which the IUT (implementation under test) needs to be before the test case can be executed. |
 | Test scenario | Defines the test steps that shall be taken. Each step covers a simple, exactly defined operation with a measurable result that can be included in the test report. The steps shall be performed in the order listed. Each test step is defined by the following information: <ul><li>Test step ID: a consecutive number, uniquely identifying each test step and the execution order in the test case.</li><li>Description: defining the operation that has to be executed for this step.</li><li>Configuration data: optionally specifying input data required to perform this test step.</li>
 | Expected result | The expected result defines pass criteria for each test step in the test scenario. The analysis of the observed result in comparison with the expected result leads to a verdict, e.g. "Pass" or "Fail". The results of the individual test steps or the overall result, or both, of the test case are transferred to the test report. |
