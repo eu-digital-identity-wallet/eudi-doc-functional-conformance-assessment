@@ -1,4 +1,4 @@
-# Welcome to the Functional Conformance Assessment Framework (FCAF)
+# Welcome to the Functional Conformance Assessment Framework
 
 This website documents the **Functional Conformance Assessment Framework (FCAF)** for the
 [European Digital Identity Wallet](https://eudi.dev/) ecosystem.
