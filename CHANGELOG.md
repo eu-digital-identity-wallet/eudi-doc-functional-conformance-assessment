@@ -26,3 +26,7 @@ and this project adheres to [Semantic Versioning](https://semverdoc.org/).
 - Update roadmap
 - Minor editorial changes
 - Add EUDI relevancy section to template
+
+## [0.0.7]
+- Aligned terminology for EUDI actors with Regulation
+- Minor editorial changes
