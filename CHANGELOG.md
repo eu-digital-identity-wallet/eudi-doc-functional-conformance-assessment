@@ -37,3 +37,6 @@ and this project adheres to [Semantic Versioning](https://semverdoc.org/).
 
 ## [0.0.9]
 - Changed title of main nav bar to be embedded into eudi.dev
+
+## [0.0.10]
+- Embed fucntional conformance into eudi.dev

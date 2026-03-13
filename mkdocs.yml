@@ -27,10 +27,10 @@ theme:
     - navigation.top
     - navigation.footer
     - navigation.indexes
-# specific
+# functional conformance specific - start
     - toc.integrate
     - toc.follow
-# specific
+# functional conformance specific - end
 
   icon:
     repo: fontawesome/brands/github
@@ -63,6 +63,11 @@ plugins:
   - social
 
 nav:
+  - European Digital Identity Wallet: https://eudi.dev/latest/
+  - Architecture and reference framework: https://eudi.dev/latest/architecture-and-reference-framework-main/
+  - Discussion topics: https://eudi.dev/latest/discussion-topics/
+  - Technical specifications: https://eudi.dev/latest/technical-specifications/
+  - Reference Implementation: https://docs.eudi.dev/latest/
   - Functional Conformance:
       - Home: index.md
       - Introduction: introduction.md
