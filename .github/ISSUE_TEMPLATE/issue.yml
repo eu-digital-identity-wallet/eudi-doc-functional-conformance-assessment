@@ -1,0 +1,93 @@
+name: Issue
+description: Report a problem, inconsistency, or error in the FCAF documentation or test cases
+title: "[Issue]: "
+labels: ["issue", "triage"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to open an issue!
+
+        This template is for reporting problems in the **FCAF framework content or test cases**.
+
+        > ⚠️ **Security vulnerabilities must not be reported here.**
+
+        > ℹ️ Issues contribute to refinement but do not determine maturity stages.
+
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Preliminary checks
+      options:
+        - label: I have searched existing issues and confirmed this has not already been reported.
+          required: true
+        - label: This report is not about a security vulnerability.
+          required: true
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Issue type
+      options:
+        - Technical error
+        - Editorial issue / typo
+        - Inconsistency
+        - Incorrect or missing reference
+        - Non-testable or ambiguous test case
+        - Duplicate or overlapping test case
+        - Rendering / build issue
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Location in the documentation
+      placeholder: "e.g. WS_RP_MS_Metadata_001"
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version / release / commit
+      placeholder: "e.g. v0.1.0"
+    validations:
+      required: false
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description of the problem
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected content or behaviour
+    validations:
+      required: false
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Proposed correction
+    validations:
+      required: false
+
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+    validations:
+      required: false
