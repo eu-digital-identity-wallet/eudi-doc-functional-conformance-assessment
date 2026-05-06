@@ -1,22 +1,55 @@
 # European Digital Identity - Functional Conformance Assessment Framework (FCAF)
 
-This repository contains the **European Digital Identity (EUDI)
-Functional Conformance Assessment Framework (FCAF)** and serves as the
-**authoritative publication repository** for released versions of the
-framework.
+This repository contains the **European Digital Identity (EUDI) Functional Conformance Assessment Framework (FCAF)** and serves as the publication repository for released versions of the framework.
 
-The latest **authoritative version** is available via the\
+The FCAF provides a harmonised approach for defining and applying **functional conformance test cases and framework content**, supporting certification and improving interoperability across Member States.
+
+From version **v0.1.0 onwards**, the framework is developed as a **draft baseline** and refined iteratively through structured review, issue tracking, and pull requests, with the objective of converging towards an **implementation-ready baseline (v1.0.0)** suitable for certification.
+
+The latest **published version** is available via the\
 [GitHub Releases
 page](https://github.com/eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment/releases).
 
-An **online rendered version** of the documentation will be published at:
-https://conformance.eudi.dev (in W8 2026).
+An **online rendered version** of the documentation is published at:
+https://conformance.eudi.dev.
+
+## Versioning and maturity
+
+The FCAF follows a versioning model that reflects both **coverage** (`vX.Y.Z`) and **maturity** (`beta`, `rc`, released baseline). Versioned releases are managed through **GitHub tags**.
+
+The relationship between maturity stages and versions is as follows:
+
+- **Submitted**
+  - ongoing work / latest draft
+  - not versioned
+  - not implementation-ready
+
+- **Reviewed → Beta (`vX.Y.Z-beta.n`)**
+  - reviewed content
+  - technically sound and implementable in isolation
+  - not yet fully consolidated across all applicable specifications and regulatory layers
+
+- **Release candidate → RC (`vX.Y.Z-rc.n`)**
+  - consolidated across standards, profiles, and Implementing Acts
+  - first usable baseline for implementation
+  - subject to stakeholder validation and governance feedback (e.g., EDICG)
+
+- **Released baseline (`vX.Y.Z`)**
+  - stable and sufficiently validated
+  - suitable for implementation and certification
+  - endorsed by relevant governance bodies including EDICG
+
+Users are encouraged to rely on **release candidates or released baselines** for implementation and testing. Beta versions are provided for early visibility and review.
+
+The **v0.x.y series** represents partial coverage and iterative refinement. The **v1.0.0 release** will represent the first full-scope, certification-relevant baseline.
+
+Only **v1.0.0** is intended to provide an implementation-ready baseline for certification use.
 
 ## Release & Publication Workflow
 
-Releases are **tag-driven**.
+Releases are managed through GitHub tags, which represent specific snapshots of the framework at defined maturity stages (beta, release candidate, released baseline).
 
-Create and push a release tag:
+For example, to create and push a release tag:
 
 ``` bash
 git tag vX.Y.Z
@@ -53,9 +86,9 @@ See the [CONTRIBUTING](./CONTRIBUTING.md) file for details.
 See the list of [contributors](https://github.com/eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment/graphs/contributors)
 who participated in this project.
 
-## Licence
+## License
 
-See the [LICENCE](./LICENCE.md) file for details.
+See the [LICENSE](./LICENSE.md) file for details.
 
 ## [European Commission website](https://commission.europa.eu/index_en)
 

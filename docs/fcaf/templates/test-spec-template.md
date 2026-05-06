@@ -8,13 +8,14 @@ Test specifications are intended for **automated or semi-automated** execution w
 A Test Case specification SHOULD include:
 
   1. Test case identifier
-  2. Test objective
-  3. References
-  4. EUDI-wallet relevancy
-  5. Profile applicability
-  6. Preconditions
-  7. Test scenario
-  8. Expected results
+  2. Status
+  3. Test objective
+  4. References
+  5. EUDI-wallet relevancy
+  6. Profile applicability
+  7. Preconditions
+  8. Test scenario
+  9. Expected results
 
 ### 1. Test case identifier
 - **Test case ID**: unique identifier following the FCAF naming convention.
