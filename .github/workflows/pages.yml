@@ -2,6 +2,8 @@ name: Publish docs + PDFs (release)
 
 on:
   push:
+    branches:
+      - submitted
     tags:
       - "v*"
   release:
@@ -33,27 +35,45 @@ jobs:
       # ------------------------------------------------------------
       # Compute version
       # ------------------------------------------------------------
-      - name: Compute version
+      - name: Compute publish context
         id: ver
         shell: bash
         run: |
           set -euo pipefail
 
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            TAG="${{ inputs.tag }}"
-          elif [ "${{ github.event_name }}" = "release" ]; then
+          if [ "${{ github.event_name }}" = "release" ]; then
             TAG="${{ github.event.release.tag_name }}"
-          else
-            TAG="${GITHUB_REF_NAME}"
-          fi
 
-          if [[ ! "$TAG" =~ ^v[0-9]+(\.[0-9]+)*([\-+].*)?$ ]]; then
-            echo "ERROR: Expected tag like vX.Y.Z, got: '$TAG'"
+            if [[ ! "$TAG" =~ ^v[0-9]+(\.[0-9]+)*([\-+].*)?$ ]]; then
+              echo "ERROR: Expected tag like vX.Y.Z, got: '$TAG'"
+              exit 1
+            fi
+
+            echo "kind=tag" >> "$GITHUB_OUTPUT"
+            echo "tag=${TAG}" >> "$GITHUB_OUTPUT"
+            echo "version=${TAG#v}" >> "$GITHUB_OUTPUT"
+
+          elif [[ "${GITHUB_REF}" == refs/tags/* ]]; then
+            TAG="${GITHUB_REF_NAME}"
+
+            if [[ ! "$TAG" =~ ^v[0-9]+(\.[0-9]+)*([\-+].*)?$ ]]; then
+              echo "ERROR: Expected tag like vX.Y.Z, got: '$TAG'"
+              exit 1
+            fi
+
+            echo "kind=tag" >> "$GITHUB_OUTPUT"
+            echo "tag=${TAG}" >> "$GITHUB_OUTPUT"
+            echo "version=${TAG#v}" >> "$GITHUB_OUTPUT"
+
+          elif [[ "${GITHUB_REF}" == refs/heads/submitted ]]; then
+            echo "kind=draft" >> "$GITHUB_OUTPUT"
+            echo "tag=draft" >> "$GITHUB_OUTPUT"
+            echo "version=draft" >> "$GITHUB_OUTPUT"
+
+          else
+            echo "ERROR: Unsupported ref: ${GITHUB_REF}"
             exit 1
           fi
-
-          echo "tag=${TAG}" >> "$GITHUB_OUTPUT"
-          echo "version=${TAG#v}" >> "$GITHUB_OUTPUT"
 
       # ------------------------------------------------------------
       # System deps (Pandoc, LaTeX, SVG tools, fonts, zip)
@@ -132,14 +152,17 @@ jobs:
       # Build PDFs
       # ------------------------------------------------------------
       - name: Clean mermaid render cache
+        if: steps.ver.outputs.kind == 'tag'
         shell: bash
         run: rm -rf build/mermaid
 
       - name: Build PDF
+        if: steps.ver.outputs.kind == 'tag'
         shell: bash
         run: make pdf VERSION=${{ steps.ver.outputs.version }}
 
       - name: Zip PDFs
+        if: steps.ver.outputs.kind == 'tag'
         shell: bash
         run: make dist VERSION=${{ steps.ver.outputs.version }}
 
@@ -148,18 +171,25 @@ jobs:
       # ------------------------------------------------------------
       - name: Deploy MkDocs with mike
         shell: bash
-        run: make ci_mike_deploy VERSION=${{ steps.ver.outputs.version }}
+        run: |
+          if [ "${{ steps.ver.outputs.kind }}" = "draft" ]; then
+            make ci_mike_deploy_draft
+          else
+            make ci_mike_deploy VERSION=${{ steps.ver.outputs.version }}
+          fi        
 
       # ------------------------------------------------------------
       # Upload artifacts (Actions)
       # ------------------------------------------------------------
       - name: Upload PDFs (artifact)
+        if: steps.ver.outputs.kind == 'tag'
         uses: actions/upload-artifact@v4
         with:
           name: fcaf-pdfs-${{ steps.ver.outputs.tag }}
           path: build/pdf/*.pdf
 
       - name: Upload ZIP (artifact)
+        if: steps.ver.outputs.kind == 'tag'
         uses: actions/upload-artifact@v4
         with:
           name: fcaf-pdfs-zip-${{ steps.ver.outputs.tag }}
@@ -169,7 +199,7 @@ jobs:
       # Attach to GitHub Release
       # ------------------------------------------------------------
       - name: Upload assets to GitHub Release
-        if: ${{ github.event_name != 'workflow_dispatch' }}
+        if: steps.ver.outputs.kind == 'tag'
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ steps.ver.outputs.tag }}

@@ -45,6 +45,7 @@ markdown_extensions:
   - footnotes
   - sane_lists
   - tables
+  - pymdownx.tilde
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
@@ -61,6 +62,7 @@ plugins:
   - tags
   - privacy
   - social
+  - include-markdown  
 
 nav:
   - European Digital Identity Wallet: https://eudi.dev/latest/
@@ -70,7 +72,8 @@ nav:
   - Reference Implementation: https://docs.eudi.dev/latest/
   - Functional Conformance:
       - Home: index.md
-      - Introduction: introduction.md
+      - Introduction: fcaf/introduction.md
+      - Terminology: fcaf/terminology.md
       - Methodology: fcaf/index.md
       - Test Suites by SUTs:
           - Overview: fcaf/suts/index.md
@@ -85,6 +88,7 @@ nav:
       - Templates:
           - Overview: fcaf/templates/index.md
           - Test spec template: fcaf/templates/test-spec-template.md
+      - References: fcaf/references.md
 
 extra_javascript:
   - https://unpkg.com/mermaid@10/dist/mermaid.min.js
