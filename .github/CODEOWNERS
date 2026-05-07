@@ -1,10 +1,11 @@
-# Default owners
-* @eu-digital-identity-wallet/fcaf-core
-
-# Reviewable framework and test content
+# FCAF framework and test content
 docs/fcaf/** @eu-digital-identity-wallet/fcaf-reviewers
 
-# Repository infrastructure
+# Repository infrastructure / governance
 .github/** @eu-digital-identity-wallet/fcaf-core
 Makefile @eu-digital-identity-wallet/fcaf-core
 mkdocs.yml @eu-digital-identity-wallet/fcaf-core
+README.md @eu-digital-identity-wallet/fcaf-core
+CONTRIBUTING.md @eu-digital-identity-wallet/fcaf-core
+CHANGELOG.md @eu-digital-identity-wallet/fcaf-core
+LICENSE.md @eu-digital-identity-wallet/fcaf-core
