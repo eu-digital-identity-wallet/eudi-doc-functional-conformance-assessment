@@ -20,12 +20,11 @@
 # Paths / files
 # -----------------------------------------------------------------------------
 DOCS_DIR        := docs
-OVERVIEW_DOC    := $(DOCS_DIR)/introduction.md
 FCAF_DIR        := $(DOCS_DIR)/fcaf
 FCAF_DOCS       := $(shell find $(FCAF_DIR) -type f -name '*.md' | LC_ALL=C sort)
 
 # PDF inputs (in order)
-SOURCE_DOCS     := $(OVERVIEW_DOC) $(FCAF_DOCS)
+SOURCE_DOCS     := $(FCAF_DOCS)
 
 BUILD_DIR       := build
 SITE_DIR        := site
@@ -59,8 +58,7 @@ PDF_OUT         := $(BUILD_DIR)/pdf/fcaf-framework.pdf
 # -----------------------------------------------------------------------------
 # Targets
 # -----------------------------------------------------------------------------
-.PHONY: help all venv install_deps mkdocs serve local_serve         local_serve_versions ci_mike_deploy pdf dist clean ci_clean
-
+.PHONY: help all venv install_deps mkdocs serve local_serve local_serve_versions ci_mike_deploy ci_mike_deploy_draft pdf dist clean ci_clean
 all: mkdocs
 
 help:
@@ -117,6 +115,12 @@ ci_mike_deploy: install_deps
 	@PATH="$(CURDIR)/.venv/bin:$$PATH" \
 	  $(MIKE) set-default --allow-empty --push latest
 
+ci_mike_deploy_draft: install_deps
+	@PATH="$(CURDIR)/.venv/bin:$$PATH" \
+	  $(MIKE) deploy --push --update-aliases "draft" latest-draft
+	@PATH="$(CURDIR)/.venv/bin:$$PATH" \
+	  $(MIKE) set-default --allow-empty --push latest-draft
+
 # -----------------------------------------------------------------------------
 # PDF generation
 # -----------------------------------------------------------------------------
@@ -124,7 +128,7 @@ pdf:
 	@command -v $(PANDOC) >/dev/null || (echo "pandoc not installed"; exit 1)
 	@mkdir -p $(BUILD_DIR)/pdf
 	$(PANDOC) \
-		--from markdown+gfm_auto_identifiers \
+		--from markdown+gfm_auto_identifiers+strikeout \
 		--toc \
 		--pdf-engine=$(PDF_ENGINE) \
 		--data-dir=$(PANDOC_DATA_DIR) \
