@@ -58,8 +58,7 @@ PDF_OUT         := $(BUILD_DIR)/pdf/fcaf-framework.pdf
 # -----------------------------------------------------------------------------
 # Targets
 # -----------------------------------------------------------------------------
-.PHONY: help all venv install_deps mkdocs serve local_serve         local_serve_versions ci_mike_deploy pdf dist clean ci_clean
-
+.PHONY: help all venv install_deps mkdocs serve local_serve local_serve_versions ci_mike_deploy ci_mike_deploy_draft pdf dist clean ci_clean
 all: mkdocs
 
 help:
@@ -115,6 +114,12 @@ ci_mike_deploy: install_deps
 	  $(MIKE) deploy --push --update-aliases "$(VERSION)" latest
 	@PATH="$(CURDIR)/.venv/bin:$$PATH" \
 	  $(MIKE) set-default --allow-empty --push latest
+
+ci_mike_deploy_draft: install_deps
+	@PATH="$(CURDIR)/.venv/bin:$$PATH" \
+	  $(MIKE) deploy --push --update-aliases "draft" latest-draft
+	@PATH="$(CURDIR)/.venv/bin:$$PATH" \
+	  $(MIKE) set-default --allow-empty --push latest-draft
 
 # -----------------------------------------------------------------------------
 # PDF generation
