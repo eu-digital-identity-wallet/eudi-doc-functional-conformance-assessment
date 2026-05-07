@@ -1273,129 +1273,134 @@ D. The presence of claim birth_date in the IETF SD-JWT VC Credential presented w
 <li>The value of date-fullyear is between "0000" and "9999" inclusive. 2. The value of date-month is between "01" and "12" inclusive. 3. The value of date-mday is between "01" and the maximum value specified in section 5.7 of RFC 3339 inclusive.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="eupid_dm_birthplace_01">EuPid_DM_BirthPlace_01</h3>
+<h3 id="eupid_dm_birthdate_2">EuPid_DM_BirthDate_01</h3>
 <h4 id="objective_4">Objective</h4>
-<p>This test case verifies that the claim birth_place is present in the Credential in IETF SD-JWT VC format.</p>
+<p>This test case verifies that the data element birth_date is present in the mdoc data.</p>
 <h4 id="references_4">References</h4>
-<p>European Digital Identity Wallet, ARF 1.9, Annex 3.01 pid rulebook, paragraph 3.1.5 <br />
-“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 1).</p>
+<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.4  <br />
+“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 1).</p>
 <h4 id="eudi-wallet-relevancy_4">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_required</p>
 <h4 id="profile-applicability_4">Profile applicability</h4>
-<p>The EUDI wallet contains a Credential in IETF SD-JWT VC format. <code>vct</code> claim includes base type of person identification "urn:eudi:pid:1".</p>
+<p>The EUDI wallet contains a Credential in mdoc format with DocType = "eu.europa.ec.eudi.pid.1".</p>
 <h4 id="preconditions_4">Preconditions</h4>
+<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
+B. All mandatory data elements within nameSpace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
+C. The device retrieval mdoc response was retrieved.</p>
+<h4 id="test-scenario_4">Test Scenario</h4>
+<ol>
+<li>Verify the presence of a data element with identifier birth_date in the device retrieval mdoc response. 2. Verify the presence of an ErrorItem for data element birth_date.</li>
+</ol>
+<h4 id="expected-results_4">Expected results</h4>
+<ol>
+<li>One data element with identifier birth_date is present. 2. There is no ErrorItem for data element birth_date.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="eupid_dm_birthdate_3">EuPid_DM_BirthDate_02</h3>
+<h4 id="objective_5">Objective</h4>
+<p>This test case verifies that the DataElementValue of data element birth_date is encoded as a well-formed #6.1004(tstr).</p>
+<h4 id="references_5">References</h4>
+<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.4  <br />
+“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 6).<br />
+ RFC 8943 section 2.1</p>
+<h4 id="eudi-wallet-relevancy_5">EUDI-wallet relevancy</h4>
+<p>EUDI_specific | EUDI_required</p>
+<h4 id="profile-applicability_5">Profile applicability</h4>
+<p>The EUDI wallet contains a Credential in ISO-mdoc format with DocType = “eu.europa.ec.eudi.pid.1”</p>
+<h4 id="preconditions_5">Preconditions</h4>
+<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
+B. All mandatory data elements within nameSpace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
+C. The device retrieval mdoc response was retrieved. 
+D. The presence of data element birth_date in the device retrieval mdoc response was verified.</p>
+<h4 id="test-scenario_5">Test Scenario</h4>
+<ol>
+<li>Verify the major type encoded on the first byte of the CBOR data item. 2. Verify the value of the tag. 3. Verify the major type of the nested CBOR data item. 4. Verify the encoding of the data item value.</li>
+</ol>
+<h4 id="expected-results_5">Expected results</h4>
+<ol>
+<li>The major type value is equal to 6. 2. The tag value is equal to 1004 (indicating a full-date tstr). The value of the additional information on the first byte is 25 and the value of the next two bytes is '03 EC'. 3. The major type value is equal to 3. 4. All bytes in the data item value are UTF-8 encoded characters.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="eupid_dm_birthdate_4">EuPid_DM_BirthDate_03</h3>
+<h4 id="objective_6">Objective</h4>
+<p>This test case verifies that the format of the DataElementValue of data element birth_date is correct.</p>
+<h4 id="references_6">References</h4>
+<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.4  <br />
+“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 6).<br />
+ RFC 3339 section 5.6</p>
+<h4 id="eudi-wallet-relevancy_6">EUDI-wallet relevancy</h4>
+<p>EUDI_specific | EUDI_required</p>
+<h4 id="profile-applicability_6">Profile applicability</h4>
+<p>The EUDI wallet contains a Credential in ISO-mdoc format with DocType = “eu.europa.ec.eudi.pid.1”</p>
+<h4 id="preconditions_6">Preconditions</h4>
+<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
+B. All mandatory data elements within nameSpace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
+C. The device retrieval mdoc response was retrieved. 
+D. The presence of data element birth_date in the device retrieval mdoc response was verified.</p>
+<h4 id="test-scenario_6">Test Scenario</h4>
+<ol>
+<li>Verify the length of the data element. 2. Verify the characters used in the format of the DataElementValue of the data element.</li>
+</ol>
+<h4 id="expected-results_6">Expected results</h4>
+<ol>
+<li>The length of the data element is 10 UTF-8 encoded characters. 2. The characters used have the following format: date-fullyear "-" date-month "-" date-mday. Where: date-fullyear consists of four decimal digits. date-month and date-mday consist of two decimal digits.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="eupid_dm_birthdate_5">EuPid_DM_BirthDate_04</h3>
+<h4 id="objective_7">Objective</h4>
+<p>This test case verifies that the DataElementValue of data element birth_date contains a valid date.</p>
+<h4 id="references_7">References</h4>
+<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.4  <br />
+“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 6). ISO 8601-1:2019, 4.2.1, 4.3.2<br />
+ RFC 3339 section 5.6, 5.7</p>
+<h4 id="eudi-wallet-relevancy_7">EUDI-wallet relevancy</h4>
+<p>EUDI_specific | EUDI_required</p>
+<h4 id="profile-applicability_7">Profile applicability</h4>
+<p>The EUDI wallet contains a Credential in ISO-mdoc format with DocType = “eu.europa.ec.eudi.pid.1”</p>
+<h4 id="preconditions_7">Preconditions</h4>
+<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
+B. All mandatory data elements within nameSpace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
+C. The device retrieval mdoc response was retrieved. 
+D. The presence of data element birth_date in the device retrieval mdoc response was verified.</p>
+<h4 id="test-scenario_7">Test Scenario</h4>
+<ol>
+<li>Verify the value of date-fullyear. 2. Verify the value of date-month. 3. Verify the value of date-mday.</li>
+</ol>
+<h4 id="expected-results_7">Expected results</h4>
+<ol>
+<li>The value of date-fullyear is between "0000" and "9999" inclusive. 2. The value of date-month is between "01" and "12" inclusive. 3. The value of date-mday is between "01" and the maximum value specified in section 5.7 of RFC 3339 inclusive.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="eupid_dm_birthplace_01">EuPid_DM_BirthPlace_01</h3>
+<h4 id="objective_8">Objective</h4>
+<p>This test case verifies that the claim birth_place is present in the Credential in IETF SD-JWT VC format.</p>
+<h4 id="references_8">References</h4>
+<p>European Digital Identity Wallet, ARF 1.9, Annex 3.01 pid rulebook, paragraph 3.1.5 <br />
+“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 1).</p>
+<h4 id="eudi-wallet-relevancy_8">EUDI-wallet relevancy</h4>
+<p>EUDI_specific | EUDI_required</p>
+<h4 id="profile-applicability_8">Profile applicability</h4>
+<p>The EUDI wallet contains a Credential in IETF SD-JWT VC format. <code>vct</code> claim includes base type of person identification "urn:eudi:pid:1".</p>
+<h4 id="preconditions_8">Preconditions</h4>
 <p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
 B. All mandatory data elements within nameSpace  "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
 C. EUDI wallet presented the Credential successfully.</p>
-<h4 id="test-scenario_4">Test Scenario</h4>
+<h4 id="test-scenario_8">Test Scenario</h4>
 <ol>
 <li>Verify the presence of a claim with identifier birth_place in the  Credential presented to the Verifier in IETF SD-JWT VC format.</li>
 </ol>
-<h4 id="expected-results_4">Expected results</h4>
+<h4 id="expected-results_8">Expected results</h4>
 <ol>
 <li>One claim with identifier birth_place is present.</li>
 </ol>
 <!-- END INCLUDE -->
 <h3 id="eupid_dm_birthplace_02">EuPid_DM_BirthPlace_02</h3>
-<h4 id="objective_5">Objective</h4>
+<h4 id="objective_9">Objective</h4>
 <p>This test case verifies that the claim birth_place is encoded as a JSON structure.</p>
-<h4 id="references_5">References</h4>
+<h4 id="references_9">References</h4>
 <p>European Digital Identity Wallet, ARF 1.9, Annex 3.01 pid rulebook, paragraph 3.1.5 <br />
 “ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 7).<br />
  RFC 7049 section 2.1</p>
-<h4 id="eudi-wallet-relevancy_5">EUDI-wallet relevancy</h4>
-<p>EUDI_specific | EUDI_required</p>
-<h4 id="profile-applicability_5">Profile applicability</h4>
-<p>The EUDI wallet contains a Credential in IETF SD-JWT VC format. <code>vct</code> claim includes base type of person identification "urn:eudi:pid:1".</p>
-<h4 id="preconditions_5">Preconditions</h4>
-<p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
-B. All mandatory data elements within nameSpace  "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
-C. EUDI wallet presented the Credential successfully. 
-D. The presence of claim birth_place in the IETF SD-JWT VC Credential presented was verified.</p>
-<h4 id="test-scenario_5">Test Scenario</h4>
-<ol>
-<li>Verify that claim is encoded as a JSON structure.</li>
-</ol>
-<h4 id="expected-results_5">Expected results</h4>
-<ol>
-<li>Claim is encoded as a JSON structure.</li>
-</ol>
-<!-- END INCLUDE -->
-<h3 id="eupid_dm_birthplace_03">EuPid_DM_BirthPlace_03</h3>
-<h4 id="objective_6">Objective</h4>
-<p>This test case verifies that the correct key-value pairs are present in each data element present in birth_place.</p>
-<h4 id="references_6">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.5<br />
- RFC 7049 section 2.1</p>
-<h4 id="eudi-wallet-relevancy_6">EUDI-wallet relevancy</h4>
-<p>EUDI_specific | EUDI_required</p>
-<h4 id="profile-applicability_6">Profile applicability</h4>
-<p>The EUDI wallet contains a document with DocType = "eu.europa.ec.eudi.pid.1".</p>
-<h4 id="preconditions_6">Preconditions</h4>
-<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
-B. All mandatory data elements within nameSpace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
-C. The device retrieval mdoc response was retrieved. 
-D. The presence of data element birth_place in the device retrieval mdoc response was verified.</p>
-<h4 id="test-scenario_6">Test Scenario</h4>
-<p>For each item present, perform the following check: 1 Verify the value of the key for each nested key/value pair. 2. Verify that each key is unique within the DrivingPrivilege data item.</p>
-<h4 id="expected-results_6">Expected results</h4>
-<ol>
-<li>The data element item contains between 1 and 3 pairs inclusive, with the following value(s) for the key/ value pair(s): — "country" (optional), — "region" (optional), — "locality" (optional). 2. This is the case.</li>
-</ol>
-<!-- END INCLUDE -->
-<h3 id="eupid_dm_birthplace_04">EuPid_DM_BirthPlace_04</h3>
-<h4 id="objective_7">Objective</h4>
-<p>This test case verifies that the value of each data element present inbirth_place is a well-formed CBOR text string.</p>
-<h4 id="references_7">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.5<br />
- RFC 7049 section 2.1</p>
-<h4 id="eudi-wallet-relevancy_7">EUDI-wallet relevancy</h4>
-<p>EUDI_specific | EUDI_required</p>
-<h4 id="profile-applicability_7">Profile applicability</h4>
-<p>The EUDI wallet contains a document with DocType = "eu.europa.ec.eudi.pid.1".</p>
-<h4 id="preconditions_7">Preconditions</h4>
-<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
-B. All mandatory data elements within nameSpace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
-C. The device retrieval mdoc response was retrieved. 
-D. The presence of data element birth_place in the device retrieval mdoc response was verified.</p>
-<h4 id="test-scenario_7">Test Scenario</h4>
-<p>For each data item present, perform the following check for the value of the key/value pair: 1. Verify the encoding of the data item value.</p>
-<h4 id="expected-results_7">Expected results</h4>
-<ol>
-<li>The major type svalue is equal to 3.</li>
-</ol>
-<!-- END INCLUDE -->
-<h3 id="eupid_dm_birthplace_05">EuPid_DM_BirthPlace_05</h3>
-<h4 id="objective_8">Objective</h4>
-<p>This test case verifies that the country item of data element birth_place is a valid country code.</p>
-<h4 id="references_8">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.5<br />
- ISO/IEC 3166-1</p>
-<h4 id="eudi-wallet-relevancy_8">EUDI-wallet relevancy</h4>
-<p>EUDI_specific | EUDI_required</p>
-<h4 id="profile-applicability_8">Profile applicability</h4>
-<p>The mdoc contains a document with DocType = "eu.europa.ec.eudi.pid.1".</p>
-<h4 id="preconditions_8">Preconditions</h4>
-<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
-B. All mandatory data elements within nameSpace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
-C. The device retrieval mdoc response was retrieved. 
-D. The presence of the item ‘country’ in data element birth_place in the device retrieval mdoc response was verified.</p>
-<h4 id="test-scenario_8">Test Scenario</h4>
-<ol>
-<li>Verify that the value of the data element <code>country</code> in map place_of_birth contains a valid country code.</li>
-</ol>
-<h4 id="expected-results_8">Expected results</h4>
-<ol>
-<li>The DataElementValue has two characters, an alpha-2 code, corresponding to a country name: Listed in ISO 3166-1:2020, 6.1. Not listed in ISO 3166-1:2020, 6.1. In this case, the user-assigned country codes may be used, which consist in the series of letters AA, QM to QZ, XA to XZ, and ZZ (ISO 3166-1:2020, 8.3).</li>
-</ol>
-<h4 id="_1"></h4>
-<!-- END INCLUDE -->
-<h3 id="eupid_dm_familyname_01">EuPid_DM_FamilyName_01</h3>
-<h4 id="objective_9">Objective</h4>
-<p>This test case verifies that the claim family_name is present in the Credential in IETF SD-JWT VC format.</p>
-<h4 id="references_9">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.1 <br />
-“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 1).</p>
 <h4 id="eudi-wallet-relevancy_9">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_required</p>
 <h4 id="profile-applicability_9">Profile applicability</h4>
@@ -1403,451 +1408,1192 @@ D. The presence of the item ‘country’ in data element birth_place in the dev
 <h4 id="preconditions_9">Preconditions</h4>
 <p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
 B. All mandatory data elements within nameSpace  "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
-C. EUDI wallet presented the Credential successfully.</p>
+C. EUDI wallet presented the Credential successfully. 
+D. The presence of claim birth_place in the IETF SD-JWT VC Credential presented was verified.</p>
 <h4 id="test-scenario_9">Test Scenario</h4>
 <ol>
-<li>Verify the presence of a claim with identifier family_name in the  Credential presented to the Verifier in IETF SD-JWT VC format.</li>
+<li>Verify that claim is encoded as a JSON structure.</li>
 </ol>
 <h4 id="expected-results_9">Expected results</h4>
 <ol>
-<li>One claim with identifier family_name is present.</li>
+<li>Claim is encoded as a JSON structure.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="eupid_dm_familyname_02">EuPid_DM_FamilyName_02</h3>
+<h3 id="eupid_dm_birthplace_03">EuPid_DM_BirthPlace_03</h3>
 <h4 id="objective_10">Objective</h4>
-<p>This test case verifies that the claim family_name is a String enconded in UTF-8.</p>
+<p>This test case verifies that the correct key-value pairs are present in each data element present in birth_place.</p>
 <h4 id="references_10">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.1 <br />
-“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 7).<br />
+<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.5<br />
  RFC 7049 section 2.1</p>
 <h4 id="eudi-wallet-relevancy_10">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_required</p>
 <h4 id="profile-applicability_10">Profile applicability</h4>
-<p>The EUDI wallet contains a Credential in IETF SD-JWT VC format.<code>vct</code> claim includes base type of person identification "urn:eudi:pid:1".</p>
+<p>The EUDI wallet contains a document with DocType = "eu.europa.ec.eudi.pid.1".</p>
 <h4 id="preconditions_10">Preconditions</h4>
-<p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
-B. All mandatory data elements within nameSpace  "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
-C. EUDI wallet presented the Credential successfully. 
-D. The presence of claim family_name in the IETF SD-JWT VC Credential presented was verified.</p>
+<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
+B. All mandatory data elements within nameSpace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
+C. The device retrieval mdoc response was retrieved. 
+D. The presence of data element birth_place in the device retrieval mdoc response was verified.</p>
 <h4 id="test-scenario_10">Test Scenario</h4>
-<ol>
-<li>Verify that the claim family_name is a String encoded in UTF-8, supporting the full unicode range.</li>
-</ol>
+<p>For each item present, perform the following check: 1 Verify the value of the key for each nested key/value pair. 2. Verify that each key is unique within the DrivingPrivilege data item.</p>
 <h4 id="expected-results_10">Expected results</h4>
 <ol>
-<li>The claim family_name is a String encoded in UTF-8, supporting the full unicode range.</li>
+<li>The data element item contains between 1 and 3 pairs inclusive, with the following value(s) for the key/ value pair(s): — "country" (optional), — "region" (optional), — "locality" (optional). 2. This is the case.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="eupid_dm_familynamebirth_01">EuPid_DM_FamilyNameBirth_01</h3>
+<h3 id="eupid_dm_birthplace_04">EuPid_DM_BirthPlace_04</h3>
 <h4 id="objective_11">Objective</h4>
-<p>This test case verifies that the claim family_name_birth is present in the Credential in IETF SD-JWT VC format if this is indicated in the ICS.</p>
+<p>This test case verifies that the value of each data element present inbirth_place is a well-formed CBOR text string.</p>
 <h4 id="references_11">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.1 <br />
-“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 2).</p>
+<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.5<br />
+ RFC 7049 section 2.1</p>
 <h4 id="eudi-wallet-relevancy_11">EUDI-wallet relevancy</h4>
-<p>EUDI_specific | EUDI_optional</p>
+<p>EUDI_specific | EUDI_required</p>
 <h4 id="profile-applicability_11">Profile applicability</h4>
-<p>The EUDI wallet contains a Credential in IETF SD-JWT VC format. <code>vct</code> claim includes base type of person identification "urn:eudi:pid:1". claim family_name_birth is included in a person identification data.</p>
+<p>The EUDI wallet contains a document with DocType = "eu.europa.ec.eudi.pid.1".</p>
 <h4 id="preconditions_11">Preconditions</h4>
-<p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
-B. All mandatory data elements within nameSpace  "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
-C. EUDI wallet presented the Credential successfully.</p>
+<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
+B. All mandatory data elements within nameSpace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
+C. The device retrieval mdoc response was retrieved. 
+D. The presence of data element birth_place in the device retrieval mdoc response was verified.</p>
 <h4 id="test-scenario_11">Test Scenario</h4>
-<ol>
-<li>Verify the presence of a claim with identifier family_name_birth in the  Credential presented to the Verifier in IETF SD-JWT VC format.</li>
-</ol>
+<p>For each data item present, perform the following check for the value of the key/value pair: 1. Verify the encoding of the data item value.</p>
 <h4 id="expected-results_11">Expected results</h4>
 <ol>
-<li>One claim with identifier family_name_birth is present.</li>
+<li>The major type svalue is equal to 3.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="eupid_dm_familynamebirth_02">EuPid_DM_FamilyNameBirth_02</h3>
+<h3 id="eupid_dm_birthplace_05">EuPid_DM_BirthPlace_05</h3>
 <h4 id="objective_12">Objective</h4>
-<p>This test case verifies that the claim family_name_birth is a String enconded in UTF-8.</p>
+<p>This test case verifies that the country item of data element birth_place is a valid country code.</p>
 <h4 id="references_12">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.1 <br />
-“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 item 3 (Table 7).<br />
- RFC 7049 section 2.1</p>
+<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.5<br />
+ ISO/IEC 3166-1</p>
 <h4 id="eudi-wallet-relevancy_12">EUDI-wallet relevancy</h4>
-<p>EUDI_specific | EUDI_optional</p>
+<p>EUDI_specific | EUDI_required</p>
 <h4 id="profile-applicability_12">Profile applicability</h4>
-<p>The EUDI wallet contains a Credential in IETF SD-JWT VC format. <code>vct</code> claim includes base type of person identification "urn:eudi:pid:1". claim family_name_birth is included in a person identification data.</p>
+<p>The mdoc contains a document with DocType = "eu.europa.ec.eudi.pid.1".</p>
 <h4 id="preconditions_12">Preconditions</h4>
-<p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
-B. All mandatory data elements within nameSpace  "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
-C. EUDI wallet presented the Credential successfully. 
-D. The presence of claim family_name_birth in the IETF SD-JWT VC Credential presented was verified.</p>
+<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
+B. All mandatory data elements within nameSpace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
+C. The device retrieval mdoc response was retrieved. 
+D. The presence of the item ‘country’ in data element birth_place in the device retrieval mdoc response was verified.</p>
 <h4 id="test-scenario_12">Test Scenario</h4>
 <ol>
-<li>Verify that the claim family_name is a String encoded in UTF-8, supporting the full unicode range.</li>
+<li>Verify that the value of the data element <code>country</code> in map place_of_birth contains a valid country code.</li>
 </ol>
 <h4 id="expected-results_12">Expected results</h4>
 <ol>
-<li>The claim family_name_birth is a String encoded in UTF-8, supporting the full unicode range.</li>
+<li>The DataElementValue has two characters, an alpha-2 code, corresponding to a country name: Listed in ISO 3166-1:2020, 6.1. Not listed in ISO 3166-1:2020, 6.1. In this case, the user-assigned country codes may be used, which consist in the series of letters AA, QM to QZ, XA to XZ, and ZZ (ISO 3166-1:2020, 8.3).</li>
 </ol>
+<h4 id="_1"></h4>
 <!-- END INCLUDE -->
-<h3 id="eupid_dm_givenname_01">EuPid_DM_GivenName_01</h3>
+<h3 id="eupid_dm_birthplace_2">EuPid_DM_BirthPlace_01</h3>
 <h4 id="objective_13">Objective</h4>
-<p>This test case verifies that the claim given_name is present in the Credential in IETF SD-JWT VC format.</p>
+<p>This test case verifies that the data element birth_place is present in the mdoc data.</p>
 <h4 id="references_13">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.1 <br />
-“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 1).</p>
+<p>European Digital Identity Wallet, ARF 1.9, Annex 3.01 pid rulebook, paragraph 3.1.5  <br />
+“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 1).</p>
 <h4 id="eudi-wallet-relevancy_13">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_required</p>
 <h4 id="profile-applicability_13">Profile applicability</h4>
-<p>The EUDI wallet contains a Credential in IETF SD-JWT VC format.<code>vct</code> claim includes base type of person identification "urn:eudi:pid:1".</p>
+<p>The EUDI wallet contains a document with DocType = "eu.europa.ec.eudi.pid.1".</p>
 <h4 id="preconditions_13">Preconditions</h4>
-<p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
-B. All mandatory data elements within nameSpace  "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
-C. EUDI wallet presented the Credential successfully.</p>
+<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
+B. All mandatory data elements within nameSpace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
+C. The device retrieval mdoc response was retrieved.</p>
 <h4 id="test-scenario_13">Test Scenario</h4>
 <ol>
-<li>Verify the presence of a claim with identifier given_name in the  Credential presented to the Verifier in IETF SD-JWT VC format.</li>
+<li>Verify the presence of a data element with identifier birth_place in the device retrieval mdoc response. 2. Verify the presence of an ErrorItem for data element birth_place.</li>
 </ol>
 <h4 id="expected-results_13">Expected results</h4>
 <ol>
-<li>One claim with identifier given_name is present.</li>
+<li>One data element with identifier birth_place is present. 2. There is no ErrorItem for data element birth_place.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="eupid_dm_givenname_02">EuPid_DM_GivenName_02</h3>
+<h3 id="eupid_dm_birthplace_3">EuPid_DM_BirthPlace_02</h3>
 <h4 id="objective_14">Objective</h4>
-<p>This test case verifies that the claim given_name is a String enconded in UTF-8.</p>
+<p>This test case verifies that the DataElementValue of data element birth_place is a well-formed CBOR map.</p>
 <h4 id="references_14">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.1 <br />
-“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 7).RFC 7049 section 2.1</p>
+<p>European Digital Identity Wallet, ARF 1.9, Annex 3.01 pid rulebook, paragraph 3.1.5  <br />
+“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 6).</p>
 <h4 id="eudi-wallet-relevancy_14">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_required</p>
 <h4 id="profile-applicability_14">Profile applicability</h4>
-<p>The EUDI wallet contains a Credential in IETF SD-JWT VC format.<code>vct</code> claim includes base type of person identification "urn:eudi:pid:1".</p>
+<p>The EUDI wallet contains a document with DocType = "eu.europa.ec.eudi.pid.1".</p>
 <h4 id="preconditions_14">Preconditions</h4>
-<p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
-B. All mandatory data elements within nameSpace  "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
-C. EUDI wallet presented the Credential successfully.<br />
-D. The presence of claim given_name in the IETF SD-JWT VC Credential presented was verified.</p>
+<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
+B. All mandatory data elements within nameSpace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
+C. The device retrieval mdoc response was retrieved. 
+D. The presence of data element birth_place in the device retrieval mdoc response was verified.</p>
 <h4 id="test-scenario_14">Test Scenario</h4>
 <ol>
-<li>Verify that the claim given_name is a String encoded in UTF-8, supporting the full unicode range.</li>
+<li>Verify the major type encoded on the first byte of the CBOR data item. 2. Verify the encoding of the data item value.</li>
 </ol>
 <h4 id="expected-results_14">Expected results</h4>
 <ol>
-<li>The claim given_name is a String encoded in UTF-8, supporting the full unicode range.</li>
+<li>The major type value is equal to 5. 2. All bytes in the data item value are UTF-8 encoded characters.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="eupid_dm_givennamebirth_01">EuPid_DM_GivenNameBirth_01</h3>
+<h3 id="eupid_dm_birthplace_4">EuPid_DM_BirthPlace_03</h3>
 <h4 id="objective_15">Objective</h4>
-<p>This test case verifies that the claim given_name_birth is present in the Credential in IETF SD-JWT VC format if this is indicated in the ICS.</p>
+<p>This test case verifies that the correct key-value pairs are present in each data element present in birth_place.</p>
 <h4 id="references_15">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.1 <br />
-“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 2).</p>
+<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.5  <br />
+“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 6).<br />
+ RFC 7049 section 2.1</p>
 <h4 id="eudi-wallet-relevancy_15">EUDI-wallet relevancy</h4>
-<p>EUDI_specific | EUDI_optional</p>
+<p>EUDI_specific | EUDI_required</p>
 <h4 id="profile-applicability_15">Profile applicability</h4>
-<p>The EUDI wallet contains a Credential in IETF SD-JWT VC format. <code>vct</code> claim includes base type of person identification "urn:eudi:pid:1". claim given_name_birth is included in a person identification data.</p>
+<p>The EUDI wallet contains a document with DocType = "eu.europa.ec.eudi.pid.1".</p>
 <h4 id="preconditions_15">Preconditions</h4>
-<p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
-B. All mandatory data elements within nameSpace  "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
-C. EUDI wallet presented the Credential successfully.</p>
+<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
+B. All mandatory data elements within nameSpace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
+C. The device retrieval mdoc response was retrieved. 
+D. The presence of data element birth_place in the device retrieval mdoc response was verified.</p>
 <h4 id="test-scenario_15">Test Scenario</h4>
-<ol>
-<li>Verify the presence of a claim with identifier given_name_birth in the  Credential presented to the Verifier in IETF SD-JWT VC format.</li>
-</ol>
+<p>For each item present, perform the following check: 1 Verify the value of the key for each nested key/value pair. 2. Verify that each key is unique within the data item.</p>
 <h4 id="expected-results_15">Expected results</h4>
 <ol>
-<li>One claim with identifier given_name_birth is present.</li>
+<li>The data element item contains between 1 and 3 pairs inclusive, with the following value(s) for the key/ value pair(s): — "country" (optional), — "region" (optional), — "locality" (optional). 2. This is the case.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="eupid_dm_givennamebirth_02">EuPid_DM_GivenNameBirth_02</h3>
+<h3 id="eupid_dm_birthplace_5">EuPid_DM_BirthPlace_04</h3>
 <h4 id="objective_16">Objective</h4>
-<p>This test case verifies that the claim given_name_birth is a String enconded in UTF-8.</p>
+<p>This test case verifies that the value of each data element present inbirth_place is a well-formed CBOR text string.</p>
 <h4 id="references_16">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.1 <br />
-“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 7).<br />
+<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.5  <br />
+“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 6).<br />
  RFC 7049 section 2.1</p>
 <h4 id="eudi-wallet-relevancy_16">EUDI-wallet relevancy</h4>
-<p>EUDI_specific | EUDI_optional</p>
+<p>EUDI_specific | EUDI_required</p>
 <h4 id="profile-applicability_16">Profile applicability</h4>
-<p>The EUDI wallet contains a Credential in IETF SD-JWT VC format. <code>vct</code> claim includes base type of person identification "urn:eudi:pid:1". claim given_name_birth is included in a person identification data.</p>
+<p>The EUDI wallet contains a document with DocType = "eu.europa.ec.eudi.pid.1".</p>
 <h4 id="preconditions_16">Preconditions</h4>
-<p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
-B. All mandatory data elements within nameSpace  "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
-C. EUDI wallet presented the Credential successfully. 
-D. The presence of claim given_name_birth in the IETF SD-JWT VC Credential presented was verified.</p>
+<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
+B. All mandatory data elements within nameSpace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
+C. The device retrieval mdoc response was retrieved. 
+D. The presence of data element birth_place in the device retrieval mdoc response was verified.</p>
 <h4 id="test-scenario_16">Test Scenario</h4>
-<ol>
-<li>Verify that the claim given_name is a String encoded in UTF-8, supporting the full unicode range.</li>
-</ol>
+<p>For each data item present, perform the following check for the value of the key/value pair: 1. Verify the encoding of the data item value.</p>
 <h4 id="expected-results_16">Expected results</h4>
 <ol>
-<li>The claim given_name_birth is a String encoded in UTF-8, supporting the full unicode range.</li>
+<li>The major type value is equal to 3.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="eupid_dm_nationality_01">EuPid_DM_Nationality_01</h3>
+<h3 id="eupid_dm_birthplace_6">EuPid_DM_BirthPlace_05</h3>
 <h4 id="objective_17">Objective</h4>
-<p>This test case verifies that the claim nationality is present in the Credential in IETF SD-JWT VC format.</p>
+<p>This test case verifies that the country item of data element birth_place is a valid country code.</p>
 <h4 id="references_17">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.2 <br />
-“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 1).</p>
+<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.5  <br />
+“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 6).<br />
+ ISO/IEC 3166-1</p>
 <h4 id="eudi-wallet-relevancy_17">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_required</p>
 <h4 id="profile-applicability_17">Profile applicability</h4>
-<p>The EUDI wallet contains a Credential in IETF SD-JWT VC format. <code>vct</code> claim includes base type of person identification "urn:eudi:pid:1".</p>
+<p>The mdoc contains a document with DocType = "eu.europa.ec.eudi.pid.1".</p>
 <h4 id="preconditions_17">Preconditions</h4>
-<p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
-B. All mandatory data elements within nameSpace  "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
-C. EUDI wallet presented the Credential successfully.</p>
+<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
+B. All mandatory data elements within nameSpace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
+C. The device retrieval mdoc response was retrieved. 
+D. The presence of the item ‘country’ in data element birth_place in the device retrieval mdoc response was verified.</p>
 <h4 id="test-scenario_17">Test Scenario</h4>
 <ol>
-<li>Verify the presence of a claim with identifier nationality in the  Credential presented to the Verifier in IETF SD-JWT VC format.</li>
+<li>Verify that the value of the data element <code>country</code> in map place_of_birth contains a valid country code.</li>
 </ol>
 <h4 id="expected-results_17">Expected results</h4>
 <ol>
-<li>One claim with identifier nationality is present.</li>
+<li>The DataElementValue has two characters, an alpha-2 code, corresponding to a country name: Listed in ISO 3166-1:2020, 6.1. Not listed in ISO 3166-1:2020, 6.1. In this case, the user-assigned country codes may be used, which consist in the series of letters AA, QM to QZ, XA to XZ, and ZZ (ISO 3166-1:2020, 8.3).</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="eupid_dm_nationality_02">EuPid_DM_Nationality_02</h3>
+<h3 id="eupid_dm_birthplace_06">EuPid_DM_BirthPlace_06</h3>
 <h4 id="objective_18">Objective</h4>
-<p>This test case verifies that the claim nationality is an array of strings.</p>
+<p>This test case verifies that the region item of data element birth_place has only UTF-8 characters, and maximal length of 150 characters.</p>
 <h4 id="references_18">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.2 <br />
-“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 item 3 (Table 7).<br />
- RFC 7049 section 2.1</p>
+<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.5,  <br />
+“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 6).<br />
+ ISO/IEC 3166-1</p>
 <h4 id="eudi-wallet-relevancy_18">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_required</p>
 <h4 id="profile-applicability_18">Profile applicability</h4>
-<p>The EUDI wallet contains a Credential in IETF SD-JWT VC format. <code>vct</code> claim includes base type of person identification "urn:eudi:pid:1".</p>
+<p>The mdoc contains a document with DocType = "eu.europa.ec.eudi.pid.1".</p>
 <h4 id="preconditions_18">Preconditions</h4>
-<p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
-B. All mandatory data elements within nameSpace  "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
-C. EUDI wallet presented the Credential successfully. 
-D. The presence of claim nationality in the IETF SD-JWT VC Credential presented was verified..</p>
+<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
+B. All mandatory data elements within nameSpace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
+C. The device retrieval mdoc response was retrieved. 
+D. The presence of the item <code>region</code> in data element birth_place in the device retrieval mdoc response was verified.</p>
 <h4 id="test-scenario_18">Test Scenario</h4>
 <ol>
-<li>Verify that the claim nationality is an array of Strings.  2. Verify the number of items in the array.</li>
+<li>Verify that the value of the data element <code>region</code> in map place_of_birth 2. Check the length of the  <code>region</code> value in map place_of_birth.</li>
 </ol>
 <h4 id="expected-results_18">Expected results</h4>
 <ol>
-<li>The claim nationality is an array of strings. 2. There are &gt;= 1 items in the array.</li>
+<li>Values includes only UTF-8 characters. 2. Length is equal or smaller tjam 150 characters.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="eupid_dm_nationality_03">EuPid_DM_Nationality_03</h3>
+<h3 id="eupid_dm_birthplace_07">EuPid_DM_BirthPlace_07</h3>
 <h4 id="objective_19">Objective</h4>
-<p>This test case verifies that each string whitin the array of strings in the claim nationality contains a valid country code.</p>
+<p>This test case verifies that the region item of data element birth_place has only UTF-8 characters, and maximal length of 150 characters.</p>
 <h4 id="references_19">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.2 <br />
-“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 item 3 (Table 7). ISO 3166-1:2020, 6.1 ISO 3166-1:2020, 8.3</p>
+<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.5,  <br />
+“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 6).<br />
+ ISO/IEC 3166-1</p>
 <h4 id="eudi-wallet-relevancy_19">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_required</p>
 <h4 id="profile-applicability_19">Profile applicability</h4>
-<p>The EUDI wallet contains a Credential in IETF SD-JWT VC format. <code>vct</code> claim includes base type of person identification "urn:eudi:pid:1".</p>
+<p>The mdoc contains a document with DocType = "eu.europa.ec.eudi.pid.1".</p>
 <h4 id="preconditions_19">Preconditions</h4>
-<p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
-B. All mandatory data elements within nameSpace  "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
-C. EUDI wallet presented the Credential successfully. 
-D. The presence of claim nationality in the IETF SD-JWT VC Credential presented was verified.</p>
+<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
+B. All mandatory data elements within nameSpace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
+C. The device retrieval mdoc response was retrieved. 
+D. The presence of the item ‘locality’ in data element birth_place in the device retrieval mdoc response was verified.</p>
 <h4 id="test-scenario_19">Test Scenario</h4>
 <ol>
-<li>Verify that each string whitin the array of strings in the claim nationality contains a valid country code.</li>
+<li>Verify that the value of the data element <code>region</code> in map place_of_birth 2. Check the length of the  <code>locality</code> value in map place_of_birth.</li>
 </ol>
 <h4 id="expected-results_19">Expected results</h4>
 <ol>
-<li>Each string whithin array of strings in the claim nationality has two characters, an alpha-2 code, corresponding to a country name: Listed in ISO 3166-1:2020, 6.1. Not listed in ISO 3166-1:2020, 6.1. In this case, the user-assigned country codes may be used, which consist in the series of letters AA, QM to QZ, XA to XZ, and ZZ (ISO 3166-1:2020, 8.3).</li>
+<li>Values includes only UTF-8 characters. 2. Length is equal or smaller tjam 150 characters.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="eupid_dm_personaladministrativenumber_01">EuPid_DM_PersonalAdministrativeNumber_01</h3>
+<h3 id="eupid_dm_familyname_01">EuPid_DM_FamilyName_01</h3>
 <h4 id="objective_20">Objective</h4>
-<p>This test case verifies that the claim personal_administrative_number is present in the Credential in IETF SD-JWT VC format if this is indicated in the ICS.</p>
+<p>This test case verifies that the claim family_name is present in the Credential in IETF SD-JWT VC format.</p>
 <h4 id="references_20">References</h4>
 <p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.1 <br />
-“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 2).</p>
+“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 1).</p>
 <h4 id="eudi-wallet-relevancy_20">EUDI-wallet relevancy</h4>
-<p>EUDI_specific | EUDI_optional</p>
+<p>EUDI_specific | EUDI_required</p>
 <h4 id="profile-applicability_20">Profile applicability</h4>
-<p>The EUDI wallet contains a Credential in IETF SD-JWT VC format. <code>vct</code> claim includes base type of person identification "urn:eudi:pid:1". claim personal_administrative_number is included in a person identification data.</p>
+<p>The EUDI wallet contains a Credential in IETF SD-JWT VC format. <code>vct</code> claim includes base type of person identification "urn:eudi:pid:1".</p>
 <h4 id="preconditions_20">Preconditions</h4>
 <p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
 B. All mandatory data elements within nameSpace  "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
 C. EUDI wallet presented the Credential successfully.</p>
 <h4 id="test-scenario_20">Test Scenario</h4>
 <ol>
-<li>Verify the presence of a claim with identifier personal_administrative_number in the  Credential presented to the Verifier in IETF SD-JWT VC format.</li>
+<li>Verify the presence of a claim with identifier family_name in the  Credential presented to the Verifier in IETF SD-JWT VC format.</li>
 </ol>
 <h4 id="expected-results_20">Expected results</h4>
 <ol>
-<li>One claim with identifier personal_administrative_number is present.</li>
+<li>One claim with identifier family_name is present.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="eupid_dm_personaladministrativenumber_02">EuPid_DM_PersonalAdministrativeNumber_02</h3>
+<h3 id="eupid_dm_familyname_02">EuPid_DM_FamilyName_02</h3>
 <h4 id="objective_21">Objective</h4>
-<p>This test case verifies that the claim personal_administrative_number is a String enconded in UTF-8.</p>
+<p>This test case verifies that the claim family_name is a String enconded in UTF-8.</p>
 <h4 id="references_21">References</h4>
 <p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.1 <br />
-“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 item 4 (Table 8).<br />
+“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 7).<br />
  RFC 7049 section 2.1</p>
 <h4 id="eudi-wallet-relevancy_21">EUDI-wallet relevancy</h4>
-<p>EUDI_specific | EUDI_optional</p>
+<p>EUDI_specific | EUDI_required</p>
 <h4 id="profile-applicability_21">Profile applicability</h4>
-<p>The EUDI wallet contains a Credential in IETF SD-JWT VC format. <code>vct</code> claim includes base type of person identification "urn:eudi:pid:1". claim personal_administrative_number is included in a person identification data.</p>
+<p>The EUDI wallet contains a Credential in IETF SD-JWT VC format.<code>vct</code> claim includes base type of person identification "urn:eudi:pid:1".</p>
 <h4 id="preconditions_21">Preconditions</h4>
 <p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
 B. All mandatory data elements within nameSpace  "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
 C. EUDI wallet presented the Credential successfully. 
-D. The presence of claim personal_administrative_number in the IETF SD-JWT VC Credential presented was verified.</p>
+D. The presence of claim family_name in the IETF SD-JWT VC Credential presented was verified.</p>
 <h4 id="test-scenario_21">Test Scenario</h4>
 <ol>
-<li>Verify that the claim personal_administrative_number is a String encoded in UTF-8, supporting the full unicode range</li>
+<li>Verify that the claim family_name is a String encoded in UTF-8, supporting the full unicode range.</li>
 </ol>
 <h4 id="expected-results_21">Expected results</h4>
 <ol>
-<li>The claim personal_administrative_number is a String encoded in UTF-8, supporting the full unicode range</li>
+<li>The claim family_name is a String encoded in UTF-8, supporting the full unicode range.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="eupid_dm_portrait_01">EuPid_DM_Portrait_01</h3>
+<h3 id="eupid_dm_familynamebirth_01">EuPid_DM_FamilyNameBirth_01</h3>
 <h4 id="objective_22">Objective</h4>
-<p>This test case verifies that the claim portrait is present in the Credential in IETF SD-JWT VC format.</p>
+<p>This test case verifies that the claim family_name_birth is present in the Credential in IETF SD-JWT VC format if this is indicated in the ICS.</p>
 <h4 id="references_22">References</h4>
 <p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.1 <br />
-“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 1).</p>
+“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 2).</p>
 <h4 id="eudi-wallet-relevancy_22">EUDI-wallet relevancy</h4>
-<p>EUDI_specific | EUDI_required</p>
+<p>EUDI_specific | EUDI_optional</p>
 <h4 id="profile-applicability_22">Profile applicability</h4>
-<p>The EUDI wallet contains a Credential in IETF SD-JWT VC format. <code>vct</code> claim includes base type of person identification "urn:eudi:pid:1".</p>
+<p>The EUDI wallet contains a Credential in IETF SD-JWT VC format. <code>vct</code> claim includes base type of person identification "urn:eudi:pid:1". claim family_name_birth is included in a person identification data.</p>
 <h4 id="preconditions_22">Preconditions</h4>
 <p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
 B. All mandatory data elements within nameSpace  "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
 C. EUDI wallet presented the Credential successfully.</p>
 <h4 id="test-scenario_22">Test Scenario</h4>
 <ol>
-<li>Verify the presence of a claim with identifier portrait in the  Credential presented to the Verifier in IETF SD-JWT VC format.</li>
+<li>Verify the presence of a claim with identifier family_name_birth in the  Credential presented to the Verifier in IETF SD-JWT VC format.</li>
 </ol>
 <h4 id="expected-results_22">Expected results</h4>
+<ol>
+<li>One claim with identifier family_name_birth is present.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="eupid_dm_familynamebirth_02">EuPid_DM_FamilyNameBirth_02</h3>
+<h4 id="objective_23">Objective</h4>
+<p>This test case verifies that the claim family_name_birth is a String enconded in UTF-8.</p>
+<h4 id="references_23">References</h4>
+<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.1 <br />
+“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 item 3 (Table 7).<br />
+ RFC 7049 section 2.1</p>
+<h4 id="eudi-wallet-relevancy_23">EUDI-wallet relevancy</h4>
+<p>EUDI_specific | EUDI_optional</p>
+<h4 id="profile-applicability_23">Profile applicability</h4>
+<p>The EUDI wallet contains a Credential in IETF SD-JWT VC format. <code>vct</code> claim includes base type of person identification "urn:eudi:pid:1". claim family_name_birth is included in a person identification data.</p>
+<h4 id="preconditions_23">Preconditions</h4>
+<p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
+B. All mandatory data elements within nameSpace  "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
+C. EUDI wallet presented the Credential successfully. 
+D. The presence of claim family_name_birth in the IETF SD-JWT VC Credential presented was verified.</p>
+<h4 id="test-scenario_23">Test Scenario</h4>
+<ol>
+<li>Verify that the claim family_name is a String encoded in UTF-8, supporting the full unicode range.</li>
+</ol>
+<h4 id="expected-results_23">Expected results</h4>
+<ol>
+<li>The claim family_name_birth is a String encoded in UTF-8, supporting the full unicode range.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="eupid_dm_familyname_2">EuPid_DM_FamilyName_01</h3>
+<h4 id="objective_24">Objective</h4>
+<p>This test case verifies that the</p>
+<h4 id="references_24">References</h4>
+<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.1  <br />
+“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 1).</p>
+<h4 id="eudi-wallet-relevancy_24">EUDI-wallet relevancy</h4>
+<p>EUDI_specific | EUDI_required</p>
+<h4 id="profile-applicability_24">Profile applicability</h4>
+<p>The EUDI wallet contains a Credential in ISO-mdoc format with DocType = “eu.europa.ec.eudi.pid.1”</p>
+<h4 id="preconditions_24">Preconditions</h4>
+<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
+B. All mandatory data elements within nameSpace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
+C. The device retrieval mdoc response was retrieved.</p>
+<h4 id="test-scenario_24">Test Scenario</h4>
+<ol>
+<li>Verify the presence of a data element with identifier family_name in the device retrieval mdoc response. 2. Verify the presence of an ErrorItem for data element family_name.</li>
+</ol>
+<h4 id="expected-results_24">Expected results</h4>
+<ol>
+<li>One data element with identifier family_name is present. 2. There is no ErrorItem for data element family_name.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="eupid_dm_familyname_3">EuPid_DM_FamilyName_02</h3>
+<h4 id="objective_25">Objective</h4>
+<p>This test case verifies that the DataElementValue of data element family_name is a well-formed CBOR text string.</p>
+<h4 id="references_25">References</h4>
+<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.1  <br />
+“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 6).<br />
+ RFC 7049 section 2.1</p>
+<h4 id="eudi-wallet-relevancy_25">EUDI-wallet relevancy</h4>
+<p>EUDI_specific | EUDI_required</p>
+<h4 id="profile-applicability_25">Profile applicability</h4>
+<p>The EUDI wallet contains a Credential in ISO-mdoc format with DocType = “eu.europa.ec.eudi.pid.1”</p>
+<h4 id="preconditions_25">Preconditions</h4>
+<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
+B. All mandatory data elements within nameSpace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
+C. The device retrieval mdoc response was retrieved. 
+D. The presence of data element family_name in the device retrieval mdoc response was verified.</p>
+<h4 id="test-scenario_25">Test Scenario</h4>
+<ol>
+<li>Verify the major type encoded on the first byte of the CBOR data item. 2. Verify the encoding of the data item value.</li>
+</ol>
+<h4 id="expected-results_25">Expected results</h4>
+<ol>
+<li>The major type value is equal to 3. 2. All bytes in the data item value are UTF-8 encoded characters.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="eupid_dm_familynamebirth_2">EuPid_DM_FamilyNameBirth_01</h3>
+<h4 id="objective_26">Objective</h4>
+<p>This test case verifies that the data element family_name_birth is present in the mdoc data if this is indicated in the ICS.</p>
+<h4 id="references_26">References</h4>
+<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.1  <br />
+“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 2).</p>
+<h4 id="eudi-wallet-relevancy_26">EUDI-wallet relevancy</h4>
+<p>EUDI_specific | EUDI_optional</p>
+<h4 id="profile-applicability_26">Profile applicability</h4>
+<p>The EUDI wallet contains a Credential in ISO-mdoc format with DocType = “eu.europa.ec.eudi.pid.1” Data element family_name_birth is present in the mdoc data.</p>
+<h4 id="preconditions_26">Preconditions</h4>
+<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
+B. All mandatory data elements within nameSpace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
+C. The device retrieval mdoc response was retrieved.</p>
+<h4 id="test-scenario_26">Test Scenario</h4>
+<ol>
+<li>Verify the presence of a data element with identifier family_name_birth in the device retrieval mdoc response. 2. Verify the presence of an ErrorItem for data element family_name_birth.</li>
+</ol>
+<h4 id="expected-results_26">Expected results</h4>
+<ol>
+<li>One data element with identifier family_name_birth is present. 2. There is no ErrorItem for data element family_name_birth.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="eupid_dm_familynamebirth_3">EuPid_DM_FamilyNameBirth_02</h3>
+<h4 id="objective_27">Objective</h4>
+<p>This test case verifies that the DataElementValue of data element family_name_birth is a well-formed CBOR text string.</p>
+<h4 id="references_27">References</h4>
+<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.1 <br />
+“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 6).<br />
+ RFC 7049 section 2.1</p>
+<h4 id="eudi-wallet-relevancy_27">EUDI-wallet relevancy</h4>
+<p>EUDI_specific | EUDI_optional</p>
+<h4 id="profile-applicability_27">Profile applicability</h4>
+<p>The EUDI wallet contains a Credential in ISO-mdoc format with DocType = “eu.europa.ec.eudi.pid.1” Data element family_name_birth is present in the mdoc data.</p>
+<h4 id="preconditions_27">Preconditions</h4>
+<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
+B. All mandatory data elements within nameSpace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
+C. The device retrieval mdoc response was retrieved. 
+D. The presence of data element family_name_birth in the device retrieval mdoc response was verified.</p>
+<h4 id="test-scenario_27">Test Scenario</h4>
+<ol>
+<li>Verify the major type encoded on the first byte of the CBOR data item. 2. Verify the encoding of the data item value.</li>
+</ol>
+<h4 id="expected-results_27">Expected results</h4>
+<ol>
+<li>The major type value is equal to 3. 2. All bytes in the data item value are UTF-8 encoded characters.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="eupid_dm_givenname_01">EuPid_DM_GivenName_01</h3>
+<h4 id="objective_28">Objective</h4>
+<p>This test case verifies that the claim given_name is present in the Credential in IETF SD-JWT VC format.</p>
+<h4 id="references_28">References</h4>
+<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.1 <br />
+“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 1).</p>
+<h4 id="eudi-wallet-relevancy_28">EUDI-wallet relevancy</h4>
+<p>EUDI_specific | EUDI_required</p>
+<h4 id="profile-applicability_28">Profile applicability</h4>
+<p>The EUDI wallet contains a Credential in IETF SD-JWT VC format.<code>vct</code> claim includes base type of person identification "urn:eudi:pid:1".</p>
+<h4 id="preconditions_28">Preconditions</h4>
+<p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
+B. All mandatory data elements within nameSpace  "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
+C. EUDI wallet presented the Credential successfully.</p>
+<h4 id="test-scenario_28">Test Scenario</h4>
+<ol>
+<li>Verify the presence of a claim with identifier given_name in the  Credential presented to the Verifier in IETF SD-JWT VC format.</li>
+</ol>
+<h4 id="expected-results_28">Expected results</h4>
+<ol>
+<li>One claim with identifier given_name is present.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="eupid_dm_givenname_02">EuPid_DM_GivenName_02</h3>
+<h4 id="objective_29">Objective</h4>
+<p>This test case verifies that the claim given_name is a String enconded in UTF-8.</p>
+<h4 id="references_29">References</h4>
+<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.1 <br />
+“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 7).RFC 7049 section 2.1</p>
+<h4 id="eudi-wallet-relevancy_29">EUDI-wallet relevancy</h4>
+<p>EUDI_specific | EUDI_required</p>
+<h4 id="profile-applicability_29">Profile applicability</h4>
+<p>The EUDI wallet contains a Credential in IETF SD-JWT VC format.<code>vct</code> claim includes base type of person identification "urn:eudi:pid:1".</p>
+<h4 id="preconditions_29">Preconditions</h4>
+<p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
+B. All mandatory data elements within nameSpace  "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
+C. EUDI wallet presented the Credential successfully.<br />
+D. The presence of claim given_name in the IETF SD-JWT VC Credential presented was verified.</p>
+<h4 id="test-scenario_29">Test Scenario</h4>
+<ol>
+<li>Verify that the claim given_name is a String encoded in UTF-8, supporting the full unicode range.</li>
+</ol>
+<h4 id="expected-results_29">Expected results</h4>
+<ol>
+<li>The claim given_name is a String encoded in UTF-8, supporting the full unicode range.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="eupid_dm_givennamebirth_01">EuPid_DM_GivenNameBirth_01</h3>
+<h4 id="objective_30">Objective</h4>
+<p>This test case verifies that the claim given_name_birth is present in the Credential in IETF SD-JWT VC format if this is indicated in the ICS.</p>
+<h4 id="references_30">References</h4>
+<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.1 <br />
+“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 2).</p>
+<h4 id="eudi-wallet-relevancy_30">EUDI-wallet relevancy</h4>
+<p>EUDI_specific | EUDI_optional</p>
+<h4 id="profile-applicability_30">Profile applicability</h4>
+<p>The EUDI wallet contains a Credential in IETF SD-JWT VC format. <code>vct</code> claim includes base type of person identification "urn:eudi:pid:1". claim given_name_birth is included in a person identification data.</p>
+<h4 id="preconditions_30">Preconditions</h4>
+<p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
+B. All mandatory data elements within nameSpace  "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
+C. EUDI wallet presented the Credential successfully.</p>
+<h4 id="test-scenario_30">Test Scenario</h4>
+<ol>
+<li>Verify the presence of a claim with identifier given_name_birth in the  Credential presented to the Verifier in IETF SD-JWT VC format.</li>
+</ol>
+<h4 id="expected-results_30">Expected results</h4>
+<ol>
+<li>One claim with identifier given_name_birth is present.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="eupid_dm_givennamebirth_02">EuPid_DM_GivenNameBirth_02</h3>
+<h4 id="objective_31">Objective</h4>
+<p>This test case verifies that the claim given_name_birth is a String enconded in UTF-8.</p>
+<h4 id="references_31">References</h4>
+<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.1 <br />
+“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 7).<br />
+ RFC 7049 section 2.1</p>
+<h4 id="eudi-wallet-relevancy_31">EUDI-wallet relevancy</h4>
+<p>EUDI_specific | EUDI_optional</p>
+<h4 id="profile-applicability_31">Profile applicability</h4>
+<p>The EUDI wallet contains a Credential in IETF SD-JWT VC format. <code>vct</code> claim includes base type of person identification "urn:eudi:pid:1". claim given_name_birth is included in a person identification data.</p>
+<h4 id="preconditions_31">Preconditions</h4>
+<p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
+B. All mandatory data elements within nameSpace  "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
+C. EUDI wallet presented the Credential successfully. 
+D. The presence of claim given_name_birth in the IETF SD-JWT VC Credential presented was verified.</p>
+<h4 id="test-scenario_31">Test Scenario</h4>
+<ol>
+<li>Verify that the claim given_name is a String encoded in UTF-8, supporting the full unicode range.</li>
+</ol>
+<h4 id="expected-results_31">Expected results</h4>
+<ol>
+<li>The claim given_name_birth is a String encoded in UTF-8, supporting the full unicode range.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="eupid_dm_givenname_2">EuPid_DM_GivenName_01</h3>
+<h4 id="objective_32">Objective</h4>
+<p>This test case verifies that the</p>
+<h4 id="references_32">References</h4>
+<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.1  <br />
+“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 1).</p>
+<h4 id="eudi-wallet-relevancy_32">EUDI-wallet relevancy</h4>
+<p>EUDI_specific | EUDI_required</p>
+<h4 id="profile-applicability_32">Profile applicability</h4>
+<p>The EUDI wallet contains a Credential in ISO-mdoc format with DocType = “eu.europa.ec.eudi.pid.1”</p>
+<h4 id="preconditions_32">Preconditions</h4>
+<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
+B. All mandatory data elements within nameSpace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
+C. The device retrieval mdoc response was retrieved.</p>
+<h4 id="test-scenario_32">Test Scenario</h4>
+<ol>
+<li>Verify the presence of a data element with identifier given_name in the device retrieval mdoc response. 2. Verify the presence of an ErrorItem for data element given_name.</li>
+</ol>
+<h4 id="expected-results_32">Expected results</h4>
+<ol>
+<li>One data element with identifier given_name is present. 2. There is no ErrorItem for data element given_name.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="eupid_dm_givenname_3">EuPid_DM_GivenName_02</h3>
+<h4 id="objective_33">Objective</h4>
+<p>This test case verifies that the DataElementValue of data element given_name is a well-formed CBOR text string.</p>
+<h4 id="references_33">References</h4>
+<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.1  <br />
+“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 6).<br />
+ RFC 7049 section 2.1</p>
+<h4 id="eudi-wallet-relevancy_33">EUDI-wallet relevancy</h4>
+<p>EUDI_specific | EUDI_required</p>
+<h4 id="profile-applicability_33">Profile applicability</h4>
+<p>The EUDI wallet contains a Credential in ISO-mdoc format with DocType = “eu.europa.ec.eudi.pid.1”</p>
+<h4 id="preconditions_33">Preconditions</h4>
+<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
+B. All mandatory data elements within nameSpace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
+C. The device retrieval mdoc response was retrieved. 
+D. The presence of data element given_name in the device retrieval mdoc response was verified.</p>
+<h4 id="test-scenario_33">Test Scenario</h4>
+<ol>
+<li>Verify the major type encoded on the first byte of the CBOR data item. 2. Verify the encoding of the data item value.</li>
+</ol>
+<h4 id="expected-results_33">Expected results</h4>
+<ol>
+<li>The major type value is equal to 3. 2. All bytes in the data item value are UTF-8 encoded characters.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="eupid_dm_givennamebirth_2">EuPid_DM_GivenNameBirth_01</h3>
+<h4 id="objective_34">Objective</h4>
+<p>This test case verifies that the data element given_name_birth is present in the mdoc data if this is indicated in the ICS.</p>
+<h4 id="references_34">References</h4>
+<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.1  <br />
+“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 2).</p>
+<h4 id="eudi-wallet-relevancy_34">EUDI-wallet relevancy</h4>
+<p>EUDI_specific | EUDI_optional</p>
+<h4 id="profile-applicability_34">Profile applicability</h4>
+<p>The EUDI wallet contains a Credential in ISO-mdoc format with DocType = “eu.europa.ec.eudi.pid.1”</p>
+<h4 id="preconditions_34">Preconditions</h4>
+<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
+B. All mandatory data elements within nameSpace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
+C. The device retrieval mdoc response was retrieved.</p>
+<h4 id="test-scenario_34">Test Scenario</h4>
+<ol>
+<li>Verify the presence of a data element with identifier given_name_birth in the device retrieval mdoc response. 2. Verify the presence of an ErrorItem for data element given_name_birth.</li>
+</ol>
+<h4 id="expected-results_34">Expected results</h4>
+<ol>
+<li>One data element with identifier given_name_birth is present. 2. There is no ErrorItem for data element given_name_birth.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="eupid_dm_givennamebirth_3">EuPid_DM_GivenNameBirth_02</h3>
+<h4 id="objective_35">Objective</h4>
+<p>This test case verifies that the DataElementValue of data element given_name_birth is a well-formed CBOR text string.</p>
+<h4 id="references_35">References</h4>
+<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.1  <br />
+“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 2).<br />
+ RFC 7049 section 2.1</p>
+<h4 id="eudi-wallet-relevancy_35">EUDI-wallet relevancy</h4>
+<p>EUDI_specific | EUDI_optional</p>
+<h4 id="profile-applicability_35">Profile applicability</h4>
+<p>The EUDI wallet contains a Credential in ISO-mdoc format with DocType = “eu.europa.ec.eudi.pid.1”</p>
+<h4 id="preconditions_35">Preconditions</h4>
+<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
+B. All mandatory data elements within nameSpace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
+C. The device retrieval mdoc response was retrieved. 
+D. The presence of data element given_name_birth in the device retrieval mdoc response was verified.</p>
+<h4 id="test-scenario_35">Test Scenario</h4>
+<ol>
+<li>Verify the major type encoded on the first byte of the CBOR data item. 2. Verify the encoding of the data item value.</li>
+</ol>
+<h4 id="expected-results_35">Expected results</h4>
+<ol>
+<li>The major type value is equal to 3. 2. All bytes in the data item value are UTF-8 encoded characters.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="eupid_dm_nationality_01">EuPid_DM_Nationality_01</h3>
+<h4 id="objective_36">Objective</h4>
+<p>This test case verifies that the claim nationality is present in the Credential in IETF SD-JWT VC format.</p>
+<h4 id="references_36">References</h4>
+<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.2 <br />
+“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 1).</p>
+<h4 id="eudi-wallet-relevancy_36">EUDI-wallet relevancy</h4>
+<p>EUDI_specific | EUDI_required</p>
+<h4 id="profile-applicability_36">Profile applicability</h4>
+<p>The EUDI wallet contains a Credential in IETF SD-JWT VC format. <code>vct</code> claim includes base type of person identification "urn:eudi:pid:1".</p>
+<h4 id="preconditions_36">Preconditions</h4>
+<p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
+B. All mandatory data elements within nameSpace  "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
+C. EUDI wallet presented the Credential successfully.</p>
+<h4 id="test-scenario_36">Test Scenario</h4>
+<ol>
+<li>Verify the presence of a claim with identifier nationality in the  Credential presented to the Verifier in IETF SD-JWT VC format.</li>
+</ol>
+<h4 id="expected-results_36">Expected results</h4>
+<ol>
+<li>One claim with identifier nationality is present.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="eupid_dm_nationality_02">EuPid_DM_Nationality_02</h3>
+<h4 id="objective_37">Objective</h4>
+<p>This test case verifies that the claim nationality is an array of strings.</p>
+<h4 id="references_37">References</h4>
+<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.2 <br />
+“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 item 3 (Table 7).<br />
+ RFC 7049 section 2.1</p>
+<h4 id="eudi-wallet-relevancy_37">EUDI-wallet relevancy</h4>
+<p>EUDI_specific | EUDI_required</p>
+<h4 id="profile-applicability_37">Profile applicability</h4>
+<p>The EUDI wallet contains a Credential in IETF SD-JWT VC format. <code>vct</code> claim includes base type of person identification "urn:eudi:pid:1".</p>
+<h4 id="preconditions_37">Preconditions</h4>
+<p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
+B. All mandatory data elements within nameSpace  "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
+C. EUDI wallet presented the Credential successfully. 
+D. The presence of claim nationality in the IETF SD-JWT VC Credential presented was verified..</p>
+<h4 id="test-scenario_37">Test Scenario</h4>
+<ol>
+<li>Verify that the claim nationality is an array of Strings.  2. Verify the number of items in the array.</li>
+</ol>
+<h4 id="expected-results_37">Expected results</h4>
+<ol>
+<li>The claim nationality is an array of strings. 2. There are &gt;= 1 items in the array.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="eupid_dm_nationality_03">EuPid_DM_Nationality_03</h3>
+<h4 id="objective_38">Objective</h4>
+<p>This test case verifies that each string whitin the array of strings in the claim nationality contains a valid country code.</p>
+<h4 id="references_38">References</h4>
+<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.2 <br />
+“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 item 3 (Table 7). ISO 3166-1:2020, 6.1 ISO 3166-1:2020, 8.3</p>
+<h4 id="eudi-wallet-relevancy_38">EUDI-wallet relevancy</h4>
+<p>EUDI_specific | EUDI_required</p>
+<h4 id="profile-applicability_38">Profile applicability</h4>
+<p>The EUDI wallet contains a Credential in IETF SD-JWT VC format. <code>vct</code> claim includes base type of person identification "urn:eudi:pid:1".</p>
+<h4 id="preconditions_38">Preconditions</h4>
+<p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
+B. All mandatory data elements within nameSpace  "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
+C. EUDI wallet presented the Credential successfully. 
+D. The presence of claim nationality in the IETF SD-JWT VC Credential presented was verified.</p>
+<h4 id="test-scenario_38">Test Scenario</h4>
+<ol>
+<li>Verify that each string whitin the array of strings in the claim nationality contains a valid country code.</li>
+</ol>
+<h4 id="expected-results_38">Expected results</h4>
+<ol>
+<li>Each string whithin array of strings in the claim nationality has two characters, an alpha-2 code, corresponding to a country name: Listed in ISO 3166-1:2020, 6.1. Not listed in ISO 3166-1:2020, 6.1. In this case, the user-assigned country codes may be used, which consist in the series of letters AA, QM to QZ, XA to XZ, and ZZ (ISO 3166-1:2020, 8.3).</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="eupid_dm_nationality_2">EuPid_DM_Nationality_01</h3>
+<h4 id="objective_39">Objective</h4>
+<p>This test case verifies that the data element nationality is present in the mdoc data.</p>
+<h4 id="references_39">References</h4>
+<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.2  <br />
+“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 1).</p>
+<h4 id="eudi-wallet-relevancy_39">EUDI-wallet relevancy</h4>
+<p>EUDI_specific | EUDI_required</p>
+<h4 id="profile-applicability_39">Profile applicability</h4>
+<p>The EUDI wallet contains a Credential in ISO-mdoc format with DocType = “eu.europa.ec.eudi.pid.1”</p>
+<h4 id="preconditions_39">Preconditions</h4>
+<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
+B. All mandatory data elements within nameSpace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
+C. The device retrieval mdoc response was retrieved.</p>
+<h4 id="test-scenario_39">Test Scenario</h4>
+<ol>
+<li>Verify the presence of a data element with identifier nationality in the device retrieval mdoc response. 2. Verify the presence of an ErrorItem for data element nationality.</li>
+</ol>
+<h4 id="expected-results_39">Expected results</h4>
+<ol>
+<li>One data element with identifier nationality is present. 2. There is no ErrorItem for data element nationality.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="eupid_dm_nationality_3">EuPid_DM_Nationality_02</h3>
+<h4 id="objective_40">Objective</h4>
+<p>This test case verifies that the DataElementValue of data element nationality is an an array of Alpha-2 country codes as specified in ISO 3166-1.</p>
+<h4 id="references_40">References</h4>
+<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.2  <br />
+“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 6).<br />
+ RFC 7049 section 2.1</p>
+<h4 id="eudi-wallet-relevancy_40">EUDI-wallet relevancy</h4>
+<p>EUDI_specific | EUDI_required</p>
+<h4 id="profile-applicability_40">Profile applicability</h4>
+<p>The EUDI wallet contains a Credential in ISO-mdoc format with DocType = “eu.europa.ec.eudi.pid.1”</p>
+<h4 id="preconditions_40">Preconditions</h4>
+<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
+B. All mandatory data elements within nameSpace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
+C. The device retrieval mdoc response was retrieved. 
+D. The presence of data element nationality in the device retrieval mdoc response was verified.</p>
+<h4 id="test-scenario_40">Test Scenario</h4>
+<ol>
+<li>Verify the major type encoded on the first byte of the CBOR data item. 2. Verify the number of items in the array.</li>
+</ol>
+<h4 id="expected-results_40">Expected results</h4>
+<ol>
+<li>The major type value is equal to 4. 2. There are &gt;= 1 items in the array.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="eupid_dm_nationality_4">EuPid_DM_Nationality_03</h3>
+<h4 id="objective_41">Objective</h4>
+<p>This test case verifies that the DataElementValue of data element nationality contains a valid country code.</p>
+<h4 id="references_41">References</h4>
+<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.2  <br />
+“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 6). ISO 3166-1:2020, 6.1 ISO 3166-1:2020, 8.3</p>
+<h4 id="eudi-wallet-relevancy_41">EUDI-wallet relevancy</h4>
+<p>EUDI_specific | EUDI_required</p>
+<h4 id="profile-applicability_41">Profile applicability</h4>
+<p>The EUDI wallet contains a Credential in ISO-mdoc format with DocType = “eu.europa.ec.eudi.pid.1”</p>
+<h4 id="preconditions_41">Preconditions</h4>
+<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
+B. All mandatory data elements within nameSpace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
+C. The device retrieval mdoc response was retrieved. 
+D. The presence of data element nationality in the device retrieval mdoc response was verified.</p>
+<h4 id="test-scenario_41">Test Scenario</h4>
+<ol>
+<li>Verify that the DataElementValue of the data element contains a valid country code.</li>
+</ol>
+<h4 id="expected-results_41">Expected results</h4>
+<ol>
+<li>The DataElementValue has two characters, an alpha-2 code, corresponding to a country name: Listed in ISO 3166-1:2020, 6.1. Not listed in ISO 3166-1:2020, 6.1. In this case, the user-assigned country codes may be used, which consist in the series of letters AA, QM to QZ, XA to XZ, and ZZ (ISO 3166-1:2020, 8.3).</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="eupid_dm_nationality_04">EuPid_DM_Nationality_04</h3>
+<h4 id="objective_42">Objective</h4>
+<p>This test case verifies that each entry in the Array contains a DataElementValue the  with a valid country code.</p>
+<h4 id="references_42">References</h4>
+<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.2  <br />
+“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 6). ISO 3166-1:2020, 6.1 ISO 3166-1:2020, 8.3</p>
+<h4 id="eudi-wallet-relevancy_42">EUDI-wallet relevancy</h4>
+<p>EUDI_specific | EUDI_required</p>
+<h4 id="profile-applicability_42">Profile applicability</h4>
+<p>The EUDI wallet contains a Credential in ISO-mdoc format with DocType = “eu.europa.ec.eudi.pid.1”</p>
+<h4 id="preconditions_42">Preconditions</h4>
+<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
+B. All mandatory data elements within nameSpace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
+C. The device retrieval mdoc response was retrieved. 
+D. The presence of data element nationality in the device retrieval mdoc response was verified.</p>
+<h4 id="test-scenario_42">Test Scenario</h4>
+<ol>
+<li>Verify that the Array data element contains valid country codes.</li>
+</ol>
+<h4 id="expected-results_42">Expected results</h4>
+<ol>
+<li>Each entry in the Array contains a DataElementValue that has two characters, an alpha-2 code, corresponding to a country name: Listed in ISO 3166-1:2020, 6.1. Not listed in ISO 3166-1:2020, 6.1. In this case, the user-assigned country codes may be used, which consist in the series of letters AA, QM to QZ, XA to XZ, and ZZ (ISO 3166-1:2020, 8.3).</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="eupid_dm_personaladministrativenumber_01">EuPid_DM_PersonalAdministrativeNumber_01</h3>
+<h4 id="objective_43">Objective</h4>
+<p>This test case verifies that the claim personal_administrative_number is present in the Credential in IETF SD-JWT VC format if this is indicated in the ICS.</p>
+<h4 id="references_43">References</h4>
+<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.1 <br />
+“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 2).</p>
+<h4 id="eudi-wallet-relevancy_43">EUDI-wallet relevancy</h4>
+<p>EUDI_specific | EUDI_optional</p>
+<h4 id="profile-applicability_43">Profile applicability</h4>
+<p>The EUDI wallet contains a Credential in IETF SD-JWT VC format. <code>vct</code> claim includes base type of person identification "urn:eudi:pid:1". claim personal_administrative_number is included in a person identification data.</p>
+<h4 id="preconditions_43">Preconditions</h4>
+<p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
+B. All mandatory data elements within nameSpace  "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
+C. EUDI wallet presented the Credential successfully.</p>
+<h4 id="test-scenario_43">Test Scenario</h4>
+<ol>
+<li>Verify the presence of a claim with identifier personal_administrative_number in the  Credential presented to the Verifier in IETF SD-JWT VC format.</li>
+</ol>
+<h4 id="expected-results_43">Expected results</h4>
+<ol>
+<li>One claim with identifier personal_administrative_number is present.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="eupid_dm_personaladministrativenumber_02">EuPid_DM_PersonalAdministrativeNumber_02</h3>
+<h4 id="objective_44">Objective</h4>
+<p>This test case verifies that the claim personal_administrative_number is a String enconded in UTF-8.</p>
+<h4 id="references_44">References</h4>
+<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.1 <br />
+“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 item 4 (Table 8).<br />
+ RFC 7049 section 2.1</p>
+<h4 id="eudi-wallet-relevancy_44">EUDI-wallet relevancy</h4>
+<p>EUDI_specific | EUDI_optional</p>
+<h4 id="profile-applicability_44">Profile applicability</h4>
+<p>The EUDI wallet contains a Credential in IETF SD-JWT VC format. <code>vct</code> claim includes base type of person identification "urn:eudi:pid:1". claim personal_administrative_number is included in a person identification data.</p>
+<h4 id="preconditions_44">Preconditions</h4>
+<p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
+B. All mandatory data elements within nameSpace  "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
+C. EUDI wallet presented the Credential successfully. 
+D. The presence of claim personal_administrative_number in the IETF SD-JWT VC Credential presented was verified.</p>
+<h4 id="test-scenario_44">Test Scenario</h4>
+<ol>
+<li>Verify that the claim personal_administrative_number is a String encoded in UTF-8, supporting the full unicode range</li>
+</ol>
+<h4 id="expected-results_44">Expected results</h4>
+<ol>
+<li>The claim personal_administrative_number is a String encoded in UTF-8, supporting the full unicode range</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="eupid_dm_personaladministrativenumber_2">EuPid_DM_PersonalAdministrativeNumber_01</h3>
+<h4 id="objective_45">Objective</h4>
+<p>This test case verifies that the data element personal_administrative_number is present in the mdoc data if this is indicated in the ICS.</p>
+<h4 id="references_45">References</h4>
+<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.1  <br />
+“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 2).</p>
+<h4 id="eudi-wallet-relevancy_45">EUDI-wallet relevancy</h4>
+<p>EUDI_specific | EUDI_optional</p>
+<h4 id="profile-applicability_45">Profile applicability</h4>
+<p>The EUDI wallet contains a Credential in ISO-mdoc format with DocType = “eu.europa.ec.eudi.pid.1” Data element personal_administrative_number is present in the mdoc data.</p>
+<h4 id="preconditions_45">Preconditions</h4>
+<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
+B. All mandatory data elements within nameSpace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
+C. The device retrieval mdoc response was retrieved.</p>
+<h4 id="test-scenario_45">Test Scenario</h4>
+<ol>
+<li>Verify the presence of a data element with identifier personal_administrative_number in the device retrieval mdoc response. 2. Verify the presence of an ErrorItem for data element personal_administrative_number.</li>
+</ol>
+<h4 id="expected-results_45">Expected results</h4>
+<ol>
+<li>One data element with identifier personal_administrative_number is present. 2. There is no ErrorItem for data element personal_administrative_number.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="eupid_dm_personaladministrativenumber_3">EuPid_DM_PersonalAdministrativeNumber_02</h3>
+<h4 id="objective_46">Objective</h4>
+<p>This test case verifies that the DataElementValue of data element personal_administrative_number is a well-formed CBOR text string.</p>
+<h4 id="references_46">References</h4>
+<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.1  <br />
+“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 6).<br />
+ RFC 7049 section 2.1</p>
+<h4 id="eudi-wallet-relevancy_46">EUDI-wallet relevancy</h4>
+<p>EUDI_specific | EUDI_optional</p>
+<h4 id="profile-applicability_46">Profile applicability</h4>
+<p>The EUDI wallet contains a Credential in ISO-mdoc format with DocType = “eu.europa.ec.eudi.pid.1” Data element personal_administrative_number is present in the mdoc data.</p>
+<h4 id="preconditions_46">Preconditions</h4>
+<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
+B. All mandatory data elements within nameSpace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
+C. The device retrieval mdoc response was retrieved. 
+D. The presence of data element personal_administrative_number in the device retrieval mdoc response was verified.</p>
+<h4 id="test-scenario_46">Test Scenario</h4>
+<ol>
+<li>Verify the major type encoded on the first byte of the CBOR data item. 2. Verify the encoding of the data item value.</li>
+</ol>
+<h4 id="expected-results_46">Expected results</h4>
+<ol>
+<li>The major type value is equal to 3. 2. All bytes in the data item value are UTF-8 encoded characters.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="eupid_dm_portrait_01">EuPid_DM_Portrait_01</h3>
+<h4 id="objective_47">Objective</h4>
+<p>This test case verifies that the claim portrait is present in the Credential in IETF SD-JWT VC format.</p>
+<h4 id="references_47">References</h4>
+<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.1 <br />
+“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 1).</p>
+<h4 id="eudi-wallet-relevancy_47">EUDI-wallet relevancy</h4>
+<p>EUDI_specific | EUDI_required</p>
+<h4 id="profile-applicability_47">Profile applicability</h4>
+<p>The EUDI wallet contains a Credential in IETF SD-JWT VC format. <code>vct</code> claim includes base type of person identification "urn:eudi:pid:1".</p>
+<h4 id="preconditions_47">Preconditions</h4>
+<p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
+B. All mandatory data elements within nameSpace  "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
+C. EUDI wallet presented the Credential successfully.</p>
+<h4 id="test-scenario_47">Test Scenario</h4>
+<ol>
+<li>Verify the presence of a claim with identifier portrait in the  Credential presented to the Verifier in IETF SD-JWT VC format.</li>
+</ol>
+<h4 id="expected-results_47">Expected results</h4>
 <ol>
 <li>One claim with identifier portrait is present.</li>
 </ol>
 <!-- END INCLUDE -->
 <h3 id="eupid_dm_portrait_02">EuPid_DM_Portrait_02</h3>
-<h4 id="objective_23">Objective</h4>
+<h4 id="objective_48">Objective</h4>
 <p>This test case verifies that the claim portrait is a  String.</p>
-<h4 id="references_23">References</h4>
+<h4 id="references_48">References</h4>
 <p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.1 <br />
 “ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 7).</p>
-<h4 id="eudi-wallet-relevancy_23">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_48">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_required</p>
-<h4 id="profile-applicability_23">Profile applicability</h4>
+<h4 id="profile-applicability_48">Profile applicability</h4>
 <p>The EUDI wallet contains a Credential in IETF SD-JWT VC format. <code>vct</code> claim includes base type of person identification "urn:eudi:pid:1".</p>
-<h4 id="preconditions_23">Preconditions</h4>
+<h4 id="preconditions_48">Preconditions</h4>
 <p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
 B. All mandatory data elements within nameSpace  "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
 C. EUDI wallet presented the Credential successfully. 
 D. The presence of claim portrait in the IETF SD-JWT VC Credential presented was verified.</p>
-<h4 id="test-scenario_23">Test Scenario</h4>
+<h4 id="test-scenario_48">Test Scenario</h4>
 <ol>
 <li>Verify that the claim portrait is a  String.</li>
 </ol>
-<h4 id="expected-results_23">Expected results</h4>
+<h4 id="expected-results_48">Expected results</h4>
 <ol>
 <li>The claim portrait is a  String.</li>
 </ol>
 <!-- END INCLUDE -->
 <h3 id="eupid_dm_portrait_03">EuPid_DM_Portrait_03</h3>
-<h4 id="objective_24">Objective</h4>
+<h4 id="objective_49">Objective</h4>
 <p>This test case verifies that the claim portrait is a data URL containing a base64-encoded portrait in JPEG format.</p>
-<h4 id="references_24">References</h4>
+<h4 id="references_49">References</h4>
 <p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.1 <br />
 “ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 7).</p>
-<h4 id="eudi-wallet-relevancy_24">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_49">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_required</p>
-<h4 id="profile-applicability_24">Profile applicability</h4>
+<h4 id="profile-applicability_49">Profile applicability</h4>
 <p>The EUDI wallet contains a Credential in IETF SD-JWT VC format. <code>vct</code> claim includes base type of person identification "urn:eudi:pid:1".</p>
-<h4 id="preconditions_24">Preconditions</h4>
+<h4 id="preconditions_49">Preconditions</h4>
 <p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
 B. All mandatory data elements within nameSpace  "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
 C. EUDI wallet presented the Credential successfully. 
 D. The presence of claim portrait in the IETF SD-JWT VC Credential presented was verified. 
 E. It was verified that the claim portrait is a String.</p>
-<h4 id="test-scenario_24">Test Scenario</h4>
+<h4 id="test-scenario_49">Test Scenario</h4>
 <ol>
 <li>Verify that claim portrait is a data URL containing a base64-encoded portrait in JPEG format.</li>
 </ol>
-<h4 id="expected-results_24">Expected results</h4>
+<h4 id="expected-results_49">Expected results</h4>
 <ol>
 <li>The claim portrait is a data URL containing a base64-encoded portrait in JPEG format.</li>
 </ol>
 <!-- END INCLUDE -->
+<h3 id="eupid_dm_portrait_2">EuPid_DM_Portrait_01</h3>
+<h4 id="objective_50">Objective</h4>
+<p>This test case verifies that the data element portrait is present in the mdoc data.</p>
+<h4 id="references_50">References</h4>
+<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.1  <br />
+“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 1).</p>
+<h4 id="eudi-wallet-relevancy_50">EUDI-wallet relevancy</h4>
+<p>EUDI_specific | EUDI_required</p>
+<h4 id="profile-applicability_50">Profile applicability</h4>
+<p>The EUDI wallet contains a Credential in ISO-mdoc format with DocType = “eu.europa.ec.eudi.pid.1”</p>
+<h4 id="preconditions_50">Preconditions</h4>
+<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
+B. All mandatory data elements within nameSpace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
+C. The device retrieval mdoc response was retrieved.</p>
+<h4 id="test-scenario_50">Test Scenario</h4>
+<ol>
+<li>Verify the presence of a data element with identifier portrait in the device retrieval mdoc response. 2. Verify the presence of an ErrorItem for data element portrait.</li>
+</ol>
+<h4 id="expected-results_50">Expected results</h4>
+<ol>
+<li>One data element with identifier portrait is present. 2. There is no ErrorItem for data element portrait.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="eupid_dm_portrait_3">EuPid_DM_Portrait_02</h3>
+<h4 id="objective_51">Objective</h4>
+<p>This test case verifies that the DataElementValue of data element portrait is a well-formed CBOR byte string.</p>
+<h4 id="references_51">References</h4>
+<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.1  <br />
+“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 6).</p>
+<h4 id="eudi-wallet-relevancy_51">EUDI-wallet relevancy</h4>
+<p>EUDI_specific | EUDI_required</p>
+<h4 id="profile-applicability_51">Profile applicability</h4>
+<p>The EUDI wallet contains a Credential in ISO-mdoc format with DocType = “eu.europa.ec.eudi.pid.1”</p>
+<h4 id="preconditions_51">Preconditions</h4>
+<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
+B. All mandatory data elements within nameSpace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
+C. The device retrieval mdoc response was retrieved. 
+D. The presence of data element portrait in the device retrieval mdoc response was verified.</p>
+<h4 id="test-scenario_51">Test Scenario</h4>
+<ol>
+<li>Verify the major type encoded on the first byte of the CBOR data item.</li>
+</ol>
+<h4 id="expected-results_51">Expected results</h4>
+<ol>
+<li>The major type value is equal to 2.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="eupid_dm_portrait_4">EuPid_DM_Portrait_03</h3>
+<h4 id="objective_52">Objective</h4>
+<p>This test case verifies that the DataElementValue of data element portrait contains a valid encoded portrait image.</p>
+<h4 id="references_52">References</h4>
+<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.1  <br />
+“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 6).</p>
+<h4 id="eudi-wallet-relevancy_52">EUDI-wallet relevancy</h4>
+<p>EUDI_specific | EUDI_required</p>
+<h4 id="profile-applicability_52">Profile applicability</h4>
+<p>The EUDI wallet contains a Credential in ISO-mdoc format with DocType = “eu.europa.ec.eudi.pid.1”</p>
+<h4 id="preconditions_52">Preconditions</h4>
+<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
+B. All mandatory data elements within nameSpace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
+C. The device retrieval mdoc response was retrieved. 
+D. The presence of data element portrait in the device retrieval mdoc response was verified.</p>
+<h4 id="test-scenario_52">Test Scenario</h4>
+<ol>
+<li>Verify the first two bytes of the CBOR byte string. 2. Verify that the encoded image format corresponds to the value of the first two bytes.</li>
+</ol>
+<h4 id="expected-results_52">Expected results</h4>
+<ol>
+<li>The first two bytes are equal to 'FF D8'. 2. If the first two bytes of the CBOR byte string are equal to: 'FF D8', the bytestring contains a JPEG encoded image.</li>
+</ol>
+<!-- END INCLUDE -->
 <h3 id="eupid_dm_sex_01">EuPid_DM_Sex_01</h3>
-<h4 id="objective_25">Objective</h4>
+<h4 id="objective_53">Objective</h4>
 <p>This test case verifies that the claim sex is present in the Credential in IETF SD-JWT VC format.</p>
-<h4 id="references_25">References</h4>
+<h4 id="references_53">References</h4>
 <p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.1 <br />
 “ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 2).</p>
-<h4 id="eudi-wallet-relevancy_25">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_53">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_optional</p>
-<h4 id="profile-applicability_25">Profile applicability</h4>
+<h4 id="profile-applicability_53">Profile applicability</h4>
 <p>The EUDI wallet contains a Credential in IETF SD-JWT VC format. <code>vct</code> claim includes base type of person identification "urn:eudi:pid:1". claim sex is included in a person identification data.</p>
-<h4 id="preconditions_25">Preconditions</h4>
+<h4 id="preconditions_53">Preconditions</h4>
 <p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
 B. All mandatory data elements within nameSpace  "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
 C. EUDI wallet presented the Credential successfully.</p>
-<h4 id="test-scenario_25">Test Scenario</h4>
+<h4 id="test-scenario_53">Test Scenario</h4>
 <ol>
 <li>Verify the presence of a claim with identifier sex in the  Credential presented to the Verifier in IETF SD-JWT VC format.</li>
 </ol>
-<h4 id="expected-results_25">Expected results</h4>
+<h4 id="expected-results_53">Expected results</h4>
 <ol>
 <li>One claim with identifier sex is present.</li>
 </ol>
 <!-- END INCLUDE -->
 <h3 id="eupid_dm_sex_02">EuPid_DM_Sex_02</h3>
-<h4 id="objective_26">Objective</h4>
+<h4 id="objective_54">Objective</h4>
 <p>This test case verifies that the claim sex is a Number.</p>
-<h4 id="references_26">References</h4>
+<h4 id="references_54">References</h4>
 <p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.1 <br />
 “ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 item 4 (Table 8).<br />
  RFC 7049 section 2.1</p>
-<h4 id="eudi-wallet-relevancy_26">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_54">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_optional</p>
-<h4 id="profile-applicability_26">Profile applicability</h4>
+<h4 id="profile-applicability_54">Profile applicability</h4>
 <p>The EUDI wallet contains a Credential in IETF SD-JWT VC format. <code>vct</code> claim includes base type of person identification "urn:eudi:pid:1". claim sex is included in a person identification data.</p>
-<h4 id="preconditions_26">Preconditions</h4>
+<h4 id="preconditions_54">Preconditions</h4>
 <p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
 B. All mandatory data elements within nameSpace  "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
 C. EUDI wallet presented the Credential successfully. 
 D. The presence of claim sex in the IETF SD-JWT VC Credential presented was verified.</p>
-<h4 id="test-scenario_26">Test Scenario</h4>
+<h4 id="test-scenario_54">Test Scenario</h4>
 <ol>
 <li>Verify that the claim sex is a Number.</li>
 </ol>
-<h4 id="expected-results_26">Expected results</h4>
+<h4 id="expected-results_54">Expected results</h4>
 <ol>
 <li>The claim sex is a Number.</li>
 </ol>
 <!-- END INCLUDE -->
 <h3 id="eupid_dm_sex_03">EuPid_DM_Sex_03</h3>
-<h4 id="objective_27">Objective</h4>
+<h4 id="objective_55">Objective</h4>
 <p>This test case verifies that the claim sex contains a valid value.</p>
-<h4 id="references_27">References</h4>
+<h4 id="references_55">References</h4>
 <p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.1 <br />
 “ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 2).<br />
  ISO/IEC 5218:2004, 2</p>
-<h4 id="eudi-wallet-relevancy_27">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_55">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_optional</p>
-<h4 id="profile-applicability_27">Profile applicability</h4>
+<h4 id="profile-applicability_55">Profile applicability</h4>
 <p>The EUDI wallet contains a Credential in IETF SD-JWT VC format. <code>vct</code> claim includes base type of person identification "urn:eudi:pid:1". claim sex is included in a person identification data.</p>
-<h4 id="preconditions_27">Preconditions</h4>
+<h4 id="preconditions_55">Preconditions</h4>
 <p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
 B. All mandatory data elements within nameSpace  "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
 C. EUDI wallet presented the Credential successfully. 
 D. The presence of claim sex in the IETF SD-JWT VC Credential presented was verified.</p>
-<h4 id="test-scenario_27">Test Scenario</h4>
+<h4 id="test-scenario_55">Test Scenario</h4>
 <ol>
 <li>Verify that the claim sex contains a valid value for sex.</li>
 </ol>
-<h4 id="expected-results_27">Expected results</h4>
+<h4 id="expected-results_55">Expected results</h4>
 <ol>
 <li>The claim sex  has one of the values specified in ISO/IEC 5218:2004, 2, i.e. 0, 1, 2 or 9 or one of the other values specified for Europe (i.e. 3, 4, 5, 6).</li>
 </ol>
 <!-- END INCLUDE -->
+<h3 id="eupid_dm_sex_2">EuPid_DM_Sex_01</h3>
+<h4 id="objective_56">Objective</h4>
+<p>This test case verifies that the data element sex is present in the mdoc data if this is indicated in the ICS.</p>
+<h4 id="references_56">References</h4>
+<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.1  <br />
+“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 2).</p>
+<h4 id="eudi-wallet-relevancy_56">EUDI-wallet relevancy</h4>
+<p>EUDI_specific | EUDI_optional</p>
+<h4 id="profile-applicability_56">Profile applicability</h4>
+<p>The EUDI wallet contains a Credential in ISO-mdoc format with DocType = “eu.europa.ec.eudi.pid.1” Data element sex is present in the mdoc data.</p>
+<h4 id="preconditions_56">Preconditions</h4>
+<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
+B. All mandatory data elements within nameSpace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
+C. The device retrieval mdoc response was retrieved.</p>
+<h4 id="test-scenario_56">Test Scenario</h4>
+<ol>
+<li>Verify the presence of a data element with identifier sex in the device retrieval mdoc response. 2. Verify the presence of an ErrorItem for data element sex.</li>
+</ol>
+<h4 id="expected-results_56">Expected results</h4>
+<ol>
+<li>One data element with identifier sex is present. 2. There is no ErrorItem for data element sex.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="eupid_dm_sex_3">EuPid_DM_Sex_02</h3>
+<h4 id="objective_57">Objective</h4>
+<p>This test case verifies that the DataElementValue of data element sex is a well-formed CBOR unsigned integer.</p>
+<h4 id="references_57">References</h4>
+<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.1  <br />
+“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 6).<br />
+ RFC 7049 section 2.1</p>
+<h4 id="eudi-wallet-relevancy_57">EUDI-wallet relevancy</h4>
+<p>EUDI_specific | EUDI_optional</p>
+<h4 id="profile-applicability_57">Profile applicability</h4>
+<p>The EUDI wallet contains a Credential in ISO-mdoc format with DocType = “eu.europa.ec.eudi.pid.1” Data element sex is present in the mdoc data.</p>
+<h4 id="preconditions_57">Preconditions</h4>
+<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
+B. All mandatory data elements within nameSpace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
+C. The device retrieval mdoc response was retrieved. 
+D. The presence of data element sex in the device retrieval mdoc response was verified.</p>
+<h4 id="test-scenario_57">Test Scenario</h4>
+<ol>
+<li>Verify the major type encoded on the first byte of the CBOR data item.</li>
+</ol>
+<h4 id="expected-results_57">Expected results</h4>
+<ol>
+<li>The major type value is equal to 0.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="eupid_dm_sex_4">EuPid_DM_Sex_03</h3>
+<h4 id="objective_58">Objective</h4>
+<p>This test case verifies that the DataElementValue of data element sex contains a valid value.</p>
+<h4 id="references_58">References</h4>
+<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.1  <br />
+“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 6).<br />
+ ISO/IEC 5218:2004, 2</p>
+<h4 id="eudi-wallet-relevancy_58">EUDI-wallet relevancy</h4>
+<p>EUDI_specific | EUDI_optional</p>
+<h4 id="profile-applicability_58">Profile applicability</h4>
+<p>The EUDI wallet contains a Credential in ISO-mdoc format with DocType = “eu.europa.ec.eudi.pid.1” Data element sex is present in the mdoc data.</p>
+<h4 id="preconditions_58">Preconditions</h4>
+<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
+B. All mandatory data elements within nameSpace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
+C. The device retrieval mdoc response was retrieved. 
+D. The presence of data element sex in the device retrieval mdoc response was verified.</p>
+<h4 id="test-scenario_58">Test Scenario</h4>
+<ol>
+<li>Verify that the DataElementValue of the data element contains a valid value for sex.</li>
+</ol>
+<h4 id="expected-results_58">Expected results</h4>
+<ol>
+<li>The DataElementValue has one of the values specified in ISO/IEC 5218:2004, 2, i.e. 0, 1, 2 or 9 or one of the other values specified for Europe (i.e. 3, 4, 5, 6).</li>
+</ol>
+<!-- END INCLUDE -->
 
-<!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md -->
+<!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md -->
 
 
 

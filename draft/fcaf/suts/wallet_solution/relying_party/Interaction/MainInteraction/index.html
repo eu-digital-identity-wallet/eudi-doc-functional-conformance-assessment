@@ -1,0 +1,2714 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="European Commission - DG CNECT">
+      
+      
+        <link rel="canonical" href="https://conformance.eudi.dev/draft/fcaf/suts/wallet_solution/relying_party/Interaction/MainInteraction/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../../../media/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Interaction - Main interaction - European Digital Identity</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="../../../../../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../media/css/extra.css">
+    
+    <script>__md_scope=new URL("../../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Interaction - Main interaction - European Digital Identity" />
+<meta property="og:image" content="https://conformance.eudi.dev/draft/assets/images/social/fcaf/suts/wallet_solution/relying_party/Interaction/MainInteraction/index.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://conformance.eudi.dev/draft/fcaf/suts/wallet_solution/relying_party/Interaction/MainInteraction/" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content="Interaction - Main interaction - European Digital Identity" />
+<meta property="twitter:image" content="https://conformance.eudi.dev/draft/assets/images/social/fcaf/suts/wallet_solution/relying_party/Interaction/MainInteraction/index.png" />
+</head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#interaction-main-interaction" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../../.." title="European Digital Identity" class="md-header__button md-logo" aria-label="European Digital Identity" data-md-component="logo">
+      
+  <img src="../../../../../../media/images/logo_eudi_white.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            European Digital Identity
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Interaction - Main interaction
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://eudi.dev/latest/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  European Digital Identity Wallet
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://eudi.dev/latest/architecture-and-reference-framework-main/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Architecture and reference framework
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://eudi.dev/latest/discussion-topics/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Discussion topics
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://eudi.dev/latest/technical-specifications/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Technical specifications
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://docs.eudi.dev/latest/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Reference Implementation
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../.." class="md-tabs__link">
+          
+  
+  
+    
+  
+  Functional Conformance
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../../.." title="European Digital Identity" class="md-nav__button md-logo" aria-label="European Digital Identity" data-md-component="logo">
+      
+  <img src="../../../../../../media/images/logo_eudi_white.svg" alt="logo">
+
+    </a>
+    European Digital Identity
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://eudi.dev/latest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    European Digital Identity Wallet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://eudi.dev/latest/architecture-and-reference-framework-main/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture and reference framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://eudi.dev/latest/discussion-topics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Discussion topics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://eudi.dev/latest/technical-specifications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technical specifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://docs.eudi.dev/latest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference Implementation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../.." class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Functional Conformance
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Functional Conformance
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../terminology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terminology
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Methodology
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test Suites by SUTs
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Test Suites by SUTs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wallet Solution (SUT)
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_5_2" id="__nav_6_5_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Wallet Solution (SUT)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5_2_2" id="__nav_6_5_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test Classes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_6_5_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Test Classes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ws_rp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relying Party (ws_rp)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../attestation_provider/ws_ap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Attestation Provider (ws_ap)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pid_provider/ws_pp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PID Provider (ws_pp)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../infrastructure/ws_inf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Infrastructure (ws_inf)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ui/ws_ui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UI (ws_ui)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../templates/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Templates
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Templates
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../templates/test-spec-template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test spec template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../references/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    References
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="interaction-main-interaction">Interaction - Main interaction</h1>
+<!-- BEGIN INCLUDE ./[A-Z]*.md -->
+<h3 id="ws_rp_ia_maininteraction_003">WS_RP_IA_MainInteraction_003</h3>
+<h4 id="objective">Objective</h4>
+<p>Test the Wallet accepts and processes DCQL-query with credential property "trusted_authorities", matching and returning a credential issued by an Issuer matching one of the Issuers identified in 'trusted_authorities'.</p>
+<h4 id="references">References</h4>
+<p>[OID4VP 6.1]</p>
+<h4 id="profile-applicability">Profile applicability</h4>
+<h4 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions">Preconditions</h4>
+<p>The wallet contains more than one credential from the issuer specified in the request.</p>
+<h4 id="test-scenario">Test Scenario</h4>
+<ol>
+<li>The Wallet engages with the Verifier</li>
+<li>The Verifier sends a Authorization Request with a DCQL-query with a credential with a valid "trusted_authorities" property.</li>
+<li>The Wallet evaluates the request.</li>
+</ol>
+<h4 id="expected-results">Expected results</h4>
+<ol>
+<li>Wallet and Verifier can interact.</li>
+<li>Wallet receives the request.</li>
+<li>Wallet returns response without error and every Credential returned by the Wallet matches at least one of the conditions present in the corresponding trusted_authorities array.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_004">WS_RP_IA_MainInteraction_004</h3>
+<h4 id="objective_1">Objective</h4>
+<p>Test the Wallet accepts and processes DCQL-query with credential property "trusted_authorities", but handles the situation when it does not have any credential issued by an Issuer matching one of the Issuers identified in 'trusted_authorities'.</p>
+<h4 id="references_1">References</h4>
+<p>[OID4VP 6.1]</p>
+<h4 id="profile-applicability_1">Profile applicability</h4>
+<h4 id="eudi-wallet-relevancy_1">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_1">Preconditions</h4>
+<p>The wallet contains no credential from the issuer specified in the request.</p>
+<h4 id="test-scenario_1">Test Scenario</h4>
+<ol>
+<li>The Wallet engages with the Verifier</li>
+<li>The Verifier sends a Authorization Request with a DCQL-query with a credential with a valid "trusted_authorities" property.</li>
+<li>The Wallet evaluates the request.</li>
+</ol>
+<h4 id="expected-results_1">Expected results</h4>
+<ol>
+<li>Wallet and Verifier can interact.</li>
+<li>Wallet receives the request.</li>
+<li>Wallet cannot respond with a Credential, by either:
+a. answering with an error with details (<code>access_denied</code>), 
+b. answering with an error without providing details or,
+c. discontinuing the interaction.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_005">WS_RP_IA_MainInteraction_005</h3>
+<h4 id="objective_2">Objective</h4>
+<p>Test that the Wallet processes DCQL-query with credential property "require_cryptographic_holder_binding" with value <code>true</code>, by handling credentials with cryptographic holder binding.</p>
+<h4 id="references_2">References</h4>
+<p>[OID4VP 6.1]</p>
+<h4 id="profile-applicability_2">Profile applicability</h4>
+<h4 id="eudi-wallet-relevancy_2">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_2">Preconditions</h4>
+<p>The wallet contains a credential of a specified credential type, where the credential has cryptographic holder binding.</p>
+<h4 id="test-scenario_2">Test Scenario</h4>
+<ol>
+<li>The Wallet engages with the Verifier</li>
+<li>The Verifier sends a Authorization Request with a valid DCQL-query with a 'credential' with:
+   a. the "require_cryptographic_holder_binding" property present with value <code>true</code>.
+   b. a 'claims' property requesting the specified credential type.</li>
+<li>The Wallet evaluates the request and allows the user to continue with presenting matching credentials.</li>
+<li>User selects the available credential and approves to present it.</li>
+</ol>
+<h4 id="expected-results_2">Expected results</h4>
+<ol>
+<li>Wallet and Verifier can interact.</li>
+<li>Wallet receives the request.</li>
+<li>The wallet allows the user to select the credential of the specified type.</li>
+<li>The wallet presents the selected credential to the verifier with a cryptographic proof of holder binding.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_006">WS_RP_IA_MainInteraction_006</h3>
+<h4 id="objective_3">Objective</h4>
+<p>Test that the Wallet processes DCQL-query with credential property "require_cryptographic_holder_binding" with value <code>true</code>, by handling credentials without cryptographic holder binding.</p>
+<h4 id="references_3">References</h4>
+<p>[OID4VP 6.1]</p>
+<h4 id="profile-applicability_3">Profile applicability</h4>
+<h4 id="eudi-wallet-relevancy_3">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_3">Preconditions</h4>
+<p>The wallet contains a credential of a specified credential type, where the credential does not have cryptographic holder binding.</p>
+<h4 id="test-scenario_3">Test Scenario</h4>
+<ol>
+<li>The Wallet engages with the Verifier</li>
+<li>The Verifier sends a Authorization Request with a DCQL-query with a credential with:
+   a. the "require_cryptographic_holder_binding" property present with value <code>true</code>.
+   b. a 'claims' property requesting the specified credential type.</li>
+<li>The Wallet evaluates the request and shows the user matching credentials for selection.</li>
+</ol>
+<h4 id="expected-results_3">Expected results</h4>
+<ol>
+<li>Wallet and Verifier can interact.</li>
+<li>Wallet receives the request.</li>
+<li>The wallet informs the user it has no matching credential available, and does not (allow to) continue to present any credential to the verifier.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_007">WS_RP_IA_MainInteraction_007</h3>
+<h4 id="objective_4">Objective</h4>
+<p>Test that the Wallet processes DCQL-query with credential property "require_cryptographic_holder_binding" with value <code>false</code>, by handling credentials with cryptographic holder binding.</p>
+<h4 id="references_4">References</h4>
+<p>[OID4VP 6.1]</p>
+<h4 id="profile-applicability_4">Profile applicability</h4>
+<h4 id="eudi-wallet-relevancy_4">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_4">Preconditions</h4>
+<p>The wallet contains a credential of a specified credential type, where the credential has cryptographic holder binding.</p>
+<h4 id="test-scenario_4">Test Scenario</h4>
+<ol>
+<li>The Wallet engages with the Verifier</li>
+<li>The Verifier sends a Authorization Request with a valid DCQL-query with a 'credential' with:
+   a. the "require_cryptographic_holder_binding" property present with value <code>false</code>.
+   b. a 'claims' property requesting the specified credential type.</li>
+<li>The Wallet evaluates the request and allows the user to continue with presenting matching credentials.</li>
+<li>User selects the available credential and approves to present it.</li>
+</ol>
+<h4 id="expected-results_4">Expected results</h4>
+<ol>
+<li>Wallet and Verifier can interact.</li>
+<li>Wallet receives the request.</li>
+<li>The wallet allows the user to select the credential of the specified type.</li>
+<li>The wallet presents the selected credential to the verifier with a cryptographic proof of holder binding.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_008">WS_RP_IA_MainInteraction_008</h3>
+<h4 id="objective_5">Objective</h4>
+<p>Test that the Wallet processes DCQL-query with credential property "require_cryptographic_holder_binding" with value <code>false</code>, by handling credentials both with or without cryptographic binding.</p>
+<h4 id="references_5">References</h4>
+<p>[OID4VP 6.1]</p>
+<h4 id="profile-applicability_5">Profile applicability</h4>
+<h4 id="eudi-wallet-relevancy_5">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_5">Preconditions</h4>
+<p>The wallet contains a credential of a specified credential type, where the credential does not have cryptographic holder binding.</p>
+<h4 id="test-scenario_5">Test Scenario</h4>
+<ol>
+<li>The Wallet engages with the Verifier</li>
+<li>The Verifier sends a Authorization Request with a valid DCQL-query with a 'credential' with:
+   a. the "require_cryptographic_holder_binding" property present with value <code>false</code>.
+   b. a 'claims' property requesting the specified credential type.</li>
+<li>The Wallet evaluates the request and allows the user to continue with presenting matching credentials.</li>
+<li>User selects the available credential and approves to present it.</li>
+</ol>
+<h4 id="expected-results_5">Expected results</h4>
+<ol>
+<li>Wallet and Verifier can interact.</li>
+<li>Wallet receives the request.</li>
+<li>The wallet allows the user to select the credential of the specified type.</li>
+<li>The wallet presents the selected credential to the verifier without a cryptographic proof of holder binding.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_009">WS_RP_IA_MainInteraction_009</h3>
+<h4 id="objective_6">Objective</h4>
+<p>Test that the Wallet processes DCQL-query with credential property "require_cryptographic_holder_binding" with value <code>false</code>, by handling credentials both with or without cryptographic holder binding.</p>
+<h4 id="references_6">References</h4>
+<p>[OID4VP 6.1]</p>
+<h4 id="profile-applicability_6">Profile applicability</h4>
+<h4 id="eudi-wallet-relevancy_6">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_6">Preconditions</h4>
+<p>The wallet contains credentials of a specified type, with both a credential that has and a credential that does not have cryptographic holder binding.</p>
+<h4 id="test-scenario_6">Test Scenario</h4>
+<ol>
+<li>The Wallet engages with the Verifier</li>
+<li>The Verifier sends a Authorization Request with a valid DCQL-query with a 'credential' with:
+   a. the "require_cryptographic_holder_binding" property present with value <code>false</code>.
+   b. a 'claims' property requesting the specified credential type.</li>
+<li>The Wallet evaluates the request and allows the user to continue with presenting matching credentials.</li>
+<li>User selects the available credential(s) and approves to present it.</li>
+</ol>
+<h4 id="expected-results_6">Expected results</h4>
+<ol>
+<li>Wallet and Verifier can interact.</li>
+<li>Wallet receives the request.</li>
+<li>The wallet allows the user to select the credentials both with and without cryptographic holder binding.</li>
+<li>The wallet presents the selected credential to the verifier without a cryptographic proof of holder binding.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_010">WS_RP_IA_MainInteraction_010</h3>
+<h4 id="objective_7">Objective</h4>
+<p>Test that the Wallet processes DCQL-query without a credential property "require_cryptographic_holder_binding" as if it had value <code>true</code>.</p>
+<h4 id="references_7">References</h4>
+<p>[OID4VP 6.1]</p>
+<h4 id="profile-applicability_7">Profile applicability</h4>
+<h4 id="eudi-wallet-relevancy_7">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_7">Preconditions</h4>
+<p>The wallet contains credentials of a specified type, with both a credential that has and a credential that does not have cryptographic holder binding.</p>
+<h4 id="test-scenario_7">Test Scenario</h4>
+<ol>
+<li>The Wallet engages with the Verifier</li>
+<li>The Verifier sends a Authorization Request with a DCQL-query with a 'credential' without the "require_cryptographic_holder_binding" property</li>
+<li>The Wallet evaluates the request and allows the user to continue with presenting matching credentials.</li>
+<li>User selects the available credential(s) and approves to present it.</li>
+</ol>
+<h4 id="expected-results_7">Expected results</h4>
+<ol>
+<li>Wallet and Verifier can interact.</li>
+<li>Wallet receives the request.</li>
+<li>The wallet allows the user to select only the credential that has cryptographic holder binding.</li>
+<li>The wallet presents the selected credential to the verifier with a cryptographic proof of holder binding.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_011">WS_RP_IA_MainInteraction_011</h3>
+<h4 id="objective_8">Objective</h4>
+<p>Test that the wallet can, if supported, use claim value matching for issuer selection</p>
+<h4 id="references_8">References</h4>
+<p>[OID4VP 6.1.1]</p>
+<h4 id="profile-applicability_8">Profile applicability</h4>
+<p>wallet supports claim iss value matching in request</p>
+<h4 id="eudi-wallet-relevancy_8">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_8">Preconditions</h4>
+<h4 id="test-scenario_8">Test Scenario</h4>
+<ol>
+<li>The Wallet engages with the Verifier</li>
+<li>The Verifier sends an Authorization Request containing a dcql_query with a credentials constraint with a valid trusted_authorities with a specific value.</li>
+<li>The Wallet processes the request.</li>
+</ol>
+<h4 id="expected-results_8">Expected results</h4>
+<ol>
+<li>Wallet and Verifier can interact.</li>
+<li>Wallet receives the request.</li>
+<li>The Wallet identifies and presents only the credential(s) issued by the matching entity, logically excluding all other valid credentials from non-matching issuers.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_012">WS_RP_IA_MainInteraction_012</h3>
+<h4 id="objective_9">Objective</h4>
+<p>Verify the Wallet sends only the specific claims requested by the Verifier</p>
+<h4 id="references_9">References</h4>
+<p>[OID4VP 6.4]</p>
+<h4 id="profile-applicability_9">Profile applicability</h4>
+<h4 id="eudi-wallet-relevancy_9">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_9">Preconditions</h4>
+<p>Wallet has claims ( Name, address, phone )</p>
+<h4 id="test-scenario_9">Test Scenario</h4>
+<ol>
+<li>The Wallet engages with the Verifier</li>
+<li>Verifier sends a DCQL query asking only for name claim.</li>
+<li>Wallet sends only specifc claim requested</li>
+</ol>
+<h4 id="expected-results_9">Expected results</h4>
+<ol>
+<li>Wallet and Verifier can interact.</li>
+<li>Wallet receives the request.</li>
+<li>The Wallet hides "Address" and "Phone." Presents user with name claim on UI.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_013">WS_RP_IA_MainInteraction_013</h3>
+<h4 id="objective_10">Objective</h4>
+<p>Verify that if a User unchecks a claim in the Wallet UI, it is excluded from the response.</p>
+<h4 id="references_10">References</h4>
+<p>[OID4VP 6.4]</p>
+<h4 id="profile-applicability_10">Profile applicability</h4>
+<h4 id="eudi-wallet-relevancy_10">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_10">Preconditions</h4>
+<h4 id="test-scenario_10">Test Scenario</h4>
+<ol>
+<li>The Wallet engages with the Verifier</li>
+<li>Verifier sends a DCQL query requesting claims "name" and "address", which the wallet has both.</li>
+<li>Unchecking claim in UI excludes it from the response.</li>
+</ol>
+<h4 id="expected-results_10">Expected results</h4>
+<ol>
+<li>Wallet and Verifier can interact.</li>
+<li>Wallet receives the request.</li>
+<li>User unselects "address" claim in the UI, that claim is absent in the vp_token.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_014">WS_RP_IA_MainInteraction_014</h3>
+<h4 id="objective_11">Objective</h4>
+<p>A Credential presentation may include "extra" claims not selected according to rules, if they are requested by a different query within the same session.</p>
+<h4 id="references_11">References</h4>
+<p>[OID4VP 6.4]</p>
+<h4 id="profile-applicability_11">Profile applicability</h4>
+<h4 id="eudi-wallet-relevancy_11">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_11">Preconditions</h4>
+<p>Wallet has one ID with Name, Address, and Age.</p>
+<h4 id="test-scenario_11">Test Scenario</h4>
+<ol>
+<li>The Wallet engages with the Verifier</li>
+<li>Verifier sends one request with two DCQL queries: Query 1: Asks for Name. Query 2: Asks for Address</li>
+<li>Wallet handles query</li>
+</ol>
+<h4 id="expected-results_11">Expected results</h4>
+<ol>
+<li>Wallet and Verifier can interact.</li>
+<li>Wallet receives the request.
+3a. The Wallet identifies that both queries can be satisfied by the same credential. It selects the "union" of both requests (Name + Address).
+3b. The vp_token contains both Name and Address. Age remains hidden.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_015">WS_RP_IA_MainInteraction_015</h3>
+<h4 id="objective_12">Objective</h4>
+<p>A Credential presentation may include "extra" claims not selected according to rules, if they are non-selective (fixed) technical fields that cannot be hidden.</p>
+<h4 id="references_12">References</h4>
+<p>[OID4VP 6.4]</p>
+<h4 id="profile-applicability_12">Profile applicability</h4>
+<h4 id="eudi-wallet-relevancy_12">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_12">Preconditions</h4>
+<p>Wallet has an SD-JWT credential. By definition, the vct (type) and iss (issuer) fields are fixed/mandatory and cannot be hidden.</p>
+<h4 id="test-scenario_12">Test Scenario</h4>
+<ol>
+<li>The Wallet engages with the Verifier</li>
+<li>Verifier sends a DCQL query asking only for given_name.</li>
+<li>Response</li>
+</ol>
+<h4 id="expected-results_12">Expected results</h4>
+<ol>
+<li>Wallet and Verifier can interact.</li>
+<li>The Wallet selects given_name but must also include the mandatory envelope data required to make the credential cryptographically valid.</li>
+<li>The vp_token contains given_name PLUS the mandatory technical fields (e.g., vct, iss, iat).</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_016">WS_RP_IA_MainInteraction_016</h3>
+<h4 id="objective_13">Objective</h4>
+<p>Test that when claims is absent in the request the Wallet MUST return only the claims that are mandatory to present, NO selectively disclosable claims.</p>
+<h4 id="references_13">References</h4>
+<p>[OID4VP 6.4]</p>
+<h4 id="profile-applicability_13">Profile applicability</h4>
+<p>SD-JWT</p>
+<h4 id="eudi-wallet-relevancy_13">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_13">Preconditions</h4>
+<p>The Wallet holds an SD-JWT Credential containing multiple claims: given_name, family_name, and birthdate.</p>
+<h4 id="test-scenario_13">Test Scenario</h4>
+<ol>
+<li>The Wallet engages with the Verifier</li>
+<li>A Verifier sends a request for a Credential the wallet holds, but the claims object is absent.</li>
+<li>Wallet handles request</li>
+</ol>
+<h4 id="expected-results_13">Expected results</h4>
+<ol>
+<li>Wallet and Verifier can interact.</li>
+<li>Wallet receives the request.</li>
+<li>Wallet generates a valid resposne containing signature and key binding, but one which contains zero disclosures.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_017">WS_RP_IA_MainInteraction_017</h3>
+<h4 id="objective_14">Objective</h4>
+<p>Test that when claims is absent in the request the Wallet MUST return only the claims that are mandatory to present, NO selectively disclosable claims.</p>
+<h4 id="references_14">References</h4>
+<p>[OID4VP 6.4]</p>
+<h4 id="profile-applicability_14">Profile applicability</h4>
+<p>ISO mDL</p>
+<h4 id="eudi-wallet-relevancy_14">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_14">Preconditions</h4>
+<p>Wallet holds an ISO mDL with elements: family_name, document_number, and portrait.</p>
+<h4 id="test-scenario_14">Test Scenario</h4>
+<ol>
+<li>The Wallet engages with the Verifier</li>
+<li>A Verifier sends a request for a Credential the wallet holds, but the claims object is absent.</li>
+<li>Wallet handles request</li>
+</ol>
+<h4 id="expected-results_14">Expected results</h4>
+<ol>
+<li>Wallet and Verifier can interact.</li>
+<li>Wallet receives the request.</li>
+<li>Wallet recieves query, and generates a valid resposne showing liscence is authentic but giving zero personal data</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_018">WS_RP_IA_MainInteraction_018</h3>
+<h4 id="objective_15">Objective</h4>
+<p>Test that if claims is present, but claim_sets is absent the wallet treats all entries listed in claims as mandatory and returns them all.</p>
+<h4 id="references_15">References</h4>
+<p>[OID4VP 6.4]</p>
+<h4 id="profile-applicability_15">Profile applicability</h4>
+<h4 id="eudi-wallet-relevancy_15">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_15">Preconditions</h4>
+<h4 id="test-scenario_15">Test Scenario</h4>
+<ol>
+<li>The Wallet engages with the Verifier</li>
+<li>Verifier sends a DCQL query with a credentials object with claims but no claim_sets</li>
+<li>Wallet processes DCQL</li>
+</ol>
+<h4 id="expected-results_15">Expected results</h4>
+<ol>
+<li>Wallet and Verifier can interact.</li>
+<li>Wallet recieves query</li>
+<li>Wallet identifies the missing claim_sets and returns all claims listed</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_019">WS_RP_IA_MainInteraction_019</h3>
+<h4 id="objective_16">Objective</h4>
+<p>Test that when a claim_sets is present, the Wallet allows the selection of only one specific combination from claim_sets, preventing disclosure of multuiple sets.</p>
+<h4 id="references_16">References</h4>
+<p>[OID4VP 6.4]</p>
+<h4 id="profile-applicability_16">Profile applicability</h4>
+<h4 id="eudi-wallet-relevancy_16">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_16">Preconditions</h4>
+<h4 id="test-scenario_16">Test Scenario</h4>
+<ol>
+<li>The Wallet engages with the Verifier</li>
+<li>Verifier sends a DCQL query with a claim_sets holding 3 "claim_sets objects"</li>
+<li>Wallet does not try to send both claim_sets objects</li>
+</ol>
+<h4 id="expected-results_16">Expected results</h4>
+<ol>
+<li>Wallet and Verifier can interact.</li>
+<li>Wallet identifies two sets it can satisfy based on its credentials.</li>
+<li>Once a valid set has been presented to user, the remaining claim_sets object will not be used.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_020">WS_RP_IA_MainInteraction_020</h3>
+<h4 id="objective_17">Objective</h4>
+<p>Verify that if the Wallet can satisfy multiple options in claim_sets, it selects the one appearing earliest in the array.</p>
+<h4 id="references_17">References</h4>
+<p>[OID4VP 6.4]</p>
+<h4 id="profile-applicability_17">Profile applicability</h4>
+<h4 id="eudi-wallet-relevancy_17">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_17">Preconditions</h4>
+<p>Wallet has data for #2 and #3 of verifiers claim_sets</p>
+<h4 id="test-scenario_17">Test Scenario</h4>
+<ol>
+<li>The Wallet engages with the Verifier</li>
+<li>Verifier sends claim_sets with 3 options (#1,#2,#3)</li>
+</ol>
+<h4 id="expected-results_17">Expected results</h4>
+<ol>
+<li>Wallet and Verifier can interact.</li>
+<li>Wallet responds with #2</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_021">WS_RP_IA_MainInteraction_021</h3>
+<h4 id="objective_18">Objective</h4>
+<p>Test If the Wallet cannot satisfy any of the options in the claim_sets, it MUST NOT return any claims.</p>
+<h4 id="references_18">References</h4>
+<p>[OID4VP 6.4]</p>
+<h4 id="profile-applicability_18">Profile applicability</h4>
+<h4 id="eudi-wallet-relevancy_18">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_18">Preconditions</h4>
+<h4 id="test-scenario_18">Test Scenario</h4>
+<ol>
+<li>Verifer sends a DCQL query with a claim_sets that includes a claim the Wallet does not have.</li>
+</ol>
+<h4 id="expected-results_18">Expected results</h4>
+<ol>
+<li>Wallet will not return any claims.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_022">WS_RP_IA_MainInteraction_022</h3>
+<h4 id="objective_19">Objective</h4>
+<p>Test that Claim_sets MUST NOT be supported if claims is absent.</p>
+<h4 id="references_19">References</h4>
+<p>[OID4VP 6.4]</p>
+<h4 id="profile-applicability_19">Profile applicability</h4>
+<h4 id="eudi-wallet-relevancy_19">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_19">Preconditions</h4>
+<h4 id="test-scenario_19">Test Scenario</h4>
+<ol>
+<li>Verifer sends a DCQL query with a credential with claim_sets, but missing claims</li>
+</ol>
+<h4 id="expected-results_19">Expected results</h4>
+<ol>
+<li>Wallet identifies invalid query, returns error.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_023">WS_RP_IA_MainInteraction_023</h3>
+<h4 id="objective_20">Objective</h4>
+<p>Test the Wallet SHOULD treat a claim as if it did not exist in the credential, if its value does not match the one held in the wallets credential.</p>
+<h4 id="references_20">References</h4>
+<p>[OID4VP 6.4]
+[OID4VP 6.3]</p>
+<h4 id="profile-applicability_20">Profile applicability</h4>
+<h4 id="eudi-wallet-relevancy_20">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_20">Preconditions</h4>
+<h4 id="test-scenario_20">Test Scenario</h4>
+<ol>
+<li>Verifier sends a Claims Query containing a restriction on the values of a claim.</li>
+</ol>
+<h4 id="expected-results_20">Expected results</h4>
+<ol>
+<li>Wallet sees values do not match, logically considers that specific claim as not being present for this matching flow.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_024">WS_RP_IA_MainInteraction_024</h3>
+<h4 id="objective_21">Objective</h4>
+<p>Verify that if the Wallet cannot pre-parse the data (e.g., it's encrypted), it still allows the user to proceed with the presentation rather than failing the request.</p>
+<h4 id="references_21">References</h4>
+<p>[OID4VP 6.4]</p>
+<h4 id="profile-applicability_21">Profile applicability</h4>
+<p>Encrypted data</p>
+<h4 id="eudi-wallet-relevancy_21">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_21">Preconditions</h4>
+<h4 id="test-scenario_21">Test Scenario</h4>
+<ol>
+<li>Verifier sends a DCQL query with a values restriction. The Wallet holds a matching credential, but the data is encrypted/locked (the Wallet can't check the value yet).</li>
+</ol>
+<h4 id="expected-results_21">Expected results</h4>
+<ol>
+<li>The Wallet identifies the Type matches and allows the user to present the credential anyway (as the Credential Type and Path match the request.)</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_025">WS_RP_IA_MainInteraction_025</h3>
+<h4 id="objective_22">Objective</h4>
+<p>Test that if the wallet can only return part of the claims in the claim_sets object, it will not return that set but move onto next one</p>
+<h4 id="references_22">References</h4>
+<p>[OID4VP 6.4]</p>
+<h4 id="profile-applicability_22">Profile applicability</h4>
+<h4 id="eudi-wallet-relevancy_22">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_22">Preconditions</h4>
+<h4 id="test-scenario_22">Test Scenario</h4>
+<p>Verifier sends a claim_set requiring 3 claims, but the Wallet only has 2 of them, it MUST NOT return that set. It must move to the next option in the array.</p>
+<h4 id="expected-results_22">Expected results</h4>
+<p>The Wallet only has 2 of them, so it MUST NOT return that set. It must move to the next option in the array. The response should reflect this.</p>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_026">WS_RP_IA_MainInteraction_026</h3>
+<h4 id="objective_23">Objective</h4>
+<p>Test when the Wallet cannot deliver all claims requested by the Verifier because it doesnt have one of them, it does NOT return the respective Credential.</p>
+<h4 id="references_23">References</h4>
+<p>[OID4VP 6.4]</p>
+<h4 id="profile-applicability_23">Profile applicability</h4>
+<h4 id="eudi-wallet-relevancy_23">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_23">Preconditions</h4>
+<h4 id="test-scenario_23">Test Scenario</h4>
+<ol>
+<li>The verifier sends a DCQL query with 2 Required claims in a credential</li>
+<li>Returns </li>
+</ol>
+<h4 id="expected-results_23">Expected results</h4>
+<ol>
+<li>Wallet sees it only has 1 of those claims in the credential, it cannot return the other</li>
+<li>Wallet does NOT return credential containing the claim that did match, sends a privacy keeping  response</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_027">WS_RP_IA_MainInteraction_027</h3>
+<h4 id="objective_24">Objective</h4>
+<p>Test when the Wallet cannot deliver all claims requested by the Verifier because one of them has a non-matching value, it does NOT return the respective Credential.</p>
+<h4 id="references_24">References</h4>
+<p>[OID4VP 6.4]</p>
+<h4 id="profile-applicability_24">Profile applicability</h4>
+<h4 id="eudi-wallet-relevancy_24">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_24">Preconditions</h4>
+<h4 id="test-scenario_24">Test Scenario</h4>
+<ol>
+<li>The verifier sends a DCQL query with 2 Required claims in a credential</li>
+<li>Returns </li>
+</ol>
+<h4 id="expected-results_24">Expected results</h4>
+<ol>
+<li>Wallet sees only has 1 of those claims in the credential has a matching value, it cannot return the other</li>
+<li>Wallet does NOT return credential containing the claim that did match, sends a privacy keeping  response</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_028">WS_RP_IA_MainInteraction_028</h3>
+<h4 id="objective_25">Objective</h4>
+<p>Test the wallet for non-selectively disclosable credentials, treats an empty query (no claims or claim_sets) as a request for the entire credential rather than returning an error or an empty token.</p>
+<h4 id="references_25">References</h4>
+<p>[OID4VP 6.4]</p>
+<h4 id="profile-applicability_25">Profile applicability</h4>
+<h4 id="eudi-wallet-relevancy_25">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_25">Preconditions</h4>
+<p>Wallet holds credential that does NOT support selective disclosure</p>
+<h4 id="test-scenario_25">Test Scenario</h4>
+<ol>
+<li>Verifier sends a DCQL query with a credentials object with no claims or claim_sets</li>
+<li>Wallet processes DCQL</li>
+</ol>
+<h4 id="expected-results_25">Expected results</h4>
+<ol>
+<li>Wallet recieves query</li>
+<li>Wallet identifies the format as non-selective and interprets the missing claims as a "Full Disclosure" request.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_029">WS_RP_IA_MainInteraction_029</h3>
+<h4 id="objective_26">Objective</h4>
+<p>Test that If credential_sets is provided, the wallet will see this as asking for credentials to be returned, satisfying all of the Credential Set Queries in the credential_sets array, where the required attribute is true or omitted, and optionally, any of the other Credential Set Queries.</p>
+<h4 id="references_26">References</h4>
+<p>[OID4VP 6.4]</p>
+<h4 id="profile-applicability_26">Profile applicability</h4>
+<h4 id="eudi-wallet-relevancy_26">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_26">Preconditions</h4>
+<p>the Wallet only has credential #1</p>
+<h4 id="test-scenario_26">Test Scenario</h4>
+<p>Verifier sends credential_sets with two queries:
+1. Credential #1 (required: true)
+2. Credential #2 (required: false)</p>
+<h4 id="expected-results_26">Expected results</h4>
+<p>The Wallet offers credential #1, and still allows the presentation.</p>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_030">WS_RP_IA_MainInteraction_030</h3>
+<h4 id="objective_27">Objective</h4>
+<p>Test the Wallet returns presentations of a set of Credentials that match to one of the options inside the Credential Set Query.</p>
+<h4 id="references_27">References</h4>
+<p>[OID4VP 6.4]</p>
+<h4 id="profile-applicability_27">Profile applicability</h4>
+<h4 id="eudi-wallet-relevancy_27">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_27">Preconditions</h4>
+<h4 id="test-scenario_27">Test Scenario</h4>
+<ol>
+<li>The Wallet engages with the Verifier</li>
+<li>Verifier sends a DCQL query, including a "credential_sets";
+"credentials" includes 1 the wallet has, 1 it does not, "credential_sets" contains one set with the existing credential in wallet</li>
+<li>Wallet handles query</li>
+</ol>
+<h4 id="expected-results_27">Expected results</h4>
+<ol>
+<li>Wallet and Verifier can interact.</li>
+<li>Wallet recieves query</li>
+<li>The wallet returns the credential set that matched</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_031">WS_RP_IA_MainInteraction_031</h3>
+<h4 id="objective_28">Objective</h4>
+<p>Test the Wallet will not return presentations of a set of Credentials that do NOT match to one of the options inside the Credential Set Query.</p>
+<h4 id="references_28">References</h4>
+<p>[OID4VP 6.4]</p>
+<h4 id="profile-applicability_28">Profile applicability</h4>
+<h4 id="eudi-wallet-relevancy_28">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_28">Preconditions</h4>
+<h4 id="test-scenario_28">Test Scenario</h4>
+<ol>
+<li>The Wallet engages with the Verifier</li>
+<li>Verifier sends a DCQL query, including a "credential_sets";
+"credentials" includes 1 the wallet has, 1 it does not, "credential_sets" contains one set with both an existing credential and a non-existing credential in wallet</li>
+<li>Wallet handles query</li>
+</ol>
+<h4 id="expected-results_28">Expected results</h4>
+<ol>
+<li>Wallet and Verifier can interact.</li>
+<li>Wallet recieves query</li>
+<li>The wallet does NOT return the credential set</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_032">WS_RP_IA_MainInteraction_032</h3>
+<h4 id="objective_29">Objective</h4>
+<p>Test that the wallet does not return credentials if they do not match the requested constraints.</p>
+<h4 id="references_29">References</h4>
+<p>[OID4VP 6.4]</p>
+<h4 id="profile-applicability_29">Profile applicability</h4>
+<h4 id="eudi-wallet-relevancy_29">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_29">Preconditions</h4>
+<p>Wallet has PID saying (over 18: false)</p>
+<h4 id="test-scenario_29">Test Scenario</h4>
+<ol>
+<li>The Wallet engages with the Verifier</li>
+<li>Verifier sends a DCQL query, asking for matching credential to wallet where the PID is (over 18: true)</li>
+<li>Wallet handles query</li>
+</ol>
+<h4 id="expected-results_29">Expected results</h4>
+<ol>
+<li>Wallet and Verifier can interact.</li>
+<li>Wallet recieves query</li>
+<li>Wallet sees that constraint is not passed in the matching credential request and hence the credential is not offered. If no others are available wallet states that: I have no credentials to meet your requirement.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_033">WS_RP_IA_MainInteraction_033</h3>
+<h4 id="objective_30">Objective</h4>
+<p>Checking the wallet is correctly performing logic on range of value constrainsts</p>
+<h4 id="references_30">References</h4>
+<p>[OID4VP 6.4]</p>
+<h4 id="profile-applicability_30">Profile applicability</h4>
+<h4 id="eudi-wallet-relevancy_30">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_30">Preconditions</h4>
+<p>Credentials in wallet are numerical edge cases, string and format edge cases, logical edge cases, array edge cases, DTS edge cases
+Verifier sends a DCQL query with "credentials" just MISSING these edge cases.</p>
+<h4 id="test-scenario_30">Test Scenario</h4>
+<ol>
+<li>Verifier sends in multiple "credentials" each with a unique case as follows: 
+age &gt;= 18, 
+expiry &lt;= 2025, (also &lt;, &gt;)
+kg == 10 (integer vs float) , 
+country == "spain" (lowercase)
+name == "Smith " (space included)
+city = "München" (special characters)
+"" (missing claims)
+name == "" (null vs "")
+[] (empty lists)
+["FR"] (single element arrays</li>
+<li>Wallet processes DCQL</li>
+</ol>
+<h4 id="expected-results_30">Expected results</h4>
+<ol>
+<li>Wallet successfully reads and processes "credentials"</li>
+<li>Credentials do not match, and are not returned.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_034">WS_RP_IA_MainInteraction_034</h3>
+<h4 id="objective_31">Objective</h4>
+<p>Test when the Wallet cannot deliver all non-optional Credentials requested by the Verifier, it MUST NOT return any Credential(s).</p>
+<h4 id="references_31">References</h4>
+<p>[OID4VP 6.4]</p>
+<h4 id="profile-applicability_31">Profile applicability</h4>
+<h4 id="eudi-wallet-relevancy_31">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_31">Preconditions</h4>
+<h4 id="test-scenario_31">Test Scenario</h4>
+<ol>
+<li>The Wallet engages with the Verifier</li>
+<li>The verifier sends a DCQL query requesting 2 non-optional credentials; The wallet only has 1 of them</li>
+<li>Wallet handles query</li>
+</ol>
+<h4 id="expected-results_31">Expected results</h4>
+<ol>
+<li>Wallet sees it can return 1 credential, it cannot return the other</li>
+<li>Wallet does NOT return EITHER credential, sends a privacy keeping requirement not met response</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_035">WS_RP_IA_MainInteraction_035</h3>
+<h4 id="objective_32">Objective</h4>
+<p>Test that the wallet returns the VP token in the Authorization response if the response type value is vp_token</p>
+<h4 id="references_32">References</h4>
+<p>[OID4VP Section 8]</p>
+<h4 id="profile-applicability_32">Profile applicability</h4>
+<h4 id="eudi-wallet-relevancy_32">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_32">Preconditions</h4>
+<h4 id="test-scenario_32">Test Scenario</h4>
+<ol>
+<li>The Wallet engages with the Verifier</li>
+<li>The Verifier sends a Authorization Request with response type value: vp_token</li>
+<li>Wallet returns a VP token in its response.</li>
+</ol>
+<h4 id="expected-results_32">Expected results</h4>
+<ol>
+<li>Wallet and Verifier can interact.</li>
+<li>Wallet receives the request.</li>
+<li>True</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_036">WS_RP_IA_MainInteraction_036</h3>
+<h4 id="objective_33">Objective</h4>
+<p>Test that the vp_token parameter returned by the wallet must be a JSON-encoded object</p>
+<h4 id="references_33">References</h4>
+<p>[OID4VP Section 8]</p>
+<h4 id="profile-applicability_33">Profile applicability</h4>
+<h4 id="eudi-wallet-relevancy_33">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_33">Preconditions</h4>
+<h4 id="test-scenario_33">Test Scenario</h4>
+<ol>
+<li>The wallet engages with the verifier</li>
+<li>The verifier sends a request</li>
+<li>The wallet returns a vp_token parameter in its response</li>
+</ol>
+<h4 id="expected-results_33">Expected results</h4>
+<ol>
+<li>Wallet-verifier interaction is successfully initiated</li>
+<li>Wallet receives request</li>
+<li>Verify the vp_token parameter is a JSON-encoded object</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_037">WS_RP_IA_MainInteraction_037</h3>
+<h4 id="objective_34">Objective</h4>
+<p>Test that the vp_token parameter returned by the wallet, contains key id(s), aligning with the id value of the credential query.</p>
+<h4 id="references_34">References</h4>
+<p>[OID4VP Section 8]</p>
+<h4 id="profile-applicability_34">Profile applicability</h4>
+<h4 id="eudi-wallet-relevancy_34">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_34">Preconditions</h4>
+<h4 id="test-scenario_34">Test Scenario</h4>
+<ol>
+<li>The wallet engages with the verifier</li>
+<li>The verifier sends a request</li>
+<li>The wallet returns a vp_token parameter in its response</li>
+</ol>
+<h4 id="expected-results_34">Expected results</h4>
+<ol>
+<li>Wallet-verifier interaction is successfully initiated</li>
+<li>Wallet receives request</li>
+<li>Verify the vp_token keys align with the requests credential query id values.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_038">WS_RP_IA_MainInteraction_038</h3>
+<h4 id="objective_35">Objective</h4>
+<p>Test that the vp_token parameter returned by the wallet contains entries where the value(s) match to the respective credential query.</p>
+<h4 id="references_35">References</h4>
+<p>[OID4VP Section 8]</p>
+<h4 id="profile-applicability_35">Profile applicability</h4>
+<h4 id="eudi-wallet-relevancy_35">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_35">Preconditions</h4>
+<h4 id="test-scenario_35">Test Scenario</h4>
+<ol>
+<li>The wallet engages with the verifier</li>
+<li>The verifier sends a request</li>
+<li>The wallet returns a vp_token parameter in its response</li>
+</ol>
+<h4 id="expected-results_35">Expected results</h4>
+<ol>
+<li>Wallet-verifier interaction is successfully initiated</li>
+<li>Wallet receives request</li>
+<li>Verify the vp_token values are array(s) of presentation(s) matching the credential query of same id.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_039">WS_RP_IA_MainInteraction_039</h3>
+<h4 id="objective_36">Objective</h4>
+<p>Test when the wallet returns a vp_token parameter, the key + value pairs match.</p>
+<h4 id="references_36">References</h4>
+<p>[OID4VP Section 8]</p>
+<h4 id="profile-applicability_36">Profile applicability</h4>
+<h4 id="eudi-wallet-relevancy_36">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_36">Preconditions</h4>
+<h4 id="test-scenario_36">Test Scenario</h4>
+<ol>
+<li>The wallet engages with the verifier</li>
+<li>The verifier sends a request</li>
+<li>The wallet returns a vp_token parameter in its response</li>
+</ol>
+<h4 id="expected-results_36">Expected results</h4>
+<ol>
+<li>Wallet-verifier interaction is successfully initiated</li>
+<li>Wallet receives request</li>
+<li>Verify the vp_token has (key + value) pairs which match to the credential query.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_040">WS_RP_IA_MainInteraction_040</h3>
+<h4 id="objective_37">Objective</h4>
+<p>Test that if "multiple" is omitted, the vp_token array contains only one presentation.</p>
+<h4 id="references_37">References</h4>
+<p>[OID4VP Section 8]</p>
+<h4 id="profile-applicability_37">Profile applicability</h4>
+<h4 id="eudi-wallet-relevancy_37">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_37">Preconditions</h4>
+<h4 id="test-scenario_37">Test Scenario</h4>
+<ol>
+<li>The wallet engages with the verifier</li>
+<li>The verifier sends a request where credential query has "multiple" omitted</li>
+<li>The wallet returns a vp_token parameter in its response</li>
+</ol>
+<h4 id="expected-results_37">Expected results</h4>
+<ol>
+<li>Wallet-verifier interaction is successfully initiated</li>
+<li>Wallet receives request</li>
+<li>Verify the vp_token array contains only one presentation.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_041">WS_RP_IA_MainInteraction_041</h3>
+<h4 id="objective_38">Objective</h4>
+<p>Test that if "multiple" is false, the vp_token array contains only one presentation.</p>
+<h4 id="references_38">References</h4>
+<p>[OID4VP Section 8]</p>
+<h4 id="profile-applicability_38">Profile applicability</h4>
+<h4 id="eudi-wallet-relevancy_38">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_38">Preconditions</h4>
+<h4 id="test-scenario_38">Test Scenario</h4>
+<ol>
+<li>The wallet engages with the verifier</li>
+<li>The verifier sends a request where credential query has "multiple" set to false</li>
+<li>The wallet returns a vp_token parameter in its response</li>
+</ol>
+<h4 id="expected-results_38">Expected results</h4>
+<ol>
+<li>Wallet-verifier interaction is successfully initiated</li>
+<li>Wallet receives request</li>
+<li>Verify the vp_token array contains only one presentation.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_042">WS_RP_IA_MainInteraction_042</h3>
+<h4 id="objective_39">Objective</h4>
+<p>Test the wallet does NOT include entries in the vp_token, for optional Credential Queries, when there are no matching Credentials.</p>
+<h4 id="references_39">References</h4>
+<p>[OID4VP Section 8]</p>
+<h4 id="profile-applicability_39">Profile applicability</h4>
+<h4 id="eudi-wallet-relevancy_39">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_39">Preconditions</h4>
+<p>Wallet does NOT contain matching credentials for the queries optional credentials</p>
+<h4 id="test-scenario_39">Test Scenario</h4>
+<ol>
+<li>The wallet engages with the verifier</li>
+<li>The verifier sends a request where credential query includes some optional credentials</li>
+<li>The wallet returns a vp_token parameter in its response</li>
+</ol>
+<h4 id="expected-results_39">Expected results</h4>
+<ol>
+<li>Wallet-verifier interaction is successfully initiated</li>
+<li>Wallet receives request</li>
+<li>Verify the vp_token entries contains only non-optional credentials.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_043">WS_RP_IA_MainInteraction_043</h3>
+<h4 id="objective_40">Objective</h4>
+<p>Test the wallet omits optional DCQL query keys in the presentation when no matching credentials exist.</p>
+<h4 id="references_40">References</h4>
+<p>[OID4VP Section 8]</p>
+<h4 id="profile-applicability_40">Profile applicability</h4>
+<h4 id="eudi-wallet-relevancy_40">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_40">Preconditions</h4>
+<p>Wallet does NOT contain matching credentials for the queries optional credentials</p>
+<h4 id="test-scenario_40">Test Scenario</h4>
+<ol>
+<li>The wallet engages with the verifier</li>
+<li>The verifier sends a request where credential query includes some optional credentials</li>
+<li>The wallet returns a vp_token parameter in its response</li>
+</ol>
+<h4 id="expected-results_40">Expected results</h4>
+<ol>
+<li>Wallet-verifier interaction is successfully initiated</li>
+<li>Wallet receives request</li>
+<li>Verify the vp_token does NOT contain key ids from the optional credentials.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_044">WS_RP_IA_MainInteraction_044</h3>
+<h4 id="objective_41">Objective</h4>
+<p>Test for responses of size &gt; URL limits of user agents, the Wallet can respond to the Verifier using the direct_post mechanism.
+Same device DC API profile.</p>
+<h4 id="references_41">References</h4>
+<p>OAuth
+[OID4VP Section 8]</p>
+<h4 id="profile-applicability_41">Profile applicability</h4>
+<p>Same device DC API</p>
+<h4 id="eudi-wallet-relevancy_41">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_41">Preconditions</h4>
+<p>The wallet has a large credential &gt; url limit of user agent</p>
+<h4 id="test-scenario_41">Test Scenario</h4>
+<ol>
+<li>The wallet engages with the verifier</li>
+<li>The verifier sends a request for the large credential, with parameter <code>response_mode=direct_post</code> and a <code>response_uri</code> of the verifier.</li>
+<li>The wallet processes the request.</li>
+<li>The wallet responds with request object</li>
+</ol>
+<h4 id="expected-results_41">Expected results</h4>
+<ol>
+<li>Wallet-verifier interaction is successfully initiated</li>
+<li>Wallet receives request</li>
+<li>True</li>
+<li>Verify the wallet submits the response to the response_uri, with the Authorization Response as body of the HTTP-request using the POST method.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_045">WS_RP_IA_MainInteraction_045</h3>
+<h4 id="objective_42">Objective</h4>
+<p>Test for responses of size &gt; URL limits of user agents, the Wallet can respond to the Verifier using the direct_post mechanism.
+Cross device DC API profile.</p>
+<h4 id="references_42">References</h4>
+<p>[OID4VP Section 8]</p>
+<h4 id="profile-applicability_42">Profile applicability</h4>
+<p>Cross device DC API</p>
+<h4 id="eudi-wallet-relevancy_42">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_42">Preconditions</h4>
+<h4 id="test-scenario_42">Test Scenario</h4>
+<ol>
+<li>The wallet engages with the verifier</li>
+<li>The verifier sends a request for the large credential, with parameter <code>response_mode=direct_post</code> and a <code>response_uri</code> of the verifier.</li>
+<li>The wallet processes the request.</li>
+<li>The wallet responds with request object</li>
+</ol>
+<h4 id="expected-results_42">Expected results</h4>
+<ol>
+<li>Wallet-verifier interaction is successfully initiated</li>
+<li>Wallet receives request</li>
+<li>True</li>
+<li>Verify the wallet submits the response to the response_uri, with the Authorization Response as body of the HTTP-request using the POST method.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_046">WS_RP_IA_MainInteraction_046</h3>
+<h4 id="objective_43">Objective</h4>
+<p>Test for responses of size &gt; URL limits of user agents, the Wallet can respond to the Verifier using the direct_post mechanism.
+Same device custom URL</p>
+<h4 id="references_43">References</h4>
+<p>[OID4VP Section 8]</p>
+<h4 id="profile-applicability_43">Profile applicability</h4>
+<p>Same device custom URL</p>
+<h4 id="eudi-wallet-relevancy_43">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_43">Preconditions</h4>
+<h4 id="test-scenario_43">Test Scenario</h4>
+<ol>
+<li>The wallet engages with the verifier</li>
+<li>The verifier sends a request for the large credential, with parameter <code>response_mode=direct_post</code> and a <code>response_uri</code> of the verifier.</li>
+<li>The wallet processes the request.</li>
+<li>The wallet responds with request object</li>
+</ol>
+<h4 id="expected-results_43">Expected results</h4>
+<ol>
+<li>Wallet-verifier interaction is successfully initiated</li>
+<li>Wallet receives request</li>
+<li>True</li>
+<li>Verify the wallet submits the response to the response_uri, with the Authorization Response as body of the HTTP-request using the POST method.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_047">WS_RP_IA_MainInteraction_047</h3>
+<h4 id="objective_44">Objective</h4>
+<p>Test when using response mode "direct_post" the Wallet encodes the Authorization Response, in the HTTP POST request body, using format defined by application/x‑www‑form‑urlencoded.
+Same device DC API.</p>
+<h4 id="references_44">References</h4>
+<p>OAuth
+[OID4VP Section 8]</p>
+<h4 id="profile-applicability_44">Profile applicability</h4>
+<p>Same device DC API</p>
+<h4 id="eudi-wallet-relevancy_44">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_44">Preconditions</h4>
+<h4 id="test-scenario_44">Test Scenario</h4>
+<ol>
+<li>The wallet engages with the verifier</li>
+<li>The verifier sends a request, with parameter <code>response_mode=direct_post</code> and a <code>response_uri</code> of the verifier.</li>
+<li>The wallet processes the request.</li>
+<li>The wallet responds with request object</li>
+</ol>
+<h4 id="expected-results_44">Expected results</h4>
+<ol>
+<li>Wallet-verifier interaction is successfully initiated</li>
+<li>Wallet receives request</li>
+<li>True</li>
+<li>Verify the wallet submits the response including the Authorization Response encoded using format defined by application/x‑www‑form‑urlencoded.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_048">WS_RP_IA_MainInteraction_048</h3>
+<h4 id="objective_45">Objective</h4>
+<p>Test when using response mode "direct_post" the Wallet encodes the Authorization Response, in the HTTP POST request body, using format defined by application/x‑www‑form‑urlencoded.
+Cross device DC API.</p>
+<h4 id="references_45">References</h4>
+<p>[OID4VP Section 8]</p>
+<h4 id="profile-applicability_45">Profile applicability</h4>
+<p>Cross device DC API</p>
+<h4 id="eudi-wallet-relevancy_45">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_45">Preconditions</h4>
+<h4 id="test-scenario_45">Test Scenario</h4>
+<ol>
+<li>The wallet engages with the verifier</li>
+<li>The verifier sends a request, with parameter <code>response_mode=direct_post</code> and a <code>response_uri</code> of the verifier.</li>
+<li>The wallet processes the request.</li>
+<li>The wallet responds with request object</li>
+</ol>
+<h4 id="expected-results_45">Expected results</h4>
+<ol>
+<li>Wallet-verifier interaction is successfully initiated</li>
+<li>Wallet receives request</li>
+<li>True</li>
+<li>Verify the wallet submits the response including the Authorization Response encoded using format defined by application/x‑www‑form‑urlencoded.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_049">WS_RP_IA_MainInteraction_049</h3>
+<h4 id="objective_46">Objective</h4>
+<p>Test when using response mode "direct_post" the Wallet encodes the Authorization Response, in the HTTP POST request body, using format defined by application/x‑www‑form‑urlencoded.
+Same device custom URL.</p>
+<h4 id="references_46">References</h4>
+<p>[OID4VP Section 8]</p>
+<h4 id="profile-applicability_46">Profile applicability</h4>
+<p>Same device custom URL</p>
+<h4 id="eudi-wallet-relevancy_46">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_46">Preconditions</h4>
+<h4 id="test-scenario_46">Test Scenario</h4>
+<ol>
+<li>The wallet engages with the verifier</li>
+<li>The verifier sends a request, with parameter <code>response_mode=direct_post</code> and a <code>response_uri</code> of the verifier.</li>
+<li>The wallet processes the request.</li>
+<li>The wallet responds with request object</li>
+</ol>
+<h4 id="expected-results_46">Expected results</h4>
+<ol>
+<li>Wallet-verifier interaction is successfully initiated</li>
+<li>Wallet receives request</li>
+<li>True</li>
+<li>Verify the wallet submits the response including the Authorization Response encoded using format defined by application/x‑www‑form‑urlencoded.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_050">WS_RP_IA_MainInteraction_050</h3>
+<h4 id="objective_47">Objective</h4>
+<p>Test all parameters in the HTTP POST request body are encoded using UTF‑8.
+Same device DC API</p>
+<h4 id="references_47">References</h4>
+<p>OAuth
+[OID4VP Section 8]</p>
+<h4 id="profile-applicability_47">Profile applicability</h4>
+<p>Same device DC API</p>
+<h4 id="eudi-wallet-relevancy_47">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_47">Preconditions</h4>
+<h4 id="test-scenario_47">Test Scenario</h4>
+<ol>
+<li>The wallet engages with the verifier</li>
+<li>The verifier sends a request, with parameter <code>response_mode=direct_post</code> and a <code>response_uri</code> of the verifier.</li>
+<li>The wallet processes the request.</li>
+<li>The wallet responds with request object</li>
+</ol>
+<h4 id="expected-results_47">Expected results</h4>
+<ol>
+<li>Wallet-verifier interaction is successfully initiated</li>
+<li>Wallet receives request</li>
+<li>True</li>
+<li>Verify that all parameters in the HTTP POST request body are encoded using UTF‑8.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_051">WS_RP_IA_MainInteraction_051</h3>
+<h4 id="objective_48">Objective</h4>
+<p>Test all parameters in the HTTP POST request body are encoded using UTF‑8.
+Cross device DC API</p>
+<h4 id="references_48">References</h4>
+<p>[OID4VP Section 8]</p>
+<h4 id="profile-applicability_48">Profile applicability</h4>
+<p>Cross device DC API</p>
+<h4 id="eudi-wallet-relevancy_48">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_48">Preconditions</h4>
+<h4 id="test-scenario_48">Test Scenario</h4>
+<ol>
+<li>The wallet engages with the verifier</li>
+<li>The verifier sends a request, with parameter <code>response_mode=direct_post</code> and a <code>response_uri</code> of the verifier.</li>
+<li>The wallet processes the request.</li>
+<li>The wallet responds with request object</li>
+</ol>
+<h4 id="expected-results_48">Expected results</h4>
+<ol>
+<li>Wallet-verifier interaction is successfully initiated</li>
+<li>Wallet receives request</li>
+<li>True</li>
+<li>Verify that all parameters in the HTTP POST request body are encoded using UTF‑8.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_052">WS_RP_IA_MainInteraction_052</h3>
+<h4 id="objective_49">Objective</h4>
+<p>Test all parameters in the HTTP POST request body are encoded using UTF‑8.
+Same device custom URL</p>
+<h4 id="references_49">References</h4>
+<p>[OID4VP Section 8]</p>
+<h4 id="profile-applicability_49">Profile applicability</h4>
+<p>Same device custom URL</p>
+<h4 id="eudi-wallet-relevancy_49">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_49">Preconditions</h4>
+<h4 id="test-scenario_49">Test Scenario</h4>
+<ol>
+<li>The wallet engages with the verifier</li>
+<li>The verifier sends a request, with parameter <code>response_mode=direct_post</code> and a <code>response_uri</code> of the verifier.</li>
+<li>The wallet processes the request.</li>
+<li>The wallet responds with request object</li>
+</ol>
+<h4 id="expected-results_49">Expected results</h4>
+<ol>
+<li>Wallet-verifier interaction is successfully initiated</li>
+<li>Wallet receives request</li>
+<li>True</li>
+<li>Verify that all parameters in the HTTP POST request body are encoded using UTF‑8.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_053">WS_RP_IA_MainInteraction_053</h3>
+<h4 id="objective_50">Objective</h4>
+<p>Test that the wallet rejects a request when the response_uri parameter is missing and when Response Mode = direct_post</p>
+<h4 id="references_50">References</h4>
+<p>[OID4VP Section 8]</p>
+<h4 id="profile-applicability_50">Profile applicability</h4>
+<h4 id="eudi-wallet-relevancy_50">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_50">Preconditions</h4>
+<h4 id="test-scenario_50">Test Scenario</h4>
+<ol>
+<li>The wallet engages with the verifier</li>
+<li>The verifier sends a request, with parameter <code>response_mode=direct_post</code> and missing <code>response_uri</code> parameter.</li>
+<li>The wallet processes the request.</li>
+</ol>
+<h4 id="expected-results_50">Expected results</h4>
+<ol>
+<li>Wallet-verifier interaction is successfully initiated</li>
+<li>Wallet receives request</li>
+<li>Wallet returns an error.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_054">WS_RP_IA_MainInteraction_054</h3>
+<h4 id="objective_51">Objective</h4>
+<p>Test the response_uri, is the URL to which the Wallet sends the Authorization Response, using an HTTP POST request. </p>
+<h4 id="references_51">References</h4>
+<p>[OID4VP Section 8]</p>
+<h4 id="profile-applicability_51">Profile applicability</h4>
+<h4 id="eudi-wallet-relevancy_51">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_51">Preconditions</h4>
+<h4 id="test-scenario_51">Test Scenario</h4>
+<ol>
+<li>The wallet engages with the verifier</li>
+<li>The verifier sends a request, with parameter <code>response_mode=direct_post</code> and a <code>response_uri</code> of the verifier.</li>
+<li>The wallet processes the request.</li>
+<li>The wallet responds with request object</li>
+</ol>
+<h4 id="expected-results_51">Expected results</h4>
+<ol>
+<li>Wallet-verifier interaction is successfully initiated</li>
+<li>Wallet receives request</li>
+<li>True</li>
+<li>Verify the wallet submits the response to the response_uri</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_055">WS_RP_IA_MainInteraction_055</h3>
+<h4 id="objective_52">Objective</h4>
+<p>When the response_uri parameter is present, the redirect_uri Authorization Request parameter MUST NOT be present. </p>
+<h4 id="references_52">References</h4>
+<p>[OID4VP Section 8]</p>
+<h4 id="profile-applicability_52">Profile applicability</h4>
+<h4 id="eudi-wallet-relevancy_52">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_52">Preconditions</h4>
+<h4 id="test-scenario_52">Test Scenario</h4>
+<ol>
+<li>The wallet engages with the verifier</li>
+<li>The verifier sends a request, with parameter <code>response_mode=direct_post</code> and a <code>response_uri</code> of the verifier, AND a redirct_uri.</li>
+<li>The wallet processes the request.</li>
+</ol>
+<h4 id="expected-results_52">Expected results</h4>
+<ol>
+<li>Wallet-verifier interaction is successfully initiated</li>
+<li>Wallet receives request</li>
+<li>Wallet returns an error.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_056">WS_RP_IA_MainInteraction_056</h3>
+<h4 id="objective_53">Objective</h4>
+<p>The response_uri value MUST be a value that the client would be permitted to use as redirect_uri when following the rules defined in Section 5.9.</p>
+<h4 id="references_53">References</h4>
+<p>[OID4VP Section 8]</p>
+<h4 id="profile-applicability_53">Profile applicability</h4>
+<h4 id="eudi-wallet-relevancy_53">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_53">Preconditions</h4>
+<h4 id="test-scenario_53">Test Scenario</h4>
+<ol>
+<li>The wallet engages with the verifier</li>
+<li>The verifier sends a request, with parameter <code>response_mode=direct_post</code> and an invalid <code>redirect_uri</code> (not following rules in section 5.9)</li>
+<li>The wallet processes the request.</li>
+</ol>
+<h4 id="expected-results_53">Expected results</h4>
+<ol>
+<li>Wallet-verifier interaction is successfully initiated</li>
+<li>Wallet receives request</li>
+<li>Wallet returns an error.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_057">WS_RP_IA_MainInteraction_057</h3>
+<h4 id="objective_54">Objective</h4>
+<p>Test that Wallet accepts an HTTP 200 response with Content-Type: application/json after sending the Authorization Response to the response_uri.</p>
+<h4 id="references_54">References</h4>
+<p>[OID4VP Section 8]</p>
+<h4 id="profile-applicability_54">Profile applicability</h4>
+<h4 id="eudi-wallet-relevancy_54">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_54">Preconditions</h4>
+<h4 id="test-scenario_54">Test Scenario</h4>
+<ol>
+<li>The wallet engages with the verifier</li>
+<li>The verifier sends a request, with parameter `response_mode=direct_post'</li>
+<li>The wallet processes the request.</li>
+<li>The wallet responds with request object</li>
+<li>Verifier sends a HTTP status code of 200 + a JSON body</li>
+</ol>
+<h4 id="expected-results_54">Expected results</h4>
+<ol>
+<li>Wallet-verifier interaction is successfully initiated</li>
+<li>Wallet receives request</li>
+<li>True</li>
+<li>True</li>
+<li>Wallet does NOT return an error, returns user to URL provided.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_058">WS_RP_IA_MainInteraction_058</h3>
+<h4 id="objective_55">Objective</h4>
+<p>Test the Wallet redirects the user agent to the redirect_uri if this parameter is included in the Authorization Request.
+Same device DC API</p>
+<h4 id="references_55">References</h4>
+<p>[OID4VP Section 8]</p>
+<h4 id="profile-applicability_55">Profile applicability</h4>
+<p>Same device DC API</p>
+<h4 id="eudi-wallet-relevancy_55">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_55">Preconditions</h4>
+<h4 id="test-scenario_55">Test Scenario</h4>
+<ol>
+<li>The wallet engages with the verifier</li>
+<li>The verifier sends an Authorization request, with response_type=vp_token, and parameter redirect_uri</li>
+<li>The wallet processes the request</li>
+<li>The wallet constructs the URL</li>
+</ol>
+<h4 id="expected-results_55">Expected results</h4>
+<ol>
+<li>Wallet-verifier interaction is successfully initiated</li>
+<li>Wallet receives request</li>
+<li>True</li>
+<li>Verify the wallet appends the Authorization response to the redirect_uri, opens URL in the browser</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_059">WS_RP_IA_MainInteraction_059</h3>
+<h4 id="objective_56">Objective</h4>
+<p>Test the Wallet redirects the user agent to the redirect_uri if this parameter is included in the Authorization Request.
+Cross device DC API</p>
+<h4 id="references_56">References</h4>
+<p>[OID4VP Section 8]</p>
+<h4 id="profile-applicability_56">Profile applicability</h4>
+<p>Cross device DC API</p>
+<h4 id="eudi-wallet-relevancy_56">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_56">Preconditions</h4>
+<h4 id="test-scenario_56">Test Scenario</h4>
+<ol>
+<li>The wallet engages with the verifier</li>
+<li>The verifier sends an Authorization request, with response_type=vp_token, and parameter redirect_uri</li>
+<li>The wallet processes the request</li>
+<li>The wallet constructs the URL</li>
+</ol>
+<h4 id="expected-results_56">Expected results</h4>
+<ol>
+<li>Wallet-verifier interaction is successfully initiated</li>
+<li>Wallet receives request</li>
+<li>True</li>
+<li>Verify the wallet appends the Authorization response to the redirect_uri, opens URL in the browser</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_060">WS_RP_IA_MainInteraction_060</h3>
+<h4 id="objective_57">Objective</h4>
+<p>Test the Wallet redirects the user agent to the redirect_uri if this parameter is included in the Authorization Request.
+Same device custom URL</p>
+<h4 id="references_57">References</h4>
+<p>[OID4VP Section 8]</p>
+<h4 id="profile-applicability_57">Profile applicability</h4>
+<p>Same device custom URL</p>
+<h4 id="eudi-wallet-relevancy_57">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_57">Preconditions</h4>
+<h4 id="test-scenario_57">Test Scenario</h4>
+<ol>
+<li>The wallet engages with the verifier</li>
+<li>The verifier sends an Authorization request, with response_type=vp_token, and parameter redirect_uri</li>
+<li>The wallet processes the request</li>
+<li>The wallet constructs the URL</li>
+</ol>
+<h4 id="expected-results_57">Expected results</h4>
+<ol>
+<li>Wallet-verifier interaction is successfully initiated</li>
+<li>Wallet receives request</li>
+<li>True</li>
+<li>Verify the wallet appends the Authorization response to the redirect_uri, opens URL in the browser</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_061">WS_RP_IA_MainInteraction_061</h3>
+<h4 id="objective_58">Objective</h4>
+<p>Test the Wallet handles a redirect_uri when a response_uri returns after a successful Response.
+Same device DC API</p>
+<h4 id="references_58">References</h4>
+<p>[OID4VP Section 8]</p>
+<h4 id="profile-applicability_58">Profile applicability</h4>
+<p>Same device DC API</p>
+<h4 id="eudi-wallet-relevancy_58">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_58">Preconditions</h4>
+<h4 id="test-scenario_58">Test Scenario</h4>
+<ol>
+<li>The wallet engages with the verifier</li>
+<li>The verifier sends an Authorization request, with response_type=vp_token, and parameter response_uri</li>
+<li>The wallet performs HTTP POST to the response_uri</li>
+<li>The verifier responds with HTTP 200 and a JSON body containing a redirect_uri</li>
+<li>Wallet processes JSON and triggers User agent</li>
+</ol>
+<h4 id="expected-results_58">Expected results</h4>
+<ol>
+<li>Wallet-verifier interaction is successfully initiated</li>
+<li>Wallet receives request</li>
+<li>True</li>
+<li>Verify the wallet DOES NOT append the Authorization response to the redirect_uri</li>
+<li>Wallet opens redirect_uri, shows user success page</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_062">WS_RP_IA_MainInteraction_062</h3>
+<h4 id="objective_59">Objective</h4>
+<p>Test the Wallet handles a redirect_uri when a response_uri returns after a successful Response.
+Cross device DC API</p>
+<h4 id="references_59">References</h4>
+<p>[OID4VP Section 8]</p>
+<h4 id="profile-applicability_59">Profile applicability</h4>
+<p>Cross device DC API</p>
+<h4 id="eudi-wallet-relevancy_59">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_59">Preconditions</h4>
+<h4 id="test-scenario_59">Test Scenario</h4>
+<ol>
+<li>The wallet engages with the verifier</li>
+<li>The verifier sends an Authorization request, with response_type=vp_token, and parameter response_uri</li>
+<li>The wallet performs HTTP POST to the response_uri</li>
+<li>The verifier responds with HTTP 200 and a JSON body containing a redirect_uri</li>
+<li>Wallet processes JSON and triggers User agent</li>
+</ol>
+<h4 id="expected-results_59">Expected results</h4>
+<ol>
+<li>Wallet-verifier interaction is successfully initiated</li>
+<li>Wallet receives request</li>
+<li>True</li>
+<li>Verify the wallet DOES NOT append the Authorization response to the redirect_uri</li>
+<li>Wallet opens redirect_uri, shows user success page</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_063">WS_RP_IA_MainInteraction_063</h3>
+<h4 id="objective_60">Objective</h4>
+<p>Test the Wallet handles a redirect_uri when a response_uri returns after a successful Response.
+Same device custom URL</p>
+<h4 id="references_60">References</h4>
+<p>[OID4VP Section 8]</p>
+<h4 id="profile-applicability_60">Profile applicability</h4>
+<p>Same device custom URL</p>
+<h4 id="eudi-wallet-relevancy_60">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_60">Preconditions</h4>
+<h4 id="test-scenario_60">Test Scenario</h4>
+<ol>
+<li>The wallet engages with the verifier</li>
+<li>The verifier sends an Authorization request, with response_type=vp_token, and parameter response_uri</li>
+<li>The wallet performs HTTP POST to the response_uri</li>
+<li>The verifier responds with HTTP 200 and a JSON body containing a redirect_uri</li>
+<li>Wallet processes JSON and triggers User agent</li>
+</ol>
+<h4 id="expected-results_60">Expected results</h4>
+<ol>
+<li>Wallet-verifier interaction is successfully initiated</li>
+<li>Wallet receives request</li>
+<li>True</li>
+<li>Verify the wallet DOES NOT append the Authorization response to the redirect_uri</li>
+<li>Wallet opens redirect_uri, shows user success page</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_064">WS_RP_IA_MainInteraction_064</h3>
+<h4 id="objective_61">Objective</h4>
+<p>Test the Wallet handles a redirect_uri when a response_uri returns after an error response.</p>
+<h4 id="references_61">References</h4>
+<p>[OID4VP Section 8]</p>
+<h4 id="profile-applicability_61">Profile applicability</h4>
+<h4 id="eudi-wallet-relevancy_61">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_61">Preconditions</h4>
+<h4 id="test-scenario_61">Test Scenario</h4>
+<ol>
+<li>The wallet engages with the verifier</li>
+<li>The verifier sends an Authorization request, with response_type=vp_token, and parameter response_uri</li>
+<li>The wallet performs HTTP POST to the response_uri</li>
+<li>The verifier responds with HTTP error 400 and a JSON body containing a redirect_uri</li>
+<li>Wallet processes error and the JSON and triggers User agent</li>
+</ol>
+<h4 id="expected-results_61">Expected results</h4>
+<ol>
+<li>Wallet-verifier interaction is successfully initiated</li>
+<li>Wallet receives request</li>
+<li>True</li>
+<li>Verify the Wallet recognizes the HTTP error status but successfully parses the redirect_uri from the error response body.</li>
+<li>Wallet opens redirect_uri, shows user success page</li>
+</ol>
+<!-- END INCLUDE -->
+
+<!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md -->
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.top", "navigation.footer", "navigation.indexes", "toc.integrate", "toc.follow"], "search": "../../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+    
+    
+      <script src="../../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../../../../assets/external/unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../../../../../../javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>
