@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Report a security vulnerability
+    url: https://github.com/eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment/blob/main/SECURITY.md
+    about: Do NOT open a public issue for security vulnerabilities. Please follow the Vulnerability Disclosure Policy.
