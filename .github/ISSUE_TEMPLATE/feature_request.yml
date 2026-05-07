@@ -1,0 +1,88 @@
+name: Feature request
+description: Suggest a new test objective, test case, clarification, or improvement to the FCAF
+title: "[Feature]: "
+labels: ["enhancement", "triage"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve the **Functional Conformance Assessment Framework (FCAF)**!
+
+        Use this template to propose improvements to framework content and test cases, including new or updated test objectives, test cases, clarifications, structural changes, or methodology improvements.
+
+        > ⚠️ The FCAF is developed iteratively. Proposals should be aligned with existing specifications and aim to improve clarity, traceability, implementability, and interoperability.
+
+        > ⚠️ Proposals that impact the overall framework structure or methodology require prior alignment with the FCAF core team and may not be handled through standard feature requests.
+
+        > ⚠️ **Security vulnerabilities must not be reported here.** Please follow the Vulnerability Disclosure Policy instead.
+
+        > ℹ️ Submitting an issue or pull request does not assign a maturity stage. Progression through stages (submitted, reviewed, release candidate, released baseline) is determined through the review and governance process.
+
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Preliminary checks
+      options:
+        - label: I have searched existing issues and discussions to confirm this has not already been proposed.
+          required: true
+        - label: This proposal is not related to a security vulnerability.
+          required: true
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type of proposal
+      options:
+        - New test objective
+        - New test case
+        - Improvement to existing test case
+        - Editorial / clarification
+        - Improvement to existing structure
+        - Other (requires discussion)
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation / problem to solve
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+    validations:
+      required: true
+
+  - type: textarea
+    id: traceability
+    attributes:
+      label: Normative reference / traceability
+      description: Reference the relevant requirement (e.g. CIR, ETSI, ISO, OIDF, IETF)
+    validations:
+      required: false
+
+  - type: textarea
+    id: testability
+    attributes:
+      label: Testability / expected behaviour
+      description: What observable behaviour enables a clear pass/fail determination?
+    validations:
+      required: false
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Affected areas
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+    validations:
+      required: false

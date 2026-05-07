@@ -1,0 +1,109 @@
+name: Test Case Review
+description: Plan and perform a review of a small batch of test cases (designated reviewers)
+title: "[Review]: "
+labels: ["review"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This template is intended for designated reviewers.
+
+        Use this issue to define the scope of a review before starting, 
+        and to capture findings and recommendations during the review.
+
+        Reviews provide structured input to determine whether content 
+        can be promoted from the submitted stage to the reviewed stage.
+
+        ⚠️ Maturity stages are not assigned within issues. Promotion is handled 
+        through the review and governance process.
+
+  - type: input
+    id: area
+    attributes:
+      label: Area / specification
+      description: Which area are you reviewing?
+      placeholder: "e.g. OID4VP Section 5"
+    validations:
+      required: true
+
+  - type: textarea
+    id: testcases
+    attributes:
+      label: Test case IDs
+      description: List up to 10 test case IDs to review.
+      placeholder: |
+        - WS_RP_MS_Metadata_001
+        - WS_RP_MS_Metadata_002
+    validations:
+      required: true
+
+  - type: textarea
+    id: focus
+    attributes:
+      label: Review focus (optional)
+      description: Specify any particular aspects to focus on
+      placeholder: "e.g. implementability, consistency, references, negative testing"
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Review workflow
+
+        1. Define scope and test cases  
+        2. Perform review  
+        3. Capture findings  
+        4. Provide recommendation  
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Review checklist
+      options:
+        - label: Test cases are implementable without interpretation
+        - label: Expected results are clearly verifiable (pass/fail)
+        - label: Test cases are testable as black-box tests (only observable inputs/outputs are used)
+        - label: Test cases have a clearly scoped objective (one intent per test)
+        - label: Test cases do not duplicate or clearly overlap with other test cases, except where negative testing requires it
+        - label: Test cases align with the referenced specification and references are consistent
+        - label: Every test step is observable and has a clearly defined expected result
+        - label: No technical errors, typos, or inconsistencies were identified
+
+  - type: textarea
+    id: findings
+    attributes:
+      label: Findings / issues identified
+      description: Capture issues, patterns, or follow-up actions. Link to issues or PRs where applicable.
+    validations:
+      required: false
+
+  - type: textarea
+    id: implementability
+    attributes:
+      label: Implementability assessment
+      description: Are test cases implementable as black-box tests with observable results?
+    validations:
+      required: false
+
+  - type: textarea
+    id: recommendation
+    attributes:
+      label: Recommendation
+      description: Summary recommendation (e.g. suitable for promotion, requires changes)
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Completion criteria
+
+        This review issue can be closed when:
+
+        - All listed test cases have been reviewed  
+        - Any identified issues have been captured via issues or PRs  
+
+        Reviews provide input for promotion decisions. Fixing issues is not required 
+        to close the review; review and fixing are handled separately.

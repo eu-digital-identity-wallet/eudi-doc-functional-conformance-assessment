@@ -40,3 +40,8 @@ and this project adheres to [Semantic Versioning](https://semverdoc.org/).
 
 ## [0.0.10]
 - Embed fucntional conformance into eudi.dev
+
+## [0.1.0]
+- Update roadmap to reflect iterative process model
+- Update governance model
+- Add issue templates
