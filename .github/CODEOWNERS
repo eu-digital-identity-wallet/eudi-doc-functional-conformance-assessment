@@ -2,7 +2,7 @@
 * @eu-digital-identity-wallet/fcaf-core
 
 # Reviewable framework and test content
-docs/** @eu-digital-identity-wallet/fcaf-reviewers
+docs/fcaf/** @eu-digital-identity-wallet/fcaf-reviewers
 
 # Repository infrastructure
 .github/** @eu-digital-identity-wallet/fcaf-core
