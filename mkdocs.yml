@@ -8,6 +8,7 @@ site_url: https://conformance.eudi.dev
 
 theme:
   name: material
+  navigation_depth: 3  
   palette:
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
@@ -46,6 +47,8 @@ markdown_extensions:
   - sane_lists
   - tables
   - pymdownx.tilde
+  - toc:
+      toc_depth: 4  
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
