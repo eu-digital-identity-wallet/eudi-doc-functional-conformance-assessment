@@ -17,7 +17,7 @@ EUDI_generic | EUDI_required
 
 ## Test Scenario
 1. The wallet engages with the verifier
-2. The verifier sends an Authorization request to the wallet, with response mode=direct_post.jwt, and a client_metadata object containing a enc parameter
+2. The verifier sends an Authorization request to the wallet, with response mode=direct_post.jwt, and a client_metadata object containing an encrypted_response_enc_values_supported parameter
 3. Wallet processes request
 
 ## Expected results

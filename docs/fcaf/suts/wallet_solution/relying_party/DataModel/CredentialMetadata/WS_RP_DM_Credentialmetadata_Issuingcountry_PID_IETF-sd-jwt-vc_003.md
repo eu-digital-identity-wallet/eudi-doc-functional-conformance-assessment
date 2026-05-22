@@ -17,7 +17,7 @@ The EUDI wallet contains a Credential in IETF SD-JWT VC format. `vct` claim incl
 A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.  
 B. All mandatory data elements within nameSpace  "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
 C. EUDI wallet presented the Credential successfully. 
-D. The presence of claim nationality in the IETF SD-JWT VC Credential presented was verified.
+D. The presence of claim issuing_country in the IETF SD-JWT VC Credential presented was verified.
 
 ## Test Scenario
 1. Verify that the value of the claim issuing_country contains a valid country code.

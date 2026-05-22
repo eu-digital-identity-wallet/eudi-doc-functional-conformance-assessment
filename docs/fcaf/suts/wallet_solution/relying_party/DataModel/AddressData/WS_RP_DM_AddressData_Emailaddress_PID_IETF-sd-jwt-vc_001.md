@@ -1,7 +1,7 @@
 # EuPid_DM_EmailAddress_01
 
 ## Objective
-This test case verifies that the claim location_status is present in the Credential in IETF SD-JWT VC format if this is indicated in the ICS.
+This test case verifies that the claim email_address is present in the Credential in IETF SD-JWT VC format if this is indicated in the ICS.
 
 ## References
 European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.1   
@@ -19,7 +19,7 @@ B. All mandatory data elements within nameSpace  "urn:eudi:pid:" and all data el
 C. EUDI wallet presented the Credential successfully.
 
 ## Test Scenario
-1. Verify the presence of a claim with identifier location_status in the  Credential presented to the Verifier in IETF SD-JWT VC format.
+1. Verify the presence of a claim with identifier email_address in the  Credential presented to the Verifier in IETF SD-JWT VC format.
 
 ## Expected results
 1. One claim with identifier email_address is present.

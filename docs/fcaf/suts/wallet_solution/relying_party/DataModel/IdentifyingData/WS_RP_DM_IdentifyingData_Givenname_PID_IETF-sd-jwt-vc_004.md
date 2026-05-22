@@ -21,7 +21,7 @@ C. EUDI wallet presented the Credential successfully.
 D. The presence of claim given_name_birth in the IETF SD-JWT VC Credential presented was verified.
 
 ## Test Scenario
-1. Verify that the claim given_name is a String encoded in UTF-8, supporting the full unicode range.
+1. Verify that the claim given_name_birth is a String encoded in UTF-8, supporting the full unicode range.
 
 ## Expected results
 1. The claim given_name_birth is a String encoded in UTF-8, supporting the full unicode range.

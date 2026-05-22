@@ -1,7 +1,7 @@
 # EuPid_DM_BirthPlace_07
 
 ## Objective
-This test case verifies that the region item of data element birth_place has only UTF-8 characters, and maximal length of 150 characters.
+This test case verifies that the locality item of data element birth_place has only UTF-8 characters, and maximal length of 150 characters.
 
 ## References
 European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.5,    
@@ -21,7 +21,7 @@ C. The device retrieval mdoc response was retrieved.
 D. The presence of the item ‘locality’ in data element birth_place in the device retrieval mdoc response was verified.
 
 ## Test Scenario
-1. Verify that the value of the data element `region` in map place_of_birth 2. Check the length of the  `locality` value in map place_of_birth.
+1. Verify that the value of the data element `locality` in map place_of_birth 2. Check the length of the  `locality` value in map place_of_birth.
 
 ## Expected results
 1. Values includes only UTF-8 characters. 2. Length is equal or smaller tjam 150 characters.
