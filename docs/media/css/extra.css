@@ -8,7 +8,7 @@
 }
 
 /* ============================================================
-   FCAF — functional conformance test-case rendering
+   FCAF - functional conformance test-case rendering
    ------------------------------------------------------------
    The test-suite pages aggregate many test cases with
    include-markdown. After the heading offsets, the structure on the
@@ -21,12 +21,12 @@
    Material renders h5/h6 as tiny, low-contrast text with no spacing,
    so a page of test cases becomes an unreadable wall.
 
-   IMPORTANT — scope: every rule below is anchored to <h5> (the test
+   IMPORTANT - scope: every rule below is anchored to <h5> (the test
    case ID) or to siblings that follow an <h5>. Those heading levels
    occur ONLY on the test-case pages, so ordinary prose pages
-   (Introduction, Methodology, References, …), which use h1–h3, are
+   (Introduction, Methodology, References, …), which use h1-h3, are
    left completely untouched. Rules apply to .md-typeset (page content)
-   only — the integrated ToC sidebar (.md-nav) is never affected — and
+   only - the integrated ToC sidebar (.md-nav) is never affected - and
    are theme-aware (light + slate) via the Material CSS custom
    properties.
    ============================================================ */

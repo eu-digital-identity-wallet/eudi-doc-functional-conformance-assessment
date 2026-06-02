@@ -1,8 +1,8 @@
 # Changelog
 
-This is the **framework & site** changelog — build/CI, MkDocs configuration, styling, templates,
+This is the **framework & site** changelog - build/CI, MkDocs configuration, styling, templates,
 governance and other scaffolding outside `docs/fcaf/`. Changes to the **test-case content** itself
-are tracked, per maturity stage, in [`docs/fcaf/CHANGELOG.md`](docs/fcaf/CHANGELOG.md).
+are tracked in the FCAF changelog ([`docs/fcaf/CHANGELOG.md`](docs/fcaf/CHANGELOG.md)), per maturity stage.
 
 All notable changes to this project will be documented in this file.
 

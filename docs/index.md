@@ -12,10 +12,10 @@ to support wallet certification and improve interoperability across Member State
 > Individual releases may provide implementation-ready subsets of functionality, but may not yet cover the full scope of the framework.
 > Content progresses through defined maturity stages:
 >
-> - **Submitted** – latest working draft; not yet suitable for implementation; may contain errors
-> - **Reviewed (beta)** – technically correct and implementable in isolation  
-> - **Release candidate (RC)** – consolidated and suitable for validation and pilot use  
-> - **Released baseline** – stable for its defined scope and suitable for regulatory use in certification  
+> - **Submitted** - latest working draft; not yet suitable for implementation; may contain errors
+> - **Reviewed (beta)** - technically correct and implementable in isolation  
+> - **Release candidate (RC)** - consolidated and suitable for validation and pilot use  
+> - **Released baseline** - stable for its defined scope and suitable for regulatory use in certification  
 >
 > Individual releases may provide implementation-ready subsets of functionality, but may not yet cover the full scope of the framework.
 
@@ -43,22 +43,22 @@ See the list of [contributors](https://github.com/eu-digital-identity-wallet/eud
 
 Two changelogs are kept:
 
-- **[Framework &amp; site changelog](https://github.com/eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment/blob/main/CHANGELOG.md)** — build, MkDocs configuration, styling, templates and other scaffolding (version-based).
-- **[Test-case changelog](fcaf/CHANGELOG.md)** — changes to the test-case content itself, recorded per maturity stage.
+- **[Framework &amp; site changelog](https://github.com/eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment/blob/main/CHANGELOG.md)** - build, MkDocs configuration, styling, templates and other scaffolding (version-based).
+- **[FCAF changelog](fcaf/CHANGELOG.md)** - changes to the test-case content itself, recorded per maturity stage.
 
 Versioning reflects both **coverage (vX.Y.Z)** and **maturity (beta, release candidate, released baseline)**:
 
-- **v0.0.x** – Bootstrap phase (structure, orientation, initial content)  
+- **v0.0.x** - Bootstrap phase (structure, orientation, initial content)  
 
-- **vX.Y.Z-beta.n** – Reviewed content  
+- **vX.Y.Z-beta.n** - Reviewed content  
   - technically correct and implementable in isolation  
   - may not yet be fully consistent or consolidated across all layers  
 
-- **vX.Y.Z-rc.n** – Release candidate  
+- **vX.Y.Z-rc.n** - Release candidate  
   - consolidated across applicable specifications, profiles, and regulatory layers  
   - suitable for implementation, validation, and pilot use  
 
-- **vX.Y.Z** – Released baseline  
+- **vX.Y.Z** - Released baseline  
   - stable and sufficiently validated for its defined scope  
   - suitable for implementation and conformance assessment  
 
