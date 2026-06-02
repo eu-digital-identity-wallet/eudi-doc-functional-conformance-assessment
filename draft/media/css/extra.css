@@ -6,3 +6,78 @@
 .md-header__button.md-logo img, .md-header__button.md-logo svg {
     height: 2.7rem;
 }
+
+/* ============================================================
+   FCAF - functional conformance test-case rendering
+   ------------------------------------------------------------
+   The test-suite pages aggregate many test cases with
+   include-markdown. After the heading offsets, the structure on the
+   rendered page is:
+       h5 = Test Case ID     (one per test case)
+       h6 = section label    (Objective, References, EUDI-wallet
+                              relevancy, Profile applicability,
+                              Preconditions, Test Scenario, Expected
+                              results)
+   Material renders h5/h6 as tiny, low-contrast text with no spacing,
+   so a page of test cases becomes an unreadable wall.
+
+   IMPORTANT - scope: every rule below is anchored to <h5> (the test
+   case ID) or to siblings that follow an <h5>. Those heading levels
+   occur ONLY on the test-case pages, so ordinary prose pages
+   (Introduction, Methodology, References, …), which use h1-h3, are
+   left completely untouched. Rules apply to .md-typeset (page content)
+   only - the integrated ToC sidebar (.md-nav) is never affected - and
+   are theme-aware (light + slate) via the Material CSS custom
+   properties.
+   ============================================================ */
+
+/* Test case = card. The ID (h5) is the card header; the generous top
+   margin plus the accent bar/border visually separate consecutive
+   test cases. (h5 is exclusive to test cases on this site.) */
+.md-typeset h5 {
+  margin: 2.6rem 0 0;
+  padding: .5rem .75rem;
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: .82rem;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--md-default-fg-color);
+  background-color: var(--md-code-bg-color);
+  border: .05rem solid var(--md-default-fg-color--lightest);
+  border-left: .25rem solid var(--md-primary-fg-color);
+  border-radius: .15rem;
+  scroll-margin-top: 3.5rem;
+}
+
+/* Section label (Objective, References, …): a legible accent label
+   instead of the default tiny grey h6. Anchored so it only applies to
+   an h6 that follows a test-case h5. */
+.md-typeset h5 ~ h6 {
+  margin: 1.1rem 0 .15rem;
+  font-size: .72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  color: var(--md-primary-fg-color);
+}
+
+/* Pull each section's body tight under its label, and give the card
+   content a small left inset so it reads as one block under the ID. */
+.md-typeset h5 + *,
+.md-typeset h5 ~ h6 + * { margin-top: .25rem; }
+.md-typeset h5 ~ h6,
+.md-typeset h5 ~ p,
+.md-typeset h5 ~ ol,
+.md-typeset h5 ~ ul,
+.md-typeset h5 ~ table { margin-left: .25rem; }
+
+/* Body text + step/result list readability (test-case content only). */
+.md-typeset h5 ~ p { line-height: 1.6; }
+.md-typeset h5 ~ ol > li,
+.md-typeset h5 ~ ul > li { margin-bottom: .3rem; line-height: 1.55; }
+
+/* Reference / relevancy tables inside test cases */
+.md-typeset h5 ~ table:not([class]) { font-size: .76rem; }
+.md-typeset h5 ~ table:not([class]) th { white-space: nowrap; }
