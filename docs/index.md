@@ -39,8 +39,12 @@ See the list of [contributors](https://github.com/eu-digital-identity-wallet/eud
 
 ## Versioning & changelog
 
-[SemVer](http://semver.org/) is used for versioning. For available versions, see the [tags on this repository](https://github.com/eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment/tags).  
-Also see [CHANGELOG.md](https://github.com/eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment/blob/main/CHANGELOG.md) for a summary of externally visible changes between releases.
+[SemVer](http://semver.org/) is used for versioning. For available versions, see the [tags on this repository](https://github.com/eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment/tags).
+
+Two changelogs are kept:
+
+- **[Framework &amp; site changelog](https://github.com/eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment/blob/main/CHANGELOG.md)** — build, MkDocs configuration, styling, templates and other scaffolding (version-based).
+- **[Test-case changelog](fcaf/CHANGELOG.md)** — changes to the test-case content itself, recorded per maturity stage.
 
 Versioning reflects both **coverage (vX.Y.Z)** and **maturity (beta, release candidate, released baseline)**:
 

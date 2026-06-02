@@ -92,6 +92,7 @@ nav:
           - Overview: fcaf/templates/index.md
           - Test spec template: fcaf/templates/test-spec-template.md
       - References: fcaf/references.md
+      - Changelog: fcaf/CHANGELOG.md
 
 extra_javascript:
   - https://unpkg.com/mermaid@10/dist/mermaid.min.js

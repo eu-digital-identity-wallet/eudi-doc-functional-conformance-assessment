@@ -1,9 +1,17 @@
 # Changelog
 
+This is the **framework & site** changelog — build/CI, MkDocs configuration, styling, templates,
+governance and other scaffolding outside `docs/fcaf/`. Changes to the **test-case content** itself
+are tracked, per maturity stage, in [`docs/fcaf/CHANGELOG.md`](docs/fcaf/CHANGELOG.md).
+
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semverdoc.org/).
+
+## [Unreleased]
+- Improve rendering of test cases on the documentation site: each aggregated test case is now
+  shown as a separated card with legible section labels (Objective, References, …).
 
 ## [0.0.1]
 - Initial version.
