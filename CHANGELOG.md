@@ -12,6 +12,9 @@ and this project adheres to [Semantic Versioning](https://semverdoc.org/).
 ## [Unreleased]
 - Improve rendering of test cases on the documentation site: each aggregated test case is now
   shown as a separated card with legible section labels (Objective, References, …).
+- Fix PDF generation by expanding MkDocs `include-markdown` directives before passing content to
+  Pandoc, preventing raw include placeholders from appearing in generated PDFs.
+- Improve PDF rendering of dense ICS tables by applying PDF-specific column widths and compact table styling for ICS tables.
 
 ## [0.0.1]
 - Initial version.
