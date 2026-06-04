@@ -21,7 +21,7 @@ C. EUDI wallet presented the Credential successfully.
 D. The presence of claim issuance_date in the IETF SD-JWT VC Credential presented was verified.
 
 ## Test Scenario
-1. Verify the length of the claim expiry_date. 2. Verify the characters used in the format of the value of the claim.
+1. Verify the length of the claim issuance_date. 2. Verify the characters used in the format of the value of the claim.
 
 ## Expected results
 1. The length of the claim is 10 UTF-8 encoded characters. 2. The characters used have the following format: date-fullyear "-" date-month "-" date-mday. Where: •	date-fullyear consists of four decimal digits. •	date-month and date-mday consist of two decimal digits.

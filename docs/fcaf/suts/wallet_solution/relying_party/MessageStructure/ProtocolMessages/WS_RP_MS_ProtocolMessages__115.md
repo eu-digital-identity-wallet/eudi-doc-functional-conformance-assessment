@@ -23,5 +23,5 @@ EUDI_generic | EUDI_required
 ## Expected results
 1. Wallet and Verifier can interact.
 2. Wallet receives the request.
-3. The wallet detects malformed "id" and returns an "invalid request" error
+3. The wallet detects malformed path (not an array) and returns an "invalid request" error
 

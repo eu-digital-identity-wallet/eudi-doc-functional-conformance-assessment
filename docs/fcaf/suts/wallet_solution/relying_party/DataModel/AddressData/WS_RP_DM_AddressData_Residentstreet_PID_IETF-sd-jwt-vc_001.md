@@ -19,7 +19,7 @@ B. All mandatory data elements within nameSpace  "urn:eudi:pid:" and all data el
 C. EUDI wallet presented the Credential successfully.
 
 ## Test Scenario
-1. Verify the presence of a claim with identifier resident_ street in the  Credential presented to the Verifier in IETF SD-JWT VC format.
+1. Verify the presence of a claim with identifier resident_street in the  Credential presented to the Verifier in IETF SD-JWT VC format.
 
 ## Expected results
-1. One claim with identifier resident_ street is present.
+1. One claim with identifier resident_street is present.
