@@ -10,7 +10,7 @@ Verify that when the Wallet receives the Request URI response, it has Content-Ty
 
 
 ## EUDI-wallet relevancy
-EUDI_generic |  EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 

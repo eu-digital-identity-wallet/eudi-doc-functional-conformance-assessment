@@ -10,7 +10,7 @@ Verify that the Wallet rejects an Authorization Request containing both a dcql_q
 
 
 ## EUDI-wallet relevancy
-EUDI_generic |  EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 Need to check if EUDIW supports both by DCQL and scopes - and if scopes are supported which values are defined.

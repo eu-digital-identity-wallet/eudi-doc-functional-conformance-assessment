@@ -16,7 +16,7 @@ EUDI_generic | EUDI_required
 
 
 ## Test Scenario
-1. The Wallet engages with the Verifier
+1. The Wallet engages with the Verifier.
 2. The Verifier sends two separate credential queries in one request, where both are matched to the same credential in the wallet.
 3. The wallet handles user consent and response.
 

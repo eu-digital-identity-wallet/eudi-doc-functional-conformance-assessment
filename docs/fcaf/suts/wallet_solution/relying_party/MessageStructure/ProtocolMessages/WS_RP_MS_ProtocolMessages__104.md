@@ -16,7 +16,7 @@ EUDI_generic | EUDI_required
 
 
 ## Test Scenario
-1. The Wallet engages with the Verifier
+1. The Wallet engages with the Verifier.
 2. Verifier sends a DCQL query with "required" credential_sets property set to False. The Credential looked for is missing in the wallet.
 3. The Wallet evaluates the request.
 

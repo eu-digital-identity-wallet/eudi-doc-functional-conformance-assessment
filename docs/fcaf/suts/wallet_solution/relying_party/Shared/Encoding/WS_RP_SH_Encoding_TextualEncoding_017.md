@@ -33,4 +33,3 @@ EUDI_generic | EUDI_required
 4. Wallet correctly resolves the namespace.
 5. Wallet correctly resolves the first_name data element identifier and selects its value (e.g. "Alice").
 6. Wallet returns an Authorization Response containing the value "Alice" CBOR-encoded; presentation flow proceeds.
-

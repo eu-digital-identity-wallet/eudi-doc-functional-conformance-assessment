@@ -10,7 +10,7 @@ Verify that the Request Object is signed with the private key corresponding to t
 
 
 ## EUDI-wallet relevancy
-EUDI_generic |  EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 

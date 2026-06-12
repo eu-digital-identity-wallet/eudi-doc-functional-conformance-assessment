@@ -10,7 +10,7 @@ Verify that when the Wallet uses a Client Identifier Prefix that permits signed 
 
 
 ## EUDI-wallet relevancy
-EUDI_generic |  EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 
@@ -25,5 +25,5 @@ EUDI_generic |  EUDI_required
 1. Wallet-verifier interaction is successfully initiated.
 2. Wallet successfully receives the Authorization Request.
 3. Wallet correctly prepares wallet_metadata.
-4. wallet_metadata includes the request_object_signing_alg_values_supported parameter listing all supported Request Object signing algorithms.
+4. Wallet_metadata includes the request_object_signing_alg_values_supported parameter listing all supported Request Object signing algorithms.
 

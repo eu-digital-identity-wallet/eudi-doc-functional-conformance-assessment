@@ -16,7 +16,7 @@ EUDI_generic | EUDI_required
 
 
 ## Test Scenario
-1. The wallet engages with the verifier
+1. The wallet engages with the verifier.
 2. The verifier sends an Authorization request to the wallet, with response mode=direct_post.jwt, and a client_metadata object containing a JWK with an alg value different to the JWE alg value
 3. Wallet processes request
 

@@ -1,9 +1,7 @@
 # WS_RP_MS_ProtocolMessages_010
 
 ## Objective
-
-
- Verify that the Wallet does not process the request if client_id is missing from the Request Object.
+Verify that the Wallet does not process the request if client_id is missing from the Request Object.
 
 ## References
 [RFC9101]; [OIDF.OID4VP] section 5
@@ -12,7 +10,7 @@
 
 
 ## EUDI-wallet relevancy
-EUDI_generic |  EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 Wallet holds at least one credential that can match a valid DCQL query, and a second scenario where no matching credential is available.

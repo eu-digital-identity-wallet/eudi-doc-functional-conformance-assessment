@@ -10,7 +10,7 @@ Verify that when the Wallet receives an Authorization Request containing a state
 
 
 ## EUDI-wallet relevancy
-EUDI_generic |  EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 

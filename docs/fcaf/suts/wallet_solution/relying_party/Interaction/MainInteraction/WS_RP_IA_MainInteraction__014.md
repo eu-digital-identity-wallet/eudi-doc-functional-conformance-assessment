@@ -16,7 +16,7 @@ EUDI_generic | EUDI_required
 Wallet has one ID with Name, Address, and Age.
 
 ## Test Scenario
-1. The Wallet engages with the Verifier
+1. The Wallet engages with the Verifier.
 2. Verifier sends one request with two DCQL queries: Query 1: Asks for Name. Query 2: Asks for Address
 3. Wallet handles query
 
@@ -25,4 +25,3 @@ Wallet has one ID with Name, Address, and Age.
 2. Wallet receives the request.
 3a. The Wallet identifies that both queries can be satisfied by the same credential. It selects the "union" of both requests (Name + Address).
 3b. The vp_token contains both Name and Address. Age remains hidden.
-

@@ -4,7 +4,7 @@
 Test the Wallet will default to A128GCM for enc value, when Verifier metadata does NOT explicitly set it.
 
 ## References
-[OID4VP Section 8]
+[OID4VP Section 8.3.1]
 
 ## Profile applicability
 
@@ -16,12 +16,12 @@ EUDI_generic | EUDI_required
 
 
 ## Test Scenario
-1. The wallet engages with the verifier
-2. The verifier sends an Authorization request to the wallet, with response mode=direct_post.jwt, and a client_metadata object containing NO enc parameter
-3. Wallet processes request
+1. The Wallet engages with the verifier.
+2. The verifier sends an Authorization request to the Wallet, with response mode=direct_post.jwt, and a client_metadata object containing NO enc parameter.
+3. Wallet processes request.
 
 ## Expected results
-1. Wallet-verifier interaction is successfully initiated
-2. Wallet receives request
-3. Verify the wallet returns a response, without an error, and that it uses a default enc of A128GCM to perform its encryption
+1. Wallet-verifier interaction is successfully initiated.
+2. Wallet receives request.
+3. Verify the Wallet returns a response, without an error, and that it uses a default enc of A128GCM to perform its encryption.
 

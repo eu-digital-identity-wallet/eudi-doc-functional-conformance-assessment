@@ -17,8 +17,7 @@ EUDI_generic | EUDI_required
 
 
 ## Test Scenario
-1. Verifer sends a DCQL query with a claim_sets that includes a claim the Wallet does not have.
+1. Verifier sends a DCQL query with a claim_sets that includes a claim the Wallet does not have.
 
 ## Expected results
 1. Wallet will not return any claims.
-

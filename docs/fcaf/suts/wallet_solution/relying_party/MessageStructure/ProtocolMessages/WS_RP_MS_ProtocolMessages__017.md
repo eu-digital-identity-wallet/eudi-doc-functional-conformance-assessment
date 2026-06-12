@@ -1,16 +1,16 @@
 # WS_RP_MS_ProtocolMessages_017
 
 ## Objective
- Verify that the wallet rejects an Authorization Request that contains the transaction_data parameter when the wallet does not support this parameter.
+Verify that the Wallet rejects an Authorization Request that contains the transaction_data parameter when the wallet does not support this parameter.
 
 ## References
-[OIDF.OID4VP] section 5; [RFC6749]
+[OIDF.OID4VP] sections 5.8, 8.5; [RFC6749]
 
 ## Profile applicability
 Wallet does not support transaction_data
 
 ## EUDI-wallet relevancy
-EUDI_generic |  EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 The Authorization Request parameters under test apply to both regular Authorization Requests and Authorization Requests delivered via a Request Object (signed JWT, passed by value or by reference via request_uri).

@@ -4,13 +4,13 @@
 Verify that when the Wallet receives a Request URI response with an incorrect Content-Type (not application/oauth-authz-req+jwt), the Wallet rejects or fails to parse the response.
 
 ## References
-[OIDF.OID4VP] section 5.10.1; [RFC9101]
+[OIDF.OID4VP] sections 8.5, 5.10.1; [RFC9101]
 
 ## Profile applicability
 
 
 ## EUDI-wallet relevancy
-EUDI_generic |  EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 

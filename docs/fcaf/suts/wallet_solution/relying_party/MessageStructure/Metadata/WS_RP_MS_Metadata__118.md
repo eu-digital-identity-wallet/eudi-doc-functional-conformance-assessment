@@ -10,20 +10,19 @@ Verify that when the Wallet receives a Request Object using the verifier_attesta
 
 
 ## EUDI-wallet relevancy
-EUDI_generic |  EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
-A. Verifier attestation JWT contains a cnf claim with the Verifier's public key.
+
 
 ## Test Scenario
 1. Engage wallet-verifier interaction (e.g. click link / scan QR code).
-2. Wallet receives a Request Object using verifier_attestation: prefix where the Verifier attestation JWT is present in the jwt JOSE header.
+2. Wallet receives a Request Object using verifier_attestation: prefix where the Verifier attestation JWT, containing a cnf claim with the Verifier's public key, is present in the jwt JOSE header.
 3. Wallet parses the Request Object JOSE header.
 4. Wallet locates and extracts the Verifier attestation JWT from the jwt header.
 
 ## Expected results
 1. Wallet-verifier interaction is successfully initiated.
-2. Wallet successfully receives the Request Object.
+2. Wallet successfully receives the Authorization Request.
 3. Wallet successfully parses the Request Object JOSE header.
 4. Wallet successfully locates and processes the Verifier attestation JWT from the jwt JOSE header; presentation flow proceeds.
-

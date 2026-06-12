@@ -10,7 +10,7 @@ Verify that when the Verifier attestation JWT does NOT contain a redirect_uris c
 
 
 ## EUDI-wallet relevancy
-EUDI_generic |  EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 A. Wallet has a configured list of trusted issuers for Verifier Attestation JWTs.

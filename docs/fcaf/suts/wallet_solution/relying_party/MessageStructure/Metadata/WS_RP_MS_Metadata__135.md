@@ -10,7 +10,7 @@ Verify that when the Wallet has indicated that encryption is required (via walle
 
 
 ## EUDI-wallet relevancy
-EUDI_generic |  EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 
@@ -25,7 +25,7 @@ EUDI_generic |  EUDI_required
 ## Expected results
 1. Wallet-verifier interaction is successfully initiated.
 2. Wallet successfully receives the Authorization Request.
-3. wallet_metadata.jwks is correctly populated.
+3. Wallet_metadata.jwks is correctly populated.
 4. Wallet successfully receives the response.
 5. Wallet rejects the unencrypted Request Object and returns an invalid_request error; presentation flow is not initiated.
 

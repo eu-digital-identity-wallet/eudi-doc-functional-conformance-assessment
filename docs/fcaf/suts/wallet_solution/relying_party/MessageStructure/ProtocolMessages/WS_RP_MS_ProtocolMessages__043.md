@@ -4,13 +4,13 @@
 Verify that when the Verifier's Request URI Endpoint is only accessible over plain HTTP (not HTTPS), the Wallet refuses to connect or rejects the request due to the non-HTTPS scheme.
 
 ## References
-[OIDF.OID4VP] section 5.10
+[OIDF.OID4VP] sections 8.5, 5.10
 
 ## Profile applicability
 
 
 ## EUDI-wallet relevancy
-EUDI_generic |  EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 

@@ -10,7 +10,7 @@ Verify that when the Wallet receives a Verifier Info attestation whose proof is 
 
 
 ## EUDI-wallet relevancy
-EUDI_generic |  EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 

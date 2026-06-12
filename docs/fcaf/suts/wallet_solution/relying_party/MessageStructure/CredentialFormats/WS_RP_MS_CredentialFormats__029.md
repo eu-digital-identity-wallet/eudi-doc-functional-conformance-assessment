@@ -17,7 +17,7 @@ A) The EUDI Wallet requests and receives a valid Referenced Token issued by an I
 B) The Referenced Token includes the Status element that contains the Status_list element (index and URI)
 C) The EUDI Wallet has retrieved a Status List Token from the referenced URI
 D) The Status List Token is validated
-E)  The Issuer issues a JWT Referenced Token with a status_list claim to the EUDI Wallet.
+E) The Issuer issues a JWT Referenced Token with a status_list claim to the EUDI Wallet.
 
 ## Test Scenario
 1. Verify that the Wallet accepts and stores the JWT Referenced Token.

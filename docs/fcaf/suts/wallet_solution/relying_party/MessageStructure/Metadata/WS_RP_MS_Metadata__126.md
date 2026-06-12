@@ -10,7 +10,7 @@ Verify that when the Wallet receives a Request Object using the x509_san_dns Cli
 
 
 ## EUDI-wallet relevancy
-EUDI_generic |  EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 
@@ -25,5 +25,5 @@ EUDI_generic |  EUDI_required
 1. Wallet-verifier interaction is successfully initiated.
 2. Wallet successfully receives the Request Object.
 3. Wallet successfully parses the Request Object and the x5c chain.
-4. Wallet rejects the Authorization Request and returns an invalid_request error due to DNS name / SAN mismatch; presentation flow is not initiated.
+4. Wallet rejects the Request Object and returns an invalid_request error due to DNS name / SAN mismatch; presentation flow is not initiated.
 

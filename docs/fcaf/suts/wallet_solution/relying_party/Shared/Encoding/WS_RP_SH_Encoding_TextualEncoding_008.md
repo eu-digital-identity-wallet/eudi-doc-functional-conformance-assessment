@@ -4,7 +4,7 @@
 Test the following condition when processing claims path pointer array is at step 2.1: if the key does not exist in element currently selected, remove that element from the selection.
 
 ## References
-[OID4VP 7]
+[OID4VP] Section 7.2.1, 7.3
 
 ## Profile applicability
 claims path pointer when applied to a JSON-based Credential
@@ -30,10 +30,10 @@ EUDI_generic | EUDI_required
     }
   ],
   "nationalities": ["British", "Betelgeusian"]
-
+}
 ## Test Scenario
 1. Engage wallet-verifier interaction. 
-2. Verifier sends an Authorization Request with a DCQL query containing a claims path pointer where a string component targets a key that is absent from one or more currently selected element(s) (e.g. path: ["degrees", null, "type"] where one entry of degrees has no type field).
+2. Verifier sends an Authorization Request with a DCQL query containing a claims path pointer where a string component targets a key that is absent from one or more currently selected element(s) (e.g. claims path pointer: ["degrees", null, "type"] where one entry of degrees has no type field).
 3. Wallet parses the Authorization Request and the DCQL query.
 4. Wallet evaluates the claims path pointer against the matching JSON-based Credential.
 5. Wallet identifies element(s) where the targeted key is absent and removes them from the selection.

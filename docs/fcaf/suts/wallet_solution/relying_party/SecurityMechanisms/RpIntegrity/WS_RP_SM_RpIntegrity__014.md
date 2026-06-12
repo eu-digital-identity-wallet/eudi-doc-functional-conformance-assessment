@@ -10,7 +10,7 @@ Verify that when the Wallet receives a Request Object using an X.509-based Clien
 
 
 ## EUDI-wallet relevancy
-EUDI_generic |  EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 A. X.509 certificate is configured 

@@ -1,11 +1,11 @@
 # WS_RP_MS_ProtocolMessages_150
 
 ## Objective
-Test the wallet returns the error message vp_formats_not_supported when the wallet does not support any of the formats requested.
+Test the Wallet returns the error message vp_formats_not_supported when the wallet does not support any of the formats requested.
 (vc+sd-jwt case)
 
 ## References
-[OID4VP Section 8]
+[OID4VP Section 8.5]
 
 ## Profile applicability
 
@@ -14,13 +14,13 @@ Test the wallet returns the error message vp_formats_not_supported when the wall
 EUDI_generic | EUDI_required
 
 ## Preconditions
-The wallet supports mso_mdoc, but does NOT support vc+sd-jwt
+The Wallet supports mso_mdoc, but does NOT support vc+sd-jwt
 
 ## Test Scenario
-1. The wallet engages with verifier.
-2. The verifier sends an Authorization request for format vc+sd-jwt.
+1. The Wallet engages with verifier.
+2. The Verifier sends an Authorization request for format vc+sd-jwt.
 3. Wallet processes request.
-4. Test the response returned by the wallet to the Verifier.
+4. Test the response returned by the Wallet to the Verifier.
 
 ## Expected results
 1. Wallet-verifier interaction is successfully initiated

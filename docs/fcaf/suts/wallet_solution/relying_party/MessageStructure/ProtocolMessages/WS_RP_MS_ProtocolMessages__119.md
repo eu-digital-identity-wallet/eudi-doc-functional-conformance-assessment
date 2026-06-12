@@ -1,16 +1,16 @@
 # WS_RP_MS_ProtocolMessages_119
 
 ## Objective
-Verify negative case that the wallet cannot accept a claims path pointer that is an empty array
+Verify negative case that the wallet cannot accept a claims path pointer that is an empty array.
 
 ## References
-[OID4VP 7]
+[OID4VP] sections 7, 8.5
 
 ## Profile applicability
 
 
 ## EUDI-wallet relevancy
-EUDI_generic |  EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 
@@ -22,7 +22,7 @@ EUDI_generic |  EUDI_required
 ## Expected results
 1. Wallet-verifier interaction is successfully initiated.
 2. The Wallet rejects the request by either:
-a. answering with an error with details (`invalid_request`), 
-b. answering with an error without providing details or,
-c. discontinuing the interaction.
+    1. answering with an error with details (`invalid_request`), 
+    2. answering with an error without providing details or,
+    3. discontinuing the interaction.
 

@@ -10,7 +10,7 @@ Verify that when the Authorization Request contains a request_uri parameter and 
 
 
 ## EUDI-wallet relevancy
-EUDI_generic |  EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 

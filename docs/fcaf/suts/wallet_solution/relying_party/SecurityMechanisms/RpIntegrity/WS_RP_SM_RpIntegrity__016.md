@@ -10,7 +10,7 @@ Verify that when the Wallet receives a Request Object using an X.509-based Clien
 
 
 ## EUDI-wallet relevancy
-EUDI_generic |  EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 x5c JOSE header contains the full certificate chain.
@@ -28,4 +28,3 @@ x5c JOSE header contains the full certificate chain.
 3. Wallet successfully parses the Request Object and x5c.
 4. Wallet successfully validates the X.509 trust chain.
 5. Wallet successfully validates the signature; request is processed; presentation flow proceeds.
-

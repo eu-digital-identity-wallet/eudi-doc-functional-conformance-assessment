@@ -10,7 +10,7 @@ Verify that when the client_metadata parameter is included in an Authorization R
 
 
 ## EUDI-wallet relevancy
-EUDI_generic |  EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 

@@ -4,7 +4,7 @@
 Verify that when the Wallet receives a DCQL query with a claims path pointer applied to an ISO mdoc Credential, where the path is a two-element array containing a valid namespace and a valid data element identifier, the Wallet selects the corresponding data element and returns it CBOR-encoded in the Authorization Response.
 
 ## References
-[OID4VP 7]
+[OID4VP 7] Section 7.2, 7.4
 
 ## Profile applicability
 claims path pointer when applied to a credential in ISO mdoc
@@ -30,4 +30,3 @@ The wallet has an ISO mdoc credential with data element specified in verifier re
 4. Wallet correctly resolves the namespace and the data element identifier within it.
 5. Wallet selects the data element value (e.g. "Alice" for first_name) and CBOR-encodes it.
 6. Wallet returns an Authorization Response containing the selected first_name value CBOR-encoded; presentation flow proceeds.
-

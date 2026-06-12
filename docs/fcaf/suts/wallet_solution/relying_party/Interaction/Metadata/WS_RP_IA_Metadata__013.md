@@ -10,7 +10,7 @@ Verify that when the Wallet receives a Request Object using Static Discovery met
 static discovery
 
 ## EUDI-wallet relevancy
-EUDI_generic |  EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 

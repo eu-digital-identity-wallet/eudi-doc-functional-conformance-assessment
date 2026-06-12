@@ -4,7 +4,7 @@
 Verify that when the Wallet supports scope-based Presentation requests and receives an Authorization Request containing a scope value it does not recognize, it rejects the request with an appropriate error.
 
 ## References
-[OIDF.OID4VP] Section 5.2; [OIDF.OID4VP] Section 5.5;  [RFC6749]
+[OIDF.OID4VP] Section 5.5, 8.5; [RFC6749]
 
 ## Profile applicability
 

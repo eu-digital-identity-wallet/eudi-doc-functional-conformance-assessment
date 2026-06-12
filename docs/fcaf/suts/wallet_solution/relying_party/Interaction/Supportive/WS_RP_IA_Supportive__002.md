@@ -10,7 +10,7 @@ Verify that upon any HTTP error response from the Request-URI endpoint the Walle
 
 
 ## EUDI-wallet relevancy
-EUDI_generic |  EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 
@@ -26,4 +26,3 @@ EUDI_generic |  EUDI_required
 2. Wallet successfully receives the Authorization Request.
 3. Wallet successfully sends the POST request.
 4. Wallet terminates the Authorization Request process; presentation flow is not initiated.
-

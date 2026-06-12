@@ -10,7 +10,7 @@ Verify that when the Wallet receives a non-DC-API Request Object using the x509_
 
 
 ## EUDI-wallet relevancy
-EUDI_generic |  EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 A. Wallet has a configured trust anchor for X.509 certificate chain validation.

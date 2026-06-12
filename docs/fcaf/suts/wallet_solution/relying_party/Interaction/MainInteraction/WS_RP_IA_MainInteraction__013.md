@@ -16,7 +16,7 @@ EUDI_generic | EUDI_required
 
 
 ## Test Scenario
-1. The Wallet engages with the Verifier
+1. The Wallet engages with the Verifier.
 2. Verifier sends a DCQL query requesting claims "name" and "address", which the wallet has both.
 3. Unchecking claim in UI excludes it from the response.
 
@@ -24,4 +24,3 @@ EUDI_generic | EUDI_required
 1. Wallet and Verifier can interact.
 2. Wallet receives the request.
 3. User unselects "address" claim in the UI, that claim is absent in the vp_token.
-

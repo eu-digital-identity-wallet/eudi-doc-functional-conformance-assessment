@@ -16,8 +16,8 @@ EUDI_generic | EUDI_required
 The wallet contains a credential of a specified credential type, where the credential has cryptographic holder binding.
 
 ## Test Scenario
-1. The Wallet engages with the Verifier
-2. The Verifier sends a Authorization Request with a valid DCQL-query with a 'credential' with:
+1. The Wallet engages with the Verifier.
+2. The Verifier sends an Authorization Request with a valid DCQL-query with a 'credential' with:
    a. the "require_cryptographic_holder_binding" property present with value `false`.
    b. a 'claims' property requesting the specified credential type.
 3. The Wallet evaluates the request and allows the user to continue with presenting matching credentials.

@@ -1,7 +1,7 @@
 # WS_RP_MS_ProtocolMessages_019
 
 ## Objective
-Verify that the Wallet processes an Authorization Request containing either a dcql_query parameter, or  ascope parameter representing a DCQL Query.
+Verify that the Wallet processes an Authorization Request containing either a dcql_query parameter, or a scope parameter representing a DCQL Query.
 
 ## References
 [OIDF.OID4VP] section 5.1
@@ -10,7 +10,7 @@ Verify that the Wallet processes an Authorization Request containing either a dc
 
 
 ## EUDI-wallet relevancy
-EUDI_generic |  EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 Need to check if EUDIW supports both by DCQL and scopes - and if scopes are supported which values are defined.

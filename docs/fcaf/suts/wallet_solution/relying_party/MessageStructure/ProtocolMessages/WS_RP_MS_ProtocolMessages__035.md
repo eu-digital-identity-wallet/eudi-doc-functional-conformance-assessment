@@ -4,13 +4,13 @@
 Verify that the Wallet accepts vp_token as a valid response_type value in an Authorization Request and does not reject the request.
 
 ## References
-[OIDF.OID4VP] section 5.6;
+[OIDF.OID4VP] section 5.6
 
 ## Profile applicability
 
 
 ## EUDI-wallet relevancy
-EUDI_generic |  EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 

@@ -23,5 +23,4 @@ The Wallet holds an SD-JWT Credential containing multiple claims: given_name, fa
 ## Expected results
 1. Wallet and Verifier can interact.
 2. Wallet receives the request.
-3. Wallet generates a valid resposne containing signature and key binding, but one which contains zero disclosures.
-
+3. Wallet generates a valid response containing signature and key binding, but one which contains zero disclosures.

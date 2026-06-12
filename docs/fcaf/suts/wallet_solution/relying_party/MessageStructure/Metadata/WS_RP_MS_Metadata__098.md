@@ -21,7 +21,7 @@ E) The Issuer has provided a COSE-based Referenced Token to the EUDI Wallet.
 F) The Referenced Token contains the "uri" field within "status_list" set to a valid text string URI.
 
 ## Test Scenario
-1. Verify the value of the "uri" field within "status_list" os of major type 3.
+1. Verify the value of the "uri" field within "status_list" is of major type 3.
 
 ## Expected results
 1. The "uri" value is a valid text string URI and the token is accepted.

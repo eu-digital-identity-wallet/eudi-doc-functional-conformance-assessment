@@ -1,7 +1,7 @@
 # WS_RP_MS_ProtocolMessages_016
 
 ## Objective
- Verify that the wallet ignores unrecognized parameters in the Authorization Request.
+Verify that the Wallet ignores unrecognized parameters in the Authorization Request.
 
 ## References
 [OIDF.OID4VP] section 5; [RFC6749]
@@ -10,7 +10,7 @@
 
 
 ## EUDI-wallet relevancy
-EUDI_generic |  EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 The Authorization Request parameters under test apply to both regular Authorization Requests and Authorization Requests delivered via a Request Object (signed JWT, passed by value or by reference via request_uri).

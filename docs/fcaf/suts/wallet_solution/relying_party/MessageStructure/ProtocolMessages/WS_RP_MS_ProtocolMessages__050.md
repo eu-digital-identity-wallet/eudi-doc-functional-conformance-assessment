@@ -10,7 +10,7 @@ Verify that when the Wallet receives an Authorization Request where the client_i
 
 
 ## EUDI-wallet relevancy
-EUDI_generic |  EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 

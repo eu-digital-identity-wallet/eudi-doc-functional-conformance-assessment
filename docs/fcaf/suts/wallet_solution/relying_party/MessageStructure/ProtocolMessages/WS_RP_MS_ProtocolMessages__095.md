@@ -1,7 +1,7 @@
 # WS_RP_MS_ProtocolMessages_095
 
 ## Objective
-Test that the wallet when proccessing trusted_authorites, the type "etsi_tl" is supported.
+Test the Wallet when processing trusted_authorities, type "etsi_tl" is supported.
 
 ## References
 [OID4VP 6.1.1]
@@ -16,7 +16,7 @@ EUDI_generic | EUDI_optional
 
 
 ## Test Scenario
-1. The Wallet engages with the Verifier
+1. The Wallet engages with the Verifier.
 2. Verifier sends a DCQL query requesting a credential with a "trusted_authorities" property with its type being "etsi_tl".
 3. The Wallet evaluates the request.
 
