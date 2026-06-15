@@ -4,7 +4,7 @@
 Verify that when an Authorization Request is rendered on Device A using the invocation mechanism mandated by the applicable profile (e.g. a custom URL scheme, universal link, or QR code encoding such a URI), the Wallet on Device B is able to receive and process the request.
 
 ## References
-[OpenID4VP] section 5.7
+- [OpenID4VP] Section 5.7
 
 ## Profile applicability
 Wallet supports DC API cross-device flow (Appendix A); HAIP/ETSI profile defines cross-device requirements

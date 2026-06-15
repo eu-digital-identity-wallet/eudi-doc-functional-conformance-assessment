@@ -5,7 +5,7 @@ Test that if the multiple parameter is omitted in a credential query, it default
 
 ## References
 
-[OpenID4VP] Sections 8, 6.1
+- [OpenID4VP] Sections 8, 6.1
 
 ## Profile applicability
 

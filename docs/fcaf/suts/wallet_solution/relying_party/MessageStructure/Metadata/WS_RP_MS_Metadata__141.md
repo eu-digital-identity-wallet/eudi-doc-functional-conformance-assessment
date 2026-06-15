@@ -4,7 +4,7 @@
 Verify that when Wallet is presenting the Credential in IETF SD-JWT VC format, it contains the credential issuer's signing certificate along with a trust chain in the `x5c` JOSE header parameter.
 
 ## References
-[HAIP] section 6.1.1
+- [HAIP] Section 6.1.1
 
 ## Profile applicability
 Wallet supports IETF SD-JWT VC 

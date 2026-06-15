@@ -4,7 +4,7 @@
 Test that if the credential property "trusted_authorities" is not present, it will not invalidate credential
 
 ## References
-[OpenID4VP], Section 6.1
+- [OpenID4VP] Section 6.1
 
 ## Profile applicability
 

@@ -4,7 +4,7 @@
 Verify that when the Wallet receives an Authorization Request containing a key-bound Verifier Info attestation whose signature object is missing the nonce or client_id parameter, the Wallet rejects the attestation.
 
 ## References
-[OpenID4VP] section 5.11.1
+- [OpenID4VP] Section 5.11.1
 
 ## Profile applicability
 

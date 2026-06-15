@@ -4,9 +4,9 @@
 Verify that if both A128GCM and A256GCM are supported for the JWE `enc` (encryption algorithm), Wallet will use A256GCM for the JWE `enc`
 
 ## References
-[HAIP] section 5 (introduction) 
-[OpenID4VP] section 8.3
-[RFC7516] section 4.1.2
+- [HAIP] Section 5 (introduction)
+- [OpenID4VP] Section 8.3
+- [RFC7516] Section 4.1.2
 
 ## Profile applicability
 Wallet supports A128GCM and A256GCM

@@ -4,7 +4,7 @@
 Test that if credential_sets is not provided, the wallet interprets this as the Verifier requesting presentations for all Credentials in credentials to be returned.
 
 ## References
-[OpenID4VP], Section 6.4.2
+- [OpenID4VP] Section 6.4.2
 
 ## Profile applicability
 

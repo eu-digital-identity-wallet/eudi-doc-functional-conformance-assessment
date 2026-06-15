@@ -4,7 +4,7 @@
 Test claims path pointer processing by selecting the data element referenced by the second component. If the data element does not exist in the Credential it MUST abort processing and return an error.
 
 ## References
-[OpenID4VP], Section 7
+- [OpenID4VP] Section 7
 
 ## Profile applicability
 claims path pointer when applied to a credential in ISO mdoc

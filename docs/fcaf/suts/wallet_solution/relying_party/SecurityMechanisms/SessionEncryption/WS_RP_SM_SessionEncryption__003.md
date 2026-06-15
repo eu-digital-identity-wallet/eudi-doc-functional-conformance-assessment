@@ -4,7 +4,7 @@
 Test the Wallet checks the JWE alg value exactly matches the alg value from the chosen JWK.
 
 ## References
-[OpenID4VP], Section 8
+- [OpenID4VP] Section 8
 
 ## Profile applicability
 

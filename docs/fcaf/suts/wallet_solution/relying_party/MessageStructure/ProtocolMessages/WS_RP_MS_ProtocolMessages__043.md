@@ -4,7 +4,7 @@
 Verify that when the Verifier's Request URI Endpoint is only accessible over plain HTTP (not HTTPS), the Wallet refuses to connect or rejects the request due to the non-HTTPS scheme.
 
 ## References
-[OpenID4VP] sections 8.5, 5.10
+- [OpenID4VP] Sections 8.5, 5.10
 
 ## Profile applicability
 

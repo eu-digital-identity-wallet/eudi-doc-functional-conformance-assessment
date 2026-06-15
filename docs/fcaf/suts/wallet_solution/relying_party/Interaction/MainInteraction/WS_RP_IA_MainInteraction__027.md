@@ -4,7 +4,7 @@
 Test when the Wallet cannot deliver all claims requested by the Verifier because one of them has a non-matching value, it does NOT return the respective Credential.
 
 ## References
-[OpenID4VP], Section 6.4
+- [OpenID4VP] Section 6.4
 
 ## Profile applicability
 

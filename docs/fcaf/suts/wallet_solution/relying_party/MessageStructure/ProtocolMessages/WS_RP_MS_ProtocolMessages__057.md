@@ -4,7 +4,7 @@
 Test when given a valid DCQL query that does not contain the credential_sets property, the Wallet is able to accept it.
 
 ## References
-[OpenID4VP], Section 6
+- [OpenID4VP] Section 6
 
 ## Profile applicability
 

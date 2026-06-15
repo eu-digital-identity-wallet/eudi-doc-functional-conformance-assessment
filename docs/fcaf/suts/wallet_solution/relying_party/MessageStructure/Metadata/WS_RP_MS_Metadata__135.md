@@ -4,7 +4,7 @@
 Verify that when the Wallet has indicated that encryption is required (via wallet_metadata.jwks and supported algorithms) and the Verifier returns an unencrypted Request Object, the Wallet rejects the Request Object.
 
 ## References
-[OpenID4VP] section 5.10
+- [OpenID4VP] Section 5.10
 
 ## Profile applicability
 

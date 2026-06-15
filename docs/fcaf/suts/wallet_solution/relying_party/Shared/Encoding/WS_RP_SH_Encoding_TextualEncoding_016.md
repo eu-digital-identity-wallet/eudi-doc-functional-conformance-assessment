@@ -4,7 +4,7 @@
 Verify that if the first element of the path does not match any namespace in the mdoc, the Wallet aborts and returns an error.
 
 ## References
-[OpenID4VP], Section 7 Section 7.2.1 step 2, 7.4
+- [OpenID4VP] Sections 7, 7.2.1 step 2, 7.4
 
 ## Profile applicability
 claims path pointer when applied to a credential in ISO mdoc

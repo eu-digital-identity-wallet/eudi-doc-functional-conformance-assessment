@@ -4,7 +4,7 @@
 Verify that when the Wallet receives an Authorization Request using the redirect_uri Client Identifier Prefix where the embedded URI is not a valid HTTPS URL, the Wallet rejects the request and returns an invalid_request error.
 
 ## References
-[OpenID4VP] sections 8.5, 5.9.3
+- [OpenID4VP] Sections 8.5, 5.9.3
 
 ## Profile applicability
 

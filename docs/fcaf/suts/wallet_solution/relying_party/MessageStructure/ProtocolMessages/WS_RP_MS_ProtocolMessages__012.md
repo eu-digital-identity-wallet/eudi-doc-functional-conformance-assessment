@@ -4,7 +4,8 @@
 Verify that the Wallet successfully evaluates a valid dcql_query that matches exactly one credential and proceeds with the presentation flow.
 
 ## References
-[OpenID4VP] sections 5, 6.4; [ISO/IEC 18013-7] annex C
+- [OpenID4VP] Sections 5, 6.4
+- [ISO/IEC 18013-7] Annex C
 
 ## Profile applicability
 

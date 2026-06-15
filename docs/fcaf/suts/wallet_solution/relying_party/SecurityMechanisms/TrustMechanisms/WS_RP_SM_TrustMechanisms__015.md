@@ -4,7 +4,7 @@
 Test the Wallet will not return a credential if its X.509 Certificate trust chain cannot be verified against the specified etsi_tl or its cascading lists.
 
 ## References
-[OpenID4VP], Section 6.1.1.2
+- [OpenID4VP] Section 6.1.1.2
 
 ## Profile applicability
 

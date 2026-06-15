@@ -4,7 +4,7 @@
 Verify that when the Wallet receives a Request Object using the x509_hash Client Identifier Prefix where the original Client Identifier equals the base64url-encoded SHA-256 hash of the DER-encoded leaf certificate provided in x5c, the Wallet accepts the binding.
 
 ## References
-[OpenID4VP] section 5.9.3
+- [OpenID4VP] Section 5.9.3
 
 ## Profile applicability
 

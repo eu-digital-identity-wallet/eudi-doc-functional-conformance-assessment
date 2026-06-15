@@ -4,7 +4,7 @@
 Test the Wallet rejects DCQL-query with credentials property "claim_sets" present that is not an array.
 
 ## References
-[OpenID4VP] Section 6.1, 8.5
+- [OpenID4VP] Sections 6.1, 8.5
 
 ## Profile applicability
 

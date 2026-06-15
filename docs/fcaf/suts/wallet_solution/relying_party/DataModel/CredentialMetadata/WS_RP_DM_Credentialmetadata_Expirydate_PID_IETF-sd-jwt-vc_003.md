@@ -4,9 +4,8 @@
 This test case verifies that the format of the claim `date_of_expiry` is correct. Note that `date_of_expiry` is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier expiry_date. 
 
 ## References
-European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook   
-"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 8).  
- RFC 3339 section 5.6
+- [PID rulebook] Annex 3.01, Section 4.2 (Table 8)
+- [RFC3339] Section 5.6
 
 ## EUDI-wallet relevancy
 EUDI_specific | EUDI_required

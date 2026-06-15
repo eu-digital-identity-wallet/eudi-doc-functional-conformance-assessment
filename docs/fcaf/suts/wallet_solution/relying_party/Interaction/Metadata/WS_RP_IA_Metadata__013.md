@@ -4,7 +4,7 @@
 Verify that when the Wallet receives a Request Object using Static Discovery metadata with an aud claim whose value is NOT the SIOPv2 static identifier "https://self-issued.me/v2", it rejects the request and returns an invalid_request error.
 
 ## References
-[OpenID4VP] Section 5.8
+- [OpenID4VP] Section 5.8
 
 ## Profile applicability
 static discovery

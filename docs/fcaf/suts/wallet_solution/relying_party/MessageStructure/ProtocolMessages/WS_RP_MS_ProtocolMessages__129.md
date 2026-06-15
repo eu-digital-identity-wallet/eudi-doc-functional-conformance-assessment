@@ -4,7 +4,7 @@
 Test that when the JWK has kid parameter, the Wallet MUST include that same kid value, in the kid JWE header of the response.
 
 ## References
-[OpenID4VP] Section 8.3.1
+- [OpenID4VP] Section 8.3.1
 
 ## Profile applicability
 

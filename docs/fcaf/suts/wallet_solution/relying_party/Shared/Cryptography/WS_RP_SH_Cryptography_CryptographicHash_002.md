@@ -4,7 +4,7 @@
 Verify that whenever Wallet uses hash function during presentation for ISO mdoc, it leverages hash algorithm SHA-256.
 
 ## References
-[HAIP] section 9
+- [HAIP] Section 9
 
 ## Profile applicability
 

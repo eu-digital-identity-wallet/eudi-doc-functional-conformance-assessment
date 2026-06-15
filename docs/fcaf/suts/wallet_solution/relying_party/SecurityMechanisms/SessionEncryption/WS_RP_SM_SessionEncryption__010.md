@@ -4,8 +4,8 @@
 Verify that if Verifier did not supply ephemeral encryption public keys specific to each Authorization Request via client metadata, the Wallet responds with an error (detailed or not) or discontinues the transaction.
 
 ## References
-[HAIP] section 5 (introduction) 
-[OpenID4VP] section 8.3
+- [HAIP] Section 5 (introduction)
+- [OpenID4VP] Section 8.3
 
 ## Profile applicability
 

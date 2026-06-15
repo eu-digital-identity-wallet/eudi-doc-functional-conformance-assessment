@@ -4,7 +4,7 @@
 Test the Wallet chooses enc from Verifier metadata when explicitly set, to perform the response encryption.
 
 ## References
-[OpenID4VP], Section 8.3.1
+- [OpenID4VP] Section 8.3.1
 
 ## Profile applicability
 

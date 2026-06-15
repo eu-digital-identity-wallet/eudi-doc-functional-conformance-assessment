@@ -5,7 +5,7 @@
 Test the Wallet responds with invalid_request if the Client Identifier violates the specific security requirements of its prefix.
 
 ## References
-[OpenID4VP] Sections 8.5, 5.9.3
+- [OpenID4VP] Sections 8.5, 5.9.3
 
 ## Profile applicability
 

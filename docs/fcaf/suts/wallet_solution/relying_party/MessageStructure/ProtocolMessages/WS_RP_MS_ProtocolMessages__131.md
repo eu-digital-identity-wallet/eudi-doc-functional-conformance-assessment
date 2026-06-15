@@ -4,7 +4,7 @@
 Test the Wallet will default to A128GCM for enc value, when Verifier metadata does NOT explicitly set it.
 
 ## References
-[OpenID4VP], Section 8.3.1
+- [OpenID4VP] Section 8.3.1
 
 ## Profile applicability
 

@@ -4,7 +4,7 @@
 Verify that when presenting an IETF SD-JWT VC, the Wallet produces a Verifiable Presentation whose digests are generated using SHA-256.
 
 ## References
-[HAIP] section 8
+- [HAIP] Section 8
 
 ## Profile applicability
 

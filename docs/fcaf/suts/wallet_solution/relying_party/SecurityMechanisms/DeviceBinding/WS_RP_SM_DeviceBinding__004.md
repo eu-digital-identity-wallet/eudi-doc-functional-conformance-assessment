@@ -4,7 +4,7 @@
 Verify that when the Wallet receives a Verifier Info attestation whose proof is valid per the active profile, the Wallet successfully validates the proof and accepts the attestation.
 
 ## References
-[OpenID4VP] section 5.11.1
+- [OpenID4VP] Section 5.11.1
 
 ## Profile applicability
 

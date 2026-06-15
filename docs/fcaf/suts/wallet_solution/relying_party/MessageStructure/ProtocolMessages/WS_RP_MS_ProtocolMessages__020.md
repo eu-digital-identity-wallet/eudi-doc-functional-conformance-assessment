@@ -4,7 +4,7 @@
 Verify that the Wallet processes an Authorization Request containing either a dcql_query parameter, or  ascope parameter representing a DCQL Query.
 
 ## References
-[OpenID4VP] section 5.1
+- [OpenID4VP] Section 5.1
 
 ## Profile applicability
 

@@ -4,7 +4,7 @@
 Verify that when the Wallet sends a POST request to the Verifier's Request URI Endpoint, all names and values in the request body are encoded using UTF-8.
 
 ## References
-[OpenID4VP] section 5.10
+- [OpenID4VP] Section 5.10
 
 ## Profile applicability
 

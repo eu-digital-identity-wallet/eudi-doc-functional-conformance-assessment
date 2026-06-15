@@ -4,9 +4,9 @@
 Verify that when Wallet is presenting several ISO mdocs, each ISO mdoc is returned in a separate DeviceResponse (as defined in 8.3.2.1.2.2 of [ISO.18013-5]), each matching to a respective DCQL query. Therefore, the resulting vp_token contains multiple DeviceResponse instances.
 
 ## References
-[HAIP] section 5.3.1
-[OpenID4VP] appendix B.2 (ISO mdoc profile)
-[ISO/IEC 18013-5] section 8.3.2.1.2.2. 
+- [HAIP] Section 5.3.1
+- [OpenID4VP] Appendix B.2 (ISO mdoc profile)
+- [ISO/IEC 18013-5] Section 8.3.2.1.2.2
 
 ## Profile applicability
 Wallet supports ISO mdoc

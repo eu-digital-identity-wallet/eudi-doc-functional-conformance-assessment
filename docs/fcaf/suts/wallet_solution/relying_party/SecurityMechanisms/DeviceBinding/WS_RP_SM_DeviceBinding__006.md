@@ -4,7 +4,7 @@
 Verify that when the Wallet receives a Verifier Info attestation of a type NOT defined or supported by the active profile, the Wallet ignores the unrecognized attachment type and continues processing the rest of the request.
 
 ## References
-[OpenID4VP] section 5.11.1
+- [OpenID4VP] Section 5.11.1
 
 ## Profile applicability
 

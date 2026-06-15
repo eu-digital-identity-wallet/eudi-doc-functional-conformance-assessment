@@ -4,7 +4,7 @@
 Test the wallet omits optional DCQL query keys in the presentation when no matching credentials exist.
 
 ## References
-[OpenID4VP], Section 8.1
+- [OpenID4VP] Section 8.1
 
 ## Profile applicability
 

@@ -4,7 +4,7 @@
 A Credential presentation may include "extra" claims not selected according to rules, if they are non-selective (fixed) technical fields that cannot be hidden.
 
 ## References
-[OpenID4VP], Section 6.4
+- [OpenID4VP] Section 6.4
 
 ## Profile applicability
 

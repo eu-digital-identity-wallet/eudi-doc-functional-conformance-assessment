@@ -4,7 +4,7 @@
 Test that if DCQL does not have a valid property "credentials", the Wallet rejects the request.
 
 ## References
-[OpenID4VP] sections 6, 8.5
+- [OpenID4VP] Sections 6, 8.5
 
 ## Profile applicability
 

@@ -4,7 +4,7 @@
 Verify that the Request Object is signed with the private key corresponding to the public key in the attestation cnf claim (proof of possession).
 
 ## References
-[OpenID4VP] section 5.9.3
+- [OpenID4VP] Section 5.9.3
 
 ## Profile applicability
 

@@ -4,7 +4,7 @@
 Test that the Wallet ignores any unrecognized parameters when Response Mode = direct_post.jwt.
 
 ## References
-[OpenID4VP], Section 8.2
+- [OpenID4VP] Section 8.2
 
 ## Profile applicability
 

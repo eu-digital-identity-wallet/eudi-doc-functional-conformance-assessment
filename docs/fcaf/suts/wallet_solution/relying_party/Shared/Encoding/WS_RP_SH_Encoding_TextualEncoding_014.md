@@ -5,7 +5,7 @@ Verify that when the Wallet receives a DCQL query with a claims path pointer app
 
 ## References
 
-[OpenID4VP] Sections 7, 7.2, 7.4
+- [OpenID4VP] Sections 7, 7.2, 7.4
 
 ## Profile applicability
 claims path pointer when applied to a credential in ISO mdoc

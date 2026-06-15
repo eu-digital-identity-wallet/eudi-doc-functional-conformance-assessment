@@ -4,10 +4,10 @@
 Verify that Wallet supports IETF SD-JWT VC in the presentation flow. 
 
 ## References
-[HAIP] section 5 (introduction)
-[HAIP] section 5.3.2
-[HAIP] section 6
-[OpenID4VP] appendix B.3
+- [HAIP] Section 5 (introduction)
+- [HAIP] Section 5.3.2
+- [HAIP] Section 6
+- [OpenID4VP] Appendix B.3
 
 ## Profile applicability
 Wallet supports IETF SD-JWT VC

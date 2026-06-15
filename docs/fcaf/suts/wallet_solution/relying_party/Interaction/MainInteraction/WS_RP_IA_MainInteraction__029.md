@@ -5,7 +5,7 @@ Test that if credential_sets is provided, the wallet evaluates the request by sa
 
 ## References
 
-[OpenID4VP] Sections 6.2, 6.4.2
+- [OpenID4VP] Sections 6.2, 6.4.2
 
 ## Profile applicability
 

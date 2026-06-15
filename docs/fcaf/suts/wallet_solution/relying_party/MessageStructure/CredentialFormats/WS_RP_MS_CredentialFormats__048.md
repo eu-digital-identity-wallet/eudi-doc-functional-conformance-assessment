@@ -4,7 +4,7 @@
 Verify that Wallet can handle presenting a Credential using JSON serialization if required by the Wallet profile.
 
 ## References
-[HAIP] section 6.1
+- [HAIP] Section 6.1
 
 ## Profile applicability
 Wallet supports IETF SD-JWT VC 

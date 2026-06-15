@@ -4,7 +4,7 @@
 Test the Wallet accepts DCQL-query credential object property "id" when it contains valid characters (consists of alphanumeric, underscore (_), or hyphen (-)).
 
 ## References
-[OpenID4VP], Section 6.1
+- [OpenID4VP] Section 6.1
 
 ## Profile applicability
 

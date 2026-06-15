@@ -4,7 +4,7 @@
 Verify that when the Wallet receives an Authorization Request where the client_id in the query parameter and the Request Object client_id claim are identical (including the Client Identifier Prefix), the Wallet processes the request.
 
 ## References
-[OpenID4VP] section 5.10.1
+- [OpenID4VP] Section 5.10.1
 
 ## Profile applicability
 

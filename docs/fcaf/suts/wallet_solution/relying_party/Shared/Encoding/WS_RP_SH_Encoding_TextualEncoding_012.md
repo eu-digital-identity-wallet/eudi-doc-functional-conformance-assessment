@@ -5,7 +5,7 @@ Test that at step 2.4 of claims path processing if the component is anything els
 
 ## References
 
-[OpenID4VP] Sections 7, 7.2.1, 7.3
+- [OpenID4VP] Sections 7, 7.2.1, 7.3
 
 ## Profile applicability
 claims path pointer when applied to a JSON-based Credential

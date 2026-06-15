@@ -4,7 +4,7 @@
 Test the Wallet handles DCQL-query when credentials "multiple" property is omitted, as having the default value "false".
 
 ## References
-[OpenID4VP], Section 6.1
+- [OpenID4VP] Section 6.1
 
 ## Profile applicability
 

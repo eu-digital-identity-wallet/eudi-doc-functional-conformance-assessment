@@ -4,7 +4,7 @@
 Verify that when the Wallet receives an Authorization Request using the redirect_uri Client Identifier Prefix with a valid HTTPS URI, the Wallet recognizes the prefix, uses the embedded URI as the redirect/response target, and processes the request.
 
 ## References
-[OpenID4VP] section 5.9.3
+- [OpenID4VP] Section 5.9.3
 
 ## Profile applicability
 

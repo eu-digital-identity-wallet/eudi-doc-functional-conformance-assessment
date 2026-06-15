@@ -4,7 +4,7 @@
 Test that the Wallet processes DCQL-query without a credential property "require_cryptographic_holder_binding" as if it had value `true`.
 
 ## References
-[OpenID4VP], Section 6.1
+- [OpenID4VP] Section 6.1
 
 ## Profile applicability
 

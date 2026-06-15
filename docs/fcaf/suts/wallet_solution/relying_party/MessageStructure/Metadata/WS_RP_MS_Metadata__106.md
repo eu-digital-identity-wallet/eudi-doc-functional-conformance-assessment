@@ -4,7 +4,7 @@
 VVerify that the Wallet rejects the Authorization Request when the client_metadata parameter is not a valid UTF-8 encoded JSON object, returning an invalid_request error.
 
 ## References
-[OpenID4VP] section 5.1
+- [OpenID4VP] Section 5.1
 
 ## Profile applicability
 

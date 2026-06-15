@@ -4,7 +4,7 @@
 test the Wallet will not attempt to return a credential when it can't find one due to "path".
 
 ## References
-[OpenID4VP] sections 6.3, 8.5
+- [OpenID4VP] Sections 6.3, 8.5
 
 ## Profile applicability
 

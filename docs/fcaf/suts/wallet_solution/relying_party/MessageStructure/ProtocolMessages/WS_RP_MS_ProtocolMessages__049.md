@@ -4,7 +4,7 @@
 Verify that when the Wallet receives an Authorization Request where the same parameter is present both in the query string and in the Request Object with different values, the Wallet uses only the value from the Request Object.
 
 ## References
-[OpenID4VP] section 5.10.1
+- [OpenID4VP] Section 5.10.1
 
 ## Profile applicability
 

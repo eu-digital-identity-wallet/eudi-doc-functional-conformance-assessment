@@ -4,7 +4,7 @@
 Verify that the EUDI Wallet can receive, hold and store an SD-JWT VC Referenced Token that includes a status_list claim.
 
 ## References
-[Token Status List] Section 6.2
+- [Token Status List] Section 6.2
 
 ## Profile applicability
 The Wallet supports revocation checking via the Token Status List mechanism; The Wallet supports Status List Tokens in JWT format

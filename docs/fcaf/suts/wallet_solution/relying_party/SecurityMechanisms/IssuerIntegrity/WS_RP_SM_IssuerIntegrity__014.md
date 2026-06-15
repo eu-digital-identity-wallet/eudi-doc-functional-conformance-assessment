@@ -4,7 +4,7 @@
 Verify that when Wallet is presenting the Credential in IETF SD-JWT VC format, the X.509 certificate of the trust anchor is not included in the `x5c` JOSE header of the SD-JWT VC. 
 
 ## References
-[HAIP] section 6.1.1
+- [HAIP] Section 6.1.1
 
 ## Profile applicability
 Wallet supports IETF SD-JWT VC 

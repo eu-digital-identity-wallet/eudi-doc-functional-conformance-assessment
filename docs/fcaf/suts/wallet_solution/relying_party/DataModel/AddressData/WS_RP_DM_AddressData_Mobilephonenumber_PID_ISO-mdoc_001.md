@@ -4,8 +4,7 @@
 This test case verifies that the data element `mobile_phone_number` is present in the mdoc data if this is indicated in the ICS. Note that  `mobile_phone_number` is the Attribute Identifier in ISO-mdoc for the Data Identifier mobile_phone_number.
 
 ## References
-European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook    
-"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 2).
+- [PID rulebook] Annex 3.01, Section 4.1 (Table 2)
 
 ## EUDI-wallet relevancy
 EUDI_specific | EUDI_optional

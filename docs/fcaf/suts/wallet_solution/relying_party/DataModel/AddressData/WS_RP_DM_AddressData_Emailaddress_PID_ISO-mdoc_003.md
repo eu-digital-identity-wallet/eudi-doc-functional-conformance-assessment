@@ -4,9 +4,8 @@
 This test case verifies that the DataElementValue of data element email_address is an email address in conformance with [RFC 5322]. Note that `email_address` is the Attribute Identifier in ISO-mdoc for the Data Identifier email_address.
 
 ## References
-European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook    
-"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 6).  
-RFC 5322 Section 3.4
+- [PID rulebook] Annex 3.01, Section 4.1 (Table 6)
+- [RFC5322] Section 3.4
 
 ## EUDI-wallet relevancy
 EUDI_specific | EUDI_optional

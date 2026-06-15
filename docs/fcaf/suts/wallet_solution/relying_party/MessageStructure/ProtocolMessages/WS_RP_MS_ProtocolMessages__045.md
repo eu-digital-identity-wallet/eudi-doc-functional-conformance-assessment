@@ -4,7 +4,7 @@
 Verify that when the Wallet sends a POST request to the request_uri endpoint with a wallet_nonce value, the Verifier returns a signed Request Object containing the same wallet_nonce as the wallet_nonce claim, and the Wallet validates the match.
 
 ## References
-[OpenID4VP] section 5.10
+- [OpenID4VP] Section 5.10
 
 ## Profile applicability
 

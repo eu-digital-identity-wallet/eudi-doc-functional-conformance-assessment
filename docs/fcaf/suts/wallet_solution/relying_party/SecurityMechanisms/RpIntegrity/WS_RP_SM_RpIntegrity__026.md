@@ -4,7 +4,7 @@
 Verify that if X.509 certificate signing the request is self-signed, the Wallet responds with an error (detailed or not) or discontinues the transaction.
 
 ## References
-[HAIP] section 5 (introduction)
+- [HAIP] Section 5 (introduction)
 
 ## Profile applicability
 

@@ -4,8 +4,7 @@
 This test case verifies that the claim `sex` is a Number. Note that `sex` is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier sex.
 
 ## References
-European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook   
-"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 item 4 (Table 8).  
+- [PID rulebook] Annex 3.01, Section 4.2, item 4 (Table 8)
 
 ## EUDI-wallet relevancy
 EUDI_specific | EUDI_optional

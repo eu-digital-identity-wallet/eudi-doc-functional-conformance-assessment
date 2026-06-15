@@ -4,7 +4,7 @@
 Verify that when the Verifier attestation JWT does NOT contain a redirect_uris claim, the Wallet does not enforce a redirect_uri match against the attestation and processes the request normally.
 
 ## References
-[OpenID4VP] section 5.9.3
+- [OpenID4VP] Section 5.9.3
 
 ## Profile applicability
 

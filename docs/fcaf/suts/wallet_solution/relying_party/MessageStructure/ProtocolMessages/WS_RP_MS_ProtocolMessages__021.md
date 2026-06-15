@@ -4,7 +4,7 @@
 Verify that the Wallet rejects an Authorization Request containing both a dcql_query and a scope parameter simultaneously.
 
 ## References
-[OpenID4VP] section 5.1
+- [OpenID4VP] Section 5.1
 
 ## Profile applicability
 

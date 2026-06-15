@@ -4,7 +4,7 @@
 The claims property "path" MUST be non-empty.
 
 ## References
-[OpenID4VP] Sections 6.3, 8.5
+- [OpenID4VP] Sections 6.3, 8.5
 
 ## Profile applicability
 

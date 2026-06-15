@@ -4,7 +4,7 @@
 Verify that, in the presentation flow via Redirects, wallet can be invoked through custom URL scheme `haip-vp://` if that is supported by Wallet and Verifier profiles.
 
 ## References
-[HAIP] section 5.1
+- [HAIP] Section 5.1
 
 ## Profile applicability
 Presentations via Redirects; Wallet supports to be invoked through custom URL scheme "haip-vp://".

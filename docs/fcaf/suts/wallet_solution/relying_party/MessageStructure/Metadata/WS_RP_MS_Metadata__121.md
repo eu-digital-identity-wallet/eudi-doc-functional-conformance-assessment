@@ -4,7 +4,7 @@
 Verify that when the Verifier attestation JWT contains a redirect_uris claim and the redirect_uri request parameter does NOT exactly match any entry, the Wallet rejects the request.
 
 ## References
-[OpenID4VP] section 5.9.3
+- [OpenID4VP] Section 5.9.3
 
 ## Profile applicability
 

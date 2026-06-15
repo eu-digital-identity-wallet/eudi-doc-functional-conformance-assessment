@@ -5,7 +5,7 @@ Test that the claims path pointer array is processed left to right
 
 ## References
 
-[OpenID4VP] Sections 7, 7.1.1
+- [OpenID4VP] Sections 7, 7.1.1
 
 ## Profile applicability
 claims path pointer when applied to a JSON-based Credential

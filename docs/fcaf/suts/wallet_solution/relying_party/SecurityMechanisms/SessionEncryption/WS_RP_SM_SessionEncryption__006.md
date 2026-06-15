@@ -4,10 +4,10 @@
 Verify that Wallet raises an error if there is no `jwk` within `client_metadata` sent by the Verifier with `alg` value set to ECDH-ES.
 
 ## References
-[HAIP] section 5 (introduction) 
-TODO: [OpenID4VP] section 8.3 The alg parameter MUST be present in the JWKs
-[RFC7516] section 4.1.1
-[RFC7518] section 6.2.1.1
+- [HAIP] Section 5 (introduction)
+- TODO: [OpenID4VP] Section 8.3 The alg parameter MUST be present in the JWKs
+- [RFC7516] Section 4.1.1
+- [RFC7518] Section 6.2.1.1
 
 ## Profile applicability
 

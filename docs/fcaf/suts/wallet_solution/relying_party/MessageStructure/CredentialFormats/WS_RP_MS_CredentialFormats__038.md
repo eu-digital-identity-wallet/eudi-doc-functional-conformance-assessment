@@ -4,7 +4,7 @@
 Verify that Wallet can handle receiving authorization request with response type `vp_token` and answering properly.
 
 ## References
-[HAIP] section 5 (introduction)
+- [HAIP] Section 5 (introduction)
 
 ## Profile applicability
 

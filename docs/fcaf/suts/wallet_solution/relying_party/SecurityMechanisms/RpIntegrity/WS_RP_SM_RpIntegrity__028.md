@@ -4,7 +4,7 @@
 Verify that Wallet supports unsigned, requests.
 
 ## References
-[HAIP] section 5.2 
+- [HAIP] Section 5.2
 
 ## Profile applicability
 Presentations via the W3C Digital Credentials API or equivalent platform.

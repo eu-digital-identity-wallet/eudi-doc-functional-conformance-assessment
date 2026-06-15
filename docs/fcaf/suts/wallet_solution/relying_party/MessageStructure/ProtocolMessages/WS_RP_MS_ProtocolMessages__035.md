@@ -4,7 +4,7 @@
 Verify that the Wallet accepts vp_token as a valid response_type value in an Authorization Request and does not reject the request.
 
 ## References
-[OpenID4VP] section 5.6
+- [OpenID4VP] Section 5.6
 
 ## Profile applicability
 

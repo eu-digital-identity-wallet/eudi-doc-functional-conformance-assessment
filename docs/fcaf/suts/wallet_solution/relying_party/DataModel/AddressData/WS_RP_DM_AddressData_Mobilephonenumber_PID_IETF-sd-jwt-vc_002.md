@@ -4,8 +4,7 @@
 This test case verifies that the claim `phone_number` is a String encoded in UTF-8. Note that `phone_number` is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier mobile_phone_number.
 
 ## References
-European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook.   
-"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 7).  
+- [PID rulebook] Annex 3.01, Section 4.2 (Table 7)
 
 
 ## EUDI-wallet relevancy

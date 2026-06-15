@@ -4,7 +4,7 @@
 Verify that the EUDI Wallet accepts a COSE-based Referenced Token containing the status claim at CBOR label 65535 with a valid Status CBOR structure.
 
 ## References
-[Token Status List] Section 6.3
+- [Token Status List] Section 6.3
 
 ## Profile applicability
 The Wallet supports revocation checking via the Token Status List mechanism; The Wallet supports Status List Tokens in CWT format

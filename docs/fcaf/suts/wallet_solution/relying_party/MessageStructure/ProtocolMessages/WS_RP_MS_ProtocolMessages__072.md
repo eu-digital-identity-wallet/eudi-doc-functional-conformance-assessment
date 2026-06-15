@@ -4,7 +4,7 @@
 Test the Wallet rejects DCQL-query when credentials has an invalid "multiple" property.
 
 ## References
-[OpenID4VP] sections 6.1, 8.5
+- [OpenID4VP] Sections 6.1, 8.5
 
 ## Profile applicability
 

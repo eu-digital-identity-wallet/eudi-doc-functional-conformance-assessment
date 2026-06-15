@@ -4,7 +4,7 @@
 Verify that when the client_metadata parameter is included in an Authorization Request, it is a valid UTF-8 encoded JSON object and that the Wallet processes only the defined metadata parameters.
 
 ## References
-[OpenID4VP] section 5.1
+- [OpenID4VP] Section 5.1
 
 ## Profile applicability
 

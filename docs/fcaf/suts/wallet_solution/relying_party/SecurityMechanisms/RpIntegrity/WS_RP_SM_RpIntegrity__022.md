@@ -4,7 +4,7 @@
 Verify that when the Wallet receives a Request Object via the DC API where the audience is the origin value prefixed by origin:, all non-key Verifier metadata is taken from client_metadata, and the Wallet processes the request within the DC API context.
 
 ## References
-[OpenID4VP] section 5.9.3, Appendix A.2.
+- [OpenID4VP] Section 5.9.3, Appendix A.2
 
 ## Profile applicability
 DC API

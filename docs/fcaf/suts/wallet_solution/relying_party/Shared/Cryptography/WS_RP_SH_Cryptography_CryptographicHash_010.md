@@ -4,7 +4,7 @@
 Verify that when the credential to be presented uses a digest hash algorithm other than SHA-256 that the Wallet does not support, the Wallet does not produce a presentation for that credential.
 
 ## References
-[HAIP] section 8
+- [HAIP] Section 8
 
 ## Profile applicability
 Wallet does not support other hash algorithms besides SHA-256.

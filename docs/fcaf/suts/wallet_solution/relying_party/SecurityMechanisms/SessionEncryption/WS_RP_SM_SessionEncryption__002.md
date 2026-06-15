@@ -4,7 +4,7 @@
 Test the Wallet ensures that the selected Verifier JWK contains an alg parameter.
 
 ## References
-[OpenID4VP], Section 8
+- [OpenID4VP] Section 8
 
 ## Profile applicability
 

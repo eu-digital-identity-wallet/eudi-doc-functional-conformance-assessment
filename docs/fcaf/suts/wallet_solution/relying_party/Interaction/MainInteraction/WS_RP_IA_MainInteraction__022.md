@@ -4,7 +4,7 @@
 Test that Claim_sets MUST NOT be supported if claims is absent.
 
 ## References
-[OpenID4VP], Section 6.4
+- [OpenID4VP] Section 6.4
 
 ## Profile applicability
 

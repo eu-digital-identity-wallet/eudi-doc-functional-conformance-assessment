@@ -4,7 +4,7 @@
 Verify that when the Wallet receives a Verifier Info attestation whose proof fails validation per the active profile, the Wallet rejects the attestation.
 
 ## References
-[OpenID4VP] section 5.11.1
+- [OpenID4VP] Section 5.11.1
 
 ## Profile applicability
 

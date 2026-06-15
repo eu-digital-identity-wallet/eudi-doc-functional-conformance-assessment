@@ -4,7 +4,7 @@
 Test the Wallet returns the access_denied error message when the End-User did not give consent to share the requested Credentials with the Verifier.
 
 ## References
-[OpenID4VP], Section 8.5
+- [OpenID4VP] Section 8.5
 
 ## Profile applicability
 

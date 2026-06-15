@@ -4,7 +4,7 @@
 Verify that when the Wallet sends a POST request to the request_uri endpoint with a wallet_nonce and the returned Request Object contains a different or missing wallet_nonce claim, the Wallet rejects the Request Object.
 
 ## References
-[OpenID4VP] sections 8.5, 5.10
+- [OpenID4VP] Sections 8.5, 5.10
 
 ## Profile applicability
 

@@ -4,7 +4,7 @@
 Verify that Wallet includes in its metadata information related to other hash algorithms supported, if the Wallet profile allows other hash algorithms
 
 ## References
-[HAIP] section 8
+- [HAIP] Section 8
 
 ## Profile applicability
 Wallet supports other hash algorithms besides SHA-256.

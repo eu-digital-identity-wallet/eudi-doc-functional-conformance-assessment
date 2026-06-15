@@ -4,8 +4,7 @@
 This test case verifies that the claim `nationalities` is present in the Credential in IETF SD-JWT VC format. Note that `nationalities` is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier nationality.
 
 ## References
-European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.2   
-"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 1).
+- [PID rulebook] Annex 3.01 paragraph 3.1.2, Section 4.2 (Table 1)
 
 ## EUDI-wallet relevancy
 EUDI_specific | EUDI_required

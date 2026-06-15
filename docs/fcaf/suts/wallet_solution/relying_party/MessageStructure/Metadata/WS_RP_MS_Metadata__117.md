@@ -4,7 +4,7 @@
 Verify that when the Wallet receives an Authorization Request using the verifier_attestation Client Identifier Prefix where the original Client Identifier does NOT match the subclaim of the Verifier attestation JWT, the Wallet rejects the request.
 
 ## References
-[OpenID4VP] section 5.9.3
+- [OpenID4VP] Section 5.9.3
 
 ## Profile applicability
 

@@ -4,7 +4,7 @@
 Test the wallet can process and match each entry in the credentials' parameter of the DCQL, with credentials present in the wallet.
 
 ## References
-[OpenID4VP], Section 6.1
+- [OpenID4VP] Section 6.1
 
 ## Profile applicability
 

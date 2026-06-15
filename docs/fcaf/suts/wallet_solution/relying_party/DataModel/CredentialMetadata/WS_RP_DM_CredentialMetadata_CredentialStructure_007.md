@@ -4,7 +4,7 @@
 Test when valid credential_sets is present, the Wallet can handle these and applies the constraints when processing the request.
 
 ## References
-[OpenID4VP], Section 6
+- [OpenID4VP] Section 6
 
 ## Profile applicability
 

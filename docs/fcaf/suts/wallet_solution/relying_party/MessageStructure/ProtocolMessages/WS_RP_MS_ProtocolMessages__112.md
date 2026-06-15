@@ -4,7 +4,7 @@
 Test the Wallet checks a claims object property "id" must consist of alphanumeric, underscore (_), or hyphen (-) characters. 
 
 ## References
-[OpenID4VP] Sections 6.3, 8.5
+- [OpenID4VP] Sections 6.3, 8.5
 
 ## Profile applicability
 

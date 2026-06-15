@@ -4,7 +4,7 @@
 Verify that the Wallet returns an invalid_client error when it receives client_metadata in a request from a Verifier that the Wallet already has locally stored metadata for.
 
 ## References
-[OpenID4VP] Sections 8.5, 11.1
+- [OpenID4VP] Sections 8.5, 11.1
 
 ## Profile applicability
 

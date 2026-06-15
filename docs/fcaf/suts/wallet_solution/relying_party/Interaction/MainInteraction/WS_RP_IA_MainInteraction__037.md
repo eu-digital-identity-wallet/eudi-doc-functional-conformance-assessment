@@ -4,7 +4,7 @@
 Test that the vp_token parameter returned by the wallet, contains ID(s), aligning with the ID value of the credential query.
 
 ## References
-[OpenID4VP], Section 8.1
+- [OpenID4VP] Section 8.1
 
 ## Profile applicability
 

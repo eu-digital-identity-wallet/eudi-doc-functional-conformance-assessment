@@ -4,7 +4,7 @@
 Verify that when the Wallet receives a non-DC-API Request Object using the x509_san_dns Client Identifier Prefix and trust in the Client Identifier is established via the certificate, the Wallet allows the redirect_uri provided the FQDN of the redirect_uri matches the Client Identifier hostname; all non-key Verifier metadata is taken from client_metadata.
 
 ## References
-[OpenID4VP] section 5.9.3
+- [OpenID4VP] Section 5.9.3
 
 ## Profile applicability
 

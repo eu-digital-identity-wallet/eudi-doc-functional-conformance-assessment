@@ -4,7 +4,7 @@
 Test that if claims is present, but claim_sets is absent the wallet treats all entries listed in claims as mandatory and returns them all.
 
 ## References
-[OpenID4VP], Section 6.4
+- [OpenID4VP] Section 6.4
 
 ## Profile applicability
 

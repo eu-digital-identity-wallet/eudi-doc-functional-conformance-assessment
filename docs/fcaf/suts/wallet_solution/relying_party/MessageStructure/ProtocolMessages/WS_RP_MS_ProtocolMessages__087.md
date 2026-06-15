@@ -4,7 +4,7 @@
 Test that the wallet can handle Multiple Credential Queries in a request which MAY request a presentation of the same Credential.
 
 ## References
-[OpenID4VP], Section 6.1
+- [OpenID4VP] Section 6.1
 
 ## Profile applicability
 

@@ -4,7 +4,7 @@
 Verify that when the Wallet receives a Request Object signed using the decentralized_identifier Client Identifier Prefix where the signing key is identified by the kid JOSE header and is present in the verificationMethod of the resolved DID Document, the Wallet successfully verifies the signature.
 
 ## References
-[OpenID4VP] section 5.9.3
+- [OpenID4VP] Section 5.9.3
 
 ## Profile applicability
 

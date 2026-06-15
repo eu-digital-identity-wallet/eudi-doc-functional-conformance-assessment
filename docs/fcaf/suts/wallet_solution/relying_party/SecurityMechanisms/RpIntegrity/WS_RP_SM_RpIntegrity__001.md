@@ -4,7 +4,7 @@
 Verify that when the Wallet uses information from a verifier_info attestation and signature validation or binding verification fails, the Wallet rejects the Authorization Request.
 
 ## References
-[OpenID4VP] Section 5.1 and 5.11
+- [OpenID4VP] Sections 5.1, 5.11
 
 ## Profile applicability
 

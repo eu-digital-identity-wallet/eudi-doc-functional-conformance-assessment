@@ -4,7 +4,7 @@
 Verify that when the Wallet receives an Authorization Request using the openid_federation Client Identifier Prefix containing a trust_chain parameter that cannot be validated, the Wallet rejects the request in accordance with its trust policy.
 
 ## References
-[OpenID4VP] section 5.9.3
+- [OpenID4VP] Section 5.9.3
 
 ## Profile applicability
 

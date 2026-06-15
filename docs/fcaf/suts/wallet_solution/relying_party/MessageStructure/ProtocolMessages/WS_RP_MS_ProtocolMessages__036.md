@@ -4,7 +4,7 @@
 Test that when wallet receives a response_type of "vp_token" in an Authorization Request, that a successful response includes the vp_token parameter.
 
 ## References
-[OpenID4VP] section 5.6
+- [OpenID4VP] Section 5.6
 
 ## Profile applicability
 

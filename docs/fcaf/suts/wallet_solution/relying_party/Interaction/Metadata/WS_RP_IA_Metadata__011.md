@@ -4,7 +4,7 @@
 Test that the wallet rejects the Authorization Request if aud does NOT match the issuer claim value in the wallet metadata.
 
 ## References
-[OpenID4VP] section 5.8
+- [OpenID4VP] Section 5.8
 
 ## Profile applicability
 Dynamic discovery

@@ -4,7 +4,7 @@
 Test that the credential_sets property "required" if set to False, the wallet can proceed with other valid sets flow without error.
 
 ## References
-[OpenID4VP], Section 6.2
+- [OpenID4VP] Section 6.2
 
 ## Profile applicability
 

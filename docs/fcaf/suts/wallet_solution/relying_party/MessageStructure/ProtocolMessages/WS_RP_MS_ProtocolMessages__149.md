@@ -4,7 +4,7 @@
 Test the Wallet returns the access_denied error message when the Wallet failed to authenticate the End-User.
 
 ## References
-[OpenID4VP], Section 8.5
+- [OpenID4VP] Section 8.5
 
 ## Profile applicability
 

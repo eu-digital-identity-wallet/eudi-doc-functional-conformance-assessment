@@ -4,7 +4,7 @@
 Verify the Wallet sends only the specific claims requested by the Verifier
 
 ## References
-[OpenID4VP], Section 6.4
+- [OpenID4VP] Section 6.4
 
 ## Profile applicability
 

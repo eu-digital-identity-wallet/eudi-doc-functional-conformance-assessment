@@ -4,8 +4,8 @@
 Verify that, for signed requests, if Verifier does not use Client Identifier Prefix `x509_hash`, the Wallet responds with an error (detailed or not) or discontinues the transaction.
 
 ## References
-[HAIP] section 5 (introduction)
-[OpenID4VP] 5.9.3
+- [HAIP] Section 5 (introduction)
+- [OpenID4VP] Section 5.9.3
 
 ## Profile applicability
 

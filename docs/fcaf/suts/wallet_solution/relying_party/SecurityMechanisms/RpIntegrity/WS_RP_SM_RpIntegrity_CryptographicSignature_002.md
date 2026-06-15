@@ -4,7 +4,7 @@
 Verify that Wallet does not support RSASSA-PSS using SHA-384 and MGF1 with SHA-384 (RS384) for validating signed presentation requests.
 
 ## References
-[HAIP] section 8
+- [HAIP] Section 8
 
 ## Profile applicability
 JOSE algorithm identifier ES257

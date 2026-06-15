@@ -4,7 +4,7 @@
 Verify that when the Wallet sends a request to the Verifier's Request URI Endpoint, it uses HTTP POST over HTTPS with Content-Type application/x-www-form-urlencoded and Accept header application/oauth-authz-req+jwt.
 
 ## References
-[OpenID4VP] section 5.10
+- [OpenID4VP] Section 5.10
 
 ## Profile applicability
 

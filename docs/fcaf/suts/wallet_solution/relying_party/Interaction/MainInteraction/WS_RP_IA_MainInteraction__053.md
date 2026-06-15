@@ -4,7 +4,7 @@
 Test that the wallet rejects a request when the response_uri parameter is missing and when Response Mode = direct_post.jwt
 
 ## References
-[OpenID4VP], Section 8
+- [OpenID4VP] Section 8
 
 ## Profile applicability
 

@@ -4,7 +4,7 @@
 Test that a wallet which holds no matching credentials to the DCQL "credentials", will NOT return any credentials
 
 ## References
-[OpenID4VP], Section 6.1
+- [OpenID4VP] Section 6.1
 
 ## Profile applicability
 

@@ -4,7 +4,7 @@
 Test that the wallet can handle a DCQL query with a "credentials" object with a "claims" property present.
 
 ## References
-[OpenID4VP], Section 6.3
+- [OpenID4VP] Section 6.3
 
 ## Profile applicability
 

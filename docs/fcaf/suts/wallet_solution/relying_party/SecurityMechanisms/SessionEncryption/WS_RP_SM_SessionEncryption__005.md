@@ -4,10 +4,10 @@
 Verify that in the encrypted response sent by the Wallet: the JWE `alg` (algorithm) header parameter (as defined in section 4.1.1 of [RFC7516]) value is set to ECDH-ES (as defined in section 4.6 of [RFC7518]), with key agreement utilizing keys on the P-256 curve (as defined in section 6.2.1.1 of [RFC7518]).
 
 ## References
-[HAIP] section 5 (introduction) 
-[OpenID4VP] section 8.3
-[RFC7516] section 4.1.1
-[RFC7518] 6.2.1.1
+- [HAIP] Section 5 (introduction)
+- [OpenID4VP] Section 8.3
+- [RFC7516] Section 4.1.1
+- [RFC7518] Section 6.2.1.1
 
 ## Profile applicability
 

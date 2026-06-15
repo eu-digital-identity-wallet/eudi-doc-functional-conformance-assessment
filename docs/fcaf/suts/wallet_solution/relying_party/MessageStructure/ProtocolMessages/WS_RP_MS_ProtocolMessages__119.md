@@ -4,7 +4,7 @@
 Verify negative case that the wallet cannot accept a claims path pointer that is an empty array.
 
 ## References
-[OpenID4VP] sections 7, 8.5
+- [OpenID4VP] Sections 7, 8.5
 
 ## Profile applicability
 

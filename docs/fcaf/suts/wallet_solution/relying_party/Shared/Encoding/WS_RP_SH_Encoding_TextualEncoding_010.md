@@ -5,7 +5,7 @@ Test that at step 2.3 of claims path processing If any of the currently selected
 
 ## References
 
-[OpenID4VP] Sections 7, 7.2.1, 7.3
+- [OpenID4VP] Sections 7, 7.2.1, 7.3
 
 ## Profile applicability
 claims path pointer when applied to a JSON-based Credential

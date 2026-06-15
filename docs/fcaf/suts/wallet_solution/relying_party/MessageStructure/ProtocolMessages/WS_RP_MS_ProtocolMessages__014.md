@@ -4,7 +4,8 @@
 Verify that the Wallet returns an error and does not initiate the presentation flow when no credential satisfies the dcql_query.
 
 ## References
-[OpenID4VP] sections 5, 6.4; [ISO/IEC 18013-7] annex C
+- [OpenID4VP] Sections 5, 6.4
+- [ISO/IEC 18013-7] Annex C
 
 ## Profile applicability
 

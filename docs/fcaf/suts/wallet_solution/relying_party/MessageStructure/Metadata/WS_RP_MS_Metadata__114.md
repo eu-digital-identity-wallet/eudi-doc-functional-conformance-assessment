@@ -4,7 +4,7 @@
 Verify that when the Wallet receives an Authorization Request using the openid_federation Client Identifier Prefix and client_metadata is present, the Wallet ignores the client_metadata parameter and resolves Verifier metadata via OpenID Federation.
 
 ## References
-[OpenID4VP], Section 5.9.3
+- [OpenID4VP] Section 5.9.3
 
 ## Profile applicability
 

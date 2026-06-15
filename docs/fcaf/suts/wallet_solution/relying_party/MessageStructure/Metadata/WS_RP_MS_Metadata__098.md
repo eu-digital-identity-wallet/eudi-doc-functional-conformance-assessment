@@ -4,7 +4,7 @@
 Verify that the EUDI Wallet accepts a COSE-based Referenced Token where the "uri" field within "status_list" is a valid text string URI of major type 3.
 
 ## References
-[Token Status List] Section 6.3
+- [Token Status List] Section 6.3
 
 ## Profile applicability
 The Wallet supports revocation checking via the Token Status List mechanism; The Wallet supports Status List Tokens in CWT format

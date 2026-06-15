@@ -5,7 +5,7 @@ Verify that when the Wallet receives an Authorization Request where some Verifie
 
 ## References
 
-[OpenID4VP] Sections 5.9.3, 5.1
+- [OpenID4VP] Sections 5.9.3, 5.1
 
 ## Profile applicability
 

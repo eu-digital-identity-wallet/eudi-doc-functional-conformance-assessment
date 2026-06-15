@@ -4,9 +4,8 @@
 This test case verifies that the region item of data element `place_of_birth` has only UTF-8 characters, and maximum length of 150 characters. Note that `place_of_birth` is the Attribute Identifier in ISO-mdoc for the Data Identifier birth_place.
 
 ## References
-European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook..    
-"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 6).  
-ISO/IEC 3166-1
+- [PID rulebook] Annex 3.01, Section 4.1 (Table 6)
+- [ISO/IEC 3166-1]
 
 ## EUDI-wallet relevancy
 EUDI_specific | EUDI_required

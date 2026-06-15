@@ -5,7 +5,7 @@ Test the Wallet returns the error message vp_formats_not_supported when the wall
 (vc+sd-jwt case)
 
 ## References
-[OpenID4VP], Section 8.5
+- [OpenID4VP] Section 8.5
 
 ## Profile applicability
 

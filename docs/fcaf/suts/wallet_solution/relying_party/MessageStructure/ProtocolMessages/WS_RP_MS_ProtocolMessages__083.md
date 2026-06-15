@@ -4,7 +4,7 @@
 Test the Wallet rejects a DCQL-query with a credentials' property "claims" present that is empty.
 
 ## References
-[OpenID4VP] sections 6.1, 8.5
+- [OpenID4VP] Sections 6.1, 8.5
 
 ## Profile applicability
 

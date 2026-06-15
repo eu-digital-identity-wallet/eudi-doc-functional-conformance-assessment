@@ -4,7 +4,7 @@
 Verify that the EUDI Wallet accepts a JOSE-based Referenced Token where the "uri" claim within "status_list" is a valid URI per RFC 3986.
 
 ## References
-[Token Status List] Section 6.2
+- [Token Status List] Section 6.2
 
 ## Profile applicability
 The Wallet supports revocation checking via the Token Status List mechanism; The Wallet supports Status List Tokens in JWT format

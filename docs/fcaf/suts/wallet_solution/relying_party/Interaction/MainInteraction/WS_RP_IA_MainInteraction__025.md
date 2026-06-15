@@ -4,7 +4,7 @@
 Test that if the wallet can only return part of the claims in the claim_sets object, it will not return that set but move onto next one.
 
 ## References
-[OpenID4VP], Section 6.4
+- [OpenID4VP] Section 6.4
 
 ## Profile applicability
 

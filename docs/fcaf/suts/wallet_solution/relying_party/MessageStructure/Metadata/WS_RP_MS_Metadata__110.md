@@ -4,7 +4,7 @@
 Verify that when the Wallet receives a signed Authorization Request using the redirect_uri Client Identifier Prefix, it rejects the request since the redirect_uri prefix cannot be used with signed requests.
 
 ## References
-[OpenID4VP] section 5.9.3
+- [OpenID4VP] Section 5.9.3
 
 ## Profile applicability
 
