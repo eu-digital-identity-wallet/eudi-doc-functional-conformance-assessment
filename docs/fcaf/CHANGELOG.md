@@ -14,3 +14,6 @@ release-candidate and released version tags.
 - Relying Party (WS_RP) test cases for OpenID4VP sections 5-8: Authorization Request, DCQL, claims path pointer, and Response.
 - Token Status List (TSL) test cases (section 6).
 - PID data-model test cases for ISO mdoc and IETF SD-JWT VC formats (ISO/IEC 18013-5).
+- Relying Party (WS_RP) engagement test cases for the High Assurance Interoperability Profile (HAIP).
+- Relying Party (WS_RP) Security Mechanisms test cases: RP authentication, trust, and session binding.
+- PID data-model test cases for name-at-birth attributes (family name at birth, given name at birth) in ISO mdoc and IETF SD-JWT VC formats.
