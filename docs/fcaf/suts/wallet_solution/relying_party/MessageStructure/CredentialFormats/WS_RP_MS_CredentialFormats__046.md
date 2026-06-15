@@ -4,8 +4,9 @@
 Verify that Wallet can handle being presenting Credential in IETF SD-JWT VC format using compact serialization as defined in [RFC9901] when there is no key binding.
 
 ## References
-[HAIP] section 6.1
-[RFC 9901]
+
+- [HAIP] Section 6.1
+- [RFC9901]
 
 ## Profile applicability
 Wallet supports IETF SD-JWT VC without key-binding

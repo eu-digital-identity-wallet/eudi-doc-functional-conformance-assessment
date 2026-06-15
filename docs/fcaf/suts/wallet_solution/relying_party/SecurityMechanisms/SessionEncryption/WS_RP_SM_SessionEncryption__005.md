@@ -6,8 +6,8 @@ Verify that in the encrypted response sent by the Wallet: the JWE `alg` (algor
 ## References
 [HAIP] section 5 (introduction) 
 [OpenID4VP] section 8.3
-[RFC 7516] section 4.1.1
-[RFC 7518] 6.2.1.1
+[RFC7516] section 4.1.1
+[RFC7518] 6.2.1.1
 
 ## Profile applicability
 

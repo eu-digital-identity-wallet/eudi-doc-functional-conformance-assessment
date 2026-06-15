@@ -4,8 +4,9 @@
 Test the Wallet rejects DCQL-query when credential `format` values do not conform to those defined in [OID4VP] Appendix B and allowed by [HAIP]
 
 ## References
-[OpenID4VP] sections 6.1, 8.5
-[HAIP]
+
+- [OpenID4VP] Sections 6.1, 8.5
+- [HAIP]
 
 ## Profile applicability
 

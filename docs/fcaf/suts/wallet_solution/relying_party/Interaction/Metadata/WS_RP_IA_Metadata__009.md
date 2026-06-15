@@ -4,7 +4,8 @@
 Verify that when the Wallet receives an Authorization Request with response_mode = "direct_post.jwt", it sends the Authorization Response to the response_uri as an encrypted JWE over HTTPS.
 
 ## References
-[OpenID4VP] section 5.2; [OpenID4VP] section 8.2; [OpenID4VP] section 8.3
+
+[OpenID4VP] Sections 5.2, 8.2, 8.3
 
 ## Profile applicability
 

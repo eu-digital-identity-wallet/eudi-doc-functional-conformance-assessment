@@ -4,7 +4,8 @@
 Test that the Wallet returns an error if a request contains even one unrecognized transaction data type or transaction data not conforming to the respective type definition.
 
 ## References
-[OpenID4VP] section 5.1; [OpenID4VP] section 8.4
+
+[OpenID4VP] Sections 5.1, 8.4
 
 ## Profile applicability
 

@@ -4,8 +4,9 @@
 Verify that, in the presentation flow via Redirects, Wallet sends encrypted response when Authorization Request includes `response_mode` parameter set to `direct_post.jwt`.
 
 ## References
-[HAIP] section 5.1
-[OpenID4VP] section 8.3
+
+- [HAIP] Section 5.1
+- [OpenID4VP] Section 8.3
 
 ## Profile applicability
 Presentations via Redirects

@@ -4,8 +4,9 @@
 Test the Wallet accepts a DCQL-query with credential `format` values conform to those defined in [OID4VP] Appendix B.
 
 ## References
-[OpenID4VP] sections 6.1
-[HAIP]
+
+- [OpenID4VP] Section 6.1
+- [HAIP]
 
 ## Profile applicability
 

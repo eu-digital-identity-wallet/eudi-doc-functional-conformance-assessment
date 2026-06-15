@@ -4,8 +4,9 @@
 Verify the HAIP requirement that, in the presentation flow via Redirects, Wallet follows `redirect_uri` sent by the Verifier.
 
 ## References
-[HAIP] section 5.1 
-[OpenID4VP] section 8.2
+
+- [HAIP] Section 5.1
+- [OpenID4VP] Section 8.2
 
 ## Profile applicability
 Same device

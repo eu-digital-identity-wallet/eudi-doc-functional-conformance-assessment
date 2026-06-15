@@ -4,7 +4,9 @@
 Verify that the Wallet successfully processes the Authorization Request when both client_id and iss are present, but their values differ.
 
 ## References
-[RFC 9101]; [OpenID4VP] section 5
+
+- [RFC9101]
+- [OpenID4VP] Section 5
 
 ## Profile applicability
 

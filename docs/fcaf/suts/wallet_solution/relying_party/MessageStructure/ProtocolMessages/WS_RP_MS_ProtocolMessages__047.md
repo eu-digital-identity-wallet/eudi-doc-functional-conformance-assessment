@@ -4,7 +4,9 @@
 Verify that when the Wallet receives the Request URI response, it has Content-Type application/oauth-authz-req+jwt and the body is a signed (optionally encrypted) Request Object conforming to RFC9101.
 
 ## References
-[OpenID4VP] section 5.10.1; [RFC 9101]
+
+- [OpenID4VP] Section 5.10.1
+- [RFC9101]
 
 ## Profile applicability
 

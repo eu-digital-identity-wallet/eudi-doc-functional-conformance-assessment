@@ -5,7 +5,7 @@ Test that the Wallet when processing trusted_authorities, the type "aki" is supp
 
 ## References
 [OpenID4VP], Section 6.1.1.1
-Section 4.2.1.1 of [RFC 5280]
+Section 4.2.1.1 of [RFC5280]
 
 ## Profile applicability
 Wallet supports trusted authorities query based on 'aki'.

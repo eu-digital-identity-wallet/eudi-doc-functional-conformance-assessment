@@ -4,9 +4,10 @@
 Verify that whenever Wallet presents a SD-JWT containing a `cnf` claim, `cnf` conforms to definition given in [I-D.ietf-oauth-sd-jwt-vc].
 
 ## References
-[HAIP] section 6.1
-[RFC 7800]
-[SD-JWT VC]
+
+- [HAIP] Section 6.1
+- [RFC7800]
+- [SD-JWT VC]
 
 ## Profile applicability
 Wallet supports IETF SD-JWT VC 

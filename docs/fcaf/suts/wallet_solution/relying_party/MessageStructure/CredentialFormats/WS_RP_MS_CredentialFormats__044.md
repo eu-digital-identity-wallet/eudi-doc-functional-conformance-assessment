@@ -4,9 +4,10 @@
 Verify that when the Wallet presentation to the Verifier includes `status` claim, it contains `status_list` as defined in [I-D.ietf-oauth-status-list].
 
 ## References
-[HAIP] section 6.1
-[RFC 7800]
-[SD-JWT VC]
+
+- [HAIP] Section 6.1
+- [RFC7800]
+- [SD-JWT VC]
 
 ## Profile applicability
 Wallet supports IETF SD-JWT VC 

@@ -4,7 +4,9 @@
 Verify that when the Wallet receives a Request URI response with an incorrect Content-Type (not application/oauth-authz-req+jwt), the Wallet rejects or fails to parse the response.
 
 ## References
-[OpenID4VP] sections 8.5, 5.10.1; [RFC 9101]
+
+- [OpenID4VP] Sections 8.5, 5.10.1
+- [RFC9101]
 
 ## Profile applicability
 

@@ -4,8 +4,9 @@
 Test the Wallet processes a DCQL-query with an "aki" correctly when it does contain a matching credential, with the match in the CA certificate.
 
 ## References
-[OpenID4VP], Section 6.1.1.1
-[RFC 5280]
+
+- [OpenID4VP] Section 6.1.1.1
+- [RFC5280]
 
 ## Profile applicability
 Wallet supports trusted authorities query based on 'aki'

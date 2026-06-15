@@ -4,7 +4,9 @@
 Verify that the Wallet ignores unrecognized parameters in the Authorization Request.
 
 ## References
-[OpenID4VP] section 5; [RFC 6749]
+
+- [OpenID4VP] Section 5
+- [RFC6749]
 
 ## Profile applicability
 

@@ -4,7 +4,8 @@
 Test that at step 2.3 of claims path processing, if the index does not exist in a selected array, remove that array from the selection. 
 
 ## References
-[OpenID4VP], Section 7 Section 7.2.1, 7.3
+
+[OpenID4VP] Sections 7, 7.2.1, 7.3
 
 ## Profile applicability
 claims path pointer when applied to a JSON-based Credential

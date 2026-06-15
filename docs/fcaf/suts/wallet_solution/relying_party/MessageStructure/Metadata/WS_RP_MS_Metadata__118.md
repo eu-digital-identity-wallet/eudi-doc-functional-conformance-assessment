@@ -4,7 +4,8 @@
 Verify that when the Wallet receives a Request Object using the verifier_attestation Client Identifier Prefix with the Verifier attestation JWT correctly placed in the jwt JOSE header, the Wallet locates and processes the attestation JWT.
 
 ## References
-[OpenID4VP] section 5.9.3; [OpenID4VP] section 12
+
+[OpenID4VP] Sections 5.9.3, 12
 
 ## Profile applicability
 

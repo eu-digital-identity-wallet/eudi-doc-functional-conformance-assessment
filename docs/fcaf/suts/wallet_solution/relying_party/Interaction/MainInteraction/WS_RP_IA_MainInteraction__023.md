@@ -4,8 +4,8 @@
  Test the Wallet SHOULD treat a claim as if it did not exist in the credential, if its value does not match the one held in the wallets credential.
 
 ## References
-[OpenID4VP], Section 6.4
-[OpenID4VP], Section 6.3
+
+[OpenID4VP] Sections 6.4, 6.3
 
 ## Profile applicability
 

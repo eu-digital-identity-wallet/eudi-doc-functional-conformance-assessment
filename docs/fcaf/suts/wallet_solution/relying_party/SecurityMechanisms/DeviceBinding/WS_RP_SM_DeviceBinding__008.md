@@ -4,9 +4,10 @@
 Verify that when Verifier requires Cryptographic Key Binding, `cnf` claim is used within the SD-JWT component of the SD-JWT VC as described in [I-D.ietf-oauth-sd-jwt-vc].
 
 ## References
-[HAIP] section 6.1
-[RFC 7800]
-[SD-JWT VC]
+
+- [HAIP] Section 6.1
+- [RFC7800]
+- [SD-JWT VC]
 
 ## Profile applicability
 Wallet supports IETF SD-JWT VC 

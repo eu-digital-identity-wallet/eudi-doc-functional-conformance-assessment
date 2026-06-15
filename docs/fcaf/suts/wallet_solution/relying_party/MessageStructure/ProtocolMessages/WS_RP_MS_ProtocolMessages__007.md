@@ -4,7 +4,9 @@
 Verify that the Wallet rejects a Request Object where the typ header parameter does not equal oauth-authz-req+jwt.
 
 ## References
-[RFC 9101]; [OpenID4VP] section 5
+
+- [RFC9101]
+- [OpenID4VP] Section 5
 
 ## Profile applicability
 

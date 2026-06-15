@@ -4,7 +4,9 @@
 Verify that when the Wallet receives a Request Object using the x509_san_dns Client Identifier Prefix where the DNS name in the Client Identifier does NOT match any dNSName SAN entry in the leaf certificate, the Wallet rejects the request.
 
 ## References
-[OpenID4VP] section 5.9.3; [RFC 5280]
+
+- [OpenID4VP] Section 5.9.3
+- [RFC5280]
 
 ## Profile applicability
 

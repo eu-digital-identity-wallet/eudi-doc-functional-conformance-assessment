@@ -4,8 +4,9 @@
 Verify that, in the presentation flow via Redirects, the Wallet supports receiving a Signed Authorization Request using JWT-Secured Authorization Request (JAR) [RFC9101] with the `request_uri` parameter. 
 
 ## References
-[HAIP] section 5.1
-[RFC 9101] section 5
+
+- [HAIP] Section 5.1
+- [RFC9101] Section 5
 
 ## Profile applicability
 Presentations via Redirects

@@ -4,7 +4,9 @@
 Verify that the Wallet does not process the request if client_id is missing from the Request Object.
 
 ## References
-[RFC 9101]; [OpenID4VP] section 5
+
+- [RFC9101]
+- [OpenID4VP] Section 5
 
 ## Profile applicability
 

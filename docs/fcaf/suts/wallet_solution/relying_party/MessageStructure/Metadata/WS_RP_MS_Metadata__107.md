@@ -4,7 +4,9 @@
  Verify that when the Verifier sets request_uri_method = "post" without client_metadata, the Wallet still proceeds by sending its full supported wallet_metadata in the POST request to the request_uri.
 
 ## References
-[OpenID4VP] Section 5.10, [OpenID4VP] Section 5.1, [RFC 9101]
+
+- [OpenID4VP] Sections 5.10, 5.1
+- [RFC9101]
 
 ## Profile applicability
 

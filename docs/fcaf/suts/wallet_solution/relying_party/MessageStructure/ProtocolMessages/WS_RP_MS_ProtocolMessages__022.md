@@ -4,7 +4,9 @@
 Verify that when the Authorization Request contains a request_uri parameter and request_uri_method = "get", the Wallet retrieves the Request Object using HTTP GET as defined in RFC9101.
 
 ## References
-[OpenID4VP] section 5.1; [RFC 9101]
+
+- [OpenID4VP] Section 5.1
+- [RFC9101]
 
 ## Profile applicability
 

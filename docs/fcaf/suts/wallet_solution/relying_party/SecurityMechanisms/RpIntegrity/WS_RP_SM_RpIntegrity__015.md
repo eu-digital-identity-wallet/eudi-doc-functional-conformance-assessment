@@ -4,7 +4,9 @@
 Verify that when the Wallet receives a Request Object using an X.509-based Client Identifier Prefix where the signature key does NOT correspond to the leaf certificate in x5c, the Wallet rejects the request.
 
 ## References
-[OpenID4VP] section 5.9.3; [RFC 7515]
+
+- [OpenID4VP] Section 5.9.3
+- [RFC7515]
 
 ## Profile applicability
 

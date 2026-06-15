@@ -4,7 +4,9 @@
 Verify that when the Wallet receives a Request Object using the x509_san_dns Client Identifier Prefix where the original Client Identifier (DNS name) matches a dNSName SAN entry in the leaf certificate provided in the request, the Wallet accepts the binding.
 
 ## References
-[OpenID4VP] section 5.9.3; [RFC 5280]
+
+- [OpenID4VP] Section 5.9.3
+- [RFC5280]
 
 ## Profile applicability
 

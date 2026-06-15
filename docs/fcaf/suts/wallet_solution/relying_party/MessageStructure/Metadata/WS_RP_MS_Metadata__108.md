@@ -4,7 +4,8 @@
 Verify that when the Wallet receives an Authorization Request where all Verifier metadata is provided within the client_metadata parameter, the Wallet processes the metadata exclusively from client_metadata.
 
 ## References
-[OpenID4VP] section 5.9.3; [OpenID4VP] section 5.1
+
+[OpenID4VP] Sections 5.9.3, 5.1
 
 ## Profile applicability
 

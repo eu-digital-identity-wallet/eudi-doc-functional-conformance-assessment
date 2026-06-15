@@ -4,7 +4,8 @@
 Verify that when the Wallet receives a Request Object using the verifier_attestation Client Identifier Prefix where the jwt JOSE header is absent or does not contain the Verifier attestation JWT, the Wallet rejects the request.
 
 ## References
-[OpenID4VP], Section 5.9.3; [OpenID4VP], Section 12
+
+[OpenID4VP] Sections 5.9.3, 12
 
 ## Profile applicability
 

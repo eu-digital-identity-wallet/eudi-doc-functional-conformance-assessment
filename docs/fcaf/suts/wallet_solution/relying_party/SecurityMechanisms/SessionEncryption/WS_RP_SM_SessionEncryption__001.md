@@ -4,8 +4,9 @@
 Verify that if the Wallet encrypts the Authorization Response it uses an unsigned, encrypted JWT.
 
 ## References
-[OpenID4VP], Section 8
-[RFC 7519]  
+
+- [OpenID4VP] Section 8
+- [RFC7519]
 
 ## Profile applicability
 Encrypted response

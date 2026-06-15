@@ -6,7 +6,7 @@ Verify that if `encrypted_response_enc_values_supported` within client metadata 
 ## References
 [HAIP] section 5 (introduction) 
 [OpenID4VP] section 8.3
-[RFC 7516] section 4.1.2
+[RFC7516] section 4.1.2
 
 ## Profile applicability
 Wallet supports only A256GCM

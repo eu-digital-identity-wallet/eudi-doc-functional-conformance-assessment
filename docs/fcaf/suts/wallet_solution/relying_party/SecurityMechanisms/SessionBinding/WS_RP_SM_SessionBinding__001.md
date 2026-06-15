@@ -4,7 +4,8 @@
 Verify that when the Wallet receives an Authorization Request that contains a valid nonce parameter, the wallet will accept the Authorization Request.
 
 ## References
-[OpenID4VP] section 5.2, section 14.1
+
+[OpenID4VP] Sections 5.2, 14.1
 
 ## Profile applicability
 

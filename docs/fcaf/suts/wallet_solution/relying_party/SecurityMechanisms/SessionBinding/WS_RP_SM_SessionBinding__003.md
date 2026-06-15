@@ -4,7 +4,8 @@
  Test that the Wallet rejects Authorization Requests that do not contain a valid nonce parameter.
 
 ## References
-[OpenID4VP] section 5, section 14.1
+
+[OpenID4VP] Sections 5, 14.1
 
 ## Profile applicability
 

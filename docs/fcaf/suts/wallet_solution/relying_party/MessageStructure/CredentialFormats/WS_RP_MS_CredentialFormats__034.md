@@ -5,7 +5,7 @@ Test that when a wallet matches a mdoc-based Credential, the CBOR values are mat
 
 ## References
 [OpenID4VP], Section 6.3
-Section 6.1 of [RFC 8949]
+Section 6.1 of [RFC8949]
 
 ## Profile applicability
 value matching with ISO mdoc is implemented by wallet

@@ -17,3 +17,5 @@ release-candidate and released version tags.
 - Relying Party (WS_RP) engagement test cases for the High Assurance Interoperability Profile (HAIP).
 - Relying Party (WS_RP) Security Mechanisms test cases: RP authentication, trust, and session binding.
 - PID data-model test cases for name-at-birth attributes (family name at birth, given name at birth) in ISO mdoc and IETF SD-JWT VC formats.
+- Consistency pass across Relying Party (WS_RP) test cases: explicit `none` for empty Preconditions and Profile applicability, harmonised EUDI-wallet relevancy and Profile applicability formatting, standardised TODO markers, and Markdown formatting fixes.
+- Citations aligned to canonical references; references catalogue updated with specification versions and entries for HAIP, Token Status List, ISO/IEC 18013-7, and the referenced RFCs.

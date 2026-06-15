@@ -4,7 +4,9 @@
 Verify that when the Wallet receives a Request Object using the x509_hash Client Identifier Prefix signed with the private key corresponding to the public key in the leaf X.509 certificate (whose hash is in the Client Identifier), the Wallet successfully verifies the signature.
 
 ## References
-[OpenID4VP] section 5.9.3; [RFC 7515]
+
+- [OpenID4VP] Section 5.9.3
+- [RFC7515]
 
 ## Profile applicability
 
