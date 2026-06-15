@@ -4,7 +4,7 @@
 Test that if DCQL contains a property "credentials" that is not an array, the Wallet rejects the request.
 
 ## References
-[OpenID4VP] sections 6.1, 8.5
+- [OpenID4VP] Sections 6.1, 8.5
 
 ## Profile applicability
 

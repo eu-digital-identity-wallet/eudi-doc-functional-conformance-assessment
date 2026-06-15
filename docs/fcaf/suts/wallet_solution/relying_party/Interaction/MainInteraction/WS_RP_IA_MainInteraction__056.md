@@ -4,7 +4,7 @@
 Test that the Wallet validates the response_uri according to the strict matching rules defined in [OID4VP] Section 5.9, and rejects the request if the value is invalid.
 
 ## References
-[OpenID4VP], Section 8
+- [OpenID4VP] Section 8
 
 ## Profile applicability
 

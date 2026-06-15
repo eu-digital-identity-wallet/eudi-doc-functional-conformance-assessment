@@ -4,7 +4,7 @@
 Test all parameters in the HTTP POST request body are encoded using UTF‑8.
 
 ## References
-[OpenID4VP], Section 8
+- [OpenID4VP] Section 8
 
 ## Profile applicability
 Same device

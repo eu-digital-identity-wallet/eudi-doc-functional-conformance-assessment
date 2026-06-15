@@ -4,7 +4,7 @@
 Test that the Wallet responds with invalid_scope when the Requested scope value is unknown.
 
 ## References
-[OpenID4VP] Sections 5.2, 5.5, 8.5
+- [OpenID4VP] Sections 5.2, 5.5, 8.5
 
 ## Profile applicability
 

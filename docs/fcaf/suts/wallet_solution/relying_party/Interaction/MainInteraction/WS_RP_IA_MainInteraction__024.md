@@ -4,7 +4,7 @@
 Verify that if the Wallet cannot pre-parse the data (e.g., it's encrypted), it still allows the user to proceed with the presentation rather than failing the request.
 
 ## References
-[OpenID4VP], Section 6.4
+- [OpenID4VP] Section 6.4
 
 ## Profile applicability
 Encrypted data

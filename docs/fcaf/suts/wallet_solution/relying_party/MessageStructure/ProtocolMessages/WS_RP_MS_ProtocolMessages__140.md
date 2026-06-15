@@ -4,7 +4,7 @@
 Test that the Wallet will not leave the verifier hanging after an error response, it must terminate the session.
 
 ## References
-[OpenID4VP] Sections 5.2, 5.5, 8.5
+- [OpenID4VP] Sections 5.2, 5.5, 8.5
 
 ## Profile applicability
 

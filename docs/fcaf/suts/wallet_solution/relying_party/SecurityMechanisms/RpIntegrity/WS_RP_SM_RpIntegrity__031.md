@@ -4,7 +4,7 @@
 Verify that Wallet supports ECDSA with P-256 and SHA-256 (JOSE algorithm identifier ES256) for validating signed presentation requests.
 
 ## References
-[HAIP] section 7 
+- [HAIP] Section 7
 
 ## Profile applicability
 JOSE algorithm identifier ES256

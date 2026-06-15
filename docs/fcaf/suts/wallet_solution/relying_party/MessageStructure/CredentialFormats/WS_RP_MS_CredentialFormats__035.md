@@ -4,10 +4,10 @@
 Verify that Wallet supports ISO mdoc in the presentation flow. 
 
 ## References
-[HAIP] section 5 (introduction)
-[HAIP] section 5.3.1
-[HAIP] section 6
-[OpenID4VP] appendix B.2
+- [HAIP] Section 5 (introduction)
+- [HAIP] Section 5.3.1
+- [HAIP] Section 6
+- [OpenID4VP] Appendix B.2
 
 ## Profile applicability
 Wallet supports ISO mdoc

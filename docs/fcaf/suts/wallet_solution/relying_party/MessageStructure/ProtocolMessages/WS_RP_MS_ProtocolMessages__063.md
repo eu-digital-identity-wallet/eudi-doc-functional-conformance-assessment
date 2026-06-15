@@ -4,7 +4,7 @@
 Test the Wallet rejects DCQL-query credential object property "id" when it is an empty string.
 
 ## References
-[OpenID4VP] sections 6.1, 8.5
+- [OpenID4VP] Sections 6.1, 8.5
 
 ## Profile applicability
 

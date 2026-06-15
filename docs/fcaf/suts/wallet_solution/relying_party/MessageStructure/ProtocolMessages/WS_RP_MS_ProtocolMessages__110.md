@@ -4,7 +4,7 @@
 Test the Wallet checks that within a particular claims array, the same ID MUST NOT be present more than once.
 
 ## References
-[OpenID4VP] sections 6.3, 8.5
+- [OpenID4VP] Sections 6.3, 8.5
 
 ## Profile applicability
 

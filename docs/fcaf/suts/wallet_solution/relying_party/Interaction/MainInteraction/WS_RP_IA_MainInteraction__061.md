@@ -4,7 +4,7 @@
 Test the Wallet handles a redirect_uri when a response_uri returns after a successful Response.
 
 ## References
-[OpenID4VP], Section 8.2
+- [OpenID4VP] Section 8.2
 
 ## Profile applicability
 Same device

@@ -5,7 +5,7 @@ Verify that when the Wallet receives a Request Object using the verifier_attesta
 
 ## References
 
-[OpenID4VP] Sections 5.9.3, 12
+- [OpenID4VP] Sections 5.9.3, 12
 
 ## Profile applicability
 

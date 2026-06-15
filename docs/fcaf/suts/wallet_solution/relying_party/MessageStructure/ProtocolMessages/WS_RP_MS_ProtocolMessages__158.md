@@ -4,7 +4,7 @@
 Test the Wallet returns the invalid_transaction_data error message, when one object in the transaction_data structure has credential_ids that do not match to the credentials requested.
 
 ## References
-[OpenID4VP], Section 8.5
+- [OpenID4VP] Section 8.5
 
 ## Profile applicability
 

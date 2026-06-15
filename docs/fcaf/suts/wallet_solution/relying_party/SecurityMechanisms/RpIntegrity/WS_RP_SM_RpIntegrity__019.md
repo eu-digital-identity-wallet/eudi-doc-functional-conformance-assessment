@@ -4,7 +4,7 @@
 Verify that when the Wallet receives a Request Object using the x509_hash Client Identifier Prefix where the X.509 trust chain is broken or leads to an untrusted root, the Wallet rejects the request.
 
 ## References
-[OpenID4VP] section 5.9.3
+- [OpenID4VP] Section 5.9.3
 
 ## Profile applicability
 

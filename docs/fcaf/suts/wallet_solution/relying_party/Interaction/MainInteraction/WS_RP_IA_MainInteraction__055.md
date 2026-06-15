@@ -4,7 +4,7 @@
 When the response_uri parameter is present, the redirect_uri Authorization Request parameter MUST NOT be present. 
 
 ## References
-[OpenID4VP], Section 8
+- [OpenID4VP] Section 8
 
 ## Profile applicability
 

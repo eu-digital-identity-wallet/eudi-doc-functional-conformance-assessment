@@ -4,7 +4,7 @@
 Test that the claims path pointer does not contain exactly two components then abort processing and return an error.
 
 ## References
-[OpenID4VP], Section 7
+- [OpenID4VP] Section 7
 
 ## Profile applicability
 claims path pointer when applied to a credential in ISO mdoc

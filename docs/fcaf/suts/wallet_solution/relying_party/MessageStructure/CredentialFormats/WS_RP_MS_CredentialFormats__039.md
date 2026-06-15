@@ -4,7 +4,7 @@
 Verify that when the Verifier uses the `vp_token id_token` response type, the Wallet responds with an error (detailed or not) or discontinues the transaction.
 
 ## References
-[HAIP] section 5 (introduction)
+- [HAIP] Section 5 (introduction)
 
 ## Profile applicability
 

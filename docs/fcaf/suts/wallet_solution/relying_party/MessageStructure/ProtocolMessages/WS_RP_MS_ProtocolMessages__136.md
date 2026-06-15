@@ -4,7 +4,7 @@
 Test a Wallet that received transaction_data in a request, but cannot support it, MUST return an error.
 
 ## References
-[OpenID4VP], Section 8.4
+- [OpenID4VP] Section 8.4
 
 ## Profile applicability
 

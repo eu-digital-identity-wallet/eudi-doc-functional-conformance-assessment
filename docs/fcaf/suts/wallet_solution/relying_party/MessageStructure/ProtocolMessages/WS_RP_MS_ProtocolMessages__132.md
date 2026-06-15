@@ -4,7 +4,7 @@
 Test the Wallet puts the response content fields at the top level of the JWT payload.
 
 ## References
-[OpenID4VP] Section 8.3
+- [OpenID4VP] Section 8.3
 
 ## Profile applicability
 

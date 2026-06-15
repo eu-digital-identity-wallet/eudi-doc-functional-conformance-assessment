@@ -4,7 +4,7 @@
 Test when the Wallet cannot deliver all claims requested by the Verifier, because it doesn't have one of them, then it does NOT return the respective Credential.
 
 ## References
-[OpenID4VP] Sections 6.4, 8.5
+- [OpenID4VP] Sections 6.4, 8.5
 
 ## Profile applicability
 

@@ -5,7 +5,7 @@ Verify that when the Wallet receives an Authorization Request with response_mode
 
 ## References
 
-[OpenID4VP] Sections 5.2, 8.2, 8.3
+- [OpenID4VP] Sections 5.2, 8.2, 8.3
 
 ## Profile applicability
 

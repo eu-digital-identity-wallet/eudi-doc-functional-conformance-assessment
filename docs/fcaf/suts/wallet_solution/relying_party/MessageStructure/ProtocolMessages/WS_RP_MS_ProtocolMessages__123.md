@@ -4,7 +4,7 @@
 Test that when the Wallet is given an invalid claims path pointer, it will abort processing and return an error.
 
 ## References
-[OpenID4VP] Sections 7, 8.5
+- [OpenID4VP] Sections 7, 8.5
 
 ## Profile applicability
 

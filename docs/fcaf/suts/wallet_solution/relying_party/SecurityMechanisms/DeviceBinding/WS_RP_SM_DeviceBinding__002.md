@@ -4,7 +4,7 @@
 Verify that when the Wallet receives an Authorization Request containing a key-bound Verifier Info attestation whose signature object correctly includes both the nonce and client_id request parameters, the Wallet validates the signature and accepts the attestation.
 
 ## References
-[OpenID4VP] section 5.11.1
+- [OpenID4VP] Section 5.11.1
 
 ## Profile applicability
 

@@ -4,7 +4,7 @@
 Verify that when transaction_data is provided in the request, the Wallet includes a reference to it in the credential presentation, to ensure transaction integrity.
 
 ## References
-[OpenID4VP], Section 8.4
+- [OpenID4VP] Section 8.4
 
 ## Profile applicability
 

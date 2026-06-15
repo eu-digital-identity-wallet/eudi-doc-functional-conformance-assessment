@@ -4,9 +4,9 @@
 This test case verifies that the DataElementValue of data element `issuance_date` contains a valid date and time. Note that `issuance_date` is the Attribute Identifier in ISO-mdoc for the Data Identifier issuance_date. 
 
 ## References
-European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook    
-"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 6). ISO 8601-1:2019, 4.2.1, 4.3.2  
-RFC 3339 section 5.6, 5.7
+- [PID rulebook] Annex 3.01, Section 4.1 (Table 6)
+- [ISO 8601-1:2019] 4.2.1, 4.3.2
+- [RFC3339] Sections 5.6, 5.7
 
 ## EUDI-wallet relevancy
 EUDI_specific | EUDI_optional

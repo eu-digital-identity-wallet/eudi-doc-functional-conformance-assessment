@@ -4,7 +4,7 @@
 Verify that the wallet can successfully select the data element references by the second component of a claims path pointer.
 
 ## References
-[OpenID4VP], Section 7
+- [OpenID4VP] Section 7
 
 ## Profile applicability
 claims path pointer when applied to a credential in ISO mdoc

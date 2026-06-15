@@ -4,8 +4,8 @@
 Verify that - for each authorization request - Wallet uses the correct ephemeral key passed via client metadata in the encryption process. 
 
 ## References
-[HAIP] section 5 (introduction) 
-[OpenID4VP] section 8.3
+- [HAIP] Section 5 (introduction)
+- [OpenID4VP] Section 8.3
 
 ## Profile applicability
 

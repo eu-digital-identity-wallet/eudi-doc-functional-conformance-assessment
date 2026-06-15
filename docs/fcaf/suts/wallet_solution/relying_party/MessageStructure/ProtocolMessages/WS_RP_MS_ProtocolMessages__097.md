@@ -4,7 +4,7 @@
 Test the "options" property must be non-empty.
 
 ## References
-[OpenID4VP] sections 6.2, 8.5
+- [OpenID4VP] Sections 6.2, 8.5
 
 ## Profile applicability
 

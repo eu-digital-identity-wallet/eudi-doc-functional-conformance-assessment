@@ -5,9 +5,9 @@ This test case verifies that the value of the claim `address.country` contains a
 
 
 ## References
-European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook   
-"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 2). 
-ISO 3166-1:2020, 6.1 ISO 3166-1:2020, 8.3
+- [PID rulebook] Annex 3.01, Section 4.2 (Table 2)
+- [ISO 3166-1:2020] 6.1
+- [ISO 3166-1:2020] 8.3
 
 ## EUDI-wallet relevancy
 EUDI_specific | EUDI_optional

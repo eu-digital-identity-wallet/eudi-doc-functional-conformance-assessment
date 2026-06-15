@@ -4,7 +4,7 @@
 The Wallet can parse the identifier of a Trusted List as specified in ETSI TS 119 612 [ETSI.TL], in a "trusted_authorities" request.
 
 ## References
-[OpenID4VP], Section 6.1.1.2
+- [OpenID4VP] Section 6.1.1.2
 TODO: ETSI TS 119 612 [ETSI.TL]
 
 ## Profile applicability

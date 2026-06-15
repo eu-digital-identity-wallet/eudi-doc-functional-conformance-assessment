@@ -4,7 +4,7 @@
 Test the Wallet ignores an unrecognized parameter provided by the Verifier in its JSON response, returned from a response_uri.
 
 ## References
-[OpenID4VP], Section 8.2
+- [OpenID4VP] Section 8.2
 
 ## Profile applicability
 

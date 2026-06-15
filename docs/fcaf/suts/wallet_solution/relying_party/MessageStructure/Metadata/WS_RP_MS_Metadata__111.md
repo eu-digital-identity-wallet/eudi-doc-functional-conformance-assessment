@@ -4,7 +4,7 @@
 Verify that when the Wallet receives a signed Authorization Request using a Client Identifier Prefix that supports signing (e.g. x509_hash, openid_federation, verifier_attestation, decentralized_identifier, x509_san_dns), the Wallet accepts the request and proceeds with the presentation flow.
 
 ## References
-[OpenID4VP] section 5.9.3
+- [OpenID4VP] Section 5.9.3
 
 ## Profile applicability
 

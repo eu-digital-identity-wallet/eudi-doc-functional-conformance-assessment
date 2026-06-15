@@ -4,9 +4,9 @@
 Verify that if `encrypted_response_enc_values_supported` within client metadata from the Verifier, does not include A256GCM, and Wallet only supports A256GCM, the Wallet responds with an error.
 
 ## References
-[HAIP] section 5 (introduction) 
-[OpenID4VP] section 8.3
-[RFC7516] section 4.1.2
+- [HAIP] Section 5 (introduction)
+- [OpenID4VP] Section 8.3
+- [RFC7516] Section 4.1.2
 
 ## Profile applicability
 Wallet supports only A256GCM

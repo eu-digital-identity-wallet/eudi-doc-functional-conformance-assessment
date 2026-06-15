@@ -4,7 +4,7 @@
 Test that the second element of mdoc claims path pointer refers to a data element identifier.
 
 ## References
-[OpenID4VP], Section 7
+- [OpenID4VP] Section 7
 
 ## Profile applicability
 claims path pointer when applied to a credential in ISO mdoc

@@ -4,7 +4,7 @@
 Test the Wallet responds with invalid_request when the request contains both a dcql_query parameter and a scope parameter referencing a DCQL query.
 
 ## References
-[OpenID4VP], Section 8
+- [OpenID4VP] Section 8
 
 ## Profile applicability
 

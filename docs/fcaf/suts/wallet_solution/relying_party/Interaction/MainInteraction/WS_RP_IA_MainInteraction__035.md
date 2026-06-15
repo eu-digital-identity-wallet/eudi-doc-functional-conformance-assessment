@@ -4,7 +4,7 @@
 Test that the wallet returns the VP token in the Authorization response if the response type value is vp_token.
 
 ## References
-[OpenID4VP], Section 8
+- [OpenID4VP] Section 8
 
 ## Profile applicability
 

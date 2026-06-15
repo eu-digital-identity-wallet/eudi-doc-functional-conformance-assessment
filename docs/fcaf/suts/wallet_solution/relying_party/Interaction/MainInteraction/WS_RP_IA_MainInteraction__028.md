@@ -4,7 +4,7 @@
 Test the wallet for non-selectively disclosable credentials, treats an empty query (no claims or claim_sets) as a request for the entire credential rather than returning an error or an empty token.
 
 ## References
-[OpenID4VP], Section 6.4
+- [OpenID4VP] Section 6.4
 
 ## Profile applicability
 

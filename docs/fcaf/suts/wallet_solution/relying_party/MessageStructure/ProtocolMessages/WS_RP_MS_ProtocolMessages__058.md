@@ -5,7 +5,7 @@
 Test when credential_sets is present, the Wallet rejects credential_sets if it is an empty array.
 
 ## References
-[OpenID4VP] sections 6, 8.5
+- [OpenID4VP] Sections 6, 8.5
 
 ## Profile applicability
 

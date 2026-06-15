@@ -4,7 +4,7 @@
 Test if present the credential property "trusted_authorities", is made of objects defined in [OID4VP 6.1.1]
 
 ## References
-[OpenID4VP] sections 6.1.1, 8.5
+- [OpenID4VP] Sections 6.1.1, 8.5
 
 ## Profile applicability
 

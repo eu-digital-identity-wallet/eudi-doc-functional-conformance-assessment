@@ -4,7 +4,7 @@
 Test the Wallet will not return presentations of a set of Credentials that do NOT match to one of the options inside the Credential Set Query.
 
 ## References
-[OpenID4VP], Section 6.4
+- [OpenID4VP] Section 6.4
 
 ## Profile applicability
 

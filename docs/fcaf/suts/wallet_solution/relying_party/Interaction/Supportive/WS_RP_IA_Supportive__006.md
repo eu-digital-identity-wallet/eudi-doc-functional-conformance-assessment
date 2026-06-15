@@ -4,7 +4,7 @@
 Test the wallet returns the error message: wallet_unavailable when the device the wallet is located on is under extreme load and hence is out of RAM/ disk space.
 
 ## References
-[OpenID4VP], Section 8
+- [OpenID4VP] Section 8
 
 ## Profile applicability
 

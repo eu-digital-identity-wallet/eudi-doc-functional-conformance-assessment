@@ -4,7 +4,7 @@
 Verify that when the Wallet receives an Authorization Request without a state parameter, it processes the request successfully without returning a state in the Authorization Response.
 
 ## References
-[OpenID4VP] section 5.2
+- [OpenID4VP] Section 5.2
 
 ## Profile applicability
 

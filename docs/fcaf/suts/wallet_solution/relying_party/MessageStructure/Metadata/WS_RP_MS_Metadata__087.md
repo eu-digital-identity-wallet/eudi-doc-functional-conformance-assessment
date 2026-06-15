@@ -4,7 +4,7 @@
 Verify that the EUDI Wallet rejects a JOSE-based Referenced Token where the required "idx" claim within "status_list" is missing.
 
 ## References
-[Token Status List] Section 6.2
+- [Token Status List] Section 6.2
 
 ## Profile applicability
 The Wallet supports revocation checking via the Token Status List mechanism; The Wallet supports Status List Tokens in JWT format

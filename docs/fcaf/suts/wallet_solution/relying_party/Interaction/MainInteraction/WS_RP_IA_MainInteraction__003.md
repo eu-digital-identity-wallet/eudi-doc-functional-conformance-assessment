@@ -4,7 +4,7 @@
 Test the Wallet accepts and processes DCQL-query with credential property "trusted_authorities", matching and returning a credential issued by an Issuer matching one of the Issuers identified in 'trusted_authorities'.
 
 ## References
-[OpenID4VP], Section 6.1
+- [OpenID4VP] Section 6.1
 
 ## Profile applicability
 

@@ -4,7 +4,7 @@
 Verify that the EUDI Wallet rejects a COSE-based Referenced Token where the "idx" field within "status_list" has an invalid type (negative or wrong CBOR type).
 
 ## References
-[Token Status List] Section 6.3
+- [Token Status List] Section 6.3
 
 ## Profile applicability
 The Wallet supports revocation checking via the Token Status List mechanism; The Wallet supports Status List Tokens in CWT format

@@ -4,7 +4,7 @@
 Test the Wallet Rejects a DCQL-query with a constraint on "trusted_authorities" with an unspecified type.
 
 ## References
-[OpenID4VP] sections 6.1.1, 8.5
+- [OpenID4VP] Sections 6.1.1, 8.5
 
 ## Profile applicability
 

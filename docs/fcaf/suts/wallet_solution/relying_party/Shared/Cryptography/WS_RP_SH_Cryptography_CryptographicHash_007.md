@@ -4,7 +4,7 @@
 Verify that Wallet does not use other hash algorithm than SHA-256 during presentation if that is not supported by the Verifier.
 
 ## References
-[HAIP] section 8
+- [HAIP] Section 8
 
 ## Profile applicability
 Wallet supports other hash algorithms besides SHA-256.

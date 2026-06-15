@@ -4,7 +4,7 @@
 Verify that Wallet supports ECDSA with P-256 and SHA-256 (COSE algorithm identifier -9) for validating signed presentation requests.
 
 ## References
-[HAIP] section 7 
+- [HAIP] Section 7
 
 ## Profile applicability
 COSE algorithm identifier -9 supported

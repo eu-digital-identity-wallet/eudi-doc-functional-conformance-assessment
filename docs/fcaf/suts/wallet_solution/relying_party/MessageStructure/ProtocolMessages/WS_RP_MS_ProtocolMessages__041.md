@@ -4,7 +4,7 @@
 Verify that when the Verifier uses the redirect_uri Client Identifier Prefix with response_mode = direct_post.jwt and omits the response_uri Authorization Request parameter, the Wallet derives the response target from the Client Identifier and processes the request successfully.
 
 ## References
-[OpenID4VP] section 5.9.3
+- [OpenID4VP] Section 5.9.3
 
 ## Profile applicability
 

@@ -4,7 +4,7 @@
 Test that the Wallet will accept a DCQL query without a claims "id" if claim_sets is NOT present
 
 ## References
-[OpenID4VP], Section 6.3
+- [OpenID4VP] Section 6.3
 
 ## Profile applicability
 

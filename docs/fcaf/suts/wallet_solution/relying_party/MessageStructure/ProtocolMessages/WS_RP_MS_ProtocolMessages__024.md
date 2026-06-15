@@ -5,7 +5,7 @@ Test that the Wallet returns an error if a request contains even one unrecognize
 
 ## References
 
-[OpenID4VP] Sections 5.1, 8.4
+- [OpenID4VP] Sections 5.1, 8.4
 
 ## Profile applicability
 

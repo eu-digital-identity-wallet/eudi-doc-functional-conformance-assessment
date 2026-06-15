@@ -4,7 +4,7 @@
 Test that if elements in "options" are NOT identifiers that reference elements in "credentials", the wallet will reject query and remain privacy preserving.
 
 ## References
-[OpenID4VP] sections 6.2, 8.5
+- [OpenID4VP] Sections 6.2, 8.5
 
 ## Profile applicability
 

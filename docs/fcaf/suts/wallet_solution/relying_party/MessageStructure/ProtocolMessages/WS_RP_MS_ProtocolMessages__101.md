@@ -4,7 +4,7 @@
 Test that the credential_sets property "required" is correctly supported by the wallet when all credentials exist.
 
 ## References
-[OpenID4VP], Section 6.2
+- [OpenID4VP] Section 6.2
 
 ## Profile applicability
 

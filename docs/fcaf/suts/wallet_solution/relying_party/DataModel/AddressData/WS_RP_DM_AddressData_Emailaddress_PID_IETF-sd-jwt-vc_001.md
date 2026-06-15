@@ -4,8 +4,7 @@
 This test case verifies that the claim `email` is present in the Credential in IETF SD-JWT VC format if this is indicated in the ICS. Note that `email` is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier email_address.
 
 ## References
-European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook   
-"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 5).
+- [PID rulebook] Annex 3.01, Section 4.2 (Table 5)
 
 ## EUDI-wallet relevancy
 EUDI_specific | EUDI_optional

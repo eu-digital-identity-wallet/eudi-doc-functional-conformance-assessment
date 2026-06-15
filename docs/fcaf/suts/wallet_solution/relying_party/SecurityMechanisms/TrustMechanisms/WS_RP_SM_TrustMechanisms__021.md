@@ -4,8 +4,8 @@
 Verify that Wallet can handle Authorization Request using authorization key identifier mechanism to support multiple X.509-based trust mechanism supported by the Wallet profile.
 
 ## References
-[HAIP] section 5 (introduction)
-[OpenID4VP] section 6.1.1.1, section 8.5
+- [HAIP] Section 5 (introduction)
+- [OpenID4VP] Sections 6.1.1.1, 8.5
 
 ## Profile applicability
 multiple X.509-based trust mechanisms supported by the Wallet

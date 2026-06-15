@@ -4,7 +4,7 @@
 If "multiple" is present, the Wallet processes it when determining how many matching Credentials may be returned.
 
 ## References
-[OpenID4VP], Section 6.1
+- [OpenID4VP] Section 6.1
 
 ## Profile applicability
 

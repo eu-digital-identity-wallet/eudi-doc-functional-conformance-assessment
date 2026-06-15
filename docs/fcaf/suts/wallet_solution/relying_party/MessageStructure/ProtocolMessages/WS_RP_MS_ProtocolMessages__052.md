@@ -4,7 +4,7 @@
 Test the Wallet checks the DCQL query has a valid property "credentials" which is a non-empty array, containing valid entries (according to [OID4VP 6.1]).
 
 ## References
-[OpenID4VP], Section 6
+- [OpenID4VP] Section 6
 
 ## Profile applicability
 

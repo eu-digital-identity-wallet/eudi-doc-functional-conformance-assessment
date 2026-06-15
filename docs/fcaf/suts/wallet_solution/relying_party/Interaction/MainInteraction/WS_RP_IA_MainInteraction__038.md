@@ -4,7 +4,7 @@
 Test that the vp_token parameter returned by the wallet contains entries where the value(s) are formatted as array(s) of presentation(s) matching the respective credential query ID.
 
 ## References
-[OpenID4VP], Section 8
+- [OpenID4VP] Section 8
 
 ## Profile applicability
 

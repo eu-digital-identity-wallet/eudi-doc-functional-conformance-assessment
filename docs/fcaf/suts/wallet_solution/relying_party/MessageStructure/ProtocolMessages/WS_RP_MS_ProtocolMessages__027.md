@@ -4,7 +4,7 @@
 Verify that the Wallet returns an invalid_transaction_data error when a string in the credential_ids array inside a transaction_data object does NOT match any id in the DCQL Credential Query.
 
 ## References
-[OpenID4VP] sections 5.1; 8.3, 8.5
+- [OpenID4VP] Sections 5.1, 8.3, 8.5
 
 ## Profile applicability
 

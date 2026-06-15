@@ -4,7 +4,7 @@
 Test the Wallet returns the error message invalid_request_uri_method when the value of request_uri_method is invalid.
 
 ## References
-[OpenID4VP], Section 8.5
+- [OpenID4VP] Section 8.5
 
 ## Profile applicability
 

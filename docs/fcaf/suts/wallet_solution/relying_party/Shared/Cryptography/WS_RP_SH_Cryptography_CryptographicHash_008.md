@@ -4,7 +4,7 @@
 Verify that Wallet raises an error if Verifier uses any hashing function other than SHA-256 and that is not included in the Verifier Client Metadata.
 
 ## References
-[HAIP] section 8
+- [HAIP] Section 8
 
 ## Profile applicability
 Wallet does not support other hash algorithms besides SHA-256.

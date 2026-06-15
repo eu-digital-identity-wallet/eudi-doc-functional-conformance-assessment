@@ -4,7 +4,7 @@
 Verify that when the Wallet sent a wallet_nonce in the POST request and the received Request Object contains the matching wallet_nonce claim, the Wallet validates the match and continues processing.
 
 ## References
-[OpenID4VP] section 5.10.1
+- [OpenID4VP] Section 5.10.1
 
 ## Profile applicability
 

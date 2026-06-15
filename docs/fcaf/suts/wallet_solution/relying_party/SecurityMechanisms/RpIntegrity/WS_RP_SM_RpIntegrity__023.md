@@ -4,8 +4,8 @@
 Verify that, for signed requests, Wallet accepts Client Identifier Prefix `x509_hash` as defined in section 5.9.3 of [OIDF.OID4VP].
 
 ## References
-[HAIP] section 5 (introduction)
-[OpenID4VP] 5.9.3
+- [HAIP] Section 5 (introduction)
+- [OpenID4VP] Section 5.9.3
 
 ## Profile applicability
 

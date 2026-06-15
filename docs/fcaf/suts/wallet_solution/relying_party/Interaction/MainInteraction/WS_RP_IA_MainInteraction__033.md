@@ -4,7 +4,7 @@
 Verify that the Wallet correctly evaluates a combination of value constraints in a single DCQL Query, withholding any credentials that fail even a single individual requested criterion.
 
 ## References
-[OpenID4VP], Section 6.4
+- [OpenID4VP] Section 6.4
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required

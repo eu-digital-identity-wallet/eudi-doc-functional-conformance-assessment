@@ -4,7 +4,7 @@
 Verify that when the Wallet receives a Request Object via the DC API and the Wallet is configured NOT to validate signatures, it processes the request without signature validation in accordance with its configured profile.
 
 ## References
-[OpenID4VP] Section 5.3, 5.9.3, Appendix A
+- [OpenID4VP] Sections 5.3, 5.9.3, Appendix A
 
 ## Profile applicability
 

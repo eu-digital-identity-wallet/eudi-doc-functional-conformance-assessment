@@ -4,9 +4,8 @@
 This test case verifies that the DataElementValue of data element `issuing_jurisdiction` contains a valid country subdivision code. Note that `issuing_jurisdiction` is the Attribute Identifier in ISO-mdoc for the Data Identifier issuing_jurisdiction.
 
 ## References
-European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook    
-"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 6). 
-ISO 3166-2:2020, 6.1
+- [PID rulebook] Annex 3.01, Section 4.1 (Table 6)
+- [ISO 3166-2:2020] 6.1
 
 ## EUDI-wallet relevancy
 EUDI_specific | EUDI_optional

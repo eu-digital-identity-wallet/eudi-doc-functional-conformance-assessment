@@ -4,9 +4,8 @@
 This test case verifies that the format of the DataElementValue of data element `birth_date` is correct. Note that `birth_date` is the Attribute Identifier in ISO-mdoc for the Data Identifier birth_date.
 
 ## References
-European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.4    
-"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 6).  
-RFC 3339 section 5.6
+- [PID rulebook] Annex 3.01 paragraph 3.1.4, Section 4.1 (Table 6)
+- [RFC3339] Section 5.6
 
 ## EUDI-wallet relevancy
 EUDI_specific | EUDI_required

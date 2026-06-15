@@ -4,7 +4,7 @@
 Test the Wallet responds with invalid_request when the Wallet does not support the Client Identifier Prefix passed in the Authorization Request.
 
 ## References
-[OpenID4VP] Sections 8.5, 5.9.3
+- [OpenID4VP] Sections 8.5, 5.9.3
 
 ## Profile applicability
 

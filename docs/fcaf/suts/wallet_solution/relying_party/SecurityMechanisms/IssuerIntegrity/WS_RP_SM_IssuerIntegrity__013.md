@@ -4,7 +4,7 @@
 Verify that Wallet supports X.509 certificate-based key resolution to validate the issuer signature of an SD-JWT VC.
 
 ## References
-[HAIP] section 6.1.1
+- [HAIP] Section 6.1.1
 
 ## Profile applicability
 Wallet supports IETF SD-JWT VC 

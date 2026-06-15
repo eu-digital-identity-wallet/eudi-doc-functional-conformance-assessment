@@ -4,7 +4,7 @@
 Test the following condition when processing claims path pointer array is at step 2.1: if the key does not exist in element currently selected, remove that element from the selection.
 
 ## References
-[OpenID4VP] Section 7.2.1, 7.3
+- [OpenID4VP] Sections 7.2.1, 7.3
 
 ## Profile applicability
 claims path pointer when applied to a JSON-based Credential

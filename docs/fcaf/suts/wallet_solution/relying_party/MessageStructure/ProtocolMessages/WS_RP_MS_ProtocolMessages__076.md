@@ -4,7 +4,7 @@
 Test the Wallet accepts a DCQL-query with an empty credential property "meta" and handles request without further constraints on the credential.
 
 ## References
-[OpenID4VP], Section 6.1
+- [OpenID4VP] Section 6.1
 
 ## Profile applicability
 

@@ -4,7 +4,7 @@
 Test the elements in "options" MUST be identifiers that reference elements in "credentials".
 
 ## References
-[OpenID4VP], Section 6.2
+- [OpenID4VP] Section 6.2
 
 ## Profile applicability
 

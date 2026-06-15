@@ -4,7 +4,7 @@
 Test the Wallet redirects the user agent to the redirect_uri if this parameter is included in the initial Authorization Request.
 
 ## References
-[OpenID4VP], Section 8
+- [OpenID4VP] Section 8
 
 ## Profile applicability
 Same device

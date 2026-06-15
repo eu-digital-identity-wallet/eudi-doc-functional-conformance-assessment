@@ -4,7 +4,7 @@
 Verify that when the Wallet receives an Authorization Request under the conditions of Section 5.3 (i.e. require_cryptographic_holder_binding = false) without a state parameter, it rejects the request.
 
 ## References
-[OpenID4VP] sections 5.3, 8.5
+- [OpenID4VP] Sections 5.3, 8.5
 
 ## Profile applicability
 

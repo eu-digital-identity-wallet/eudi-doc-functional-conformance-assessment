@@ -4,7 +4,7 @@
 Test that Wallet accepts an HTTP 200 response with Content-Type: application/json after sending the Authorization Response to the response_uri.
 
 ## References
-[OpenID4VP], Section 8
+- [OpenID4VP] Section 8
 
 ## Profile applicability
 

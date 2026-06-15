@@ -5,7 +5,7 @@
 Test If the Wallet cannot satisfy any of the options in the claim_sets, it MUST NOT return any claims.
 
 ## References
-[OpenID4VP], Section 6.4
+- [OpenID4VP] Section 6.4
 
 ## Profile applicability
 

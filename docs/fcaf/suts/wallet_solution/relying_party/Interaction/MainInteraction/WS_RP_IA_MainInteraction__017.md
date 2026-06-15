@@ -4,7 +4,7 @@
 Test that when claims is absent in the request the Wallet MUST return only the claims that are mandatory to present, NO selectively disclosable claims.
 
 ## References
-[OpenID4VP], Section 6.4
+- [OpenID4VP] Section 6.4
 
 ## Profile applicability
 ISO mDL

@@ -4,7 +4,7 @@
 Verify that the Wallet returns an invalid_transaction_data error when the type field inside a transaction_data object is not a string.
 
 ## References
-[OpenID4VP] sections 5.1, 8.3, 8.4
+- [OpenID4VP] Sections 5.1, 8.3, 8.4
 
 ## Profile applicability
 

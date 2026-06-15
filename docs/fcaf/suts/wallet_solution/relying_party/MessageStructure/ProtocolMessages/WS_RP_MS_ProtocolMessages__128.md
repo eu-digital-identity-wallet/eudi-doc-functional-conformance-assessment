@@ -4,7 +4,7 @@
 Test the Wallet ignores an unrecognized parameter in both the Authorization request & the response following a POST to a response_uri.
 
 ## References
-[OpenID4VP], Section 8.2
+- [OpenID4VP] Section 8.2
 
 ## Profile applicability
 

@@ -4,7 +4,7 @@
 Test the Wallet rejects a DCQL-query with credential property "require_cryptographic_holder_binding" present but in incorrect format (i.e. not a boolean)
 
 ## References
-[OpenID4VP] sections 6.1, 8.5
+- [OpenID4VP] Sections 6.1, 8.5
 
 ## Profile applicability
 

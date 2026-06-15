@@ -4,7 +4,7 @@
 Verify that if a User unchecks a claim in the Wallet UI, it is excluded from the response.
 
 ## References
-[OpenID4VP], Section 6.4
+- [OpenID4VP] Section 6.4
 
 ## Profile applicability
 

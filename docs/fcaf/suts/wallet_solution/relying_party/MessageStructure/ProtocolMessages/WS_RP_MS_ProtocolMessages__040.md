@@ -4,7 +4,7 @@
 Verify that when the Verifier uses the redirect_uri Client Identifier Prefix and omits the redirect_uri Authorization Request parameter, the Wallet derives the redirect target from the Client Identifier and processes the request successfully.
 
 ## References
-[OpenID4VP] section 5.9.3
+- [OpenID4VP] Section 5.9.3
 
 ## Profile applicability
 

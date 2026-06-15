@@ -4,7 +4,7 @@
 Test that the credential_sets "options" property is REQUIRED and correctly processed by the Wallet.
 
 ## References
-[OpenID4VP] Sections 6.2, 8.5
+- [OpenID4VP] Sections 6.2, 8.5
 
 ## Profile applicability
 

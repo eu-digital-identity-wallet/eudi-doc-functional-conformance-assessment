@@ -4,7 +4,7 @@
 Verify that when the Wallet receives an Authorization Request using the reserved origin: Client Identifier Prefix outside a DC API context, the Wallet rejects the request.
 
 ## References
-[OpenID4VP] section 5.9.3
+- [OpenID4VP] Section 5.9.3
 
 ## Profile applicability
 

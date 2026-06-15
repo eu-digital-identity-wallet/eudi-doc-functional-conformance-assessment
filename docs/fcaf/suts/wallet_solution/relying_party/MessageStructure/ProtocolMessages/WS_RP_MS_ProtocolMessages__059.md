@@ -4,7 +4,7 @@
 Test that the Wallet ignores unknown properties at the top level of a DCQL-query.
 
 ## References
-[OpenID4VP], Section 6
+- [OpenID4VP] Section 6
 
 ## Profile applicability
 

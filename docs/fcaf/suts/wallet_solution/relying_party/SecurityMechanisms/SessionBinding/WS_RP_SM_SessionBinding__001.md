@@ -5,7 +5,7 @@ Verify that when the Wallet receives an Authorization Request that contains a va
 
 ## References
 
-[OpenID4VP] Sections 5.2, 14.1
+- [OpenID4VP] Sections 5.2, 14.1
 
 ## Profile applicability
 

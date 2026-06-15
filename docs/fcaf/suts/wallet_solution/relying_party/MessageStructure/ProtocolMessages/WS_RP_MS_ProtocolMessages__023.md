@@ -5,7 +5,7 @@ Verify that when the Authorization Request contains a request_uri parameter and 
 
 ## References
 
-[OpenID4VP] Sections 5.1, 5.10
+- [OpenID4VP] Sections 5.1, 5.10
 
 ## Profile applicability
 

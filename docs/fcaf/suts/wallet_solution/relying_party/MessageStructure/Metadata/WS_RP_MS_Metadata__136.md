@@ -4,7 +4,7 @@
 Verify that when the Wallet uses a Client Identifier Prefix that permits signed Request Objects, the Wallet lists supported Request Object signing algorithms in the request_object_signing_alg_values_supported parameter of wallet_metadata.
 
 ## References
-[OpenID4VP] section 5.10
+- [OpenID4VP] Section 5.10
 
 ## Profile applicability
 

@@ -4,7 +4,7 @@
 Verify that when the Wallet receives a Request Object using the x509_hash Client Identifier Prefix with valid signature and trust chain, and all non-key Verifier metadata is provided within the client_metadata parameter, the Wallet uses client_metadata as the source of all non-key metadata.
 
 ## References
-[OpenID4VP] section 5.9.3
+- [OpenID4VP] Section 5.9.3
 
 ## Profile applicability
 

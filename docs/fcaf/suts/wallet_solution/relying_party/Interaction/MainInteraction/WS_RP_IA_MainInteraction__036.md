@@ -4,7 +4,7 @@
 Test that the vp_token parameter returned by the wallet must be a JSON-encoded object.
 
 ## References
-[OpenID4VP], Section 8
+- [OpenID4VP] Section 8
 
 ## Profile applicability
 

@@ -4,7 +4,7 @@
 Verify that upon any HTTP error response from the Request-URI endpoint the Wallet terminates the process.
 
 ## References
-[OpenID4VP] Section 5.10.2
+- [OpenID4VP] Section 5.10.2
 
 ## Profile applicability
 

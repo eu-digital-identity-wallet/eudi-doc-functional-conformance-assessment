@@ -4,7 +4,7 @@
 Test that the Wallet will accept a DCQL query with credentials with a claims property without a "values" property.
 
 ## References
-[OpenID4VP], Section 6.3
+- [OpenID4VP] Section 6.3
 
 ## Profile applicability
 

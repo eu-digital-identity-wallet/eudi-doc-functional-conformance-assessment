@@ -4,7 +4,7 @@
 Test the Wallet processes a DCQL-query with an aki trusted_authorities value correctly when the Wallet does NOT contain a credential whose X.509 certificate chain matches the specified AuthorityKeyIdentifier.
 
 ## References
-[OpenID4VP], Section 6.1.1.1
+- [OpenID4VP] Section 6.1.1.1
 
 ## Profile applicability
 Wallet supports trusted authorities query based on 'aki'.

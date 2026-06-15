@@ -4,7 +4,7 @@
 Verify that when a verifier_info attestation omits the credential_ids field, the Wallet applies the attestation to all Credentials requested in the DCQL query.
 
 ## References
-[OpenID4VP] Section 5.1
+- [OpenID4VP] Section 5.1
 
 ## Profile applicability
 

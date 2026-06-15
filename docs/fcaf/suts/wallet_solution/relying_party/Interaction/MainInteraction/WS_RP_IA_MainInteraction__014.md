@@ -4,7 +4,7 @@
 A Credential presentation may include "extra" claims not selected according to rules, if they are requested by a different query within the same session.
 
 ## References
-[OpenID4VP], Section 6.4
+- [OpenID4VP] Section 6.4
 
 ## Profile applicability
 

@@ -4,7 +4,7 @@
 Test that Wallet returns an error after an HTTP error response from the Verifier.
 
 ## References
-[OpenID4VP] Sections 8.2, 8.5
+- [OpenID4VP] Sections 8.2, 8.5
 
 ## Profile applicability
 

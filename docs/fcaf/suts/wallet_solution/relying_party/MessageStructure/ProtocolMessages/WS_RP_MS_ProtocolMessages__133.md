@@ -4,7 +4,7 @@
 Test that Response Mode direct_post.jwt causes the Wallet to send the Authorization Response using an HTTP POST request.
 
 ## References
-[OpenID4VP], Section 8
+- [OpenID4VP] Section 8
 
 ## Profile applicability
 

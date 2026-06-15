@@ -4,7 +4,7 @@
 Test the Wallet rejects a DCQL-query with the credential property "trusted_authorities" in an incorrect format (i.e. not an array).
 
 ## References
-[OpenID4VP] sections 6.1, 8.5
+- [OpenID4VP] Sections 6.1, 8.5
 
 ## Profile applicability
 

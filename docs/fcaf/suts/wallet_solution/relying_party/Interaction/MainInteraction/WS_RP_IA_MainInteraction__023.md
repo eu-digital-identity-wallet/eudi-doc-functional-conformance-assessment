@@ -5,7 +5,7 @@
 
 ## References
 
-[OpenID4VP] Sections 6.4, 6.3
+- [OpenID4VP] Sections 6.4, 6.3
 
 ## Profile applicability
 

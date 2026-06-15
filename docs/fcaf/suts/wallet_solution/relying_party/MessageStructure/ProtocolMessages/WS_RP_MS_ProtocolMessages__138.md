@@ -4,7 +4,7 @@
 Test that the Wallet responds with invalid_scope when the Requested scope value is malformed.
 
 ## References
-[OpenID4VP], Section 8
+- [OpenID4VP] Section 8
 
 ## Profile applicability
 

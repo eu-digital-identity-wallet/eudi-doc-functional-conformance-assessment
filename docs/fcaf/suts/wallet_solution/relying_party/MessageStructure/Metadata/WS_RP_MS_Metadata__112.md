@@ -4,7 +4,7 @@
 Verify that when the Wallet receives an Authorization Request using the openid_federation Client Identifier Prefix containing a valid trust_chain parameter, the Wallet processes the trust_chain and uses it for Verifier trust establishment.
 
 ## References
-[OpenID4VP] section 5.9.3
+- [OpenID4VP] Section 5.9.3
 
 ## Profile applicability
 

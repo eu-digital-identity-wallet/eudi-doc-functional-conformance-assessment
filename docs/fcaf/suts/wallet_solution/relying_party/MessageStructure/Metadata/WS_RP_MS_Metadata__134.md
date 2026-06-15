@@ -4,7 +4,7 @@
 Verify that when the Wallet requires encrypted Request Objects, it advertises public encryption keys in wallet_metadata.jwks and the supported algorithms via authorization_encryption_alg_values_supported and authorization_encryption_enc_values_supported, and the Wallet successfully decrypts the encrypted Request Object received from the Verifier.
 
 ## References
-[OpenID4VP] section 5.10
+- [OpenID4VP] Section 5.10
 
 ## Profile applicability
 

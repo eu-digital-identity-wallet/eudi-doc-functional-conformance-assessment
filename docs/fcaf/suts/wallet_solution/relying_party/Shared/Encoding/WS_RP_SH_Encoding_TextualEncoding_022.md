@@ -4,7 +4,7 @@
 Test that when the wallet sends the authorization response using HTTP POST, the names and values in the body MUST be encoded using UTF-8
 
 ## References
-[OpenID4VP], Section 8
+- [OpenID4VP] Section 8
 
 ## Profile applicability
 

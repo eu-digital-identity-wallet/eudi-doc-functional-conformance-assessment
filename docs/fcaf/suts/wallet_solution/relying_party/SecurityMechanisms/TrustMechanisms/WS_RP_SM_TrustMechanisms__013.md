@@ -4,7 +4,7 @@
 Verify the Wallet can navigate an ETSI Trusted List (List of Trusted Lists) to identify and validate a Trust Service Provider’s (TSP) certificate.
 
 ## References
-[OpenID4VP], Section 6.1.1.2
+- [OpenID4VP] Section 6.1.1.2
 
 ## Profile applicability
 

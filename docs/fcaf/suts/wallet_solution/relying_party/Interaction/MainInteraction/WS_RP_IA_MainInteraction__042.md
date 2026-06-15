@@ -4,7 +4,7 @@
 Test the wallet does NOT include entries in the vp_token, for optional Credential Queries, when there are no matching Credentials.
 
 ## References
-[OpenID4VP], Section 8
+- [OpenID4VP] Section 8
 
 ## Profile applicability
 
