@@ -1211,23 +1211,21 @@
 <p>[OIDF.OID4VP] section 5.10.1</p>
 <h2 id="profile-applicability">Profile applicability</h2>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
-<p>EUDI_generic |  EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h2 id="preconditions">Preconditions</h2>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
 <li>Wallet receives an Authorization Request with request_uri_method = post.</li>
 <li>Wallet sends a POST request and receives a Request Object containing all required Authorization Request parameters.</li>
-<li>Wallet parses the Request Object.</li>
-<li>Wallet extracts the Authorization Request parameters from the Request Object.</li>
+<li>The Wallet processes the request and sends an Authorization Response to the Verifier.</li>
 </ol>
 <h2 id="expected-results">Expected results</h2>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
 <li>Wallet successfully receives the Authorization Request.</li>
 <li>Wallet successfully receives the Request Object.</li>
-<li>Wallet successfully parses the Request Object.</li>
-<li>Wallet extracts all Authorization Request parameters and uses them for the remainder of the flow; presentation flow proceeds.</li>
+<li>The Authorization Response sent by the Wallet is consistent with the parameter values from the Request Object.</li>
 </ol>
 
 

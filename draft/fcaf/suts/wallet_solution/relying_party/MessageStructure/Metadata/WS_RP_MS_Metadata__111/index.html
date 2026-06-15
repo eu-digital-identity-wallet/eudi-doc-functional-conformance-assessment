@@ -1206,25 +1206,23 @@
 
 <h1 id="ws_rp_ms_metadata_111">WS_RP_MS_Metadata_111</h1>
 <h2 id="objective">Objective</h2>
-<p>Verify that when the Wallet receives a signed Authorization Request using a Client Identifier Prefix that supports signing (e.g. x509_hash, openid_federation), the Wallet successfully verifies the signature and processes the request.</p>
+<p>Verify that when the Wallet receives a signed Authorization Request using a Client Identifier Prefix that supports signing (e.g. x509_hash, openid_federation, verifier_attestation, decentralized_identifier, x509_san_dns), the Wallet accepts the request and proceeds with the presentation flow.</p>
 <h2 id="references">References</h2>
 <p>[OIDF.OID4VP] section 5.9.3</p>
 <h2 id="profile-applicability">Profile applicability</h2>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
-<p>EUDI_generic |  EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h2 id="preconditions">Preconditions</h2>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
 <li>Wallet receives a signed Authorization Request using a Client Identifier Prefix that supports signing (e.g. x509_hash).</li>
-<li>Wallet parses the Authorization Request.</li>
 <li>Wallet verifies the signature using the keys resolvable through the Client Identifier Prefix.</li>
 </ol>
 <h2 id="expected-results">Expected results</h2>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
 <li>Wallet successfully receives the Authorization Request.</li>
-<li>Wallet successfully parses the Authorization Request.</li>
 <li>Wallet successfully verifies the signature and processes the signed request; presentation flow proceeds.</li>
 </ol>
 

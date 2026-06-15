@@ -1206,26 +1206,26 @@
 
 <h1 id="ws_rp_ms_metadata_116">WS_RP_MS_Metadata_116</h1>
 <h2 id="objective">Objective</h2>
-<p>Verify that when the Wallet receives an Authorization Request using the verifier_attestation Client Identifier Prefix where the original Client Identifier (part after the prefix) equals the sub claim of the Verifier attestation JWT, the Wallet processes the request.</p>
+<p>Verify that when the Wallet receives an Authorization Request using the verifier_attestation Client Identifier Prefix where the original Client Identifier (part after the prefix) equals the subclaim of the Verifier attestation JWT, the Wallet processes the request.</p>
 <h2 id="references">References</h2>
 <p>[OIDF.OID4VP] section 5.9.3</p>
 <h2 id="profile-applicability">Profile applicability</h2>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
-<p>EUDI_generic |  EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h2 id="preconditions">Preconditions</h2>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
-<li>Wallet receives an Authorization Request using the verifier_attestation: prefix where the original Client Identifier matches the sub claim of the attestation JWT.</li>
+<li>Wallet receives an Authorization Request using the verifier_attestation: prefix where the original Client Identifier matches the subclaim of the attestation JWT.</li>
 <li>Wallet parses the Authorization Request.</li>
-<li>Wallet validates that the original Client Identifier equals the sub claim of the Verifier attestation JWT.</li>
+<li>Wallet validates that the original Client Identifier equals the subclaim of the Verifier attestation JWT.</li>
 </ol>
 <h2 id="expected-results">Expected results</h2>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
 <li>Wallet successfully receives the Authorization Request.</li>
 <li>Wallet successfully parses the Authorization Request.</li>
-<li>Wallet verifies the Client Identifier matches the sub claim; request is processed; presentation flow proceeds.</li>
+<li>Wallet verifies the Client Identifier matches the subclaim; request is processed; presentation flow proceeds.</li>
 </ol>
 
 

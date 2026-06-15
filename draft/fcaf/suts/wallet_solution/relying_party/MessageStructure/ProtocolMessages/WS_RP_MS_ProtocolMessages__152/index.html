@@ -1206,24 +1206,24 @@
 
 <h1 id="ws_rp_ms_protocolmessages_152">WS_RP_MS_ProtocolMessages_152</h1>
 <h2 id="objective">Objective</h2>
-<p>Test the wallet returns the error message invalid_request_uri_method when the value of request_uri_method is invalid.</p>
+<p>Test the Wallet returns the error message invalid_request_uri_method when the value of request_uri_method is invalid.</p>
 <h2 id="references">References</h2>
-<p>[OID4VP Section 8]</p>
+<p>[OID4VP Section 8.5]</p>
 <h2 id="profile-applicability">Profile applicability</h2>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
 <p>EUDI_generic | EUDI_required</p>
 <h2 id="preconditions">Preconditions</h2>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
-<li>The wallet engages with verifier.</li>
-<li>The verifier sends an Authorization request with request_uri, setting request_uri_method to an invalid value.</li>
+<li>The Wallet engages with verifier.</li>
+<li>The Verifier sends an Authorization request with request_uri, setting request_uri_method to an invalid value.</li>
 <li>Wallet processes request.</li>
-<li>Test the response returned by the wallet to the Verifier.</li>
+<li>Test the response returned by the Wallet to the Verifier.</li>
 </ol>
 <h2 id="expected-results">Expected results</h2>
 <ol>
-<li>Wallet-verifier interaction is successfully initiated</li>
-<li>Wallet receives request</li>
+<li>Wallet-verifier interaction is successfully initiated.</li>
+<li>Wallet receives request.</li>
 <li>The Wallet identifies it cannot fetch request object.</li>
 <li>Verify the Wallet returns an error response, where the error parameter is exactly invalid_request_uri_method.</li>
 </ol>

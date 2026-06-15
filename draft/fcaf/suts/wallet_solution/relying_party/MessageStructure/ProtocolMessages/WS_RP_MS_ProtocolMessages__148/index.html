@@ -1206,28 +1206,28 @@
 
 <h1 id="ws_rp_ms_protocolmessages_148">WS_RP_MS_ProtocolMessages_148</h1>
 <h2 id="objective">Objective</h2>
-<p>Test the wallet returns the access_denied error message when the End-User did not give consent to share the requested Credentials with the Verifier.</p>
+<p>Test the Wallet returns the access_denied error message when the End-User did not give consent to share the requested Credentials with the Verifier.</p>
 <h2 id="references">References</h2>
-<p>[OID4VP Section 8]</p>
+<p>[OID4VP Section 8.5]</p>
 <h2 id="profile-applicability">Profile applicability</h2>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
 <p>EUDI_generic | EUDI_required</p>
 <h2 id="preconditions">Preconditions</h2>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
-<li>The wallet engages with verifier.</li>
-<li>The verifier sends an Authorization request for credentials the wallet does have.</li>
+<li>The Wallet engages with verifier.</li>
+<li>The Verifier sends an Authorization request for credentials the wallet does have.</li>
 <li>Wallet processes request.</li>
 <li>The User explicitly does NOT give consent to share requested credential.</li>
-<li>Test the response returned by the wallet to the Verifier.</li>
+<li>Test the response returned by the Wallet to the Verifier.</li>
 </ol>
 <h2 id="expected-results">Expected results</h2>
 <ol>
-<li>Wallet-verifier interaction is successfully initiated</li>
-<li>Wallet receives request</li>
+<li>Wallet-verifier interaction is successfully initiated.</li>
+<li>Wallet receives request.</li>
 <li>The Wallet proceeds to credential selection or user authorization.</li>
-<li>True.</li>
-<li>Verify the Wallet does NOT return a vp_token, instead it returns an error response, where the error parameter is exactly access_denied.</li>
+<li>The wallet detects the user's denial of consent and does not proceed with credential presentation.</li>
+<li>The Wallet does NOT return a vp_token, instead it returns an error response, where the error parameter is exactly access_denied.</li>
 </ol>
 
 

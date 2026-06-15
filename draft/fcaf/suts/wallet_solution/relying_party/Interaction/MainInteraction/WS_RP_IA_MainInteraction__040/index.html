@@ -1206,24 +1206,25 @@
 
 <h1 id="ws_rp_ia_maininteraction_040">WS_RP_IA_MainInteraction_040</h1>
 <h2 id="objective">Objective</h2>
-<p>Test that if "multiple" is omitted, the vp_token array contains only one presentation.</p>
+<p>Test that if the multiple parameter is omitted in a credential query, it defaults to false, and the wallet includes only one presentation in the corresponding response array.</p>
 <h2 id="references">References</h2>
-<p>[OID4VP Section 8]</p>
+<p>[OID4VP Section 8], [OID4VP Section 6.1]</p>
 <h2 id="profile-applicability">Profile applicability</h2>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
 <p>EUDI_generic | EUDI_required</p>
 <h2 id="preconditions">Preconditions</h2>
+<p>The wallet contains at least two distinct valid credentials that can satisfy the same single credential query (e.g., two different digital diplomas).</p>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
-<li>The wallet engages with the verifier</li>
-<li>The verifier sends a request where credential query has "multiple" omitted</li>
-<li>The wallet returns a vp_token parameter in its response</li>
+<li>The wallet engages with the verifier.</li>
+<li>The Verifier sends an Authorization Request with a valid dcql_query requesting a credential, where the multiple attribute for that query is completely omitted.</li>
+<li>The Wallet processes the request, the user selects and Authorizes the maximum no. of credential for presentation allowed, and the wallet transmits the response payload.</li>
 </ol>
 <h2 id="expected-results">Expected results</h2>
 <ol>
-<li>Wallet-verifier interaction is successfully initiated</li>
-<li>Wallet receives request</li>
-<li>Verify the vp_token array contains only one presentation.</li>
+<li>Wallet and Verifier can interact.</li>
+<li>The Wallet recieves request.</li>
+<li>The Verifier receives an Authorization Response where the array associated with the credential query ID inside the vp_token object contains exactly one presentation.</li>
 </ol>
 
 

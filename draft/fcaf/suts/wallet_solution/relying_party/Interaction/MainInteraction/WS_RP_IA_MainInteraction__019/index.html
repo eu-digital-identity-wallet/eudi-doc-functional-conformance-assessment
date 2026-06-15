@@ -1206,24 +1206,27 @@
 
 <h1 id="ws_rp_ia_maininteraction_019">WS_RP_IA_MainInteraction_019</h1>
 <h2 id="objective">Objective</h2>
-<p>Test that when a claim_sets is present, the Wallet allows the selection of only one specific combination from claim_sets, preventing disclosure of multuiple sets.</p>
+<p>Test that when a claim_sets is present, the Wallet automatically selects and returns only the first satisfiable combination from claim_sets based on the verifier's preference order, preventing disclosure of multiple sets.</p>
 <h2 id="references">References</h2>
 <p>[OID4VP 6.4]</p>
 <h2 id="profile-applicability">Profile applicability</h2>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
 <p>EUDI_generic | EUDI_required</p>
 <h2 id="preconditions">Preconditions</h2>
+<p>The wallet contains credentials that can satisfy all claim sets defined in the request.</p>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
-<li>The Wallet engages with the Verifier</li>
-<li>Verifier sends a DCQL query with a claim_sets holding 3 "claim_sets objects"</li>
-<li>Wallet does not try to send both claim_sets objects</li>
+<li>The Wallet engages with the Verifier.</li>
+<li>The Verifier sends an Authorization Request with a valid DCQL query containing a claim_sets property holding 3 distinct claim set objects in a specific order of preference.</li>
+<li>The Wallet generates a response and prompts the user to authorize the release of data.</li>
+<li>The wallet sends the response.</li>
 </ol>
 <h2 id="expected-results">Expected results</h2>
 <ol>
 <li>Wallet and Verifier can interact.</li>
-<li>Wallet identifies two sets it can satisfy based on its credentials.</li>
-<li>Once a valid set has been presented to user, the remaining claim_sets object will not be used.</li>
+<li>The Wallet recieves the request.</li>
+<li>The user Authorizes the presentation without requiring them to manually choose between different claim sets.</li>
+<li>The Verifier receives a response containing only the data requested in the first claim set object, proving that the wallet automatically prioritised the first match and excluded all subsequent satisfiable sets.</li>
 </ol>
 
 

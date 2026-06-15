@@ -1213,18 +1213,19 @@
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
 <p>EUDI_generic | EUDI_required</p>
 <h2 id="preconditions">Preconditions</h2>
-<p>Wallet does NOT contain matching credentials for the queries optional credentials</p>
+<p>Wallet does NOT contain credential A.
+Wallet does contain credential B.</p>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
-<li>The wallet engages with the verifier</li>
-<li>The verifier sends a request where credential query includes some optional credentials</li>
+<li>The wallet engages with the verifier.</li>
+<li>The verifier sends a request where credential query includes an optional credential A, along with a non-optional credential B.</li>
 <li>The wallet returns a vp_token parameter in its response</li>
 </ol>
 <h2 id="expected-results">Expected results</h2>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated</li>
-<li>Wallet receives request</li>
-<li>Verify the vp_token entries contains only non-optional credentials.</li>
+<li>Wallet receives request, and user gives permission.</li>
+<li>Verify the vp_token entries contains only credential B</li>
 </ol>
 
 

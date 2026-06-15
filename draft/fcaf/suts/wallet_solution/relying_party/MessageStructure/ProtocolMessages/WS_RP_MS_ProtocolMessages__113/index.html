@@ -1206,24 +1206,24 @@
 
 <h1 id="ws_rp_ms_protocolmessages_113">WS_RP_MS_ProtocolMessages_113</h1>
 <h2 id="objective">Objective</h2>
-<p>Test that the wallet will NOT accept a DCQL query with credentials with a claims property but without a claims "path"</p>
+<p>Test that the Wallet will NOT accept a DCQL query with credentials with a claims property but without a claims "path" property.</p>
 <h2 id="references">References</h2>
-<p>[OID4VP 6.3]</p>
+<p>[OID4VP] Sections 6.3, 8.5</p>
 <h2 id="profile-applicability">Profile applicability</h2>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
 <p>EUDI_generic | EUDI_required</p>
 <h2 id="preconditions">Preconditions</h2>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
-<li>The Wallet engages with the Verifier</li>
-<li>Verifier sends a DCQL query with a "claims" object missing its "path" property</li>
-<li>Wallet handles Query</li>
+<li>The Wallet engages with the Verifier.</li>
+<li>Verifier sends a DCQL query with a "claims" object missing its "path" property.</li>
+<li>Wallet handles Query.</li>
 </ol>
 <h2 id="expected-results">Expected results</h2>
 <ol>
 <li>Wallet and Verifier can interact.</li>
 <li>Wallet receives the request.</li>
-<li>The wallet detects malformed "id" and returns an "invalid request" error</li>
+<li>The Wallet returns an invalid_request error.</li>
 </ol>
 
 

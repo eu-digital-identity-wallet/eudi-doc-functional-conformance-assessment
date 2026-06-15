@@ -1206,12 +1206,12 @@
 
 <h1 id="ws_rp_ms_protocolmessages_119">WS_RP_MS_ProtocolMessages_119</h1>
 <h2 id="objective">Objective</h2>
-<p>Verify negative case that the wallet cannot accept a claims path pointer that is an empty array</p>
+<p>Verify negative case that the wallet cannot accept a claims path pointer that is an empty array.</p>
 <h2 id="references">References</h2>
-<p>[OID4VP 7]</p>
+<p>[OID4VP] sections 7, 8.5</p>
 <h2 id="profile-applicability">Profile applicability</h2>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
-<p>EUDI_generic |  EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h2 id="preconditions">Preconditions</h2>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
@@ -1221,10 +1221,12 @@
 <h2 id="expected-results">Expected results</h2>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
-<li>The Wallet rejects the request by either:
-a. answering with an error with details (<code>invalid_request</code>), 
-b. answering with an error without providing details or,
-c. discontinuing the interaction.</li>
+<li>The Wallet rejects the request by either:<ol>
+<li>answering with an error with details (<code>invalid_request</code>), </li>
+<li>answering with an error without providing details or,</li>
+<li>discontinuing the interaction.</li>
+</ol>
+</li>
 </ol>
 
 

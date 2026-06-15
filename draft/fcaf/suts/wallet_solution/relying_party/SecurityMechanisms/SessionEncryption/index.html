@@ -1219,14 +1219,14 @@
 <h4 id="preconditions">Preconditions</h4>
 <h4 id="test-scenario">Test Scenario</h4>
 <ol>
-<li>The wallet engages with the verifier</li>
-<li>The verifier sends an Authorization request to the wallet, with response mode=direct_post.jwt</li>
-<li>Wallet returns an encrypted Authorization response</li>
+<li>The wallet engages with the verifier.</li>
+<li>The verifier sends an Authorization request to the wallet, with response mode=direct_post.jwt.</li>
+<li>Wallet returns an encrypted Authorization response.</li>
 </ol>
 <h4 id="expected-results">Expected results</h4>
 <ol>
-<li>Wallet-verifier interaction is successfully initiated</li>
-<li>Wallet receives request</li>
+<li>Wallet-verifier interaction is successfully initiated.</li>
+<li>Wallet receives request.</li>
 <li>Verify the Encryption the wallet used is an unsigned, encrypted JWT [RFC7519]. </li>
 </ol>
 <!-- END INCLUDE -->
@@ -1241,15 +1241,15 @@
 <h4 id="preconditions_1">Preconditions</h4>
 <h4 id="test-scenario_1">Test Scenario</h4>
 <ol>
-<li>The wallet engages with the verifier</li>
-<li>The verifier sends an Authorization request to the wallet, with response mode=direct_post.jwt, and a client_metadata object containing a JWK without an alg parameter</li>
-<li>Wallet processes request</li>
+<li>The wallet engages with the verifier.</li>
+<li>The verifier sends an Authorization request to the wallet, with response mode=direct_post.jwt, and a client_metadata object containing a JWK without an alg parameter.</li>
+<li>Wallet processes request.</li>
 </ol>
 <h4 id="expected-results_1">Expected results</h4>
 <ol>
-<li>Wallet-verifier interaction is successfully initiated</li>
-<li>Wallet receives request</li>
-<li>Verify the wallet does NOT send a response, instead returns an error</li>
+<li>Wallet-verifier interaction is successfully initiated.</li>
+<li>Wallet receives request.</li>
+<li>Verify the wallet does NOT send a response, instead returns an error.</li>
 </ol>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_sm_sessionencryption_003">WS_RP_SM_SessionEncryption_003</h3>
@@ -1263,7 +1263,7 @@
 <h4 id="preconditions_2">Preconditions</h4>
 <h4 id="test-scenario_2">Test Scenario</h4>
 <ol>
-<li>The wallet engages with the verifier</li>
+<li>The wallet engages with the verifier.</li>
 <li>The verifier sends an Authorization request to the wallet, with response mode=direct_post.jwt, and a client_metadata object containing a JWK with an alg value different to the JWE alg value</li>
 <li>Wallet processes request</li>
 </ol>
@@ -1274,8 +1274,234 @@
 <li>Verify the wallet does NOT send a response, instead returns an error</li>
 </ol>
 <!-- END INCLUDE -->
+<h3 id="ws_rp_sm_sessionencryption_005">WS_RP_SM_SessionEncryption_005</h3>
+<h4 id="objective_3">Objective</h4>
+<p>Verify that in the encrypted response sent by the Wallet: the JWE <code>alg</code> (algorithm) header parameter (as defined in section 4.1.1 of [RFC7516]) value is set to ECDH-ES (as defined in section 4.6 of [RFC7518]), with key agreement utilizing keys on the P-256 curve (as defined in section 6.2.1.1 of [RFC7518]).</p>
+<h4 id="references_3">References</h4>
+<p>[OIDF.HAIP] section 5 (introduction) 
+[OIDF.OID4VP] section 8.3
+[RFC7516] section 4.1.1
+[RFC7518] 6.2.1.1</p>
+<h4 id="profile-applicability_3">Profile applicability</h4>
+<h4 id="eudi-wallet-relevancy_3">EUDI-wallet relevancy</h4>
+<p>EUDI_generic, EUDI_required</p>
+<h4 id="preconditions_3">Preconditions</h4>
+<h4 id="test-scenario_3">Test Scenario</h4>
+<ol>
+<li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
+<li>Verifier sends a presentation request</li>
+<li>Verify if Wallet asks for user consent to present the Credential.</li>
+<li>User gives consent.</li>
+<li>Verify if Wallet sends encrypted response by using utilizing response mode direct_post.jwt.</li>
+<li>Verify if, in the encrypted response, the JWE alg (algorithm) header parameter value is set ECDH-ES.</li>
+<li>Verify if key agreement uses keys on the P-256 curve.</li>
+</ol>
+<h4 id="expected-results_3">Expected results</h4>
+<ol>
+<li>This is the case.</li>
+<li>This is the case.</li>
+<li>Wallet asks for user consent.</li>
+<li>This is the case.</li>
+<li>Wallet sends encrypted response.</li>
+<li>In the encrypted response, JWE alg (algorithm) header parameter value is set ECDH-ES.</li>
+<li>Key agreement uses keys on the P-256 curve. </li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_sm_sessionencryption_006">WS_RP_SM_SessionEncryption_006</h3>
+<h4 id="objective_4">Objective</h4>
+<p>Verify that Wallet raises an error if there is no <code>jwk</code> within <code>client_metadata</code> sent by the Verifier with <code>alg</code> value set to ECDH-ES.</p>
+<h4 id="references_4">References</h4>
+<p>[OIDF.HAIP] section 5 (introduction) 
+[OIDF.OID4VP] section 8.3 The alg parameter MUST be present in the JWKs
+[RFC7516] section 4.1.1
+[RFC7518] section 6.2.1.1</p>
+<h4 id="profile-applicability_4">Profile applicability</h4>
+<h4 id="eudi-wallet-relevancy_4">EUDI-wallet relevancy</h4>
+<p>EUDI_generic, EUDI_required</p>
+<h4 id="preconditions_4">Preconditions</h4>
+<h4 id="test-scenario_4">Test Scenario</h4>
+<ol>
+<li>Verify that Wallet raises an error if there is no "jwk" within "client_metadata" sent by the Verifier with "alg" value set to ECDH-ES.</li>
+</ol>
+<h4 id="expected-results_4">Expected results</h4>
+<ol>
+<li>Wallet raises an error. </li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_sm_sessionencryption_007">WS_RP_SM_SessionEncryption_007</h3>
+<h4 id="objective_5">Objective</h4>
+<p>Verify that Wallet supports A128GCM for the JWE <code>enc</code> (encryption algorithm).</p>
+<h4 id="references_5">References</h4>
+<p>[OIDF.HAIP] section 5 (introduction) 
+[OIDF.OID4VP] section 8.3
+[RFC7516] section 4.1.2</p>
+<h4 id="profile-applicability_5">Profile applicability</h4>
+<p>Wallet supports only A128GCM</p>
+<h4 id="eudi-wallet-relevancy_5">EUDI-wallet relevancy</h4>
+<p>EUDI_generic, EUDI_required</p>
+<h4 id="preconditions_5">Preconditions</h4>
+<h4 id="test-scenario_5">Test Scenario</h4>
+<ol>
+<li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
+<li>Verifier sends a presentation request.</li>
+<li>Verify if Wallet asks for user consent to present the Credential.</li>
+<li>User gives consent.</li>
+<li>Verify if Wallet sends an encrypted response.</li>
+<li>Check value from JWE "enc" (encryption algorithm) header parameter used by the Wallet.</li>
+</ol>
+<h4 id="expected-results_5">Expected results</h4>
+<ol>
+<li>This is the case.</li>
+<li>This is the case.</li>
+<li>Wallet asks for user consent.</li>
+<li>This is the case.</li>
+<li>Wallet sends an encrypted response.</li>
+<li>JWE "enc" value is set to A128GCM.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_sm_sessionencryption_008">WS_RP_SM_SessionEncryption_008</h3>
+<h4 id="objective_6">Objective</h4>
+<p>Verify that Wallet supports A256GCM for the JWE <code>enc</code> (encryption algorithm).</p>
+<h4 id="references_6">References</h4>
+<p>[OIDF.HAIP] section 5 (introduction) 
+[OIDF.OID4VP] section 8.3
+[RFC7516] section 4.1.2</p>
+<h4 id="profile-applicability_6">Profile applicability</h4>
+<p>Wallet supports only A256GCM </p>
+<h4 id="eudi-wallet-relevancy_6">EUDI-wallet relevancy</h4>
+<p>EUDI_generic, EUDI_required</p>
+<h4 id="preconditions_6">Preconditions</h4>
+<h4 id="test-scenario_6">Test Scenario</h4>
+<ol>
+<li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
+<li>Verifier sends a presentation request.</li>
+<li>Verify if Wallet asks for user consent to present the Credential.</li>
+<li>User gives consent.</li>
+<li>Verify if Wallet sends an encrypted response.</li>
+<li>Check value from JWE "enc" (encryption algorithm) header parameter used by the Wallet.</li>
+</ol>
+<h4 id="expected-results_6">Expected results</h4>
+<ol>
+<li>This is the case.</li>
+<li>This is the case.</li>
+<li>Wallet asks for user consent.</li>
+<li>This is the case.</li>
+<li>Wallet sends an encrypted response.</li>
+<li>JWE "enc" value is set to A256GCM.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_sm_sessionencryption_009">WS_RP_SM_SessionEncryption_009</h3>
+<h4 id="objective_7">Objective</h4>
+<p>Verify that if both A128GCM and A256GCM are supported for the JWE <code>enc</code> (encryption algorithm), Wallet will use A256GCM for the JWE <code>enc</code></p>
+<h4 id="references_7">References</h4>
+<p>[OIDF.HAIP] section 5 (introduction) 
+[OIDF.OID4VP] section 8.3
+[RFC7516] section 4.1.2</p>
+<h4 id="profile-applicability_7">Profile applicability</h4>
+<p>Wallet supports A128GCM and A256GCM</p>
+<h4 id="eudi-wallet-relevancy_7">EUDI-wallet relevancy</h4>
+<p>EUDI_generic, EUDI_required</p>
+<h4 id="preconditions_7">Preconditions</h4>
+<h4 id="test-scenario_7">Test Scenario</h4>
+<ol>
+<li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
+<li>Verifier sends a presentation request.</li>
+<li>Verify if Wallet asks for user consent to present the Credential.</li>
+<li>User gives consent.</li>
+<li>Verify if Wallet sends an encrypted response.</li>
+<li>Check value from JWE "enc" (encryption algorithm) header parameter (section 4.1.2 of [RFC7516]) used by the Wallet.</li>
+</ol>
+<h4 id="expected-results_7">Expected results</h4>
+<ol>
+<li>This is the case.</li>
+<li>This is the case.</li>
+<li>Wallet asks for user consent.</li>
+<li>This is the case.</li>
+<li>Wallet sends an encrypted response.</li>
+<li>JWE "enc" value is set to A256GCM.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_sm_sessionencryption_010">WS_RP_SM_SessionEncryption_010</h3>
+<h4 id="objective_8">Objective</h4>
+<p>Verify that if Verifier did not supply ephemeral encryption public keys specific to each Authorization Request via client metadata, the Wallet responds with an error (detailed or not) or discontinues the transaction.</p>
+<h4 id="references_8">References</h4>
+<p>[OIDF.HAIP] section 5 (introduction) 
+[OIDF.OID4VP] section 8.3</p>
+<h4 id="profile-applicability_8">Profile applicability</h4>
+<h4 id="eudi-wallet-relevancy_8">EUDI-wallet relevancy</h4>
+<p>EUDI_generic, EUDI_required</p>
+<h4 id="preconditions_8">Preconditions</h4>
+<h4 id="test-scenario_8">Test Scenario</h4>
+<ol>
+<li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
+<li>Verifier sends a presentation request and does not supply ephemeral encryption public keys specific to each Authorization Request.</li>
+<li>Check Wallet behaviour.</li>
+</ol>
+<h4 id="expected-results_8">Expected results</h4>
+<ol>
+<li>This is the case.</li>
+<li>This is the case.</li>
+<li>Wallet either:
+a. answers with an error with details (<code>invalid_client_metadata</code>), 
+b. answers with an error without providing details or,
+c. discontinues the interaction.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_sm_sessionencryption_011">WS_RP_SM_SessionEncryption_011</h3>
+<h4 id="objective_9">Objective</h4>
+<p>Verify that - for each authorization request - Wallet uses the correct ephemeral key passed via client metadata in the encryption process. </p>
+<h4 id="references_9">References</h4>
+<p>[OIDF.HAIP] section 5 (introduction) 
+[OIDF.OID4VP] section 8.3</p>
+<h4 id="profile-applicability_9">Profile applicability</h4>
+<h4 id="eudi-wallet-relevancy_9">EUDI-wallet relevancy</h4>
+<p>EUDI_generic, EUDI_required</p>
+<h4 id="preconditions_9">Preconditions</h4>
+<h4 id="test-scenario_9">Test Scenario</h4>
+<ol>
+<li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
+<li>Verifier sends presentation request including 2 authorization requests, ephemeral public key <code>key1</code> for authorization request 1 and ephemeral public key <code>key2</code> for authorization request 2.</li>
+<li>Verify if Wallet uses the correctly ephemeral public key for each one of the authorization requests in the response encryption process.</li>
+</ol>
+<h4 id="expected-results_9">Expected results</h4>
+<ol>
+<li>This is the case.</li>
+<li>Wallet uses <code>key1</code> as input for key agreement included in the encryption process of the response related to "authorization request 1".</li>
+<li>Wallet uses <code>key2</code> as input for key agreement included in the encryption process of the response related to "authorization request 2". </li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_sm_sessionencryption_012">WS_RP_SM_SessionEncryption_012</h3>
+<h4 id="objective_10">Objective</h4>
+<p>Verify that, in the presentation flow via Redirects, Wallet sends encrypted response when Authorization Request includes <code>response_mode</code> parameter set to <code>direct_post.jwt</code>.</p>
+<h4 id="references_10">References</h4>
+<p>[OIDF.HAIP] section 5.1
+[OIDF.OID4VP] section 8.3</p>
+<h4 id="profile-applicability_10">Profile applicability</h4>
+<p>Presentations via Redirects</p>
+<h4 id="eudi-wallet-relevancy_10">EUDI-wallet relevancy</h4>
+<p>EUDI_generic, EUDI_required</p>
+<h4 id="preconditions_10">Preconditions</h4>
+<h4 id="test-scenario_10">Test Scenario</h4>
+<ol>
+<li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
+<li>Verifier sends presentation request with response mode direct_post.jwt.</li>
+<li>Verify if Wallet asks for user consent to present the Credential.</li>
+<li>User gives consent.</li>
+<li>Verify if Wallet sends encrypted response using parameters provided in "client_metadata".</li>
+<li>Verify if Verifier is able to decrypt response sent by the Wallet.  </li>
+</ol>
+<h4 id="expected-results_10">Expected results</h4>
+<ol>
+<li>This is the case.</li>
+<li>This is the case.</li>
+<li>Wallet asks for user consent.</li>
+<li>This is the case.</li>
+<li>Wallet sends encrypted response using parameters provided in "client_metadata".</li>
+<li>Verifier is able to decrypt response sent by the Wallet.  </li>
+</ol>
+<!-- END INCLUDE -->
 
-<!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md -->
+<!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md -->
 
 
 

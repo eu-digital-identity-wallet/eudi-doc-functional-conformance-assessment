@@ -1206,28 +1206,28 @@
 
 <h1 id="ws_rp_ms_protocolmessages_140">WS_RP_MS_ProtocolMessages_140</h1>
 <h2 id="objective">Objective</h2>
-<p>Test that the wallet will not leave the verifier hanging after an error response, it must terminate the session.</p>
+<p>Test that the Wallet will not leave the verifier hanging after an error response, it must terminate the session.</p>
 <h2 id="references">References</h2>
-<p>[OID4VP Section 8]</p>
+<p>[OID4VP] Sections 5.2, 5.5, 8.5</p>
 <h2 id="profile-applicability">Profile applicability</h2>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
 <p>EUDI_generic | EUDI_required</p>
 <h2 id="preconditions">Preconditions</h2>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
-<li>The wallet engages with the verifier.</li>
-<li>The verifier sends an Authorization request with a scope value that is intentionally empty (e.g. missing any value)</li>
+<li>The Wallet engages with the verifier.</li>
+<li>The Verifier sends an Authorization request with a scope value that is intentionally empty (e.g. missing any value).</li>
 <li>Wallet processes the request and identifies the scope as invalid.</li>
-<li>Test the response returned by the wallet to the Verifier.</li>
-<li>Test the wallet terminates the session.</li>
+<li>Test the response returned by the Wallet to the Verifier.</li>
+<li>Test the Wallet terminates the session.</li>
 </ol>
 <h2 id="expected-results">Expected results</h2>
 <ol>
-<li>Wallet-verifier interaction is successfully initiated</li>
-<li>Wallet receives request</li>
-<li>True: The Wallet does NOT proceed to credential selection or user authorization.</li>
-<li>Verify: The Wallet returns an error response where the error parameter is exactly invalid_scope.</li>
-<li>True</li>
+<li>Wallet-verifier interaction is successfully initiated.</li>
+<li>Wallet receives request.</li>
+<li>The wallet identifies the scope as invalid and does not proceed to credential selection or user authorization.</li>
+<li>The wallet returns an error response where the error parameter is exactly invalid_scope.</li>
+<li>The wallet terminates the session without leaving the verifier hanging; no further communication is sent.</li>
 </ol>
 
 

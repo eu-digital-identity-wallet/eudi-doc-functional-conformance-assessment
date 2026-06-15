@@ -1206,16 +1206,16 @@
 
 <h1 id="ws_rp_ms_protocolmessages_123">WS_RP_MS_ProtocolMessages_123</h1>
 <h2 id="objective">Objective</h2>
-<p>Test that when the wallet is given an invalid claims path pointer, it will abort processing and return an error.</p>
+<p>Test that when the Wallet is given an invalid claims path pointer, it will abort processing and return an error.</p>
 <h2 id="references">References</h2>
-<p>[OID4VP 7]</p>
+<p>[OID4VP] Sections 7, 8.5</p>
 <h2 id="profile-applicability">Profile applicability</h2>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
 <p>EUDI_generic | EUDI_required</p>
 <h2 id="preconditions">Preconditions</h2>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
-<li>Engage wallet-verifier interaction.</li>
+<li>Engage Wallet-verifier interaction.</li>
 <li>Verifier sends an Authorization Request with a DCQL query containing a claims path pointer with an invalid element (e.g. path: [true]).</li>
 <li>Wallet parses the Authorization Request and the DCQL query.</li>
 <li>Wallet validates the structure of the claims path pointer.</li>

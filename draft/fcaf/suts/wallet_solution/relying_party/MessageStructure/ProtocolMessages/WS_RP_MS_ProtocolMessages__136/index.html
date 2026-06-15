@@ -1206,23 +1206,23 @@
 
 <h1 id="ws_rp_ms_protocolmessages_136">WS_RP_MS_ProtocolMessages_136</h1>
 <h2 id="objective">Objective</h2>
-<p>Test a wallet that received transaction_data in a request, but cannot support it, MUST return an error.</p>
+<p>Test a Wallet that received transaction_data in a request, but cannot support it, MUST return an error.</p>
 <h2 id="references">References</h2>
-<p>[OID4VP Section 8]</p>
+<p>[OID4VP Section 8.4]</p>
 <h2 id="profile-applicability">Profile applicability</h2>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
 <p>EUDI_generic | EUDI_required</p>
 <h2 id="preconditions">Preconditions</h2>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
-<li>The wallet engages with the verifier</li>
-<li>The verifier sends an Authorization request containing a transaction_data object which the wallet cannot support</li>
-<li>Wallet determines it cannot support this request</li>
+<li>The Wallet engages with the verifier.</li>
+<li>The Verifier sends an Authorization request containing a transaction_data object which the wallet cannot support.</li>
+<li>Wallet determines it cannot support this request.</li>
 </ol>
 <h2 id="expected-results">Expected results</h2>
 <ol>
-<li>Wallet-verifier interaction is successfully initiated</li>
-<li>Wallet receives request</li>
+<li>Wallet-verifier interaction is successfully initiated.</li>
+<li>Wallet receives request.</li>
 <li>Wallet does NOT show a credential selection screen to user, it will return an error response.</li>
 </ol>
 

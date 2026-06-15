@@ -1206,7 +1206,7 @@
 
 <h1 id="ws_rp_ms_protocolmessages_003">WS_RP_MS_ProtocolMessages_003</h1>
 <h2 id="objective">Objective</h2>
-<p>Verify that the Wallet rejects a Request Object where the typ header parameter equal oauth-authz-req+jwt.</p>
+<p>Verify that the Wallet rejects a Request Object where the typ header parameter equals oauth-authz-req+jwt.</p>
 <h2 id="references">References</h2>
 <p>[RFC9101]; [OIDF.OID4VP] section 5</p>
 <h2 id="profile-applicability">Profile applicability</h2>
@@ -1221,7 +1221,7 @@
 <h2 id="expected-results">Expected results</h2>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
-<li>Wallet successfully processes the Authorization Request and proceeds with the presentation flow.</li>
+<li>Wallet successfully processes the Authorization Request and proceeds with the presentation flow. Wallet MUST NOT process request objects where the typ does not have the value oauth-authz-req+jwt</li>
 </ol>
 
 

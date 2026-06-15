@@ -1208,22 +1208,22 @@
 <h2 id="objective">Objective</h2>
 <p>Test the Wallet rejects DCQL-query with credentials property "claim_sets" present that is not an array.</p>
 <h2 id="references">References</h2>
-<p>[OID4VP 6.1]</p>
+<p>[OID4VP] Section 6.1, 8.5</p>
 <h2 id="profile-applicability">Profile applicability</h2>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
 <p>EUDI_generic | EUDI_required</p>
 <h2 id="preconditions">Preconditions</h2>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
-<li>The Wallet engages with the Verifier</li>
-<li>The Verifier sends a Authorization Request with a DCQL-query with a credential with a non-array type claim_sets</li>
+<li>The Wallet engages with the Verifier.</li>
+<li>The Verifier sends an Authorization Request with a DCQL-query with a credential with a non-array type claim_sets</li>
 <li>The Wallet evaluates the request.</li>
 </ol>
 <h2 id="expected-results">Expected results</h2>
 <ol>
 <li>Wallet and Verifier can interact.</li>
 <li>Wallet receives the request.</li>
-<li>The wallet detects an invalid crendential "claims_sets" property and returns an "invalid request" error</li>
+<li>The wallet detects an invalid credential "claims_sets" property and returns an invalid_request error</li>
 </ol>
 
 

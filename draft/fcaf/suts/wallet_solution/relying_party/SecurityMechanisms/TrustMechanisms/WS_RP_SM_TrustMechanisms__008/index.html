@@ -1206,29 +1206,26 @@
 
 <h1 id="ws_rp_sm_trustmechanisms_008">WS_RP_SM_TrustMechanisms_008</h1>
 <h2 id="objective">Objective</h2>
-<p>Test that the wallet behaves correctly when AKI match NOT successful.</p>
+<p>Test the Wallet processes a DCQL-query with an aki trusted_authorities value correctly when the Wallet does NOT contain a credential whose X.509 certificate chain matches the specified AuthorityKeyIdentifier.</p>
 <h2 id="references">References</h2>
-<p>[OID4VP 6.1.1]</p>
+<p>[OID4VP 6.1.1.1]</p>
 <h2 id="profile-applicability">Profile applicability</h2>
-<p>Wallet supports trusted authorities query based on 'aki'</p>
+<p>Wallet supports trusted authorities query based on 'aki'.</p>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
 <p>EUDI_generic | EUDI_required</p>
 <h2 id="preconditions">Preconditions</h2>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
-<li>The Wallet engages with the Verifier</li>
-<li>Verifier sends a DCQL query requesting a credential which will not match to any in wallet.</li>
-<li>The Wallet evaluates the request.</li>
+<li>The Wallet engages with the Verifier.</li>
+<li>The Verifier sends a DCQL query containing a credential query with trusted_authorities of type aki and a KeyIdentifier value that does NOT match the AuthorityKeyIdentifier of any X.509 certificate in the chain of any credential the Wallet holds.</li>
+<li>The Wallet returns a response to the Verifier.</li>
 </ol>
 <h2 id="expected-results">Expected results</h2>
 <ol>
 <li>Wallet and Verifier can interact.</li>
-<li>Wallet receives the request.
-3a. The wallet identifies a mismatch. </li>
+<li>The Wallet successfully receives the DCQL query.</li>
+<li>The Wallet does not return any credential in the Authorization Response (no credential satisfies the aki constraint).</li>
 </ol>
-<p>3b. The credential is excluded.
-3c. The wallet does not present the mismatched credential to the user.
-3d. The wallet returns a privacy keeping (generic error) to verifier, NOT specific "AKI wrong".</p>
 
 
 

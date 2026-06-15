@@ -1208,7 +1208,7 @@
 <h2 id="objective">Objective</h2>
 <p>Test that the claims path pointer array is processed left to right</p>
 <h2 id="references">References</h2>
-<p>[OID4VP 7]</p>
+<p>[OID4VP 7] Section 7.1.1</p>
 <h2 id="profile-applicability">Profile applicability</h2>
 <p>claims path pointer when applied to a JSON-based Credential</p>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
@@ -1231,7 +1231,8 @@
       "university": "University of Betelgeuse"
     }
   ],
-  "nationalities": ["British", "Betelgeusian"]</p>
+  "nationalities": ["British", "Betelgeusian"]
+}</p>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
 <li>The Wallet engages with the Verifier</li>
@@ -1243,7 +1244,7 @@
 <ol>
 <li>Wallet and Verifier can interact.</li>
 <li>Wallet receives the request.</li>
-<li>True</li>
+<li>Wallet successfully parses the request.</li>
 <li>Verify the wallet responds with an error</li>
 </ol>
 

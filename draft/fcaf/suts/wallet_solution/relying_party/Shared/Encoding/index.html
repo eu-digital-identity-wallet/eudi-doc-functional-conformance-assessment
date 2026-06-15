@@ -1355,7 +1355,7 @@
 <h4 id="objective_3">Objective</h4>
 <p>Test that the claims path pointer array is processed left to right</p>
 <h4 id="references_3">References</h4>
-<p>[OID4VP 7]</p>
+<p>[OID4VP 7] Section 7.1.1</p>
 <h4 id="profile-applicability_3">Profile applicability</h4>
 <p>claims path pointer when applied to a JSON-based Credential</p>
 <h4 id="eudi-wallet-relevancy_3">EUDI-wallet relevancy</h4>
@@ -1378,7 +1378,8 @@
       "university": "University of Betelgeuse"
     }
   ],
-  "nationalities": ["British", "Betelgeusian"]</p>
+  "nationalities": ["British", "Betelgeusian"]
+}</p>
 <h4 id="test-scenario_3">Test Scenario</h4>
 <ol>
 <li>The Wallet engages with the Verifier</li>
@@ -1390,7 +1391,7 @@
 <ol>
 <li>Wallet and Verifier can interact.</li>
 <li>Wallet receives the request.</li>
-<li>True</li>
+<li>Wallet successfully parses the request.</li>
 <li>Verify the wallet responds with an error</li>
 </ol>
 <!-- END INCLUDE -->
@@ -1398,7 +1399,7 @@
 <h4 id="objective_4">Objective</h4>
 <p>Test that the Wallet handles DCQL-query for SD-JWT VC credential with a matching top-level claim path pointer.</p>
 <h4 id="references_4">References</h4>
-<p>[OID4VP 7]</p>
+<p>[OID4VP 7] Section 7.1.1</p>
 <h4 id="profile-applicability_4">Profile applicability</h4>
 <p>claims path pointer when applied to a JSON-based Credential</p>
 <h4 id="eudi-wallet-relevancy_4">EUDI-wallet relevancy</h4>
@@ -1416,7 +1417,7 @@
 <ol>
 <li>Wallet and Verifier can interact.</li>
 <li>Wallet receives the request.</li>
-<li>true</li>
+<li>Wallet successfully parses the request.</li>
 <li>Verify the wallet responds with the credential, including selective disclosure of the named attribute.</li>
 </ol>
 <!-- END INCLUDE -->
@@ -1424,7 +1425,7 @@
 <h4 id="objective_5">Objective</h4>
 <p>Test that the Wallet handles DCQL-query for SD-JWT VC credential with a non-matching top-level claim path pointer.</p>
 <h4 id="references_5">References</h4>
-<p>[OID4VP 7]</p>
+<p>[OID4VP 7] Section 7.1.1</p>
 <h4 id="profile-applicability_5">Profile applicability</h4>
 <p>claims path pointer when applied to a JSON-based Credential</p>
 <h4 id="eudi-wallet-relevancy_5">EUDI-wallet relevancy</h4>
@@ -1442,7 +1443,7 @@
 <ol>
 <li>Wallet and Verifier can interact.</li>
 <li>Wallet receives the request.</li>
-<li>true</li>
+<li>Wallet successfully parses the request.</li>
 <li>Wallet rejects the request by either:
 a. answering with an error with details (<code>invalid_request</code>), 
 b. answering with an error without providing details or,
@@ -1453,7 +1454,7 @@ c. discontinuing the interaction.</li>
 <h4 id="objective_6">Objective</h4>
 <p>Test that when processing claims path pointer array, an element at the first level is selected. If the selected element is not an object, abort processing and return an error</p>
 <h4 id="references_6">References</h4>
-<p>[OID4VP 7]</p>
+<p>[OID4VP] Section 7.2.1, 7.3</p>
 <h4 id="profile-applicability_6">Profile applicability</h4>
 <p>claims path pointer when applied to a JSON-based Credential</p>
 <h4 id="eudi-wallet-relevancy_6">EUDI-wallet relevancy</h4>
@@ -1477,11 +1478,12 @@ c. discontinuing the interaction.</li>
       "university": "University of Betelgeuse"
     }
   ],
-  "nationalities": ["British", "Betelgeusian"]</p>
+  "nationalities": ["British", "Betelgeusian"]
+}</p>
 <h4 id="test-scenario_6">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction.</li>
-<li>Verifier sends an Authorization Request with a DCQL query containing a claims path pointer where a string element is applied to a value that is NOT a JSON object (e.g. path: ["name", "firstname"] where name is a string).</li>
+<li>Verifier sends an Authorization Request with a DCQL query containing a claims path pointer where a string element is applied to a value that is NOT a JSON object (e.g. claims path pointer: ["name", "firstname"] where name is a string).</li>
 <li>Wallet parses the Authorization Request and the DCQL query.</li>
 <li>Wallet evaluates the claims path pointer against the matching JSON-based Credential.</li>
 <li>Wallet detects that the currently selected element is not an object when the string path element is applied.</li>
@@ -1499,7 +1501,7 @@ c. discontinuing the interaction.</li>
 <h4 id="objective_7">Objective</h4>
 <p>Test the following condition when processing claims path pointer array is at step 2.1: if the key does not exist in element currently selected, remove that element from the selection.</p>
 <h4 id="references_7">References</h4>
-<p>[OID4VP 7]</p>
+<p>[OID4VP] Section 7.2.1, 7.3</p>
 <h4 id="profile-applicability_7">Profile applicability</h4>
 <p>claims path pointer when applied to a JSON-based Credential</p>
 <h4 id="eudi-wallet-relevancy_7">EUDI-wallet relevancy</h4>
@@ -1521,11 +1523,12 @@ c. discontinuing the interaction.</li>
       "university": "University of Betelgeuse"
     }
   ],
-  "nationalities": ["British", "Betelgeusian"]</p>
+  "nationalities": ["British", "Betelgeusian"]
+}</p>
 <h4 id="test-scenario_7">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction. </li>
-<li>Verifier sends an Authorization Request with a DCQL query containing a claims path pointer where a string component targets a key that is absent from one or more currently selected element(s) (e.g. path: ["degrees", null, "type"] where one entry of degrees has no type field).</li>
+<li>Verifier sends an Authorization Request with a DCQL query containing a claims path pointer where a string component targets a key that is absent from one or more currently selected element(s) (e.g. claims path pointer: ["degrees", null, "type"] where one entry of degrees has no type field).</li>
 <li>Wallet parses the Authorization Request and the DCQL query.</li>
 <li>Wallet evaluates the claims path pointer against the matching JSON-based Credential.</li>
 <li>Wallet identifies element(s) where the targeted key is absent and removes them from the selection.</li>
@@ -1545,7 +1548,7 @@ c. discontinuing the interaction.</li>
 <h4 id="objective_8">Objective</h4>
 <p>Test that at step 2.2 of claims path processing if any of the currently selected element(s) is not an array, abort processing and return an error.</p>
 <h4 id="references_8">References</h4>
-<p>[OID4VP 7]</p>
+<p>[OID4VP 7] Section 7.2.1, 7.3</p>
 <h4 id="profile-applicability_8">Profile applicability</h4>
 <p>claims path pointer when applied to a JSON-based Credential</p>
 <h4 id="eudi-wallet-relevancy_8">EUDI-wallet relevancy</h4>
@@ -1568,11 +1571,12 @@ c. discontinuing the interaction.</li>
       "university": "University of Betelgeuse"
     }
   ],
-  "nationalities": ["British", "Betelgeusian"]</p>
+  "nationalities": ["British", "Betelgeusian"]
+}</p>
 <h4 id="test-scenario_8">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction.</li>
-<li>Verifier sends an Authorization Request with a DCQL query containing a claims path pointer where a null component is applied to a currently selected element that is NOT an array (e.g. path: ["address", null, "street_address"] where address is a JSON object rather than an array).</li>
+<li>Verifier sends an Authorization Request with a DCQL query containing a claims path pointer where a null component is applied to a currently selected element that is NOT an array (e.g. claims path pointer: ["address", null, "street_address"] where address is a JSON object rather than an array).</li>
 <li>Wallet parses the Authorization Request and the DCQL query.</li>
 <li>Wallet evaluates the claims path pointer against the matching JSON-based Credential.</li>
 <li>Wallet detects that the currently selected element is not an array when the null component is applied.</li>
@@ -1590,7 +1594,7 @@ c. discontinuing the interaction.</li>
 <h4 id="objective_9">Objective</h4>
 <p>Test that at step 2.3 of claims path processing If any of the currently selected element(s) is not an array, abort processing and return an error.</p>
 <h4 id="references_9">References</h4>
-<p>[OID4VP 7]</p>
+<p>[OID4VP 7] Section 7.2.1, 7.3</p>
 <h4 id="profile-applicability_9">Profile applicability</h4>
 <p>claims path pointer when applied to a JSON-based Credential</p>
 <h4 id="eudi-wallet-relevancy_9">EUDI-wallet relevancy</h4>
@@ -1612,11 +1616,12 @@ c. discontinuing the interaction.</li>
       "university": "University of Betelgeuse"
     }
   ],
-  "nationalities": ["British", "Betelgeusian"]</p>
+  "nationalities": ["British", "Betelgeusian"]
+}</p>
 <h4 id="test-scenario_9">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction.</li>
-<li>Verifier sends an Authorization Request with a DCQL query containing a claims path pointer where a non-negative integer component is applied to a currently selected element that is NOT an array (e.g. path: ["address", "house_no", 0] where house_no is a string).</li>
+<li>Verifier sends an Authorization Request with a DCQL query containing a claims path pointer where a non-negative integer component is applied to a currently selected element that is NOT an array (e.g. claims path pointer: ["address", "house_no", null] where house_no is a string).</li>
 <li>Wallet parses the Authorization Request and the DCQL query.</li>
 <li>Wallet evaluates the claims path pointer against the matching JSON-based Credential.</li>
 <li>Wallet detects that the currently selected element is not an array when the integer component is applied.</li>
@@ -1634,7 +1639,7 @@ c. discontinuing the interaction.</li>
 <h4 id="objective_10">Objective</h4>
 <p>Test that at step 2.3 of claims path processing, if the index does not exist in a selected array, remove that array from the selection. </p>
 <h4 id="references_10">References</h4>
-<p>[OID4VP 7]</p>
+<p>[OID4VP 7] Section 7.2.1, 7.3</p>
 <h4 id="profile-applicability_10">Profile applicability</h4>
 <p>claims path pointer when applied to a JSON-based Credential</p>
 <h4 id="eudi-wallet-relevancy_10">EUDI-wallet relevancy</h4>
@@ -1669,7 +1674,7 @@ c. discontinuing the interaction.</li>
 <h4 id="objective_11">Objective</h4>
 <p>Test that at step 2.4 of claims path processing if the component is anything else, the wallet should abort processing and return an error.</p>
 <h4 id="references_11">References</h4>
-<p>[OID4VP 7]</p>
+<p>[OID4VP 7] Section 7.2.1, 7.3</p>
 <h4 id="profile-applicability_11">Profile applicability</h4>
 <p>claims path pointer when applied to a JSON-based Credential</p>
 <h4 id="eudi-wallet-relevancy_11">EUDI-wallet relevancy</h4>
@@ -1705,7 +1710,7 @@ c. discontinuing the interaction.</li>
 <h4 id="objective_12">Objective</h4>
 <p>Test that at Step 3 of claims path processing, if the set of elements currently selected is empty, abort processing and return an error. </p>
 <h4 id="references_12">References</h4>
-<p>[OID4VP 7]</p>
+<p>[OID4VP 7] Section 7.2.1, 7.3</p>
 <h4 id="profile-applicability_12">Profile applicability</h4>
 <p>claims path pointer when applied to a JSON-based Credential</p>
 <h4 id="eudi-wallet-relevancy_12">EUDI-wallet relevancy</h4>
@@ -1723,7 +1728,7 @@ c. discontinuing the interaction.</li>
 <h4 id="test-scenario_12">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction.</li>
-<li>Verifier sends an Authorization Request with a DCQL query whose claims path pointer resolves to an empty set against the matching Credential (e.g. path: ["address", "postal_code"] where the Credential has no postal_code field under address).</li>
+<li>Verifier sends an Authorization Request with a DCQL query whose claims path pointer resolves to an empty set against the matching Credential (e.g. claims path pointer: ["address", "postal_code"] where the Credential has no postal_code field under address).</li>
 <li>Wallet parses the Authorization Request and the DCQL query.</li>
 <li>Wallet evaluates the claims path pointer against the matching JSON-based Credential.</li>
 <li>Wallet observes that the resulting set of selected JSON elements is empty.</li>
@@ -1741,7 +1746,7 @@ c. discontinuing the interaction.</li>
 <h4 id="objective_13">Objective</h4>
 <p>Verify that when the Wallet receives a DCQL query with a claims path pointer applied to an ISO mdoc Credential, where the path is a two-element array containing a valid namespace and a valid data element identifier, the Wallet selects the corresponding data element and returns it CBOR-encoded in the Authorization Response.</p>
 <h4 id="references_13">References</h4>
-<p>[OID4VP 7]</p>
+<p>[OID4VP 7] Section 7.2, 7.4</p>
 <h4 id="profile-applicability_13">Profile applicability</h4>
 <p>claims path pointer when applied to a credential in ISO mdoc</p>
 <h4 id="eudi-wallet-relevancy_13">EUDI-wallet relevancy</h4>
@@ -1771,7 +1776,7 @@ c. discontinuing the interaction.</li>
 <h4 id="objective_14">Objective</h4>
 <p>Test that the first element of mdoc claims path pointer refers to a namespace.</p>
 <h4 id="references_14">References</h4>
-<p>[OID4VP 7]</p>
+<p>[OID4VP 7] Section 7.2, 7.4</p>
 <h4 id="profile-applicability_14">Profile applicability</h4>
 <p>claims path pointer when applied to a credential in ISO mdoc</p>
 <h4 id="eudi-wallet-relevancy_14">EUDI-wallet relevancy</h4>
@@ -1801,7 +1806,7 @@ c. discontinuing the interaction.</li>
 <h4 id="objective_15">Objective</h4>
 <p>Verify that if the first element of the path does not match any namespace in the mdoc, the Wallet aborts and returns an error.</p>
 <h4 id="references_15">References</h4>
-<p>[OID4VP 7]</p>
+<p>[OID4VP 7] Section 7.2.1 step 2, 7.4</p>
 <h4 id="profile-applicability_15">Profile applicability</h4>
 <p>claims path pointer when applied to a credential in ISO mdoc</p>
 <h4 id="eudi-wallet-relevancy_15">EUDI-wallet relevancy</h4>
@@ -1984,8 +1989,8 @@ c. discontinuing the interaction.</li>
 <p>Wallet has a credential containing non-ASCII characters</p>
 <h4 id="test-scenario_21">Test Scenario</h4>
 <ol>
-<li>The wallet engages with the verifier</li>
-<li>The verifier sends an Authorization request to the wallet, with response mode=direct_post, requesting the non_ASCII credential</li>
+<li>The wallet engages with the verifier.</li>
+<li>The verifier sends an Authorization request to the wallet, with response mode=direct_post.jwt, requesting the non_ASCII credential</li>
 <li>Wallet processes request</li>
 <li>Test the HTTP POST body sent by wallet</li>
 </ol>

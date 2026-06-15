@@ -1206,34 +1206,39 @@
 
 <h1 id="ws_rp_ia_maininteraction_033">WS_RP_IA_MainInteraction_033</h1>
 <h2 id="objective">Objective</h2>
-<p>Checking the wallet is correctly performing logic on range of value constrainsts</p>
+<p>Verify that the Wallet correctly evaluates a combination of value constraints in a single DCQL Query, withholding any credentials that fail even a single individual requested criterion.</p>
 <h2 id="references">References</h2>
-<p>[OID4VP 6.4]</p>
-<h2 id="profile-applicability">Profile applicability</h2>
+<p>[OID4VP Section 6.4]</p>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
 <p>EUDI_generic | EUDI_required</p>
+<h2 id="profile-applicability">Profile applicability</h2>
 <h2 id="preconditions">Preconditions</h2>
-<p>Credentials in wallet are numerical edge cases, string and format edge cases, logical edge cases, array edge cases, DTS edge cases
-Verifier sends a DCQL query with "credentials" just MISSING these edge cases.</p>
+<p>The wallet contains multiple credentials of the same type, provisioned as follows:
+Credential A (Full Match): Perfectly satisfies all criteria, including an <code>expiry</code> = 2025
+Credential B1 (Fails Age): Matches everything else, but <code>age</code> = 17.
+Credential B2 (Fails Data Type): Matches everything else, but <code>kg</code> = 10.5 (float mismatch).
+Credential B3 (Fails Case): Matches everything else, but <code>country</code> = "Spain" (capitalized).
+Credential B4 (Fails Whitespace): Matches everything else, but <code>name</code> = "Smith" (missing trailing space).
+Credential B5 (Fails Encoding): Matches everything else, but <code>city</code> = "Munchen" (missing umlaut).
+Credential B6 (Fails Array): Matches everything else, but <code>array</code> = ["FR", "DE"] (multi-element array).
+Credential B7 (Fails Expiry Boundary): Matches everything else, but <code>expiry</code> = 2026 (violates <code>&lt;=</code> condition).</p>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
-<li>Verifier sends in multiple "credentials" each with a unique case as follows: 
-age &gt;= 18, 
-expiry &lt;= 2025, (also &lt;, &gt;)
-kg == 10 (integer vs float) , 
-country == "spain" (lowercase)
-name == "Smith " (space included)
-city = "München" (special characters)
-"" (missing claims)
-name == "" (null vs "")
-[] (empty lists)
-["FR"] (single element arrays</li>
-<li>Wallet processes DCQL</li>
+<li>The Wallet engages with the Verifier.</li>
+<li>The Verifier sends an Authorization Request with a single DCQL query targeting a single credential with the following combined value constraints:
+   * Logical boundaries: <code>age &gt;= 18</code> and <code>expiry &lt;= 2025</code>
+   * Data type strictness: <code>kg == 10</code>
+   * Case sensitivity: <code>country == "spain"</code>
+   * Whitespace sensitivity: <code>name == "Smith "</code>
+   * Character encoding: <code>city == "München"</code>
+   * Array constraints: Requesting a single-element array <code>["FR"]</code></li>
+<li>The Wallet processes the request.</li>
 </ol>
 <h2 id="expected-results">Expected results</h2>
 <ol>
-<li>Wallet successfully reads and processes "credentials"</li>
-<li>Credentials do not match, and are not returned.</li>
+<li>Wallet and Verifier successfully initiate interaction.</li>
+<li>The Wallet only prompts the user to release Credential A. </li>
+<li>The Wallet completely excludes all target "trap" credentials (B1 through B7) from the user selection prompt.</li>
 </ol>
 
 

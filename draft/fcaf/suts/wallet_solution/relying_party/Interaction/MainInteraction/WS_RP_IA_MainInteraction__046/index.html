@@ -1206,27 +1206,28 @@
 
 <h1 id="ws_rp_ia_maininteraction_046">WS_RP_IA_MainInteraction_046</h1>
 <h2 id="objective">Objective</h2>
-<p>Test for responses of size &gt; URL limits of user agents, the Wallet can respond to the Verifier using the direct_post mechanism.
-Same device custom URL</p>
+<p>Test for responses of size &gt; URL limits of user agents, the Wallet can respond to the Verifier using the direct_post mechanism.</p>
 <h2 id="references">References</h2>
 <p>[OID4VP Section 8]</p>
 <h2 id="profile-applicability">Profile applicability</h2>
-<p>Same device custom URL</p>
+<p>Same device
+response_mode=direct_post.jwt</p>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
 <p>EUDI_generic | EUDI_required</p>
 <h2 id="preconditions">Preconditions</h2>
+<p>The wallet contains a large credential where the resulting presentation size exceeds the typical URL length limit of a user agent.</p>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
-<li>The wallet engages with the verifier</li>
-<li>The verifier sends a request for the large credential, with parameter <code>response_mode=direct_post</code> and a <code>response_uri</code> of the verifier.</li>
+<li>The wallet engages with the verifier.</li>
+<li>The verifier sends a request for the large credential, with parameter <code>response_mode=direct_post.jwt</code> and a <code>response_uri</code> of the verifier.</li>
 <li>The wallet processes the request.</li>
-<li>The wallet responds with request object</li>
+<li>The wallet responds with an Authorization response.</li>
 </ol>
 <h2 id="expected-results">Expected results</h2>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated</li>
 <li>Wallet receives request</li>
-<li>True</li>
+<li>The wallet processes the request successfully, recognises that the response exceeds the user-agent URL limit, and prepares to submit it to the response_uri.</li>
 <li>Verify the wallet submits the response to the response_uri, with the Authorization Response as body of the HTTP-request using the POST method.</li>
 </ol>
 

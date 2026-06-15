@@ -1206,26 +1206,26 @@
 
 <h1 id="ws_rp_ms_protocolmessages_124">WS_RP_MS_ProtocolMessages_124</h1>
 <h2 id="objective">Objective</h2>
-<p>Test that the Wallet ignores any unrecognized parameters when Response Mode = direct_post.</p>
+<p>Test that the Wallet ignores any unrecognized parameters when Response Mode = direct_post.jwt.</p>
 <h2 id="references">References</h2>
-<p>[OID4VP Section 8]</p>
+<p>[OID4VP Section 8.2]</p>
 <h2 id="profile-applicability">Profile applicability</h2>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
 <p>EUDI_generic | EUDI_required</p>
 <h2 id="preconditions">Preconditions</h2>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
-<li>The wallet engages with the verifier</li>
-<li>The verifier sends a request, with parameter <code>response_mode=direct_post</code>plus an additional unknown parameter.</li>
-<li>The wallet processes the request.</li>
-<li>The wallet responds with request object</li>
+<li>The Wallet engages with the verifier.</li>
+<li>The Verifier sends a request, with parameter <code>response_mode=direct_post.jwt</code> plus an additional unknown parameter.</li>
+<li>The Wallet processes the request.</li>
+<li>The Wallet responds with request object.</li>
 </ol>
 <h2 id="expected-results">Expected results</h2>
 <ol>
-<li>Wallet-verifier interaction is successfully initiated</li>
-<li>Wallet receives request</li>
-<li>True</li>
-<li>Verify the wallet submits the response successfully, ignoring the unknown parameter</li>
+<li>Wallet-verifier interaction is successfully initiated.</li>
+<li>Wallet receives request.</li>
+<li>The wallet evaluates the request, ignores the unknown parameter, and proceeds without returning an error.</li>
+<li>The wallet submits the Authorization Response to the verifier successfully.</li>
 </ol>
 
 

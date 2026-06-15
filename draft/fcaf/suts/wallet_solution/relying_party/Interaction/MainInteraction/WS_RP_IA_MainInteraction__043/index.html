@@ -1208,23 +1208,23 @@
 <h2 id="objective">Objective</h2>
 <p>Test the wallet omits optional DCQL query keys in the presentation when no matching credentials exist.</p>
 <h2 id="references">References</h2>
-<p>[OID4VP Section 8]</p>
+<p>[OID4VP Section 8.1]</p>
 <h2 id="profile-applicability">Profile applicability</h2>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
 <p>EUDI_generic | EUDI_required</p>
 <h2 id="preconditions">Preconditions</h2>
-<p>Wallet does NOT contain matching credentials for the queries optional credentials</p>
+<p>Wallet does NOT contain matching credentials for the queries optional credentials.</p>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
-<li>The wallet engages with the verifier</li>
-<li>The verifier sends a request where credential query includes some optional credentials</li>
-<li>The wallet returns a vp_token parameter in its response</li>
+<li>The wallet engages with the verifier.</li>
+<li>The verifier sends a request where credential query includes some optional credentials.</li>
+<li>The wallet returns an empty vp_token parameter in its response.</li>
 </ol>
 <h2 id="expected-results">Expected results</h2>
 <ol>
-<li>Wallet-verifier interaction is successfully initiated</li>
-<li>Wallet receives request</li>
-<li>Verify the vp_token does NOT contain key ids from the optional credentials.</li>
+<li>Wallet-verifier interaction is successfully initiated.</li>
+<li>Wallet receives request, user gives consent.</li>
+<li>Verify the vp_token returned is empty and does NOT contain key IDs from the optional credentials.</li>
 </ol>
 
 

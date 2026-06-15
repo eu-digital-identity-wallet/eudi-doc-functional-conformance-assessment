@@ -1206,7 +1206,7 @@
 
 <h1 id="ws_rp_ia_maininteraction_053">WS_RP_IA_MainInteraction_053</h1>
 <h2 id="objective">Objective</h2>
-<p>Test that the wallet rejects a request when the response_uri parameter is missing and when Response Mode = direct_post</p>
+<p>Test that the wallet rejects a request when the response_uri parameter is missing and when Response Mode = direct_post.jwt</p>
 <h2 id="references">References</h2>
 <p>[OID4VP Section 8]</p>
 <h2 id="profile-applicability">Profile applicability</h2>
@@ -1215,8 +1215,8 @@
 <h2 id="preconditions">Preconditions</h2>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
-<li>The wallet engages with the verifier</li>
-<li>The verifier sends a request, with parameter <code>response_mode=direct_post</code> and missing <code>response_uri</code> parameter.</li>
+<li>The wallet engages with the verifier.</li>
+<li>The verifier sends a request, with parameter <code>response_mode=direct_post.jwt</code> and missing <code>response_uri</code> parameter.</li>
 <li>The wallet processes the request.</li>
 </ol>
 <h2 id="expected-results">Expected results</h2>

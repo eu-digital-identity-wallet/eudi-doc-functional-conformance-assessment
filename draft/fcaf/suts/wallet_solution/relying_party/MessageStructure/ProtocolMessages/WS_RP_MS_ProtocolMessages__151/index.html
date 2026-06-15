@@ -1206,21 +1206,21 @@
 
 <h1 id="ws_rp_ms_protocolmessages_151">WS_RP_MS_ProtocolMessages_151</h1>
 <h2 id="objective">Objective</h2>
-<p>Test the wallet returns the error message vp_formats_not_supported when the wallet does not support any of the formats requested.
+<p>Test the Wallet returns the error message vp_formats_not_supported when the Wallet does not support any of the formats requested.
 (mso_mdoc case)</p>
 <h2 id="references">References</h2>
-<p>[OID4VP Section 8]</p>
+<p>[OID4VP Section 8.5]</p>
 <h2 id="profile-applicability">Profile applicability</h2>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
 <p>EUDI_generic | EUDI_required</p>
 <h2 id="preconditions">Preconditions</h2>
-<p>The wallet supports vc+sd-jwt, but does NOT support mso_mdoc</p>
+<p>The Wallet supports vc+sd-jwt, but does NOT support mso_mdoc</p>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
-<li>The wallet engages with verifier.</li>
+<li>The Wallet engages with verifier.</li>
 <li>The verifier sends an Authorization request where the vp_formats parameter only includes mso_mdoc.</li>
 <li>Wallet processes request.</li>
-<li>Test the response returned by the wallet to the Verifier.</li>
+<li>Test the response returned by the Wallet to the Verifier.</li>
 </ol>
 <h2 id="expected-results">Expected results</h2>
 <ol>

@@ -1213,15 +1213,18 @@
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
 <p>EUDI_generic | EUDI_required</p>
 <h2 id="preconditions">Preconditions</h2>
+<p>The wallet contains a credential that holds both requested claims, but one of those claims has a value that does not match the constraints requested by the Verifier.</p>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
-<li>The verifier sends a DCQL query with 2 Required claims in a credential</li>
-<li>Returns </li>
+<li>The Wallet engages with the Verifier.</li>
+<li>The Verifier sends an Authorization Request with a valid DCQL query requesting a specific credential type with 2 required claims containing specific value constraints.</li>
+<li>The Wallet processes the request.</li>
 </ol>
 <h2 id="expected-results">Expected results</h2>
 <ol>
-<li>Wallet sees only has 1 of those claims in the credential has a matching value, it cannot return the other</li>
-<li>Wallet does NOT return credential containing the claim that did match, sends a privacy keeping  response</li>
+<li>Wallet and Verifier can interact.</li>
+<li>The Wallet does not prompt the user to release the non-matching credential, or indicates to the user that no valid matching credentials are available.</li>
+<li>The Verifier receives a privacy-preserving response completely excluding the credential with the non-matching value.</li>
 </ol>
 
 

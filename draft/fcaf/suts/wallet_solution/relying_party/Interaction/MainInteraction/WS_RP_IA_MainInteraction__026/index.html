@@ -1206,22 +1206,25 @@
 
 <h1 id="ws_rp_ia_maininteraction_026">WS_RP_IA_MainInteraction_026</h1>
 <h2 id="objective">Objective</h2>
-<p>Test when the Wallet cannot deliver all claims requested by the Verifier because it doesnt have one of them, it does NOT return the respective Credential.</p>
+<p>Test when the Wallet cannot deliver all claims requested by the Verifier, because it doesn't have one of them, then it does NOT return the respective Credential.</p>
 <h2 id="references">References</h2>
-<p>[OID4VP 6.4]</p>
+<p>[OID4VP] Section 6.4, 8.5</p>
 <h2 id="profile-applicability">Profile applicability</h2>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
 <p>EUDI_generic | EUDI_required</p>
 <h2 id="preconditions">Preconditions</h2>
+<p>The wallet contains a credential that satisfies only one of the two required claims requested by the Verifier.</p>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
-<li>The verifier sends a DCQL query with 2 Required claims in a credential</li>
-<li>Returns </li>
+<li>The Wallet engages with the Verifier.</li>
+<li>The Verifier sends an Authorization Request with a valid DCQL query requesting a specific credential type with 2 required claims.</li>
+<li>The Wallet processes the request.</li>
 </ol>
 <h2 id="expected-results">Expected results</h2>
 <ol>
-<li>Wallet sees it only has 1 of those claims in the credential, it cannot return the other</li>
-<li>Wallet does NOT return credential containing the claim that did match, sends a privacy keeping  response</li>
+<li>Wallet and Verifier can interact.</li>
+<li>The Wallet does not prompt the user to release the partially matching credential, or indicates to the user that no matching credentials are available.</li>
+<li>The Verifier receives a privacy-preserving error response access denied.</li>
 </ol>
 
 

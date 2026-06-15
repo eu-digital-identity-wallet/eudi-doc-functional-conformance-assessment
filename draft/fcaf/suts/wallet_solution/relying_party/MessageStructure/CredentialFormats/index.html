@@ -1220,7 +1220,7 @@
 B) The Referenced Token includes the Status element that contains the Status_list element (index and URI)
 C) The EUDI Wallet has retrieved a Status List Token from the referenced URI
 D) The Status List Token is validated
-E)  The Issuer issues a JWT Referenced Token with a status_list claim to the EUDI Wallet.</p>
+E) The Issuer issues a JWT Referenced Token with a status_list claim to the EUDI Wallet.</p>
 <h4 id="test-scenario">Test Scenario</h4>
 <ol>
 <li>Verify that the Wallet accepts and stores the JWT Referenced Token.</li>
@@ -1339,8 +1339,8 @@ Section 6.1 of [RFC8949]</p>
 <h4 id="preconditions_5">Preconditions</h4>
 <h4 id="test-scenario_5">Test Scenario</h4>
 <ol>
-<li>The Wallet engages with the Verifier</li>
-<li>The Verifier sends a DCQL query requesting a specific element from an mdoc</li>
+<li>The Wallet engages with the Verifier.</li>
+<li>The Verifier sends a DCQL query requesting a specific element from a mdoc</li>
 <li>Wallet handles Query</li>
 </ol>
 <h4 id="expected-results_5">Expected results</h4>
@@ -1348,12 +1348,350 @@ Section 6.1 of [RFC8949]</p>
 <li>Wallet and Verifier can interact.</li>
 <li>Wallet receives the request.
 3a. The Wallet retrieves the mdoc from secure storage, noting CBOR format.
-3b.  The Wallet converts the CBOR value into a JSON-compatible representation to compare it against the query filter - it uses the guidance from Section 6.1 of [RFC8949] to avoid isues like Data Type fidelity
+3b.  The Wallet converts the CBOR value into a JSON-compatible representation to compare it against the query filter - it uses the guidance from Section 6.1 of [RFC8949] to avoid issues like Data Type fidelity
 3c. The Wallet performs the matching logic</li>
 </ol>
 <!-- END INCLUDE -->
+<h3 id="ws_rp_ms_credentialformats_035">WS_RP_MS_CredentialFormats_035</h3>
+<h4 id="objective_6">Objective</h4>
+<p>Verify that Wallet supports ISO mdoc in the presentation flow. </p>
+<h4 id="references_6">References</h4>
+<p>[OIDF.HAIP] section 5 (introduction)
+[OIDF.HAIP] section 5.3.1
+[OIDF.HAIP] section 6
+[OIDF.OID4VP] appendix B.2</p>
+<h4 id="profile-applicability_6">Profile applicability</h4>
+<p>Wallet supports ISO mdoc</p>
+<h4 id="eudi-wallet-relevancy_6">EUDI-wallet relevancy</h4>
+<p>EUDI_generic, EUDI_required</p>
+<h4 id="preconditions_6">Preconditions</h4>
+<h4 id="test-scenario_6">Test Scenario</h4>
+<ol>
+<li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
+<li>Verifier sends presentation request for Credential in ISO mdoc format.</li>
+<li>Verify if Wallet asks for user consent to present the Credential.</li>
+<li>User gives consent.</li>
+<li>Verify if Wallet presents Credential to the Verifier.</li>
+<li>Check value from Credential Format Identifier.</li>
+</ol>
+<h4 id="expected-results_6">Expected results</h4>
+<ol>
+<li>This is the case</li>
+<li>This is the case.</li>
+<li>Wallet asks for user consent.</li>
+<li>This is the case.</li>
+<li>Wallet presents Credential to the Verifier successfully.</li>
+<li>Credential presented has Credential Format Identifier value set to <code>mso_mdoc</code>.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ms_credentialformats_036">WS_RP_MS_CredentialFormats_036</h3>
+<h4 id="objective_7">Objective</h4>
+<p>Verify that Wallet supports IETF SD-JWT VC in the presentation flow. </p>
+<h4 id="references_7">References</h4>
+<p>[OIDF.HAIP] section 5 (introduction)
+[OIDF.HAIP] section 5.3.2
+[OIDF.HAIP] section 6
+[OIDF.OID4VP] appendix B.3</p>
+<h4 id="profile-applicability_7">Profile applicability</h4>
+<p>Wallet supports IETF SD-JWT VC</p>
+<h4 id="eudi-wallet-relevancy_7">EUDI-wallet relevancy</h4>
+<p>EUDI_generic, EUDI_required</p>
+<h4 id="preconditions_7">Preconditions</h4>
+<h4 id="test-scenario_7">Test Scenario</h4>
+<ol>
+<li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
+<li>Verifier sends presentation request for Credential in IETF SD-JWT VC format. </li>
+<li>Verify if Wallet asks for user consent to present the Credential.</li>
+<li>User gives consent.</li>
+<li>Verify if Wallet presents Credential to the Verifier.</li>
+<li>Check value from Credential Format Identifier.</li>
+</ol>
+<h4 id="expected-results_7">Expected results</h4>
+<ol>
+<li>This is the case.</li>
+<li>This is the case.</li>
+<li>Wallet asks for user consent.</li>
+<li>This is the case.</li>
+<li>Wallet presents Credential to the Verifier successfully. </li>
+<li>Credential presented has Credential Format Identifier value set to <code>dc+sd-jwt</code>.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ms_credentialformats_037">WS_RP_MS_CredentialFormats_037</h3>
+<h4 id="objective_8">Objective</h4>
+<p>Verify that Wallet supports IETF SD-JWT VC and ISO mdoc in the presentation flow. </p>
+<h4 id="references_8">References</h4>
+<p>[OIDF.HAIP] section 5 (introduction)
+[OIDF.HAIP] section 5.3.2
+[OIDF.HAIP] section 6
+[OIDF.OID4VP] appendix B.3</p>
+<h4 id="profile-applicability_8">Profile applicability</h4>
+<p>Wallet supports both ISO mdoc and IETF SD-JWT VC</p>
+<h4 id="eudi-wallet-relevancy_8">EUDI-wallet relevancy</h4>
+<p>EUDI_generic, EUDI_required</p>
+<h4 id="preconditions_8">Preconditions</h4>
+<h4 id="test-scenario_8">Test Scenario</h4>
+<ol>
+<li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
+<li>Verifier sends presentation request for Credential in ISO mdoc format.</li>
+<li>Verify if Wallet asks for user consent to present the Credential.</li>
+<li>User gives consent.</li>
+<li>Verify if Wallet presents Credential to the Verifier.</li>
+<li>Check value from Credential Format Identifier.</li>
+<li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
+<li>Verifier sends presentation request for Credential in IETF SD-JWT VC format. </li>
+<li>Verify if Wallet asks for user consent to present the Credential.</li>
+<li>User gives consent.</li>
+<li>Verify if Wallet presents Credential to the Verifier.</li>
+<li>Check value from Credential Format Identifier.</li>
+</ol>
+<h4 id="expected-results_8">Expected results</h4>
+<ol>
+<li>This is the case</li>
+<li>This is the case.</li>
+<li>Wallet asks for user consent.</li>
+<li>This is the case.</li>
+<li>Wallet presents Credential to the Verifier successfully.</li>
+<li>Credential presented has Credential Format Identifier value set to <code>mso_mdoc</code>.</li>
+<li>This is the case.</li>
+<li>This is the case.</li>
+<li>Wallet asks for user consent.</li>
+<li>This is the case.</li>
+<li>Wallet presents Credential to the Verifier successfully.</li>
+<li>Credential presented has Credential Format Identifier value set to <code>dc+sd-jwt</code>.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ms_credentialformats_038">WS_RP_MS_CredentialFormats_038</h3>
+<h4 id="objective_9">Objective</h4>
+<p>Verify that Wallet can handle receiving authorization request with response type <code>vp_token</code> and answering properly.</p>
+<h4 id="references_9">References</h4>
+<p>[OIDF.HAIP] section 5 (introduction)</p>
+<h4 id="profile-applicability_9">Profile applicability</h4>
+<h4 id="eudi-wallet-relevancy_9">EUDI-wallet relevancy</h4>
+<p>EUDI_generic, EUDI_required</p>
+<h4 id="preconditions_9">Preconditions</h4>
+<h4 id="test-scenario_9">Test Scenario</h4>
+<ol>
+<li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
+<li>Verifier sends Authorization Request with response type <code>vp_token</code></li>
+<li>Verify if Wallet process successfully Authorization Request with response type <code>vp_token</code> sent by the Verifier.</li>
+<li>Verify if Wallet asks for user consent to present the Credential.</li>
+<li>User gives consent.</li>
+<li>Verify if Wallet includes <code>vp_token</code> parameter in its response.</li>
+</ol>
+<h4 id="expected-results_9">Expected results</h4>
+<ol>
+<li>This is the case.</li>
+<li>This is the case.</li>
+<li>Wallet process successfully Authorization Request with response type <code>vp_token</code> sent by the Verifier.</li>
+<li>Wallet asks for user consent.</li>
+<li>This is the case.</li>
+<li>Wallet includes <code>vp_token</code> parameter in its response.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ms_credentialformats_039">WS_RP_MS_CredentialFormats_039</h3>
+<h4 id="objective_10">Objective</h4>
+<p>Verify that when the Verifier uses the <code>vp_token id_token</code> response type, the Wallet responds with an error (detailed or not) or discontinues the transaction.</p>
+<h4 id="references_10">References</h4>
+<p>[OIDF.HAIP] section 5 (introduction)</p>
+<h4 id="profile-applicability_10">Profile applicability</h4>
+<h4 id="eudi-wallet-relevancy_10">EUDI-wallet relevancy</h4>
+<p>EUDI_generic, EUDI_required</p>
+<h4 id="preconditions_10">Preconditions</h4>
+<h4 id="test-scenario_10">Test Scenario</h4>
+<ol>
+<li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
+<li>Verifier sends Authorization Request with response type <code>vp_token id_token</code></li>
+<li>Wallet processes the request.</li>
+</ol>
+<h4 id="expected-results_10">Expected results</h4>
+<ol>
+<li>This is the case.</li>
+<li>This is the case.</li>
+<li>Wallet either:
+a. answers with an error with details (<code>unsupported_response_type</code>), 
+b. answers with an error without providing details or,
+c. discontinues the interaction.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ms_credentialformats_040">WS_RP_MS_CredentialFormats_040</h3>
+<h4 id="objective_11">Objective</h4>
+<p>Verify that when the Verifier uses the <code>code</code> response type, the Wallet responds with an error (detailed or not) or discontinues the transaction.</p>
+<h4 id="references_11">References</h4>
+<p>[OIDF.HAIP] section 5 (introduction)</p>
+<h4 id="profile-applicability_11">Profile applicability</h4>
+<h4 id="eudi-wallet-relevancy_11">EUDI-wallet relevancy</h4>
+<p>EUDI_generic, EUDI_required</p>
+<h4 id="preconditions_11">Preconditions</h4>
+<h4 id="test-scenario_11">Test Scenario</h4>
+<ol>
+<li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request. </li>
+<li>Verifier sends an Authorization Request with response type <code>code</code></li>
+<li>Wallet processes the request.</li>
+</ol>
+<h4 id="expected-results_11">Expected results</h4>
+<ol>
+<li>This is the case.</li>
+<li>This is the case.</li>
+<li>Wallet either:
+a. answers with an error with details (<code>unsupported_response_type</code>), 
+b. answers with an error without providing details or,
+c. discontinues the interaction.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ms_credentialformats_041">WS_RP_MS_CredentialFormats_041</h3>
+<h4 id="objective_12">Objective</h4>
+<p>Verify that when Wallet is presenting several ISO mdocs, each ISO mdoc is returned in a separate DeviceResponse (as defined in 8.3.2.1.2.2 of [ISO.18013-5]), each matching to a respective DCQL query. Therefore, the resulting vp_token contains multiple DeviceResponse instances.</p>
+<h4 id="references_12">References</h4>
+<p>[OIDF.HAIP] section 5.3.1
+[OIDF.OID4VP] appendix B.2 (ISO mdoc profile)
+[ISO.18013-5] section 8.3.2.1.2.2. </p>
+<h4 id="profile-applicability_12">Profile applicability</h4>
+<p>Wallet supports ISO mdoc</p>
+<h4 id="eudi-wallet-relevancy_12">EUDI-wallet relevancy</h4>
+<p>EUDI_generic, EUDI_required</p>
+<h4 id="preconditions_12">Preconditions</h4>
+<h4 id="test-scenario_12">Test Scenario</h4>
+<ol>
+<li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
+<li>Verifier sends 3 DCQL query to the Wallet. </li>
+<li>Verifier requests presentation in mdoc format.</li>
+<li>Verify if Wallet can handle receiving multiple DCQL queries for Credentials in ISO mdoc format.</li>
+<li>Verify if Wallet asks for user consent to present the Credential.</li>
+<li>User gives consent.</li>
+<li>Verify if <code>vp_token</code> contains multiple <code>DeviceResponse</code> instances.</li>
+<li>Verify if for each query, Wallet returns one Device Response matching each DCQL query.</li>
+</ol>
+<h4 id="expected-results_12">Expected results</h4>
+<ol>
+<li>This is the case.</li>
+<li>This is the case.</li>
+<li>This is the case.</li>
+<li>Wallet receives multiple DCQL queries for Credentials in ISO mdoc format successfully.</li>
+<li>Wallet asks for user consent.</li>
+<li>This is the case.</li>
+<li><code>vp_token</code> contains multiple <code>DeviceResponse</code> instances.</li>
+<li>For each query, Wallet returns one Device Response matching each DCQL query.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ms_credentialformats_049">WS_RP_MS_CredentialFormats_049</h3>
+<h4 id="objective_13">Objective</h4>
+<p>Verify that when the Wallet presentation to the Verifier includes <code>status</code> claim, it contains <code>status_list</code> as defined in [I-D.ietf-oauth-status-list].</p>
+<h4 id="references_13">References</h4>
+<p>[OIDF.HAIP] section 6.1
+[RFC7800]
+[I-D.ietf-oauth-sd-jwt-vc]</p>
+<h4 id="profile-applicability_13">Profile applicability</h4>
+<p>Wallet supports IETF SD-JWT VC </p>
+<h4 id="eudi-wallet-relevancy_13">EUDI-wallet relevancy</h4>
+<p>EUDI_generic, EUDI_required</p>
+<h4 id="preconditions_13">Preconditions</h4>
+<h4 id="test-scenario_13">Test Scenario</h4>
+<ol>
+<li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
+<li>Verifier sends presentation request for Credential in IETF SD-JWT VC format.</li>
+<li>Verify if Wallet asks for user consent to present the Credential.</li>
+<li>User gives consent.</li>
+<li>Verify if Wallet presents Credential in IETF SD-JWT VC format.</li>
+<li>Verify if <code>status</code> claim is present.</li>
+<li>Check <code>status</code> claim content.</li>
+</ol>
+<h4 id="expected-results_13">Expected results</h4>
+<ol>
+<li>This is the case.</li>
+<li>This is the case.</li>
+<li>Wallet asks for user consent.</li>
+<li>This is the case.</li>
+<li>Wallet presents Credential in IETF SD-JWT VC format.</li>
+<li>Status` claim is present.</li>
+<li>"Status" claim contains "status_list".</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ms_credentialformats_045">WS_RP_MS_CredentialFormats_045</h3>
+<h4 id="objective_14">Objective</h4>
+<p>Verify that Wallet can handle presenting Credential in IETF SD-JWT VC format using compact serialization as defined in [RFC9901] when there is key binding.</p>
+<h4 id="references_14">References</h4>
+<p>[OIDF.HAIP] section 6.1
+[RFC9901]</p>
+<h4 id="profile-applicability_14">Profile applicability</h4>
+<p>Wallet supports IETF SD-JWT VC with key-binding</p>
+<h4 id="eudi-wallet-relevancy_14">EUDI-wallet relevancy</h4>
+<p>EUDI_generic, EUDI_required</p>
+<h4 id="preconditions_14">Preconditions</h4>
+<p>A) Credential Issuer issued Credential to the Wallet in IETF SD-JWT VC format, using compact serialization as defined in [RFC9901].
+B) There is a Key Binding JWT.</p>
+<h4 id="test-scenario_14">Test Scenario</h4>
+<ol>
+<li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
+<li>Verifier sends presentation request for Credential in IETF SD-JWT VC format.</li>
+<li>Verify if Wallet presents successfully Credential in IETF SD-JWT VC format using compact serialization. That is, the compact serialized format for the SD-JWT is the concatenation of each part delineated with a single tilde ('~') character as follows, where "D.1" to "D.N" represent the respective Disclosures:
+<Issuer-signed JWT><sub><D.1></sub><D.2><sub>...</sub><D.N>~
+The order of the concatenated parts is the Issuer-signed JWT, a tilde character, zero or more Disclosures each followed by a tilde character, and lastly the Key Binding JWT.</li>
+</ol>
+<h4 id="expected-results_14">Expected results</h4>
+<ol>
+<li>This is the case. </li>
+<li>This is the case.</li>
+<li>Wallet presents successfully Credential in IETF SD-JWT VC format using compact serialization. That is, the compact serialized format for the SD-JWT is the concatenation of each part delineated with a single tilde ('~') character as follows, where "D.1" to "D.N" represent the respective Disclosures:
+<Issuer-signed JWT><sub><D.1></sub><D.2><sub>...</sub><D.N>~
+The order of the concatenated parts is the Issuer-signed JWT, a tilde character, zero or more Disclosures each followed by a tilde character, and lastly the Key Binding JWT.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ms_credentialformats_046">WS_RP_MS_CredentialFormats_046</h3>
+<h4 id="objective_15">Objective</h4>
+<p>Verify that Wallet can handle being presenting Credential in IETF SD-JWT VC format using compact serialization as defined in [RFC9901] when there is no key binding.</p>
+<h4 id="references_15">References</h4>
+<p>[OIDF.HAIP] section 6.1
+[RFC9901]</p>
+<h4 id="profile-applicability_15">Profile applicability</h4>
+<p>Wallet supports IETF SD-JWT VC without key-binding</p>
+<h4 id="eudi-wallet-relevancy_15">EUDI-wallet relevancy</h4>
+<p>EUDI_generic, EUDI_required</p>
+<h4 id="preconditions_15">Preconditions</h4>
+<p>A) Credential Issuer issued Credential to the Wallet in IETF SD-JWT VC format, using compact serialization as defined in [RFC9901].
+B) There is no Key Binding JWT.</p>
+<h4 id="test-scenario_15">Test Scenario</h4>
+<ol>
+<li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
+<li>Verifier sends presentation request for Credential in IETF SD-JWT VC format.</li>
+<li>Verify if Wallet presents successfully with Credential in IETF SD-JWT VC format using compact serialization. That is, the compact serialized format for the SD-JWT is the concatenation of each part delineated with a single tilde ('~') character as follows, where "D.1" to "D.N" represent the respective Disclosures:
+<Issuer-signed JWT><sub><D.1></sub><D.2><sub>...</sub><D.N>~
+The order of the concatenated parts is the Issuer-signed JWT, a tilde character, zero or more Disclosures each followed by a tilde character, the last element is an empty string and the last separating tilde character is not omitted."</li>
+</ol>
+<h4 id="expected-results_15">Expected results</h4>
+<ol>
+<li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
+<li>Verifier sends presentation request for Credential in IETF SD-JWT VC format.</li>
+<li>Wallet presents successfully Credential in IETF SD-JWT VC format using compact serialization. That is, the compact serialized format for the SD-JWT is the concatenation of each part delineated with a single tilde ('~') character as follows, where "D.1" to "D.N" represent the respective Disclosures:
+<Issuer-signed JWT><sub><D.1></sub><D.2><sub>...</sub><D.N>~
+The order of the concatenated parts is the Issuer-signed JWT, a tilde character, zero or more Disclosures each followed by a tilde character, the last element is an empty string and the last separating tilde character is not omitted."</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ms_credentialformats_048">WS_RP_MS_CredentialFormats_048</h3>
+<h4 id="objective_16">Objective</h4>
+<p>Verify that Wallet can handle presenting a Credential using JSON serialization if required by the Wallet profile.</p>
+<h4 id="references_16">References</h4>
+<p>[OIDF.HAIP] section 6.1</p>
+<h4 id="profile-applicability_16">Profile applicability</h4>
+<p>Wallet supports IETF SD-JWT VC 
+Wallet profile supports JSON serialization and Credential profile requires it</p>
+<h4 id="eudi-wallet-relevancy_16">EUDI-wallet relevancy</h4>
+<p>EUDI_generic, EUDI_required</p>
+<h4 id="preconditions_16">Preconditions</h4>
+<h4 id="test-scenario_16">Test Scenario</h4>
+<ol>
+<li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
+<li>Verifier sends presentation request for Credential in IETF SD-JWT VC format.</li>
+<li>Verify if Wallet presents successfully Credential in IETF SD-JWT VC format using JSON serialization.</li>
+</ol>
+<h4 id="expected-results_16">Expected results</h4>
+<ol>
+<li>This is the case.</li>
+<li>This is the case.</li>
+<li>Wallet presents successfully Credential in IETF SD-JWT VC format using JSON serialization.</li>
+</ol>
+<!-- END INCLUDE -->
 
-<!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md -->
+<!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md -->
 
 
 

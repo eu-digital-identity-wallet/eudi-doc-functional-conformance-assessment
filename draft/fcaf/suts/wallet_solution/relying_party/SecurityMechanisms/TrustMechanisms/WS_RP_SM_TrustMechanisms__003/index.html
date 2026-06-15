@@ -1206,19 +1206,19 @@
 
 <h1 id="ws_rp_sm_trustmechanisms_003">WS_RP_SM_TrustMechanisms_003</h1>
 <h2 id="objective">Objective</h2>
-<p>Test the Wallet processess a DCQL-query with a "aki" correctly when it does contain a matching credential.</p>
+<p>Test the Wallet processes a DCQL-query with an "aki" correctly when it does contain a matching credential.</p>
 <h2 id="references">References</h2>
-<p>[OID4VP 6.1.1]
+<p>[OID4VP 6.1.1.1]
 [RFC5280]</p>
 <h2 id="profile-applicability">Profile applicability</h2>
 <p>Wallet supports trusted authorities query based on 'aki'</p>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
 <p>EUDI_generic | EUDI_required</p>
 <h2 id="preconditions">Preconditions</h2>
-<p>The stored credential in the wallet used in test is issued under a certificate chain containing a specified AuthorityKeyIdentifier</p>
+<p>The stored credential in the Wallet used in test is issued under a certificate chain containing a specified AuthorityKeyIdentifier</p>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
-<li>The Wallet engages with the Verifier</li>
+<li>The Wallet engages with the Verifier.</li>
 <li>Verifier sends a DCQL query with a "trusted_authorities" property with its type being "aki", and its value contains a specific keyIdentifier of a certificate in the certificate chain of the credential issuer</li>
 <li>The Wallet evaluates the request and allows the user to continue with presenting matching credentials.</li>
 <li>User selects the available credential and approves to present it.</li>
@@ -1227,8 +1227,8 @@
 <ol>
 <li>Wallet and Verifier can interact.</li>
 <li>Wallet receives the request.</li>
-<li>The wallet allows the user to select the credential matching the certificate chain.</li>
-<li>The wallet presents the selected credential.</li>
+<li>The Wallet allows the user to select the credential matching the certificate chain.</li>
+<li>The Wallet presents the selected credential.</li>
 </ol>
 
 

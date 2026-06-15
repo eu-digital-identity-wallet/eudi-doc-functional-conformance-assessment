@@ -1208,23 +1208,22 @@
 <h2 id="objective">Objective</h2>
 <p>Test that when the JWK has kid parameter, the Wallet MUST include that same kid value, in the kid JWE header of the response.</p>
 <h2 id="references">References</h2>
-<p>Section 4.1.6
-[OID4VP Section 8]</p>
+<p>[OID4VP] Section 8.3.1</p>
 <h2 id="profile-applicability">Profile applicability</h2>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
 <p>EUDI_generic | EUDI_required</p>
 <h2 id="preconditions">Preconditions</h2>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
-<li>The wallet engages with the verifier</li>
-<li>The verifier sends an Authorization request to the wallet, with response mode=direct_post.jwt, and a client_metadata object containing a JWK with kid parameter</li>
+<li>The Wallet engages with the Verifier</li>
+<li>The Verifier sends an Authorization request to the Wallet, with response mode=direct_post.jwt, and a client_metadata object containing a JWK with kid parameter</li>
 <li>Wallet processes request</li>
 </ol>
 <h2 id="expected-results">Expected results</h2>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated</li>
 <li>Wallet receives request</li>
-<li>Verify the wallet returns a response, without an error, and that it includes that same kid value, in the kid JWE header of its response.</li>
+<li>Verify the Wallet returns a response, without an error, and that it includes that same kid value, in the kid JWE header of its response.</li>
 </ol>
 
 

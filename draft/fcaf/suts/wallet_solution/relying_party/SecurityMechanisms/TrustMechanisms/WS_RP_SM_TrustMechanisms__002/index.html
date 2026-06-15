@@ -1206,26 +1206,26 @@
 
 <h1 id="ws_rp_sm_trustmechanisms_002">WS_RP_SM_TrustMechanisms_002</h1>
 <h2 id="objective">Objective</h2>
-<p>Test that the wallet when proccessing trusted_authorites, the type "aki" is supported</p>
+<p>Test that the Wallet when processing trusted_authorities, the type "aki" is supported.</p>
 <h2 id="references">References</h2>
-<p>[OID4VP 6.1.1]
+<p>[OID4VP 6.1.1.1]
 Section 4.2.1.1 of [RFC5280]</p>
 <h2 id="profile-applicability">Profile applicability</h2>
-<p>Wallet supports trusted authorities query based on 'aki'</p>
+<p>Wallet supports trusted authorities query based on 'aki'.</p>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
 <p>EUDI_generic | EUDI_required</p>
 <h2 id="preconditions">Preconditions</h2>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
-<li>The Wallet engages with the Verifier</li>
-<li>Verifier sends a DCQL query with a credential with a "trusted_authorities" property with its type being "aki".</li>
-<li>The Wallet evaluates the request.</li>
+<li>The Wallet engages with the Verifier.</li>
+<li>The Verifier sends a DCQL query containing a credential query with trusted_authorities of type "aki", and a specific KeyIdentifier value that matches the AuthorityKeyIdentifier of an X.509 certificate.</li>
+<li>The Wallet returns a response to the Verifier.</li>
 </ol>
 <h2 id="expected-results">Expected results</h2>
 <ol>
 <li>Wallet and Verifier can interact.</li>
-<li>Wallet receives the request.</li>
-<li>No errors returned by the wallet using the KeyIdentifier of the AuthorityKeyIdentifier as defined in Section 4.2.1.1 of [RFC5280], encoded as base64url</li>
+<li>Wallet successfully receives the DCQL query.</li>
+<li>The Wallet returns an Authorization Response containing the matching credential.</li>
 </ol>
 
 

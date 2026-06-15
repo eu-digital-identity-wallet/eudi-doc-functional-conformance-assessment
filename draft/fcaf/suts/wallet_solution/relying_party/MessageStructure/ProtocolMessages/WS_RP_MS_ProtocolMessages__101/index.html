@@ -1206,7 +1206,7 @@
 
 <h1 id="ws_rp_ms_protocolmessages_101">WS_RP_MS_ProtocolMessages_101</h1>
 <h2 id="objective">Objective</h2>
-<p>Test that the credential_sets property "required" is correctly supported by the wallet when all credentials exists</p>
+<p>Test that the credential_sets property "required" is correctly supported by the wallet when all credentials exist.</p>
 <h2 id="references">References</h2>
 <p>[OID4VP 6.2]</p>
 <h2 id="profile-applicability">Profile applicability</h2>
@@ -1215,18 +1215,20 @@
 <h2 id="preconditions">Preconditions</h2>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
-<li>The Wallet engages with the Verifier</li>
-<li>Verifier sends a DCQL query with a "credential_sets" property, including "required" property set as true for a set containing a PID that the wallet is has.</li>
+<li>The Wallet engages with the Verifier.</li>
+<li>Verifier sends a DCQL query with a "credential_sets" property, including "required" property set as true for a set containing a PID that the wallet has.</li>
 <li>The Wallet evaluates the request.</li>
 </ol>
 <h2 id="expected-results">Expected results</h2>
 <ol>
 <li>Wallet and Verifier can interact.</li>
-<li>Wallet receives the request.
-3a. Wallet identifies that the set containing the PID is marked as required: true.
-3b. The wallet confirms the PID exists and satisfies the query. It prepares the PID for presentation.
-3c. The wallet presents the PID to the user. Because it is marked as required, the UI should indicate it is mandatory (e.g., no "skip" option for this specific set).
-3d. The wallet generates the Verifiable Presentation containing the PID as required by the Verifier</li>
+<li>Wallet receives the request.</li>
+<li>Wallet identifies that the set containing the PID is marked as required: true.<ol>
+<li>The Wallet confirms the PID exists and satisfies the query. It prepares the PID for presentation.</li>
+<li>The Wallet presents the PID to the user. Because it is marked as required, the UI should indicate it is mandatory (e.g., no "skip" option for this specific set).</li>
+<li>The Wallet generates the Verifiable Presentation containing the PID as required by the Verifier</li>
+</ol>
+</li>
 </ol>
 
 

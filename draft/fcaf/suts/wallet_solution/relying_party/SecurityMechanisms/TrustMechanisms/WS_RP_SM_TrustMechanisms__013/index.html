@@ -1206,22 +1206,26 @@
 
 <h1 id="ws_rp_sm_trustmechanisms_013">WS_RP_SM_TrustMechanisms_013</h1>
 <h2 id="objective">Objective</h2>
-<p>Verify the Wallet can navigate an ETSI Trusted List (with a List of Lists) to identify and validate a Trust Service Provider’s (TSP) certificate.</p>
+<p>Verify the Wallet can navigate an ETSI Trusted List (List of Trusted Lists) to identify and validate a Trust Service Provider’s (TSP) certificate.</p>
 <h2 id="references">References</h2>
-<p>[OID4VP 6.1.1]</p>
+<p>[OID4VP 6.1.1.2]</p>
 <h2 id="profile-applicability">Profile applicability</h2>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
 <p>EUDI_generic | EUDI_optional</p>
 <h2 id="preconditions">Preconditions</h2>
+<p>The Wallet contains a credential issued by a valid Trust Service Provider (TSP).
+A mock ETSI trusted List is active to be used</p>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
-<li>The Wallet engages with the Verifier</li>
-<li>Verifier provides the Wallet with an ETSI Trusted List that contains a link to another list</li>
+<li>The Wallet engages with the Verifier.</li>
+<li>The Verifier sends an Authorization Request containing a DCQL query with trusted_authorities of type etsi_tl whose value is the URL of the ETSI Trusted List.</li>
+<li>The Wallet returns a response to the Verifier.</li>
 </ol>
 <h2 id="expected-results">Expected results</h2>
 <ol>
 <li>Wallet and Verifier can interact.</li>
-<li>Verify the Wallet correctly parses the lists and recognises the Provider as "Trusted" by matching their actual certificate against the one listed in the ETSI entry.</li>
+<li>The Wallet successfully receives the DCQL query.</li>
+<li>The Wallet returns an Authorization Response containing the credential whose issuing Trust Service Provider is listed in the linked Trusted List or its cascading Trusted Lists.</li>
 </ol>
 
 

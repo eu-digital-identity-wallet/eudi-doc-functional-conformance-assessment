@@ -1208,24 +1208,24 @@
 <h2 id="objective">Objective</h2>
 <p>Test the Wallet puts the response content fields at the top level of the JWT payload.</p>
 <h2 id="references">References</h2>
-<p>OID4VP 8.1</p>
+<p>[OID4VP] Section 8.3</p>
 <h2 id="profile-applicability">Profile applicability</h2>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
 <p>EUDI_generic | EUDI_required</p>
 <h2 id="preconditions">Preconditions</h2>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
-<li>The wallet engages with the verifier</li>
-<li>The verifier sends an Authorization request to the wallet, with response mode=direct_post.jwt</li>
-<li>Wallet processes request</li>
-<li>Test the decrypted JWT payload sent by the wallet contains all response parameters as top-level JSON members (not nested inside a sub-object).</li>
+<li>The Wallet engages with the verifier.</li>
+<li>The verifier sends an Authorization request to the Wallet, with response mode=direct_post.jwt.</li>
+<li>Wallet processes request.</li>
+<li>Test the decrypted JWT payload sent by the Wallet contains all response parameters as top-level JSON members (not nested inside a sub-object).</li>
 </ol>
 <h2 id="expected-results">Expected results</h2>
 <ol>
-<li>Wallet-verifier interaction is successfully initiated</li>
-<li>Wallet receives request</li>
-<li>Verify the wallet returns an encrypted response</li>
-<li>True</li>
+<li>Wallet-verifier interaction is successfully initiated.</li>
+<li>Wallet receives request.</li>
+<li>Verify the wallet returns an encrypted response.</li>
+<li>The decrypted JWT payload contains all response parameters as top-level JSON members, not nested inside a sub-object.</li>
 </ol>
 
 

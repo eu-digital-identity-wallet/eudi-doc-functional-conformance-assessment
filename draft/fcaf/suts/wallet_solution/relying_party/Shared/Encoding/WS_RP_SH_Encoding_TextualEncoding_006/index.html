@@ -1208,7 +1208,7 @@
 <h2 id="objective">Objective</h2>
 <p>Test that the Wallet handles DCQL-query for SD-JWT VC credential with a non-matching top-level claim path pointer.</p>
 <h2 id="references">References</h2>
-<p>[OID4VP 7]</p>
+<p>[OID4VP 7] Section 7.1.1</p>
 <h2 id="profile-applicability">Profile applicability</h2>
 <p>claims path pointer when applied to a JSON-based Credential</p>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
@@ -1226,7 +1226,7 @@
 <ol>
 <li>Wallet and Verifier can interact.</li>
 <li>Wallet receives the request.</li>
-<li>true</li>
+<li>Wallet successfully parses the request.</li>
 <li>Wallet rejects the request by either:
 a. answering with an error with details (<code>invalid_request</code>), 
 b. answering with an error without providing details or,

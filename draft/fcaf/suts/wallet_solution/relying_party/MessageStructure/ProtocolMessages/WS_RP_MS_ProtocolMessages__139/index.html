@@ -1206,7 +1206,7 @@
 
 <h1 id="ws_rp_ms_protocolmessages_139">WS_RP_MS_ProtocolMessages_139</h1>
 <h2 id="objective">Objective</h2>
-<p>Test that the wallet responds with invalid_scope when the Requested scope value is empty</p>
+<p>Test that the Wallet responds with invalid_scope when the Requested scope value is empty.</p>
 <h2 id="references">References</h2>
 <p>[OID4VP Section 8]</p>
 <h2 id="profile-applicability">Profile applicability</h2>
@@ -1215,17 +1215,17 @@
 <h2 id="preconditions">Preconditions</h2>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
-<li>The wallet engages with the verifier.</li>
-<li>The verifier sends an Authorization request with a scope value that is intentionally empty (e.g. missing any value)</li>
+<li>The Wallet engages with the verifier.</li>
+<li>The Verifier sends an Authorization request with a scope value that is intentionally empty (e.g. missing any value).</li>
 <li>Wallet processes the request and identifies the scope as invalid.</li>
-<li>Test the response returned by the wallet to the Verifier.</li>
+<li>Test the response returned by the Wallet to the Verifier.</li>
 </ol>
 <h2 id="expected-results">Expected results</h2>
 <ol>
-<li>Wallet-verifier interaction is successfully initiated</li>
-<li>Wallet receives request</li>
-<li>True: The Wallet does NOT proceed to credential selection or user authorization.</li>
-<li>Verify: The Wallet returns an error response where the error parameter is exactly invalid_scope.</li>
+<li>Wallet-verifier interaction is successfully initiated.</li>
+<li>Wallet receives request.</li>
+<li>The Wallet does NOT proceed to credential selection or user authorization.</li>
+<li>The Wallet returns an error response where the error parameter is exactly invalid_scope.</li>
 </ol>
 
 

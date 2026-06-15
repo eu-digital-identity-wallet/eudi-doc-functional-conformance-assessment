@@ -1206,8 +1206,7 @@
 
 <h1 id="ws_rp_ia_maininteraction_049">WS_RP_IA_MainInteraction_049</h1>
 <h2 id="objective">Objective</h2>
-<p>Test when using response mode "direct_post" the Wallet encodes the Authorization Response, in the HTTP POST request body, using format defined by application/x‑www‑form‑urlencoded.
-Same device custom URL.</p>
+<p>Test when using response mode "direct_post.jwt" the Wallet encodes the Authorization Response, in the HTTP POST request body, using format defined by application/x‑www‑form‑urlencoded.</p>
 <h2 id="references">References</h2>
 <p>[OID4VP Section 8]</p>
 <h2 id="profile-applicability">Profile applicability</h2>
@@ -1217,8 +1216,8 @@ Same device custom URL.</p>
 <h2 id="preconditions">Preconditions</h2>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
-<li>The wallet engages with the verifier</li>
-<li>The verifier sends a request, with parameter <code>response_mode=direct_post</code> and a <code>response_uri</code> of the verifier.</li>
+<li>The wallet engages with the verifier.</li>
+<li>The verifier sends a request, with parameter <code>response_mode=direct_post.jwt</code> and a <code>response_uri</code> of the verifier.</li>
 <li>The wallet processes the request.</li>
 <li>The wallet responds with request object</li>
 </ol>
@@ -1226,7 +1225,7 @@ Same device custom URL.</p>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated</li>
 <li>Wallet receives request</li>
-<li>True</li>
+<li>The wallet processes the request successfully and prepares an Authorization Response encoded as application/x-www-form-urlencoded for submission to the response_uri.</li>
 <li>Verify the wallet submits the response including the Authorization Response encoded using format defined by application/x‑www‑form‑urlencoded.</li>
 </ol>
 

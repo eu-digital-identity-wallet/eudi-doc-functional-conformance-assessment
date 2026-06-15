@@ -1217,8 +1217,8 @@ Section 6.1 of [RFC8949]</p>
 <h2 id="preconditions">Preconditions</h2>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
-<li>The Wallet engages with the Verifier</li>
-<li>The Verifier sends a DCQL query requesting a specific element from an mdoc</li>
+<li>The Wallet engages with the Verifier.</li>
+<li>The Verifier sends a DCQL query requesting a specific element from a mdoc</li>
 <li>Wallet handles Query</li>
 </ol>
 <h2 id="expected-results">Expected results</h2>
@@ -1226,7 +1226,7 @@ Section 6.1 of [RFC8949]</p>
 <li>Wallet and Verifier can interact.</li>
 <li>Wallet receives the request.
 3a. The Wallet retrieves the mdoc from secure storage, noting CBOR format.
-3b.  The Wallet converts the CBOR value into a JSON-compatible representation to compare it against the query filter - it uses the guidance from Section 6.1 of [RFC8949] to avoid isues like Data Type fidelity
+3b.  The Wallet converts the CBOR value into a JSON-compatible representation to compare it against the query filter - it uses the guidance from Section 6.1 of [RFC8949] to avoid issues like Data Type fidelity
 3c. The Wallet performs the matching logic</li>
 </ol>
 

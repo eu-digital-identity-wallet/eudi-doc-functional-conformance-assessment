@@ -1206,26 +1206,26 @@
 
 <h1 id="ws_rp_ms_metadata_117">WS_RP_MS_Metadata_117</h1>
 <h2 id="objective">Objective</h2>
-<p>Verify that when the Wallet receives an Authorization Request using the verifier_attestation Client Identifier Prefix where the original Client Identifier does NOT match the sub claim of the Verifier attestation JWT, the Wallet rejects the request.</p>
+<p>Verify that when the Wallet receives an Authorization Request using the verifier_attestation Client Identifier Prefix where the original Client Identifier does NOT match the subclaim of the Verifier attestation JWT, the Wallet rejects the request.</p>
 <h2 id="references">References</h2>
 <p>[OIDF.OID4VP] section 5.9.3</p>
 <h2 id="profile-applicability">Profile applicability</h2>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
-<p>EUDI_generic |  EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h2 id="preconditions">Preconditions</h2>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
-<li>Wallet receives an Authorization Request using the verifier_attestation: prefix where the original Client Identifier does NOT match the sub claim of the attestation JWT.</li>
+<li>Wallet receives an Authorization Request using the verifier_attestation: prefix where the original Client Identifier does NOT match the subclaim of the attestation JWT.</li>
 <li>Wallet parses the Authorization Request.</li>
-<li>Wallet validates the Client Identifier against the sub claim and detects the mismatch.</li>
+<li>Wallet validates the Client Identifier against the subclaim and detects the mismatch.</li>
 </ol>
 <h2 id="expected-results">Expected results</h2>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
 <li>Wallet successfully receives the Authorization Request.</li>
 <li>Wallet successfully parses the Authorization Request.</li>
-<li>Wallet rejects the Authorization Request and returns an invalid_request error due to Client Identifier / sub claim mismatch; presentation flow is not initiated.</li>
+<li>Wallet rejects the Authorization Request and returns an invalid_request error due to Client Identifier / subclaim mismatch; presentation flow is not initiated.</li>
 </ol>
 
 

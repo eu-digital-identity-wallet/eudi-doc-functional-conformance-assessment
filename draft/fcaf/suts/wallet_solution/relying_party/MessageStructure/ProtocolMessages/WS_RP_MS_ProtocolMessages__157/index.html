@@ -1206,27 +1206,27 @@
 
 <h1 id="ws_rp_ms_protocolmessages_157">WS_RP_MS_ProtocolMessages_157</h1>
 <h2 id="objective">Objective</h2>
-<p>Test the wallet returns the invalid_transaction_data error message, when one object in the transaction_data structure is missing required fields for the transaction data type</p>
+<p>Test the Wallet returns the invalid_transaction_data error message, when one object in the transaction_data structure is missing required fields for the transaction data type.</p>
 <h2 id="references">References</h2>
-<p>[OID4VP Section 8]</p>
+<p>[OID4VP Section 8.5]</p>
 <h2 id="profile-applicability">Profile applicability</h2>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
 <p>EUDI_generic | EUDI_required</p>
 <h2 id="preconditions">Preconditions</h2>
-<p>The wallet has a known transaction data type, where specific fields are marked as required.</p>
+<p>The Wallet has a known transaction data type, where specific fields are marked as required.</p>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
-<li>The wallet engages with verifier</li>
-<li>The verifier sends an Authorization request including a transaction_data array where one object uses a known type, but with a missing mandatory field</li>
-<li>Wallet processes request and the transaction_data structure</li>
-<li>Test the response returned by the wallet to the verifier</li>
+<li>The Wallet engages with Verifier.</li>
+<li>The Verifier sends an Authorization request including a transaction_data array where one object uses a known type, but with a missing mandatory field.</li>
+<li>Wallet processes request and the transaction_data structure.</li>
+<li>Test the response returned by the Wallet to the Verifier.</li>
 </ol>
 <h2 id="expected-results">Expected results</h2>
 <ol>
-<li>Wallet-verifier interaction is successfully initiated</li>
-<li>Wallet receives request</li>
-<li>Wallet identifies missing mandatory field</li>
-<li>Verify the wallet does NOT proceed to the user consent screen, instead it must return an error response: invalid_transaction_data</li>
+<li>Wallet-verifier interaction is successfully initiated.</li>
+<li>Wallet receives request.</li>
+<li>Wallet identifies missing mandatory field.</li>
+<li>Verify the Wallet does NOT proceed to the user consent screen, instead it must return an error response: invalid_transaction_data.</li>
 </ol>
 
 

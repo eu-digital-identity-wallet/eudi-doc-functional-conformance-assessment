@@ -23,7 +23,7 @@
     
     
       
-        <title>EuPid_DM_Sex_03 - European Digital Identity</title>
+        <title>WS_RP_DM_IdentifyingData_Sex_PID_IETF-sd-jwt-vc_003 - European Digital Identity</title>
       
     
     
@@ -59,14 +59,14 @@
     
   
 <meta property="og:type" content="website" />
-<meta property="og:title" content="EuPid_DM_Sex_03 - European Digital Identity" />
+<meta property="og:title" content="WS_RP_DM_IdentifyingData_Sex_PID_IETF-sd-jwt-vc_003 - European Digital Identity" />
 <meta property="og:image" content="https://conformance.eudi.dev/draft/assets/images/social/fcaf/suts/wallet_solution/relying_party/DataModel/IdentifyingData/WS_RP_DM_IdentifyingData_Sex_PID_IETF-sd-jwt-vc_003.png" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:url" content="https://conformance.eudi.dev/draft/fcaf/suts/wallet_solution/relying_party/DataModel/IdentifyingData/WS_RP_DM_IdentifyingData_Sex_PID_IETF-sd-jwt-vc_003/" />
 <meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:title" content="EuPid_DM_Sex_03 - European Digital Identity" />
+<meta property="twitter:title" content="WS_RP_DM_IdentifyingData_Sex_PID_IETF-sd-jwt-vc_003 - European Digital Identity" />
 <meta property="twitter:image" content="https://conformance.eudi.dev/draft/assets/images/social/fcaf/suts/wallet_solution/relying_party/DataModel/IdentifyingData/WS_RP_DM_IdentifyingData_Sex_PID_IETF-sd-jwt-vc_003.png" />
 </head>
   
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#eupid_dm_sex_03" class="md-skip">
+        <a href="#ws_rp_dm_identifyingdata_sex_pid_ietf-sd-jwt-vc_003" class="md-skip">
           Skip to content
         </a>
       
@@ -126,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              EuPid_DM_Sex_03
+              WS_RP_DM_IdentifyingData_Sex_PID_IETF-sd-jwt-vc_003
             
           </span>
         </div>
@@ -1204,29 +1204,28 @@
   
 
 
-<h1 id="eupid_dm_sex_03">EuPid_DM_Sex_03</h1>
+<h1 id="ws_rp_dm_identifyingdata_sex_pid_ietf-sd-jwt-vc_003">WS_RP_DM_IdentifyingData_Sex_PID_IETF-sd-jwt-vc_003</h1>
 <h2 id="objective">Objective</h2>
-<p>This test case verifies that the claim sex contains a valid value.</p>
+<p>This test case verifies that the claim <code>sex</code> contains a valid value. Note that <code>sex</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier sex.</p>
 <h2 id="references">References</h2>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.1 <br />
-“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 2).<br />
- ISO/IEC 5218:2004, 2</p>
+<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook <br />
+"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 2).  </p>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
 <p>EUDI_specific | EUDI_optional</p>
 <h2 id="profile-applicability">Profile applicability</h2>
-<p>The EUDI wallet contains a Credential in IETF SD-JWT VC format. <code>vct</code> claim includes base type of person identification "urn:eudi:pid:1". claim sex is included in a person identification data.</p>
+<p>The EUDI wallet contains a Credential in SD-JWT VC format with vct = "urn:eudi:pid:". The claim <code>sex</code> is included in a person identification data.</p>
 <h2 id="preconditions">Preconditions</h2>
 <p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
-B. All mandatory data elements within nameSpace  "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
+B. All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
 C. EUDI wallet presented the Credential successfully. 
-D. The presence of claim sex in the IETF SD-JWT VC Credential presented was verified.</p>
+D. The presence of claim <code>sex</code> in the IETF SD-JWT VC Credential presented was verified.</p>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
-<li>Verify that the claim sex contains a valid value for sex.</li>
+<li>Verify that the claim <code>sex</code> contains a valid value for Sex.</li>
 </ol>
 <h2 id="expected-results">Expected results</h2>
 <ol>
-<li>The claim sex  has one of the values specified in ISO/IEC 5218:2004, 2, i.e. 0, 1, 2 or 9 or one of the other values specified for Europe (i.e. 3, 4, 5, 6).</li>
+<li>The claim <code>sex</code> has one of the values specified in ISO/IEC 5218:2004, 2, i.e. 0, 1, 2 or 9 or one of the other values specified for Europe (i.e. 3, 4, 5, 6).</li>
 </ol>
 
 

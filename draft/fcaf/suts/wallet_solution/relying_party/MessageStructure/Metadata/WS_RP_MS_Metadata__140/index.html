@@ -1211,7 +1211,7 @@
 <p>[OIDF.OID4VP] section 5.10.1</p>
 <h2 id="profile-applicability">Profile applicability</h2>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
-<p>EUDI_generic |  EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h2 id="preconditions">Preconditions</h2>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
@@ -1225,9 +1225,9 @@
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
 <li>Wallet successfully receives the Authorization Request.</li>
-<li>wallet_nonce is correctly sent in the POST request.</li>
+<li>Wallet_nonce is correctly sent in the POST request.</li>
 <li>Wallet successfully receives the Request Object.</li>
-<li>Wallet terminates request processing and returns an invalid_request error due to missing wallet_nonce claim; presentation flow is not initiated.</li>
+<li>Wallet terminates request processing due to missing wallet_nonce claim; presentation flow is not initiated.</li>
 </ol>
 
 

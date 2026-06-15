@@ -1211,20 +1211,19 @@
 <p>[OIDF.OID4VP] section 5.9.3; [OIDF.OID4VP] section 12</p>
 <h2 id="profile-applicability">Profile applicability</h2>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
-<p>EUDI_generic |  EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h2 id="preconditions">Preconditions</h2>
-<p>A. Verifier attestation JWT contains a cnf claim with the Verifier's public key.</p>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
-<li>Wallet receives a Request Object using verifier_attestation: prefix where the Verifier attestation JWT is present in the jwt JOSE header.</li>
+<li>Wallet receives a Request Object using verifier_attestation: prefix where the Verifier attestation JWT, containing a cnf claim with the Verifier's public key, is present in the jwt JOSE header.</li>
 <li>Wallet parses the Request Object JOSE header.</li>
 <li>Wallet locates and extracts the Verifier attestation JWT from the jwt header.</li>
 </ol>
 <h2 id="expected-results">Expected results</h2>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
-<li>Wallet successfully receives the Request Object.</li>
+<li>Wallet successfully receives the Authorization Request.</li>
 <li>Wallet successfully parses the Request Object JOSE header.</li>
 <li>Wallet successfully locates and processes the Verifier attestation JWT from the jwt JOSE header; presentation flow proceeds.</li>
 </ol>

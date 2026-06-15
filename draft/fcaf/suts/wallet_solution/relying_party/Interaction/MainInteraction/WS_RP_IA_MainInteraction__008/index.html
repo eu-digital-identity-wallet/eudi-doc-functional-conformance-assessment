@@ -1206,29 +1206,29 @@
 
 <h1 id="ws_rp_ia_maininteraction_008">WS_RP_IA_MainInteraction_008</h1>
 <h2 id="objective">Objective</h2>
-<p>Test that the Wallet processes DCQL-query with credential property "require_cryptographic_holder_binding" with value <code>false</code>, by handling credentials both with or without cryptographic binding.</p>
+<p>Test that the Wallet processes DCQL-query with credential property "require_cryptographic_holder_binding" with value <code>false</code>, by handling credentials without cryptographic binding.</p>
 <h2 id="references">References</h2>
 <p>[OID4VP 6.1]</p>
 <h2 id="profile-applicability">Profile applicability</h2>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
 <p>EUDI_generic | EUDI_required</p>
 <h2 id="preconditions">Preconditions</h2>
-<p>The wallet contains a credential of a specified credential type, where the credential does not have cryptographic holder binding.</p>
+<p>The wallet contains a credential of a specified credential type, where the credential does NOT have cryptographic holder binding.</p>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
-<li>The Wallet engages with the Verifier</li>
-<li>The Verifier sends a Authorization Request with a valid DCQL-query with a 'credential' with:
+<li>The Wallet engages with the Verifier.</li>
+<li>The Verifier sends an Authorization Request with a valid DCQL-query with a 'credential' with:
    a. the "require_cryptographic_holder_binding" property present with value <code>false</code>.
    b. a 'claims' property requesting the specified credential type.</li>
 <li>The Wallet evaluates the request and allows the user to continue with presenting matching credentials.</li>
-<li>User selects the available credential and approves to present it.</li>
+<li>The user selects and approves and presents the credential without cryptographic holder binding.</li>
 </ol>
 <h2 id="expected-results">Expected results</h2>
 <ol>
 <li>Wallet and Verifier can interact.</li>
 <li>Wallet receives the request.</li>
 <li>The wallet allows the user to select the credential of the specified type.</li>
-<li>The wallet presents the selected credential to the verifier without a cryptographic proof of holder binding.</li>
+<li>The wallet successfully presents the selected credential to the verifier</li>
 </ol>
 
 

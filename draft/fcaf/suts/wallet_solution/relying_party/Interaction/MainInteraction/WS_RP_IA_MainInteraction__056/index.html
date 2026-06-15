@@ -1206,7 +1206,7 @@
 
 <h1 id="ws_rp_ia_maininteraction_056">WS_RP_IA_MainInteraction_056</h1>
 <h2 id="objective">Objective</h2>
-<p>The response_uri value MUST be a value that the client would be permitted to use as redirect_uri when following the rules defined in Section 5.9.</p>
+<p>Test that the Wallet validates the response_uri according to the strict matching rules defined in [OID4VP] Section 5.9, and rejects the request if the value is invalid.</p>
 <h2 id="references">References</h2>
 <p>[OID4VP Section 8]</p>
 <h2 id="profile-applicability">Profile applicability</h2>
@@ -1215,8 +1215,8 @@
 <h2 id="preconditions">Preconditions</h2>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
-<li>The wallet engages with the verifier</li>
-<li>The verifier sends a request, with parameter <code>response_mode=direct_post</code> and an invalid <code>redirect_uri</code> (not following rules in section 5.9)</li>
+<li>The wallet engages with the verifier.</li>
+<li>The verifier sends a request, with parameter <code>response_mode=direct_post.jwt</code> and an invalid <code>response_uri</code> (not following rules in [OID4VP] section 5.9)</li>
 <li>The wallet processes the request.</li>
 </ol>
 <h2 id="expected-results">Expected results</h2>

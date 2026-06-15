@@ -1206,28 +1206,28 @@
 
 <h1 id="ws_rp_ms_protocolmessages_125">WS_RP_MS_ProtocolMessages_125</h1>
 <h2 id="objective">Objective</h2>
-<p>Test that Wallet returns an error after an HTTP 200 response not of form json</p>
+<p>Test that Wallet returns an error after an HTTP 200 response not of form json.</p>
 <h2 id="references">References</h2>
-<p>[OID4VP Section 8]</p>
+<p>[OID4VP] Sections 8.2, 8.5</p>
 <h2 id="profile-applicability">Profile applicability</h2>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
 <p>EUDI_generic | EUDI_required</p>
 <h2 id="preconditions">Preconditions</h2>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
-<li>The wallet engages with the verifier</li>
-<li>The verifier sends a request, with parameter `response_mode=direct_post'</li>
-<li>The wallet processes the request.</li>
-<li>The wallet responds with request object</li>
-<li>Verifier sends a HTTP status code of 200 + a plain text body</li>
+<li>The Wallet engages with the verifier.</li>
+<li>The Verifier sends a request, with parameter 'response_mode=direct_post.jwt'.</li>
+<li>The Wallet processes the request.</li>
+<li>The Wallet responds with request object.</li>
+<li>Verifier sends an HTTP status code of 200 + a plain text body.</li>
 </ol>
 <h2 id="expected-results">Expected results</h2>
 <ol>
-<li>Wallet-verifier interaction is successfully initiated</li>
-<li>Wallet receives request</li>
-<li>True</li>
-<li>True</li>
-<li>Wallet returns an error</li>
+<li>Wallet-verifier interaction is successfully initiated.</li>
+<li>Wallet receives request.</li>
+<li>The wallet evaluates the request and proceeds without returning an error.</li>
+<li>The wallet submits the Authorization Response to the verifier's response_uri.</li>
+<li>The wallet detects that the verifier's HTTP 200 response body is not valid JSON and returns an error.</li>
 </ol>
 
 

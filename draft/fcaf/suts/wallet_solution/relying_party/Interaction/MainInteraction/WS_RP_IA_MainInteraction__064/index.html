@@ -1208,26 +1208,28 @@
 <h2 id="objective">Objective</h2>
 <p>Test the Wallet handles a redirect_uri when a response_uri returns after an error response.</p>
 <h2 id="references">References</h2>
-<p>[OID4VP Section 8]</p>
+<p>[OID4VP Section 8.2]</p>
 <h2 id="profile-applicability">Profile applicability</h2>
+<p>Same device
+response_mode=direct_post.jwt</p>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
 <p>EUDI_generic | EUDI_required</p>
 <h2 id="preconditions">Preconditions</h2>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
-<li>The wallet engages with the verifier</li>
-<li>The verifier sends an Authorization request, with response_type=vp_token, and parameter response_uri</li>
-<li>The wallet performs HTTP POST to the response_uri</li>
-<li>The verifier responds with HTTP error 400 and a JSON body containing a redirect_uri</li>
-<li>Wallet processes error and the JSON and triggers User agent</li>
+<li>The wallet engages with the verifier.</li>
+<li>The verifier sends an Authorization request, with response_type=vp_token, response_mode=direct_post.jwt and parameter response_uri.</li>
+<li>The wallet performs HTTP POST to the response_uri.</li>
+<li>The verifier responds with HTTP error 400 and a JSON body containing a redirect_uri.</li>
+<li>Wallet processes error and the JSON and triggers User agent.</li>
 </ol>
 <h2 id="expected-results">Expected results</h2>
 <ol>
-<li>Wallet-verifier interaction is successfully initiated</li>
-<li>Wallet receives request</li>
-<li>True</li>
+<li>Wallet-verifier interaction is successfully initiated.</li>
+<li>Wallet receives request.</li>
+<li>The wallet posts the Authorization Response to the response_uri.</li>
 <li>Verify the Wallet recognizes the HTTP error status but successfully parses the redirect_uri from the error response body.</li>
-<li>Wallet opens redirect_uri, shows user success page</li>
+<li>Wallet opens redirect_uri</li>
 </ol>
 
 

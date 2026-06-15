@@ -23,7 +23,7 @@
     
     
       
-        <title>EuPid_DM_Portrait_03 - European Digital Identity</title>
+        <title>WS_RP_DM_IdentifyingData_Portrait_PID_IETF-sd-jwt-vc_003 - European Digital Identity</title>
       
     
     
@@ -59,14 +59,14 @@
     
   
 <meta property="og:type" content="website" />
-<meta property="og:title" content="EuPid_DM_Portrait_03 - European Digital Identity" />
+<meta property="og:title" content="WS_RP_DM_IdentifyingData_Portrait_PID_IETF-sd-jwt-vc_003 - European Digital Identity" />
 <meta property="og:image" content="https://conformance.eudi.dev/draft/assets/images/social/fcaf/suts/wallet_solution/relying_party/DataModel/IdentifyingData/WS_RP_DM_IdentifyingData_Portrait_PID_IETF-sd-jwt-vc_003.png" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:url" content="https://conformance.eudi.dev/draft/fcaf/suts/wallet_solution/relying_party/DataModel/IdentifyingData/WS_RP_DM_IdentifyingData_Portrait_PID_IETF-sd-jwt-vc_003/" />
 <meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:title" content="EuPid_DM_Portrait_03 - European Digital Identity" />
+<meta property="twitter:title" content="WS_RP_DM_IdentifyingData_Portrait_PID_IETF-sd-jwt-vc_003 - European Digital Identity" />
 <meta property="twitter:image" content="https://conformance.eudi.dev/draft/assets/images/social/fcaf/suts/wallet_solution/relying_party/DataModel/IdentifyingData/WS_RP_DM_IdentifyingData_Portrait_PID_IETF-sd-jwt-vc_003.png" />
 </head>
   
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#eupid_dm_portrait_03" class="md-skip">
+        <a href="#ws_rp_dm_identifyingdata_portrait_pid_ietf-sd-jwt-vc_003" class="md-skip">
           Skip to content
         </a>
       
@@ -126,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              EuPid_DM_Portrait_03
+              WS_RP_DM_IdentifyingData_Portrait_PID_IETF-sd-jwt-vc_003
             
           </span>
         </div>
@@ -1204,29 +1204,29 @@
   
 
 
-<h1 id="eupid_dm_portrait_03">EuPid_DM_Portrait_03</h1>
+<h1 id="ws_rp_dm_identifyingdata_portrait_pid_ietf-sd-jwt-vc_003">WS_RP_DM_IdentifyingData_Portrait_PID_IETF-sd-jwt-vc_003</h1>
 <h2 id="objective">Objective</h2>
-<p>This test case verifies that the claim portrait is a data URL containing a base64-encoded portrait in JPEG format.</p>
+<p>This test case verifies that the claim <code>picture</code> is a data URL containing a base64-encoded <code>picture</code> in JPEG format. Note that <code>picture</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier portrait.</p>
 <h2 id="references">References</h2>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.1 <br />
-“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 7).</p>
+<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook <br />
+"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 7).</p>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
 <p>EUDI_specific | EUDI_required</p>
 <h2 id="profile-applicability">Profile applicability</h2>
 <p>The EUDI wallet contains a Credential in IETF SD-JWT VC format. <code>vct</code> claim includes base type of person identification "urn:eudi:pid:1".</p>
 <h2 id="preconditions">Preconditions</h2>
 <p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
-B. All mandatory data elements within nameSpace  "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
+B. All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
 C. EUDI wallet presented the Credential successfully. 
-D. The presence of claim portrait in the IETF SD-JWT VC Credential presented was verified. 
-E. It was verified that the claim portrait is a String.</p>
+D. The presence of claim <code>picture</code> in the IETF SD-JWT VC Credential presented was verified. 
+E. It was verified that the claim <code>picture</code> is a String.</p>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
-<li>Verify that claim portrait is a data URL containing a base64-encoded portrait in JPEG format.</li>
+<li>Verify that claim <code>picture</code> is a data URL containing a base64-encoded <code>picture</code> in JPEG format.</li>
 </ol>
 <h2 id="expected-results">Expected results</h2>
 <ol>
-<li>The claim portrait is a data URL containing a base64-encoded portrait in JPEG format.</li>
+<li>The claim <code>picture</code> is a data URL containing a base64-encoded <code>picture</code> in JPEG format.</li>
 </ol>
 
 

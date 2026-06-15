@@ -1213,25 +1213,58 @@
 <p>[OIDF.OID4VP] section 5.10.1</p>
 <h4 id="profile-applicability">Profile applicability</h4>
 <h4 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h4>
-<p>EUDI_generic |  EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions">Preconditions</h4>
 <h4 id="test-scenario">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
 <li>Wallet receives an Authorization Request with request_uri_method = post.</li>
 <li>Wallet sends a POST request and receives a Request Object containing all required Authorization Request parameters.</li>
-<li>Wallet parses the Request Object.</li>
-<li>Wallet extracts the Authorization Request parameters from the Request Object.</li>
+<li>The Wallet processes the request and sends an Authorization Response to the Verifier.</li>
 </ol>
 <h4 id="expected-results">Expected results</h4>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
 <li>Wallet successfully receives the Authorization Request.</li>
 <li>Wallet successfully receives the Request Object.</li>
-<li>Wallet successfully parses the Request Object.</li>
-<li>Wallet extracts all Authorization Request parameters and uses them for the remainder of the flow; presentation flow proceeds.</li>
+<li>The Authorization Response sent by the Wallet is consistent with the parameter values from the Request Object.</li>
 </ol>
 <!-- END INCLUDE -->
+<h3 id="ws_rp_ia_protocolflow_002">WS_RP_IA_ProtocolFlow_002</h3>
+<h4 id="objective_1">Objective</h4>
+<p>Verify that, in the presentation flow via Redirects, the Wallet supports receiving a Signed Authorization Request using JWT-Secured Authorization Request (JAR) [RFC9101] with the <code>request_uri</code> parameter. </p>
+<h4 id="references_1">References</h4>
+<p>[OIDF.HAIP] section 5.1
+[RFC9101] section 5</p>
+<h4 id="profile-applicability_1">Profile applicability</h4>
+<p>Presentations via Redirects</p>
+<h4 id="eudi-wallet-relevancy_1">EUDI-wallet relevancy</h4>
+<p>EUDI_generic, EUDI_required</p>
+<h4 id="preconditions_1">Preconditions</h4>
+<p>A) Signature from authorization request is authentic.</p>
+<h4 id="test-scenario_1">Test Scenario</h4>
+<ol>
+<li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
+<li>Verifier sends Signed Authorization Request using JWT-Secured Authorization Request (JAR) [RFC9101] with the <code>request_uri</code> parameter, and signature is authentic.</li>
+<li>Verify if the Wallet obtains the request object from the <code>request_uri</code>.</li>
+<li>Wallet checks signature on the request object.</li>
+<li>Verify if Wallet asks for user consent to present the Credential.</li>
+<li>User gives consent.</li>
+<li>Verify if Wallet answers successfully (presents the Credential) without rejecting transaction.</li>
+</ol>
+<h4 id="expected-results_1">Expected results</h4>
+<ol>
+<li>This is the case.</li>
+<li>This is the case.</li>
+<li>Wallet obtains the request object from the <code>request_uri</code>.</li>
+<li>Wallet authenticates successfully request object signature. </li>
+<li>Wallet asks for user consent.</li>
+<li>This is the case.</li>
+<li>Wallet answers successfully (presents the Credential) without rejecting transaction.</li>
+</ol>
+<!-- END INCLUDE -->
+
+<!-- BEGIN INCLUDE ./[A-Z]*.md -->
 
 
 

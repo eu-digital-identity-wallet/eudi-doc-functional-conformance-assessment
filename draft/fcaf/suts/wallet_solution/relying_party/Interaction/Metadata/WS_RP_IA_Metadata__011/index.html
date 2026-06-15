@@ -1210,17 +1210,21 @@
 <h2 id="references">References</h2>
 <p>[OIDF.OID4VP] section 5.8</p>
 <h2 id="profile-applicability">Profile applicability</h2>
-<p>dynamic discovery</p>
+<p>Dynamic discovery</p>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
-<p>EUDI_generic |  EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h2 id="preconditions">Preconditions</h2>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
-<li>The Wallet receives a Request Object (Dynamic Discovery) where the aud claim equals the iss claim value.</li>
+<li>The wallet engages with the verifier.</li>
+<li>The Wallet receives a Request Object (Dynamic Discovery) where the aud claim does NOT match the iss value in the wallet metadata.</li>
+<li>The Wallet returns a response to the Verifier.</li>
 </ol>
 <h2 id="expected-results">Expected results</h2>
 <ol>
-<li>Wallet accepts and processes the request.</li>
+<li>Wallet-verifier interaction is successfully initiated.</li>
+<li>The Wallet rejects the Request Object due to the aud mismatch and does not proceed to credential selection or user authorization.</li>
+<li>The Wallet returns an error response (e.g. invalid_request).</li>
 </ol>
 
 

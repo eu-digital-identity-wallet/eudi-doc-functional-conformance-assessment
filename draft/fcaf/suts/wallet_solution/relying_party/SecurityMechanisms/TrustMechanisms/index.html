@@ -1208,43 +1208,43 @@
 <!-- BEGIN INCLUDE ./[A-Z]*.md -->
 <h3 id="ws_rp_sm_trustmechanisms_002">WS_RP_SM_TrustMechanisms_002</h3>
 <h4 id="objective">Objective</h4>
-<p>Test that the wallet when proccessing trusted_authorites, the type "aki" is supported</p>
+<p>Test that the Wallet when processing trusted_authorities, the type "aki" is supported.</p>
 <h4 id="references">References</h4>
-<p>[OID4VP 6.1.1]
+<p>[OID4VP 6.1.1.1]
 Section 4.2.1.1 of [RFC5280]</p>
 <h4 id="profile-applicability">Profile applicability</h4>
-<p>Wallet supports trusted authorities query based on 'aki'</p>
+<p>Wallet supports trusted authorities query based on 'aki'.</p>
 <h4 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions">Preconditions</h4>
 <h4 id="test-scenario">Test Scenario</h4>
 <ol>
-<li>The Wallet engages with the Verifier</li>
-<li>Verifier sends a DCQL query with a credential with a "trusted_authorities" property with its type being "aki".</li>
-<li>The Wallet evaluates the request.</li>
+<li>The Wallet engages with the Verifier.</li>
+<li>The Verifier sends a DCQL query containing a credential query with trusted_authorities of type "aki", and a specific KeyIdentifier value that matches the AuthorityKeyIdentifier of an X.509 certificate.</li>
+<li>The Wallet returns a response to the Verifier.</li>
 </ol>
 <h4 id="expected-results">Expected results</h4>
 <ol>
 <li>Wallet and Verifier can interact.</li>
-<li>Wallet receives the request.</li>
-<li>No errors returned by the wallet using the KeyIdentifier of the AuthorityKeyIdentifier as defined in Section 4.2.1.1 of [RFC5280], encoded as base64url</li>
+<li>Wallet successfully receives the DCQL query.</li>
+<li>The Wallet returns an Authorization Response containing the matching credential.</li>
 </ol>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_sm_trustmechanisms_003">WS_RP_SM_TrustMechanisms_003</h3>
 <h4 id="objective_1">Objective</h4>
-<p>Test the Wallet processess a DCQL-query with a "aki" correctly when it does contain a matching credential.</p>
+<p>Test the Wallet processes a DCQL-query with an "aki" correctly when it does contain a matching credential.</p>
 <h4 id="references_1">References</h4>
-<p>[OID4VP 6.1.1]
+<p>[OID4VP 6.1.1.1]
 [RFC5280]</p>
 <h4 id="profile-applicability_1">Profile applicability</h4>
 <p>Wallet supports trusted authorities query based on 'aki'</p>
 <h4 id="eudi-wallet-relevancy_1">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_1">Preconditions</h4>
-<p>The stored credential in the wallet used in test is issued under a certificate chain containing a specified AuthorityKeyIdentifier</p>
+<p>The stored credential in the Wallet used in test is issued under a certificate chain containing a specified AuthorityKeyIdentifier</p>
 <h4 id="test-scenario_1">Test Scenario</h4>
 <ol>
-<li>The Wallet engages with the Verifier</li>
+<li>The Wallet engages with the Verifier.</li>
 <li>Verifier sends a DCQL query with a "trusted_authorities" property with its type being "aki", and its value contains a specific keyIdentifier of a certificate in the certificate chain of the credential issuer</li>
 <li>The Wallet evaluates the request and allows the user to continue with presenting matching credentials.</li>
 <li>User selects the available credential and approves to present it.</li>
@@ -1253,25 +1253,25 @@ Section 4.2.1.1 of [RFC5280]</p>
 <ol>
 <li>Wallet and Verifier can interact.</li>
 <li>Wallet receives the request.</li>
-<li>The wallet allows the user to select the credential matching the certificate chain.</li>
-<li>The wallet presents the selected credential.</li>
+<li>The Wallet allows the user to select the credential matching the certificate chain.</li>
+<li>The Wallet presents the selected credential.</li>
 </ol>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_sm_trustmechanisms_004">WS_RP_SM_TrustMechanisms_004</h3>
 <h4 id="objective_2">Objective</h4>
-<p>Test the Wallet processess a DCQL-query with a "aki" correctly when it does not contain a matching credential.</p>
+<p>Test the Wallet processes a DCQL-query with an "aki" correctly when it does not contain a matching credential.</p>
 <h4 id="references_2">References</h4>
-<p>[OID4VP 6.1.1]
+<p>[OID4VP 6.1.1.1]
 [RFC5280]</p>
 <h4 id="profile-applicability_2">Profile applicability</h4>
 <p>Wallet supports trusted authorities query based on 'aki'</p>
 <h4 id="eudi-wallet-relevancy_2">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_2">Preconditions</h4>
-<p>The stored credential(s) in the wallet used in test is/are issued under a certificate chain with none of the certificates matching a specified AuthorityKeyIdentifier.</p>
+<p>The stored credential(s) in the Wallet used in test is/are issued under a certificate chain with none of the certificates matching a specified AuthorityKeyIdentifier.</p>
 <h4 id="test-scenario_2">Test Scenario</h4>
 <ol>
-<li>The Wallet engages with the Verifier</li>
+<li>The Wallet engages with the Verifier.</li>
 <li>Verifier sends a DCQL query with a "trusted_authorities" property with its type being "aki", and its 'value' contains only a value not matching any AuthorizationKeyIdentifier in the credential issuer's certificate chain.</li>
 <li>The Wallet evaluates the request.</li>
 </ol>
@@ -1284,19 +1284,19 @@ Section 4.2.1.1 of [RFC5280]</p>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_sm_trustmechanisms_005">WS_RP_SM_TrustMechanisms_005</h3>
 <h4 id="objective_3">Objective</h4>
-<p>Test the Wallet processess a DCQL-query with a "aki" correctly when it does contain a matching credential, with the match in the end-entity (Issuer) certificate.</p>
+<p>Test the Wallet processes a DCQL-query with an "aki" correctly when it does contain a matching credential, with the match in the end-entity (Issuer) certificate.</p>
 <h4 id="references_3">References</h4>
-<p>[OID4VP 6.1.1]
+<p>[OID4VP 6.1.1.1]
 [RFC5280]</p>
 <h4 id="profile-applicability_3">Profile applicability</h4>
 <p>Wallet supports trusted authorities query based on 'aki'</p>
 <h4 id="eudi-wallet-relevancy_3">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_3">Preconditions</h4>
-<p>The stored credential in the wallet used in test is issued under a certificate chain containing a specified AuthorityKeyIdentifier in the end-entity (Issuer) certificate, with the chain having a depth of at least 3.</p>
+<p>The stored credential in the Wallet used in test is issued under a certificate chain containing a specified AuthorityKeyIdentifier in the end-entity (Issuer) certificate, with the chain having a depth of at least 3.</p>
 <h4 id="test-scenario_3">Test Scenario</h4>
 <ol>
-<li>The Wallet engages with the Verifier</li>
+<li>The Wallet engages with the Verifier.</li>
 <li>Verifier sends a DCQL query with a "trusted_authorities" property with its type being "aki", and its value contains a specific keyIdentifier of the end-entity (Issuer) certificate in the certificate chain of the credential issuer</li>
 <li>The Wallet evaluates the request and allows the user to continue with presenting matching credentials.</li>
 <li>User selects the available credential and approves to present it.</li>
@@ -1305,25 +1305,25 @@ Section 4.2.1.1 of [RFC5280]</p>
 <ol>
 <li>Wallet and Verifier can interact.</li>
 <li>Wallet receives the request.</li>
-<li>The wallet allows the user to select the credential matching the certificate chain.</li>
-<li>The wallet presents the selected credential.</li>
+<li>The Wallet allows the user to select the credential matching the certificate chain.</li>
+<li>The Wallet presents the selected credential.</li>
 </ol>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_sm_trustmechanisms_006">WS_RP_SM_TrustMechanisms_006</h3>
 <h4 id="objective_4">Objective</h4>
-<p>Test the Wallet processess a DCQL-query with a "aki" correctly when it does contain a matching credential, with the match in a sub-CA certificate.</p>
+<p>Test the Wallet processes a DCQL-query with an "aki" correctly when it does contain a matching credential, with the match in a sub-CA certificate.</p>
 <h4 id="references_4">References</h4>
-<p>[OID4VP 6.1.1]
+<p>[OID4VP 6.1.1.1]
 [RFC5280]</p>
 <h4 id="profile-applicability_4">Profile applicability</h4>
 <p>Wallet supports trusted authorities query based on 'aki'</p>
 <h4 id="eudi-wallet-relevancy_4">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_4">Preconditions</h4>
-<p>The stored credential in the wallet used in test is issued under a certificate chain containing a specified AuthorityKeyIdentifier in a sub-CA certificate, with the chain having a depth of at least 3.</p>
+<p>The stored credential in the Wallet used in test is issued under a certificate chain containing a specified AuthorityKeyIdentifier in a sub-CA certificate, with the chain having a depth of at least 3.</p>
 <h4 id="test-scenario_4">Test Scenario</h4>
 <ol>
-<li>The Wallet engages with the Verifier</li>
+<li>The Wallet engages with the Verifier.</li>
 <li>Verifier sends a DCQL query with a "trusted_authorities" property with its type being "aki", and its value contains a specific keyIdentifier of a sub-CA certificate in the certificate chain of the credential issuer</li>
 <li>The Wallet evaluates the request and allows the user to continue with presenting matching credentials.</li>
 <li>User selects the available credential and approves to present it.</li>
@@ -1332,15 +1332,15 @@ Section 4.2.1.1 of [RFC5280]</p>
 <ol>
 <li>Wallet and Verifier can interact.</li>
 <li>Wallet receives the request.</li>
-<li>The wallet allows the user to select the credential matching the certificate chain.</li>
-<li>The wallet presents the selected credential.</li>
+<li>The Wallet allows the user to select the credential matching the certificate chain.</li>
+<li>The Wallet presents the selected credential.</li>
 </ol>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_sm_trustmechanisms_007">WS_RP_SM_TrustMechanisms_007</h3>
 <h4 id="objective_5">Objective</h4>
-<p>Test the Wallet processess a DCQL-query with a "aki" correctly when it does contain a matching credential, with the match in the CA certificate.</p>
+<p>Test the Wallet processes a DCQL-query with an "aki" correctly when it does contain a matching credential, with the match in the CA certificate.</p>
 <h4 id="references_5">References</h4>
-<p>[OID4VP 6.1.1]
+<p>[OID4VP 6.1.1.1]
 [RFC5280]</p>
 <h4 id="profile-applicability_5">Profile applicability</h4>
 <p>Wallet supports trusted authorities query based on 'aki'</p>
@@ -1350,7 +1350,7 @@ Section 4.2.1.1 of [RFC5280]</p>
 <p>The stored credential in the wallet used in test is issued under a certificate chain containing a specified AuthorityKeyIdentifier of the CA certificate, with the chain having a depth of at least 3.</p>
 <h4 id="test-scenario_5">Test Scenario</h4>
 <ol>
-<li>The Wallet engages with the Verifier</li>
+<li>The Wallet engages with the Verifier.</li>
 <li>Verifier sends a DCQL query with a "trusted_authorities" property with its type being "aki", and its value contains a specific keyIdentifier of the CA certificate in the certificate chain of the credential issuer</li>
 <li>The Wallet evaluates the request and allows the user to continue with presenting matching credentials.</li>
 <li>User selects the available credential and approves to present it.</li>
@@ -1359,49 +1359,47 @@ Section 4.2.1.1 of [RFC5280]</p>
 <ol>
 <li>Wallet and Verifier can interact.</li>
 <li>Wallet receives the request.</li>
-<li>The wallet allows the user to select the credential matching the certificate chain.</li>
-<li>The wallet presents the selected credential.</li>
+<li>The Wallet allows the user to select the credential matching the certificate chain.</li>
+<li>The Wallet presents the selected credential.</li>
 </ol>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_sm_trustmechanisms_008">WS_RP_SM_TrustMechanisms_008</h3>
 <h4 id="objective_6">Objective</h4>
-<p>Test that the wallet behaves correctly when AKI match NOT successful.</p>
+<p>Test the Wallet processes a DCQL-query with an aki trusted_authorities value correctly when the Wallet does NOT contain a credential whose X.509 certificate chain matches the specified AuthorityKeyIdentifier.</p>
 <h4 id="references_6">References</h4>
-<p>[OID4VP 6.1.1]</p>
+<p>[OID4VP 6.1.1.1]</p>
 <h4 id="profile-applicability_6">Profile applicability</h4>
-<p>Wallet supports trusted authorities query based on 'aki'</p>
+<p>Wallet supports trusted authorities query based on 'aki'.</p>
 <h4 id="eudi-wallet-relevancy_6">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_6">Preconditions</h4>
 <h4 id="test-scenario_6">Test Scenario</h4>
 <ol>
-<li>The Wallet engages with the Verifier</li>
-<li>Verifier sends a DCQL query requesting a credential which will not match to any in wallet.</li>
-<li>The Wallet evaluates the request.</li>
+<li>The Wallet engages with the Verifier.</li>
+<li>The Verifier sends a DCQL query containing a credential query with trusted_authorities of type aki and a KeyIdentifier value that does NOT match the AuthorityKeyIdentifier of any X.509 certificate in the chain of any credential the Wallet holds.</li>
+<li>The Wallet returns a response to the Verifier.</li>
 </ol>
 <h4 id="expected-results_6">Expected results</h4>
 <ol>
 <li>Wallet and Verifier can interact.</li>
-<li>Wallet receives the request.
-3a. The wallet identifies a mismatch. </li>
+<li>The Wallet successfully receives the DCQL query.</li>
+<li>The Wallet does not return any credential in the Authorization Response (no credential satisfies the aki constraint).</li>
 </ol>
-<p>3b. The credential is excluded.
-3c. The wallet does not present the mismatched credential to the user.
-3d. The wallet returns a privacy keeping (generic error) to verifier, NOT specific "AKI wrong".</p>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_sm_trustmechanisms_009">WS_RP_SM_TrustMechanisms_009</h3>
 <h4 id="objective_7">Objective</h4>
-<p>Test the wallet can resolve a trusted_authorities request of type etsi_tl by matching the credential's issuer against a recognized ETSI Trusted List.</p>
+<p>Test the Wallet can resolve a trusted_authorities request of type etsi_tl by matching the credential's issuer against a recognized ETSI Trusted List.</p>
 <h4 id="references_7">References</h4>
-<p>[OID4VP 6.1.1]</p>
+<p>[OID4VP 6.1.1.2]</p>
 <h4 id="profile-applicability_7">Profile applicability</h4>
 <p>Wallet supports trusted authorities query based on ETSI Trust List.</p>
 <h4 id="eudi-wallet-relevancy_7">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_optional</p>
 <h4 id="preconditions_7">Preconditions</h4>
+<p>A mock ETSI trusted List is active to be used</p>
 <h4 id="test-scenario_7">Test Scenario</h4>
 <ol>
-<li>The Wallet engages with the Verifier</li>
+<li>The Wallet engages with the Verifier.</li>
 <li>Verifier sends a DCQL query requesting a credential with a "trusted_authorities" property with its type being "etsi_tl".</li>
 <li>The Wallet evaluates the request.</li>
 </ol>
@@ -1411,23 +1409,24 @@ Section 4.2.1.1 of [RFC5280]</p>
 <li>Wallet receives the request.
 3a. The Wallet checks the issuer of its stored credential against the entries in the Trusted List.
 3b. It confirms the Issuer's status according to the list's metadata.
-3c. The wallet displays the credential to the user because the Issuer was found and validated in the ETSI list.</li>
+3c. The Wallet displays the credential to the user because the Issuer was found and validated in the ETSI list.</li>
 </ol>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_sm_trustmechanisms_010">WS_RP_SM_TrustMechanisms_010</h3>
 <h4 id="objective_8">Objective</h4>
-<p>Test the wallet can resolve a trusted_authorities request of type etsi_tl by matching the credential's issuer against a recognized ETSI Trusted List. Scenario when no Match.</p>
+<p>Test the Wallet can resolve a trusted_authorities request of type etsi_tl by matching the credential's issuer against a recognized ETSI Trusted List scenario when no Match.</p>
 <h4 id="references_8">References</h4>
-<p>[OID4VP 6.1.1]</p>
+<p>[OID4VP 6.1.1.2]</p>
 <h4 id="profile-applicability_8">Profile applicability</h4>
 <p>Wallet supports trusted authorities query based on ETSI Trust List.</p>
 <h4 id="eudi-wallet-relevancy_8">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_optional</p>
 <h4 id="preconditions_8">Preconditions</h4>
-<p>Credential Issuer is not on Trusted List</p>
+<p>Credential Issuer is not on Trusted List
+A mock ETSI trusted List is active to be used</p>
 <h4 id="test-scenario_8">Test Scenario</h4>
 <ol>
-<li>The Wallet engages with the Verifier</li>
+<li>The Wallet engages with the Verifier.</li>
 <li>Verifier sends a DCQL query requesting a credential with a "trusted_authorities" property with its type being "etsi_tl".</li>
 <li>The Wallet evaluates the request.</li>
 </ol>
@@ -1437,24 +1436,25 @@ Section 4.2.1.1 of [RFC5280]</p>
 <li>Wallet receives the request.
 3a. The Wallet checks the issuer of its stored credential against the entries in the Trusted List.
 3b. It confirms the Issuer's status according to the list's metadata.
-3c. The wallet does not use the credential if the Issuer is not on the list (even if the credential is valid otherwise).
+3c. The Wallet does not use the credential if the Issuer is not on the list (even if the credential is valid otherwise).
 3d. Wallet will make sure it only returns privacy-safe error response to verifier.</li>
 </ol>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_sm_trustmechanisms_011">WS_RP_SM_TrustMechanisms_011</h3>
 <h4 id="objective_9">Objective</h4>
-<p>Test the wallet can resolve a trusted_authorities request of type etsi_tl by matching the credential's issuer against a recognized ETSI Trusted List. Scenario when invalid trusted list.</p>
+<p>Test the wallet can resolve a trusted_authorities request of type etsi_tl by matching the credential's issuer against a recognized ETSI Trusted List scenario when invalid trusted list.</p>
 <h4 id="references_9">References</h4>
-<p>[OID4VP 6.1.1]</p>
+<p>[OID4VP 6.1.1.2]</p>
 <h4 id="profile-applicability_9">Profile applicability</h4>
 <p>Wallet supports trusted authorities query based on ETSI Trust List.</p>
 <h4 id="eudi-wallet-relevancy_9">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_optional</p>
 <h4 id="preconditions_9">Preconditions</h4>
-<p>Scenario when the Trusted List signature is invalid or if the URL in the query is unreachable.</p>
+<p>Scenario when the Trusted List signature is invalid or if the URL in the query is unreachable.
+A mock ETSI trusted List is active to be used</p>
 <h4 id="test-scenario_9">Test Scenario</h4>
 <ol>
-<li>The Wallet engages with the Verifier</li>
+<li>The Wallet engages with the Verifier.</li>
 <li>Verifier sends a DCQL query requesting a credential with a "trusted_authorities" property with its type being "etsi_tl".</li>
 <li>The Wallet evaluates the request.</li>
 </ol>
@@ -1470,18 +1470,19 @@ Section 4.2.1.1 of [RFC5280]</p>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_sm_trustmechanisms_012">WS_RP_SM_TrustMechanisms_012</h3>
 <h4 id="objective_10">Objective</h4>
-<p>The wallet cam parse the identifier of a Trusted List as specified in ETSI TS 119 612 [ETSI.TL], in a "trusted_authorities" request.</p>
+<p>The Wallet can parse the identifier of a Trusted List as specified in ETSI TS 119 612 [ETSI.TL], in a "trusted_authorities" request.</p>
 <h4 id="references_10">References</h4>
-<p>[OID4VP 6.1.1]
+<p>[OID4VP 6.1.1.2]
 ETSI TS 119 612 [ETSI.TL]</p>
 <h4 id="profile-applicability_10">Profile applicability</h4>
 <p>Wallet supports trusted authorities query based on ETSI Trust List.</p>
 <h4 id="eudi-wallet-relevancy_10">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_optional</p>
 <h4 id="preconditions_10">Preconditions</h4>
+<p>A mock ETSI trusted List is active to be used</p>
 <h4 id="test-scenario_10">Test Scenario</h4>
 <ol>
-<li>The Wallet engages with the Verifier</li>
+<li>The Wallet engages with the Verifier.</li>
 <li>Verifier sends a DCQL query requesting a credential with a "trusted_authorities" property with its type being "etsi_tl".</li>
 <li>The Wallet evaluates the request.</li>
 </ol>
@@ -1489,188 +1490,91 @@ ETSI TS 119 612 [ETSI.TL]</p>
 <ol>
 <li>Wallet and Verifier can interact.</li>
 <li>Wallet receives the request.
-3a. The wallet successfully extracts the URI string
+3a. The Wallet successfully extracts the URI string
 3b. Wallet fetches the list, validates that it follows the ETSI TS 119 612 schema (correctly handling XML or JSON).</li>
 </ol>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_sm_trustmechanisms_013">WS_RP_SM_TrustMechanisms_013</h3>
 <h4 id="objective_11">Objective</h4>
-<p>Verify the Wallet can navigate an ETSI Trusted List (with a List of Lists) to identify and validate a Trust Service Provider’s (TSP) certificate.</p>
+<p>Verify the Wallet can navigate an ETSI Trusted List (List of Trusted Lists) to identify and validate a Trust Service Provider’s (TSP) certificate.</p>
 <h4 id="references_11">References</h4>
-<p>[OID4VP 6.1.1]</p>
+<p>[OID4VP 6.1.1.2]</p>
 <h4 id="profile-applicability_11">Profile applicability</h4>
 <h4 id="eudi-wallet-relevancy_11">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_optional</p>
 <h4 id="preconditions_11">Preconditions</h4>
+<p>The Wallet contains a credential issued by a valid Trust Service Provider (TSP).
+A mock ETSI trusted List is active to be used</p>
 <h4 id="test-scenario_11">Test Scenario</h4>
 <ol>
-<li>The Wallet engages with the Verifier</li>
-<li>Verifier provides the Wallet with an ETSI Trusted List that contains a link to another list</li>
+<li>The Wallet engages with the Verifier.</li>
+<li>The Verifier sends an Authorization Request containing a DCQL query with trusted_authorities of type etsi_tl whose value is the URL of the ETSI Trusted List.</li>
+<li>The Wallet returns a response to the Verifier.</li>
 </ol>
 <h4 id="expected-results_11">Expected results</h4>
 <ol>
 <li>Wallet and Verifier can interact.</li>
-<li>Verify the Wallet correctly parses the lists and recognises the Provider as "Trusted" by matching their actual certificate against the one listed in the ETSI entry.</li>
+<li>The Wallet successfully receives the DCQL query.</li>
+<li>The Wallet returns an Authorization Response containing the credential whose issuing Trust Service Provider is listed in the linked Trusted List or its cascading Trusted Lists.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_sm_trustmechanisms_014">WS_RP_SM_TrustMechanisms_014</h3>
+<h3 id="ws_rp_sm_trustmechanisms_015">WS_RP_SM_TrustMechanisms_015</h3>
 <h4 id="objective_12">Objective</h4>
-<p>Verify the Wallet can navigate an ETSI Trusted List (with a specific entry for a Provider) to identify and validate a Trust Service Provider’s (TSP) certificate.</p>
+<p>Test the Wallet will not return a credential if its X.509 Certificate trust chain cannot be verified against the specified etsi_tl or its cascading lists.</p>
 <h4 id="references_12">References</h4>
-<p>[OID4VP 6.1.1]</p>
+<p>[OID4VP 6.1.1.2]</p>
 <h4 id="profile-applicability_12">Profile applicability</h4>
 <h4 id="eudi-wallet-relevancy_12">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_optional</p>
 <h4 id="preconditions_12">Preconditions</h4>
+<p>A mock ETSI trusted List is active to be used</p>
 <h4 id="test-scenario_12">Test Scenario</h4>
 <ol>
-<li>The Wallet engages with the Verifier</li>
-<li>Provide the Wallet with an ETSI Trusted List that contains a specific entry for a Provider and their X.509 certificate.</li>
+<li>The Wallet engages with the Verifier.</li>
+<li>The Verifier sends an Authorization Request containing a DCQL query with trusted_authorities of type etsi_tl, with values containing the identifier of the Trusted List, but no wallet credential's X.509 in the cascading Trusted List entries.</li>
+<li>The Wallet returns a response to the Verifier.</li>
 </ol>
 <h4 id="expected-results_12">Expected results</h4>
 <ol>
 <li>Wallet and Verifier can interact.</li>
-<li>Verify the Wallet correctly parses the list and recognises the Provider as "Trusted" by matching their actual certificate against the one listed in the ETSI entry.</li>
+<li>The Wallet successfully receives the DCQL query.</li>
+<li>The Wallet does not return any credential in the Authorization Response.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_sm_trustmechanisms_015">WS_RP_SM_TrustMechanisms_015</h3>
+<h3 id="ws_rp_sm_trustmechanisms_021">WS_RP_SM_TrustMechanisms_021</h3>
 <h4 id="objective_13">Objective</h4>
-<p>Test the wallet checks that the trust chain of a matching Credential MUST contain at least one X.509 Certificate that matches one of the entries of the Trusted List or its cascading Trusted Lists.</p>
+<p>Verify that Wallet can handle Authorization Request using authorization key identifier mechanism to support multiple X.509-based trust mechanism supported by the Wallet profile.</p>
 <h4 id="references_13">References</h4>
-<p>[OID4VP 6.1.1]</p>
+<p>[OIDF.HAIP] section 5 (introduction)
+[OIDF.OID4VP] section 6.1.1.1, section 8.5</p>
 <h4 id="profile-applicability_13">Profile applicability</h4>
+<p>multiple X.509-based trust mechanisms supported by the Wallet</p>
 <h4 id="eudi-wallet-relevancy_13">EUDI-wallet relevancy</h4>
-<p>EUDI_generic | EUDI_optional</p>
+<p>EUDI_generic, EUDI_required</p>
 <h4 id="preconditions_13">Preconditions</h4>
 <h4 id="test-scenario_13">Test Scenario</h4>
 <ol>
-<li>The Wallet engages with the Verifier</li>
-<li>Verifier sends the Wallet a Credential signed by an unrecognised issuer (a certificate that does not appear in the Trusted List or any of its sub-lists).</li>
+<li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
+<li>Verifier sends Credential Query to the Wallet using Authority Key Identifier (aki)-based Trusted Authority Query (trusted_authorities) for DCQL.</li>
+<li><code>aki</code> array includes a collection of encoded Key Identifiers from the certificates </li>
+<li>Verify that Wallet does not answer with error <code>invalid_request</code>, which can be sent when the Wallet does not support the Client Identifier Prefix passed in the Authorization Request.</li>
+<li>Verify if Wallet asks for user consent to present the Credential.</li>
+<li>User gives consent.</li>
+<li>Verify if Wallet answers Credential Query successfully.</li>
 </ol>
 <h4 id="expected-results_13">Expected results</h4>
 <ol>
-<li>Wallet and Verifier can interact.</li>
-<li>The Wallet identifies that the issuer is missing from the "Chain of Trust" and rejects the credential (e.g., marks it as "Untrusted" or excludes it from the selection screen).</li>
-</ol>
-<!-- END INCLUDE -->
-<h3 id="ws_rp_sm_trustmechanisms_016">WS_RP_SM_TrustMechanisms_016</h3>
-<h4 id="objective_14">Objective</h4>
-<p>Test that the wallet supports and correctly proccesses the type "openid_federation"</p>
-<h4 id="references_14">References</h4>
-<p>[OID4VP 6.1.1]
-[OpenID.Federation] </p>
-<h4 id="profile-applicability_14">Profile applicability</h4>
-<p>Wallet supports trusted authorities query based on OpenID Federation.</p>
-<h4 id="eudi-wallet-relevancy_14">EUDI-wallet relevancy</h4>
-<p>EUDI_generic | EUDI_undefined</p>
-<h4 id="preconditions_14">Preconditions</h4>
-<h4 id="test-scenario_14">Test Scenario</h4>
-<ol>
-<li>The Wallet engages with the Verifier</li>
-<li>Verifier sends a DCQL query requesting a credential with a "trusted_authorities" property with its type being "openid_federation".</li>
-<li>The Wallet evaluates the request.</li>
-</ol>
-<h4 id="expected-results_14">Expected results</h4>
-<ol>
-<li>Wallet and Verifier can interact.</li>
-<li>Wallet receives the request.
-3a. Confirm the wallet recognises type: "openid_federation" without errors.
-3b. Check the wallet performs trust-chain lookup and authority validation through the OpenID Federation mechanism.
-3c. The wallet checks the provided Entity’s federation_id against its trusted anchors. Wallet presents credential without error.</li>
-</ol>
-<!-- END INCLUDE -->
-<h3 id="ws_rp_sm_trustmechanisms_017">WS_RP_SM_TrustMechanisms_017</h3>
-<h4 id="objective_15">Objective</h4>
-<p>Test that the wallet correctly proccesses the type "openid_federation" when Entity has an unknown/untrusted federation_id</p>
-<h4 id="references_15">References</h4>
-<p>[OID4VP 6.1.1]</p>
-<h4 id="profile-applicability_15">Profile applicability</h4>
-<p>Wallet supports trusted authorities query based on OpenID Federation.</p>
-<h4 id="eudi-wallet-relevancy_15">EUDI-wallet relevancy</h4>
-<p>EUDI_generic | EUDI_undefined</p>
-<h4 id="preconditions_15">Preconditions</h4>
-<h4 id="test-scenario_15">Test Scenario</h4>
-<ol>
-<li>The Wallet engages with the Verifier</li>
-<li>Verifier sends a DCQL query requesting a credential with a "trusted_authorities" property with its type being "openid_federation".</li>
-<li>The Wallet evaluates the request.</li>
-</ol>
-<h4 id="expected-results_15">Expected results</h4>
-<ol>
-<li>Wallet and Verifier can interact.</li>
-<li>Wallet receives the request.
-3a. Confirm the wallet recognises type: "openid_federation" without errors.
-3b. The wallet performs trust-chain lookup and authority validation through the OpenID Federation mechanism then decides it must not use the credential in question.
-3c. The wallet checks the provided Entity’s federation_id against its trusted anchors.
-3d. The wallet returns a generic response to the Verifier to ensure the existence of the credential/PID is not disclosed.</li>
-</ol>
-<!-- END INCLUDE -->
-<h3 id="ws_rp_sm_trustmechanisms_018">WS_RP_SM_TrustMechanisms_018</h3>
-<h4 id="objective_16">Objective</h4>
-<p>Test that the wallet correctly proccesses the type "openid_federation" when Entity has a expired/revoked federation_id</p>
-<h4 id="references_16">References</h4>
-<p>[OID4VP 6.1.1]</p>
-<h4 id="profile-applicability_16">Profile applicability</h4>
-<p>Wallet supports trusted authorities query based on OpenID Federation.</p>
-<h4 id="eudi-wallet-relevancy_16">EUDI-wallet relevancy</h4>
-<p>EUDI_generic | EUDI_undefined</p>
-<h4 id="preconditions_16">Preconditions</h4>
-<h4 id="test-scenario_16">Test Scenario</h4>
-<ol>
-<li>The Wallet engages with the Verifier</li>
-<li>Verifier sends a DCQL query requesting a credential with a "trusted_authorities" property with its type being "openid_federation".</li>
-<li>The Wallet evaluates the request.</li>
-</ol>
-<h4 id="expected-results_16">Expected results</h4>
-<ol>
-<li>Wallet and Verifier can interact.</li>
-<li>Wallet receives the request.
-3a. Confirm the wallet recognises type: "openid_federation" without errors.
-3b. The wallet performs trust-chain lookup and authority validation through the OpenID Federation mechanism then decides it must not use the credential in question.
-3c. The wallet checks the provided Entity’s federation_id against its trusted anchors.
-3d. The wallet returns a generic response to the Verifier to ensure the existence of the credential/PID is not disclosed.</li>
-</ol>
-<!-- END INCLUDE -->
-<h3 id="ws_rp_sm_trustmechanisms_019">WS_RP_SM_TrustMechanisms_019</h3>
-<h4 id="objective_17">Objective</h4>
-<p>Test that the wallet can check a valid path, by detecting invalid signatures in the middle of the path.</p>
-<h4 id="references_17">References</h4>
-<p>[OID4VP 6.1.1]</p>
-<h4 id="profile-applicability_17">Profile applicability</h4>
-<h4 id="eudi-wallet-relevancy_17">EUDI-wallet relevancy</h4>
-<p>EUDI_generic | EUDI_undefined</p>
-<h4 id="preconditions_17">Preconditions</h4>
-<h4 id="test-scenario_17">Test Scenario</h4>
-<ol>
-<li>The Wallet engages with the Verifier</li>
-<li>Provide a credential with a path to the correct Trust Anchor, but intentionally corrupt the signature of an intermediate entity.</li>
-</ol>
-<h4 id="expected-results_17">Expected results</h4>
-<ol>
-<li>Wallet and Verifier can interact.</li>
-<li>Wallet rejects the credential because a valid cryptographic path cannot be finished.</li>
-</ol>
-<!-- END INCLUDE -->
-<h3 id="ws_rp_sm_trustmechanisms_020">WS_RP_SM_TrustMechanisms_020</h3>
-<h4 id="objective_18">Objective</h4>
-<p>Test the wallet ensures the path leads to the specific anchor requested.</p>
-<h4 id="references_18">References</h4>
-<p>[OID4VP 6.1.1]</p>
-<h4 id="profile-applicability_18">Profile applicability</h4>
-<h4 id="eudi-wallet-relevancy_18">EUDI-wallet relevancy</h4>
-<p>EUDI_generic | EUDI_undefined</p>
-<h4 id="preconditions_18">Preconditions</h4>
-<h4 id="test-scenario_18">Test Scenario</h4>
-<ol>
-<li>Verifier requests openid_federation with Value Anchor_A. The Wallet has a credential that is perfectly valid but belongs to Anchor_B.</li>
-</ol>
-<h4 id="expected-results_18">Expected results</h4>
-<ol>
-<li>Wallet treats the credential as non-matching (does not present it), even though it is technically "trusted" in its own separate ecosystem.</li>
+<li>This is the case.</li>
+<li>This is the case.</li>
+<li>This is the case.</li>
+<li>Wallet does not answer with error <code>invalid_request</code>, which can be sent when the Wallet does not support the Client Identifier Prefix passed in the Authorization Request.</li>
+<li>Wallet asks for user consent.</li>
+<li>This is the case.</li>
+<li>Wallet answers Credential Query successfully</li>
 </ol>
 <!-- END INCLUDE -->
 
-<!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md -->
+<!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md -->
 
 
 

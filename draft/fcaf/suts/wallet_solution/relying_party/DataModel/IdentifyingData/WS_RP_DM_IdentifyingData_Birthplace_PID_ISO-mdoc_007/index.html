@@ -23,7 +23,7 @@
     
     
       
-        <title>EuPid_DM_BirthPlace_07 - European Digital Identity</title>
+        <title>WS_RP_DM_IdentifyingData_Birthplace_PID_ISO-mdoc_007 - European Digital Identity</title>
       
     
     
@@ -59,14 +59,14 @@
     
   
 <meta property="og:type" content="website" />
-<meta property="og:title" content="EuPid_DM_BirthPlace_07 - European Digital Identity" />
+<meta property="og:title" content="WS_RP_DM_IdentifyingData_Birthplace_PID_ISO-mdoc_007 - European Digital Identity" />
 <meta property="og:image" content="https://conformance.eudi.dev/draft/assets/images/social/fcaf/suts/wallet_solution/relying_party/DataModel/IdentifyingData/WS_RP_DM_IdentifyingData_Birthplace_PID_ISO-mdoc_007.png" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:url" content="https://conformance.eudi.dev/draft/fcaf/suts/wallet_solution/relying_party/DataModel/IdentifyingData/WS_RP_DM_IdentifyingData_Birthplace_PID_ISO-mdoc_007/" />
 <meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:title" content="EuPid_DM_BirthPlace_07 - European Digital Identity" />
+<meta property="twitter:title" content="WS_RP_DM_IdentifyingData_Birthplace_PID_ISO-mdoc_007 - European Digital Identity" />
 <meta property="twitter:image" content="https://conformance.eudi.dev/draft/assets/images/social/fcaf/suts/wallet_solution/relying_party/DataModel/IdentifyingData/WS_RP_DM_IdentifyingData_Birthplace_PID_ISO-mdoc_007.png" />
 </head>
   
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#eupid_dm_birthplace_07" class="md-skip">
+        <a href="#ws_rp_dm_identifyingdata_birthplace_pid_iso-mdoc_007" class="md-skip">
           Skip to content
         </a>
       
@@ -126,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              EuPid_DM_BirthPlace_07
+              WS_RP_DM_IdentifyingData_Birthplace_PID_ISO-mdoc_007
             
           </span>
         </div>
@@ -1204,29 +1204,31 @@
   
 
 
-<h1 id="eupid_dm_birthplace_07">EuPid_DM_BirthPlace_07</h1>
+<h1 id="ws_rp_dm_identifyingdata_birthplace_pid_iso-mdoc_007">WS_RP_DM_IdentifyingData_Birthplace_PID_ISO-mdoc_007</h1>
 <h2 id="objective">Objective</h2>
-<p>This test case verifies that the region item of data element birth_place has only UTF-8 characters, and maximal length of 150 characters.</p>
+<p>This test case verifies that the region item of data element <code>place_of_birth</code> has only UTF-8 characters, and maximum length of 150 characters. Note that <code>place_of_birth</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier birth_place.</p>
 <h2 id="references">References</h2>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.5,  <br />
-“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 6).<br />
- ISO/IEC 3166-1</p>
+<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook..  <br />
+"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 6).<br />
+ISO/IEC 3166-1</p>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
 <p>EUDI_specific | EUDI_required</p>
 <h2 id="profile-applicability">Profile applicability</h2>
-<p>The mdoc contains a document with DocType = "eu.europa.ec.eudi.pid.1".</p>
+<p>The mdoc contains a Credential in mdoc format with DocType = "eu.europa.ec.eudi.pid.1".</p>
 <h2 id="preconditions">Preconditions</h2>
 <p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
-B. All mandatory data elements within nameSpace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
+B. All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
 C. The device retrieval mdoc response was retrieved. 
-D. The presence of the item ‘locality’ in data element birth_place in the device retrieval mdoc response was verified.</p>
+D. The presence of the item ‘locality’ in data element <code>place_of_birth</code> in the device retrieval mdoc response was verified.</p>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
-<li>Verify that the value of the data element <code>region</code> in map place_of_birth 2. Check the length of the  <code>locality</code> value in map place_of_birth.</li>
+<li>Verify that the value of the data element <code>locality</code> in map <code>place_of_birth</code>.</li>
+<li>Check the length of the <code>locality</code> value in map <code>place_of_birth</code>.</li>
 </ol>
 <h2 id="expected-results">Expected results</h2>
 <ol>
-<li>Values includes only UTF-8 characters. 2. Length is equal or smaller tjam 150 characters.</li>
+<li>Value includes only UTF-8 characters. </li>
+<li>Length is equal or smaller than 150 characters.</li>
 </ol>
 
 

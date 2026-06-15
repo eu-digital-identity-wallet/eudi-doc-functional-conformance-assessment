@@ -23,7 +23,7 @@
     
     
       
-        <title>EuPid_DM_BirthPlace_05 - European Digital Identity</title>
+        <title>WS_RP_DM_IdentifyingData_Birthplace_PID_ISO-mdoc_005 - European Digital Identity</title>
       
     
     
@@ -59,14 +59,14 @@
     
   
 <meta property="og:type" content="website" />
-<meta property="og:title" content="EuPid_DM_BirthPlace_05 - European Digital Identity" />
+<meta property="og:title" content="WS_RP_DM_IdentifyingData_Birthplace_PID_ISO-mdoc_005 - European Digital Identity" />
 <meta property="og:image" content="https://conformance.eudi.dev/draft/assets/images/social/fcaf/suts/wallet_solution/relying_party/DataModel/IdentifyingData/WS_RP_DM_IdentifyingData_Birthplace_PID_ISO-mdoc_005.png" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:url" content="https://conformance.eudi.dev/draft/fcaf/suts/wallet_solution/relying_party/DataModel/IdentifyingData/WS_RP_DM_IdentifyingData_Birthplace_PID_ISO-mdoc_005/" />
 <meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:title" content="EuPid_DM_BirthPlace_05 - European Digital Identity" />
+<meta property="twitter:title" content="WS_RP_DM_IdentifyingData_Birthplace_PID_ISO-mdoc_005 - European Digital Identity" />
 <meta property="twitter:image" content="https://conformance.eudi.dev/draft/assets/images/social/fcaf/suts/wallet_solution/relying_party/DataModel/IdentifyingData/WS_RP_DM_IdentifyingData_Birthplace_PID_ISO-mdoc_005.png" />
 </head>
   
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#eupid_dm_birthplace_05" class="md-skip">
+        <a href="#ws_rp_dm_identifyingdata_birthplace_pid_iso-mdoc_005" class="md-skip">
           Skip to content
         </a>
       
@@ -126,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              EuPid_DM_BirthPlace_05
+              WS_RP_DM_IdentifyingData_Birthplace_PID_ISO-mdoc_005
             
           </span>
         </div>
@@ -1204,25 +1204,25 @@
   
 
 
-<h1 id="eupid_dm_birthplace_05">EuPid_DM_BirthPlace_05</h1>
+<h1 id="ws_rp_dm_identifyingdata_birthplace_pid_iso-mdoc_005">WS_RP_DM_IdentifyingData_Birthplace_PID_ISO-mdoc_005</h1>
 <h2 id="objective">Objective</h2>
-<p>This test case verifies that the country item of data element birth_place is a valid country code.</p>
+<p>This test case verifies that the country item of data element <code>place_of_birth</code> is a valid country code. Note that <code>place_of_birth</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier birth_place.</p>
 <h2 id="references">References</h2>
 <p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.5  <br />
-“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 6).<br />
- ISO/IEC 3166-1</p>
+"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 6).<br />
+ISO/IEC 3166-1</p>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
 <p>EUDI_specific | EUDI_required</p>
 <h2 id="profile-applicability">Profile applicability</h2>
-<p>The mdoc contains a document with DocType = "eu.europa.ec.eudi.pid.1".</p>
+<p>The mdoc contains a Credential in mdoc format with DocType = "eu.europa.ec.eudi.pid.1".</p>
 <h2 id="preconditions">Preconditions</h2>
 <p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
-B. All mandatory data elements within nameSpace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
+B. All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
 C. The device retrieval mdoc response was retrieved. 
-D. The presence of the item ‘country’ in data element birth_place in the device retrieval mdoc response was verified.</p>
+D. The presence of the item ‘country’ in data element <code>place_of_birth</code> in the device retrieval mdoc response was verified.</p>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
-<li>Verify that the value of the data element <code>country</code> in map place_of_birth contains a valid country code.</li>
+<li>Verify that the value of the data element <code>country</code> in map <code>place_of_birth</code> contains a valid country code.</li>
 </ol>
 <h2 id="expected-results">Expected results</h2>
 <ol>

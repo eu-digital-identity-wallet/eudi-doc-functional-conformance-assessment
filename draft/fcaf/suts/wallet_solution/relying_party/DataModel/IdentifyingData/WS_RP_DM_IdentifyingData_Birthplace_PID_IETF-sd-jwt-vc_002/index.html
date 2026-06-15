@@ -23,7 +23,7 @@
     
     
       
-        <title>EuPid_DM_BirthPlace_02 - European Digital Identity</title>
+        <title>WS_RP_DM_IdentifyingData_Birthplace_PID_IETF-sd-jwt-vc_002 - European Digital Identity</title>
       
     
     
@@ -59,14 +59,14 @@
     
   
 <meta property="og:type" content="website" />
-<meta property="og:title" content="EuPid_DM_BirthPlace_02 - European Digital Identity" />
+<meta property="og:title" content="WS_RP_DM_IdentifyingData_Birthplace_PID_IETF-sd-jwt-vc_002 - European Digital Identity" />
 <meta property="og:image" content="https://conformance.eudi.dev/draft/assets/images/social/fcaf/suts/wallet_solution/relying_party/DataModel/IdentifyingData/WS_RP_DM_IdentifyingData_Birthplace_PID_IETF-sd-jwt-vc_002.png" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:url" content="https://conformance.eudi.dev/draft/fcaf/suts/wallet_solution/relying_party/DataModel/IdentifyingData/WS_RP_DM_IdentifyingData_Birthplace_PID_IETF-sd-jwt-vc_002/" />
 <meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:title" content="EuPid_DM_BirthPlace_02 - European Digital Identity" />
+<meta property="twitter:title" content="WS_RP_DM_IdentifyingData_Birthplace_PID_IETF-sd-jwt-vc_002 - European Digital Identity" />
 <meta property="twitter:image" content="https://conformance.eudi.dev/draft/assets/images/social/fcaf/suts/wallet_solution/relying_party/DataModel/IdentifyingData/WS_RP_DM_IdentifyingData_Birthplace_PID_IETF-sd-jwt-vc_002.png" />
 </head>
   
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#eupid_dm_birthplace_02" class="md-skip">
+        <a href="#ws_rp_dm_identifyingdata_birthplace_pid_ietf-sd-jwt-vc_002" class="md-skip">
           Skip to content
         </a>
       
@@ -126,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              EuPid_DM_BirthPlace_02
+              WS_RP_DM_IdentifyingData_Birthplace_PID_IETF-sd-jwt-vc_002
             
           </span>
         </div>
@@ -1204,29 +1204,29 @@
   
 
 
-<h1 id="eupid_dm_birthplace_02">EuPid_DM_BirthPlace_02</h1>
+<h1 id="ws_rp_dm_identifyingdata_birthplace_pid_ietf-sd-jwt-vc_002">WS_RP_DM_IdentifyingData_Birthplace_PID_IETF-sd-jwt-vc_002</h1>
 <h2 id="objective">Objective</h2>
-<p>This test case verifies that the claim birth_place is encoded as a JSON structure.</p>
+<p>This test case verifies that the claim <code>place_of_birth</code> is encoded as a JSON structure. Note that <code>place_of_birth</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier birth_place.</p>
 <h2 id="references">References</h2>
-<p>European Digital Identity Wallet, ARF 1.9, Annex 3.01 pid rulebook, paragraph 3.1.5 <br />
-“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 7).<br />
- RFC 7049 section 2.1</p>
+<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook
+"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 7).<br />
+RFC 7049 section 2.1</p>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
 <p>EUDI_specific | EUDI_required</p>
 <h2 id="profile-applicability">Profile applicability</h2>
 <p>The EUDI wallet contains a Credential in IETF SD-JWT VC format. <code>vct</code> claim includes base type of person identification "urn:eudi:pid:1".</p>
 <h2 id="preconditions">Preconditions</h2>
 <p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
-B. All mandatory data elements within nameSpace  "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
+B. All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
 C. EUDI wallet presented the Credential successfully. 
-D. The presence of claim birth_place in the IETF SD-JWT VC Credential presented was verified.</p>
+D. The presence of claim <code>place_of_birth</code> in the IETF SD-JWT VC Credential presented was verified.</p>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
 <li>Verify that claim is encoded as a JSON structure.</li>
 </ol>
 <h2 id="expected-results">Expected results</h2>
 <ol>
-<li>Claim is encoded as a JSON structure.</li>
+<li>The claim is encoded as a JSON structure.</li>
 </ol>
 
 

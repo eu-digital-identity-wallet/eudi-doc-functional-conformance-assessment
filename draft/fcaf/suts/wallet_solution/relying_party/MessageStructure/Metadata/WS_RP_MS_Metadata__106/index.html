@@ -1206,12 +1206,12 @@
 
 <h1 id="ws_rp_ms_metadata_106">WS_RP_MS_Metadata_106</h1>
 <h2 id="objective">Objective</h2>
-<p>Verify that when the client_metadata parameter is included in an Authorization Request, it is a valid UTF-8 encoded JSON object and that the Wallet processes only the defined metadata parameters.</p>
+<p>VVerify that the Wallet rejects the Authorization Request when the client_metadata parameter is not a valid UTF-8 encoded JSON object, returning an invalid_request error.</p>
 <h2 id="references">References</h2>
 <p>[OIDF.OID4VP] section 5.1</p>
 <h2 id="profile-applicability">Profile applicability</h2>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
-<p>EUDI_generic |  EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h2 id="preconditions">Preconditions</h2>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>

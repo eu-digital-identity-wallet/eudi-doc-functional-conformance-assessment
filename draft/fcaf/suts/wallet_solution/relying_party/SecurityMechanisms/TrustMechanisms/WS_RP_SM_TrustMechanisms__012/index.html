@@ -1206,18 +1206,19 @@
 
 <h1 id="ws_rp_sm_trustmechanisms_012">WS_RP_SM_TrustMechanisms_012</h1>
 <h2 id="objective">Objective</h2>
-<p>The wallet cam parse the identifier of a Trusted List as specified in ETSI TS 119 612 [ETSI.TL], in a "trusted_authorities" request.</p>
+<p>The Wallet can parse the identifier of a Trusted List as specified in ETSI TS 119 612 [ETSI.TL], in a "trusted_authorities" request.</p>
 <h2 id="references">References</h2>
-<p>[OID4VP 6.1.1]
+<p>[OID4VP 6.1.1.2]
 ETSI TS 119 612 [ETSI.TL]</p>
 <h2 id="profile-applicability">Profile applicability</h2>
 <p>Wallet supports trusted authorities query based on ETSI Trust List.</p>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
 <p>EUDI_generic | EUDI_optional</p>
 <h2 id="preconditions">Preconditions</h2>
+<p>A mock ETSI trusted List is active to be used</p>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
-<li>The Wallet engages with the Verifier</li>
+<li>The Wallet engages with the Verifier.</li>
 <li>Verifier sends a DCQL query requesting a credential with a "trusted_authorities" property with its type being "etsi_tl".</li>
 <li>The Wallet evaluates the request.</li>
 </ol>
@@ -1225,7 +1226,7 @@ ETSI TS 119 612 [ETSI.TL]</p>
 <ol>
 <li>Wallet and Verifier can interact.</li>
 <li>Wallet receives the request.
-3a. The wallet successfully extracts the URI string
+3a. The Wallet successfully extracts the URI string
 3b. Wallet fetches the list, validates that it follows the ETSI TS 119 612 schema (correctly handling XML or JSON).</li>
 </ol>
 

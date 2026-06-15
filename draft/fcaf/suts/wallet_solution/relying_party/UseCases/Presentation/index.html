@@ -1208,9 +1208,9 @@
 <!-- BEGIN INCLUDE ./[A-Z]*.md -->
 <h3 id="ws_rp_uc_presentation_003">WS_RP_UC_Presentation_003</h3>
 <h4 id="objective">Objective</h4>
-<p>Verify that a Wallet supporting OAuth 2.0 scope-based Presentation requests processes an Authorization Request using a valid pre-defined scope value, regardless of the response_type used (e.g. vp_token, code, or others).</p>
+<p>Verify that a Wallet supporting OAuth 2.0 scope-based Presentation requests processes an Authorization Request using a valid pre-defined scope value, by presenting a credential of the type the scope value identifies.</p>
 <h4 id="references">References</h4>
-<p>[OIDF.OID4VP] section 5.5</p>
+<p>[OID4VP 5.5]</p>
 <h4 id="profile-applicability">Profile applicability</h4>
 <p>Wallet supports OAuth 2.0</p>
 <h4 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h4>
@@ -1219,14 +1219,14 @@
 <h4 id="test-scenario">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
-<li>Wallet receives an Authorization Request using a valid OAuth 2.0 scope value defined in the applicable ETSI profile, with any supported response_type (e.g. vp_token, code).</li>
-<li>Wallet resolves the scope to its configured Credential mapping and proceeds with the presentation flow.</li>
+<li>Wallet receives an Authorization Request using a valid pre-defined scope value as defined by the applicable profile.</li>
+<li>The Wallet returns a response to the Verifier.</li>
 </ol>
 <h4 id="expected-results">Expected results</h4>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
-<li>Wallet successfully parses the Authorization Request.</li>
-<li>Wallet processes the request using the scope-based credential mapping and proceeds with the presentation flow successfully, independent of the response_type value.</li>
+<li>The Wallet successfully processes the Authorization Request.</li>
+<li>The Wallet returns an Authorization Response containing a credential whose type matches the type identified by the scope value per the applicable profile.</li>
 </ol>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_uc_presentation_004">WS_RP_UC_Presentation_004</h3>
@@ -1237,7 +1237,7 @@
 <h4 id="profile-applicability_1">Profile applicability</h4>
 <p>Wallet supports DC API cross-device flow (Appendix A); HAIP/ETSI profile defines cross-device requirements</p>
 <h4 id="eudi-wallet-relevancy_1">EUDI-wallet relevancy</h4>
-<p>EUDI_generic |  EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_1">Preconditions</h4>
 <h4 id="test-scenario_1">Test Scenario</h4>
 <ol>
@@ -1256,30 +1256,8 @@
 <li>Wallet completes the presentation flow on Device B and returns the Authorization Response to the Verifier.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_uc_presentation_005">WS_RP_UC_Presentation_005</h3>
-<h4 id="objective_2">Objective</h4>
-<p>Test that the wallet will be able to display necessary info</p>
-<h4 id="references_2">References</h4>
-<p>[OID4VP 6.2]</p>
-<h4 id="profile-applicability_2">Profile applicability</h4>
-<h4 id="eudi-wallet-relevancy_2">EUDI-wallet relevancy</h4>
-<p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_2">Preconditions</h4>
-<h4 id="test-scenario_2">Test Scenario</h4>
-<ol>
-<li>The Wallet engages with the Verifier</li>
-<li>The Verifier sends a Authorization Request with a DCQL-query</li>
-<li>Wallet can sucessfully display info</li>
-</ol>
-<h4 id="expected-results_2">Expected results</h4>
-<ol>
-<li>Wallet and Verifier can interact.</li>
-<li>Wallet receives the request.</li>
-<li>The wallet clearly displays the Verifier’s Name and Logo so the user knows who is asking for data. The purpose. The exact things being requested. A security warning if verifier metadata cannot be verified.</li>
-</ol>
-<!-- END INCLUDE -->
 
-<!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md -->
+<!-- BEGIN INCLUDE ./[A-Z]*.md -->
 
 
 

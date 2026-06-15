@@ -1208,7 +1208,7 @@
 <h2 id="objective">Objective</h2>
 <p>Test that at Step 3 of claims path processing, if the set of elements currently selected is empty, abort processing and return an error. </p>
 <h2 id="references">References</h2>
-<p>[OID4VP 7]</p>
+<p>[OID4VP 7] Section 7.2.1, 7.3</p>
 <h2 id="profile-applicability">Profile applicability</h2>
 <p>claims path pointer when applied to a JSON-based Credential</p>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
@@ -1226,7 +1226,7 @@
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
 <li>Engage wallet-verifier interaction.</li>
-<li>Verifier sends an Authorization Request with a DCQL query whose claims path pointer resolves to an empty set against the matching Credential (e.g. path: ["address", "postal_code"] where the Credential has no postal_code field under address).</li>
+<li>Verifier sends an Authorization Request with a DCQL query whose claims path pointer resolves to an empty set against the matching Credential (e.g. claims path pointer: ["address", "postal_code"] where the Credential has no postal_code field under address).</li>
 <li>Wallet parses the Authorization Request and the DCQL query.</li>
 <li>Wallet evaluates the claims path pointer against the matching JSON-based Credential.</li>
 <li>Wallet observes that the resulting set of selected JSON elements is empty.</li>

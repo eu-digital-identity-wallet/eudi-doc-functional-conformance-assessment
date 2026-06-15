@@ -1208,15 +1208,15 @@
 <h2 id="objective">Objective</h2>
 <p>Test if present the credential property "trusted_authorities", is made of objects defined in [OID4VP 6.1.1]</p>
 <h2 id="references">References</h2>
-<p>[OID4VP 6.1]</p>
+<p>[OID4VP] sections 6.1.1, 8.5</p>
 <h2 id="profile-applicability">Profile applicability</h2>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
 <p>EUDI_generic | EUDI_required</p>
 <h2 id="preconditions">Preconditions</h2>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
-<li>The Wallet engages with the Verifier</li>
-<li>The Verifier sends a Authorization Request with a DCQL-query with a credential with a non-empty array "trusted_authorities" property, but which includes an object not defined in [OID4VP 6.1.1]</li>
+<li>The Wallet engages with the Verifier.</li>
+<li>The Verifier sends an Authorization Request with a DCQL-query with a credential with a non-empty array "trusted_authorities" property, but which includes an object not defined in [OID4VP 6.1.1]</li>
 <li>The Wallet evaluates the request.</li>
 </ol>
 <h2 id="expected-results">Expected results</h2>

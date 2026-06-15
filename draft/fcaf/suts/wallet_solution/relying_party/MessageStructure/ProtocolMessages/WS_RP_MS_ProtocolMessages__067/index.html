@@ -1208,15 +1208,16 @@
 <h2 id="objective">Objective</h2>
 <p>Test the Wallet accepts a DCQL-query with credential <code>format</code> values conform to those defined in [OID4VP] Appendix B.</p>
 <h2 id="references">References</h2>
-<p>[OID4VP 6.1]</p>
+<p>[OID4VP] sections 6.1
+[HAIP]</p>
 <h2 id="profile-applicability">Profile applicability</h2>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
 <p>EUDI_generic | EUDI_required</p>
 <h2 id="preconditions">Preconditions</h2>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
-<li>The Wallet engages with the Verifier</li>
-<li>The Verifier sends a Authorization Request with a DCQL-query with a credential with a "format" value that is one of <code>jwt_vc_json</code>, <code>ldp_vc</code>, <code>mso_mdoc</code> or <code>dc+sd-jwt</code>.</li>
+<li>The Wallet engages with the Verifier.</li>
+<li>The Verifier sends an Authorization Request with a DCQL-query with a credential with a "format" value that is one of <code>mso_mdoc</code> or <code>dc+sd-jwt</code>.</li>
 <li>The Wallet evaluates the request.</li>
 </ol>
 <h2 id="expected-results">Expected results</h2>

@@ -1206,27 +1206,29 @@
 
 <h1 id="ws_rp_ms_protocolmessages_065">WS_RP_MS_ProtocolMessages_065</h1>
 <h2 id="objective">Objective</h2>
-<p>Test the wallet rejects DCQL-query credential object property "id" when it consists of invalid charafcters (i.e. other than alphanumeric, underscore (_), or hyphen (-)).</p>
+<p>Test the Wallet rejects DCQL-query credential object property "id" when it consists of invalid characters (i.e. other than alphanumeric, underscore (_), or hyphen (-)).</p>
 <h2 id="references">References</h2>
-<p>[OID4VP 6.1]</p>
+<p>[OID4VP] sections 6.1, 8.5</p>
 <h2 id="profile-applicability">Profile applicability</h2>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
 <p>EUDI_generic | EUDI_required</p>
 <h2 id="preconditions">Preconditions</h2>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
-<li>The Wallet engages with the Verifier</li>
-<li>The Verifier sends a Authorization Request with a DCQL-query with a credential with "id" property containing a character other than alphanumeric, underscore (_), or hyphen (-).</li>
+<li>The Wallet engages with the Verifier.</li>
+<li>The Verifier sends an Authorization Request with a DCQL-query with a credential with "id" property containing a character other than alphanumeric, underscore (_), or hyphen (-).</li>
 <li>The Wallet evaluates the request.</li>
 </ol>
 <h2 id="expected-results">Expected results</h2>
 <ol>
 <li>Wallet and Verifier can interact.</li>
 <li>Wallet receives the request.</li>
-<li>Wallet rejects the request by either:
-a. answering with an error with details (<code>invalid_request</code>), 
-b. answering with an error without providing details or,
-c. discontinuing the interaction.</li>
+<li>Wallet rejects the request by either:<ol>
+<li>answering with an error with details (<code>invalid_request</code>),</li>
+<li>answering with an error without providing details or,</li>
+<li>discontinuing the interaction.</li>
+</ol>
+</li>
 </ol>
 
 

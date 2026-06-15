@@ -1206,17 +1206,18 @@
 
 <h1 id="ws_rp_sm_trustmechanisms_009">WS_RP_SM_TrustMechanisms_009</h1>
 <h2 id="objective">Objective</h2>
-<p>Test the wallet can resolve a trusted_authorities request of type etsi_tl by matching the credential's issuer against a recognized ETSI Trusted List.</p>
+<p>Test the Wallet can resolve a trusted_authorities request of type etsi_tl by matching the credential's issuer against a recognized ETSI Trusted List.</p>
 <h2 id="references">References</h2>
-<p>[OID4VP 6.1.1]</p>
+<p>[OID4VP 6.1.1.2]</p>
 <h2 id="profile-applicability">Profile applicability</h2>
 <p>Wallet supports trusted authorities query based on ETSI Trust List.</p>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
 <p>EUDI_generic | EUDI_optional</p>
 <h2 id="preconditions">Preconditions</h2>
+<p>A mock ETSI trusted List is active to be used</p>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
-<li>The Wallet engages with the Verifier</li>
+<li>The Wallet engages with the Verifier.</li>
 <li>Verifier sends a DCQL query requesting a credential with a "trusted_authorities" property with its type being "etsi_tl".</li>
 <li>The Wallet evaluates the request.</li>
 </ol>
@@ -1226,7 +1227,7 @@
 <li>Wallet receives the request.
 3a. The Wallet checks the issuer of its stored credential against the entries in the Trusted List.
 3b. It confirms the Issuer's status according to the list's metadata.
-3c. The wallet displays the credential to the user because the Issuer was found and validated in the ETSI list.</li>
+3c. The Wallet displays the credential to the user because the Issuer was found and validated in the ETSI list.</li>
 </ol>
 
 

@@ -1213,7 +1213,7 @@
 <p>[OIDF.OID4VP] section 5.11.1</p>
 <h4 id="profile-applicability">Profile applicability</h4>
 <h4 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h4>
-<p>EUDI_generic |  EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions">Preconditions</h4>
 <h4 id="test-scenario">Test Scenario</h4>
 <ol>
@@ -1237,7 +1237,7 @@
 <p>[OIDF.OID4VP] section 5.11.1</p>
 <h4 id="profile-applicability_1">Profile applicability</h4>
 <h4 id="eudi-wallet-relevancy_1">EUDI-wallet relevancy</h4>
-<p>EUDI_generic |  EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_1">Preconditions</h4>
 <h4 id="test-scenario_1">Test Scenario</h4>
 <ol>
@@ -1261,7 +1261,7 @@
 <p>[OIDF.OID4VP] section 5.11.1</p>
 <h4 id="profile-applicability_2">Profile applicability</h4>
 <h4 id="eudi-wallet-relevancy_2">EUDI-wallet relevancy</h4>
-<p>EUDI_generic |  EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_2">Preconditions</h4>
 <h4 id="test-scenario_2">Test Scenario</h4>
 <ol>
@@ -1285,7 +1285,7 @@
 <p>[OIDF.OID4VP] section 5.11.1</p>
 <h4 id="profile-applicability_3">Profile applicability</h4>
 <h4 id="eudi-wallet-relevancy_3">EUDI-wallet relevancy</h4>
-<p>EUDI_generic |  EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_3">Preconditions</h4>
 <h4 id="test-scenario_3">Test Scenario</h4>
 <ol>
@@ -1309,7 +1309,7 @@
 <p>[OIDF.OID4VP] section 5.11.1</p>
 <h4 id="profile-applicability_4">Profile applicability</h4>
 <h4 id="eudi-wallet-relevancy_4">EUDI-wallet relevancy</h4>
-<p>EUDI_generic |  EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_4">Preconditions</h4>
 <h4 id="test-scenario_4">Test Scenario</h4>
 <ol>
@@ -1326,8 +1326,207 @@
 <li>Wallet ignores the unrecognized attestation type; processing continues with remaining valid request elements; presentation flow proceeds.</li>
 </ol>
 <!-- END INCLUDE -->
+<h3 id="ws_rp_sm_devicebinding_007">WS_RP_SM_DeviceBinding_007</h3>
+<h4 id="objective_5">Objective</h4>
+<p>Verify that whenever Wallet presents a SD-JWT containing a <code>cnf</code> claim, <code>cnf</code> conforms to definition given in [I-D.ietf-oauth-sd-jwt-vc].</p>
+<h4 id="references_5">References</h4>
+<p>[OIDF.HAIP] section 6.1
+[RFC7800]
+[I-D.ietf-oauth-sd-jwt-vc]</p>
+<h4 id="profile-applicability_5">Profile applicability</h4>
+<p>Wallet supports IETF SD-JWT VC </p>
+<h4 id="eudi-wallet-relevancy_5">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_5">Preconditions</h4>
+<h4 id="test-scenario_5">Test Scenario</h4>
+<ol>
+<li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
+<li>Verifier requests Credential presentation in IETF SD-JWT VC format.</li>
+<li>Wallet asks for user consent to present the Credential.</li>
+<li>User gives consent.</li>
+<li>Wallet presents Credential in IETF SD-JWT VC format.</li>
+<li>Check <code>cnf</code> claim is used within the SD-JWT component of the SD-JWT VC  </li>
+<li>Check <code>cnf</code>.</li>
+</ol>
+<h4 id="expected-results_5">Expected results</h4>
+<ol>
+<li>Wallet-verifier interaction is initiated.</li>
+<li>Wallet receives the presentation request.</li>
+<li>Wallet asks for user consent.</li>
+<li>User consent is registered.</li>
+<li>Wallet presents Credential in IETF SD-JWT VC format.</li>
+<li><code>cnf</code> claim is used within the SD-JWT component of the SD-JWT VC  </li>
+<li><code>cnf</code> complies with definition given in [I-D.ietf-oauth-sd-jwt-vc].</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_sm_devicebinding_008">WS_RP_SM_DeviceBinding_008</h3>
+<h4 id="objective_6">Objective</h4>
+<p>Verify that when Verifier requires Cryptographic Key Binding, <code>cnf</code> claim is used within the SD-JWT component of the SD-JWT VC as described in [I-D.ietf-oauth-sd-jwt-vc].</p>
+<h4 id="references_6">References</h4>
+<p>[OIDF.HAIP] section 6.1
+[RFC7800]
+[I-D.ietf-oauth-sd-jwt-vc]</p>
+<h4 id="profile-applicability_6">Profile applicability</h4>
+<p>Wallet supports IETF SD-JWT VC </p>
+<h4 id="eudi-wallet-relevancy_6">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_6">Preconditions</h4>
+<p>Credential requested in the test supports Cryptographic Key Binding.</p>
+<h4 id="test-scenario_6">Test Scenario</h4>
+<ol>
+<li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
+<li>Verifier sends presentation request for Credential in the IETF SD‑JWT VC format that supports Cryptographic Key Binding.</li>
+<li><code>require_cryptographic_holder_binding</code> is set to true in the Credential Query.</li>
+<li>Verify if Wallet asks for user consent to present the Credential.</li>
+<li>User gives consent.</li>
+<li>Verify if Wallet presents Credential in IETF SD-JWT VC format.</li>
+<li>Check <code>cnf</code> claim is used within the SD-JWT component of the SD-JWT VC  </li>
+</ol>
+<h4 id="expected-results_6">Expected results</h4>
+<ol>
+<li>This is the case.</li>
+<li>This is the case.</li>
+<li>This is the case.</li>
+<li>Wallet asks for user consent. </li>
+<li>This is the case.</li>
+<li>Wallet presents Credential in IETF SD-JWT VC format.</li>
+<li><code>cnf</code> claim is used within the SD-JWT component of the SD-JWT VC  </li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_sm_devicebinding_009">WS_RP_SM_DeviceBinding_009</h3>
+<h4 id="objective_7">Objective</h4>
+<p>Verify that when the Verifier sets require_cryptographic_holder_binding=false, the Wallet still includes the cnf claim within the SD-JWT component of the SD-JWT VC, providing the underlying credential type inherently includes it.</p>
+<h4 id="references_7">References</h4>
+<p>[OIDF.HAIP] section 6.1
+[RFC7800]
+[I-D.ietf-oauth-sd-jwt-vc]</p>
+<h4 id="profile-applicability_7">Profile applicability</h4>
+<p>Wallet supports IETF SD-JWT VC</p>
+<h4 id="eudi-wallet-relevancy_7">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_7">Preconditions</h4>
+<p>The Wallet holds a valid SD-JWT VC credential that inherently contains a cnf claim.</p>
+<h4 id="test-scenario_7">Test Scenario</h4>
+<ol>
+<li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
+<li>Verifier requests presentation from a Credential in IETF SD-JWT VC format</li>
+<li><code>require_cryptographic_holder_binding</code> is set to false in the Credential Query</li>
+<li>Wallet asks for user consent to present the Credential.</li>
+<li>User gives consent.</li>
+<li>Wallet presents Credential in IETF SD-JWT VC format.</li>
+<li>Check <code>cnf</code> claim is present within the SD-JWT component of the response.</li>
+</ol>
+<h4 id="expected-results_7">Expected results</h4>
+<ol>
+<li>Wallet-verifier interaction is initiated.</li>
+<li>Wallet receives the presentation request.</li>
+<li>Wallet processes the request parameter where holder binding is not mandated by the verifier.</li>
+<li>Wallet asks for user consent.</li>
+<li>User consent is registered.</li>
+<li>Wallet presents the Credential in IETF SD-JWT VC format.</li>
+<li>Verify that the cnf claim is included within the SD-JWT component of the SD-JWT VC response payload.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_sm_devicebinding_010">WS_RP_SM_DeviceBinding_010</h3>
+<h4 id="objective_8">Objective</h4>
+<p>Verify that when Wallet uses <code>cnf</code> claim within the SD-JWT component of the SD-JWT VC as described in [I-D.ietf-oauth-sd-jwt-vc], the claim contains the confirmation method identifying the proof of possession key.</p>
+<h4 id="references_8">References</h4>
+<p>[OIDF.HAIP] section 6.1
+[RFC7800]
+[I-D.ietf-oauth-sd-jwt-vc]</p>
+<h4 id="profile-applicability_8">Profile applicability</h4>
+<p>Wallet supports IETF SD-JWT VC </p>
+<h4 id="eudi-wallet-relevancy_8">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_8">Preconditions</h4>
+<p>The Wallet holds a valid SD-JWT VC credential that supports Cryptographic Key Binding.</p>
+<h4 id="test-scenario_8">Test Scenario</h4>
+<ol>
+<li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
+<li>Verifier requests presentation from a Credential in IETF SD-JWT VC Credential format that supports and/or requires Cryptographic Key Binding.</li>
+<li>Wallet asks for user consent to present the Credential.</li>
+<li>User gives consent.</li>
+<li>Wallet presents Credential in IETF SD-JWT VC format.</li>
+<li>Check <code>cnf</code> claim is used within the SD-JWT </li>
+<li>Check <code>cnf</code> content.</li>
+</ol>
+<h4 id="expected-results_8">Expected results</h4>
+<ol>
+<li>Wallet-verifier interaction is initiated.</li>
+<li>Wallet receives the presentation request.</li>
+<li>Wallet asks for user consent.</li>
+<li>User consent is registered.</li>
+<li>Wallet presents Credential in IETF SD-JWT VC format.</li>
+<li>The cnf claim is successfully used within the SD-JWT response payload.</li>
+<li>Verify the cnf claim contains the confirmation method identifying the proof of possession key as described in [I-D.ietf-oauth-sd-jwt-vc].</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_sm_devicebinding_011">WS_RP_SM_DeviceBinding_011</h3>
+<h4 id="objective_9">Objective</h4>
+<p>Verify that when Wallet uses <code>cnf</code> claim within the SD-JWT component of the SD-JWT VC as described in [I-D.ietf-oauth-sd-jwt-vc], the KB-JWT in the presentation of the SD-JWT is secured by the key identified in <code>cnf</code> claim.</p>
+<h4 id="references_9">References</h4>
+<p>[OIDF.HAIP] section 6.1
+[RFC7800]
+[I-D.ietf-oauth-sd-jwt-vc]</p>
+<h4 id="profile-applicability_9">Profile applicability</h4>
+<p>Wallet supports IETF SD-JWT VC </p>
+<h4 id="eudi-wallet-relevancy_9">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_9">Preconditions</h4>
+<p>The Wallet holds a valid SD-JWT VC credential that supports Cryptographic Key Binding.</p>
+<h4 id="test-scenario_9">Test Scenario</h4>
+<ol>
+<li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
+<li>Verifier requests presentation from a Credential in IETF SD-JWT VC Credential format that supports and/or requires Cryptographic Key Binding.</li>
+<li>Wallet asks for user consent to present the Credential.</li>
+<li>User gives consent.</li>
+<li>Wallet presents Credential in IETF SD-JWT VC format.</li>
+<li>Check <code>cnf</code> claim is used within the SD-JWT component of the SD-JWT VC.</li>
+<li>Verify that the KB-JWT in the presentation of the SD-JWT is secured by the key identified in 'cnf' claim.</li>
+</ol>
+<h4 id="expected-results_9">Expected results</h4>
+<ol>
+<li>Wallet-verifier interaction is initiated.</li>
+<li>Wallet receives the presentation request.</li>
+<li>Wallet asks for user consent.</li>
+<li>User consent is registered.</li>
+<li>Wallet presents Credential in IETF SD-JWT VC format.</li>
+<li>The 'cnf' claim is successfully used within the SD-JWT component of the SD-JWT VC response payload.</li>
+<li>Verify that the KB-JWT in the presentation of the SD-JWT is secured by the key identified in the 'cnf' claim.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_sm_devicebinding_012">WS_RP_SM_DeviceBinding_012</h3>
+<h4 id="objective_10">Objective</h4>
+<p>Verify that if the credential has cryptographic holder binding, Wallet presents a KB-JWT, as defined in [I-D.ietf-oauth-sd-jwt-vc] when presenting SD-JWT VC.</p>
+<h4 id="references_10">References</h4>
+<p>[OIDF.HAIP 6.1.1.1]</p>
+<h4 id="profile-applicability_10">Profile applicability</h4>
+<p>Wallet supports IETF SD-JWT VC </p>
+<h4 id="eudi-wallet-relevancy_10">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_10">Preconditions</h4>
+<p>The Wallet holds a valid SD-JWT VC credential that mandates Cryptographic Key Binding.</p>
+<h4 id="test-scenario_10">Test Scenario</h4>
+<ol>
+<li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request. </li>
+<li>Verifier sends presentation request for Credential in IETF SD‑JWT VC format that has Cryptographic Key Binding.</li>
+<li>Wallet asks for user consent to present the Credential.</li>
+<li>User gives consent.</li>
+<li>Wallet presents Credential in IETF SD-JWT VC format.</li>
+<li>Check if Wallet presents a KB-JWT.</li>
+</ol>
+<h4 id="expected-results_10">Expected results</h4>
+<ol>
+<li>Wallet-verifier interaction is initiated.</li>
+<li>Wallet receives the presentation request.</li>
+<li>Wallet asks for user consent to present the Credential.</li>
+<li>User consent is registered.</li>
+<li>Wallet presents Credential in IETF SD-JWT VC format.</li>
+<li>Verify that the Wallet successfully includes a structurally valid KB-JWT in the presentation payload, checking it aligns with definition held here: [OIDF.HAIP 6.1.1.1]</li>
+</ol>
+<!-- END INCLUDE -->
 
-<!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md -->
+<!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md -->
 
 
 

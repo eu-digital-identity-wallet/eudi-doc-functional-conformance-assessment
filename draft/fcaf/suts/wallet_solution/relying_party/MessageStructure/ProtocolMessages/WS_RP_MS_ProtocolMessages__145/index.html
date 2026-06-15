@@ -1208,23 +1208,23 @@
 <h2 id="objective">Objective</h2>
 <p>Verify that the Wallet returns an invalid_client error when it receives client_metadata in a request from a Verifier that the Wallet already has locally stored metadata for.</p>
 <h2 id="references">References</h2>
-<p>[OID4VP Section 8]</p>
+<p>[OID4VP] Sections 8.5, 11.1</p>
 <h2 id="profile-applicability">Profile applicability</h2>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
 <p>EUDI_generic | EUDI_required</p>
 <h2 id="preconditions">Preconditions</h2>
-<p>Wallet has stored trusted metadata for Verifier A</p>
+<p>Wallet has stored trusted metadata for Verifier A.</p>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
-<li>The wallet engages with verifier A.</li>
-<li>The verifier sends an Authorization request that includes the client_metadata parameter, even though the Wallet already knows this client.</li>
+<li>The Wallet engages with verifier A.</li>
+<li>The Verifier sends an Authorization request that includes the client_metadata parameter, even though the Wallet already knows this client.</li>
 <li>Wallet identifies the conflict between the incoming metadata and the stored trusted metadata.</li>
-<li>Test the response returned by the wallet to the Verifier.</li>
+<li>Test the response returned by the Wallet to the Verifier.</li>
 </ol>
 <h2 id="expected-results">Expected results</h2>
 <ol>
-<li>Wallet-verifier interaction is successfully initiated</li>
-<li>Wallet receives request</li>
+<li>Wallet-verifier interaction is successfully initiated.</li>
+<li>Wallet receives request.</li>
 <li>True: The Wallet does NOT proceed to credential selection or user authorization.</li>
 <li>Verify: The Wallet returns an error response where the error parameter is exactly invalid_client.</li>
 </ol>

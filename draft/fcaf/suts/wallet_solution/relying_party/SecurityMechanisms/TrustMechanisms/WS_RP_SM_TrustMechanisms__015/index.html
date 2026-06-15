@@ -1206,22 +1206,25 @@
 
 <h1 id="ws_rp_sm_trustmechanisms_015">WS_RP_SM_TrustMechanisms_015</h1>
 <h2 id="objective">Objective</h2>
-<p>Test the wallet checks that the trust chain of a matching Credential MUST contain at least one X.509 Certificate that matches one of the entries of the Trusted List or its cascading Trusted Lists.</p>
+<p>Test the Wallet will not return a credential if its X.509 Certificate trust chain cannot be verified against the specified etsi_tl or its cascading lists.</p>
 <h2 id="references">References</h2>
-<p>[OID4VP 6.1.1]</p>
+<p>[OID4VP 6.1.1.2]</p>
 <h2 id="profile-applicability">Profile applicability</h2>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
 <p>EUDI_generic | EUDI_optional</p>
 <h2 id="preconditions">Preconditions</h2>
+<p>A mock ETSI trusted List is active to be used</p>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
-<li>The Wallet engages with the Verifier</li>
-<li>Verifier sends the Wallet a Credential signed by an unrecognised issuer (a certificate that does not appear in the Trusted List or any of its sub-lists).</li>
+<li>The Wallet engages with the Verifier.</li>
+<li>The Verifier sends an Authorization Request containing a DCQL query with trusted_authorities of type etsi_tl, with values containing the identifier of the Trusted List, but no wallet credential's X.509 in the cascading Trusted List entries.</li>
+<li>The Wallet returns a response to the Verifier.</li>
 </ol>
 <h2 id="expected-results">Expected results</h2>
 <ol>
 <li>Wallet and Verifier can interact.</li>
-<li>The Wallet identifies that the issuer is missing from the "Chain of Trust" and rejects the credential (e.g., marks it as "Untrusted" or excludes it from the selection screen).</li>
+<li>The Wallet successfully receives the DCQL query.</li>
+<li>The Wallet does not return any credential in the Authorization Response.</li>
 </ol>
 
 

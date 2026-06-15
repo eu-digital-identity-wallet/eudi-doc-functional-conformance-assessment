@@ -23,7 +23,7 @@
     
     
       
-        <title>EuPid_DM_ResidentStreet_01 - European Digital Identity</title>
+        <title>WS_RP_DM_AddressData_Residentstreet_PID_ISO-mdoc_001 - European Digital Identity</title>
       
     
     
@@ -59,14 +59,14 @@
     
   
 <meta property="og:type" content="website" />
-<meta property="og:title" content="EuPid_DM_ResidentStreet_01 - European Digital Identity" />
+<meta property="og:title" content="WS_RP_DM_AddressData_Residentstreet_PID_ISO-mdoc_001 - European Digital Identity" />
 <meta property="og:image" content="https://conformance.eudi.dev/draft/assets/images/social/fcaf/suts/wallet_solution/relying_party/DataModel/AddressData/WS_RP_DM_AddressData_Residentstreet_PID_ISO-mdoc_001.png" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:url" content="https://conformance.eudi.dev/draft/fcaf/suts/wallet_solution/relying_party/DataModel/AddressData/WS_RP_DM_AddressData_Residentstreet_PID_ISO-mdoc_001/" />
 <meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:title" content="EuPid_DM_ResidentStreet_01 - European Digital Identity" />
+<meta property="twitter:title" content="WS_RP_DM_AddressData_Residentstreet_PID_ISO-mdoc_001 - European Digital Identity" />
 <meta property="twitter:image" content="https://conformance.eudi.dev/draft/assets/images/social/fcaf/suts/wallet_solution/relying_party/DataModel/AddressData/WS_RP_DM_AddressData_Residentstreet_PID_ISO-mdoc_001.png" />
 </head>
   
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#eupid_dm_residentstreet_01" class="md-skip">
+        <a href="#ws_rp_dm_addressdata_residentstreet_pid_iso-mdoc_001" class="md-skip">
           Skip to content
         </a>
       
@@ -126,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              EuPid_DM_ResidentStreet_01
+              WS_RP_DM_AddressData_Residentstreet_PID_ISO-mdoc_001
             
           </span>
         </div>
@@ -1204,27 +1204,29 @@
   
 
 
-<h1 id="eupid_dm_residentstreet_01">EuPid_DM_ResidentStreet_01</h1>
+<h1 id="ws_rp_dm_addressdata_residentstreet_pid_iso-mdoc_001">WS_RP_DM_AddressData_Residentstreet_PID_ISO-mdoc_001</h1>
 <h2 id="objective">Objective</h2>
-<p>This test case verifies that the data element resident_street is present in the mdoc data if this is indicated in the ICS.</p>
+<p>This test case verifies that the data element <code>resident_street</code> is present in the mdoc data if this is indicated in the ICS. Note that <code>resident_street</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier resident_street. </p>
 <h2 id="references">References</h2>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.1  <br />
-“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 2).</p>
+<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook  <br />
+"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 2).</p>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
 <p>EUDI_specific | EUDI_optional</p>
 <h2 id="profile-applicability">Profile applicability</h2>
-<p>The EUDI wallet contains a Credential in ISO-mdoc format with DocType = “eu.europa.ec.eudi.pid.1” Data element resident_street is present in the mdoc data.</p>
+<p>The EUDI wallet contains a Credential in ISO-mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element <code>resident_street</code> is present in the mdoc data.</p>
 <h2 id="preconditions">Preconditions</h2>
 <p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
-B. All mandatory data elements within nameSpace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
+B. All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
 C. The device retrieval mdoc response was retrieved.</p>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
-<li>Verify the presence of a data element with identifier resident_street in the device retrieval mdoc response. 2. Verify the presence of an ErrorItem for data element resident_street.</li>
+<li>Verify the presence of a data element with identifier <code>resident_street</code> in the device retrieval mdoc response. </li>
+<li>Verify the absence of an <code>ErrorItem</code> for data element <code>resident_street</code>.</li>
 </ol>
 <h2 id="expected-results">Expected results</h2>
 <ol>
-<li>One data element with identifier resident_street is present. 2. There is no ErrorItem for data element resident_street.</li>
+<li>One data element with identifier <code>resident_street</code> is present. </li>
+<li>There is no <code>ErrorItem</code> for data element <code>resident_street</code>.</li>
 </ol>
 
 

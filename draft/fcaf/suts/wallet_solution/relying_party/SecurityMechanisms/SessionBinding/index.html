@@ -1208,22 +1208,22 @@
 <!-- BEGIN INCLUDE ./[A-Z]*.md -->
 <h3 id="ws_rp_sm_sessionbinding_001">WS_RP_SM_SessionBinding_001</h3>
 <h4 id="objective">Objective</h4>
-<p>Verify that when the Wallet receives an Authorization Request that contains a valid nonce parameter, the wallet will reject the Authorization Request.</p>
+<p>Verify that when the Wallet receives an Authorization Request that contains a valid nonce parameter, the wallet will accept the Authorization Request.</p>
 <h4 id="references">References</h4>
-<p>[OIDF.OID4VP] section 5, section 14.1</p>
+<p>[OIDF.OID4VP] section 5.2, section 14.1</p>
 <h4 id="profile-applicability">Profile applicability</h4>
 <h4 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h4>
-<p>EUDI_generic |  EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions">Preconditions</h4>
 <h4 id="test-scenario">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
-<li>The Wallet receives an Authorization Request containing a valid nonce (cryptographically random, ASCII URL safe characters only).</li>
+<li>The Wallet receives an Authorization Request containing a valid nonce parameter.</li>
 </ol>
 <h4 id="expected-results">Expected results</h4>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
-<li>Wallet rejects the Authorization Request and returns an invalid_request error; presentation flow is not initiated.</li>
+<li>The Wallet successfully receives the Authorization Request.</li>
 </ol>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_sm_sessionbinding_002">WS_RP_SM_SessionBinding_002</h3>
@@ -1233,7 +1233,7 @@
 <p>[OIDF.OID4VP] section 5, section 14.1</p>
 <h4 id="profile-applicability_1">Profile applicability</h4>
 <h4 id="eudi-wallet-relevancy_1">EUDI-wallet relevancy</h4>
-<p>EUDI_generic |  EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_1">Preconditions</h4>
 <h4 id="test-scenario_1">Test Scenario</h4>
 <ol>
@@ -1253,7 +1253,7 @@
 <p>[OIDF.OID4VP] section 5, section 14.1</p>
 <h4 id="profile-applicability_2">Profile applicability</h4>
 <h4 id="eudi-wallet-relevancy_2">EUDI-wallet relevancy</h4>
-<p>EUDI_generic |  EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_2">Preconditions</h4>
 <h4 id="test-scenario_2">Test Scenario</h4>
 <ol>

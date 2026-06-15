@@ -1206,23 +1206,51 @@
 
 <h1 id="interaction-supportive">Interaction - Supportive</h1>
 <!-- BEGIN INCLUDE ./[A-Z]*.md -->
-<h3 id="ws_rp_ia_supportive_002">WS_RP_IA_Supportive_002</h3>
+<h3 id="ws_rp_ia_supportive_001">WS_RP_IA_Supportive_%001</h3>
 <h4 id="objective">Objective</h4>
-<p>Verify that upon any HTTP error response from the Request-URI endpoint the Wallet terminates the process.</p>
+<p>Verify that, in the presentation flow via Redirects, Wallet processes successfully HTTP response to the Wallet's HTTP POST to the <code>response_uri', including</code>redirect_uri`.</p>
 <h4 id="references">References</h4>
-<p>[OIDF.OID4VP] section 5.10.2</p>
+<p>[OIDF.HAIP] section 5.1 
+[OIDF.OID4VP] section 8.2</p>
 <h4 id="profile-applicability">Profile applicability</h4>
+<p>Presentations via Redirects</p>
 <h4 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h4>
-<p>EUDI_generic |  EUDI_required</p>
+<p>EUDI_generic, EUDI_required</p>
 <h4 id="preconditions">Preconditions</h4>
 <h4 id="test-scenario">Test Scenario</h4>
+<ol>
+<li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request. </li>
+<li>Verifier sends presentation request using <code>response_mode</code> <code>direct_post</code> and including <code>response_uri</code>.</li>
+<li>The Wallet sends an HTTP POST to the response_uri.</li>
+<li>Verifier responds to the Wallet's HTTP POST with a body including redirect_uri.</li>
+<li>Wallet processes the request.</li>
+</ol>
+<h4 id="expected-results">Expected results</h4>
+<ol>
+<li>The Verifier successfully initiates the presentation request flow with the end-user.</li>
+<li>The Wallet receives the presentation request with response_mode = direct_post and a response_uri parameter.</li>
+<li>The Wallet sends the Authorization Response to the response_uri via HTTP POST.</li>
+<li>The Wallet receives the verifier's HTTP response containing a redirect_uri.</li>
+<li>The Wallet successfully processes the verifier's response and opens the redirect_uri in the user agent.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_supportive_002">WS_RP_IA_Supportive_002</h3>
+<h4 id="objective_1">Objective</h4>
+<p>Verify that upon any HTTP error response from the Request-URI endpoint the Wallet terminates the process.</p>
+<h4 id="references_1">References</h4>
+<p>[OIDF.OID4VP] section 5.10.2</p>
+<h4 id="profile-applicability_1">Profile applicability</h4>
+<h4 id="eudi-wallet-relevancy_1">EUDI-wallet relevancy</h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_1">Preconditions</h4>
+<h4 id="test-scenario_1">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
 <li>Wallet receives an Authorization Request with request_uri_method = post.</li>
 <li>Wallet sends a POST request to the request_uri endpoint.</li>
 <li>Wallet receives an HTTP error response (e.g. 4xx or 5xx).</li>
 </ol>
-<h4 id="expected-results">Expected results</h4>
+<h4 id="expected-results_1">Expected results</h4>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
 <li>Wallet successfully receives the Authorization Request.</li>
@@ -1230,101 +1258,24 @@
 <li>Wallet terminates the Authorization Request process; presentation flow is not initiated.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_ia_supportive_003">WS_RP_IA_Supportive_003</h3>
-<h4 id="objective_1">Objective</h4>
-<p>Test the wallet returns the error message: wallet_unavailable when the SE is locked.</p>
-<h4 id="references_1">References</h4>
-<p>[OID4VP Section 8]</p>
-<h4 id="profile-applicability_1">Profile applicability</h4>
-<h4 id="eudi-wallet-relevancy_1">EUDI-wallet relevancy</h4>
-<p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_1">Preconditions</h4>
-<p>The device SE is locked.</p>
-<h4 id="test-scenario_1">Test Scenario</h4>
-<ol>
-<li>The wallet engages with verifier.</li>
-<li>The verifier sends a valid Authorization request.</li>
-<li>Wallet processes request and attempts to access the Secure Element to sign the response.</li>
-<li>The Secure Element returns a lockout error to the Wallet application.</li>
-<li>Test the response returned by the wallet to the Verifier.</li>
-</ol>
-<h4 id="expected-results_1">Expected results</h4>
-<ol>
-<li>Wallet-verifier interaction is successfully initiated</li>
-<li>Wallet receives request.</li>
-<li>True: The Wallet proceeds to the point of signing/generation.</li>
-<li>True: Hardware access is denied.</li>
-<li>Verify the Wallet does NOT return a credential; instead, it returns an error response where the error parameter is exactly wallet_unavailable.</li>
-</ol>
-<!-- END INCLUDE -->
-<h3 id="ws_rp_ia_supportive_004">WS_RP_IA_Supportive_004</h3>
+<h3 id="ws_rp_ia_supportive_006">WS_RP_IA_Supportive_006</h3>
 <h4 id="objective_2">Objective</h4>
-<p>Test the wallet returns the error message: wallet_unavailable when wallet is undergoing critical background updates.</p>
+<p>Test the wallet returns the error message: wallet_unavailable when the device the wallet is located on is under extreme load and hence is out of RAM/ disk space.</p>
 <h4 id="references_2">References</h4>
 <p>[OID4VP Section 8]</p>
 <h4 id="profile-applicability_2">Profile applicability</h4>
 <h4 id="eudi-wallet-relevancy_2">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_2">Preconditions</h4>
-<p>The Wallet is executing a critical background update and has set its internal state to "Busy/Maintenance."</p>
-<h4 id="test-scenario_2">Test Scenario</h4>
-<ol>
-<li>The wallet engages with verifier.</li>
-<li>The verifier sends a valid Authorization request.</li>
-<li>Wallet processes request and checks internal status.</li>
-<li>Test the response returned by the wallet to the Verifier.</li>
-</ol>
-<h4 id="expected-results_2">Expected results</h4>
-<ol>
-<li>Wallet-verifier interaction is successfully initiated</li>
-<li>Wallet receives request.</li>
-<li>Update in progress.</li>
-<li>Verify the Wallet does NOT return a credential; instead, it returns an error response where the error parameter is exactly wallet_unavailable.</li>
-</ol>
-<!-- END INCLUDE -->
-<h3 id="ws_rp_ia_supportive_005">WS_RP_IA_Supportive_005</h3>
-<h4 id="objective_3">Objective</h4>
-<p>Test the wallet returns the error message: wallet_unavailable when the wallet backend is experiencing an outage.</p>
-<h4 id="references_3">References</h4>
-<p>[OID4VP Section 8]</p>
-<h4 id="profile-applicability_3">Profile applicability</h4>
-<h4 id="eudi-wallet-relevancy_3">EUDI-wallet relevancy</h4>
-<p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_3">Preconditions</h4>
-<p>Wallet backend is experiencing outage.</p>
-<h4 id="test-scenario_3">Test Scenario</h4>
-<ol>
-<li>The wallet engages with verifier.</li>
-<li>The verifier sends a valid Authorization request.</li>
-<li>Wallet processes request and checks backend status.</li>
-<li>Test the response returned by the wallet to the Verifier.</li>
-</ol>
-<h4 id="expected-results_3">Expected results</h4>
-<ol>
-<li>Wallet-verifier interaction is successfully initiated</li>
-<li>Wallet receives request.</li>
-<li>backend experiencing outage.</li>
-<li>Verify the Wallet does NOT return a credential; instead, it returns an error response where the error parameter is exactly wallet_unavailable.</li>
-</ol>
-<!-- END INCLUDE -->
-<h3 id="ws_rp_ia_supportive_006">WS_RP_IA_Supportive_006</h3>
-<h4 id="objective_4">Objective</h4>
-<p>Test the wallet returns the error message: wallet_unavailable when the device the wallet is located on is under extreme load and hence is out of RAM/ disk space.</p>
-<h4 id="references_4">References</h4>
-<p>[OID4VP Section 8]</p>
-<h4 id="profile-applicability_4">Profile applicability</h4>
-<h4 id="eudi-wallet-relevancy_4">EUDI-wallet relevancy</h4>
-<p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_4">Preconditions</h4>
 <p>Device is under extreme load</p>
-<h4 id="test-scenario_4">Test Scenario</h4>
+<h4 id="test-scenario_2">Test Scenario</h4>
 <ol>
 <li>The wallet engages with verifier.</li>
 <li>The verifier sends a valid Authorization request.</li>
 <li>Wallet processes request</li>
 <li>Test the response returned by the wallet to the Verifier.</li>
 </ol>
-<h4 id="expected-results_4">Expected results</h4>
+<h4 id="expected-results_2">Expected results</h4>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated</li>
 <li>Wallet receives request.</li>
@@ -1332,8 +1283,35 @@
 <li>Verify the Wallet does NOT return a credential; instead, it returns an error response where the error parameter is exactly wallet_unavailable.</li>
 </ol>
 <!-- END INCLUDE -->
+<h3 id="ws_rp_ia_supportive_007">WS_RP_IA_Supportive_007</h3>
+<h4 id="objective_3">Objective</h4>
+<p>Verify that, in the presentation flow via Redirects, if Verifier sends a Signed Authorization Request, but it does not use a JWT-Secured Authorization Request (JAR) [RFC9101] with the <code>request_uri</code> parameter, the Wallet responds with an error (detailed or not) or discontinues the transaction.</p>
+<h4 id="references_3">References</h4>
+<p>[OIDF.HAIP] section 5.1
+[RFC9101] section 5</p>
+<h4 id="profile-applicability_3">Profile applicability</h4>
+<p>Presentations via Redirects</p>
+<h4 id="eudi-wallet-relevancy_3">EUDI-wallet relevancy</h4>
+<p>EUDI_generic, EUDI_required</p>
+<h4 id="preconditions_3">Preconditions</h4>
+<h4 id="test-scenario_3">Test Scenario</h4>
+<ol>
+<li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request. </li>
+<li>In the flow via Redirects, Verifier sends a Signed Authorization Request, but it does not use JWT-Secured Authorization Request (JAR) [RFC9101] with the "request_uri" parameter.</li>
+<li>Wallet processes the request.</li>
+</ol>
+<h4 id="expected-results_3">Expected results</h4>
+<ol>
+<li>This is the case.</li>
+<li>This is the case.</li>
+<li>Wallet either:
+a. Answers with an error with details (<code>invalid_request</code>), 
+b. Answers with an error without providing details or,
+c. Discontinues the interaction.</li>
+</ol>
+<!-- END INCLUDE -->
 
-<!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md -->
+<!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md -->
 
 
 

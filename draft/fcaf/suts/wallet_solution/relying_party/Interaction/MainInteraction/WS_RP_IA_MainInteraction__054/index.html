@@ -1206,7 +1206,7 @@
 
 <h1 id="ws_rp_ia_maininteraction_054">WS_RP_IA_MainInteraction_054</h1>
 <h2 id="objective">Objective</h2>
-<p>Test the response_uri, is the URL to which the Wallet sends the Authorization Response, using an HTTP POST request. </p>
+<p>Test that the Wallet sends the Authorization Response to the provided response_uri using an HTTP POST request.</p>
 <h2 id="references">References</h2>
 <p>[OID4VP Section 8]</p>
 <h2 id="profile-applicability">Profile applicability</h2>
@@ -1215,16 +1215,16 @@
 <h2 id="preconditions">Preconditions</h2>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
-<li>The wallet engages with the verifier</li>
-<li>The verifier sends a request, with parameter <code>response_mode=direct_post</code> and a <code>response_uri</code> of the verifier.</li>
+<li>The wallet engages with the verifier.</li>
+<li>The verifier sends a request, with parameter <code>response_mode=direct_post.jwt</code> and a <code>response_uri</code> of the verifier.</li>
 <li>The wallet processes the request.</li>
-<li>The wallet responds with request object</li>
+<li>The wallet responds with an Authorization response.</li>
 </ol>
 <h2 id="expected-results">Expected results</h2>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated</li>
 <li>Wallet receives request</li>
-<li>True</li>
+<li>The wallet processes the request successfully and prepares the Authorization Response for submission to the response_uri.</li>
 <li>Verify the wallet submits the response to the response_uri</li>
 </ol>
 

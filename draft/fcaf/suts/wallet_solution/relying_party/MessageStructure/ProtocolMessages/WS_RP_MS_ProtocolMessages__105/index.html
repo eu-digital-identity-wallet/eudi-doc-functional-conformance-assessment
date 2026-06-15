@@ -1206,7 +1206,7 @@
 
 <h1 id="ws_rp_ms_protocolmessages_105">WS_RP_MS_ProtocolMessages_105</h1>
 <h2 id="objective">Objective</h2>
-<p>Test that the wallet can handles a DCQL query with a "credentials" object with a "claims" property present</p>
+<p>Test that the wallet can handle a DCQL query with a "credentials" object with a "claims" property present.</p>
 <h2 id="references">References</h2>
 <p>[OID4VP 6.3]</p>
 <h2 id="profile-applicability">Profile applicability</h2>
@@ -1215,16 +1215,16 @@
 <h2 id="preconditions">Preconditions</h2>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
-<li>The Wallet engages with the Verifier</li>
-<li>The Verifier sends a Authorization Request with a DCQL-query with a credentials object with a claims property</li>
+<li>The Wallet engages with the Verifier.</li>
+<li>The Verifier sends an Authorization Request with a DCQL-query with a credentials object with a claims property.</li>
 <li>Wallet can handle Query</li>
 </ol>
 <h2 id="expected-results">Expected results</h2>
 <ol>
 <li>Wallet and Verifier can interact.</li>
-<li>Wallet receives the request.
-3a. The wallet processes the DCQL query, it MUST use "id" and "path", and if present "values"
-3b. Claim properties are used to perfom matching and complete matching without error.</li>
+<li>Wallet receives the request.</li>
+<li>The Wallet processes the DCQL query, it MUST use "id" and "path", and if present "values"
+3.1. Claim properties are used to perform matching and complete matching without error.</li>
 </ol>
 
 

@@ -23,7 +23,7 @@
     
     
       
-        <title>EuPid_DM_EmailAddress_02 - European Digital Identity</title>
+        <title>WS_RP_DM_AddressData_Emailaddress_PID_ISO-mdoc_002 - European Digital Identity</title>
       
     
     
@@ -59,14 +59,14 @@
     
   
 <meta property="og:type" content="website" />
-<meta property="og:title" content="EuPid_DM_EmailAddress_02 - European Digital Identity" />
+<meta property="og:title" content="WS_RP_DM_AddressData_Emailaddress_PID_ISO-mdoc_002 - European Digital Identity" />
 <meta property="og:image" content="https://conformance.eudi.dev/draft/assets/images/social/fcaf/suts/wallet_solution/relying_party/DataModel/AddressData/WS_RP_DM_AddressData_Emailaddress_PID_ISO-mdoc_002.png" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:url" content="https://conformance.eudi.dev/draft/fcaf/suts/wallet_solution/relying_party/DataModel/AddressData/WS_RP_DM_AddressData_Emailaddress_PID_ISO-mdoc_002/" />
 <meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:title" content="EuPid_DM_EmailAddress_02 - European Digital Identity" />
+<meta property="twitter:title" content="WS_RP_DM_AddressData_Emailaddress_PID_ISO-mdoc_002 - European Digital Identity" />
 <meta property="twitter:image" content="https://conformance.eudi.dev/draft/assets/images/social/fcaf/suts/wallet_solution/relying_party/DataModel/AddressData/WS_RP_DM_AddressData_Emailaddress_PID_ISO-mdoc_002.png" />
 </head>
   
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#eupid_dm_emailaddress_02" class="md-skip">
+        <a href="#ws_rp_dm_addressdata_emailaddress_pid_iso-mdoc_002" class="md-skip">
           Skip to content
         </a>
       
@@ -126,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              EuPid_DM_EmailAddress_02
+              WS_RP_DM_AddressData_Emailaddress_PID_ISO-mdoc_002
             
           </span>
         </div>
@@ -1204,29 +1204,31 @@
   
 
 
-<h1 id="eupid_dm_emailaddress_02">EuPid_DM_EmailAddress_02</h1>
+<h1 id="ws_rp_dm_addressdata_emailaddress_pid_iso-mdoc_002">WS_RP_DM_AddressData_Emailaddress_PID_ISO-mdoc_002</h1>
 <h2 id="objective">Objective</h2>
-<p>This test case verifies that the DataElementValue of data element email_address is a well-formed CBOR text string.</p>
+<p>This test case verifies that the DataElementValue of data element <code>email_address</code> is a well-formed CBOR text string. Note that <code>email_address</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier email_address.</p>
 <h2 id="references">References</h2>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.1  <br />
-“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 6).<br />
- RFC 7049 section 2.1</p>
+<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook.  <br />
+"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 6).<br />
+RFC 7049 section 2.1</p>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
 <p>EUDI_specific | EUDI_optional</p>
 <h2 id="profile-applicability">Profile applicability</h2>
-<p>The EUDI wallet contains a document with DocType = "eu.europa.ec.eudi.pid.1". Data element email_address is present in the mdoc data.</p>
+<p>The EUDI wallet contains a Credential in mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element <code>email_address</code> is present in the mdoc data.</p>
 <h2 id="preconditions">Preconditions</h2>
 <p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
-B. All mandatory data elements within nameSpace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
+B. All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
 C. The device retrieval mdoc response was retrieved. 
-D. The presence of data element email_address in the device retrieval mdoc response was verified.</p>
+D. The presence of data element <code>email_address</code> in the device retrieval mdoc response was verified.</p>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
-<li>Verify the major type encoded on the first byte of the CBOR data item. 2. Verify the encoding of the data item value.</li>
+<li>Verify the major type encoded on the first byte of the CBOR data item. </li>
+<li>Verify the encoding of the data item value.</li>
 </ol>
 <h2 id="expected-results">Expected results</h2>
 <ol>
-<li>The major type value is equal to 3. 2. All bytes in the data item value are UTF-8 encoded characters.</li>
+<li>The major type value is equal to 3. </li>
+<li>All bytes in the data item value are UTF-8 encoded characters.</li>
 </ol>
 
 

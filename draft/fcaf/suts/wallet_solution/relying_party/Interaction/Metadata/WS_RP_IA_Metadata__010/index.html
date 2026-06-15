@@ -1206,16 +1206,18 @@
 
 <h1 id="ws_rp_ia_metadata_010">WS_RP_IA_Metadata_010</h1>
 <h2 id="objective">Objective</h2>
-<p>Verify that when the Wallet receives an Authorization Request with response_mode = "direct_post" where both response_uri and redirect_uri are present, it rejects the request with an invalid_request error since the two parameters are mutually exclusive.</p>
+<p>Verify that when the Wallet receives an Authorization Request with response_mode = "direct_post.jwt" where both response_uri and redirect_uri are present, it rejects the request with an invalid_request error since the two parameters are mutually exclusive.</p>
 <h2 id="references">References</h2>
 <p>[OIDF.OID4VP] section 5.2; [OIDF.OID4VP] section 8.2; [OIDF.OID4VP] section 8.3</p>
 <h2 id="profile-applicability">Profile applicability</h2>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
-<p>EUDI_generic |  EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h2 id="preconditions">Preconditions</h2>
 <h2 id="test-scenario">Test Scenario</h2>
-<p>1.Engage wallet-verifier interaction (e.g. click link / scan QR code).
-2. The Wallet receives an Authorization Request with response_mode = 'direct_post' where redirect_uri is also present.</p>
+<ol>
+<li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
+<li>The Wallet receives an Authorization Request with response_mode = 'direct_post.jwt' where redirect_uri is also present.</li>
+</ol>
 <h2 id="expected-results">Expected results</h2>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>

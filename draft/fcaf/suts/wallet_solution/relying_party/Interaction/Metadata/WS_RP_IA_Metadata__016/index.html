@@ -1206,17 +1206,17 @@
 
 <h1 id="ws_rp_ia_metadata_016">WS_RP_IA_Metadata_016</h1>
 <h2 id="objective">Objective</h2>
-<p>Verify that when the Wallet receives a Request Object using the decentralized_identifier Client Identifier Prefix without a client_metadata parameter, the Wallet rejects the request since non-key Verifier metadata MUST be obtained from client_metadata.</p>
+<p>Verify that when the Wallet receives a Request Object using the decentralized_identifier Client Identifier Prefix with an empty client_metadata parameter, the Wallet rejects the request since non-key Verifier metadata MUST be obtained from client_metadata.</p>
 <h2 id="references">References</h2>
 <p>[OIDF.OID4VP] section 5.9.3</p>
 <h2 id="profile-applicability">Profile applicability</h2>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
-<p>EUDI_generic |  EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h2 id="preconditions">Preconditions</h2>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
-<li>Wallet receives a Request Object using decentralized_identifier: prefix without a client_metadata parameter.</li>
+<li>Wallet receives a Request Object using decentralized_identifier: prefix with an empty client_metadata parameter.</li>
 <li>Wallet parses the Request Object.</li>
 <li>Wallet attempts to extract non-key Verifier metadata.</li>
 </ol>
@@ -1225,7 +1225,7 @@
 <li>Wallet-verifier interaction is successfully initiated.</li>
 <li>Wallet successfully receives the Request Object.</li>
 <li>Wallet successfully parses the Request Object.</li>
-<li>Wallet rejects the Authorization Request and returns an invalid_request error due to missing client_metadata (required for non-key Verifier metadata); presentation flow is not initiated.</li>
+<li>Wallet rejects the Authorization Request and returns an invalid_request error due to empty client_metadata (required for non-key Verifier metadata); presentation flow is not initiated.</li>
 </ol>
 
 

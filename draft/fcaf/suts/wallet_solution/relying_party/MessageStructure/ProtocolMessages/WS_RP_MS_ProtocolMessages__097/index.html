@@ -1208,14 +1208,14 @@
 <h2 id="objective">Objective</h2>
 <p>Test the "options" property must be non-empty.</p>
 <h2 id="references">References</h2>
-<p>[OID4VP 6.2]</p>
+<p>[OID4VP] sections 6.2, 8.5</p>
 <h2 id="profile-applicability">Profile applicability</h2>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
 <p>EUDI_generic | EUDI_required</p>
 <h2 id="preconditions">Preconditions</h2>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
-<li>The Wallet engages with the Verifier</li>
+<li>The Wallet engages with the Verifier.</li>
 <li>Verifier sends a DCQL query with a "credential_sets" property, but where its "options" property exists but is empty</li>
 <li>The Wallet evaluates the request.</li>
 </ol>
@@ -1223,7 +1223,7 @@
 <ol>
 <li>Wallet and Verifier can interact.</li>
 <li>Wallet receives the request.</li>
-<li>The wallet detects a missing crendential_sets "options" property and returns an "invalid request" error</li>
+<li>The wallet detects a missing credential_sets "options" property and returns an invalid_request error.</li>
 </ol>
 
 

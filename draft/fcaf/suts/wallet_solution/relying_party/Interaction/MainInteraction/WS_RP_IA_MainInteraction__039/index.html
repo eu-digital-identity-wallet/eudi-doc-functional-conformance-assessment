@@ -1206,24 +1206,25 @@
 
 <h1 id="ws_rp_ia_maininteraction_039">WS_RP_IA_MainInteraction_039</h1>
 <h2 id="objective">Objective</h2>
-<p>Test when the wallet returns a vp_token parameter, the key + value pairs match.</p>
+<p>Test that when the wallet returns a vp_token parameter for a multi-credential request, all returned key-value pairs simultaneously and correctly match their respective credential queries.</p>
 <h2 id="references">References</h2>
 <p>[OID4VP Section 8]</p>
 <h2 id="profile-applicability">Profile applicability</h2>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
 <p>EUDI_generic | EUDI_required</p>
 <h2 id="preconditions">Preconditions</h2>
+<p>The wallet contains two distinct valid credentials that can satisfy separate queries simultaneously.</p>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
-<li>The wallet engages with the verifier</li>
-<li>The verifier sends a request</li>
-<li>The wallet returns a vp_token parameter in its response</li>
+<li>The wallet engages with the verifier.</li>
+<li>The Verifier sends an Authorization Request with a valid dcql_query requesting two separate credentials using two distinct query IDs.</li>
+<li>The Wallet processes the request, the user Authorizes the presentation of both credentials, and the wallet transmits the response payload.</li>
 </ol>
 <h2 id="expected-results">Expected results</h2>
 <ol>
-<li>Wallet-verifier interaction is successfully initiated</li>
-<li>Wallet receives request</li>
-<li>Verify the vp_token has (key + value) pairs which match to the credential query.</li>
+<li>Wallet and Verifier can interact.</li>
+<li>The Wallet prompts the user to release both requested credentials.</li>
+<li>The Verifier receives an Authorization Response where the vp_token parameter is a single JSON object containing both distinct keys, with each key strictly mapping to its respective signed presentation value.</li>
 </ol>
 
 

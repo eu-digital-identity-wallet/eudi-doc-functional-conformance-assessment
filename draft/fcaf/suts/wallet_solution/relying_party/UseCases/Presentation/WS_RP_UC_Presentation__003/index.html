@@ -1206,9 +1206,9 @@
 
 <h1 id="ws_rp_uc_presentation_003">WS_RP_UC_Presentation_003</h1>
 <h2 id="objective">Objective</h2>
-<p>Verify that a Wallet supporting OAuth 2.0 scope-based Presentation requests processes an Authorization Request using a valid pre-defined scope value, regardless of the response_type used (e.g. vp_token, code, or others).</p>
+<p>Verify that a Wallet supporting OAuth 2.0 scope-based Presentation requests processes an Authorization Request using a valid pre-defined scope value, by presenting a credential of the type the scope value identifies.</p>
 <h2 id="references">References</h2>
-<p>[OIDF.OID4VP] section 5.5</p>
+<p>[OID4VP 5.5]</p>
 <h2 id="profile-applicability">Profile applicability</h2>
 <p>Wallet supports OAuth 2.0</p>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
@@ -1217,14 +1217,14 @@
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
-<li>Wallet receives an Authorization Request using a valid OAuth 2.0 scope value defined in the applicable ETSI profile, with any supported response_type (e.g. vp_token, code).</li>
-<li>Wallet resolves the scope to its configured Credential mapping and proceeds with the presentation flow.</li>
+<li>Wallet receives an Authorization Request using a valid pre-defined scope value as defined by the applicable profile.</li>
+<li>The Wallet returns a response to the Verifier.</li>
 </ol>
 <h2 id="expected-results">Expected results</h2>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
-<li>Wallet successfully parses the Authorization Request.</li>
-<li>Wallet processes the request using the scope-based credential mapping and proceeds with the presentation flow successfully, independent of the response_type value.</li>
+<li>The Wallet successfully processes the Authorization Request.</li>
+<li>The Wallet returns an Authorization Response containing a credential whose type matches the type identified by the scope value per the applicable profile.</li>
 </ol>
 
 
