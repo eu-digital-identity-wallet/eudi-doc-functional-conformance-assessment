@@ -1210,13 +1210,16 @@
 <h4 id="objective">Objective</h4>
 <p>Verify that, in the presentation flow via Redirects, Wallet processes successfully HTTP response to the Wallet's HTTP POST to the <code>response_uri', including</code>redirect_uri`.</p>
 <h4 id="references">References</h4>
-<p>[OIDF.HAIP] section 5.1 
-[OIDF.OID4VP] section 8.2</p>
+<ul>
+<li>[HAIP] Section 5.1</li>
+<li>[OpenID4VP] Section 8.2</li>
+</ul>
 <h4 id="profile-applicability">Profile applicability</h4>
 <p>Presentations via Redirects</p>
 <h4 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h4>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario">Test Scenario</h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request. </li>
@@ -1238,11 +1241,15 @@
 <h4 id="objective_1">Objective</h4>
 <p>Verify that upon any HTTP error response from the Request-URI endpoint the Wallet terminates the process.</p>
 <h4 id="references_1">References</h4>
-<p>[OIDF.OID4VP] section 5.10.2</p>
+<ul>
+<li>[OpenID4VP] Section 5.10.2</li>
+</ul>
 <h4 id="profile-applicability_1">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_1">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_1">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_1">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -1262,8 +1269,11 @@
 <h4 id="objective_2">Objective</h4>
 <p>Test the wallet returns the error message: wallet_unavailable when the device the wallet is located on is under extreme load and hence is out of RAM/ disk space.</p>
 <h4 id="references_2">References</h4>
-<p>[OID4VP Section 8]</p>
+<ul>
+<li>[OpenID4VP] Section 8</li>
+</ul>
 <h4 id="profile-applicability_2">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_2">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_2">Preconditions</h4>
@@ -1287,13 +1297,16 @@
 <h4 id="objective_3">Objective</h4>
 <p>Verify that, in the presentation flow via Redirects, if Verifier sends a Signed Authorization Request, but it does not use a JWT-Secured Authorization Request (JAR) [RFC9101] with the <code>request_uri</code> parameter, the Wallet responds with an error (detailed or not) or discontinues the transaction.</p>
 <h4 id="references_3">References</h4>
-<p>[OIDF.HAIP] section 5.1
-[RFC9101] section 5</p>
+<ul>
+<li>[HAIP] Section 5.1</li>
+<li>[RFC9101] Section 5</li>
+</ul>
 <h4 id="profile-applicability_3">Profile applicability</h4>
 <p>Presentations via Redirects</p>
 <h4 id="eudi-wallet-relevancy_3">EUDI-wallet relevancy</h4>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_3">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_3">Test Scenario</h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request. </li>

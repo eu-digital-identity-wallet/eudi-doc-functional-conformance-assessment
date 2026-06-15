@@ -1208,14 +1208,18 @@
 <h2 id="objective">Objective</h2>
 <p>Verify that Wallet raises an error if there is no <code>jwk</code> within <code>client_metadata</code> sent by the Verifier with <code>alg</code> value set to ECDH-ES.</p>
 <h2 id="references">References</h2>
-<p>[OIDF.HAIP] section 5 (introduction) 
-[OIDF.OID4VP] section 8.3 The alg parameter MUST be present in the JWKs
-[RFC7516] section 4.1.1
-[RFC7518] section 6.2.1.1</p>
+<ul>
+<li>[HAIP] Section 5 (introduction)</li>
+<li>TODO: [OpenID4VP] Section 8.3 The alg parameter MUST be present in the JWKs</li>
+<li>[RFC7516] Section 4.1.1</li>
+<li>[RFC7518] Section 6.2.1.1</li>
+</ul>
 <h2 id="profile-applicability">Profile applicability</h2>
+<p>none</p>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h2 id="preconditions">Preconditions</h2>
+<p>none</p>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
 <li>Verify that Wallet raises an error if there is no "jwk" within "client_metadata" sent by the Verifier with "alg" value set to ECDH-ES.</li>

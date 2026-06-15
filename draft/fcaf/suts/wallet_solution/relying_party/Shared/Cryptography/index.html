@@ -1210,10 +1210,13 @@
 <h4 id="objective">Objective</h4>
 <p>Verify that when presenting an IETF SD-JWT VC, the Wallet produces a Verifiable Presentation whose digests are generated using SHA-256.</p>
 <h4 id="references">References</h4>
-<p>[OIDF.HAIP] section 8</p>
+<ul>
+<li>[HAIP] Section 8</li>
+</ul>
 <h4 id="profile-applicability">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h4>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions">Preconditions</h4>
 <p>Wallet holds a presentable IETF SD-JWT VC.</p>
 <h4 id="test-scenario">Test Scenario</h4>
@@ -1233,11 +1236,15 @@
 <h4 id="objective_1">Objective</h4>
 <p>Verify that whenever Wallet uses hash function during presentation for ISO mdoc, it leverages hash algorithm SHA-256.</p>
 <h4 id="references_1">References</h4>
-<p>[OIDF.HAIP] section 9</p>
+<ul>
+<li>[HAIP] Section 9</li>
+</ul>
 <h4 id="profile-applicability_1">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_1">EUDI-wallet relevancy</h4>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_1">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_1">Test Scenario</h4>
 <ol>
 <li>Wallet engages with the Verifier.</li>
@@ -1255,11 +1262,13 @@
 <h4 id="objective_2">Objective</h4>
 <p>Verify that Wallet includes in its metadata information related to other hash algorithms supported, if the Wallet profile allows other hash algorithms</p>
 <h4 id="references_2">References</h4>
-<p>[OIDF.HAIP] section 8</p>
+<ul>
+<li>[HAIP] Section 8</li>
+</ul>
 <h4 id="profile-applicability_2">Profile applicability</h4>
 <p>Wallet supports other hash algorithms besides SHA-256.</p>
 <h4 id="eudi-wallet-relevancy_2">EUDI-wallet relevancy</h4>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_2">Preconditions</h4>
 <p>There is a defined mechanism for this Wallet profile, through which Verifier receives Wallet Metadata.</p>
 <h4 id="test-scenario_2">Test Scenario</h4>
@@ -1275,11 +1284,13 @@
 <h4 id="objective_3">Objective</h4>
 <p>Verify that Wallet does not use other hash algorithm than SHA-256 during presentation if that is not supported by the Verifier.</p>
 <h4 id="references_3">References</h4>
-<p>[OIDF.HAIP] section 8</p>
+<ul>
+<li>[HAIP] Section 8</li>
+</ul>
 <h4 id="profile-applicability_3">Profile applicability</h4>
 <p>Wallet supports other hash algorithms besides SHA-256.</p>
 <h4 id="eudi-wallet-relevancy_3">EUDI-wallet relevancy</h4>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_3">Preconditions</h4>
 <p>A) Verifier Client Metadata does not include any other hash algorithms. </p>
 <h4 id="test-scenario_3">Test Scenario</h4>
@@ -1299,11 +1310,13 @@
 <h4 id="objective_4">Objective</h4>
 <p>Verify that Wallet raises an error if Verifier uses any hashing function other than SHA-256 and that is not included in the Verifier Client Metadata.</p>
 <h4 id="references_4">References</h4>
-<p>[OIDF.HAIP] section 8</p>
+<ul>
+<li>[HAIP] Section 8</li>
+</ul>
 <h4 id="profile-applicability_4">Profile applicability</h4>
 <p>Wallet does not support other hash algorithms besides SHA-256.</p>
 <h4 id="eudi-wallet-relevancy_4">EUDI-wallet relevancy</h4>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_4">Preconditions</h4>
 <p>Verifier Client Metadata does not include any other hash algorithms.
 Verifier uses other hashing functions than SHA-256.</p>
@@ -1320,11 +1333,13 @@ Verifier uses other hashing functions than SHA-256.</p>
 <h4 id="objective_5">Objective</h4>
 <p>Verify that when the credential to be presented uses a digest hash algorithm other than SHA-256 that the Wallet does not support, the Wallet does not produce a presentation for that credential.</p>
 <h4 id="references_5">References</h4>
-<p>[OIDF.HAIP] section 8</p>
+<ul>
+<li>[HAIP] Section 8</li>
+</ul>
 <h4 id="profile-applicability_5">Profile applicability</h4>
 <p>Wallet does not support other hash algorithms besides SHA-256.</p>
 <h4 id="eudi-wallet-relevancy_5">EUDI-wallet relevancy</h4>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_5">Preconditions</h4>
 <p>Credential Issuer Metadata does not include any other hash algorithms.
 Credential Issuer uses other hashing functions than SHA-256.</p>
@@ -1345,14 +1360,17 @@ Credential Issuer uses other hashing functions than SHA-256.</p>
 <h4 id="objective_6">Objective</h4>
 <p>Verify that if <code>encrypted_response_enc_values_supported</code> within client metadata from the Verifier, does not include A256GCM, and Wallet only supports A256GCM, the Wallet responds with an error.</p>
 <h4 id="references_6">References</h4>
-<p>[OIDF.HAIP] section 5 (introduction) 
-[OIDF.OID4VP] section 8.3
-[RFC7516] section 4.1.2</p>
+<ul>
+<li>[HAIP] Section 5 (introduction)</li>
+<li>[OpenID4VP] Section 8.3</li>
+<li>[RFC7516] Section 4.1.2</li>
+</ul>
 <h4 id="profile-applicability_6">Profile applicability</h4>
 <p>Wallet supports only A256GCM</p>
 <h4 id="eudi-wallet-relevancy_6">EUDI-wallet relevancy</h4>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_6">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_6">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>

@@ -1208,15 +1208,18 @@
 <h2 id="objective">Objective</h2>
 <p>Verify the HAIP requirement that, in the presentation flow via Redirects, Wallet raises an error if Verifier does not include <code>redirect_uri</code> in the HTTP response to the Wallet's HTTP POST to the <code>response_uri</code>, as defined in section 8.2 of [OIDF.OID4VP].</p>
 <h2 id="references">References</h2>
-<p>[OIDF.HAIP] section 5.1 
-[OIDF.OID4VP] section 8.2</p>
+<ul>
+<li>[HAIP] Section 5.1</li>
+<li>[OpenID4VP] Section 8.2</li>
+</ul>
 <h2 id="profile-applicability">Profile applicability</h2>
 <p>Same device
 response_mode=direct_post.jwt
 OIDF.HAIP</p>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h2 id="preconditions">Preconditions</h2>
+<p>none</p>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request. </li>

@@ -1210,12 +1210,15 @@
 <h4 id="objective">Objective</h4>
 <p>Verify that a Wallet supporting OAuth 2.0 scope-based Presentation requests processes an Authorization Request using a valid pre-defined scope value, by presenting a credential of the type the scope value identifies.</p>
 <h4 id="references">References</h4>
-<p>[OID4VP 5.5]</p>
+<ul>
+<li>[OpenID4VP] Section 5.5</li>
+</ul>
 <h4 id="profile-applicability">Profile applicability</h4>
 <p>Wallet supports OAuth 2.0</p>
 <h4 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_forbidden</p>
 <h4 id="preconditions">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -1233,12 +1236,15 @@
 <h4 id="objective_1">Objective</h4>
 <p>Verify that when an Authorization Request is rendered on Device A using the invocation mechanism mandated by the applicable profile (e.g. a custom URL scheme, universal link, or QR code encoding such a URI), the Wallet on Device B is able to receive and process the request.</p>
 <h4 id="references_1">References</h4>
-<p>[OIDF.OID4VP] section 5.7</p>
+<ul>
+<li>[OpenID4VP] Section 5.7</li>
+</ul>
 <h4 id="profile-applicability_1">Profile applicability</h4>
 <p>Wallet supports DC API cross-device flow (Appendix A); HAIP/ETSI profile defines cross-device requirements</p>
 <h4 id="eudi-wallet-relevancy_1">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_1">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_1">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction on Device A (Verifier device), which renders the Authorization Request using the invocation mechanism mandated by the applicable profile.</li>

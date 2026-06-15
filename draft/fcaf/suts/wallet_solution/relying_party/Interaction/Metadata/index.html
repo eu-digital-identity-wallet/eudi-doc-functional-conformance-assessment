@@ -1210,11 +1210,15 @@
 <h4 id="objective">Objective</h4>
 <p>Verify that when the Wallet receives an Authorization Request with response_mode = "direct_post.jwt" and a valid HTTPS response_uri, it sends the Authorization Response (vp_token) to the response_uri via an HTTP POST request using HTTPS</p>
 <h4 id="references">References</h4>
-<p>[OIDF.OID4VP] section 5.2; [OIDF.OID4VP] section 8.2; [OIDF.OID4VP] section 8.3</p>
+<ul>
+<li>[OpenID4VP] Sections 5.2, 8.2, 8.3</li>
+</ul>
 <h4 id="profile-applicability">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -1230,11 +1234,15 @@
 <h4 id="objective_1">Objective</h4>
 <p>Verify that when the Wallet receives an Authorization Request with response_mode = "direct_post.jwt", it sends the Authorization Response to the response_uri as an encrypted JWE over HTTPS.</p>
 <h4 id="references_1">References</h4>
-<p>[OIDF.OID4VP] section 5.2; [OIDF.OID4VP] section 8.2; [OIDF.OID4VP] section 8.3</p>
+<ul>
+<li>[OpenID4VP] Sections 5.2, 8.2, 8.3</li>
+</ul>
 <h4 id="profile-applicability_1">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_1">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_1">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_1">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -1250,11 +1258,15 @@
 <h4 id="objective_2">Objective</h4>
 <p>Verify that when the Wallet receives an Authorization Request with response_mode = "direct_post.jwt" where both response_uri and redirect_uri are present, it rejects the request with an invalid_request error since the two parameters are mutually exclusive.</p>
 <h4 id="references_2">References</h4>
-<p>[OIDF.OID4VP] section 5.2; [OIDF.OID4VP] section 8.2; [OIDF.OID4VP] section 8.3</p>
+<ul>
+<li>[OpenID4VP] Sections 5.2, 8.2, 8.3</li>
+</ul>
 <h4 id="profile-applicability_2">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_2">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_2">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_2">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -1270,12 +1282,15 @@
 <h4 id="objective_3">Objective</h4>
 <p>Test that the wallet rejects the Authorization Request if aud does NOT match the issuer claim value in the wallet metadata.</p>
 <h4 id="references_3">References</h4>
-<p>[OIDF.OID4VP] section 5.8</p>
+<ul>
+<li>[OpenID4VP] Section 5.8</li>
+</ul>
 <h4 id="profile-applicability_3">Profile applicability</h4>
 <p>Dynamic discovery</p>
 <h4 id="eudi-wallet-relevancy_3">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_3">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_3">Test Scenario</h4>
 <ol>
 <li>The wallet engages with the verifier.</li>
@@ -1293,12 +1308,15 @@
 <h4 id="objective_4">Objective</h4>
 <p>Verify that when the Wallet receives a Request Object using Static Discovery metadata with the aud claim set to the SIOPv2 static identifier "https://self-issued.me/v2", it accepts and processes the request.</p>
 <h4 id="references_4">References</h4>
-<p>[OIDF.OID4VP] section 5.8</p>
+<ul>
+<li>[OpenID4VP] Section 5.8</li>
+</ul>
 <h4 id="profile-applicability_4">Profile applicability</h4>
 <p>static discovery</p>
 <h4 id="eudi-wallet-relevancy_4">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_4">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_4">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -1320,12 +1338,15 @@
 <h4 id="objective_5">Objective</h4>
 <p>Verify that when the Wallet receives a Request Object using Static Discovery metadata with an aud claim whose value is NOT the SIOPv2 static identifier "https://self-issued.me/v2", it rejects the request and returns an invalid_request error.</p>
 <h4 id="references_5">References</h4>
-<p>[OIDF.OID4VP] section 5.8</p>
+<ul>
+<li>[OpenID4VP] Section 5.8</li>
+</ul>
 <h4 id="profile-applicability_5">Profile applicability</h4>
 <p>static discovery</p>
 <h4 id="eudi-wallet-relevancy_5">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_5">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_5">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -1347,11 +1368,15 @@
 <h4 id="objective_6">Objective</h4>
 <p>Verify that when the Wallet receives an Authorization Request using the openid_federation Client Identifier Prefix with a resolvable Entity Identifier, the Wallet resolves the Entity via OpenID Federation and processes the request.</p>
 <h4 id="references_6">References</h4>
-<p>[OIDF.OID4VP] section 5.9.3</p>
+<ul>
+<li>[OpenID4VP] Section 5.9.3</li>
+</ul>
 <h4 id="profile-applicability_6">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_6">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_forbidden</p>
 <h4 id="preconditions_6">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_6">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -1371,11 +1396,15 @@
 <h4 id="objective_7">Objective</h4>
 <p>Verify that when the Wallet receives a Request Object using the decentralized_identifier Client Identifier Prefix with a resolvable DID Document and all non-key Verifier metadata present in client_metadata, the Wallet performs DID Resolution for the public key and obtains all other metadata from client_metadata.</p>
 <h4 id="references_7">References</h4>
-<p>[OIDF.OID4VP] section 5.9.3</p>
+<ul>
+<li>[OpenID4VP] Section 5.9.3</li>
+</ul>
 <h4 id="profile-applicability_7">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_7">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_7">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_7">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -1397,11 +1426,15 @@
 <h4 id="objective_8">Objective</h4>
 <p>Verify that when the Wallet receives a Request Object using the decentralized_identifier Client Identifier Prefix with an empty client_metadata parameter, the Wallet rejects the request since non-key Verifier metadata MUST be obtained from client_metadata.</p>
 <h4 id="references_8">References</h4>
-<p>[OIDF.OID4VP] section 5.9.3</p>
+<ul>
+<li>[OpenID4VP] Section 5.9.3</li>
+</ul>
 <h4 id="profile-applicability_8">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_8">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_8">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_8">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -1421,12 +1454,15 @@
 <h4 id="objective_9">Objective</h4>
 <p>Verify that Wallet states explicit in its metadata which other algorithms and key types are supported for the cryptographic operations.</p>
 <h4 id="references_9">References</h4>
-<p>[OIDF.HAIP] section 7</p>
+<ul>
+<li>[HAIP] Section 7</li>
+</ul>
 <h4 id="profile-applicability_9">Profile applicability</h4>
 <p>Wallet supports other crypto suites</p>
 <h4 id="eudi-wallet-relevancy_9">EUDI-wallet relevancy</h4>
-<p>EUDI_generic, EUDI_optional</p>
+<p>EUDI_generic | EUDI_optional</p>
 <h4 id="preconditions_9">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_9">Test Scenario</h4>
 <ol>
 <li>Verifier obtains Wallet Metadata (dynamically, out of band mechanism, or pre-obtained static set).</li>

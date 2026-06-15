@@ -1210,13 +1210,16 @@
 <h4 id="objective">Objective</h4>
 <p>Test that the Wallet when processing trusted_authorities, the type "aki" is supported.</p>
 <h4 id="references">References</h4>
-<p>[OID4VP 6.1.1.1]
-Section 4.2.1.1 of [RFC5280]</p>
+<ul>
+<li>[OpenID4VP] Section 6.1.1.1</li>
+<li>[RFC5280] Section 4.2.1.1</li>
+</ul>
 <h4 id="profile-applicability">Profile applicability</h4>
 <p>Wallet supports trusted authorities query based on 'aki'.</p>
 <h4 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario">Test Scenario</h4>
 <ol>
 <li>The Wallet engages with the Verifier.</li>
@@ -1234,8 +1237,10 @@ Section 4.2.1.1 of [RFC5280]</p>
 <h4 id="objective_1">Objective</h4>
 <p>Test the Wallet processes a DCQL-query with an "aki" correctly when it does contain a matching credential.</p>
 <h4 id="references_1">References</h4>
-<p>[OID4VP 6.1.1.1]
-[RFC5280]</p>
+<ul>
+<li>[OpenID4VP] Section 6.1.1.1</li>
+<li>[RFC5280]</li>
+</ul>
 <h4 id="profile-applicability_1">Profile applicability</h4>
 <p>Wallet supports trusted authorities query based on 'aki'</p>
 <h4 id="eudi-wallet-relevancy_1">EUDI-wallet relevancy</h4>
@@ -1261,8 +1266,10 @@ Section 4.2.1.1 of [RFC5280]</p>
 <h4 id="objective_2">Objective</h4>
 <p>Test the Wallet processes a DCQL-query with an "aki" correctly when it does not contain a matching credential.</p>
 <h4 id="references_2">References</h4>
-<p>[OID4VP 6.1.1.1]
-[RFC5280]</p>
+<ul>
+<li>[OpenID4VP] Section 6.1.1.1</li>
+<li>[RFC5280]</li>
+</ul>
 <h4 id="profile-applicability_2">Profile applicability</h4>
 <p>Wallet supports trusted authorities query based on 'aki'</p>
 <h4 id="eudi-wallet-relevancy_2">EUDI-wallet relevancy</h4>
@@ -1286,8 +1293,10 @@ Section 4.2.1.1 of [RFC5280]</p>
 <h4 id="objective_3">Objective</h4>
 <p>Test the Wallet processes a DCQL-query with an "aki" correctly when it does contain a matching credential, with the match in the end-entity (Issuer) certificate.</p>
 <h4 id="references_3">References</h4>
-<p>[OID4VP 6.1.1.1]
-[RFC5280]</p>
+<ul>
+<li>[OpenID4VP] Section 6.1.1.1</li>
+<li>[RFC5280]</li>
+</ul>
 <h4 id="profile-applicability_3">Profile applicability</h4>
 <p>Wallet supports trusted authorities query based on 'aki'</p>
 <h4 id="eudi-wallet-relevancy_3">EUDI-wallet relevancy</h4>
@@ -1313,8 +1322,10 @@ Section 4.2.1.1 of [RFC5280]</p>
 <h4 id="objective_4">Objective</h4>
 <p>Test the Wallet processes a DCQL-query with an "aki" correctly when it does contain a matching credential, with the match in a sub-CA certificate.</p>
 <h4 id="references_4">References</h4>
-<p>[OID4VP 6.1.1.1]
-[RFC5280]</p>
+<ul>
+<li>[OpenID4VP] Section 6.1.1.1</li>
+<li>[RFC5280]</li>
+</ul>
 <h4 id="profile-applicability_4">Profile applicability</h4>
 <p>Wallet supports trusted authorities query based on 'aki'</p>
 <h4 id="eudi-wallet-relevancy_4">EUDI-wallet relevancy</h4>
@@ -1340,8 +1351,10 @@ Section 4.2.1.1 of [RFC5280]</p>
 <h4 id="objective_5">Objective</h4>
 <p>Test the Wallet processes a DCQL-query with an "aki" correctly when it does contain a matching credential, with the match in the CA certificate.</p>
 <h4 id="references_5">References</h4>
-<p>[OID4VP 6.1.1.1]
-[RFC5280]</p>
+<ul>
+<li>[OpenID4VP] Section 6.1.1.1</li>
+<li>[RFC5280]</li>
+</ul>
 <h4 id="profile-applicability_5">Profile applicability</h4>
 <p>Wallet supports trusted authorities query based on 'aki'</p>
 <h4 id="eudi-wallet-relevancy_5">EUDI-wallet relevancy</h4>
@@ -1367,12 +1380,15 @@ Section 4.2.1.1 of [RFC5280]</p>
 <h4 id="objective_6">Objective</h4>
 <p>Test the Wallet processes a DCQL-query with an aki trusted_authorities value correctly when the Wallet does NOT contain a credential whose X.509 certificate chain matches the specified AuthorityKeyIdentifier.</p>
 <h4 id="references_6">References</h4>
-<p>[OID4VP 6.1.1.1]</p>
+<ul>
+<li>[OpenID4VP] Section 6.1.1.1</li>
+</ul>
 <h4 id="profile-applicability_6">Profile applicability</h4>
 <p>Wallet supports trusted authorities query based on 'aki'.</p>
 <h4 id="eudi-wallet-relevancy_6">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_6">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_6">Test Scenario</h4>
 <ol>
 <li>The Wallet engages with the Verifier.</li>
@@ -1390,7 +1406,9 @@ Section 4.2.1.1 of [RFC5280]</p>
 <h4 id="objective_7">Objective</h4>
 <p>Test the Wallet can resolve a trusted_authorities request of type etsi_tl by matching the credential's issuer against a recognized ETSI Trusted List.</p>
 <h4 id="references_7">References</h4>
-<p>[OID4VP 6.1.1.2]</p>
+<ul>
+<li>[OpenID4VP] Section 6.1.1.2</li>
+</ul>
 <h4 id="profile-applicability_7">Profile applicability</h4>
 <p>Wallet supports trusted authorities query based on ETSI Trust List.</p>
 <h4 id="eudi-wallet-relevancy_7">EUDI-wallet relevancy</h4>
@@ -1416,7 +1434,9 @@ Section 4.2.1.1 of [RFC5280]</p>
 <h4 id="objective_8">Objective</h4>
 <p>Test the Wallet can resolve a trusted_authorities request of type etsi_tl by matching the credential's issuer against a recognized ETSI Trusted List scenario when no Match.</p>
 <h4 id="references_8">References</h4>
-<p>[OID4VP 6.1.1.2]</p>
+<ul>
+<li>[OpenID4VP] Section 6.1.1.2</li>
+</ul>
 <h4 id="profile-applicability_8">Profile applicability</h4>
 <p>Wallet supports trusted authorities query based on ETSI Trust List.</p>
 <h4 id="eudi-wallet-relevancy_8">EUDI-wallet relevancy</h4>
@@ -1444,7 +1464,9 @@ A mock ETSI trusted List is active to be used</p>
 <h4 id="objective_9">Objective</h4>
 <p>Test the wallet can resolve a trusted_authorities request of type etsi_tl by matching the credential's issuer against a recognized ETSI Trusted List scenario when invalid trusted list.</p>
 <h4 id="references_9">References</h4>
-<p>[OID4VP 6.1.1.2]</p>
+<ul>
+<li>[OpenID4VP] Section 6.1.1.2</li>
+</ul>
 <h4 id="profile-applicability_9">Profile applicability</h4>
 <p>Wallet supports trusted authorities query based on ETSI Trust List.</p>
 <h4 id="eudi-wallet-relevancy_9">EUDI-wallet relevancy</h4>
@@ -1472,8 +1494,10 @@ A mock ETSI trusted List is active to be used</p>
 <h4 id="objective_10">Objective</h4>
 <p>The Wallet can parse the identifier of a Trusted List as specified in ETSI TS 119 612 [ETSI.TL], in a "trusted_authorities" request.</p>
 <h4 id="references_10">References</h4>
-<p>[OID4VP 6.1.1.2]
-ETSI TS 119 612 [ETSI.TL]</p>
+<ul>
+<li>[OpenID4VP] Section 6.1.1.2
+TODO: ETSI TS 119 612 [ETSI.TL]</li>
+</ul>
 <h4 id="profile-applicability_10">Profile applicability</h4>
 <p>Wallet supports trusted authorities query based on ETSI Trust List.</p>
 <h4 id="eudi-wallet-relevancy_10">EUDI-wallet relevancy</h4>
@@ -1498,8 +1522,11 @@ ETSI TS 119 612 [ETSI.TL]</p>
 <h4 id="objective_11">Objective</h4>
 <p>Verify the Wallet can navigate an ETSI Trusted List (List of Trusted Lists) to identify and validate a Trust Service Provider’s (TSP) certificate.</p>
 <h4 id="references_11">References</h4>
-<p>[OID4VP 6.1.1.2]</p>
+<ul>
+<li>[OpenID4VP] Section 6.1.1.2</li>
+</ul>
 <h4 id="profile-applicability_11">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_11">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_optional</p>
 <h4 id="preconditions_11">Preconditions</h4>
@@ -1522,8 +1549,11 @@ A mock ETSI trusted List is active to be used</p>
 <h4 id="objective_12">Objective</h4>
 <p>Test the Wallet will not return a credential if its X.509 Certificate trust chain cannot be verified against the specified etsi_tl or its cascading lists.</p>
 <h4 id="references_12">References</h4>
-<p>[OID4VP 6.1.1.2]</p>
+<ul>
+<li>[OpenID4VP] Section 6.1.1.2</li>
+</ul>
 <h4 id="profile-applicability_12">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_12">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_optional</p>
 <h4 id="preconditions_12">Preconditions</h4>
@@ -1545,13 +1575,16 @@ A mock ETSI trusted List is active to be used</p>
 <h4 id="objective_13">Objective</h4>
 <p>Verify that Wallet can handle Authorization Request using authorization key identifier mechanism to support multiple X.509-based trust mechanism supported by the Wallet profile.</p>
 <h4 id="references_13">References</h4>
-<p>[OIDF.HAIP] section 5 (introduction)
-[OIDF.OID4VP] section 6.1.1.1, section 8.5</p>
+<ul>
+<li>[HAIP] Section 5 (introduction)</li>
+<li>[OpenID4VP] Sections 6.1.1.1, 8.5</li>
+</ul>
 <h4 id="profile-applicability_13">Profile applicability</h4>
 <p>multiple X.509-based trust mechanisms supported by the Wallet</p>
 <h4 id="eudi-wallet-relevancy_13">EUDI-wallet relevancy</h4>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_13">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_13">Test Scenario</h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>

@@ -1210,11 +1210,13 @@
 <h4 id="objective">Objective</h4>
 <p>Verify that the EUDI Wallet accepts a JOSE-based Referenced Token containing a "status" claim with a valid "status_list" JSON Object.</p>
 <h4 id="references">References</h4>
-<p>[Token Status List (TSL) draft-20] Section 6.2</p>
+<ul>
+<li>[Token Status List] Section 6.2</li>
+</ul>
 <h4 id="profile-applicability">Profile applicability</h4>
 <p>The Wallet supports revocation checking via the Token Status List mechanism; The Wallet supports Status List Tokens in JWT format</p>
 <h4 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h4>
-<p>EUDI_generic / EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions">Preconditions</h4>
 <p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
 B) The Referenced Token includes the Status element that contains the Status_list element (index and URI)
@@ -1235,11 +1237,13 @@ F) The Referenced Token contains a "status" claim containing a valid "status_lis
 <h4 id="objective_1">Objective</h4>
 <p>Verify that the EUDI Wallet handles a JOSE-based Referenced Token without a "status" claim according to local policy.</p>
 <h4 id="references_1">References</h4>
-<p>[Token Status List (TSL) draft-20] Section 6.2</p>
+<ul>
+<li>[Token Status List] Section 6.2</li>
+</ul>
 <h4 id="profile-applicability_1">Profile applicability</h4>
 <p>The Wallet supports revocation checking via the Token Status List mechanism; The Wallet supports Status List Tokens in JWT format</p>
 <h4 id="eudi-wallet-relevancy_1">EUDI-wallet relevancy</h4>
-<p>EUDI_generic / EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_1">Preconditions</h4>
 <p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
 B)The Issuer has provided a JOSE-based Referenced Token to the EUDI Wallet.
@@ -1257,11 +1261,13 @@ C) The Referenced Token does not contain the "status" claim.</p>
 <h4 id="objective_2">Objective</h4>
 <p>Verify that the EUDI Wallet accepts a JOSE-based Referenced Token containing a "status_list" JSON Object within the "status" claim, with valid "idx" and "uri" fields.</p>
 <h4 id="references_2">References</h4>
-<p>[Token Status List (TSL) draft-20] Section 6.2</p>
+<ul>
+<li>[Token Status List] Section 6.2</li>
+</ul>
 <h4 id="profile-applicability_2">Profile applicability</h4>
 <p>The Wallet supports revocation checking via the Token Status List mechanism; The Wallet supports Status List Tokens in JWT format</p>
 <h4 id="eudi-wallet-relevancy_2">EUDI-wallet relevancy</h4>
-<p>EUDI_generic / EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_2">Preconditions</h4>
 <p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
 B) The Referenced Token includes the Status element that contains the Status_list element (index and URI)
@@ -1282,11 +1288,13 @@ F) The Referenced Token contains a "status_list" JSON Object within the "status"
 <h4 id="objective_3">Objective</h4>
 <p>Verify that the EUDI Wallet handles a JOSE-based Referenced Token where the "status" claim does not contain a "status_list" object.</p>
 <h4 id="references_3">References</h4>
-<p>[Token Status List (TSL) draft-20] Section 6.2</p>
+<ul>
+<li>[Token Status List] Section 6.2</li>
+</ul>
 <h4 id="profile-applicability_3">Profile applicability</h4>
 <p>The Wallet supports revocation checking via the Token Status List mechanism; The Wallet supports Status List Tokens in JWT format</p>
 <h4 id="eudi-wallet-relevancy_3">EUDI-wallet relevancy</h4>
-<p>EUDI_generic / EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_3">Preconditions</h4>
 <p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
 B) The Issuer has provided a JOSE-based Referenced Token to the EUDI Wallet.
@@ -1304,11 +1312,13 @@ C) The Referenced Token contains the "status" claim but without a "status_list" 
 <h4 id="objective_4">Objective</h4>
 <p>Verify that the EUDI Wallet accepts a JOSE-based Referenced Token where the "idx" claim within "status_list" is a valid non-negative integer.</p>
 <h4 id="references_4">References</h4>
-<p>[Token Status List (TSL) draft-20] Section 6.2</p>
+<ul>
+<li>[Token Status List] Section 6.2</li>
+</ul>
 <h4 id="profile-applicability_4">Profile applicability</h4>
 <p>The Wallet supports revocation checking via the Token Status List mechanism; The Wallet supports Status List Tokens in JWT format</p>
 <h4 id="eudi-wallet-relevancy_4">EUDI-wallet relevancy</h4>
-<p>EUDI_generic / EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_4">Preconditions</h4>
 <p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
 B) The Referenced Token includes the Status element that contains the Status_list element (index and URI)
@@ -1329,11 +1339,13 @@ F) The Referenced Token contains the "idx" claim within "status_list" set to a v
 <h4 id="objective_5">Objective</h4>
 <p>Verify that the EUDI Wallet rejects a JOSE-based Referenced Token where the "idx" claim within "status_list" is a negative integer.</p>
 <h4 id="references_5">References</h4>
-<p>[Token Status List (TSL) draft-20] Section 6.2</p>
+<ul>
+<li>[Token Status List] Section 6.2</li>
+</ul>
 <h4 id="profile-applicability_5">Profile applicability</h4>
 <p>The Wallet supports revocation checking via the Token Status List mechanism; The Wallet supports Status List Tokens in JWT format</p>
 <h4 id="eudi-wallet-relevancy_5">EUDI-wallet relevancy</h4>
-<p>EUDI_generic / EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_5">Preconditions</h4>
 <p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
 B) The Referenced Token includes the Status element that contains the Status_list element (index and URI)
@@ -1352,11 +1364,13 @@ D) The Referenced Token contains the "idx" claim within "status_list" set to a n
 <h4 id="objective_6">Objective</h4>
 <p>Verify that the EUDI Wallet rejects a JOSE-based Referenced Token where the required "idx" claim within "status_list" is missing.</p>
 <h4 id="references_6">References</h4>
-<p>[Token Status List (TSL) draft-20] Section 6.2</p>
+<ul>
+<li>[Token Status List] Section 6.2</li>
+</ul>
 <h4 id="profile-applicability_6">Profile applicability</h4>
 <p>The Wallet supports revocation checking via the Token Status List mechanism; The Wallet supports Status List Tokens in JWT format</p>
 <h4 id="eudi-wallet-relevancy_6">EUDI-wallet relevancy</h4>
-<p>EUDI_generic / EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_6">Preconditions</h4>
 <p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
 B) The Issuer has provided a JOSE-based Referenced Token to the EUDI Wallet.
@@ -1374,11 +1388,13 @@ C) The Referenced Token does not contain the "idx" claim within "status_list".</
 <h4 id="objective_7">Objective</h4>
 <p>Verify that the EUDI Wallet accepts a JOSE-based Referenced Token where the "uri" claim within "status_list" is a valid URI per RFC 3986.</p>
 <h4 id="references_7">References</h4>
-<p>[Token Status List (TSL) draft-20] Section 6.2</p>
+<ul>
+<li>[Token Status List] Section 6.2</li>
+</ul>
 <h4 id="profile-applicability_7">Profile applicability</h4>
 <p>The Wallet supports revocation checking via the Token Status List mechanism; The Wallet supports Status List Tokens in JWT format</p>
 <h4 id="eudi-wallet-relevancy_7">EUDI-wallet relevancy</h4>
-<p>EUDI_generic / EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_7">Preconditions</h4>
 <p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
 B) The Referenced Token includes the Status element that contains the Status_list element (index and URI)
@@ -1399,11 +1415,13 @@ F) The Referenced Token contains the "uri" claim within "status_list" set to a v
 <h4 id="objective_8">Objective</h4>
 <p>Verify that the EUDI Wallet rejects a JOSE-based Referenced Token where the "uri" claim within "status_list" is malformed.</p>
 <h4 id="references_8">References</h4>
-<p>[Token Status List (TSL) draft-20] Section 6.2</p>
+<ul>
+<li>[Token Status List] Section 6.2</li>
+</ul>
 <h4 id="profile-applicability_8">Profile applicability</h4>
 <p>The Wallet supports revocation checking via the Token Status List mechanism; The Wallet supports Status List Tokens in JWT format</p>
 <h4 id="eudi-wallet-relevancy_8">EUDI-wallet relevancy</h4>
-<p>EUDI_generic / EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_8">Preconditions</h4>
 <p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
 B) The Referenced Token includes the Status element that contains the Status_list element (index and URI)
@@ -1414,7 +1432,7 @@ D) The Referenced Token contains the "uri" claim within "status_list" set to a m
 <li>Provide a Referenced Token where the "uri" value has no scheme (e.g., example.com/statuslists/1). Verify the Wallet's handling.</li>
 <li>Provide a Referenced Token where the "uri" value contains an unencoded space in the host (e.g., https://exam ple.com/statuslists/1). Verify the Wallet's handling.</li>
 <li>Provide a Referenced Token where the "uri" value contains invalid percent-encoding (e.g., https://example.com/statuslists/%GG). Verify the Wallet's handling.</li>
-<li>Provide a Referenced Token where the "uri" value contains illegal characters (e.g., https://example.com/statuslists/<token>|1). Verify the Wallet's handling.</li>
+<li>Provide a Referenced Token where the "uri" value contains illegal characters (e.g., <code>https://example.com/statuslists/&lt;token&gt;|1</code>). Verify the Wallet's handling.</li>
 <li>Provide a Referenced Token where the "uri" value is an empty string. Verify the Wallet's handling.</li>
 </ol>
 <h4 id="expected-results_8">Expected results</h4>
@@ -1430,11 +1448,13 @@ D) The Referenced Token contains the "uri" claim within "status_list" set to a m
 <h4 id="objective_9">Objective</h4>
 <p>Verify that the EUDI Wallet rejects a JOSE-based Referenced Token where the required "uri" claim within "status_list" is missing.</p>
 <h4 id="references_9">References</h4>
-<p>[Token Status List (TSL) draft-20] Section 6.2</p>
+<ul>
+<li>[Token Status List] Section 6.2</li>
+</ul>
 <h4 id="profile-applicability_9">Profile applicability</h4>
 <p>The Wallet supports revocation checking via the Token Status List mechanism; The Wallet supports Status List Tokens in JWT format</p>
 <h4 id="eudi-wallet-relevancy_9">EUDI-wallet relevancy</h4>
-<p>EUDI_generic / EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_9">Preconditions</h4>
 <p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
 B) The Issuer has provided a JOSE-based Referenced Token to the EUDI Wallet.
@@ -1452,11 +1472,13 @@ C) The Referenced Token does not contain the "uri" claim within "status_list".</
 <h4 id="objective_10">Objective</h4>
 <p>Verify that the EUDI Wallet accepts a COSE-based Referenced Token containing a valid Status CBOR structure (Map) with at least a "status_list" entry.</p>
 <h4 id="references_10">References</h4>
-<p>[Token Status List (TSL) draft-20] Section 6.3</p>
+<ul>
+<li>[Token Status List] Section 6.3</li>
+</ul>
 <h4 id="profile-applicability_10">Profile applicability</h4>
 <p>The Wallet supports revocation checking via the Token Status List mechanism; The Wallet supports Status List Tokens in CWT format</p>
 <h4 id="eudi-wallet-relevancy_10">EUDI-wallet relevancy</h4>
-<p>EUDI_generic / EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_10">Preconditions</h4>
 <p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
 B) The Referenced Token includes the Status element that contains the Status_list element (index and URI)
@@ -1477,11 +1499,13 @@ F) The Referenced Token contains a valid Status CBOR structure (Map) with at lea
 <h4 id="objective_11">Objective</h4>
 <p>Verify that the EUDI Wallet rejects a COSE-based Referenced Token containing an empty Status CBOR Map.</p>
 <h4 id="references_11">References</h4>
-<p>[Token Status List (TSL) draft-20] Section 6.3</p>
+<ul>
+<li>[Token Status List] Section 6.3</li>
+</ul>
 <h4 id="profile-applicability_11">Profile applicability</h4>
 <p>The Wallet supports revocation checking via the Token Status List mechanism; The Wallet supports Status List Tokens in CWT format</p>
 <h4 id="eudi-wallet-relevancy_11">EUDI-wallet relevancy</h4>
-<p>EUDI_generic / EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_11">Preconditions</h4>
 <p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
 B) The Issuer has provided a COSE-based Referenced Token to the EUDI Wallet.
@@ -1499,11 +1523,13 @@ C) The Referenced Token contains an empty Status CBOR Map.</p>
 <h4 id="objective_12">Objective</h4>
 <p>Verify that the EUDI Wallet accepts a COSE-based Referenced Token containing a "status_list" CBOR structure within the Status Map, with valid "idx" and "uri" fields.</p>
 <h4 id="references_12">References</h4>
-<p>[Token Status List (TSL) draft-20] Section 6.3</p>
+<ul>
+<li>[Token Status List] Section 6.3</li>
+</ul>
 <h4 id="profile-applicability_12">Profile applicability</h4>
 <p>The Wallet supports revocation checking via the Token Status List mechanism; The Wallet supports Status List Tokens in CWT format</p>
 <h4 id="eudi-wallet-relevancy_12">EUDI-wallet relevancy</h4>
-<p>EUDI_generic / EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_12">Preconditions</h4>
 <p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
 B) The Referenced Token includes the Status element that contains the Status_list element (index and URI)
@@ -1524,11 +1550,13 @@ F) The Referenced Token contains a "status_list" CBOR structure within the Statu
 <h4 id="objective_13">Objective</h4>
 <p>Verify that the EUDI Wallet handles a COSE-based Referenced Token where the Status Map does not contain a "status_list" entry.</p>
 <h4 id="references_13">References</h4>
-<p>[Token Status List (TSL) draft-20] Section 6.3</p>
+<ul>
+<li>[Token Status List] Section 6.3</li>
+</ul>
 <h4 id="profile-applicability_13">Profile applicability</h4>
 <p>The Wallet supports revocation checking via the Token Status List mechanism; The Wallet supports Status List Tokens in CWT format</p>
 <h4 id="eudi-wallet-relevancy_13">EUDI-wallet relevancy</h4>
-<p>EUDI_generic / EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_13">Preconditions</h4>
 <p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
 B) The Issuer has provided a COSE-based Referenced Token to the EUDI Wallet.
@@ -1546,11 +1574,13 @@ C) The Referenced Token contains the Status Map present but without a "status_li
 <h4 id="objective_14">Objective</h4>
 <p>Verify that the EUDI Wallet accepts a COSE-based Referenced Token where the "idx" field within "status_list" is a valid unsigned integer (major type 0)</p>
 <h4 id="references_14">References</h4>
-<p>[Token Status List (TSL) draft-20] Section 6.3</p>
+<ul>
+<li>[Token Status List] Section 6.3</li>
+</ul>
 <h4 id="profile-applicability_14">Profile applicability</h4>
 <p>The Wallet supports revocation checking via the Token Status List mechanism; The Wallet supports Status List Tokens in CWT format</p>
 <h4 id="eudi-wallet-relevancy_14">EUDI-wallet relevancy</h4>
-<p>EUDI_generic / EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_14">Preconditions</h4>
 <p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
 B) The Referenced Token includes the Status element that contains the Status_list element (index and URI)
@@ -1571,11 +1601,13 @@ F) The Referenced Token contains the "idx" field within "status_list" set to a v
 <h4 id="objective_15">Objective</h4>
 <p>Verify that the EUDI Wallet rejects a COSE-based Referenced Token where the "idx" field within "status_list" has an invalid type (negative or wrong CBOR type).</p>
 <h4 id="references_15">References</h4>
-<p>[Token Status List (TSL) draft-20] Section 6.3</p>
+<ul>
+<li>[Token Status List] Section 6.3</li>
+</ul>
 <h4 id="profile-applicability_15">Profile applicability</h4>
 <p>The Wallet supports revocation checking via the Token Status List mechanism; The Wallet supports Status List Tokens in CWT format</p>
 <h4 id="eudi-wallet-relevancy_15">EUDI-wallet relevancy</h4>
-<p>EUDI_generic / EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_15">Preconditions</h4>
 <p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
 B) The Referenced Token includes the Status element that contains the Status_list element (index and URI)
@@ -1594,11 +1626,13 @@ D) The Referenced Token contains the "idx" field within "status_list" set to an 
 <h4 id="objective_16">Objective</h4>
 <p>Verify that the EUDI Wallet rejects a COSE-based Referenced Token where the required "idx" field within "status_list" is missing.</p>
 <h4 id="references_16">References</h4>
-<p>[Token Status List (TSL) draft-20] Section 6.3</p>
+<ul>
+<li>[Token Status List] Section 6.3</li>
+</ul>
 <h4 id="profile-applicability_16">Profile applicability</h4>
 <p>The Wallet supports revocation checking via the Token Status List mechanism; The Wallet supports Status List Tokens in CWT format</p>
 <h4 id="eudi-wallet-relevancy_16">EUDI-wallet relevancy</h4>
-<p>EUDI_generic / EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_16">Preconditions</h4>
 <p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
 B) The Issuer has provided a COSE-based Referenced Token to the EUDI Wallet.
@@ -1616,11 +1650,13 @@ C) The Referenced Token does not contain the "idx" field within "status_list".</
 <h4 id="objective_17">Objective</h4>
 <p>Verify that the EUDI Wallet accepts a COSE-based Referenced Token where the "uri" field within "status_list" is a valid text string URI of major type 3.</p>
 <h4 id="references_17">References</h4>
-<p>[Token Status List (TSL) draft-20] Section 6.3</p>
+<ul>
+<li>[Token Status List] Section 6.3</li>
+</ul>
 <h4 id="profile-applicability_17">Profile applicability</h4>
 <p>The Wallet supports revocation checking via the Token Status List mechanism; The Wallet supports Status List Tokens in CWT format</p>
 <h4 id="eudi-wallet-relevancy_17">EUDI-wallet relevancy</h4>
-<p>EUDI_generic / EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_17">Preconditions</h4>
 <p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
 B) The Referenced Token includes the Status element that contains the Status_list element (index and URI)
@@ -1641,11 +1677,13 @@ F) The Referenced Token contains the "uri" field within "status_list" set to a v
 <h4 id="objective_18">Objective</h4>
 <p>Verify that the EUDI Wallet rejects a COSE-based Referenced Token where the "uri" field within "status_list" is malformed.</p>
 <h4 id="references_18">References</h4>
-<p>[Token Status List (TSL) draft-20] Section 6.3</p>
+<ul>
+<li>[Token Status List] Section 6.3</li>
+</ul>
 <h4 id="profile-applicability_18">Profile applicability</h4>
 <p>The Wallet supports revocation checking via the Token Status List mechanism; The Wallet supports Status List Tokens in CWT format</p>
 <h4 id="eudi-wallet-relevancy_18">EUDI-wallet relevancy</h4>
-<p>EUDI_generic / EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_18">Preconditions</h4>
 <p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
 B) The Referenced Token includes the Status element that contains the Status_list element (index and URI)
@@ -1656,7 +1694,7 @@ D) The Referenced Token contains the "uri" field within "status_list" set to a m
 <li>Provide a Referenced Token where the "uri" value has no scheme (e.g., example.com/statuslists/1). Verify the Wallet's handling.</li>
 <li>Provide a Referenced Token where the "uri" value contains an unencoded space in the host (e.g., https://exam ple.com/statuslists/1). Verify the Wallet's handling.</li>
 <li>Provide a Referenced Token where the "uri" value contains invalid percent-encoding (e.g., https://example.com/statuslists/%GG). Verify the Wallet's handling.</li>
-<li>Provide a Referenced Token where the "uri" value contains illegal characters (e.g., https://example.com/statuslists/<token>|1). Verify the Wallet's handling.</li>
+<li>Provide a Referenced Token where the "uri" value contains illegal characters (e.g., <code>https://example.com/statuslists/&lt;token&gt;|1</code>). Verify the Wallet's handling.</li>
 <li>Provide a Referenced Token where the "uri" value is an empty string. Verify the Wallet's handling.</li>
 </ol>
 <h4 id="expected-results_18">Expected results</h4>
@@ -1672,11 +1710,13 @@ D) The Referenced Token contains the "uri" field within "status_list" set to a m
 <h4 id="objective_19">Objective</h4>
 <p>Verify that the EUDI Wallet rejects a COSE-based Referenced Token where the required "uri" field within "status_list" is missing.</p>
 <h4 id="references_19">References</h4>
-<p>[Token Status List (TSL) draft-20] Section 6.3</p>
+<ul>
+<li>[Token Status List] Section 6.3</li>
+</ul>
 <h4 id="profile-applicability_19">Profile applicability</h4>
 <p>The Wallet supports revocation checking via the Token Status List mechanism; The Wallet supports Status List Tokens in CWT format</p>
 <h4 id="eudi-wallet-relevancy_19">EUDI-wallet relevancy</h4>
-<p>EUDI_generic / EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_19">Preconditions</h4>
 <p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
 B) The Issuer has provided a COSE-based Referenced Token to the EUDI Wallet.
@@ -1694,11 +1734,13 @@ C) The Referenced Token does not contain the "uri" field within "status_list".</
 <h4 id="objective_20">Objective</h4>
 <p>Verify that the EUDI Wallet accepts a COSE-based Referenced Token containing the status claim at CBOR label 65535 with a valid Status CBOR structure.</p>
 <h4 id="references_20">References</h4>
-<p>[Token Status List (TSL) draft-20] Section 6.3</p>
+<ul>
+<li>[Token Status List] Section 6.3</li>
+</ul>
 <h4 id="profile-applicability_20">Profile applicability</h4>
 <p>The Wallet supports revocation checking via the Token Status List mechanism; The Wallet supports Status List Tokens in CWT format</p>
 <h4 id="eudi-wallet-relevancy_20">EUDI-wallet relevancy</h4>
-<p>EUDI_generic / EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_20">Preconditions</h4>
 <p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
 B) The Referenced Token includes the Status element that contains the Status_list element (index and URI)
@@ -1719,11 +1761,13 @@ F) The Referenced Token contains the status claim at CBOR label 65535 containing
 <h4 id="objective_21">Objective</h4>
 <p>Verify that the EUDI Wallet rejects a COSE-based Referenced Token where the required status claim at CBOR label 65535 is missing.</p>
 <h4 id="references_21">References</h4>
-<p>[Token Status List (TSL) draft-20] Section 6.3</p>
+<ul>
+<li>[Token Status List] Section 6.3</li>
+</ul>
 <h4 id="profile-applicability_21">Profile applicability</h4>
 <p>The Wallet supports revocation checking via the Token Status List mechanism; The Wallet supports Status List Tokens in CWT format</p>
 <h4 id="eudi-wallet-relevancy_21">EUDI-wallet relevancy</h4>
-<p>EUDI_generic / EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_21">Preconditions</h4>
 <p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
 B) The Issuer has provided a COSE-based Referenced Token to the EUDI Wallet.
@@ -1741,11 +1785,13 @@ C) The Referenced Token contains the status claim at CBOR label 65535 missing.</
 <h4 id="objective_22">Objective</h4>
 <p>Verify that the number, keys, and value types of data items in the StatusListInfo CBOR structure within a COSE-based Referenced Token are correct.</p>
 <h4 id="references_22">References</h4>
-<p>[Token Status List (TSL) draft-20] Section 6.3</p>
+<ul>
+<li>[Token Status List] Section 6.3</li>
+</ul>
 <h4 id="profile-applicability_22">Profile applicability</h4>
 <p>The Wallet supports revocation checking via the Token Status List mechanism; The Wallet supports Status List Tokens in CWT format</p>
 <h4 id="eudi-wallet-relevancy_22">EUDI-wallet relevancy</h4>
-<p>EUDI_generic / EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_22">Preconditions</h4>
 <p>A) The Issuer has provided a COSE-based Referenced Token to the EUDI Wallet.
 B) The Referenced Token contains a status claim with a "status_list" CBOR structure.
@@ -1772,11 +1818,15 @@ C) The status_list structure passed basic CBOR well-formedness checks.</p>
 <h4 id="objective_23">Objective</h4>
 <p>Verify that when the client_metadata parameter is included in an Authorization Request, it is a valid UTF-8 encoded JSON object and that the Wallet processes only the defined metadata parameters.</p>
 <h4 id="references_23">References</h4>
-<p>[OIDF.OID4VP] section 5.1</p>
+<ul>
+<li>[OpenID4VP] Section 5.1</li>
+</ul>
 <h4 id="profile-applicability_23">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_23">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_23">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_23">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -1792,11 +1842,15 @@ C) The status_list structure passed basic CBOR well-formedness checks.</p>
 <h4 id="objective_24">Objective</h4>
 <p>Verify that when the client_metadata parameter is included in an Authorization Request, it is a valid UTF-8 encoded JSON object and that the Wallet processes only the defined metadata parameters.</p>
 <h4 id="references_24">References</h4>
-<p>[OIDF.OID4VP] section 5.1</p>
+<ul>
+<li>[OpenID4VP] Section 5.1</li>
+</ul>
 <h4 id="profile-applicability_24">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_24">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_24">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_24">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -1812,11 +1866,15 @@ C) The status_list structure passed basic CBOR well-formedness checks.</p>
 <h4 id="objective_25">Objective</h4>
 <p>VVerify that the Wallet rejects the Authorization Request when the client_metadata parameter is not a valid UTF-8 encoded JSON object, returning an invalid_request error.</p>
 <h4 id="references_25">References</h4>
-<p>[OIDF.OID4VP] section 5.1</p>
+<ul>
+<li>[OpenID4VP] Section 5.1</li>
+</ul>
 <h4 id="profile-applicability_25">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_25">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_25">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_25">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -1832,11 +1890,16 @@ C) The status_list structure passed basic CBOR well-formedness checks.</p>
 <h4 id="objective_26">Objective</h4>
 <p>Verify that when the Verifier sets request_uri_method = "post" without client_metadata, the Wallet still proceeds by sending its full supported wallet_metadata in the POST request to the request_uri.</p>
 <h4 id="references_26">References</h4>
-<p>[OIDF.OID4VP] Section 5.10, [OIDF.OID4VP] Section 5.1, [RFC9101]</p>
+<ul>
+<li>[OpenID4VP] Sections 5.10, 5.1</li>
+<li>[RFC9101]</li>
+</ul>
 <h4 id="profile-applicability_26">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_26">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_26">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_26">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -1856,11 +1919,15 @@ C) The status_list structure passed basic CBOR well-formedness checks.</p>
 <h4 id="objective_27">Objective</h4>
 <p>Verify that when the Wallet receives an Authorization Request where all Verifier metadata is provided within the client_metadata parameter, the Wallet processes the metadata exclusively from client_metadata.</p>
 <h4 id="references_27">References</h4>
-<p>[OIDF.OID4VP] section 5.9.3; [OIDF.OID4VP] section 5.1</p>
+<ul>
+<li>[OpenID4VP] Sections 5.9.3, 5.1</li>
+</ul>
 <h4 id="profile-applicability_27">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_27">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_27">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_27">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -1880,11 +1947,15 @@ C) The status_list structure passed basic CBOR well-formedness checks.</p>
 <h4 id="objective_28">Objective</h4>
 <p>Verify that when the Wallet receives an Authorization Request where some Verifier metadata is provided outside the client_metadata parameter, the Wallet ignores such metadata and processes only what is contained within client_metadata.</p>
 <h4 id="references_28">References</h4>
-<p>[OIDF.OID4VP] section 5.9.3; [OIDF.OID4VP] section 5.1</p>
+<ul>
+<li>[OpenID4VP] Sections 5.9.3, 5.1</li>
+</ul>
 <h4 id="profile-applicability_28">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_28">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_28">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_28">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -1904,11 +1975,15 @@ C) The status_list structure passed basic CBOR well-formedness checks.</p>
 <h4 id="objective_29">Objective</h4>
 <p>Verify that when the Wallet receives a signed Authorization Request using the redirect_uri Client Identifier Prefix, it rejects the request since the redirect_uri prefix cannot be used with signed requests.</p>
 <h4 id="references_29">References</h4>
-<p>[OIDF.OID4VP] section 5.9.3</p>
+<ul>
+<li>[OpenID4VP] Section 5.9.3</li>
+</ul>
 <h4 id="profile-applicability_29">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_29">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_forbidden</p>
 <h4 id="preconditions_29">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_29">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -1928,11 +2003,15 @@ C) The status_list structure passed basic CBOR well-formedness checks.</p>
 <h4 id="objective_30">Objective</h4>
 <p>Verify that when the Wallet receives a signed Authorization Request using a Client Identifier Prefix that supports signing (e.g. x509_hash, openid_federation, verifier_attestation, decentralized_identifier, x509_san_dns), the Wallet accepts the request and proceeds with the presentation flow.</p>
 <h4 id="references_30">References</h4>
-<p>[OIDF.OID4VP] section 5.9.3</p>
+<ul>
+<li>[OpenID4VP] Section 5.9.3</li>
+</ul>
 <h4 id="profile-applicability_30">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_30">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_30">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_30">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -1950,11 +2029,15 @@ C) The status_list structure passed basic CBOR well-formedness checks.</p>
 <h4 id="objective_31">Objective</h4>
 <p>Verify that when the Wallet receives an Authorization Request using the openid_federation Client Identifier Prefix containing a valid trust_chain parameter, the Wallet processes the trust_chain and uses it for Verifier trust establishment.</p>
 <h4 id="references_31">References</h4>
-<p>[OIDF.OID4VP] section 5.9.3</p>
+<ul>
+<li>[OpenID4VP] Section 5.9.3</li>
+</ul>
 <h4 id="profile-applicability_31">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_31">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_forbidden</p>
 <h4 id="preconditions_31">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_31">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -1974,11 +2057,15 @@ C) The status_list structure passed basic CBOR well-formedness checks.</p>
 <h4 id="objective_32">Objective</h4>
 <p>Verify that when the Wallet receives an Authorization Request using the openid_federation Client Identifier Prefix containing a trust_chain parameter that cannot be validated, the Wallet rejects the request in accordance with its trust policy.</p>
 <h4 id="references_32">References</h4>
-<p>[OIDF.OID4VP] section 5.9.3</p>
+<ul>
+<li>[OpenID4VP] Section 5.9.3</li>
+</ul>
 <h4 id="profile-applicability_32">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_32">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_forbidden</p>
 <h4 id="preconditions_32">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_32">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -1998,11 +2085,15 @@ C) The status_list structure passed basic CBOR well-formedness checks.</p>
 <h4 id="objective_33">Objective</h4>
 <p>Verify that when the Wallet receives an Authorization Request using the openid_federation Client Identifier Prefix and client_metadata is present, the Wallet ignores the client_metadata parameter and resolves Verifier metadata via OpenID Federation.</p>
 <h4 id="references_33">References</h4>
-<p>[OID4VP 5.9.3]</p>
+<ul>
+<li>[OpenID4VP] Section 5.9.3</li>
+</ul>
 <h4 id="profile-applicability_33">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_33">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_undefined</p>
 <h4 id="preconditions_33">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_33">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -2022,11 +2113,15 @@ C) The status_list structure passed basic CBOR well-formedness checks.</p>
 <h4 id="objective_34">Objective</h4>
 <p>Verify that when the Wallet receives an Authorization Request using the openid_federation Client Identifier Prefix without a client_metadata parameter, the Wallet resolves all Verifier metadata via OpenID Federation.</p>
 <h4 id="references_34">References</h4>
-<p>[OIDF.OID4VP] section 5.9.3</p>
+<ul>
+<li>[OpenID4VP] Section 5.9.3</li>
+</ul>
 <h4 id="profile-applicability_34">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_34">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_34">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_34">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -2046,11 +2141,15 @@ C) The status_list structure passed basic CBOR well-formedness checks.</p>
 <h4 id="objective_35">Objective</h4>
 <p>Verify that when the Wallet receives an Authorization Request using the verifier_attestation Client Identifier Prefix where the original Client Identifier (part after the prefix) equals the subclaim of the Verifier attestation JWT, the Wallet processes the request.</p>
 <h4 id="references_35">References</h4>
-<p>[OIDF.OID4VP] section 5.9.3</p>
+<ul>
+<li>[OpenID4VP] Section 5.9.3</li>
+</ul>
 <h4 id="profile-applicability_35">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_35">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_35">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_35">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -2070,11 +2169,15 @@ C) The status_list structure passed basic CBOR well-formedness checks.</p>
 <h4 id="objective_36">Objective</h4>
 <p>Verify that when the Wallet receives an Authorization Request using the verifier_attestation Client Identifier Prefix where the original Client Identifier does NOT match the subclaim of the Verifier attestation JWT, the Wallet rejects the request.</p>
 <h4 id="references_36">References</h4>
-<p>[OIDF.OID4VP] section 5.9.3</p>
+<ul>
+<li>[OpenID4VP] Section 5.9.3</li>
+</ul>
 <h4 id="profile-applicability_36">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_36">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_36">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_36">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -2094,11 +2197,15 @@ C) The status_list structure passed basic CBOR well-formedness checks.</p>
 <h4 id="objective_37">Objective</h4>
 <p>Verify that when the Wallet receives a Request Object using the verifier_attestation Client Identifier Prefix with the Verifier attestation JWT correctly placed in the jwt JOSE header, the Wallet locates and processes the attestation JWT.</p>
 <h4 id="references_37">References</h4>
-<p>[OIDF.OID4VP] section 5.9.3; [OIDF.OID4VP] section 12</p>
+<ul>
+<li>[OpenID4VP] Sections 5.9.3, 12</li>
+</ul>
 <h4 id="profile-applicability_37">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_37">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_37">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_37">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -2118,11 +2225,15 @@ C) The status_list structure passed basic CBOR well-formedness checks.</p>
 <h4 id="objective_38">Objective</h4>
 <p>Verify that when the Wallet receives a Request Object using the verifier_attestation Client Identifier Prefix where the jwt JOSE header is absent or does not contain the Verifier attestation JWT, the Wallet rejects the request.</p>
 <h4 id="references_38">References</h4>
-<p>[OID4VP 5.9.3]; [OID4VP 12]</p>
+<ul>
+<li>[OpenID4VP] Sections 5.9.3, 12</li>
+</ul>
 <h4 id="profile-applicability_38">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_38">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_38">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_38">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -2142,8 +2253,11 @@ C) The status_list structure passed basic CBOR well-formedness checks.</p>
 <h4 id="objective_39">Objective</h4>
 <p>Verify that when the Verifier attestation JWT contains a redirect_uris claim and the redirect_uri request parameter exactly matches one of its entries, the Wallet processes the request.</p>
 <h4 id="references_39">References</h4>
-<p>[OIDF.OID4VP] section 5.9.3</p>
+<ul>
+<li>[OpenID4VP] Section 5.9.3</li>
+</ul>
 <h4 id="profile-applicability_39">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_39">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_39">Preconditions</h4>
@@ -2167,8 +2281,11 @@ C) The status_list structure passed basic CBOR well-formedness checks.</p>
 <h4 id="objective_40">Objective</h4>
 <p>Verify that when the Verifier attestation JWT contains a redirect_uris claim and the redirect_uri request parameter does NOT exactly match any entry, the Wallet rejects the request.</p>
 <h4 id="references_40">References</h4>
-<p>[OIDF.OID4VP] section 5.9.3</p>
+<ul>
+<li>[OpenID4VP] Section 5.9.3</li>
+</ul>
 <h4 id="profile-applicability_40">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_40">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_40">Preconditions</h4>
@@ -2192,8 +2309,11 @@ C) The status_list structure passed basic CBOR well-formedness checks.</p>
 <h4 id="objective_41">Objective</h4>
 <p>Verify that when the Verifier attestation JWT does NOT contain a redirect_uris claim, the Wallet does not enforce a redirect_uri match against the attestation and processes the request normally.</p>
 <h4 id="references_41">References</h4>
-<p>[OIDF.OID4VP] section 5.9.3</p>
+<ul>
+<li>[OpenID4VP] Section 5.9.3</li>
+</ul>
 <h4 id="profile-applicability_41">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_41">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_41">Preconditions</h4>
@@ -2217,11 +2337,15 @@ C) The status_list structure passed basic CBOR well-formedness checks.</p>
 <h4 id="objective_42">Objective</h4>
 <p>Verify that when the Wallet receives a Request Object using the verifier_attestation Client Identifier Prefix where non-key Verifier metadata is provided outside the client_metadata parameter, the Wallet ignores such metadata and processes only what is contained within client_metadata.</p>
 <h4 id="references_42">References</h4>
-<p>[OIDF.OID4VP] section 5.9.3</p>
+<ul>
+<li>[OpenID4VP] Section 5.9.3</li>
+</ul>
 <h4 id="profile-applicability_42">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_42">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_42">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_42">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -2241,11 +2365,15 @@ C) The status_list structure passed basic CBOR well-formedness checks.</p>
 <h4 id="objective_43">Objective</h4>
 <p>Verify that when the Wallet receives a Request Object using the verifier_attestation Client Identifier Prefix where all non-key Verifier metadata is provided within client_metadata, the Wallet uses client_metadata as the source of all non-key metadata and processes the request.</p>
 <h4 id="references_43">References</h4>
-<p>[OIDF.OID4VP] section 5.9.3</p>
+<ul>
+<li>[OpenID4VP] Section 5.9.3</li>
+</ul>
 <h4 id="profile-applicability_43">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_43">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_43">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_43">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -2265,11 +2393,16 @@ C) The status_list structure passed basic CBOR well-formedness checks.</p>
 <h4 id="objective_44">Objective</h4>
 <p>Verify that when the Wallet receives a Request Object using the x509_san_dns Client Identifier Prefix where the original Client Identifier (DNS name) matches a dNSName SAN entry in the leaf certificate provided in the request, the Wallet accepts the binding.</p>
 <h4 id="references_44">References</h4>
-<p>[OIDF.OID4VP] section 5.9.3; [RFC5280]</p>
+<ul>
+<li>[OpenID4VP] Section 5.9.3</li>
+<li>[RFC5280]</li>
+</ul>
 <h4 id="profile-applicability_44">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_44">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_44">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_44">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -2289,11 +2422,16 @@ C) The status_list structure passed basic CBOR well-formedness checks.</p>
 <h4 id="objective_45">Objective</h4>
 <p>Verify that when the Wallet receives a Request Object using the x509_san_dns Client Identifier Prefix where the DNS name in the Client Identifier does NOT match any dNSName SAN entry in the leaf certificate, the Wallet rejects the request.</p>
 <h4 id="references_45">References</h4>
-<p>[OIDF.OID4VP] section 5.9.3; [RFC5280]</p>
+<ul>
+<li>[OpenID4VP] Section 5.9.3</li>
+<li>[RFC5280]</li>
+</ul>
 <h4 id="profile-applicability_45">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_45">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_45">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_45">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -2313,8 +2451,11 @@ C) The status_list structure passed basic CBOR well-formedness checks.</p>
 <h4 id="objective_46">Objective</h4>
 <p>Verify that when the Wallet receives a non-DC-API Request Object using the x509_san_dns Client Identifier Prefix and trust in the Client Identifier is established via the certificate, the Wallet allows the redirect_uri provided the FQDN of the redirect_uri matches the Client Identifier hostname; all non-key Verifier metadata is taken from client_metadata.</p>
 <h4 id="references_46">References</h4>
-<p>[OIDF.OID4VP] section 5.9.3</p>
+<ul>
+<li>[OpenID4VP] Section 5.9.3</li>
+</ul>
 <h4 id="profile-applicability_46">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_46">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_46">Preconditions</h4>
@@ -2340,8 +2481,11 @@ C) The status_list structure passed basic CBOR well-formedness checks.</p>
 <h4 id="objective_47">Objective</h4>
 <p>Verify that when the Wallet receives a non-DC-API Request Object using the x509_san_dns Client Identifier Prefix and the FQDN of redirect_uri does NOT match the Client Identifier hostname (and trust in the Client Identifier is not otherwise established), the Wallet rejects the request.</p>
 <h4 id="references_47">References</h4>
-<p>[OIDF.OID4VP] section 5.9.3</p>
+<ul>
+<li>[OpenID4VP] Section 5.9.3</li>
+</ul>
 <h4 id="profile-applicability_47">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_47">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_47">Preconditions</h4>
@@ -2365,11 +2509,15 @@ C) The status_list structure passed basic CBOR well-formedness checks.</p>
 <h4 id="objective_48">Objective</h4>
 <p>Verify that when the Wallet receives a Request Object using the x509_hash Client Identifier Prefix where the original Client Identifier equals the base64url-encoded SHA-256 hash of the DER-encoded leaf certificate provided in x5c, the Wallet accepts the binding.</p>
 <h4 id="references_48">References</h4>
-<p>[OIDF.OID4VP] section 5.9.3</p>
+<ul>
+<li>[OpenID4VP] Section 5.9.3</li>
+</ul>
 <h4 id="profile-applicability_48">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_48">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_48">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_48">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -2389,11 +2537,15 @@ C) The status_list structure passed basic CBOR well-formedness checks.</p>
 <h4 id="objective_49">Objective</h4>
 <p>Verify that when the Wallet receives a Request Object using the x509_hash Client Identifier Prefix where the Client Identifier does NOT match the base64url-encoded SHA-256 hash of the leaf certificate in x5c, the Wallet rejects the request.</p>
 <h4 id="references_49">References</h4>
-<p>[OIDF.OID4VP] section 5.9.3</p>
+<ul>
+<li>[OpenID4VP] Section 5.9.3</li>
+</ul>
 <h4 id="profile-applicability_49">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_49">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_49">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_49">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -2413,11 +2565,16 @@ C) The status_list structure passed basic CBOR well-formedness checks.</p>
 <h4 id="objective_50">Objective</h4>
 <p>Verify that when the Wallet receives a Request Object using the x509_hash Client Identifier Prefix signed with the private key corresponding to the public key in the leaf X.509 certificate (whose hash is in the Client Identifier), the Wallet successfully verifies the signature.</p>
 <h4 id="references_50">References</h4>
-<p>[OIDF.OID4VP] section 5.9.3; [RFC7515]</p>
+<ul>
+<li>[OpenID4VP] Section 5.9.3</li>
+<li>[RFC7515]</li>
+</ul>
 <h4 id="profile-applicability_50">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_50">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_50">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_50">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -2439,11 +2596,16 @@ C) The status_list structure passed basic CBOR well-formedness checks.</p>
 <h4 id="objective_51">Objective</h4>
 <p>Verify that when the Wallet receives a Request Object using the x509_hash Client Identifier Prefix where the signature key does NOT correspond to the leaf certificate in x5c, the Wallet rejects the request.</p>
 <h4 id="references_51">References</h4>
-<p>[OIDF.OID4VP] section 5.9.3; [RFC7515]</p>
+<ul>
+<li>[OpenID4VP] Section 5.9.3</li>
+<li>[RFC7515]</li>
+</ul>
 <h4 id="profile-applicability_51">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_51">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_51">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_51">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -2465,11 +2627,15 @@ C) The status_list structure passed basic CBOR well-formedness checks.</p>
 <h4 id="objective_52">Objective</h4>
 <p>Verify that when the Wallet receives an Authorization Request using the reserved origin: Client Identifier Prefix outside a DC API context, the Wallet rejects the request.</p>
 <h4 id="references_52">References</h4>
-<p>[OIDF.OID4VP] section 5.9.3</p>
+<ul>
+<li>[OpenID4VP] Section 5.9.3</li>
+</ul>
 <h4 id="profile-applicability_52">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_52">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_52">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_52">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -2489,11 +2655,15 @@ C) The status_list structure passed basic CBOR well-formedness checks.</p>
 <h4 id="objective_53">Objective</h4>
 <p>Verify that when the Wallet requires encrypted Request Objects, it advertises public encryption keys in wallet_metadata.jwks and the supported algorithms via authorization_encryption_alg_values_supported and authorization_encryption_enc_values_supported, and the Wallet successfully decrypts the encrypted Request Object received from the Verifier.</p>
 <h4 id="references_53">References</h4>
-<p>[OIDF.OID4VP] section 5.10</p>
+<ul>
+<li>[OpenID4VP] Section 5.10</li>
+</ul>
 <h4 id="profile-applicability_53">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_53">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_53">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_53">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -2515,11 +2685,15 @@ C) The status_list structure passed basic CBOR well-formedness checks.</p>
 <h4 id="objective_54">Objective</h4>
 <p>Verify that when the Wallet has indicated that encryption is required (via wallet_metadata.jwks and supported algorithms) and the Verifier returns an unencrypted Request Object, the Wallet rejects the Request Object.</p>
 <h4 id="references_54">References</h4>
-<p>[OIDF.OID4VP] section 5.10</p>
+<ul>
+<li>[OpenID4VP] Section 5.10</li>
+</ul>
 <h4 id="profile-applicability_54">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_54">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_54">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_54">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -2541,11 +2715,15 @@ C) The status_list structure passed basic CBOR well-formedness checks.</p>
 <h4 id="objective_55">Objective</h4>
 <p>Verify that when the Wallet uses a Client Identifier Prefix that permits signed Request Objects, the Wallet lists supported Request Object signing algorithms in the request_object_signing_alg_values_supported parameter of wallet_metadata.</p>
 <h4 id="references_55">References</h4>
-<p>[OIDF.OID4VP] section 5.10</p>
+<ul>
+<li>[OpenID4VP] Section 5.10</li>
+</ul>
 <h4 id="profile-applicability_55">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_55">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_55">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_55">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -2565,11 +2743,15 @@ C) The status_list structure passed basic CBOR well-formedness checks.</p>
 <h4 id="objective_56">Objective</h4>
 <p>Verify that when the Wallet uses a Client Identifier Prefix that precludes signed Request Objects (e.g. redirect_uri:), the Wallet does NOT include the request_object_signing_alg_values_supported parameter in wallet_metadata.</p>
 <h4 id="references_56">References</h4>
-<p>[OIDF.OID4VP] section 5.10</p>
+<ul>
+<li>[OpenID4VP] Section 5.10</li>
+</ul>
 <h4 id="profile-applicability_56">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_56">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_56">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_56">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -2589,11 +2771,15 @@ C) The status_list structure passed basic CBOR well-formedness checks.</p>
 <h4 id="objective_57">Objective</h4>
 <p>Verify that when the Wallet sent a wallet_nonce in the POST request and the received Request Object contains the matching wallet_nonce claim, the Wallet validates the match and continues processing.</p>
 <h4 id="references_57">References</h4>
-<p>[OIDF.OID4VP] section 5.10.1</p>
+<ul>
+<li>[OpenID4VP] Section 5.10.1</li>
+</ul>
 <h4 id="profile-applicability_57">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_57">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_57">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_57">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -2615,11 +2801,15 @@ C) The status_list structure passed basic CBOR well-formedness checks.</p>
 <h4 id="objective_58">Objective</h4>
 <p>Verify that when the Wallet sent a wallet_nonce in the POST request and the received Request Object contains a different wallet_nonce claim value, the Wallet terminates request processing.</p>
 <h4 id="references_58">References</h4>
-<p>[OIDF.OID4VP] section 5.10.1</p>
+<ul>
+<li>[OpenID4VP] Section 5.10.1</li>
+</ul>
 <h4 id="profile-applicability_58">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_58">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_58">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_58">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -2641,11 +2831,15 @@ C) The status_list structure passed basic CBOR well-formedness checks.</p>
 <h4 id="objective_59">Objective</h4>
 <p>Verify that when the Wallet sent a wallet_nonce in the POST request and the received Request Object does NOT contain a wallet_nonce claim, the Wallet terminates request processing.</p>
 <h4 id="references_59">References</h4>
-<p>[OIDF.OID4VP] section 5.10.1</p>
+<ul>
+<li>[OpenID4VP] Section 5.10.1</li>
+</ul>
 <h4 id="profile-applicability_59">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_59">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_59">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_59">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -2667,13 +2861,15 @@ C) The status_list structure passed basic CBOR well-formedness checks.</p>
 <h4 id="objective_60">Objective</h4>
 <p>Verify that when Wallet is presenting the Credential in IETF SD-JWT VC format, it contains the credential issuer's signing certificate along with a trust chain in the <code>x5c</code> JOSE header parameter.</p>
 <h4 id="references_60">References</h4>
-<p>[OIDF.HAIP] section 6.1.1</p>
+<ul>
+<li>[HAIP] Section 6.1.1</li>
+</ul>
 <h4 id="profile-applicability_60">Profile applicability</h4>
 <p>Wallet supports IETF SD-JWT VC </p>
 <h4 id="eudi-wallet-relevancy_60">EUDI-wallet relevancy</h4>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_60">Preconditions</h4>
-<p>TBD</p>
+<p>TODO: TBD</p>
 <h4 id="test-scenario_60">Test Scenario</h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>

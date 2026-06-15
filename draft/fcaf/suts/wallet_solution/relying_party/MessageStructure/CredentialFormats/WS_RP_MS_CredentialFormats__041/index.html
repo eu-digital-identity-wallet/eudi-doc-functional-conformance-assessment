@@ -1208,14 +1208,17 @@
 <h2 id="objective">Objective</h2>
 <p>Verify that when Wallet is presenting several ISO mdocs, each ISO mdoc is returned in a separate DeviceResponse (as defined in 8.3.2.1.2.2 of [ISO.18013-5]), each matching to a respective DCQL query. Therefore, the resulting vp_token contains multiple DeviceResponse instances.</p>
 <h2 id="references">References</h2>
-<p>[OIDF.HAIP] section 5.3.1
-[OIDF.OID4VP] appendix B.2 (ISO mdoc profile)
-[ISO.18013-5] section 8.3.2.1.2.2. </p>
+<ul>
+<li>[HAIP] Section 5.3.1</li>
+<li>[OpenID4VP] Appendix B.2 (ISO mdoc profile)</li>
+<li>[ISO/IEC 18013-5] Section 8.3.2.1.2.2</li>
+</ul>
 <h2 id="profile-applicability">Profile applicability</h2>
 <p>Wallet supports ISO mdoc</p>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h2 id="preconditions">Preconditions</h2>
+<p>none</p>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>

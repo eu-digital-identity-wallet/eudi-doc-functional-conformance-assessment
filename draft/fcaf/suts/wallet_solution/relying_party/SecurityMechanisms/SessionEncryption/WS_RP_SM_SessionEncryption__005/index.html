@@ -1208,14 +1208,18 @@
 <h2 id="objective">Objective</h2>
 <p>Verify that in the encrypted response sent by the Wallet: the JWE <code>alg</code> (algorithm) header parameter (as defined in section 4.1.1 of [RFC7516]) value is set to ECDH-ES (as defined in section 4.6 of [RFC7518]), with key agreement utilizing keys on the P-256 curve (as defined in section 6.2.1.1 of [RFC7518]).</p>
 <h2 id="references">References</h2>
-<p>[OIDF.HAIP] section 5 (introduction) 
-[OIDF.OID4VP] section 8.3
-[RFC7516] section 4.1.1
-[RFC7518] 6.2.1.1</p>
+<ul>
+<li>[HAIP] Section 5 (introduction)</li>
+<li>[OpenID4VP] Section 8.3</li>
+<li>[RFC7516] Section 4.1.1</li>
+<li>[RFC7518] Section 6.2.1.1</li>
+</ul>
 <h2 id="profile-applicability">Profile applicability</h2>
+<p>none</p>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h2 id="preconditions">Preconditions</h2>
+<p>none</p>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>

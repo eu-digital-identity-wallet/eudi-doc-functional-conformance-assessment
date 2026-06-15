@@ -1212,10 +1212,13 @@
 <h5 id="objective">Objective</h5>
 <p>Verify that when presenting an IETF SD-JWT VC, the Wallet produces a Verifiable Presentation whose digests are generated using SHA-256.</p>
 <h5 id="references">References</h5>
-<p>[OIDF.HAIP] section 8</p>
+<ul>
+<li>[HAIP] Section 8</li>
+</ul>
 <h5 id="profile-applicability">Profile applicability</h5>
+<p>none</p>
 <h5 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h5>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions">Preconditions</h5>
 <p>Wallet holds a presentable IETF SD-JWT VC.</p>
 <h5 id="test-scenario">Test Scenario</h5>
@@ -1235,11 +1238,15 @@
 <h5 id="objective_1">Objective</h5>
 <p>Verify that whenever Wallet uses hash function during presentation for ISO mdoc, it leverages hash algorithm SHA-256.</p>
 <h5 id="references_1">References</h5>
-<p>[OIDF.HAIP] section 9</p>
+<ul>
+<li>[HAIP] Section 9</li>
+</ul>
 <h5 id="profile-applicability_1">Profile applicability</h5>
+<p>none</p>
 <h5 id="eudi-wallet-relevancy_1">EUDI-wallet relevancy</h5>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions_1">Preconditions</h5>
+<p>none</p>
 <h5 id="test-scenario_1">Test Scenario</h5>
 <ol>
 <li>Wallet engages with the Verifier.</li>
@@ -1257,11 +1264,13 @@
 <h5 id="objective_2">Objective</h5>
 <p>Verify that Wallet includes in its metadata information related to other hash algorithms supported, if the Wallet profile allows other hash algorithms</p>
 <h5 id="references_2">References</h5>
-<p>[OIDF.HAIP] section 8</p>
+<ul>
+<li>[HAIP] Section 8</li>
+</ul>
 <h5 id="profile-applicability_2">Profile applicability</h5>
 <p>Wallet supports other hash algorithms besides SHA-256.</p>
 <h5 id="eudi-wallet-relevancy_2">EUDI-wallet relevancy</h5>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions_2">Preconditions</h5>
 <p>There is a defined mechanism for this Wallet profile, through which Verifier receives Wallet Metadata.</p>
 <h5 id="test-scenario_2">Test Scenario</h5>
@@ -1277,11 +1286,13 @@
 <h5 id="objective_3">Objective</h5>
 <p>Verify that Wallet does not use other hash algorithm than SHA-256 during presentation if that is not supported by the Verifier.</p>
 <h5 id="references_3">References</h5>
-<p>[OIDF.HAIP] section 8</p>
+<ul>
+<li>[HAIP] Section 8</li>
+</ul>
 <h5 id="profile-applicability_3">Profile applicability</h5>
 <p>Wallet supports other hash algorithms besides SHA-256.</p>
 <h5 id="eudi-wallet-relevancy_3">EUDI-wallet relevancy</h5>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions_3">Preconditions</h5>
 <p>A) Verifier Client Metadata does not include any other hash algorithms. </p>
 <h5 id="test-scenario_3">Test Scenario</h5>
@@ -1301,11 +1312,13 @@
 <h5 id="objective_4">Objective</h5>
 <p>Verify that Wallet raises an error if Verifier uses any hashing function other than SHA-256 and that is not included in the Verifier Client Metadata.</p>
 <h5 id="references_4">References</h5>
-<p>[OIDF.HAIP] section 8</p>
+<ul>
+<li>[HAIP] Section 8</li>
+</ul>
 <h5 id="profile-applicability_4">Profile applicability</h5>
 <p>Wallet does not support other hash algorithms besides SHA-256.</p>
 <h5 id="eudi-wallet-relevancy_4">EUDI-wallet relevancy</h5>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions_4">Preconditions</h5>
 <p>Verifier Client Metadata does not include any other hash algorithms.
 Verifier uses other hashing functions than SHA-256.</p>
@@ -1322,11 +1335,13 @@ Verifier uses other hashing functions than SHA-256.</p>
 <h5 id="objective_5">Objective</h5>
 <p>Verify that when the credential to be presented uses a digest hash algorithm other than SHA-256 that the Wallet does not support, the Wallet does not produce a presentation for that credential.</p>
 <h5 id="references_5">References</h5>
-<p>[OIDF.HAIP] section 8</p>
+<ul>
+<li>[HAIP] Section 8</li>
+</ul>
 <h5 id="profile-applicability_5">Profile applicability</h5>
 <p>Wallet does not support other hash algorithms besides SHA-256.</p>
 <h5 id="eudi-wallet-relevancy_5">EUDI-wallet relevancy</h5>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions_5">Preconditions</h5>
 <p>Credential Issuer Metadata does not include any other hash algorithms.
 Credential Issuer uses other hashing functions than SHA-256.</p>
@@ -1347,14 +1362,17 @@ Credential Issuer uses other hashing functions than SHA-256.</p>
 <h5 id="objective_6">Objective</h5>
 <p>Verify that if <code>encrypted_response_enc_values_supported</code> within client metadata from the Verifier, does not include A256GCM, and Wallet only supports A256GCM, the Wallet responds with an error.</p>
 <h5 id="references_6">References</h5>
-<p>[OIDF.HAIP] section 5 (introduction) 
-[OIDF.OID4VP] section 8.3
-[RFC7516] section 4.1.2</p>
+<ul>
+<li>[HAIP] Section 5 (introduction)</li>
+<li>[OpenID4VP] Section 8.3</li>
+<li>[RFC7516] Section 4.1.2</li>
+</ul>
 <h5 id="profile-applicability_6">Profile applicability</h5>
 <p>Wallet supports only A256GCM</p>
 <h5 id="eudi-wallet-relevancy_6">EUDI-wallet relevancy</h5>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions_6">Preconditions</h5>
+<p>none</p>
 <h5 id="test-scenario_6">Test Scenario</h5>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -1378,7 +1396,9 @@ Credential Issuer uses other hashing functions than SHA-256.</p>
 <h5 id="objective_7">Objective</h5>
 <p>Test that in a claims path pointer array, a string value indicates the respected key is to be selected.</p>
 <h5 id="references_7">References</h5>
-<p>[OID4VP 7]</p>
+<ul>
+<li>[OpenID4VP] Section 7</li>
+</ul>
 <h5 id="profile-applicability_7">Profile applicability</h5>
 <p>claims path pointer when applied to a JSON-based Credential</p>
 <h5 id="eudi-wallet-relevancy_7">EUDI-wallet relevancy</h5>
@@ -1427,7 +1447,9 @@ Credential Issuer uses other hashing functions than SHA-256.</p>
 <h5 id="objective_8">Objective</h5>
 <p>Test that a null value indicates that all elements of the currently selected array(s) are to be selected.</p>
 <h5 id="references_8">References</h5>
-<p>[OID4VP 7]</p>
+<ul>
+<li>[OpenID4VP] Section 7</li>
+</ul>
 <h5 id="profile-applicability_8">Profile applicability</h5>
 <p>claims path pointer when applied to a JSON-based Credential</p>
 <h5 id="eudi-wallet-relevancy_8">EUDI-wallet relevancy</h5>
@@ -1475,7 +1497,9 @@ Credential Issuer uses other hashing functions than SHA-256.</p>
 <h5 id="objective_9">Objective</h5>
 <p>Test that a non-negative integer indicates that the respective index in an array is to be selected.</p>
 <h5 id="references_9">References</h5>
-<p>[OID4VP 7]</p>
+<ul>
+<li>[OpenID4VP] Section 7</li>
+</ul>
 <h5 id="profile-applicability_9">Profile applicability</h5>
 <p>claims path pointer when applied to a JSON-based Credential</p>
 <h5 id="eudi-wallet-relevancy_9">EUDI-wallet relevancy</h5>
@@ -1523,7 +1547,9 @@ Credential Issuer uses other hashing functions than SHA-256.</p>
 <h5 id="objective_10">Objective</h5>
 <p>Test that the claims path pointer array is processed left to right</p>
 <h5 id="references_10">References</h5>
-<p>[OID4VP 7] Section 7.1.1</p>
+<ul>
+<li>[OpenID4VP] Sections 7, 7.1.1</li>
+</ul>
 <h5 id="profile-applicability_10">Profile applicability</h5>
 <p>claims path pointer when applied to a JSON-based Credential</p>
 <h5 id="eudi-wallet-relevancy_10">EUDI-wallet relevancy</h5>
@@ -1567,7 +1593,9 @@ Credential Issuer uses other hashing functions than SHA-256.</p>
 <h5 id="objective_11">Objective</h5>
 <p>Test that the Wallet handles DCQL-query for SD-JWT VC credential with a matching top-level claim path pointer.</p>
 <h5 id="references_11">References</h5>
-<p>[OID4VP 7] Section 7.1.1</p>
+<ul>
+<li>[OpenID4VP] Sections 7, 7.1.1</li>
+</ul>
 <h5 id="profile-applicability_11">Profile applicability</h5>
 <p>claims path pointer when applied to a JSON-based Credential</p>
 <h5 id="eudi-wallet-relevancy_11">EUDI-wallet relevancy</h5>
@@ -1593,7 +1621,9 @@ Credential Issuer uses other hashing functions than SHA-256.</p>
 <h5 id="objective_12">Objective</h5>
 <p>Test that the Wallet handles DCQL-query for SD-JWT VC credential with a non-matching top-level claim path pointer.</p>
 <h5 id="references_12">References</h5>
-<p>[OID4VP 7] Section 7.1.1</p>
+<ul>
+<li>[OpenID4VP] Sections 7, 7.1.1</li>
+</ul>
 <h5 id="profile-applicability_12">Profile applicability</h5>
 <p>claims path pointer when applied to a JSON-based Credential</p>
 <h5 id="eudi-wallet-relevancy_12">EUDI-wallet relevancy</h5>
@@ -1622,7 +1652,9 @@ c. discontinuing the interaction.</li>
 <h5 id="objective_13">Objective</h5>
 <p>Test that when processing claims path pointer array, an element at the first level is selected. If the selected element is not an object, abort processing and return an error</p>
 <h5 id="references_13">References</h5>
-<p>[OID4VP] Section 7.2.1, 7.3</p>
+<ul>
+<li>[OpenID4VP] Sections 7.2.1, 7.3</li>
+</ul>
 <h5 id="profile-applicability_13">Profile applicability</h5>
 <p>claims path pointer when applied to a JSON-based Credential</p>
 <h5 id="eudi-wallet-relevancy_13">EUDI-wallet relevancy</h5>
@@ -1669,7 +1701,9 @@ c. discontinuing the interaction.</li>
 <h5 id="objective_14">Objective</h5>
 <p>Test the following condition when processing claims path pointer array is at step 2.1: if the key does not exist in element currently selected, remove that element from the selection.</p>
 <h5 id="references_14">References</h5>
-<p>[OID4VP] Section 7.2.1, 7.3</p>
+<ul>
+<li>[OpenID4VP] Sections 7.2.1, 7.3</li>
+</ul>
 <h5 id="profile-applicability_14">Profile applicability</h5>
 <p>claims path pointer when applied to a JSON-based Credential</p>
 <h5 id="eudi-wallet-relevancy_14">EUDI-wallet relevancy</h5>
@@ -1716,7 +1750,9 @@ c. discontinuing the interaction.</li>
 <h5 id="objective_15">Objective</h5>
 <p>Test that at step 2.2 of claims path processing if any of the currently selected element(s) is not an array, abort processing and return an error.</p>
 <h5 id="references_15">References</h5>
-<p>[OID4VP 7] Section 7.2.1, 7.3</p>
+<ul>
+<li>[OpenID4VP] Sections 7, 7.2.1, 7.3</li>
+</ul>
 <h5 id="profile-applicability_15">Profile applicability</h5>
 <p>claims path pointer when applied to a JSON-based Credential</p>
 <h5 id="eudi-wallet-relevancy_15">EUDI-wallet relevancy</h5>
@@ -1762,7 +1798,9 @@ c. discontinuing the interaction.</li>
 <h5 id="objective_16">Objective</h5>
 <p>Test that at step 2.3 of claims path processing If any of the currently selected element(s) is not an array, abort processing and return an error.</p>
 <h5 id="references_16">References</h5>
-<p>[OID4VP 7] Section 7.2.1, 7.3</p>
+<ul>
+<li>[OpenID4VP] Sections 7, 7.2.1, 7.3</li>
+</ul>
 <h5 id="profile-applicability_16">Profile applicability</h5>
 <p>claims path pointer when applied to a JSON-based Credential</p>
 <h5 id="eudi-wallet-relevancy_16">EUDI-wallet relevancy</h5>
@@ -1807,7 +1845,9 @@ c. discontinuing the interaction.</li>
 <h5 id="objective_17">Objective</h5>
 <p>Test that at step 2.3 of claims path processing, if the index does not exist in a selected array, remove that array from the selection. </p>
 <h5 id="references_17">References</h5>
-<p>[OID4VP 7] Section 7.2.1, 7.3</p>
+<ul>
+<li>[OpenID4VP] Sections 7, 7.2.1, 7.3</li>
+</ul>
 <h5 id="profile-applicability_17">Profile applicability</h5>
 <p>claims path pointer when applied to a JSON-based Credential</p>
 <h5 id="eudi-wallet-relevancy_17">EUDI-wallet relevancy</h5>
@@ -1842,7 +1882,9 @@ c. discontinuing the interaction.</li>
 <h5 id="objective_18">Objective</h5>
 <p>Test that at step 2.4 of claims path processing if the component is anything else, the wallet should abort processing and return an error.</p>
 <h5 id="references_18">References</h5>
-<p>[OID4VP 7] Section 7.2.1, 7.3</p>
+<ul>
+<li>[OpenID4VP] Sections 7, 7.2.1, 7.3</li>
+</ul>
 <h5 id="profile-applicability_18">Profile applicability</h5>
 <p>claims path pointer when applied to a JSON-based Credential</p>
 <h5 id="eudi-wallet-relevancy_18">EUDI-wallet relevancy</h5>
@@ -1878,7 +1920,9 @@ c. discontinuing the interaction.</li>
 <h5 id="objective_19">Objective</h5>
 <p>Test that at Step 3 of claims path processing, if the set of elements currently selected is empty, abort processing and return an error. </p>
 <h5 id="references_19">References</h5>
-<p>[OID4VP 7] Section 7.2.1, 7.3</p>
+<ul>
+<li>[OpenID4VP] Sections 7, 7.2.1, 7.3</li>
+</ul>
 <h5 id="profile-applicability_19">Profile applicability</h5>
 <p>claims path pointer when applied to a JSON-based Credential</p>
 <h5 id="eudi-wallet-relevancy_19">EUDI-wallet relevancy</h5>
@@ -1914,7 +1958,9 @@ c. discontinuing the interaction.</li>
 <h5 id="objective_20">Objective</h5>
 <p>Verify that when the Wallet receives a DCQL query with a claims path pointer applied to an ISO mdoc Credential, where the path is a two-element array containing a valid namespace and a valid data element identifier, the Wallet selects the corresponding data element and returns it CBOR-encoded in the Authorization Response.</p>
 <h5 id="references_20">References</h5>
-<p>[OID4VP 7] Section 7.2, 7.4</p>
+<ul>
+<li>[OpenID4VP] Sections 7, 7.2, 7.4</li>
+</ul>
 <h5 id="profile-applicability_20">Profile applicability</h5>
 <p>claims path pointer when applied to a credential in ISO mdoc</p>
 <h5 id="eudi-wallet-relevancy_20">EUDI-wallet relevancy</h5>
@@ -1944,7 +1990,9 @@ c. discontinuing the interaction.</li>
 <h5 id="objective_21">Objective</h5>
 <p>Test that the first element of mdoc claims path pointer refers to a namespace.</p>
 <h5 id="references_21">References</h5>
-<p>[OID4VP 7] Section 7.2, 7.4</p>
+<ul>
+<li>[OpenID4VP] Sections 7, 7.2, 7.4</li>
+</ul>
 <h5 id="profile-applicability_21">Profile applicability</h5>
 <p>claims path pointer when applied to a credential in ISO mdoc</p>
 <h5 id="eudi-wallet-relevancy_21">EUDI-wallet relevancy</h5>
@@ -1974,7 +2022,9 @@ c. discontinuing the interaction.</li>
 <h5 id="objective_22">Objective</h5>
 <p>Verify that if the first element of the path does not match any namespace in the mdoc, the Wallet aborts and returns an error.</p>
 <h5 id="references_22">References</h5>
-<p>[OID4VP 7] Section 7.2.1 step 2, 7.4</p>
+<ul>
+<li>[OpenID4VP] Sections 7, 7.2.1 step 2, 7.4</li>
+</ul>
 <h5 id="profile-applicability_22">Profile applicability</h5>
 <p>claims path pointer when applied to a credential in ISO mdoc</p>
 <h5 id="eudi-wallet-relevancy_22">EUDI-wallet relevancy</h5>
@@ -2006,7 +2056,9 @@ c. discontinuing the interaction.</li>
 <h5 id="objective_23">Objective</h5>
 <p>Test that the second element of mdoc claims path pointer refers to a data element identifier.</p>
 <h5 id="references_23">References</h5>
-<p>[OID4VP 7]</p>
+<ul>
+<li>[OpenID4VP] Section 7</li>
+</ul>
 <h5 id="profile-applicability_23">Profile applicability</h5>
 <p>claims path pointer when applied to a credential in ISO mdoc</p>
 <h5 id="eudi-wallet-relevancy_23">EUDI-wallet relevancy</h5>
@@ -2039,12 +2091,15 @@ c. discontinuing the interaction.</li>
 <h5 id="objective_24">Objective</h5>
 <p>Test that the claims path pointer does not contain exactly two components then abort processing and return an error.</p>
 <h5 id="references_24">References</h5>
-<p>[OID4VP 7]</p>
+<ul>
+<li>[OpenID4VP] Section 7</li>
+</ul>
 <h5 id="profile-applicability_24">Profile applicability</h5>
 <p>claims path pointer when applied to a credential in ISO mdoc</p>
 <h5 id="eudi-wallet-relevancy_24">EUDI-wallet relevancy</h5>
 <p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions_24">Preconditions</h5>
+<p>none</p>
 <h5 id="test-scenario_24">Test Scenario</h5>
 <ol>
 <li>Engage wallet-verifier interaction.</li>
@@ -2064,12 +2119,15 @@ c. discontinuing the interaction.</li>
 <h5 id="objective_25">Objective</h5>
 <p>Test that the claims path pointer is not a string then abort processing and return an error.</p>
 <h5 id="references_25">References</h5>
-<p>[OID4VP 7]</p>
+<ul>
+<li>[OpenID4VP] Section 7</li>
+</ul>
 <h5 id="profile-applicability_25">Profile applicability</h5>
 <p>claims path pointer when applied to a credential in ISO mdoc</p>
 <h5 id="eudi-wallet-relevancy_25">EUDI-wallet relevancy</h5>
 <p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions_25">Preconditions</h5>
+<p>none</p>
 <h5 id="test-scenario_25">Test Scenario</h5>
 <ol>
 <li>Engage wallet-verifier interaction.</li>
@@ -2089,7 +2147,9 @@ c. discontinuing the interaction.</li>
 <h5 id="objective_26">Objective</h5>
 <p>Test claims path pointer processing by selecting the data element referenced by the second component. If the data element does not exist in the Credential it MUST abort processing and return an error.</p>
 <h5 id="references_26">References</h5>
-<p>[OID4VP 7]</p>
+<ul>
+<li>[OpenID4VP] Section 7</li>
+</ul>
 <h5 id="profile-applicability_26">Profile applicability</h5>
 <p>claims path pointer when applied to a credential in ISO mdoc</p>
 <h5 id="eudi-wallet-relevancy_26">EUDI-wallet relevancy</h5>
@@ -2119,7 +2179,9 @@ c. discontinuing the interaction.</li>
 <h5 id="objective_27">Objective</h5>
 <p>Verify that the wallet can successfully select the data element references by the second component of a claims path pointer.</p>
 <h5 id="references_27">References</h5>
-<p>[OID4VP 7]</p>
+<ul>
+<li>[OpenID4VP] Section 7</li>
+</ul>
 <h5 id="profile-applicability_27">Profile applicability</h5>
 <p>claims path pointer when applied to a credential in ISO mdoc</p>
 <h5 id="eudi-wallet-relevancy_27">EUDI-wallet relevancy</h5>
@@ -2149,8 +2211,11 @@ c. discontinuing the interaction.</li>
 <h5 id="objective_28">Objective</h5>
 <p>Test that when the wallet sends the authorization response using HTTP POST, the names and values in the body MUST be encoded using UTF-8</p>
 <h5 id="references_28">References</h5>
-<p>[OID4VP Section 8]</p>
+<ul>
+<li>[OpenID4VP] Section 8</li>
+</ul>
 <h5 id="profile-applicability_28">Profile applicability</h5>
+<p>none</p>
 <h5 id="eudi-wallet-relevancy_28">EUDI-wallet relevancy</h5>
 <p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions_28">Preconditions</h5>

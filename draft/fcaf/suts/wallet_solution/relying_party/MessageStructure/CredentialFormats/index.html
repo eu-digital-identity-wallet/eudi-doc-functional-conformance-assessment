@@ -1210,11 +1210,13 @@
 <h4 id="objective">Objective</h4>
 <p>Verify that the EUDI Wallet can receive, hold and store a JWT Referenced Token that includes a status_list claim.</p>
 <h4 id="references">References</h4>
-<p>[Token Status List (TSL) draft-20] Section 6.2</p>
+<ul>
+<li>[Token Status List] Section 6.2</li>
+</ul>
 <h4 id="profile-applicability">Profile applicability</h4>
 <p>The Wallet supports revocation checking via the Token Status List mechanism; The Wallet supports Status List Tokens in JWT format</p>
 <h4 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h4>
-<p>EUDI_generic / EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions">Preconditions</h4>
 <p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
 B) The Referenced Token includes the Status element that contains the Status_list element (index and URI)
@@ -1234,11 +1236,13 @@ E) The Issuer issues a JWT Referenced Token with a status_list claim to the EUDI
 <h4 id="objective_1">Objective</h4>
 <p>Verify that the EUDI Wallet can receive, hold and store an SD-JWT Referenced Token that includes a status_list claim.</p>
 <h4 id="references_1">References</h4>
-<p>[Token Status List (TSL) draft-20] Section 6.2</p>
+<ul>
+<li>[Token Status List] Section 6.2</li>
+</ul>
 <h4 id="profile-applicability_1">Profile applicability</h4>
 <p>The Wallet supports revocation checking via the Token Status List mechanism; The Wallet supports Status List Tokens in JWT format</p>
 <h4 id="eudi-wallet-relevancy_1">EUDI-wallet relevancy</h4>
-<p>EUDI_generic / EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_1">Preconditions</h4>
 <p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
 B) The Referenced Token includes the Status element that contains the Status_list element (index and URI)
@@ -1258,11 +1262,13 @@ E) The Issuer issues a SD-JWT Referenced Token with a status_list claim to the E
 <h4 id="objective_2">Objective</h4>
 <p>Verify that the EUDI Wallet can receive, hold and store an SD-JWT VC Referenced Token that includes a status_list claim.</p>
 <h4 id="references_2">References</h4>
-<p>[Token Status List (TSL) draft-20] Section 6.2</p>
+<ul>
+<li>[Token Status List] Section 6.2</li>
+</ul>
 <h4 id="profile-applicability_2">Profile applicability</h4>
 <p>The Wallet supports revocation checking via the Token Status List mechanism; The Wallet supports Status List Tokens in JWT format</p>
 <h4 id="eudi-wallet-relevancy_2">EUDI-wallet relevancy</h4>
-<p>EUDI_generic / EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_2">Preconditions</h4>
 <p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
 B) The Referenced Token includes the Status element that contains the Status_list element (index and URI)
@@ -1282,11 +1288,13 @@ E) The Issuer issues a SD-JWT VC Referenced Token with a status_list claim to th
 <h4 id="objective_3">Objective</h4>
 <p>Verify that the EUDI Wallet can receive, hold and store a CWT Referenced Token that includes a status claim.</p>
 <h4 id="references_3">References</h4>
-<p>[Token Status List (TSL) draft-20] Section 6.3</p>
+<ul>
+<li>[Token Status List] Section 6.3</li>
+</ul>
 <h4 id="profile-applicability_3">Profile applicability</h4>
 <p>The Wallet supports revocation checking via the Token Status List mechanism; The Wallet supports Status List Tokens in CWT format</p>
 <h4 id="eudi-wallet-relevancy_3">EUDI-wallet relevancy</h4>
-<p>EUDI_generic / EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_3">Preconditions</h4>
 <p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
 B) The Referenced Token includes the Status element that contains the Status_list element (index and URI)
@@ -1306,11 +1314,13 @@ E) The Issuer issues a CWT Referenced Token with a status claim to the EUDI Wall
 <h4 id="objective_4">Objective</h4>
 <p>Verify that the EUDI Wallet can receive, hold and store an ISO mdoc Referenced Token that includes a status claim.</p>
 <h4 id="references_4">References</h4>
-<p>[Token Status List (TSL) draft-20] Section 6.3</p>
+<ul>
+<li>[Token Status List] Section 6.3</li>
+</ul>
 <h4 id="profile-applicability_4">Profile applicability</h4>
 <p>The Wallet supports revocation checking via the Token Status List mechanism; The Wallet supports Status List Tokens in CWT format</p>
 <h4 id="eudi-wallet-relevancy_4">EUDI-wallet relevancy</h4>
-<p>EUDI_generic / EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_4">Preconditions</h4>
 <p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
 B) The Referenced Token includes the Status element that contains the Status_list element (index and URI)
@@ -1330,13 +1340,16 @@ E) The Issuer issues a ISO mdoc Referenced Token with a status claim to the EUDI
 <h4 id="objective_5">Objective</h4>
 <p>Test that when a wallet matches a mdoc-based Credential, the CBOR values are matched by first converting to JSON.</p>
 <h4 id="references_5">References</h4>
-<p>[OID4VP 6.3]
-Section 6.1 of [RFC8949]</p>
+<ul>
+<li>[OpenID4VP] Section 6.3</li>
+<li>[RFC8949] Section 6.1</li>
+</ul>
 <h4 id="profile-applicability_5">Profile applicability</h4>
 <p>value matching with ISO mdoc is implemented by wallet</p>
 <h4 id="eudi-wallet-relevancy_5">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_5">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_5">Test Scenario</h4>
 <ol>
 <li>The Wallet engages with the Verifier.</li>
@@ -1356,15 +1369,18 @@ Section 6.1 of [RFC8949]</p>
 <h4 id="objective_6">Objective</h4>
 <p>Verify that Wallet supports ISO mdoc in the presentation flow. </p>
 <h4 id="references_6">References</h4>
-<p>[OIDF.HAIP] section 5 (introduction)
-[OIDF.HAIP] section 5.3.1
-[OIDF.HAIP] section 6
-[OIDF.OID4VP] appendix B.2</p>
+<ul>
+<li>[HAIP] Section 5 (introduction)</li>
+<li>[HAIP] Section 5.3.1</li>
+<li>[HAIP] Section 6</li>
+<li>[OpenID4VP] Appendix B.2</li>
+</ul>
 <h4 id="profile-applicability_6">Profile applicability</h4>
 <p>Wallet supports ISO mdoc</p>
 <h4 id="eudi-wallet-relevancy_6">EUDI-wallet relevancy</h4>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_6">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_6">Test Scenario</h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
@@ -1388,15 +1404,18 @@ Section 6.1 of [RFC8949]</p>
 <h4 id="objective_7">Objective</h4>
 <p>Verify that Wallet supports IETF SD-JWT VC in the presentation flow. </p>
 <h4 id="references_7">References</h4>
-<p>[OIDF.HAIP] section 5 (introduction)
-[OIDF.HAIP] section 5.3.2
-[OIDF.HAIP] section 6
-[OIDF.OID4VP] appendix B.3</p>
+<ul>
+<li>[HAIP] Section 5 (introduction)</li>
+<li>[HAIP] Section 5.3.2</li>
+<li>[HAIP] Section 6</li>
+<li>[OpenID4VP] Appendix B.3</li>
+</ul>
 <h4 id="profile-applicability_7">Profile applicability</h4>
 <p>Wallet supports IETF SD-JWT VC</p>
 <h4 id="eudi-wallet-relevancy_7">EUDI-wallet relevancy</h4>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_7">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_7">Test Scenario</h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
@@ -1420,15 +1439,18 @@ Section 6.1 of [RFC8949]</p>
 <h4 id="objective_8">Objective</h4>
 <p>Verify that Wallet supports IETF SD-JWT VC and ISO mdoc in the presentation flow. </p>
 <h4 id="references_8">References</h4>
-<p>[OIDF.HAIP] section 5 (introduction)
-[OIDF.HAIP] section 5.3.2
-[OIDF.HAIP] section 6
-[OIDF.OID4VP] appendix B.3</p>
+<ul>
+<li>[HAIP] Section 5 (introduction)</li>
+<li>[HAIP] Section 5.3.2</li>
+<li>[HAIP] Section 6</li>
+<li>[OpenID4VP] Appendix B.3</li>
+</ul>
 <h4 id="profile-applicability_8">Profile applicability</h4>
 <p>Wallet supports both ISO mdoc and IETF SD-JWT VC</p>
 <h4 id="eudi-wallet-relevancy_8">EUDI-wallet relevancy</h4>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_8">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_8">Test Scenario</h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
@@ -1464,11 +1486,15 @@ Section 6.1 of [RFC8949]</p>
 <h4 id="objective_9">Objective</h4>
 <p>Verify that Wallet can handle receiving authorization request with response type <code>vp_token</code> and answering properly.</p>
 <h4 id="references_9">References</h4>
-<p>[OIDF.HAIP] section 5 (introduction)</p>
+<ul>
+<li>[HAIP] Section 5 (introduction)</li>
+</ul>
 <h4 id="profile-applicability_9">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_9">EUDI-wallet relevancy</h4>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_9">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_9">Test Scenario</h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
@@ -1492,11 +1518,15 @@ Section 6.1 of [RFC8949]</p>
 <h4 id="objective_10">Objective</h4>
 <p>Verify that when the Verifier uses the <code>vp_token id_token</code> response type, the Wallet responds with an error (detailed or not) or discontinues the transaction.</p>
 <h4 id="references_10">References</h4>
-<p>[OIDF.HAIP] section 5 (introduction)</p>
+<ul>
+<li>[HAIP] Section 5 (introduction)</li>
+</ul>
 <h4 id="profile-applicability_10">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_10">EUDI-wallet relevancy</h4>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_10">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_10">Test Scenario</h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
@@ -1517,11 +1547,15 @@ c. discontinues the interaction.</li>
 <h4 id="objective_11">Objective</h4>
 <p>Verify that when the Verifier uses the <code>code</code> response type, the Wallet responds with an error (detailed or not) or discontinues the transaction.</p>
 <h4 id="references_11">References</h4>
-<p>[OIDF.HAIP] section 5 (introduction)</p>
+<ul>
+<li>[HAIP] Section 5 (introduction)</li>
+</ul>
 <h4 id="profile-applicability_11">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_11">EUDI-wallet relevancy</h4>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_11">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_11">Test Scenario</h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request. </li>
@@ -1542,14 +1576,17 @@ c. discontinues the interaction.</li>
 <h4 id="objective_12">Objective</h4>
 <p>Verify that when Wallet is presenting several ISO mdocs, each ISO mdoc is returned in a separate DeviceResponse (as defined in 8.3.2.1.2.2 of [ISO.18013-5]), each matching to a respective DCQL query. Therefore, the resulting vp_token contains multiple DeviceResponse instances.</p>
 <h4 id="references_12">References</h4>
-<p>[OIDF.HAIP] section 5.3.1
-[OIDF.OID4VP] appendix B.2 (ISO mdoc profile)
-[ISO.18013-5] section 8.3.2.1.2.2. </p>
+<ul>
+<li>[HAIP] Section 5.3.1</li>
+<li>[OpenID4VP] Appendix B.2 (ISO mdoc profile)</li>
+<li>[ISO/IEC 18013-5] Section 8.3.2.1.2.2</li>
+</ul>
 <h4 id="profile-applicability_12">Profile applicability</h4>
 <p>Wallet supports ISO mdoc</p>
 <h4 id="eudi-wallet-relevancy_12">EUDI-wallet relevancy</h4>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_12">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_12">Test Scenario</h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
@@ -1577,14 +1614,17 @@ c. discontinues the interaction.</li>
 <h4 id="objective_13">Objective</h4>
 <p>Verify that when the Wallet presentation to the Verifier includes <code>status</code> claim, it contains <code>status_list</code> as defined in [I-D.ietf-oauth-status-list].</p>
 <h4 id="references_13">References</h4>
-<p>[OIDF.HAIP] section 6.1
-[RFC7800]
-[I-D.ietf-oauth-sd-jwt-vc]</p>
+<ul>
+<li>[HAIP] Section 6.1</li>
+<li>[RFC7800]</li>
+<li>[SD-JWT VC]</li>
+</ul>
 <h4 id="profile-applicability_13">Profile applicability</h4>
 <p>Wallet supports IETF SD-JWT VC </p>
 <h4 id="eudi-wallet-relevancy_13">EUDI-wallet relevancy</h4>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_13">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_13">Test Scenario</h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
@@ -1610,12 +1650,14 @@ c. discontinues the interaction.</li>
 <h4 id="objective_14">Objective</h4>
 <p>Verify that Wallet can handle presenting Credential in IETF SD-JWT VC format using compact serialization as defined in [RFC9901] when there is key binding.</p>
 <h4 id="references_14">References</h4>
-<p>[OIDF.HAIP] section 6.1
-[RFC9901]</p>
+<ul>
+<li>[HAIP] Section 6.1</li>
+<li>[RFC9901]</li>
+</ul>
 <h4 id="profile-applicability_14">Profile applicability</h4>
 <p>Wallet supports IETF SD-JWT VC with key-binding</p>
 <h4 id="eudi-wallet-relevancy_14">EUDI-wallet relevancy</h4>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_14">Preconditions</h4>
 <p>A) Credential Issuer issued Credential to the Wallet in IETF SD-JWT VC format, using compact serialization as defined in [RFC9901].
 B) There is a Key Binding JWT.</p>
@@ -1640,12 +1682,14 @@ The order of the concatenated parts is the Issuer-signed JWT, a tilde character,
 <h4 id="objective_15">Objective</h4>
 <p>Verify that Wallet can handle being presenting Credential in IETF SD-JWT VC format using compact serialization as defined in [RFC9901] when there is no key binding.</p>
 <h4 id="references_15">References</h4>
-<p>[OIDF.HAIP] section 6.1
-[RFC9901]</p>
+<ul>
+<li>[HAIP] Section 6.1</li>
+<li>[RFC9901]</li>
+</ul>
 <h4 id="profile-applicability_15">Profile applicability</h4>
 <p>Wallet supports IETF SD-JWT VC without key-binding</p>
 <h4 id="eudi-wallet-relevancy_15">EUDI-wallet relevancy</h4>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_15">Preconditions</h4>
 <p>A) Credential Issuer issued Credential to the Wallet in IETF SD-JWT VC format, using compact serialization as defined in [RFC9901].
 B) There is no Key Binding JWT.</p>
@@ -1670,13 +1714,16 @@ The order of the concatenated parts is the Issuer-signed JWT, a tilde character,
 <h4 id="objective_16">Objective</h4>
 <p>Verify that Wallet can handle presenting a Credential using JSON serialization if required by the Wallet profile.</p>
 <h4 id="references_16">References</h4>
-<p>[OIDF.HAIP] section 6.1</p>
+<ul>
+<li>[HAIP] Section 6.1</li>
+</ul>
 <h4 id="profile-applicability_16">Profile applicability</h4>
 <p>Wallet supports IETF SD-JWT VC 
 Wallet profile supports JSON serialization and Credential profile requires it</p>
 <h4 id="eudi-wallet-relevancy_16">EUDI-wallet relevancy</h4>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_16">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_16">Test Scenario</h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>

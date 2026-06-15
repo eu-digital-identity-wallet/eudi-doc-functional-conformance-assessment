@@ -1210,11 +1210,15 @@
 <h4 id="objective">Objective</h4>
 <p>Verify that when the Wallet receives a Request Object via the Request URI flow, it extracts the set of Authorization Request parameters from the Request Object and uses them for further processing.</p>
 <h4 id="references">References</h4>
-<p>[OIDF.OID4VP] section 5.10.1</p>
+<ul>
+<li>[OpenID4VP] Section 5.10.1</li>
+</ul>
 <h4 id="profile-applicability">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -1234,12 +1238,14 @@
 <h4 id="objective_1">Objective</h4>
 <p>Verify that, in the presentation flow via Redirects, the Wallet supports receiving a Signed Authorization Request using JWT-Secured Authorization Request (JAR) [RFC9101] with the <code>request_uri</code> parameter. </p>
 <h4 id="references_1">References</h4>
-<p>[OIDF.HAIP] section 5.1
-[RFC9101] section 5</p>
+<ul>
+<li>[HAIP] Section 5.1</li>
+<li>[RFC9101] Section 5</li>
+</ul>
 <h4 id="profile-applicability_1">Profile applicability</h4>
 <p>Presentations via Redirects</p>
 <h4 id="eudi-wallet-relevancy_1">EUDI-wallet relevancy</h4>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_1">Preconditions</h4>
 <p>A) Signature from authorization request is authentic.</p>
 <h4 id="test-scenario_1">Test Scenario</h4>

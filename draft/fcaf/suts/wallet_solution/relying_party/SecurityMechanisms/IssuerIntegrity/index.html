@@ -1210,12 +1210,14 @@
 <h4 id="objective">Objective</h4>
 <p>Verify that Wallet uses MSO revocation mechanism following requirements defined in ISO/IEC 18013-5 ([ISO.18013-5.second.edition]).</p>
 <h4 id="references">References</h4>
-<p>[OIDF.HAIP] section 5.3.1
-[ISO.18013-5.second.edition] MSO revocation</p>
+<ul>
+<li>[HAIP] Section 5.3.1</li>
+<li>TODO: [ISO/IEC 18013-5] MSO revocation</li>
+</ul>
 <h4 id="profile-applicability">Profile applicability</h4>
 <p>Wallet supports ISO mdoc</p>
 <h4 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h4>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions">Preconditions</h4>
 <p>The mdoc's status is set to revoked.</p>
 <h4 id="test-scenario">Test Scenario</h4>
@@ -1235,12 +1237,15 @@
 <h4 id="objective_1">Objective</h4>
 <p>Verify that Wallet supports X.509 certificate-based key resolution to validate the issuer signature of an SD-JWT VC.</p>
 <h4 id="references_1">References</h4>
-<p>[OIDF.HAIP] section 6.1.1</p>
+<ul>
+<li>[HAIP] Section 6.1.1</li>
+</ul>
 <h4 id="profile-applicability_1">Profile applicability</h4>
 <p>Wallet supports IETF SD-JWT VC </p>
 <h4 id="eudi-wallet-relevancy_1">EUDI-wallet relevancy</h4>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_1">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_1">Test Scenario</h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
@@ -1260,12 +1265,15 @@
 <h4 id="objective_2">Objective</h4>
 <p>Verify that when Wallet is presenting the Credential in IETF SD-JWT VC format, the X.509 certificate of the trust anchor is not included in the <code>x5c</code> JOSE header of the SD-JWT VC. </p>
 <h4 id="references_2">References</h4>
-<p>[OIDF.HAIP] section 6.1.1</p>
+<ul>
+<li>[HAIP] Section 6.1.1</li>
+</ul>
 <h4 id="profile-applicability_2">Profile applicability</h4>
 <p>Wallet supports IETF SD-JWT VC </p>
 <h4 id="eudi-wallet-relevancy_2">EUDI-wallet relevancy</h4>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_2">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_2">Test Scenario</h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>

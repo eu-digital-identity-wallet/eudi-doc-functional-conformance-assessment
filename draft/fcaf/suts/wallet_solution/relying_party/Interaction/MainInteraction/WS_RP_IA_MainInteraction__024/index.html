@@ -1208,12 +1208,15 @@
 <h2 id="objective">Objective</h2>
 <p>Verify that if the Wallet cannot pre-parse the data (e.g., it's encrypted), it still allows the user to proceed with the presentation rather than failing the request.</p>
 <h2 id="references">References</h2>
-<p>[OID4VP 6.4]</p>
+<ul>
+<li>[OpenID4VP] Section 6.4</li>
+</ul>
 <h2 id="profile-applicability">Profile applicability</h2>
 <p>Encrypted data</p>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
 <p>EUDI_generic | EUDI_required</p>
 <h2 id="preconditions">Preconditions</h2>
+<p>none</p>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
 <li>Verifier sends a DCQL query with a values restriction. The Wallet holds a matching credential, but the data is encrypted/locked (the Wallet can't check the value yet).</li>

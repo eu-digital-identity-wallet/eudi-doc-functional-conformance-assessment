@@ -1210,13 +1210,16 @@
 <h4 id="objective">Objective</h4>
 <p>Verify that if the Wallet encrypts the Authorization Response it uses an unsigned, encrypted JWT.</p>
 <h4 id="references">References</h4>
-<p>[OID4VP Section 8]
-[RFC7519]  </p>
+<ul>
+<li>[OpenID4VP] Section 8</li>
+<li>[RFC7519]</li>
+</ul>
 <h4 id="profile-applicability">Profile applicability</h4>
 <p>Encrypted response</p>
 <h4 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario">Test Scenario</h4>
 <ol>
 <li>The wallet engages with the verifier.</li>
@@ -1234,11 +1237,15 @@
 <h4 id="objective_1">Objective</h4>
 <p>Test the Wallet ensures that the selected Verifier JWK contains an alg parameter.</p>
 <h4 id="references_1">References</h4>
-<p>[OID4VP Section 8]</p>
+<ul>
+<li>[OpenID4VP] Section 8</li>
+</ul>
 <h4 id="profile-applicability_1">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_1">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_1">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_1">Test Scenario</h4>
 <ol>
 <li>The wallet engages with the verifier.</li>
@@ -1256,11 +1263,15 @@
 <h4 id="objective_2">Objective</h4>
 <p>Test the Wallet checks the JWE alg value exactly matches the alg value from the chosen JWK.</p>
 <h4 id="references_2">References</h4>
-<p>[OID4VP Section 8]</p>
+<ul>
+<li>[OpenID4VP] Section 8</li>
+</ul>
 <h4 id="profile-applicability_2">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_2">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_2">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_2">Test Scenario</h4>
 <ol>
 <li>The wallet engages with the verifier.</li>
@@ -1278,14 +1289,18 @@
 <h4 id="objective_3">Objective</h4>
 <p>Verify that in the encrypted response sent by the Wallet: the JWE <code>alg</code> (algorithm) header parameter (as defined in section 4.1.1 of [RFC7516]) value is set to ECDH-ES (as defined in section 4.6 of [RFC7518]), with key agreement utilizing keys on the P-256 curve (as defined in section 6.2.1.1 of [RFC7518]).</p>
 <h4 id="references_3">References</h4>
-<p>[OIDF.HAIP] section 5 (introduction) 
-[OIDF.OID4VP] section 8.3
-[RFC7516] section 4.1.1
-[RFC7518] 6.2.1.1</p>
+<ul>
+<li>[HAIP] Section 5 (introduction)</li>
+<li>[OpenID4VP] Section 8.3</li>
+<li>[RFC7516] Section 4.1.1</li>
+<li>[RFC7518] Section 6.2.1.1</li>
+</ul>
 <h4 id="profile-applicability_3">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_3">EUDI-wallet relevancy</h4>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_3">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_3">Test Scenario</h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
@@ -1311,14 +1326,18 @@
 <h4 id="objective_4">Objective</h4>
 <p>Verify that Wallet raises an error if there is no <code>jwk</code> within <code>client_metadata</code> sent by the Verifier with <code>alg</code> value set to ECDH-ES.</p>
 <h4 id="references_4">References</h4>
-<p>[OIDF.HAIP] section 5 (introduction) 
-[OIDF.OID4VP] section 8.3 The alg parameter MUST be present in the JWKs
-[RFC7516] section 4.1.1
-[RFC7518] section 6.2.1.1</p>
+<ul>
+<li>[HAIP] Section 5 (introduction)</li>
+<li>TODO: [OpenID4VP] Section 8.3 The alg parameter MUST be present in the JWKs</li>
+<li>[RFC7516] Section 4.1.1</li>
+<li>[RFC7518] Section 6.2.1.1</li>
+</ul>
 <h4 id="profile-applicability_4">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_4">EUDI-wallet relevancy</h4>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_4">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_4">Test Scenario</h4>
 <ol>
 <li>Verify that Wallet raises an error if there is no "jwk" within "client_metadata" sent by the Verifier with "alg" value set to ECDH-ES.</li>
@@ -1332,14 +1351,17 @@
 <h4 id="objective_5">Objective</h4>
 <p>Verify that Wallet supports A128GCM for the JWE <code>enc</code> (encryption algorithm).</p>
 <h4 id="references_5">References</h4>
-<p>[OIDF.HAIP] section 5 (introduction) 
-[OIDF.OID4VP] section 8.3
-[RFC7516] section 4.1.2</p>
+<ul>
+<li>[HAIP] Section 5 (introduction)</li>
+<li>[OpenID4VP] Section 8.3</li>
+<li>[RFC7516] Section 4.1.2</li>
+</ul>
 <h4 id="profile-applicability_5">Profile applicability</h4>
 <p>Wallet supports only A128GCM</p>
 <h4 id="eudi-wallet-relevancy_5">EUDI-wallet relevancy</h4>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_5">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_5">Test Scenario</h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
@@ -1363,14 +1385,17 @@
 <h4 id="objective_6">Objective</h4>
 <p>Verify that Wallet supports A256GCM for the JWE <code>enc</code> (encryption algorithm).</p>
 <h4 id="references_6">References</h4>
-<p>[OIDF.HAIP] section 5 (introduction) 
-[OIDF.OID4VP] section 8.3
-[RFC7516] section 4.1.2</p>
+<ul>
+<li>[HAIP] Section 5 (introduction)</li>
+<li>[OpenID4VP] Section 8.3</li>
+<li>[RFC7516] Section 4.1.2</li>
+</ul>
 <h4 id="profile-applicability_6">Profile applicability</h4>
 <p>Wallet supports only A256GCM </p>
 <h4 id="eudi-wallet-relevancy_6">EUDI-wallet relevancy</h4>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_6">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_6">Test Scenario</h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
@@ -1394,14 +1419,17 @@
 <h4 id="objective_7">Objective</h4>
 <p>Verify that if both A128GCM and A256GCM are supported for the JWE <code>enc</code> (encryption algorithm), Wallet will use A256GCM for the JWE <code>enc</code></p>
 <h4 id="references_7">References</h4>
-<p>[OIDF.HAIP] section 5 (introduction) 
-[OIDF.OID4VP] section 8.3
-[RFC7516] section 4.1.2</p>
+<ul>
+<li>[HAIP] Section 5 (introduction)</li>
+<li>[OpenID4VP] Section 8.3</li>
+<li>[RFC7516] Section 4.1.2</li>
+</ul>
 <h4 id="profile-applicability_7">Profile applicability</h4>
 <p>Wallet supports A128GCM and A256GCM</p>
 <h4 id="eudi-wallet-relevancy_7">EUDI-wallet relevancy</h4>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_7">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_7">Test Scenario</h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
@@ -1425,12 +1453,16 @@
 <h4 id="objective_8">Objective</h4>
 <p>Verify that if Verifier did not supply ephemeral encryption public keys specific to each Authorization Request via client metadata, the Wallet responds with an error (detailed or not) or discontinues the transaction.</p>
 <h4 id="references_8">References</h4>
-<p>[OIDF.HAIP] section 5 (introduction) 
-[OIDF.OID4VP] section 8.3</p>
+<ul>
+<li>[HAIP] Section 5 (introduction)</li>
+<li>[OpenID4VP] Section 8.3</li>
+</ul>
 <h4 id="profile-applicability_8">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_8">EUDI-wallet relevancy</h4>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_8">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_8">Test Scenario</h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
@@ -1451,12 +1483,16 @@ c. discontinues the interaction.</li>
 <h4 id="objective_9">Objective</h4>
 <p>Verify that - for each authorization request - Wallet uses the correct ephemeral key passed via client metadata in the encryption process. </p>
 <h4 id="references_9">References</h4>
-<p>[OIDF.HAIP] section 5 (introduction) 
-[OIDF.OID4VP] section 8.3</p>
+<ul>
+<li>[HAIP] Section 5 (introduction)</li>
+<li>[OpenID4VP] Section 8.3</li>
+</ul>
 <h4 id="profile-applicability_9">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_9">EUDI-wallet relevancy</h4>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_9">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_9">Test Scenario</h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
@@ -1474,13 +1510,16 @@ c. discontinues the interaction.</li>
 <h4 id="objective_10">Objective</h4>
 <p>Verify that, in the presentation flow via Redirects, Wallet sends encrypted response when Authorization Request includes <code>response_mode</code> parameter set to <code>direct_post.jwt</code>.</p>
 <h4 id="references_10">References</h4>
-<p>[OIDF.HAIP] section 5.1
-[OIDF.OID4VP] section 8.3</p>
+<ul>
+<li>[HAIP] Section 5.1</li>
+<li>[OpenID4VP] Section 8.3</li>
+</ul>
 <h4 id="profile-applicability_10">Profile applicability</h4>
 <p>Presentations via Redirects</p>
 <h4 id="eudi-wallet-relevancy_10">EUDI-wallet relevancy</h4>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_10">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_10">Test Scenario</h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>

@@ -1210,11 +1210,15 @@
 <h4 id="objective">Objective</h4>
 <p>Test when valid credential_sets is present, the Wallet can handle these and applies the constraints when processing the request.</p>
 <h4 id="references">References</h4>
-<p>[OID4VP 6]</p>
+<ul>
+<li>[OpenID4VP] Section 6</li>
+</ul>
 <h4 id="profile-applicability">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario">Test Scenario</h4>
 <ol>
 <li>The Wallet engages with the Verifier.</li>
@@ -1232,11 +1236,15 @@
 <h4 id="objective_1">Objective</h4>
 <p>Test the wallet can process and match each entry in the credentials' parameter of the DCQL, with credentials present in the wallet.</p>
 <h4 id="references_1">References</h4>
-<p>[OID4VP 6.1]</p>
+<ul>
+<li>[OpenID4VP] Section 6.1</li>
+</ul>
 <h4 id="profile-applicability_1">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_1">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_1">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_1">Test Scenario</h4>
 <ol>
 <li>The Wallet engages with the Verifier.</li>
@@ -1254,11 +1262,15 @@
 <h4 id="objective_2">Objective</h4>
 <p>Test that a wallet which holds no matching credentials to the DCQL "credentials", will NOT return any credentials</p>
 <h4 id="references_2">References</h4>
-<p>[OID4VP 6.1]</p>
+<ul>
+<li>[OpenID4VP] Section 6.1</li>
+</ul>
 <h4 id="profile-applicability_2">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_2">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_2">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_2">Test Scenario</h4>
 <ol>
 <li>The Wallet engages with the Verifier.</li>
@@ -1276,11 +1288,15 @@
 <h4 id="objective_3">Objective</h4>
 <p>Test that if the credentials' property "claim_sets" is present then it is used as per the rules defined in [OID4VP 6.4.1]</p>
 <h4 id="references_3">References</h4>
-<p>[OID4VP 6.1]</p>
+<ul>
+<li>[OpenID4VP] Section 6.1</li>
+</ul>
 <h4 id="profile-applicability_3">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_3">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_3">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_3">Test Scenario</h4>
 <ol>
 <li>The Wallet engages with the Verifier.</li>
@@ -1298,8 +1314,9 @@
 <h4 id="objective_4">Objective</h4>
 <p>This test case verifies that the claim <code>document_number</code> is present in the Credential in IETF SD-JWT VC format if this is indicated in the ICS. Note that <code>document_number</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier document_number. </p>
 <h4 id="references_4">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook <br />
-"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 5).</p>
+<ul>
+<li>[PID rulebook] Annex 3.01, Section 4.2 (Table 5)</li>
+</ul>
 <h4 id="eudi-wallet-relevancy_4">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_optional</p>
 <h4 id="profile-applicability_4">Profile applicability</h4>
@@ -1321,8 +1338,9 @@ C. EUDI wallet presented the Credential successfully.</p>
 <h4 id="objective_5">Objective</h4>
 <p>This test case verifies that the value of the <code>document_number</code> is a String. Note that <code>document_number</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier document_number.</p>
 <h4 id="references_5">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook. 
-"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 8).</p>
+<ul>
+<li>[PID rulebook] Annex 3.01, Section 4.2 (Table 8)</li>
+</ul>
 <h4 id="eudi-wallet-relevancy_5">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_optional</p>
 <h4 id="profile-applicability_5">Profile applicability</h4>
@@ -1345,8 +1363,9 @@ D. The presence of claim <code>document_number</code> in the IETF SD-JWT VC Cred
 <h4 id="objective_6">Objective</h4>
 <p>This test case verifies that the data element <code>document_number</code> is present in the mdoc data if this is indicated in the ICS. Note that <code>document_number</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier document_number. </p>
 <h4 id="references_6">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook  <br />
-"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 2).</p>
+<ul>
+<li>[PID rulebook] Annex 3.01, Section 4.1 (Table 2)</li>
+</ul>
 <h4 id="eudi-wallet-relevancy_6">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_optional</p>
 <h4 id="profile-applicability_6">Profile applicability</h4>
@@ -1370,9 +1389,10 @@ C. The device retrieval mdoc response was retrieved.</p>
 <h4 id="objective_7">Objective</h4>
 <p>This test case verifies that the DataElementValue of data element <code>document_number</code> is a well-formed CBOR text string. Note that <code>document_number</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier document_number. </p>
 <h4 id="references_7">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook  <br />
-"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 6).<br />
-RFC 7049 section 2.1</p>
+<ul>
+<li>[PID rulebook] Annex 3.01, Section 4.1 (Table 6)</li>
+<li>[RFC7049] Section 2.1</li>
+</ul>
 <h4 id="eudi-wallet-relevancy_7">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_optional</p>
 <h4 id="profile-applicability_7">Profile applicability</h4>
@@ -1397,8 +1417,9 @@ D. The presence of data element <code>document_number</code> in the device retri
 <h4 id="objective_8">Objective</h4>
 <p>This test case verifies domestic elements in an appropriate namespace are present, if these have been indicated in the ICS.</p>
 <h4 id="references_8">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook <br />
-"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2.</p>
+<ul>
+<li>[PID rulebook] Annex 3.01, Section 4.2</li>
+</ul>
 <h4 id="eudi-wallet-relevancy_8">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_required</p>
 <h4 id="profile-applicability_8">Profile applicability</h4>
@@ -1420,8 +1441,9 @@ C. EUDI wallet presented the Credential successfully.</p>
 <h4 id="objective_9">Objective</h4>
 <p>This test case verifies domestic claims are located in a valid domestic namespace, if these have been indicated in the ICS.</p>
 <h4 id="references_9">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook <br />
-"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2.</p>
+<ul>
+<li>[PID rulebook] Annex 3.01, Section 4.2</li>
+</ul>
 <h4 id="eudi-wallet-relevancy_9">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_required</p>
 <h4 id="profile-applicability_9">Profile applicability</h4>
@@ -1444,8 +1466,9 @@ D. The presence of claim from domestic namespace in the IETF SD-JWT VC Credentia
 <h4 id="objective_10">Objective</h4>
 <p>This test case verifies domestic elements in an appropriate namespace are present, if these have been indicated in the ICS.</p>
 <h4 id="references_10">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook  <br />
-"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1.</p>
+<ul>
+<li>[PID rulebook] Annex 3.01, Section 4.1</li>
+</ul>
 <h4 id="eudi-wallet-relevancy_10">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_required</p>
 <h4 id="profile-applicability_10">Profile applicability</h4>
@@ -1467,8 +1490,9 @@ C. The device retrieval mdoc response was retrieved.</p>
 <h4 id="objective_11">Objective</h4>
 <p>This test case verifies domestic elements are located in a valid domestic namespace, if these have been indicated in the ICS.</p>
 <h4 id="references_11">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook  <br />
-"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1.</p>
+<ul>
+<li>[PID rulebook] Annex 3.01, Section 4.1</li>
+</ul>
 <h4 id="eudi-wallet-relevancy_11">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_required</p>
 <h4 id="profile-applicability_11">Profile applicability</h4>
@@ -1491,8 +1515,9 @@ D. The presence of data element in the domestic namespace in the device retrieva
 <h4 id="objective_12">Objective</h4>
 <p>This test case verifies that the claim <code>date_of_expiry</code> is present in the Credential in IETF SD-JWT VC format. Note that <code>date_of_expiry</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier expiry_date. </p>
 <h4 id="references_12">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook <br />
-"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 5).</p>
+<ul>
+<li>[PID rulebook] Annex 3.01, Section 4.2 (Table 5)</li>
+</ul>
 <h4 id="eudi-wallet-relevancy_12">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_required</p>
 <h4 id="profile-applicability_12">Profile applicability</h4>
@@ -1514,8 +1539,9 @@ C. EUDI wallet presented the Credential successfully.</p>
 <h4 id="objective_13">Objective</h4>
 <p>This test case verifies that the claim <code>date_of_expiry</code> is a String encoded in UTF-8. Note that <code>date_of_expiry</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier expiry_date. </p>
 <h4 id="references_13">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook. <br />
-"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 item 4 (Table 8).  </p>
+<ul>
+<li>[PID rulebook] Annex 3.01, Section 4.2, item 4 (Table 8)</li>
+</ul>
 <h4 id="eudi-wallet-relevancy_13">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_required</p>
 <h4 id="profile-applicability_13">Profile applicability</h4>
@@ -1538,9 +1564,10 @@ D. The presence of claim <code>date_of_expiry</code> in the IETF SD-JWT VC Crede
 <h4 id="objective_14">Objective</h4>
 <p>This test case verifies that the format of the claim <code>date_of_expiry</code> is correct. Note that <code>date_of_expiry</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier expiry_date. </p>
 <h4 id="references_14">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook <br />
-"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 8).<br />
- RFC 3339 section 5.6</p>
+<ul>
+<li>[PID rulebook] Annex 3.01, Section 4.2 (Table 8)</li>
+<li>[RFC3339] Section 5.6</li>
+</ul>
 <h4 id="eudi-wallet-relevancy_14">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_required</p>
 <h4 id="profile-applicability_14">Profile applicability</h4>
@@ -1567,9 +1594,11 @@ D. The presence of claim <code>date_of_expiry</code> in the IETF SD-JWT VC Crede
 <h4 id="objective_15">Objective</h4>
 <p>This test case verifies that the claim <code>date_of_expiry</code> contains a valid date. Note that <code>date_of_expiry</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier expiry_date. </p>
 <h4 id="references_15">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook <br />
-"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 item 4 (Table 8). ISO 8601-1:2019, 4.2.1, 4.3.2<br />
- RFC 3339 section 5.6, 5.7</p>
+<ul>
+<li>[PID rulebook] Annex 3.01, Section 4.2, item 4 (Table 8)</li>
+<li>[ISO 8601-1:2019] 4.2.1, 4.3.2</li>
+<li>[RFC3339] Sections 5.6, 5.7</li>
+</ul>
 <h4 id="eudi-wallet-relevancy_15">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_required</p>
 <h4 id="profile-applicability_15">Profile applicability</h4>
@@ -1596,8 +1625,9 @@ D. The presence of claim <code>date_of_expiry</code> in the IETF SD-JWT VC Crede
 <h4 id="objective_16">Objective</h4>
 <p>This test case verifies that the data element <code>expiry_date</code> is present in the mdoc data. Note that <code>expiry_date</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier expiry_date. </p>
 <h4 id="references_16">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook
-"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 5).</p>
+<ul>
+<li>[PID rulebook] Annex 3.01, Section 4.1 (Table 5)</li>
+</ul>
 <h4 id="eudi-wallet-relevancy_16">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_required</p>
 <h4 id="profile-applicability_16">Profile applicability</h4>
@@ -1621,11 +1651,12 @@ C. The device retrieval mdoc response was retrieved.</p>
 <h4 id="objective_17">Objective</h4>
 <p>This test case verifies that the DataElementValue of data element <code>expiry_date</code> is encoded as a well-formed #6.0(tstr) or #6.1004(tstr). Note that <code>expiry_date</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier expiry_date.</p>
 <h4 id="references_17">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook  <br />
-"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 6).<br />
-RFC 7049 section 2.1, 2.4<br />
-RFC 8610 Appendix D<br />
-RFC 8943 section 2.1</p>
+<ul>
+<li>[PID rulebook] Annex 3.01, Section 4.1 (Table 6)</li>
+<li>[RFC7049] Sections 2.1, 2.4</li>
+<li>[RFC8610] Appendix D</li>
+<li>[RFC8943] Section 2.1</li>
+</ul>
 <h4 id="eudi-wallet-relevancy_17">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_required</p>
 <h4 id="profile-applicability_17">Profile applicability</h4>
@@ -1654,9 +1685,10 @@ D. The presence of data element <code>expiry_date</code> in the device retrieval
 <h4 id="objective_18">Objective</h4>
 <p>This test case verifies that the format of the DataElementValue of data element <code>expiry_date</code> is correct. Note that <code>expiry_date</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier expiry_date.</p>
 <h4 id="references_18">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook  <br />
-"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 6).<br />
-RFC 3339 section 5.6</p>
+<ul>
+<li>[PID rulebook] Annex 3.01, Section 4.1 (Table 6)</li>
+<li>[RFC3339] Section 5.6</li>
+</ul>
 <h4 id="eudi-wallet-relevancy_18">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_required</p>
 <h4 id="profile-applicability_18">Profile applicability</h4>
@@ -1689,9 +1721,11 @@ Where:<br />
 <h4 id="objective_19">Objective</h4>
 <p>This test case verifies that the DataElementValue of data element <code>expiry_date</code> contains a valid date and time. Note that <code>expiry_date</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier expiry_date.</p>
 <h4 id="references_19">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook  <br />
-"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 6). ISO 8601-1:2019, 4.2.1, 4.3.2<br />
-RFC 3339 section 5.6, 5.7</p>
+<ul>
+<li>[PID rulebook] Annex 3.01, Section 4.1 (Table 6)</li>
+<li>[ISO 8601-1:2019] 4.2.1, 4.3.2</li>
+<li>[RFC3339] Sections 5.6, 5.7</li>
+</ul>
 <h4 id="eudi-wallet-relevancy_19">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_required</p>
 <h4 id="profile-applicability_19">Profile applicability</h4>
@@ -1724,8 +1758,9 @@ D. The presence of data element <code>expiry_date</code> in the device retrieval
 <h4 id="objective_20">Objective</h4>
 <p>This test case verifies that the claim <code>date_of_issuance</code> is present in the Credential in IETF SD-JWT VC format if this is indicated in the ICS. Note that <code>date_of_issuance</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier issuance_date. </p>
 <h4 id="references_20">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook <br />
-"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 5).</p>
+<ul>
+<li>[PID rulebook] Annex 3.01, Section 4.2 (Table 5)</li>
+</ul>
 <h4 id="eudi-wallet-relevancy_20">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_optional</p>
 <h4 id="profile-applicability_20">Profile applicability</h4>
@@ -1747,8 +1782,9 @@ C. EUDI wallet presented the Credential successfully.</p>
 <h4 id="objective_21">Objective</h4>
 <p>This test case verifies that the claim <code>date_of_issuance</code> is a String encoded in UTF-8. Note that <code>date_of_issuance</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier issuance_date. </p>
 <h4 id="references_21">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook. <br />
-"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 item 4 (Table 8).  </p>
+<ul>
+<li>[PID rulebook] Annex 3.01, Section 4.2, item 4 (Table 8)</li>
+</ul>
 <h4 id="eudi-wallet-relevancy_21">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_optional</p>
 <h4 id="profile-applicability_21">Profile applicability</h4>
@@ -1771,9 +1807,10 @@ D. The presence of claim <code>date_of_issuance</code> in the IETF SD-JWT VC Cre
 <h4 id="objective_22">Objective</h4>
 <p>This test case verifies that the format of the claim <code>date_of_issuance</code> is correct. Note that <code>date_of_issuance</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier issuance_date. </p>
 <h4 id="references_22">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook <br />
-"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 8).<br />
- RFC 3339 section 5.6</p>
+<ul>
+<li>[PID rulebook] Annex 3.01, Section 4.2 (Table 8)</li>
+<li>[RFC3339] Section 5.6</li>
+</ul>
 <h4 id="eudi-wallet-relevancy_22">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_optional</p>
 <h4 id="profile-applicability_22">Profile applicability</h4>
@@ -1800,9 +1837,11 @@ D. The presence of claim <code>date_of_issuance</code> in the IETF SD-JWT VC Cre
 <h4 id="objective_23">Objective</h4>
 <p>This test case verifies that the claim <code>date_of_issuance</code> contains a valid date. Note that <code>date_of_issuance</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier issuance_date. </p>
 <h4 id="references_23">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook <br />
-"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 8). ISO 8601-1:2019, 4.2.1, 4.3.2<br />
- RFC 3339 section 5.6, 5.7</p>
+<ul>
+<li>[PID rulebook] Annex 3.01, Section 4.2 (Table 8)</li>
+<li>[ISO 8601-1:2019] 4.2.1, 4.3.2</li>
+<li>[RFC3339] Sections 5.6, 5.7</li>
+</ul>
 <h4 id="eudi-wallet-relevancy_23">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_optional</p>
 <h4 id="profile-applicability_23">Profile applicability</h4>
@@ -1829,8 +1868,9 @@ D. The presence of claim <code>date_of_issuance</code> in the IETF SD-JWT VC Cre
 <h4 id="objective_24">Objective</h4>
 <p>This test case verifies that the data element <code>issuance_date</code> is present in the mdoc data if this is indicated in the ICS. Note that <code>issuance_date</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier issuance_date. </p>
 <h4 id="references_24">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook  <br />
-"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 2).</p>
+<ul>
+<li>[PID rulebook] Annex 3.01, Section 4.1 (Table 2)</li>
+</ul>
 <h4 id="eudi-wallet-relevancy_24">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_optional</p>
 <h4 id="profile-applicability_24">Profile applicability</h4>
@@ -1854,11 +1894,12 @@ C. The device retrieval mdoc response was retrieved.</p>
 <h4 id="objective_25">Objective</h4>
 <p>This test case verifies that the DataElementValue of data element <code>issuance_date</code> is encoded as a well-formed #6.0(tstr) or #6.1004(tstr). Note that <code>issuance_date</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier issuance_date. </p>
 <h4 id="references_25">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook  <br />
-"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 6).<br />
-RFC 7049 section 2.1, 2.4<br />
-RFC 8610 Appendix D<br />
-RFC 8943 section 2.1</p>
+<ul>
+<li>[PID rulebook] Annex 3.01, Section 4.1 (Table 6)</li>
+<li>[RFC7049] Sections 2.1, 2.4</li>
+<li>[RFC8610] Appendix D</li>
+<li>[RFC8943] Section 2.1</li>
+</ul>
 <h4 id="eudi-wallet-relevancy_25">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_optional</p>
 <h4 id="profile-applicability_25">Profile applicability</h4>
@@ -1887,9 +1928,10 @@ D. The presence of data element <code>issuance_date</code> in the device retriev
 <h4 id="objective_26">Objective</h4>
 <p>This test case verifies that the format of the DataElementValue of data element <code>issuance_date</code> is correct. Note that <code>issuance_date</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier issuance_date. </p>
 <h4 id="references_26">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook  <br />
-"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 6).<br />
-RFC 3339 section 5.6</p>
+<ul>
+<li>[PID rulebook] Annex 3.01, Section 4.1 (Table 6)</li>
+<li>[RFC3339] Section 5.6</li>
+</ul>
 <h4 id="eudi-wallet-relevancy_26">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_optional</p>
 <h4 id="profile-applicability_26">Profile applicability</h4>
@@ -1922,9 +1964,11 @@ D. The presence of data element <code>issuance_date</code> in the device retriev
 <h4 id="objective_27">Objective</h4>
 <p>This test case verifies that the DataElementValue of data element <code>issuance_date</code> contains a valid date and time. Note that <code>issuance_date</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier issuance_date. </p>
 <h4 id="references_27">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook  <br />
-"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 6). ISO 8601-1:2019, 4.2.1, 4.3.2<br />
-RFC 3339 section 5.6, 5.7</p>
+<ul>
+<li>[PID rulebook] Annex 3.01, Section 4.1 (Table 6)</li>
+<li>[ISO 8601-1:2019] 4.2.1, 4.3.2</li>
+<li>[RFC3339] Sections 5.6, 5.7</li>
+</ul>
 <h4 id="eudi-wallet-relevancy_27">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_optional</p>
 <h4 id="profile-applicability_27">Profile applicability</h4>
@@ -1940,22 +1984,26 @@ D. The presence of data element <code>issuance_date</code> in the device retriev
 <li>Verify the value of date-month. </li>
 <li>Verify the value of date-mday. </li>
 <li>If present, verify the value of all time-hour. </li>
-<li>If present, verify the value of all time-minute. 6. If present, verify the value of time-second.</li>
+<li>If present, verify the value of all time-minute.</li>
+<li>If present, verify the value of time-second.</li>
 </ol>
 <h4 id="expected-results_27">Expected results</h4>
 <ol>
 <li>The value of date-fullyear is between "0000" and "9999" inclusive. </li>
 <li>The value of date-month is between "01" and "12" inclusive. </li>
-<li>The value of date-mday is between "01" and the maximum value specified in section 5.7 of RFC 3339 inclusive. 4. If present, the value of time-hour is between "00" and "23" inclusive. </li>
-<li>If present, the value of time-minute is between "00" and "59" inclusive. 6. If present, the value of time-second is between "00" and "60" inclusive.</li>
+<li>The value of date-mday is between "01" and the maximum value specified in section 5.7 of RFC 3339 inclusive.</li>
+<li>If present, the value of time-hour is between "00" and "23" inclusive. </li>
+<li>If present, the value of time-minute is between "00" and "59" inclusive.</li>
+<li>If present, the value of time-second is between "00" and "60" inclusive.</li>
 </ol>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_dm_credentialmetadata_issuingauthority_pid_ietf-sd-jwt-vc_001">WS_RP_DM_Credentialmetadata_Issuingauthority_PID_IETF-sd-jwt-vc_001</h3>
 <h4 id="objective_28">Objective</h4>
 <p>This test case verifies that the claim <code>issuing_authority</code> is present in the Credential in IETF SD-JWT VC format. Note that <code>issuing_authority</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier issuing_authority. </p>
 <h4 id="references_28">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook <br />
-"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 5).</p>
+<ul>
+<li>[PID rulebook] Annex 3.01, Section 4.2 (Table 5)</li>
+</ul>
 <h4 id="eudi-wallet-relevancy_28">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_required</p>
 <h4 id="profile-applicability_28">Profile applicability</h4>
@@ -1977,8 +2025,9 @@ C. EUDI wallet presented the Credential successfully.</p>
 <h4 id="objective_29">Objective</h4>
 <p>This test case verifies that the claim <code>issuing_authority</code> is a String encoded in UTF-8. Note that <code>issuing_authority</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier issuing_authority. </p>
 <h4 id="references_29">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook. <br />
-"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 8).  </p>
+<ul>
+<li>[PID rulebook] Annex 3.01, Section 4.2 (Table 8)</li>
+</ul>
 <h4 id="eudi-wallet-relevancy_29">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_required</p>
 <h4 id="profile-applicability_29">Profile applicability</h4>
@@ -2001,8 +2050,9 @@ D. The presence of claim <code>issuing_authority</code> in the IETF SD-JWT VC Cr
 <h4 id="objective_30">Objective</h4>
 <p>This test case verifies that the data element <code>issuing_authority</code> is present in the mdoc data. Note that <code>issuing_authority</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier issuing_authority. </p>
 <h4 id="references_30">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook  <br />
-"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 2).</p>
+<ul>
+<li>[PID rulebook] Annex 3.01, Section 4.1 (Table 2)</li>
+</ul>
 <h4 id="eudi-wallet-relevancy_30">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_required</p>
 <h4 id="profile-applicability_30">Profile applicability</h4>
@@ -2026,9 +2076,10 @@ C. The device retrieval mdoc response was retrieved.</p>
 <h4 id="objective_31">Objective</h4>
 <p>This test case verifies that the DataElementValue of data element <code>issuing_authority</code> is a well-formed CBOR text string. Note that <code>issuing_authority</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier issuing_authority.</p>
 <h4 id="references_31">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook  <br />
-"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 6).<br />
-RFC 7049 section 2.1</p>
+<ul>
+<li>[PID rulebook] Annex 3.01, Section 4.1 (Table 6)</li>
+<li>[RFC7049] Section 2.1</li>
+</ul>
 <h4 id="eudi-wallet-relevancy_31">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_required</p>
 <h4 id="profile-applicability_31">Profile applicability</h4>
@@ -2053,8 +2104,9 @@ D. The presence of data element <code>issuing_authority</code> in the device ret
 <h4 id="objective_32">Objective</h4>
 <p>This test case verifies that the claim <code>issuing_country</code> is present in the Credential in IETF SD-JWT VC format. Note that <code>issuing_country</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier issuing_country. </p>
 <h4 id="references_32">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook <br />
-"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 5).</p>
+<ul>
+<li>[PID rulebook] Annex 3.01, Section 4.2 (Table 5)</li>
+</ul>
 <h4 id="eudi-wallet-relevancy_32">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_required</p>
 <h4 id="profile-applicability_32">Profile applicability</h4>
@@ -2076,9 +2128,10 @@ C. EUDI wallet presented the Credential successfully.</p>
 <h4 id="objective_33">Objective</h4>
 <p>This test case verifies that the claim <code>issuing_country</code> is a String encoded in UTF-8. Note that <code>issuing_country</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier issuing_country. </p>
 <h4 id="references_33">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook <br />
-"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 8).<br />
-RFC 7049 section 2.1</p>
+<ul>
+<li>[PID rulebook] Annex 3.01, Section 4.2 (Table 8)</li>
+<li>[RFC7049] Section 2.1</li>
+</ul>
 <h4 id="eudi-wallet-relevancy_33">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_required</p>
 <h4 id="profile-applicability_33">Profile applicability</h4>
@@ -2101,9 +2154,11 @@ D. The presence of claim <code>issuing_country</code> in the IETF SD-JWT VC Cred
 <h4 id="objective_34">Objective</h4>
 <p>This test case verifies that the value of the claim <code>issuing_country</code> contains a valid country code. Note that <code>issuing_country</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier issuing_country. </p>
 <h4 id="references_34">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook <br />
-"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 5). 
-ISO 3166-1:2020, 6.1 ISO 3166-1:2020, 8.3</p>
+<ul>
+<li>[PID rulebook] Annex 3.01, Section 4.2 (Table 5)</li>
+<li>[ISO 3166-1:2020] 6.1</li>
+<li>[ISO 3166-1:2020] 8.3</li>
+</ul>
 <h4 id="eudi-wallet-relevancy_34">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_required</p>
 <h4 id="profile-applicability_34">Profile applicability</h4>
@@ -2126,8 +2181,9 @@ D. The presence of claim <code>issuing_country</code> in the IETF SD-JWT VC Cred
 <h4 id="objective_35">Objective</h4>
 <p>This test case verifies that the data element <code>issuing_country</code> is present in the mdoc data. Note that <code>issuing_country</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier issuing_country. </p>
 <h4 id="references_35">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook  <br />
-"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 2).</p>
+<ul>
+<li>[PID rulebook] Annex 3.01, Section 4.1 (Table 2)</li>
+</ul>
 <h4 id="eudi-wallet-relevancy_35">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_required</p>
 <h4 id="profile-applicability_35">Profile applicability</h4>
@@ -2151,9 +2207,10 @@ C. The device retrieval mdoc response was retrieved.</p>
 <h4 id="objective_36">Objective</h4>
 <p>This test case verifies that the DataElementValue of data element <code>issuing_country</code> is a well-formed CBOR text string. Note that <code>issuing_country</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier issuing_country. </p>
 <h4 id="references_36">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook  <br />
-"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 6).<br />
-RFC 7049 section 2.1</p>
+<ul>
+<li>[PID rulebook] Annex 3.01, Section 4.1 (Table 6)</li>
+<li>[RFC7049] Section 2.1</li>
+</ul>
 <h4 id="eudi-wallet-relevancy_36">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_required</p>
 <h4 id="profile-applicability_36">Profile applicability</h4>
@@ -2178,9 +2235,11 @@ D. The presence of data element <code>issuing_country</code> in the device retri
 <h4 id="objective_37">Objective</h4>
 <p>This test case verifies that the DataElementValue of data element <code>issuing_country</code> contains a valid country code. Note that <code>issuing_country</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier issuing_country. </p>
 <h4 id="references_37">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook  <br />
-"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 6). 
-ISO 3166-1:2020, 6.1 ISO 3166-1:2020, 8.3</p>
+<ul>
+<li>[PID rulebook] Annex 3.01, Section 4.1 (Table 6)</li>
+<li>[ISO 3166-1:2020] 6.1</li>
+<li>[ISO 3166-1:2020] 8.3</li>
+</ul>
 <h4 id="eudi-wallet-relevancy_37">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_required</p>
 <h4 id="profile-applicability_37">Profile applicability</h4>
@@ -2207,8 +2266,9 @@ D. The presence of data element <code>issuing_country</code> in the device retri
 <h4 id="objective_38">Objective</h4>
 <p>This test case verifies that the claim <code>issuing_jurisdiction</code> is present in the Credential in IETF SD-JWT VC format if this is indicated in the ICS. Note that <code>issuing_jurisdiction</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier issuing_jurisdiction. </p>
 <h4 id="references_38">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook <br />
-"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 5).</p>
+<ul>
+<li>[PID rulebook] Annex 3.01, Section 4.2 (Table 5)</li>
+</ul>
 <h4 id="eudi-wallet-relevancy_38">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_optional</p>
 <h4 id="profile-applicability_38">Profile applicability</h4>
@@ -2230,9 +2290,10 @@ C. EUDI wallet presented the Credential successfully.</p>
 <h4 id="objective_39">Objective</h4>
 <p>This test case verifies that the claim <code>issuing_jurisdiction</code> is a String encoded in UTF-8. Note that <code>issuing_jurisdiction</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier issuing_jurisdiction. </p>
 <h4 id="references_39">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook <br />
-"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 8).<br />
-RFC 7049 section 2.1</p>
+<ul>
+<li>[PID rulebook] Annex 3.01, Section 4.2 (Table 8)</li>
+<li>[RFC7049] Section 2.1</li>
+</ul>
 <h4 id="eudi-wallet-relevancy_39">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_optional</p>
 <h4 id="profile-applicability_39">Profile applicability</h4>
@@ -2255,8 +2316,10 @@ D. The presence of claim <code>issuing_jurisdiction</code> in the IETF SD-JWT VC
 <h4 id="objective_40">Objective</h4>
 <p>This test case verifies that the value of the claim <code>issuing_jurisdiction</code> contains a valid country subdivision code. Note that <code>issuing_jurisdiction</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier issuing_jurisdiction. </p>
 <h4 id="references_40">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook,"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 5). 
-ISO 3166-2:2020, 8</p>
+<ul>
+<li>[PID rulebook] Annex 3.01, Section 4.2 (Table 5)</li>
+<li>[ISO 3166-2:2020] 8</li>
+</ul>
 <h4 id="eudi-wallet-relevancy_40">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_optional</p>
 <h4 id="profile-applicability_40">Profile applicability</h4>
@@ -2283,8 +2346,9 @@ D. The presence of claim <code>issuing_jurisdiction</code> in the IETF SD-JWT VC
 <h4 id="objective_41">Objective</h4>
 <p>This test case verifies that the data element <code>issuing_jurisdiction</code> is present in the mdoc data if this is indicated in the ICS. Note that <code>issuing_jurisdiction</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier issuing_jurisdiction. </p>
 <h4 id="references_41">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook  <br />
-"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 2).</p>
+<ul>
+<li>[PID rulebook] Annex 3.01, Section 4.1 (Table 2)</li>
+</ul>
 <h4 id="eudi-wallet-relevancy_41">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_optional</p>
 <h4 id="profile-applicability_41">Profile applicability</h4>
@@ -2308,9 +2372,10 @@ C. The device retrieval mdoc response was retrieved.</p>
 <h4 id="objective_42">Objective</h4>
 <p>This test case verifies that the DataElementValue of data element <code>issuing_jurisdiction</code> is a well-formed CBOR text string. Note that <code>issuing_jurisdiction</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier issuing_jurisdiction. </p>
 <h4 id="references_42">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook  <br />
-"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 6).<br />
-RFC 7049 section 2.1</p>
+<ul>
+<li>[PID rulebook] Annex 3.01, Section 4.1 (Table 6)</li>
+<li>[RFC7049] Section 2.1</li>
+</ul>
 <h4 id="eudi-wallet-relevancy_42">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_optional</p>
 <h4 id="profile-applicability_42">Profile applicability</h4>
@@ -2335,9 +2400,10 @@ D. The presence of data element <code>issuing_jurisdiction</code> in the device 
 <h4 id="objective_43">Objective</h4>
 <p>This test case verifies that the DataElementValue of data element <code>issuing_jurisdiction</code> contains a valid country subdivision code. Note that <code>issuing_jurisdiction</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier issuing_jurisdiction.</p>
 <h4 id="references_43">References</h4>
-<p>European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook  <br />
-"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.1 (Table 6). 
-ISO 3166-2:2020, 6.1</p>
+<ul>
+<li>[PID rulebook] Annex 3.01, Section 4.1 (Table 6)</li>
+<li>[ISO 3166-2:2020] 6.1</li>
+</ul>
 <h4 id="eudi-wallet-relevancy_43">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_optional</p>
 <h4 id="profile-applicability_43">Profile applicability</h4>

@@ -1210,12 +1210,15 @@
 <h4 id="objective">Objective</h4>
 <p>Verify that Wallet does not support RSASSA-PSS using SHA-384 and MGF1 with SHA-384 (RS384) for validating signed presentation requests.</p>
 <h4 id="references">References</h4>
-<p>[OIDF.HAIP] section 8</p>
+<ul>
+<li>[HAIP] Section 8</li>
+</ul>
 <h4 id="profile-applicability">Profile applicability</h4>
 <p>JOSE algorithm identifier ES257</p>
 <h4 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h4>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario">Test Scenario</h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
@@ -1238,12 +1241,15 @@ c. only discontinues the transaction.</li>
 <h4 id="objective_1">Objective</h4>
 <p>Verify that Wallet supports ECDSA with P-256 and SHA-256 (COSE algorithm identifier -7) for validating signed presentation requests.</p>
 <h4 id="references_1">References</h4>
-<p>[OIDF.HAIP] section 7 </p>
+<ul>
+<li>[HAIP] Section 7</li>
+</ul>
 <h4 id="profile-applicability_1">Profile applicability</h4>
 <p>COSE algorithm identifier -7 supported</p>
 <h4 id="eudi-wallet-relevancy_1">EUDI-wallet relevancy</h4>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_1">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_1">Test Scenario</h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
@@ -1263,12 +1269,15 @@ c. only discontinues the transaction.</li>
 <h4 id="objective_2">Objective</h4>
 <p>Verify that Wallet supports ECDSA with P-256 and SHA-256 (COSE algorithm identifier -9) for validating signed presentation requests.</p>
 <h4 id="references_2">References</h4>
-<p>[OIDF.HAIP] section 7 </p>
+<ul>
+<li>[HAIP] Section 7</li>
+</ul>
 <h4 id="profile-applicability_2">Profile applicability</h4>
 <p>COSE algorithm identifier -9 supported</p>
 <h4 id="eudi-wallet-relevancy_2">EUDI-wallet relevancy</h4>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_2">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_2">Test Scenario</h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
@@ -1288,8 +1297,11 @@ c. only discontinues the transaction.</li>
 <h4 id="objective_3">Objective</h4>
 <p>Verify that when the Wallet uses information from a verifier_info attestation and signature validation or binding verification fails, the Wallet rejects the Authorization Request.</p>
 <h4 id="references_3">References</h4>
-<p>[OIDF.OID4VP] Section 5.1 and 5.11</p>
+<ul>
+<li>[OpenID4VP] Sections 5.1, 5.11</li>
+</ul>
 <h4 id="profile-applicability_3">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_3">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_optional</p>
 <h4 id="preconditions_3">Preconditions</h4>
@@ -1311,11 +1323,15 @@ c. only discontinues the transaction.</li>
 <h4 id="objective_4">Objective</h4>
 <p>Verify that when the Wallet receives a signed Request Object via the DC API with an invalid signature and is configured to validate signatures, it rejects the request.</p>
 <h4 id="references_4">References</h4>
-<p>[OIDF.OID4VP] Section 5.3, 5.9.3, Appendix A</p>
+<ul>
+<li>[OpenID4VP] Sections 5.3, 5.9.3, Appendix A</li>
+</ul>
 <h4 id="profile-applicability_4">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_4">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_forbidden</p>
 <h4 id="preconditions_4">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_4">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction via the DC API.</li>
@@ -1333,11 +1349,15 @@ c. only discontinues the transaction.</li>
 <h4 id="objective_5">Objective</h4>
 <p>Verify that when the Wallet receives a Request Object via the DC API and the Wallet is configured NOT to validate signatures, it processes the request without signature validation in accordance with its configured profile.</p>
 <h4 id="references_5">References</h4>
-<p>[OIDF.OID4VP] Section 5.3, 5.9.3, Appendix A</p>
+<ul>
+<li>[OpenID4VP] Sections 5.3, 5.9.3, Appendix A</li>
+</ul>
 <h4 id="profile-applicability_5">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_5">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_forbidden</p>
 <h4 id="preconditions_5">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_5">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction via the DC API.</li>
@@ -1355,12 +1375,15 @@ c. only discontinues the transaction.</li>
 <h4 id="objective_6">Objective</h4>
 <p>Verify that when the Wallet is configured to validate signatures on Request Objects received via the DC API and receives a Request Object with a valid signature, it successfully validates the signature and processes the request.</p>
 <h4 id="references_6">References</h4>
-<p>[OIDF.OID4VP] section 5.9.3</p>
+<ul>
+<li>[OpenID4VP] Section 5.9.3</li>
+</ul>
 <h4 id="profile-applicability_6">Profile applicability</h4>
 <p>DC API</p>
 <h4 id="eudi-wallet-relevancy_6">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_6">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_6">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction via the DC API.</li>
@@ -1382,12 +1405,15 @@ c. only discontinues the transaction.</li>
 <h4 id="objective_7">Objective</h4>
 <p>Verify that when the Wallet is configured to validate signatures on Request Objects received via the DC API and receives a Request Object with an invalid signature, it rejects the request.</p>
 <h4 id="references_7">References</h4>
-<p>[OIDF.OID4VP] section 5.9.3</p>
+<ul>
+<li>[OpenID4VP] Section 5.9.3</li>
+</ul>
 <h4 id="profile-applicability_7">Profile applicability</h4>
 <p>DC API</p>
 <h4 id="eudi-wallet-relevancy_7">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_7">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_7">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction via the DC API.</li>
@@ -1407,11 +1433,15 @@ c. only discontinues the transaction.</li>
 <h4 id="objective_8">Objective</h4>
 <p>Verify that when the Wallet receives a Request Object signed using the decentralized_identifier Client Identifier Prefix where the signing key is identified by the kid JOSE header and is present in the verificationMethod of the resolved DID Document, the Wallet successfully verifies the signature.</p>
 <h4 id="references_8">References</h4>
-<p>[OIDF.OID4VP] section 5.9.3</p>
+<ul>
+<li>[OpenID4VP] Section 5.9.3</li>
+</ul>
 <h4 id="profile-applicability_8">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_8">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_8">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_8">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -1433,11 +1463,15 @@ c. only discontinues the transaction.</li>
 <h4 id="objective_9">Objective</h4>
 <p>Verify that when the Wallet receives a Request Object using the decentralized_identifier Client Identifier Prefix where the signing key is NOT listed in the verificationMethod of the resolved DID Document, the Wallet rejects the request.</p>
 <h4 id="references_9">References</h4>
-<p>[OIDF.OID4VP] section 5.9.3</p>
+<ul>
+<li>[OpenID4VP] Section 5.9.3</li>
+</ul>
 <h4 id="profile-applicability_9">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_9">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_9">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_9">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -1459,11 +1493,15 @@ c. only discontinues the transaction.</li>
 <h4 id="objective_10">Objective</h4>
 <p>Verify that the Request Object is signed with the private key corresponding to the public key in the attestation cnf claim (proof of possession).</p>
 <h4 id="references_10">References</h4>
-<p>[OIDF.OID4VP] section 5.9.3</p>
+<ul>
+<li>[OpenID4VP] Section 5.9.3</li>
+</ul>
 <h4 id="profile-applicability_10">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_10">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_10">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_10">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -1485,11 +1523,15 @@ c. only discontinues the transaction.</li>
 <h4 id="objective_11">Objective</h4>
 <p>Verify that the Request Object is signed with the private key corresponding to the public key in the attestation cnf claim (proof of possession).</p>
 <h4 id="references_11">References</h4>
-<p>[OIDF.OID4VP] section 5.9.3</p>
+<ul>
+<li>[OpenID4VP] Section 5.9.3</li>
+</ul>
 <h4 id="profile-applicability_11">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_11">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_11">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_11">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -1511,11 +1553,15 @@ c. only discontinues the transaction.</li>
 <h4 id="objective_12">Objective</h4>
 <p>Verify that when the Wallet receives a Request Object whose Verifier attestation JWT has a valid signature and an iss claim identifying a trusted issuer of Verifier attestations, the Wallet establishes trust and processes the request.</p>
 <h4 id="references_12">References</h4>
-<p>[OIDF.OID4VP] section 5.9.3</p>
+<ul>
+<li>[OpenID4VP] Section 5.9.3</li>
+</ul>
 <h4 id="profile-applicability_12">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_12">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_12">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_12">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -1535,11 +1581,15 @@ c. only discontinues the transaction.</li>
 <h4 id="objective_13">Objective</h4>
 <p>Verify that when the Wallet receives a Request Object whose Verifier attestation JWT has an iss claim NOT listed among the Wallet's trusted issuers, the Wallet refuses the request.</p>
 <h4 id="references_13">References</h4>
-<p>[OIDF.OID4VP] section 5.9.3</p>
+<ul>
+<li>[OpenID4VP] Section 5.9.3</li>
+</ul>
 <h4 id="profile-applicability_13">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_13">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_13">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_13">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -1559,11 +1609,15 @@ c. only discontinues the transaction.</li>
 <h4 id="objective_14">Objective</h4>
 <p>Verify that when the Wallet receives a Request Object whose Verifier attestation JWT signature is invalid, the Wallet refuses the request.</p>
 <h4 id="references_14">References</h4>
-<p>[OIDF.OID4VP] section 5.9.3</p>
+<ul>
+<li>[OpenID4VP] Section 5.9.3</li>
+</ul>
 <h4 id="profile-applicability_14">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_14">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_14">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_14">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -1583,8 +1637,12 @@ c. only discontinues the transaction.</li>
 <h4 id="objective_15">Objective</h4>
 <p>Verify that when the Wallet receives a Request Object using an X.509-based Client Identifier Prefix (x509_san_dns or x509_hash) signed with the private key corresponding to the public key in the leaf certificate of the x5c JOSE header chain, the Wallet successfully verifies the signature.</p>
 <h4 id="references_15">References</h4>
-<p>[OIDF.OID4VP] section 5.9.3; [RFC7515]</p>
+<ul>
+<li>[OpenID4VP] Section 5.9.3</li>
+<li>[RFC7515]</li>
+</ul>
 <h4 id="profile-applicability_15">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_15">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_15">Preconditions</h4>
@@ -1610,8 +1668,12 @@ c. only discontinues the transaction.</li>
 <h4 id="objective_16">Objective</h4>
 <p>Verify that when the Wallet receives a Request Object using an X.509-based Client Identifier Prefix where the x5c JOSE header is missing, the Wallet rejects the request.</p>
 <h4 id="references_16">References</h4>
-<p>[OIDF.OID4VP] section 5.9.3; [RFC7515]</p>
+<ul>
+<li>[OpenID4VP] Section 5.9.3</li>
+<li>[RFC7515]</li>
+</ul>
 <h4 id="profile-applicability_16">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_16">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_16">Preconditions</h4>
@@ -1635,8 +1697,12 @@ c. only discontinues the transaction.</li>
 <h4 id="objective_17">Objective</h4>
 <p>Verify that when the Wallet receives a Request Object using an X.509-based Client Identifier Prefix where the signature key does NOT correspond to the leaf certificate in x5c, the Wallet rejects the request.</p>
 <h4 id="references_17">References</h4>
-<p>[OIDF.OID4VP] section 5.9.3; [RFC7515]</p>
+<ul>
+<li>[OpenID4VP] Section 5.9.3</li>
+<li>[RFC7515]</li>
+</ul>
 <h4 id="profile-applicability_17">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_17">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_17">Preconditions</h4>
@@ -1660,8 +1726,11 @@ c. only discontinues the transaction.</li>
 <h4 id="objective_18">Objective</h4>
 <p>Verify that when the Wallet receives a Request Object using an X.509-based Client Identifier Prefix with a valid signature and a complete X.509 trust chain leading to a trusted root, the Wallet validates both the signature and the chain.</p>
 <h4 id="references_18">References</h4>
-<p>[OIDF.OID4VP] section 5.9.3</p>
+<ul>
+<li>[OpenID4VP] Section 5.9.3</li>
+</ul>
 <h4 id="profile-applicability_18">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_18">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_18">Preconditions</h4>
@@ -1687,11 +1756,15 @@ c. only discontinues the transaction.</li>
 <h4 id="objective_19">Objective</h4>
 <p>Verify that when the Wallet receives a Request Object using an X.509-based Client Identifier Prefix where the X.509 trust chain is incomplete or leads to an untrusted root, the Wallet rejects the request.</p>
 <h4 id="references_19">References</h4>
-<p>[OIDF.OID4VP] section 5.9.3</p>
+<ul>
+<li>[OpenID4VP] Section 5.9.3</li>
+</ul>
 <h4 id="profile-applicability_19">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_19">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_19">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_19">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -1711,11 +1784,15 @@ c. only discontinues the transaction.</li>
 <h4 id="objective_20">Objective</h4>
 <p>Verify that when the Wallet receives a Request Object using the x509_hash Client Identifier Prefix with a valid signature and a complete X.509 trust chain leading to a trusted root, the Wallet validates both the signature and the chain.</p>
 <h4 id="references_20">References</h4>
-<p>[OIDF.OID4VP] section 5.9.3</p>
+<ul>
+<li>[OpenID4VP] Section 5.9.3</li>
+</ul>
 <h4 id="profile-applicability_20">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_20">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_20">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_20">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -1737,11 +1814,15 @@ c. only discontinues the transaction.</li>
 <h4 id="objective_21">Objective</h4>
 <p>Verify that when the Wallet receives a Request Object using the x509_hash Client Identifier Prefix where the X.509 trust chain is broken or leads to an untrusted root, the Wallet rejects the request.</p>
 <h4 id="references_21">References</h4>
-<p>[OIDF.OID4VP] section 5.9.3</p>
+<ul>
+<li>[OpenID4VP] Section 5.9.3</li>
+</ul>
 <h4 id="profile-applicability_21">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_21">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_21">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_21">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -1761,11 +1842,15 @@ c. only discontinues the transaction.</li>
 <h4 id="objective_22">Objective</h4>
 <p>Verify that when the Wallet receives a Request Object using the x509_hash Client Identifier Prefix with valid signature and trust chain, and all non-key Verifier metadata is provided within the client_metadata parameter, the Wallet uses client_metadata as the source of all non-key metadata.</p>
 <h4 id="references_22">References</h4>
-<p>[OIDF.OID4VP] section 5.9.3</p>
+<ul>
+<li>[OpenID4VP] Section 5.9.3</li>
+</ul>
 <h4 id="profile-applicability_22">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_22">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_22">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_22">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -1787,11 +1872,15 @@ c. only discontinues the transaction.</li>
 <h4 id="objective_23">Objective</h4>
 <p>Verify that when the Wallet receives a Request Object using the x509_hash Client Identifier Prefix where non-key Verifier metadata is provided outside the client_metadata parameter, the Wallet ignores such metadata and processes only what is contained within client_metadata.</p>
 <h4 id="references_23">References</h4>
-<p>[OIDF.OID4VP] section 5.9.3</p>
+<ul>
+<li>[OpenID4VP] Section 5.9.3</li>
+</ul>
 <h4 id="profile-applicability_23">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_23">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_23">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_23">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -1811,18 +1900,21 @@ c. only discontinues the transaction.</li>
 <h4 id="objective_24">Objective</h4>
 <p>Verify that when the Wallet receives a Request Object via the DC API where the audience is the origin value prefixed by origin:, all non-key Verifier metadata is taken from client_metadata, and the Wallet processes the request within the DC API context.</p>
 <h4 id="references_24">References</h4>
-<p>[OIDF.OID4VP] section 5.9.3, Appendix A.2.</p>
+<ul>
+<li>[OpenID4VP] Section 5.9.3, Appendix A.2</li>
+</ul>
 <h4 id="profile-applicability_24">Profile applicability</h4>
 <p>DC API</p>
 <h4 id="eudi-wallet-relevancy_24">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_24">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_24">Test Scenario</h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
 <li>Wallet receives a Request Object via DC API where audience uses the origin: prefix and all non-key Verifier metadata is in client_metadata.</li>
 <li>Wallet parses the Request Object.</li>
-<li>Wallet processes the audience as origin:<origin> per DC API rules.</li>
+<li>Wallet processes the audience as <code>origin:&lt;origin&gt;</code> per DC API rules.</li>
 <li>Wallet uses client_metadata for non-key Verifier metadata.</li>
 </ol>
 <h4 id="expected-results_24">Expected results</h4>
@@ -1838,12 +1930,16 @@ c. only discontinues the transaction.</li>
 <h4 id="objective_25">Objective</h4>
 <p>Verify that, for signed requests, Wallet accepts Client Identifier Prefix <code>x509_hash</code> as defined in section 5.9.3 of [OIDF.OID4VP].</p>
 <h4 id="references_25">References</h4>
-<p>[OIDF.HAIP] section 5 (introduction)
-[OIDF.OID4VP] 5.9.3</p>
+<ul>
+<li>[HAIP] Section 5 (introduction)</li>
+<li>[OpenID4VP] Section 5.9.3</li>
+</ul>
 <h4 id="profile-applicability_25">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_25">EUDI-wallet relevancy</h4>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_25">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_25">Test Scenario</h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request. </li>
@@ -1867,12 +1963,16 @@ c. only discontinues the transaction.</li>
 <h4 id="objective_26">Objective</h4>
 <p>Verify that, for signed requests, if Verifier does not use Client Identifier Prefix <code>x509_hash</code>, the Wallet responds with an error (detailed or not) or discontinues the transaction.</p>
 <h4 id="references_26">References</h4>
-<p>[OIDF.HAIP] section 5 (introduction)
-[OIDF.OID4VP] 5.9.3</p>
+<ul>
+<li>[HAIP] Section 5 (introduction)</li>
+<li>[OpenID4VP] Section 5.9.3</li>
+</ul>
 <h4 id="profile-applicability_26">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_26">EUDI-wallet relevancy</h4>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_26">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_26">Test Scenario</h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request. </li>
@@ -1894,11 +1994,15 @@ c. discontinues the interaction.</li>
 <h4 id="objective_27">Objective</h4>
 <p>Verify that if X.509 certificate of the trust anchor is included in the <code>x5c</code> JOSE header of the signed request, the Wallet responds with an error (detailed or not) or discontinues the transaction.</p>
 <h4 id="references_27">References</h4>
-<p>[OIDF.HAIP] section 5 (introduction)</p>
+<ul>
+<li>[HAIP] Section 5 (introduction)</li>
+</ul>
 <h4 id="profile-applicability_27">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_27">EUDI-wallet relevancy</h4>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_27">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_27">Test Scenario</h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
@@ -1921,11 +2025,15 @@ c. discontinues the interaction.</li>
 <h4 id="objective_28">Objective</h4>
 <p>Verify that if X.509 certificate signing the request is self-signed, the Wallet responds with an error (detailed or not) or discontinues the transaction.</p>
 <h4 id="references_28">References</h4>
-<p>[OIDF.HAIP] section 5 (introduction)</p>
+<ul>
+<li>[HAIP] Section 5 (introduction)</li>
+</ul>
 <h4 id="profile-applicability_28">Profile applicability</h4>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_28">EUDI-wallet relevancy</h4>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_28">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_28">Test Scenario</h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
@@ -1948,12 +2056,14 @@ c. discontinues the interaction.</li>
 <h4 id="objective_29">Objective</h4>
 <p>Verify that, in the presentation flow via Redirects, Wallet rejects presentation request if the signature validation of the JWT-Secured Authorization Request fails. </p>
 <h4 id="references_29">References</h4>
-<p>[OIDF.HAIP] section 5.1
-[RFC9101] section 5</p>
+<ul>
+<li>[HAIP] Section 5.1</li>
+<li>[RFC9101] Section 5</li>
+</ul>
 <h4 id="profile-applicability_29">Profile applicability</h4>
 <p>Presentations via Redirects</p>
 <h4 id="eudi-wallet-relevancy_29">EUDI-wallet relevancy</h4>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_29">Preconditions</h4>
 <p>A Signature from authorization request is authentic.</p>
 <h4 id="test-scenario_29">Test Scenario</h4>
@@ -1978,12 +2088,15 @@ c. discontinues the interaction.</li>
 <h4 id="objective_30">Objective</h4>
 <p>Verify that Wallet supports unsigned, requests.</p>
 <h4 id="references_30">References</h4>
-<p>[OIDF.HAIP] section 5.2 </p>
+<ul>
+<li>[HAIP] Section 5.2</li>
+</ul>
 <h4 id="profile-applicability_30">Profile applicability</h4>
 <p>Presentations via the W3C Digital Credentials API or equivalent platform.</p>
 <h4 id="eudi-wallet-relevancy_30">EUDI-wallet relevancy</h4>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_30">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_30">Test Scenario</h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
@@ -2001,12 +2114,15 @@ c. discontinues the interaction.</li>
 <h4 id="objective_31">Objective</h4>
 <p>Verify that Wallet supports signed requests.</p>
 <h4 id="references_31">References</h4>
-<p>[OIDF.HAIP] section 5.2 </p>
+<ul>
+<li>[HAIP] Section 5.2</li>
+</ul>
 <h4 id="profile-applicability_31">Profile applicability</h4>
 <p>Presentations via the W3C Digital Credentials API or equivalent platform.</p>
 <h4 id="eudi-wallet-relevancy_31">EUDI-wallet relevancy</h4>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_31">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_31">Test Scenario</h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
@@ -2024,12 +2140,15 @@ c. discontinues the interaction.</li>
 <h4 id="objective_32">Objective</h4>
 <p>Verify that Wallet supports multi-signed requests.</p>
 <h4 id="references_32">References</h4>
-<p>[OIDF.HAIP] section 5.2 </p>
+<ul>
+<li>[HAIP] Section 5.2</li>
+</ul>
 <h4 id="profile-applicability_32">Profile applicability</h4>
 <p>Presentations via the W3C Digital Credentials API or equivalent platform.</p>
 <h4 id="eudi-wallet-relevancy_32">EUDI-wallet relevancy</h4>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_32">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_32">Test Scenario</h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
@@ -2047,12 +2166,15 @@ c. discontinues the interaction.</li>
 <h4 id="objective_33">Objective</h4>
 <p>Verify that Wallet supports ECDSA with P-256 and SHA-256 (JOSE algorithm identifier ES256) for validating signed presentation requests.</p>
 <h4 id="references_33">References</h4>
-<p>[OIDF.HAIP] section 7 </p>
+<ul>
+<li>[HAIP] Section 7</li>
+</ul>
 <h4 id="profile-applicability_33">Profile applicability</h4>
 <p>JOSE algorithm identifier ES256</p>
 <h4 id="eudi-wallet-relevancy_33">EUDI-wallet relevancy</h4>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_33">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_33">Test Scenario</h4>
 <ol>
 <li>Verify that Wallet receives signed request using ECDSA with P-256 and SHA-256 (JOSE algorithm identifier ES256) from the Verifier.</li>
@@ -2068,12 +2190,15 @@ c. discontinues the interaction.</li>
 <h4 id="objective_34">Objective</h4>
 <p>Verify that Wallet does not support RSASSA-PSS using SHA-384 and MGF1 with SHA-384 (RS384) for validating signed presentation requests.</p>
 <h4 id="references_34">References</h4>
-<p>[OIDF.HAIP] section 8</p>
+<ul>
+<li>[HAIP] Section 8</li>
+</ul>
 <h4 id="profile-applicability_34">Profile applicability</h4>
 <p>JOSE algorithm identifier ES257</p>
 <h4 id="eudi-wallet-relevancy_34">EUDI-wallet relevancy</h4>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_34">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_34">Test Scenario</h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
@@ -2096,12 +2221,15 @@ c. only discontinues the transaction.</li>
 <h4 id="objective_35">Objective</h4>
 <p>Verify that Wallet supports ECDSA with P-256 and SHA-256 (COSE algorithm identifier -7) for validating signed presentation requests.</p>
 <h4 id="references_35">References</h4>
-<p>[OIDF.HAIP] section 7 </p>
+<ul>
+<li>[HAIP] Section 7</li>
+</ul>
 <h4 id="profile-applicability_35">Profile applicability</h4>
 <p>COSE algorithm identifier -7 supported</p>
 <h4 id="eudi-wallet-relevancy_35">EUDI-wallet relevancy</h4>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_35">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_35">Test Scenario</h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
@@ -2121,12 +2249,15 @@ c. only discontinues the transaction.</li>
 <h4 id="objective_36">Objective</h4>
 <p>Verify that Wallet supports ECDSA with P-256 and SHA-256 (COSE algorithm identifier -9) for validating signed presentation requests.</p>
 <h4 id="references_36">References</h4>
-<p>[OIDF.HAIP] section 7 </p>
+<ul>
+<li>[HAIP] Section 7</li>
+</ul>
 <h4 id="profile-applicability_36">Profile applicability</h4>
 <p>COSE algorithm identifier -9 supported</p>
 <h4 id="eudi-wallet-relevancy_36">EUDI-wallet relevancy</h4>
-<p>EUDI_generic, EUDI_required</p>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_36">Preconditions</h4>
+<p>none</p>
 <h4 id="test-scenario_36">Test Scenario</h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
