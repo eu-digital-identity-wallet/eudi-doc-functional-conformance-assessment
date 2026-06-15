@@ -4,16 +4,18 @@
 Test the Wallet responds with invalid_request when the request contains both a dcql_query parameter and a scope parameter referencing a DCQL query.
 
 ## References
-[OID4VP Section 8]
+[OpenID4VP], Section 8
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. The Wallet engages with the verifier.

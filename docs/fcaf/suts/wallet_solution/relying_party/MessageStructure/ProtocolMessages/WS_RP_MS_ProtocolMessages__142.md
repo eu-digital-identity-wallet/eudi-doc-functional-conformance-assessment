@@ -5,16 +5,18 @@
 Test the Wallet responds with invalid_request when the request asks for a vp_token, but does not include instructions on what data to put in the token.
 
 ## References
-[OID4VP] Sections 8.5, 8.6
+[OpenID4VP] Sections 8.5, 8.6
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. The Wallet engages with the verifier.

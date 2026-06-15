@@ -4,17 +4,19 @@
 Verify that, in the presentation flow via Redirects, Wallet sends encrypted response when Authorization Request includes `response_mode` parameter set to `direct_post.jwt`.
 
 ## References
-[OIDF.HAIP] section 5.1
-[OIDF.OID4VP] section 8.3
+
+- [HAIP] Section 5.1
+- [OpenID4VP] Section 8.3
 
 ## Profile applicability
 Presentations via Redirects
 
 ## EUDI-wallet relevancy
-EUDI_generic, EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. End-user interacts with the Verifier, triggering the Verifier to send a presentation request.
@@ -26,7 +28,7 @@ EUDI_generic, EUDI_required
 
 ## Expected results
 1. This is the case.
-1. This is the case.
+2. This is the case.
 3. Wallet asks for user consent.
 4. This is the case.
 5. Wallet sends encrypted response using parameters provided in "client_metadata".

@@ -4,16 +4,18 @@
 Verify that when the Wallet receives a Request Object using the decentralized_identifier Client Identifier Prefix with an empty client_metadata parameter, the Wallet rejects the request since non-key Verifier metadata MUST be obtained from client_metadata.
 
 ## References
-[OIDF.OID4VP] section 5.9.3
+[OpenID4VP] Section 5.9.3
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. Engage wallet-verifier interaction (e.g. click link / scan QR code).

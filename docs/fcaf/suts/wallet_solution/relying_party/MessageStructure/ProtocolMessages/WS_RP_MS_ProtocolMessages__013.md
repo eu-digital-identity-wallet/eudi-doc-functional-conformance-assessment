@@ -4,10 +4,11 @@
 Verify that the Wallet successfully evaluates a valid dcql_query that matches multiple credentials and presents the user with all candidate credentials for selection.
 
 ## References
-[OIDF.OID4VP] sections 5, 6.4; [ISO 18013-7] annex C
+[OpenID4VP] sections 5, 6.4; [ISO/IEC 18013-7] annex C
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required

@@ -4,13 +4,13 @@
 Verify that Wallet does not use other hash algorithm than SHA-256 during presentation if that is not supported by the Verifier.
 
 ## References
-[OIDF.HAIP] section 8
+[HAIP] section 8
 
 ## Profile applicability
 Wallet supports other hash algorithms besides SHA-256.
 
 ## EUDI-wallet relevancy
-EUDI_generic, EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 A) Verifier Client Metadata does not include any other hash algorithms. 

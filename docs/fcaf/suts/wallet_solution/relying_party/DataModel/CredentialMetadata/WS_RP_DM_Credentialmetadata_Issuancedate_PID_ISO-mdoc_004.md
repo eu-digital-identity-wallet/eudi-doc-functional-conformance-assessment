@@ -25,10 +25,13 @@ D. The presence of data element `issuance_date` in the device retrieval mdoc res
 2. Verify the value of date-month. 
 3. Verify the value of date-mday. 
 4. If present, verify the value of all time-hour. 
-5. If present, verify the value of all time-minute. 6. If present, verify the value of time-second.
+5. If present, verify the value of all time-minute.
+6. If present, verify the value of time-second.
 
 ## Expected results
 1. The value of date-fullyear is between "0000" and "9999" inclusive. 
 2. The value of date-month is between "01" and "12" inclusive. 
-3. The value of date-mday is between "01" and the maximum value specified in section 5.7 of RFC 3339 inclusive. 4. If present, the value of time-hour is between "00" and "23" inclusive. 
-5. If present, the value of time-minute is between "00" and "59" inclusive. 6. If present, the value of time-second is between "00" and "60" inclusive.
+3. The value of date-mday is between "01" and the maximum value specified in section 5.7 of RFC 3339 inclusive.
+4. If present, the value of time-hour is between "00" and "23" inclusive. 
+5. If present, the value of time-minute is between "00" and "59" inclusive.
+6. If present, the value of time-second is between "00" and "60" inclusive.

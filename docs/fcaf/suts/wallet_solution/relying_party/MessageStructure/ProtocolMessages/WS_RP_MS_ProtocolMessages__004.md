@@ -4,16 +4,20 @@
 Verify that the Wallet can process an Authorization Request sent as a Request Object by VALUE, where the Request Object includes the typ JOSE header parameter with the value oauth-authz-req+jwt.
 
 ## References
-[RFC9101]; [OIDF.OID4VP] section 5
+
+- [RFC9101]
+- [OpenID4VP] Section 5
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. Engage wallet-verifier interaction (e.g. click link / scan QR code).

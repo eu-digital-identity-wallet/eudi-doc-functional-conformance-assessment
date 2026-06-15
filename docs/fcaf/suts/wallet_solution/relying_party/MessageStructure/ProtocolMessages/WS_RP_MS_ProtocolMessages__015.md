@@ -4,10 +4,11 @@
 Verify that the Wallet rejects the Authorization Request and returns an error when the dcql_query is malformed.
 
 ## References
-[OIDF.OID4VP] sections 5, 6.4; [ISO 18013-7] annex C
+[OpenID4VP] sections 5, 6.4; [ISO/IEC 18013-7] annex C
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required

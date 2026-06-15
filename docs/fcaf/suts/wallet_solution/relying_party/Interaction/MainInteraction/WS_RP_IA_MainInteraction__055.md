@@ -4,16 +4,18 @@
 When the response_uri parameter is present, the redirect_uri Authorization Request parameter MUST NOT be present. 
 
 ## References
-[OID4VP Section 8]
+[OpenID4VP], Section 8
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. The wallet engages with the verifier.

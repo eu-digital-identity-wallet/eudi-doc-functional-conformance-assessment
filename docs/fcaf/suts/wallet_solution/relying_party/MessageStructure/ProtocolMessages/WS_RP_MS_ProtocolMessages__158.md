@@ -4,16 +4,18 @@
 Test the Wallet returns the invalid_transaction_data error message, when one object in the transaction_data structure has credential_ids that do not match to the credentials requested.
 
 ## References
-[OID4VP Section 8.5]
+[OpenID4VP], Section 8.5
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. The Wallet engages with Verifier.

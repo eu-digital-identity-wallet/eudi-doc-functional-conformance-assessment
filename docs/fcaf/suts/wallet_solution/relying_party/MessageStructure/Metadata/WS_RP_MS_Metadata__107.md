@@ -4,16 +4,20 @@
  Verify that when the Verifier sets request_uri_method = "post" without client_metadata, the Wallet still proceeds by sending its full supported wallet_metadata in the POST request to the request_uri.
 
 ## References
-[OIDF.OID4VP] Section 5.10, [OIDF.OID4VP] Section 5.1, [RFC9101]
+
+- [OpenID4VP] Sections 5.10, 5.1
+- [RFC9101]
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. Engage wallet-verifier interaction (e.g. click link / scan QR code).

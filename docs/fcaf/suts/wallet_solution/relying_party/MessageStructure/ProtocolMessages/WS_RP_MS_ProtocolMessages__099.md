@@ -4,16 +4,18 @@
 Test the elements in "options" MUST be identifiers that reference elements in "credentials".
 
 ## References
-[OID4VP 6.2]
+[OpenID4VP], Section 6.2
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. The Wallet engages with the Verifier.

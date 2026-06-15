@@ -4,16 +4,18 @@
 Test that if credentials property "claims" is not present in the query it doesn't invalidate credential
 
 ## References
-[OID4VP 6.1]
+[OpenID4VP], Section 6.1
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. The Wallet engages with the Verifier.

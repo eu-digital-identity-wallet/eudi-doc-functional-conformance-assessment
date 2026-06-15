@@ -4,7 +4,7 @@
 Test that in a claims path pointer array, a string value indicates the respected key is to be selected.
 
 ## References
-[OID4VP 7]
+[OpenID4VP], Section 7
 
 ## Profile applicability
 claims path pointer when applied to a JSON-based Credential

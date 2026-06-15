@@ -4,18 +4,19 @@
 Verify that if `encrypted_response_enc_values_supported` within client metadata from the Verifier, does not include A256GCM, and Wallet only supports A256GCM, the Wallet responds with an error.
 
 ## References
-[OIDF.HAIP] section 5 (introduction) 
-[OIDF.OID4VP] section 8.3
+[HAIP] section 5 (introduction) 
+[OpenID4VP] section 8.3
 [RFC7516] section 4.1.2
 
 ## Profile applicability
 Wallet supports only A256GCM
 
 ## EUDI-wallet relevancy
-EUDI_generic, EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. Engage wallet-verifier interaction (e.g. click link / scan QR code).

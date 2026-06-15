@@ -4,10 +4,13 @@
 Verify that when the Wallet receives a Request Object using an X.509-based Client Identifier Prefix where the x5c JOSE header is missing, the Wallet rejects the request.
 
 ## References
-[OIDF.OID4VP] section 5.9.3; [RFC7515]
+
+- [OpenID4VP] Section 5.9.3
+- [RFC7515]
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required

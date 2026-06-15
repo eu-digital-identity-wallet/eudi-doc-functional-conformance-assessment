@@ -4,7 +4,7 @@
 Test the Wallet when processing trusted_authorities, type "etsi_tl" is supported.
 
 ## References
-[OID4VP 6.1.1]
+[OpenID4VP], Section 6.1.1
 
 ## Profile applicability
 Wallet supports trusted authorities query based on ETSI Trust List.
@@ -14,6 +14,7 @@ EUDI_generic | EUDI_optional
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. The Wallet engages with the Verifier.

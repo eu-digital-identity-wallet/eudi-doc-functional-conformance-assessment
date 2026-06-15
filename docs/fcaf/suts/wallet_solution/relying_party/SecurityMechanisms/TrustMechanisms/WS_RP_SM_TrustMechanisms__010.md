@@ -4,7 +4,7 @@
 Test the Wallet can resolve a trusted_authorities request of type etsi_tl by matching the credential's issuer against a recognized ETSI Trusted List scenario when no Match.
 
 ## References
-[OID4VP 6.1.1.2]
+[OpenID4VP], Section 6.1.1.2
 
 ## Profile applicability
 Wallet supports trusted authorities query based on ETSI Trust List.

@@ -4,7 +4,7 @@
 Verify that when the Wallet is configured to validate signatures on Request Objects received via the DC API and receives a Request Object with an invalid signature, it rejects the request.
 
 ## References
-[OIDF.OID4VP] section 5.9.3
+[OpenID4VP] section 5.9.3
 
 ## Profile applicability
 DC API
@@ -14,6 +14,7 @@ EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. Engage wallet-verifier interaction via the DC API.

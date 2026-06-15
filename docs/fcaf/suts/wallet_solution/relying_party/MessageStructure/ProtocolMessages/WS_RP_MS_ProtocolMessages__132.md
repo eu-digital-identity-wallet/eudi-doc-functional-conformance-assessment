@@ -4,16 +4,18 @@
 Test the Wallet puts the response content fields at the top level of the JWT payload.
 
 ## References
-[OID4VP] Section 8.3
+[OpenID4VP] Section 8.3
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. The Wallet engages with the verifier.

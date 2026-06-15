@@ -4,7 +4,7 @@
 Test the Wallet handles a redirect_uri when a response_uri returns after a successful Response.
 
 ## References
-[OID4VP Section 8.2]
+[OpenID4VP], Section 8.2
 
 ## Profile applicability
 Same device
@@ -15,6 +15,7 @@ EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. The wallet engages with the verifier.

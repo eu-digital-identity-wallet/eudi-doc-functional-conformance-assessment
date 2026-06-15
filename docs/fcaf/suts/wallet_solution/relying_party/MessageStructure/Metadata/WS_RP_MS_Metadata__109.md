@@ -4,16 +4,19 @@
 Verify that when the Wallet receives an Authorization Request where some Verifier metadata is provided outside the client_metadata parameter, the Wallet ignores such metadata and processes only what is contained within client_metadata.
 
 ## References
-[OIDF.OID4VP] section 5.9.3; [OIDF.OID4VP] section 5.1
+
+[OpenID4VP] Sections 5.9.3, 5.1
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. Engage wallet-verifier interaction (e.g. click link / scan QR code).

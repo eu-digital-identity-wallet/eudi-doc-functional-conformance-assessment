@@ -4,17 +4,20 @@
 Test the Wallet rejects DCQL-query when credential `format` values do not conform to those defined in [OID4VP] Appendix B and allowed by [HAIP]
 
 ## References
-[OID4VP] sections 6.1, 8.5
-[HAIP]
+
+- [OpenID4VP] Sections 6.1, 8.5
+- [HAIP]
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. The Wallet engages with the Verifier.

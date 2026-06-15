@@ -4,16 +4,18 @@
 Test that when the JWK has kid parameter, the Wallet MUST include that same kid value, in the kid JWE header of the response.
 
 ## References
-[OID4VP] Section 8.3.1
+[OpenID4VP] Section 8.3.1
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. The Wallet engages with the Verifier

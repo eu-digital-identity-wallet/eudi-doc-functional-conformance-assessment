@@ -4,10 +4,11 @@
 Verify that when the Verifier attestation JWT contains a redirect_uris claim and the redirect_uri request parameter exactly matches one of its entries, the Wallet processes the request.
 
 ## References
-[OIDF.OID4VP] section 5.9.3
+[OpenID4VP] section 5.9.3
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required

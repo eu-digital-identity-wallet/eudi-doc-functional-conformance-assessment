@@ -4,9 +4,10 @@
 Verify that whenever Wallet presents a SD-JWT containing a `cnf` claim, `cnf` conforms to definition given in [I-D.ietf-oauth-sd-jwt-vc].
 
 ## References
-[OIDF.HAIP] section 6.1
-[RFC7800]
-[I-D.ietf-oauth-sd-jwt-vc]
+
+- [HAIP] Section 6.1
+- [RFC7800]
+- [SD-JWT VC]
 
 ## Profile applicability
 Wallet supports IETF SD-JWT VC 
@@ -16,6 +17,7 @@ EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. End-user interacts with the Verifier, triggering the Verifier to send a presentation request.

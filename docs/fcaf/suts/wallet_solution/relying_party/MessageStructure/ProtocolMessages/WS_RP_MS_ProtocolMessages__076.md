@@ -4,10 +4,11 @@
 Test the Wallet accepts a DCQL-query with an empty credential property "meta" and handles request without further constraints on the credential.
 
 ## References
-[OID4VP 6.1]
+[OpenID4VP], Section 6.1
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required

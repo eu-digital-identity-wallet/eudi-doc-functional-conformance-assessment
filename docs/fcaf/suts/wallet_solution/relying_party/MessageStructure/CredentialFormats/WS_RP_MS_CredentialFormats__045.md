@@ -4,14 +4,15 @@
 Verify that Wallet can handle presenting Credential in IETF SD-JWT VC format using compact serialization as defined in [RFC9901] when there is key binding.
 
 ## References
-[OIDF.HAIP] section 6.1
-[RFC9901]
+
+- [HAIP] Section 6.1
+- [RFC9901]
 
 ## Profile applicability
 Wallet supports IETF SD-JWT VC with key-binding
 
 ## EUDI-wallet relevancy
-EUDI_generic, EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 A) Credential Issuer issued Credential to the Wallet in IETF SD-JWT VC format, using compact serialization as defined in [RFC9901].

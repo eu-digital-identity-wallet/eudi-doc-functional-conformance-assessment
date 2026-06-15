@@ -4,7 +4,8 @@
 Test that the Wallet handles DCQL-query for SD-JWT VC credential with a non-matching top-level claim path pointer.
 
 ## References
-[OID4VP 7] Section 7.1.1
+
+[OpenID4VP] Sections 7, 7.1.1
 
 ## Profile applicability
 claims path pointer when applied to a JSON-based Credential

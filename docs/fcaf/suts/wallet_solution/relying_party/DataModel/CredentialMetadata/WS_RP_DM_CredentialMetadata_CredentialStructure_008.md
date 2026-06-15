@@ -4,16 +4,18 @@
 Test the wallet can process and match each entry in the credentials' parameter of the DCQL, with credentials present in the wallet.
 
 ## References
-[OID4VP 6.1]
+[OpenID4VP], Section 6.1
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. The Wallet engages with the Verifier.

@@ -4,16 +4,18 @@
 Verify that the Wallet accepts vp_token as a valid response_type value in an Authorization Request and does not reject the request.
 
 ## References
-[OIDF.OID4VP] section 5.6
+[OpenID4VP] section 5.6
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. Engage wallet-verifier interaction (e.g. click link / scan QR code).

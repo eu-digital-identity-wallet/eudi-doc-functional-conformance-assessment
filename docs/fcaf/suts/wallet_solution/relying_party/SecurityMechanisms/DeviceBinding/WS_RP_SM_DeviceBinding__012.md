@@ -4,7 +4,7 @@
 Verify that if the credential has cryptographic holder binding, Wallet presents a KB-JWT, as defined in [I-D.ietf-oauth-sd-jwt-vc] when presenting SD-JWT VC.
 
 ## References
-[OIDF.HAIP 6.1.1.1]
+[HAIP], Section 6.1.1.1
 
 ## Profile applicability
 Wallet supports IETF SD-JWT VC 

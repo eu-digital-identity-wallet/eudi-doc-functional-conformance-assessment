@@ -4,16 +4,20 @@
 Verify that when the Wallet supports scope-based Presentation requests and receives an Authorization Request containing a scope value it does not recognize, it rejects the request with an appropriate error.
 
 ## References
-[OIDF.OID4VP] Section 5.5, 8.5; [RFC6749]
+
+- [OpenID4VP] Sections 5.5, 8.5
+- [RFC6749]
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_optional
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. Engage wallet-verifier interaction (e.g. click link / scan QR code).

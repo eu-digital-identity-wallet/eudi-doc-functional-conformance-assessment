@@ -4,16 +4,18 @@
 Verify that when the Wallet receives an Authorization Request where the client_id in the query parameter and the Request Object client_id claim differ, the Wallet terminates request processing.
 
 ## References
-[OIDF.OID4VP] sections 8.5, 5.10.1
+[OpenID4VP] sections 8.5, 5.10.1
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. Engage wallet-verifier interaction (e.g. click link / scan QR code).

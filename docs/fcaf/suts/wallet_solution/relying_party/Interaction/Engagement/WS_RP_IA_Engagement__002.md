@@ -4,16 +4,17 @@
 Verify that Wallet supports invocation via the W3C Digital Credentials API or an equivalent platform API. 
 
 ## References
-[OIDF.HAIP] section 5.2 
+[HAIP] section 5.2 
 
 ## Profile applicability
 Presentations via the W3C Digital Credentials API or equivalent platform.
 
 ## EUDI-wallet relevancy
-EUDI_generic, EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. Verifier invokes Wallet via W3C Digital Credentials API or an equivalent platform API. 

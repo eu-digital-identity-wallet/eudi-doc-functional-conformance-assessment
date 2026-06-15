@@ -4,16 +4,18 @@
 Test the Wallet returns the access_denied error message when the Wallet failed to authenticate the End-User.
 
 ## References
-[OID4VP Section 8.5]
+[OpenID4VP], Section 8.5
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. The Wallet engages with verifier.

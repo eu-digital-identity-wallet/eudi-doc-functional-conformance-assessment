@@ -4,16 +4,18 @@
 Verify that upon any HTTP error response from the Request-URI endpoint the Wallet terminates the process.
 
 ## References
-[OIDF.OID4VP] section 5.10.2
+[OpenID4VP] Section 5.10.2
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. Engage wallet-verifier interaction (e.g. click link / scan QR code).

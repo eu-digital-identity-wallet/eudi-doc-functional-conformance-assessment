@@ -4,7 +4,7 @@
 Test for responses of size > URL limits of user agents, the Wallet can respond to the Verifier using the direct_post mechanism.
 
 ## References
-[OID4VP Section 8]
+[OpenID4VP], Section 8
 
 ## Profile applicability
 Same device

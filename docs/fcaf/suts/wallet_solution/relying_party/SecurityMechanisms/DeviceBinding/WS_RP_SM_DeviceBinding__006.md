@@ -4,16 +4,18 @@
 Verify that when the Wallet receives a Verifier Info attestation of a type NOT defined or supported by the active profile, the Wallet ignores the unrecognized attachment type and continues processing the rest of the request.
 
 ## References
-[OIDF.OID4VP] section 5.11.1
+[OpenID4VP] section 5.11.1
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. Engage wallet-verifier interaction (e.g. click link / scan QR code).

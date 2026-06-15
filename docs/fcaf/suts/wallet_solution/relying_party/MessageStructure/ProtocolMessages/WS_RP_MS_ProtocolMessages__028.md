@@ -4,10 +4,11 @@
 Verify that the Wallet successfully processes a transaction_data object when every string in the credential_ids array matches an id in the DCQL Credential Query.
 
 ## References
-[OIDF.OID4VP] section 5.1
+[OpenID4VP] section 5.1
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required

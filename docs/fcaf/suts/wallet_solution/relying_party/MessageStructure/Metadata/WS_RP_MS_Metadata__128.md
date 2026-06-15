@@ -4,10 +4,11 @@
 Verify that when the Wallet receives a non-DC-API Request Object using the x509_san_dns Client Identifier Prefix and the FQDN of redirect_uri does NOT match the Client Identifier hostname (and trust in the Client Identifier is not otherwise established), the Wallet rejects the request.
 
 ## References
-[OIDF.OID4VP] section 5.9.3
+[OpenID4VP] section 5.9.3
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required

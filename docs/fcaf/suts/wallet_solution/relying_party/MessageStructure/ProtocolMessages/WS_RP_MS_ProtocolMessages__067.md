@@ -4,17 +4,20 @@
 Test the Wallet accepts a DCQL-query with credential `format` values conform to those defined in [OID4VP] Appendix B.
 
 ## References
-[OID4VP] sections 6.1
-[HAIP]
+
+- [OpenID4VP] Section 6.1
+- [HAIP]
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. The Wallet engages with the Verifier.

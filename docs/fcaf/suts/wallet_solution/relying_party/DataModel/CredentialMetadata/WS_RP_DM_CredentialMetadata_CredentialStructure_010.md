@@ -4,16 +4,18 @@
 Test that if the credentials' property "claim_sets" is present then it is used as per the rules defined in [OID4VP 6.4.1]
 
 ## References
-[OID4VP 6.1]
+[OpenID4VP], Section 6.1
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. The Wallet engages with the Verifier.

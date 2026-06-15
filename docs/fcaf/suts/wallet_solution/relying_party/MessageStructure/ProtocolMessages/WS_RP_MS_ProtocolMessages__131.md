@@ -4,16 +4,18 @@
 Test the Wallet will default to A128GCM for enc value, when Verifier metadata does NOT explicitly set it.
 
 ## References
-[OID4VP Section 8.3.1]
+[OpenID4VP], Section 8.3.1
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. The Wallet engages with the verifier.

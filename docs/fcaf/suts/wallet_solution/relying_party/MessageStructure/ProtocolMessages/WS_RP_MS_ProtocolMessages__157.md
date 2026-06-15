@@ -4,10 +4,11 @@
 Test the Wallet returns the invalid_transaction_data error message, when one object in the transaction_data structure is missing required fields for the transaction data type.
 
 ## References
-[OID4VP Section 8.5]
+[OpenID4VP], Section 8.5
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required

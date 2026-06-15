@@ -4,16 +4,18 @@
 Test when given a valid DCQL query that does not contain the credential_sets property, the Wallet is able to accept it.
 
 ## References
-[OID4VP 6]
+[OpenID4VP], Section 6
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. The Wallet engages with the Verifier.

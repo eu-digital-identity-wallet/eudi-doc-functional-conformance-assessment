@@ -4,7 +4,7 @@
 Test all parameters in the HTTP POST request body are encoded using UTF‑8.
 
 ## References
-[OID4VP Section 8]
+[OpenID4VP], Section 8
 
 ## Profile applicability
 Same device
@@ -15,6 +15,7 @@ EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. The wallet engages with the verifier.

@@ -4,7 +4,7 @@
 Test that the Wallet when processing trusted_authorities, the type "aki" is supported.
 
 ## References
-[OID4VP 6.1.1.1]
+[OpenID4VP], Section 6.1.1.1
 Section 4.2.1.1 of [RFC5280]
 
 ## Profile applicability
@@ -15,6 +15,7 @@ EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. The Wallet engages with the Verifier.

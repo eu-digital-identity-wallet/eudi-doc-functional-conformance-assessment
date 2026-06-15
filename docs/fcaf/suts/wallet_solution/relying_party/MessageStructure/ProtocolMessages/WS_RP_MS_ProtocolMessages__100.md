@@ -4,16 +4,18 @@
 Test that if elements in "options" are NOT identifiers that reference elements in "credentials", the wallet will reject query and remain privacy preserving.
 
 ## References
-[OID4VP] sections 6.2, 8.5
+[OpenID4VP] sections 6.2, 8.5
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. The Wallet engages with the Verifier.

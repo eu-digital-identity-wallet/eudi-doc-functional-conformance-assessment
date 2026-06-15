@@ -4,10 +4,11 @@
 Test that the wallet does not return credentials if they do not match the requested constraints.
 
 ## References
-[OID4VP 6.4]
+[OpenID4VP], Section 6.4
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required

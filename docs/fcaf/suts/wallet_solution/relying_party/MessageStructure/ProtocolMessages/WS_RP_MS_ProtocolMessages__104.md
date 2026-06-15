@@ -4,16 +4,18 @@
 Test that the credential_sets property "required" if set to False, the wallet can proceed with other valid sets flow without error.
 
 ## References
-[OID4VP 6.2]
+[OpenID4VP], Section 6.2
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. The Wallet engages with the Verifier.

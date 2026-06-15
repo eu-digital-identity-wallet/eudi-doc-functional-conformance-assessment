@@ -4,16 +4,18 @@
 Verify that when the Wallet receives an Authorization Request containing a key-bound Verifier Info attestation whose signature object correctly includes both the nonce and client_id request parameters, the Wallet validates the signature and accepts the attestation.
 
 ## References
-[OIDF.OID4VP] section 5.11.1
+[OpenID4VP] section 5.11.1
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. Engage wallet-verifier interaction (e.g. click link / scan QR code).

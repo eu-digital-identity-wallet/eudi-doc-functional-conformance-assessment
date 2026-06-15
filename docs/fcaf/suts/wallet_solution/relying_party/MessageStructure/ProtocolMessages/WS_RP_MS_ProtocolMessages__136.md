@@ -4,16 +4,18 @@
 Test a Wallet that received transaction_data in a request, but cannot support it, MUST return an error.
 
 ## References
-[OID4VP Section 8.4]
+[OpenID4VP], Section 8.4
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. The Wallet engages with the verifier.

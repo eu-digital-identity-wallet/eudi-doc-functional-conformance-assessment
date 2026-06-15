@@ -4,7 +4,7 @@
 Test that the claims path pointer does not contain exactly two components then abort processing and return an error.
 
 ## References
-[OID4VP 7]
+[OpenID4VP], Section 7
 
 ## Profile applicability
 claims path pointer when applied to a credential in ISO mdoc
@@ -14,6 +14,7 @@ EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. Engage wallet-verifier interaction.

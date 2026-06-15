@@ -4,19 +4,20 @@
 Verify that Wallet supports ISO mdoc in the presentation flow. 
 
 ## References
-[OIDF.HAIP] section 5 (introduction)
-[OIDF.HAIP] section 5.3.1
-[OIDF.HAIP] section 6
-[OIDF.OID4VP] appendix B.2
+[HAIP] section 5 (introduction)
+[HAIP] section 5.3.1
+[HAIP] section 6
+[OpenID4VP] appendix B.2
 
 ## Profile applicability
 Wallet supports ISO mdoc
 
 ## EUDI-wallet relevancy
-EUDI_generic, EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. End-user interacts with the Verifier, triggering the Verifier to send a presentation request.

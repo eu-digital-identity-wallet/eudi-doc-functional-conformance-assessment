@@ -4,18 +4,19 @@
 Verify that if both A128GCM and A256GCM are supported for the JWE `enc` (encryption algorithm), Wallet will use A256GCM for the JWE `enc`
 
 ## References
-[OIDF.HAIP] section 5 (introduction) 
-[OIDF.OID4VP] section 8.3
+[HAIP] section 5 (introduction) 
+[OpenID4VP] section 8.3
 [RFC7516] section 4.1.2
 
 ## Profile applicability
 Wallet supports A128GCM and A256GCM
 
 ## EUDI-wallet relevancy
-EUDI_generic, EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. End-user interacts with the Verifier, triggering the Verifier to send a presentation request.

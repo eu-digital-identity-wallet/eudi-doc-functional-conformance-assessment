@@ -4,10 +4,13 @@
 Verify that when the Wallet receives a Request Object using an X.509-based Client Identifier Prefix (x509_san_dns or x509_hash) signed with the private key corresponding to the public key in the leaf certificate of the x5c JOSE header chain, the Wallet successfully verifies the signature.
 
 ## References
-[OIDF.OID4VP] section 5.9.3; [RFC7515]
+
+- [OpenID4VP] Section 5.9.3
+- [RFC7515]
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required

@@ -4,16 +4,18 @@
 Verify that when the Wallet uses a Client Identifier Prefix that precludes signed Request Objects (e.g. redirect_uri:), the Wallet does NOT include the request_object_signing_alg_values_supported parameter in wallet_metadata.
 
 ## References
-[OIDF.OID4VP] section 5.10
+[OpenID4VP] section 5.10
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. Engage wallet-verifier interaction (e.g. click link / scan QR code).

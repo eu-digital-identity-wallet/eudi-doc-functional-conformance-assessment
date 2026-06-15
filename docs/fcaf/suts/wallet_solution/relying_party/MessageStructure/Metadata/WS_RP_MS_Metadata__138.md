@@ -4,16 +4,18 @@
 Verify that when the Wallet sent a wallet_nonce in the POST request and the received Request Object contains the matching wallet_nonce claim, the Wallet validates the match and continues processing.
 
 ## References
-[OIDF.OID4VP] section 5.10.1
+[OpenID4VP] section 5.10.1
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. Engage wallet-verifier interaction (e.g. click link / scan QR code).

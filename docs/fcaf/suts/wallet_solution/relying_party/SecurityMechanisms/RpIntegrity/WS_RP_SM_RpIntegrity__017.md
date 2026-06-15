@@ -4,16 +4,18 @@
 Verify that when the Wallet receives a Request Object using an X.509-based Client Identifier Prefix where the X.509 trust chain is incomplete or leads to an untrusted root, the Wallet rejects the request.
 
 ## References
-[OIDF.OID4VP] section 5.9.3
+[OpenID4VP] section 5.9.3
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. Engage wallet-verifier interaction (e.g. click link / scan QR code).

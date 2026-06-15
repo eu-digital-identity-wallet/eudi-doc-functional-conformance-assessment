@@ -4,16 +4,17 @@
 Verify that the Wallet processes an Authorization Request containing either a dcql_query parameter, or  ascope parameter representing a DCQL Query.
 
 ## References
-[OIDF.OID4VP] section 5.1
+[OpenID4VP] section 5.1
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_forbidden
 
 ## Preconditions
-Need to check if EUDIW supports both by DCQL and scopes - and if scopes are supported which values are defined.
+TODO: Need to check if EUDIW supports both by DCQL and scopes - and if scopes are supported which values are defined.
 
 ## Test Scenario
 1. Engage wallet-verifier interaction (e.g. click link / scan QR code).

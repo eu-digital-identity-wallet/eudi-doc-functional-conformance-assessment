@@ -4,10 +4,11 @@
 Test that when the wallet returns a vp_token parameter for a multi-credential request, all returned key-value pairs simultaneously and correctly match their respective credential queries.
 
 ## References
-[OID4VP Section 8]
+[OpenID4VP], Section 8
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required

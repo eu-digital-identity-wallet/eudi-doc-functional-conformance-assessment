@@ -4,13 +4,13 @@
 Verify that Wallet includes in its metadata information related to other hash algorithms supported, if the Wallet profile allows other hash algorithms
 
 ## References
-[OIDF.HAIP] section 8
+[HAIP] section 8
 
 ## Profile applicability
 Wallet supports other hash algorithms besides SHA-256.
 
 ## EUDI-wallet relevancy
-EUDI_generic, EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 There is a defined mechanism for this Wallet profile, through which Verifier receives Wallet Metadata.

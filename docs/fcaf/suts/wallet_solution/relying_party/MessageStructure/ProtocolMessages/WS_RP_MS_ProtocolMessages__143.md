@@ -4,16 +4,18 @@
 Test the Wallet responds with invalid_request when the Wallet does not support the Client Identifier Prefix passed in the Authorization Request.
 
 ## References
-[OID4VP] Sections 8.5, 5.9.3
+[OpenID4VP] Sections 8.5, 5.9.3
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. The Wallet engages with the verifier.

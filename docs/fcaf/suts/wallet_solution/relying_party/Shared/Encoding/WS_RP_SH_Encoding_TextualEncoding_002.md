@@ -4,7 +4,7 @@
 Test that a null value indicates that all elements of the currently selected array(s) are to be selected.
 
 ## References
-[OID4VP 7]
+[OpenID4VP], Section 7
 
 ## Profile applicability
 claims path pointer when applied to a JSON-based Credential

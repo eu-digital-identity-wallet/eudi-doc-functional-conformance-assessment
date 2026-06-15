@@ -4,16 +4,21 @@
 Verify that the Wallet can process a plain RFC9700 Authorization Request where parameters are passed directly as URL-encoded parameters (not as a Request Object, not signed).
 
 ## References
-[RFC6749]; [RFC9700]; [OIDF.OID4VP] section 5
+
+- [RFC6749]
+- [RFC9700]
+- [OpenID4VP] Section 5
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_undefined
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. Engage wallet-verifier interaction (e.g. click link / scan QR code).

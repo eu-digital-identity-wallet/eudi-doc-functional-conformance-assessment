@@ -4,16 +4,19 @@
 Test that the Wallet returns an error if a request contains even one unrecognized transaction data type or transaction data not conforming to the respective type definition.
 
 ## References
-[OIDF.OID4VP] section 5.1; [OIDF.OID4VP] section 8.4
+
+[OpenID4VP] Sections 5.1, 8.4
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. Engage wallet-verifier interaction (e.g. click link / scan QR code).

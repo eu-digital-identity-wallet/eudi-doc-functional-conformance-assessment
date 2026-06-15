@@ -4,10 +4,11 @@
 Test the wallet returns the error message: wallet_unavailable when the device the wallet is located on is under extreme load and hence is out of RAM/ disk space.
 
 ## References
-[OID4VP Section 8]
+[OpenID4VP], Section 8
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required

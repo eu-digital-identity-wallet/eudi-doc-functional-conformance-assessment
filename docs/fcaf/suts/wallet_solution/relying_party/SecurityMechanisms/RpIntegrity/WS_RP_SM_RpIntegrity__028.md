@@ -4,16 +4,17 @@
 Verify that Wallet supports unsigned, requests.
 
 ## References
-[OIDF.HAIP] section 5.2 
+[HAIP] section 5.2 
 
 ## Profile applicability
 Presentations via the W3C Digital Credentials API or equivalent platform.
 
 ## EUDI-wallet relevancy
-EUDI_generic, EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. End-user interacts with the Verifier, triggering the Verifier to send a presentation request.

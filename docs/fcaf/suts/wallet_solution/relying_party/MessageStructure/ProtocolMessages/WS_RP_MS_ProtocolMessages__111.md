@@ -4,16 +4,18 @@
 Test the Wallet checks a claims object property "id" must be a non-empty.
 
 ## References
-[OID4VP] Sections 6.3, 8.5
+[OpenID4VP] Sections 6.3, 8.5
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. The Wallet engages with the Verifier.

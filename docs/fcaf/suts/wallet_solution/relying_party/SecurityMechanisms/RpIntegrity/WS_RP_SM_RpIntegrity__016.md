@@ -4,10 +4,11 @@
 Verify that when the Wallet receives a Request Object using an X.509-based Client Identifier Prefix with a valid signature and a complete X.509 trust chain leading to a trusted root, the Wallet validates both the signature and the chain.
 
 ## References
-[OIDF.OID4VP] section 5.9.3
+[OpenID4VP] section 5.9.3
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required

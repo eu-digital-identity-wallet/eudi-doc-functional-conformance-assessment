@@ -4,16 +4,19 @@
 Verify that when the Wallet receives an Authorization Request that contains a valid nonce parameter, the wallet will accept the Authorization Request.
 
 ## References
-[OIDF.OID4VP] section 5.2, section 14.1
+
+[OpenID4VP] Sections 5.2, 14.1
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. Engage wallet-verifier interaction (e.g. click link / scan QR code).

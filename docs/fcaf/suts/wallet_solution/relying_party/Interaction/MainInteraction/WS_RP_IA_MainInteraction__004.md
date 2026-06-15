@@ -4,10 +4,11 @@
 Test the Wallet accepts and processes DCQL-query with credential property "trusted_authorities", but handles the situation when it does not have any credential issued by an Issuer matching one of the Issuers identified in 'trusted_authorities'.
 
 ## References
-[OID4VP 6.1]
+[OpenID4VP], Section 6.1
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required

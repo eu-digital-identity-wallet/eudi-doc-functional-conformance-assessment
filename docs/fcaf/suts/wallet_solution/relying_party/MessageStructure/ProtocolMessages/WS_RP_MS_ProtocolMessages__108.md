@@ -4,16 +4,18 @@
 Test that the Wallet will not accept a DCQL query if "claims" property "id" is not present, when claim_sets is present.
 
 ## References
-[OID4VP] sections 6.3, 8.5
+[OpenID4VP] sections 6.3, 8.5
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. The Wallet engages with the Verifier.

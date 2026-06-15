@@ -4,7 +4,7 @@
 Test that a non-negative integer indicates that the respective index in an array is to be selected.
 
 ## References
-[OID4VP 7]
+[OpenID4VP], Section 7
 
 ## Profile applicability
 claims path pointer when applied to a JSON-based Credential

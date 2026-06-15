@@ -4,10 +4,11 @@
 Test that the Wallet processes DCQL-query with credential property "require_cryptographic_holder_binding" with value `false`, by handling credentials with cryptographic holder binding.
 
 ## References
-[OID4VP 6.1]
+[OpenID4VP], Section 6.1
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required

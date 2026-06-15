@@ -4,16 +4,18 @@
 Verify that when the Wallet receives a signed Authorization Request using the redirect_uri Client Identifier Prefix, it rejects the request since the redirect_uri prefix cannot be used with signed requests.
 
 ## References
-[OIDF.OID4VP] section 5.9.3
+[OpenID4VP] section 5.9.3
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_forbidden
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. Engage wallet-verifier interaction (e.g. click link / scan QR code).

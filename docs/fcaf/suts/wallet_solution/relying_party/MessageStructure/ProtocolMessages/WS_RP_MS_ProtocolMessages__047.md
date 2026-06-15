@@ -4,16 +4,20 @@
 Verify that when the Wallet receives the Request URI response, it has Content-Type application/oauth-authz-req+jwt and the body is a signed (optionally encrypted) Request Object conforming to RFC9101.
 
 ## References
-[OIDF.OID4VP] section 5.10.1; [RFC9101]
+
+- [OpenID4VP] Section 5.10.1
+- [RFC9101]
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. Engage wallet-verifier interaction (e.g. click link / scan QR code).

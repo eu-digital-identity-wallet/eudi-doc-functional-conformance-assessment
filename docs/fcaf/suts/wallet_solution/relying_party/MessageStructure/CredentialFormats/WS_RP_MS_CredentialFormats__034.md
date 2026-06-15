@@ -4,7 +4,7 @@
 Test that when a wallet matches a mdoc-based Credential, the CBOR values are matched by first converting to JSON.
 
 ## References
-[OID4VP 6.3]
+[OpenID4VP], Section 6.3
 Section 6.1 of [RFC8949]
 
 ## Profile applicability
@@ -15,6 +15,7 @@ EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. The Wallet engages with the Verifier.

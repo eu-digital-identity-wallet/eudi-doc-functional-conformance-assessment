@@ -4,8 +4,9 @@
 Verify that if the Wallet encrypts the Authorization Response it uses an unsigned, encrypted JWT.
 
 ## References
-[OID4VP Section 8]
-[RFC7519]  
+
+- [OpenID4VP] Section 8
+- [RFC7519]
 
 ## Profile applicability
 Encrypted response
@@ -15,6 +16,7 @@ EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. The wallet engages with the verifier.

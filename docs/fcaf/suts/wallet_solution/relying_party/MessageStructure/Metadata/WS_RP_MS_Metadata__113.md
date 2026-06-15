@@ -4,16 +4,18 @@
 Verify that when the Wallet receives an Authorization Request using the openid_federation Client Identifier Prefix containing a trust_chain parameter that cannot be validated, the Wallet rejects the request in accordance with its trust policy.
 
 ## References
-[OIDF.OID4VP] section 5.9.3
+[OpenID4VP] section 5.9.3
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_forbidden
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. Engage wallet-verifier interaction (e.g. click link / scan QR code).

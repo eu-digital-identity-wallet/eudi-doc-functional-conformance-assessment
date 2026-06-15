@@ -4,16 +4,18 @@
 Test the Wallet rejects a DCQL-query with credential property "require_cryptographic_holder_binding" present but in incorrect format (i.e. not a boolean)
 
 ## References
-[OID4VP] sections 6.1, 8.5
+[OpenID4VP] sections 6.1, 8.5
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. The Wallet engages with the Verifier.

@@ -4,9 +4,10 @@
 Verify that when Wallet uses `cnf` claim within the SD-JWT component of the SD-JWT VC as described in [I-D.ietf-oauth-sd-jwt-vc], the KB-JWT in the presentation of the SD-JWT is secured by the key identified in `cnf` claim.
 
 ## References
-[OIDF.HAIP] section 6.1
-[RFC7800]
-[I-D.ietf-oauth-sd-jwt-vc]
+
+- [HAIP] Section 6.1
+- [RFC7800]
+- [SD-JWT VC]
 
 ## Profile applicability
 Wallet supports IETF SD-JWT VC 

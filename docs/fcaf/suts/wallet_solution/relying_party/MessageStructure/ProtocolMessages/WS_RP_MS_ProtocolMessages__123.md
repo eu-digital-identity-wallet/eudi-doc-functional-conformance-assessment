@@ -4,16 +4,18 @@
 Test that when the Wallet is given an invalid claims path pointer, it will abort processing and return an error.
 
 ## References
-[OID4VP] Sections 7, 8.5
+[OpenID4VP] Sections 7, 8.5
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. Engage Wallet-verifier interaction.

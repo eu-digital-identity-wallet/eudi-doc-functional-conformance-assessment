@@ -4,19 +4,20 @@
 Verify that Wallet supports IETF SD-JWT VC in the presentation flow. 
 
 ## References
-[OIDF.HAIP] section 5 (introduction)
-[OIDF.HAIP] section 5.3.2
-[OIDF.HAIP] section 6
-[OIDF.OID4VP] appendix B.3
+[HAIP] section 5 (introduction)
+[HAIP] section 5.3.2
+[HAIP] section 6
+[OpenID4VP] appendix B.3
 
 ## Profile applicability
 Wallet supports IETF SD-JWT VC
 
 ## EUDI-wallet relevancy
-EUDI_generic, EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. End-user interacts with the Verifier, triggering the Verifier to send a presentation request.

@@ -4,10 +4,11 @@
 Test that when a claim_sets is present, the Wallet automatically selects and returns only the first satisfiable combination from claim_sets based on the verifier's preference order, preventing disclosure of multiple sets.
 
 ## References
-[OID4VP 6.4]
+[OpenID4VP], Section 6.4
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required

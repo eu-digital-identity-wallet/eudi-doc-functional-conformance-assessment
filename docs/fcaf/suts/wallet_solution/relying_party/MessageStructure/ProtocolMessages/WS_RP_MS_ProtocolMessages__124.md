@@ -4,16 +4,18 @@
 Test that the Wallet ignores any unrecognized parameters when Response Mode = direct_post.jwt.
 
 ## References
-[OID4VP Section 8.2]
+[OpenID4VP], Section 8.2
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. The Wallet engages with the verifier.

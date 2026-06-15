@@ -4,8 +4,9 @@
 Verify the HAIP requirement that, in the presentation flow via Redirects, Wallet raises an error if Verifier does not include `redirect_uri` in the HTTP response to the Wallet's HTTP POST to the `response_uri`, as defined in section 8.2 of [OIDF.OID4VP].
 
 ## References
-[OIDF.HAIP] section 5.1 
-[OIDF.OID4VP] section 8.2
+
+- [HAIP] Section 5.1
+- [OpenID4VP] Section 8.2
 
 ## Profile applicability
 Same device
@@ -13,10 +14,11 @@ response_mode=direct_post.jwt
 OIDF.HAIP
 
 ## EUDI-wallet relevancy
-EUDI_generic, EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. End-user interacts with the Verifier, triggering the Verifier to send a presentation request. 

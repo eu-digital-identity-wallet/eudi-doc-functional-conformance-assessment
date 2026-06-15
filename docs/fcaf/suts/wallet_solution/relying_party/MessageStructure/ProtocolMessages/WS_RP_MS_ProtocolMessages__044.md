@@ -4,16 +4,18 @@
 Verify that when the Wallet sends a POST request to the Verifier's Request URI Endpoint, all names and values in the request body are encoded using UTF-8.
 
 ## References
-[OIDF.OID4VP] section 5.10
+[OpenID4VP] section 5.10
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. Engage wallet-verifier interaction (e.g. click link / scan QR code).

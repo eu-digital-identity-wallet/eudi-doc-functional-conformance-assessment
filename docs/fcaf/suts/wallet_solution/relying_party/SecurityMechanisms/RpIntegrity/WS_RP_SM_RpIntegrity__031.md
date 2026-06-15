@@ -4,16 +4,17 @@
 Verify that Wallet supports ECDSA with P-256 and SHA-256 (JOSE algorithm identifier ES256) for validating signed presentation requests.
 
 ## References
-[OIDF.HAIP] section 7 
+[HAIP] section 7 
 
 ## Profile applicability
 JOSE algorithm identifier ES256
 
 ## EUDI-wallet relevancy
-EUDI_generic, EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. Verify that Wallet receives signed request using ECDSA with P-256 and SHA-256 (JOSE algorithm identifier ES256) from the Verifier.

@@ -4,16 +4,18 @@
 Test that the Wallet will NOT accept a DCQL query with credentials with a claims property but without a claims "path" property.
 
 ## References
-[OID4VP] Sections 6.3, 8.5
+[OpenID4VP] Sections 6.3, 8.5
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. The Wallet engages with the Verifier.

@@ -4,16 +4,19 @@
 Verify that when the Authorization Request contains a request_uri parameter and request_uri_method = "post", a Wallet that supports POST retrieves the Request Object using HTTP POST as defined in OID4VP Section 5.10.
 
 ## References
-[OIDF.OID4VP] section 5.1; [OIDF.OID4VP] section 5.10
+
+[OpenID4VP] Sections 5.1, 5.10
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. Engage wallet-verifier interaction (e.g. click link / scan QR code).

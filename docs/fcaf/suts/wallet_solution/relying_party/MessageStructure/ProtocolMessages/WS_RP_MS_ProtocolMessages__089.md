@@ -4,16 +4,18 @@
 Test the Wallet Rejects a DCQL-query with a constraint on "trusted_authorities" with a missing `type`.
 
 ## References
-[OID4VP] sections 6.1.1, 8.5
+[OpenID4VP] sections 6.1.1, 8.5
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. The Wallet engages with the Verifier.

@@ -4,16 +4,18 @@
 Test that if the wallet can only return part of the claims in the claim_sets object, it will not return that set but move onto next one.
 
 ## References
-[OID4VP 6.4]
+[OpenID4VP], Section 6.4
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 Verifier sends a claim_set requiring 3 claims, but the Wallet only has 2 of them, it MUST NOT return that set. It must move to the next option in the array.

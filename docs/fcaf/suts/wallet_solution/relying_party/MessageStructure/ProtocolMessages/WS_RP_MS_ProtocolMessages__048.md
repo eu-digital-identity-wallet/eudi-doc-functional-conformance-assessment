@@ -4,16 +4,20 @@
 Verify that when the Wallet receives a Request URI response with an incorrect Content-Type (not application/oauth-authz-req+jwt), the Wallet rejects or fails to parse the response.
 
 ## References
-[OIDF.OID4VP] sections 8.5, 5.10.1; [RFC9101]
+
+- [OpenID4VP] Sections 8.5, 5.10.1
+- [RFC9101]
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. Engage wallet-verifier interaction (e.g. click link / scan QR code).
