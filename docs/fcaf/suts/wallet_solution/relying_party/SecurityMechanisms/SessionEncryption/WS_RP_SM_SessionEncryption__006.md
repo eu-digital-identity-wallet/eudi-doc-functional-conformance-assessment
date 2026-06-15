@@ -5,7 +5,7 @@ Verify that Wallet raises an error if there is no `jwk` within `client_metadata`
 
 ## References
 [HAIP] section 5 (introduction) 
-[OpenID4VP] section 8.3 The alg parameter MUST be present in the JWKs
+TODO: [OpenID4VP] section 8.3 The alg parameter MUST be present in the JWKs
 [RFC7516] section 4.1.1
 [RFC7518] section 6.2.1.1
 

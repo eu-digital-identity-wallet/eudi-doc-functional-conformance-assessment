@@ -5,7 +5,7 @@ Verify that Wallet uses MSO revocation mechanism following requirements defined 
 
 ## References
 [HAIP] section 5.3.1
-[ISO/IEC 18013-5] MSO revocation
+TODO: [ISO/IEC 18013-5.second.edition] MSO revocation
 
 ## Profile applicability
 Wallet supports ISO mdoc

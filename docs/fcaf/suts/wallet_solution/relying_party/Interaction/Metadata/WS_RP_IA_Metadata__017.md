@@ -4,7 +4,7 @@
 Verify that Wallet states explicit in its metadata which other algorithms and key types are supported for the cryptographic operations.
 
 ## References
-[HAIP] section 7
+[HAIP] Section 7
 
 ## Profile applicability
 Wallet supports other crypto suites

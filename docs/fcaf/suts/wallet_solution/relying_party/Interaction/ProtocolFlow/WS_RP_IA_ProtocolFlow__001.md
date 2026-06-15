@@ -4,7 +4,7 @@
 Verify that when the Wallet receives a Request Object via the Request URI flow, it extracts the set of Authorization Request parameters from the Request Object and uses them for further processing.
 
 ## References
-[OpenID4VP] section 5.10.1
+[OpenID4VP] Section 5.10.1
 
 ## Profile applicability
 
