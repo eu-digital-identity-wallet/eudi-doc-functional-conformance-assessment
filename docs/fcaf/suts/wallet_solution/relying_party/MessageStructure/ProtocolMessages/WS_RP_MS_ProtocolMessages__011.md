@@ -6,7 +6,6 @@ Test that wallet continues with JAR when it receives a request_uri_method with t
 ## References
 - [RFC9101]
 - [OpenID4VP] Sections 5, 6.4
-- [DCQL]
 
 ## Profile applicability
 Wallet does not support POST method
