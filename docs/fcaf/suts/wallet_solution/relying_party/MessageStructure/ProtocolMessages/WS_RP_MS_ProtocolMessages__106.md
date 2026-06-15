@@ -1,10 +1,10 @@
 # WS_RP_MS_ProtocolMessages_106
 
 ## Objective
-test the wallet will not attempt to return a credential when it cant find one due to "path"
+test the Wallet will not attempt to return a credential when it can't find one due to "path".
 
 ## References
-[OID4VP 6.3]
+[OID4VP] sections 6.3, 8.5
 
 ## Profile applicability
 
@@ -16,8 +16,8 @@ EUDI_generic | EUDI_required
 
 
 ## Test Scenario
-1. The Wallet engages with the Verifier
-2. Verifier sends a DCQL query with a path that doesn not exist in any of wallets credentials
+1. The Wallet engages with the Verifier.
+2. Verifier sends a DCQL query with a path that does not exist in any of the wallets credentials
 3. Wallet handles Query
 
 ## Expected results

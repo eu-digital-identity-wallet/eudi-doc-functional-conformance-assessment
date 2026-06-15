@@ -16,10 +16,9 @@ EUDI_generic | EUDI_required
 Wallet has data for #2 and #3 of verifiers claim_sets
 
 ## Test Scenario
-1. The Wallet engages with the Verifier
+1. The Wallet engages with the Verifier.
 2. Verifier sends claim_sets with 3 options (#1,#2,#3)
 
 ## Expected results
 1. Wallet and Verifier can interact.
 2. Wallet responds with #2
-

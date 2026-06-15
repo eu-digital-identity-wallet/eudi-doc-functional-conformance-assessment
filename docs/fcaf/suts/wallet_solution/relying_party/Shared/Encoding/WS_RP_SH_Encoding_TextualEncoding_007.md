@@ -4,7 +4,7 @@
 Test that when processing claims path pointer array, an element at the first level is selected. If the selected element is not an object, abort processing and return an error
 
 ## References
-[OID4VP 7]
+[OID4VP] Section 7.2.1, 7.3
 
 ## Profile applicability
 claims path pointer when applied to a JSON-based Credential
@@ -32,10 +32,10 @@ The wallet contains the credentials
     }
   ],
   "nationalities": ["British", "Betelgeusian"]
-
+}
 ## Test Scenario
 1. Engage wallet-verifier interaction.
-2. Verifier sends an Authorization Request with a DCQL query containing a claims path pointer where a string element is applied to a value that is NOT a JSON object (e.g. path: ["name", "firstname"] where name is a string).
+2. Verifier sends an Authorization Request with a DCQL query containing a claims path pointer where a string element is applied to a value that is NOT a JSON object (e.g. claims path pointer: ["name", "firstname"] where name is a string).
 3. Wallet parses the Authorization Request and the DCQL query.
 4. Wallet evaluates the claims path pointer against the matching JSON-based Credential.
 5. Wallet detects that the currently selected element is not an object when the string path element is applied.

@@ -4,7 +4,7 @@
 Test that the claims path pointer array is processed left to right
 
 ## References
-[OID4VP 7]
+[OID4VP 7] Section 7.1.1
 
 ## Profile applicability
 claims path pointer when applied to a JSON-based Credential
@@ -31,6 +31,7 @@ EUDI_generic | EUDI_required
     }
   ],
   "nationalities": ["British", "Betelgeusian"]
+}
 
 ## Test Scenario
 1. The Wallet engages with the Verifier
@@ -41,6 +42,6 @@ EUDI_generic | EUDI_required
 ## Expected results
 1. Wallet and Verifier can interact.
 2. Wallet receives the request.
-3. True
+3. Wallet successfully parses the request.
 4. Verify the wallet responds with an error
 

@@ -10,7 +10,7 @@ Verify that when the Wallet receives a Request Object using the verifier_attesta
 
 
 ## EUDI-wallet relevancy
-EUDI_generic |  EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 

@@ -1,14 +1,11 @@
-# EuPid_DM_ExpiryDate_02
+# WS_RP_DM_Credentialmetadata_Expirydate_PID_IETF-sd-jwt-vc_002
 
 ## Objective
-This test case verifies that the claim expiry_date is a String enconded in UTF-8.
+This test case verifies that the claim `date_of_expiry` is a String encoded in UTF-8. Note that `date_of_expiry` is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier expiry_date. 
 
 ## References
-European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook, paragraph 3.1.1   
-“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 item 4 (Table 8).  
- RFC 7049 section 2.1, 2.4  
- RFC 8610 Appendix D  
- RFC 8943 section 2.1
+European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook.   
+"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 item 4 (Table 8).  
 
 ## EUDI-wallet relevancy
 EUDI_specific | EUDI_required
@@ -18,12 +15,12 @@ The EUDI wallet contains a Credential in IETF SD-JWT VC format. `vct` claim incl
 
 ## Preconditions
 A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.  
-B. All mandatory data elements within nameSpace  "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
+B. All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
 C. EUDI wallet presented the Credential successfully. 
-D. The presence of claim expiry_date in the IETF SD-JWT VC Credential presented was verified.
+D. The presence of claim `date_of_expiry` in the IETF SD-JWT VC Credential presented was verified.
 
 ## Test Scenario
-1. Verify that the claim expiry_date is a String encoded in UTF-8, supporting the full unicode range
+1. Verify that the claim `date_of_expiry` is a String encoded in UTF-8, supporting the full Unicode range.
 
 ## Expected results
-1. The claim expiry_date is a String encoded in UTF-8, supporting the full unicode range.
+1. The claim `date_of_expiry` is a String encoded in UTF-8, supporting the full Unicode range.

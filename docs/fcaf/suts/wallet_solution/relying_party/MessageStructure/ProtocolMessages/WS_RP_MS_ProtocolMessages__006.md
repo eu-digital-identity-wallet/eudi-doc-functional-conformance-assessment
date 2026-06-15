@@ -1,7 +1,7 @@
 # WS_RP_MS_ProtocolMessages_006
 
 ## Objective
- Verify that the Wallet rejects a Request Object where the typ header parameter is missing.
+Verify that the Wallet rejects a Request Object where the typ header parameter is missing.
 
 ## References
 [RFC9101]; [OIDF.OID4VP] section 5
@@ -10,7 +10,7 @@
 
 
 ## EUDI-wallet relevancy
-EUDI_generic |  EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 

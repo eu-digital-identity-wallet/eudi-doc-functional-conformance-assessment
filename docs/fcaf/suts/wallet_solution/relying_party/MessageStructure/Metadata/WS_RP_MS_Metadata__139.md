@@ -10,7 +10,7 @@ Verify that when the Wallet sent a wallet_nonce in the POST request and the rece
 
 
 ## EUDI-wallet relevancy
-EUDI_generic |  EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 
@@ -25,7 +25,7 @@ EUDI_generic |  EUDI_required
 ## Expected results
 1. Wallet-verifier interaction is successfully initiated.
 2. Wallet successfully receives the Authorization Request.
-3. wallet_nonce is correctly sent in the POST request.
+3. Wallet_nonce is correctly sent in the POST request.
 4. Wallet successfully receives the Request Object.
-5. Wallet terminates request processing and returns an invalid_request error due to wallet_nonce mismatch; presentation flow is not initiated.
+5. Wallet terminates request processing due to wallet_nonce mismatch; presentation flow is not initiated.
 

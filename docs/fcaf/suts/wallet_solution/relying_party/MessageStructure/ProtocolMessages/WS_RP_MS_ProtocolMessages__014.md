@@ -10,10 +10,10 @@ Verify that the Wallet returns an error and does not initiate the presentation f
 
 
 ## EUDI-wallet relevancy
-EUDI_generic |  EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
-Wallet contains a credential matching the request.
+Wallet does not hold a matching credential.
 
 ## Test Scenario
 1. Engage wallet-verifier interaction (e.g. click link / scan QR code).

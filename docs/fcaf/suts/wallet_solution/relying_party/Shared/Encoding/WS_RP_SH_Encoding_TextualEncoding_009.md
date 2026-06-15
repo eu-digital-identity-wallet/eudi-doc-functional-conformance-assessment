@@ -4,7 +4,7 @@
 Test that at step 2.2 of claims path processing if any of the currently selected element(s) is not an array, abort processing and return an error.
 
 ## References
-[OID4VP 7]
+[OID4VP 7] Section 7.2.1, 7.3
 
 ## Profile applicability
 claims path pointer when applied to a JSON-based Credential
@@ -31,10 +31,10 @@ EUDI_generic | EUDI_required
     }
   ],
   "nationalities": ["British", "Betelgeusian"]
-
+}
 ## Test Scenario
 1. Engage wallet-verifier interaction.
-2. Verifier sends an Authorization Request with a DCQL query containing a claims path pointer where a null component is applied to a currently selected element that is NOT an array (e.g. path: ["address", null, "street_address"] where address is a JSON object rather than an array).
+2. Verifier sends an Authorization Request with a DCQL query containing a claims path pointer where a null component is applied to a currently selected element that is NOT an array (e.g. claims path pointer: ["address", null, "street_address"] where address is a JSON object rather than an array).
 3. Wallet parses the Authorization Request and the DCQL query.
 4. Wallet evaluates the claims path pointer against the matching JSON-based Credential.
 5. Wallet detects that the currently selected element is not an array when the null component is applied.

@@ -1,10 +1,10 @@
 # WS_RP_MS_ProtocolMessages_126
 
 ## Objective
-Test that Wallet returns an error after an HTTP error response from the verifier
+Test that Wallet returns an error after an HTTP error response from the Verifier.
 
 ## References
-[OID4VP Section 8]
+[OID4VP] Sections 8.2, 8.5
 
 ## Profile applicability
 
@@ -16,16 +16,15 @@ EUDI_generic | EUDI_required
 
 
 ## Test Scenario
-1. The wallet engages with the verifier
-2. The verifier sends a request, with parameter `response_mode=direct_post'
-3. The wallet processes the request.
-4. The wallet responds with request object
-5. Verifier sends a HTTP status code of 400 + a JSON body
+1. The Wallet engages with the verifier.
+2. The Verifier sends a request, with parameter 'response_mode=direct_post.jwt'.
+3. The Wallet processes the request.
+4. The Wallet responds with request object.
+5. Verifier sends an HTTP status code of 400 + a JSON body.
 
 ## Expected results
-1. Wallet-verifier interaction is successfully initiated
-2. Wallet receives request
-3. True
-4. True
-5. Wallet returns an error without crashing
-
+1. Wallet-verifier interaction is successfully initiated.
+2. Wallet receives request.
+3. The wallet evaluates the request and proceeds without returning an error.
+4. The wallet submits the Authorization Response to the verifier's response_uri.
+5. Wallet returns an error without crashing.

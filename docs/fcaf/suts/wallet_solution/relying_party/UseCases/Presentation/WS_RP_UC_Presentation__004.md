@@ -10,7 +10,7 @@ Verify that when an Authorization Request is rendered on Device A using the invo
 Wallet supports DC API cross-device flow (Appendix A); HAIP/ETSI profile defines cross-device requirements
 
 ## EUDI-wallet relevancy
-EUDI_generic |  EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 

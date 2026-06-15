@@ -1,7 +1,7 @@
 # WS_RP_MS_Metadata_106
 
 ## Objective
-Verify that when the client_metadata parameter is included in an Authorization Request, it is a valid UTF-8 encoded JSON object and that the Wallet processes only the defined metadata parameters.
+VVerify that the Wallet rejects the Authorization Request when the client_metadata parameter is not a valid UTF-8 encoded JSON object, returning an invalid_request error.
 
 ## References
 [OIDF.OID4VP] section 5.1
@@ -10,7 +10,7 @@ Verify that when the client_metadata parameter is included in an Authorization R
 
 
 ## EUDI-wallet relevancy
-EUDI_generic |  EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 

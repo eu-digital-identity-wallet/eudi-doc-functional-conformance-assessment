@@ -16,8 +16,8 @@ EUDI_generic | EUDI_required
 
 
 ## Test Scenario
-1. The Wallet engages with the Verifier
-2. The Verifier sends a Authorization Request with a valid DCQL-query without a "credential_sets" property.
+1. The Wallet engages with the Verifier.
+2. The Verifier sends an Authorization Request with a valid DCQL-query without a "credential_sets" property.
 3. The Wallet evaluates the request.
 
 ## Expected results

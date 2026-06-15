@@ -1,7 +1,7 @@
 # WS_RP_MS_ProtocolMessages_036
 
 ## Objective
- Test that when wallet receives a response_type of "vp_token" in an Authorization Request, that a successful response includes the vp_token parameter.
+Test that when wallet receives a response_type of "vp_token" in an Authorization Request, that a successful response includes the vp_token parameter.
 
 ## References
 [OIDF.OID4VP] section 5.6
@@ -10,7 +10,7 @@
 
 
 ## EUDI-wallet relevancy
-EUDI_generic |  EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 

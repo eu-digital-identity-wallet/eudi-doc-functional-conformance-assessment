@@ -10,7 +10,7 @@ Verify that when the Wallet is configured to validate signatures on Request Obje
 DC API
 
 ## EUDI-wallet relevancy
-EUDI_generic |  EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 

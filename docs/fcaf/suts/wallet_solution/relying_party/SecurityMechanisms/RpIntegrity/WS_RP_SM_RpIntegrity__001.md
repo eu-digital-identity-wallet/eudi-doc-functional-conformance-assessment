@@ -4,7 +4,7 @@
 Verify that when the Wallet uses information from a verifier_info attestation and signature validation or binding verification fails, the Wallet rejects the Authorization Request.
 
 ## References
-[OIDF.OID4VP] Section 5.1
+[OIDF.OID4VP] Section 5.1 and 5.11
 
 ## Profile applicability
 
@@ -13,6 +13,7 @@ Verify that when the Wallet uses information from a verifier_info attestation an
 EUDI_generic | EUDI_optional
 
 ## Preconditions
+Wallet elected to use verifier_info
 
 
 ## Test Scenario

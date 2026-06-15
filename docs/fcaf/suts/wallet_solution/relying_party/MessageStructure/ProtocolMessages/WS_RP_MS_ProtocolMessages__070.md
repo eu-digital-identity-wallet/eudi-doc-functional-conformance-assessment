@@ -1,7 +1,7 @@
 # WS_RP_MS_ProtocolMessages_070
 
 ## Objective
-Test the wallet handles DCQL-query when credentials "multiple" property is omitted, as having the default value "false".
+Test the Wallet handles DCQL-query when credentials "multiple" property is omitted, as having the default value "false".
 
 ## References
 [OID4VP 6.1]
@@ -16,8 +16,8 @@ EUDI_generic | EUDI_required
 The wallet contains more than one credential matching the request.
 
 ## Test Scenario
-1. The Wallet engages with the Verifier
-2. The Verifier sends a Authorization Request with a DCQL-query with a credential without the "multiple" property.
+1. The Wallet engages with the Verifier.
+2. The Verifier sends an Authorization Request with a DCQL-query with a credential without the "multiple" property.
 3. The Wallet evaluates the request.
 
 ## Expected results

@@ -4,16 +4,16 @@
 Verify that when the Wallet receives a Request Object using the verifier_attestation Client Identifier Prefix where the jwt JOSE header is absent or does not contain the Verifier attestation JWT, the Wallet rejects the request.
 
 ## References
-[OIDF.OID4VP] section 5.9.3; [OIDF.OID4VP] section 12
+[OID4VP 5.9.3]; [OID4VP 12]
 
 ## Profile applicability
 
 
 ## EUDI-wallet relevancy
-EUDI_generic |  EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
-A. Verifier attestation JWT contains a cnf claim with the Verifier's public key.
+
 
 ## Test Scenario
 1. Engage wallet-verifier interaction (e.g. click link / scan QR code).
@@ -26,4 +26,3 @@ A. Verifier attestation JWT contains a cnf claim with the Verifier's public key.
 2. Wallet successfully receives the Request Object.
 3. Wallet successfully parses the Request Object JOSE header.
 4. Wallet rejects the Authorization Request and returns an invalid_request error due to missing jwt JOSE header / Verifier attestation JWT; presentation flow is not initiated.
-

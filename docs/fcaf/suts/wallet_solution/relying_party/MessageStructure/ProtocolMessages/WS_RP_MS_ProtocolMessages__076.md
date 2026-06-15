@@ -16,8 +16,8 @@ EUDI_generic | EUDI_required
 The wallet contains a credential in the requested format.
 
 ## Test Scenario
-1. The Wallet engages with the Verifier
-2. The Verifier sends a Authorization Request with a DCQL-query with a credential with the "meta" property present with an empty value and the format matching an available credential.
+1. The Wallet engages with the Verifier.
+2. The Verifier sends an Authorization Request with a DCQL-query with a credential with the "meta" property present with an empty value and the format matching an available credential.
 3. The Wallet evaluates the request.
 
 ## Expected results

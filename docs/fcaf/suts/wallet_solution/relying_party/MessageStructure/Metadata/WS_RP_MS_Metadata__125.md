@@ -10,7 +10,7 @@ Verify that when the Wallet receives a Request Object using the x509_san_dns Cli
 
 
 ## EUDI-wallet relevancy
-EUDI_generic |  EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 

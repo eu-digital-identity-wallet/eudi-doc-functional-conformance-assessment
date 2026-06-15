@@ -1,10 +1,10 @@
 # WS_RP_MS_ProtocolMessages_084
 
 ## Objective
-Test the Wallet rejects a DCQL-query with a credentials property "claims" present that is not an array.
+Test the Wallet rejects a DCQL-query with a credentials' property "claims" present that is not an array.
 
 ## References
-[OID4VP 6.1]
+[OID4VP] sections 6.1, 8.5
 
 ## Profile applicability
 
@@ -16,8 +16,8 @@ EUDI_generic | EUDI_required
 
 
 ## Test Scenario
-1. The Wallet engages with the Verifier
-2. The Verifier sends a Authorization Request with a DCQL-query with a credential with a non-array type "claims"
+1. The Wallet engages with the Verifier.
+2. The Verifier sends an Authorization Request with a DCQL-query with a credential with a non-array type "claims"
 3. The Wallet evaluates the request.
 
 ## Expected results
@@ -25,7 +25,7 @@ EUDI_generic | EUDI_required
 2. Wallet receives the request.
 
 3. Wallet rejects the request by either:
-a. answering with an error with details (`invalid_request`), 
-b. answering with an error without providing details or,
-c. discontinuing the interaction.
+    1. answering with an error with details (`invalid_request`),
+    2. answering with an error without providing details or,
+    3. discontinuing the interaction.
 

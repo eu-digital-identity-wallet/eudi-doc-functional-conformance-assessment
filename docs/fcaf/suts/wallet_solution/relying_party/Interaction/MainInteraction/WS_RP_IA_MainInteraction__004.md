@@ -16,15 +16,14 @@ EUDI_generic | EUDI_required
 The wallet contains no credential from the issuer specified in the request.
 
 ## Test Scenario
-1. The Wallet engages with the Verifier
-2. The Verifier sends a Authorization Request with a DCQL-query with a credential with a valid "trusted_authorities" property.
+1. The Wallet engages with the Verifier.
+2. The Verifier sends an Authorization Request with a DCQL-query with a credential with a valid "trusted_authorities" property.
 3. The Wallet evaluates the request.
 
 ## Expected results
 1. Wallet and Verifier can interact.
 2. Wallet receives the request.
 3. Wallet cannot respond with a Credential, by either:
-a. answering with an error with details (`access_denied`), 
+a. answering with an error with details (`access_denied`),
 b. answering with an error without providing details or,
 c. discontinuing the interaction.
-

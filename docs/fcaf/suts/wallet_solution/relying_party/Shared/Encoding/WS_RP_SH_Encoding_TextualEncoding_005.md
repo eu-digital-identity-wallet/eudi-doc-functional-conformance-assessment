@@ -4,7 +4,7 @@
 Test that the Wallet handles DCQL-query for SD-JWT VC credential with a matching top-level claim path pointer.
 
 ## References
-[OID4VP 7]
+[OID4VP 7] Section 7.1.1
 
 ## Profile applicability
 claims path pointer when applied to a JSON-based Credential
@@ -24,6 +24,6 @@ The Wallet contains an attestation with a specific top-level attribute.
 ## Expected results
 1. Wallet and Verifier can interact.
 2. Wallet receives the request.
-3. true
+3. Wallet successfully parses the request.
 4. Verify the wallet responds with the credential, including selective disclosure of the named attribute.
 

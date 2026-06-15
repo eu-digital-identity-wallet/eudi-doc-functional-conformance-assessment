@@ -4,13 +4,13 @@
 Verify that when the Wallet sends a POST request to the request_uri endpoint with a wallet_nonce and the returned Request Object contains a different or missing wallet_nonce claim, the Wallet rejects the Request Object.
 
 ## References
-[OIDF.OID4VP] section 5.10
+[OIDF.OID4VP] sections 8.5, 5.10
 
 ## Profile applicability
 
 
 ## EUDI-wallet relevancy
-EUDI_generic |  EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 

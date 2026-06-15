@@ -1,7 +1,7 @@
 # WS_RP_MS_ProtocolMessages_007
 
 ## Objective
- Verify that the Wallet rejects a Request Object where the typ header parameter does not equal oauth-authz-req+jwt.
+Verify that the Wallet rejects a Request Object where the typ header parameter does not equal oauth-authz-req+jwt.
 
 ## References
 [RFC9101]; [OIDF.OID4VP] section 5
@@ -10,7 +10,7 @@
 
 
 ## EUDI-wallet relevancy
-EUDI_generic |  EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 

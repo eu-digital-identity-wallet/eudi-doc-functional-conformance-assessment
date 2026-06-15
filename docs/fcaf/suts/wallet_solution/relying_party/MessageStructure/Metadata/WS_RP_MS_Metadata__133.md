@@ -1,7 +1,7 @@
 # WS_RP_MS_Metadata_133
 
 ## Objective
-Verify that when the Wallet receives an Authorization Request using the reserved origin: Client Identifier Prefix outside of a DC API context, the Wallet rejects the request.
+Verify that when the Wallet receives an Authorization Request using the reserved origin: Client Identifier Prefix outside a DC API context, the Wallet rejects the request.
 
 ## References
 [OIDF.OID4VP] section 5.9.3
@@ -10,7 +10,7 @@ Verify that when the Wallet receives an Authorization Request using the reserved
 
 
 ## EUDI-wallet relevancy
-EUDI_generic |  EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 

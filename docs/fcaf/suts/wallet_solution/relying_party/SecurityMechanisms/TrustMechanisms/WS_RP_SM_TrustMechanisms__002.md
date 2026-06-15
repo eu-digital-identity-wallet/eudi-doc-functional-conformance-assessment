@@ -1,14 +1,14 @@
 # WS_RP_SM_TrustMechanisms_002
 
 ## Objective
-Test that the wallet when proccessing trusted_authorites, the type "aki" is supported
+Test that the Wallet when processing trusted_authorities, the type "aki" is supported.
 
 ## References
-[OID4VP 6.1.1]
+[OID4VP 6.1.1.1]
 Section 4.2.1.1 of [RFC5280]
 
 ## Profile applicability
-Wallet supports trusted authorities query based on 'aki'
+Wallet supports trusted authorities query based on 'aki'.
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
@@ -17,12 +17,12 @@ EUDI_generic | EUDI_required
 
 
 ## Test Scenario
-1. The Wallet engages with the Verifier
-2. Verifier sends a DCQL query with a credential with a "trusted_authorities" property with its type being "aki".
-3. The Wallet evaluates the request.
+1. The Wallet engages with the Verifier.
+2. The Verifier sends a DCQL query containing a credential query with trusted_authorities of type "aki", and a specific KeyIdentifier value that matches the AuthorityKeyIdentifier of an X.509 certificate.
+3. The Wallet returns a response to the Verifier.
 
 ## Expected results
 1. Wallet and Verifier can interact.
-2. Wallet receives the request.
-3. No errors returned by the wallet using the KeyIdentifier of the AuthorityKeyIdentifier as defined in Section 4.2.1.1 of [RFC5280], encoded as base64url
+2. Wallet successfully receives the DCQL query.
+3. The Wallet returns an Authorization Response containing the matching credential.
 

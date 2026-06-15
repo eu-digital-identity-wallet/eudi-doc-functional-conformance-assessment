@@ -4,7 +4,7 @@
 Test that the first element of mdoc claims path pointer refers to a namespace.
 
 ## References
-[OID4VP 7]
+[OID4VP 7] Section 7.2, 7.4
 
 ## Profile applicability
 claims path pointer when applied to a credential in ISO mdoc

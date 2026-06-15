@@ -10,7 +10,7 @@ Verify that when the Verifier attestation JWT contains a redirect_uris claim and
 
 
 ## EUDI-wallet relevancy
-EUDI_generic |  EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 A. Wallet has a configured list of trusted issuers for Verifier Attestation JWTs.
@@ -25,5 +25,5 @@ A. Wallet has a configured list of trusted issuers for Verifier Attestation JWTs
 1. Wallet-verifier interaction is successfully initiated.
 2. Wallet successfully receives the Request Object.
 3. Wallet successfully parses the Request Object and the attestation JWT.
-4. Wallet rejects the Authorization Request and returns an invalid_request error due to redirect_uri mismatch; presentation flow is not initiated.
+4. Wallet rejects the Request Object and returns an invalid_request error due to redirect_uri mismatch; presentation flow is not initiated.
 

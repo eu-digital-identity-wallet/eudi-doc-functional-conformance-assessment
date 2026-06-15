@@ -10,7 +10,7 @@ Verify that the Wallet rejects the Authorization Request and returns an error wh
 
 
 ## EUDI-wallet relevancy
-EUDI_generic |  EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 Wallet contains a credential matching the request.

@@ -20,4 +20,3 @@ EUDI_generic | EUDI_required
 
 ## Expected results
 1. The Wallet identifies the Type matches and allows the user to present the credential anyway (as the Credential Type and Path match the request.)
-

@@ -16,13 +16,12 @@ EUDI_generic | EUDI_required
 
 
 ## Test Scenario
-1. The Wallet engages with the Verifier
+1. The Wallet engages with the Verifier.
 2. Verifier sends a DCQL query, including a "credential_sets";
-"credentials" includes 1 the wallet has, 1 it does not, "credential_sets" contains one set with the existing credential in wallet
+"credentials" includes 1 the wallet has, 1 it does not, "credential_sets" contains one set with the existing credential in wallet.
 3. Wallet handles query
 
 ## Expected results
 1. Wallet and Verifier can interact.
-2. Wallet recieves query
+2. Wallet received query
 3. The wallet returns the credential set that matched
-

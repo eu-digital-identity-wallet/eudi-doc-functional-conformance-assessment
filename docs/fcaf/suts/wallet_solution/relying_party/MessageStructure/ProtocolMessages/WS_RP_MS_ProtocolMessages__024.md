@@ -1,7 +1,7 @@
 # WS_RP_MS_ProtocolMessages_024
 
 ## Objective
- Test that the Wallet returns an error if a request contains even one unrecognized transaction data type or transaction data not conforming to the respective type definition.
+Test that the Wallet returns an error if a request contains even one unrecognized transaction data type or transaction data not conforming to the respective type definition.
 
 ## References
 [OIDF.OID4VP] section 5.1; [OIDF.OID4VP] section 8.4
@@ -10,7 +10,7 @@
 
 
 ## EUDI-wallet relevancy
-EUDI_generic |  EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 

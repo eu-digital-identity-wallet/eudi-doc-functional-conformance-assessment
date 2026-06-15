@@ -4,13 +4,13 @@
 Verify that the Wallet returns an invalid_transaction_data error when the type field inside a transaction_data object is not a string.
 
 ## References
-[OIDF.OID4VP] section 5.1; [OIDF.OID4VP] section 8.4
+[OIDF.OID4VP] sections 5.1, 8.3, 8.4
 
 ## Profile applicability
 
 
 ## EUDI-wallet relevancy
-EUDI_generic |  EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 Applicable only if tested in combination with a Verifier that sends a transaction_data array.

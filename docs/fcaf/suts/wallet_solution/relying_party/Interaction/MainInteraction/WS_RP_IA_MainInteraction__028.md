@@ -20,6 +20,5 @@ Wallet holds credential that does NOT support selective disclosure
 2. Wallet processes DCQL
 
 ## Expected results
-1. Wallet recieves query
+1. Wallet received query
 2. Wallet identifies the format as non-selective and interprets the missing claims as a "Full Disclosure" request.
-

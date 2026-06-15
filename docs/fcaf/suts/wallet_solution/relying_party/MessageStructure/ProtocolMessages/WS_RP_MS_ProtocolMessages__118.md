@@ -1,7 +1,7 @@
 # WS_RP_MS_ProtocolMessages_118
 
 ## Objective
-Verify the positive flow that the wallet can accept a claims path pointer that is a non-empty array whose members include the following: strings, nulls & non-negative integers. 
+Verify the positive flow that the Wallet can accept a claims path pointer that is a non-empty array whose members include the following: strings, nulls & non-negative integers. 
 
 ## References
 [OID4VP 7]
@@ -10,7 +10,7 @@ Verify the positive flow that the wallet can accept a claims path pointer that i
 
 
 ## EUDI-wallet relevancy
-EUDI_generic |  EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 

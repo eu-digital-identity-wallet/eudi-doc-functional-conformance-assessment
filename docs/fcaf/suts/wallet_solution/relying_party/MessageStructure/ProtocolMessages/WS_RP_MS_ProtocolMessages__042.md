@@ -10,7 +10,7 @@ Verify that when the Wallet sends a request to the Verifier's Request URI Endpoi
 
 
 ## EUDI-wallet relevancy
-EUDI_generic |  EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 

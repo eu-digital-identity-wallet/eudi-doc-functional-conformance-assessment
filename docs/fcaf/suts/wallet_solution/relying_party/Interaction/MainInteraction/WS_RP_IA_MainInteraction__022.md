@@ -16,8 +16,7 @@ EUDI_generic | EUDI_required
 
 
 ## Test Scenario
-1. Verifer sends a DCQL query with a credential with claim_sets, but missing claims
+1. Verifier sends a DCQL query with a credential with claim_sets, but missing claims
 
 ## Expected results
 1. Wallet identifies invalid query, returns error.
-

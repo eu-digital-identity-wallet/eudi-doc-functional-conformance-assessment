@@ -10,7 +10,7 @@ Verify that when the Wallet requires encrypted Request Objects, it advertises pu
 
 
 ## EUDI-wallet relevancy
-EUDI_generic |  EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 
@@ -25,7 +25,7 @@ EUDI_generic |  EUDI_required
 ## Expected results
 1. Wallet-verifier interaction is successfully initiated.
 2. Wallet successfully receives the Authorization Request.
-3. wallet_metadata.jwks is correctly populated with public encryption keys and algorithm preferences.
+3. Wallet_metadata.jwks is correctly populated with public encryption keys and algorithm preferences.
 4. Wallet successfully receives the encrypted Request Object.
 5. Wallet successfully decrypts and processes the Request Object; presentation flow proceeds.
 

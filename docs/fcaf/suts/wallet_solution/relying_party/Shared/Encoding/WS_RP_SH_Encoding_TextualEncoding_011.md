@@ -4,7 +4,7 @@
 Test that at step 2.3 of claims path processing, if the index does not exist in a selected array, remove that array from the selection. 
 
 ## References
-[OID4VP 7]
+[OID4VP 7] Section 7.2.1, 7.3
 
 ## Profile applicability
 claims path pointer when applied to a JSON-based Credential
@@ -35,4 +35,3 @@ EUDI_generic | EUDI_required
 4. Wallet evaluates the path pointer.
 5. Wallet removes array(s) lacking an element at the requested index from the selection without aborting (e.g. a ["Bachelor of Science"] entry is dropped because index 1 is out of range, while ["Master of Science", "Ph.D."] retains index 1 = "Ph.D.").
 6. Wallet returns an Authorization Response containing only the retained selected values; presentation flow proceeds.
-

@@ -1,10 +1,10 @@
 # WS_RP_MS_ProtocolMessages_149
 
 ## Objective
-Test the wallet returns the access_denied error message when the Wallet failed to authenticate the End-User.
+Test the Wallet returns the access_denied error message when the Wallet failed to authenticate the End-User.
 
 ## References
-[OID4VP Section 8]
+[OID4VP Section 8.5]
 
 ## Profile applicability
 
@@ -16,11 +16,11 @@ EUDI_generic | EUDI_required
 
 
 ## Test Scenario
-1. The wallet engages with verifier.
-2. The verifier sends an Authorization request for credentials the wallet does have.
+1. The Wallet engages with verifier.
+2. The Verifier sends an Authorization request for credentials the wallet does have.
 3. Wallet processes request.
 4. The User fails authentication.
-5. Test the response returned by the wallet to the Verifier.
+5. Test the response returned by the Wallet to the Verifier.
 
 ## Expected results
 1. Wallet-verifier interaction is successfully initiated

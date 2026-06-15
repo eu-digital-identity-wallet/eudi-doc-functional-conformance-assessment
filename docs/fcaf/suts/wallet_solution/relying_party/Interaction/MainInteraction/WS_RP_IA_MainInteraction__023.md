@@ -21,4 +21,3 @@ EUDI_generic | EUDI_required
 
 ## Expected results
 1. Wallet sees values do not match, logically considers that specific claim as not being present for this matching flow.
-

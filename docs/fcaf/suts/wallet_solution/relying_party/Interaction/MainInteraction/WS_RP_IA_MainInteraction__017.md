@@ -23,5 +23,4 @@ Wallet holds an ISO mDL with elements: family_name, document_number, and portrai
 ## Expected results
 1. Wallet and Verifier can interact.
 2. Wallet receives the request.
-3. Wallet recieves query, and generates a valid resposne showing liscence is authentic but giving zero personal data
-
+3. Wallet received query, and generates a valid response showing licence is authentic but giving zero personal data

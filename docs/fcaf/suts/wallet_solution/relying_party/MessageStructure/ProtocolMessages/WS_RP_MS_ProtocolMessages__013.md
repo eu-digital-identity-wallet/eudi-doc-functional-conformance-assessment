@@ -10,7 +10,7 @@ Verify that the Wallet successfully evaluates a valid dcql_query that matches mu
 
 
 ## EUDI-wallet relevancy
-EUDI_generic |  EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 Wallet contains a credential matching the request.

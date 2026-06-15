@@ -1,12 +1,12 @@
-# EuPid_DM_BirthPlace_02
+# WS_RP_DM_IdentifyingData_Birthplace_PID_IETF-sd-jwt-vc_002
 
 ## Objective
-This test case verifies that the claim birth_place is encoded as a JSON structure.
+This test case verifies that the claim `place_of_birth` is encoded as a JSON structure. Note that `place_of_birth` is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier birth_place.
 
 ## References
-European Digital Identity Wallet, ARF 1.9, Annex 3.01 pid rulebook, paragraph 3.1.5   
-“ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 7).  
- RFC 7049 section 2.1
+European Digital Identity Wallet, ARF 2.0, Annex 3.01 pid rulebook
+"ANNEXES to the COMMISSION IMPLEMENTING REGULATION amending Implementing Regulation (EU) 2024/2977, (EU) 2024/2979, (EU) 2024/2980 and (EU) 2024/2982 as regards applicable standards and specifications and correcting Implementing Regulation (EU) 2024/2980" section 4.2 (Table 7).  
+RFC 7049 section 2.1
 
 ## EUDI-wallet relevancy
 EUDI_specific | EUDI_required
@@ -16,12 +16,12 @@ The EUDI wallet contains a Credential in IETF SD-JWT VC format. `vct` claim incl
 
 ## Preconditions
 A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.  
-B. All mandatory data elements within nameSpace  "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
+B. All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
 C. EUDI wallet presented the Credential successfully. 
-D. The presence of claim birth_place in the IETF SD-JWT VC Credential presented was verified.
+D. The presence of claim `place_of_birth` in the IETF SD-JWT VC Credential presented was verified.
 
 ## Test Scenario
 1. Verify that claim is encoded as a JSON structure.
 
 ## Expected results
-1. Claim is encoded as a JSON structure.
+1. The claim is encoded as a JSON structure.

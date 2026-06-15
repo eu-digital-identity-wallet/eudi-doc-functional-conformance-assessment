@@ -1,10 +1,10 @@
 # WS_RP_SM_TrustMechanisms_004
 
 ## Objective
-Test the Wallet processess a DCQL-query with a "aki" correctly when it does not contain a matching credential.
+Test the Wallet processes a DCQL-query with an "aki" correctly when it does not contain a matching credential.
 
 ## References
-[OID4VP 6.1.1]
+[OID4VP 6.1.1.1]
 [RFC5280]
 
 ## Profile applicability
@@ -14,10 +14,10 @@ Wallet supports trusted authorities query based on 'aki'
 EUDI_generic | EUDI_required
 
 ## Preconditions
-The stored credential(s) in the wallet used in test is/are issued under a certificate chain with none of the certificates matching a specified AuthorityKeyIdentifier.
+The stored credential(s) in the Wallet used in test is/are issued under a certificate chain with none of the certificates matching a specified AuthorityKeyIdentifier.
 
 ## Test Scenario
-1. The Wallet engages with the Verifier
+1. The Wallet engages with the Verifier.
 2. Verifier sends a DCQL query with a "trusted_authorities" property with its type being "aki", and its 'value' contains only a value not matching any AuthorizationKeyIdentifier in the credential issuer's certificate chain.
 3. The Wallet evaluates the request.
 

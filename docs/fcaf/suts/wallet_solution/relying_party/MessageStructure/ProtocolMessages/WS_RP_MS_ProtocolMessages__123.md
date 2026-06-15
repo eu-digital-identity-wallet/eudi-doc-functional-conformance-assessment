@@ -1,10 +1,10 @@
 # WS_RP_MS_ProtocolMessages_123
 
 ## Objective
-Test that when the wallet is given an invalid claims path pointer, it will abort processing and return an error.
+Test that when the Wallet is given an invalid claims path pointer, it will abort processing and return an error.
 
 ## References
-[OID4VP 7]
+[OID4VP] Sections 7, 8.5
 
 ## Profile applicability
 
@@ -16,7 +16,7 @@ EUDI_generic | EUDI_required
 
 
 ## Test Scenario
-1. Engage wallet-verifier interaction.
+1. Engage Wallet-verifier interaction.
 2. Verifier sends an Authorization Request with a DCQL query containing a claims path pointer with an invalid element (e.g. path: [true]).
 3. Wallet parses the Authorization Request and the DCQL query.
 4. Wallet validates the structure of the claims path pointer.

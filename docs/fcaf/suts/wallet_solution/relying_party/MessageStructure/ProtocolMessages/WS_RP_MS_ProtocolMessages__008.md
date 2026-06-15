@@ -1,7 +1,7 @@
 # WS_RP_MS_ProtocolMessages_008
 
 ## Objective
- Verify that the Wallet successfully processes the Authorization Request when client_id is present but iss claim is absent.
+Verify that the Wallet successfully processes the Authorization Request when client_id is present but iss claim is absent.
 
 ## References
 [RFC9101]; [OIDF.OID4VP] section 5
@@ -10,7 +10,7 @@
 
 
 ## EUDI-wallet relevancy
-EUDI_generic |  EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 Wallet holds at least one credential that can match a valid DCQL query, and a second scenario where no matching credential is available.
