@@ -4,10 +4,11 @@
 Test the wallet does NOT include entries in the vp_token, for optional Credential Queries, when there are no matching Credentials.
 
 ## References
-[OID4VP Section 8]
+[OpenID4VP], Section 8
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required

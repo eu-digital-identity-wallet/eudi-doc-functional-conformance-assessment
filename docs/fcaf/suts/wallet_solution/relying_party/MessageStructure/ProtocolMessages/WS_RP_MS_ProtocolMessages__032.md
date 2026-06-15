@@ -4,16 +4,18 @@
 Verify that when the Wallet receives an Authorization Request without a state parameter, it processes the request successfully without returning a state in the Authorization Response.
 
 ## References
-[OIDF.OID4VP] section 5.2
+[OpenID4VP] section 5.2
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. Engage wallet-verifier interaction (e.g. click link / scan QR code).

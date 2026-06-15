@@ -4,10 +4,11 @@
 Verify that the Wallet returns an invalid_client error when it receives client_metadata in a request from a Verifier that the Wallet already has locally stored metadata for.
 
 ## References
-[OID4VP] Sections 8.5, 11.1
+[OpenID4VP] Sections 8.5, 11.1
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required

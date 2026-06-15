@@ -4,16 +4,18 @@
 Verify that when the Authorization Request contains a request_uri parameter and request_uri_method = "get", the Wallet retrieves the Request Object using HTTP GET as defined in RFC9101.
 
 ## References
-[OIDF.OID4VP] section 5.1; [RFC9101]
+[OpenID4VP] section 5.1; [RFC 9101]
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. Engage wallet-verifier interaction (e.g. click link / scan QR code).

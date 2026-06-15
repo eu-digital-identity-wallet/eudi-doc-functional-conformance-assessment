@@ -4,7 +4,7 @@
 Test when using response mode "direct_post.jwt" the Wallet encodes the Authorization Response, in the HTTP POST request body, using format defined by application/x‑www‑form‑urlencoded.
 
 ## References
-[OID4VP Section 8]
+[OpenID4VP], Section 8
 
 ## Profile applicability
 Same device custom URL
@@ -14,6 +14,7 @@ EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. The wallet engages with the verifier.

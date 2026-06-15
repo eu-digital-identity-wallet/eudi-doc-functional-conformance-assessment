@@ -4,16 +4,18 @@
 Test that the Wallet ignores unknown properties in the structure (non-top-level) of the DCQL-query.
 
 ## References
-[OID4VP 6]
+[OpenID4VP], Section 6
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. The Wallet engages with the Verifier.

@@ -4,16 +4,18 @@
 Test the Wallet returns the access_denied error message when the End-User did not give consent to share the requested Credentials with the Verifier.
 
 ## References
-[OID4VP Section 8.5]
+[OpenID4VP], Section 8.5
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. The Wallet engages with verifier.

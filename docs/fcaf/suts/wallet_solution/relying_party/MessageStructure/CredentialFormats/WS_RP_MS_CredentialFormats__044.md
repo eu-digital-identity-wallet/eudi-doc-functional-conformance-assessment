@@ -4,18 +4,19 @@
 Verify that when the Wallet presentation to the Verifier includes `status` claim, it contains `status_list` as defined in [I-D.ietf-oauth-status-list].
 
 ## References
-[OIDF.HAIP] section 6.1
-[RFC7800]
-[I-D.ietf-oauth-sd-jwt-vc]
+[HAIP] section 6.1
+[RFC 7800]
+[SD-JWT VC]
 
 ## Profile applicability
 Wallet supports IETF SD-JWT VC 
 
 ## EUDI-wallet relevancy
-EUDI_generic, EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. End-user interacts with the Verifier, triggering the Verifier to send a presentation request.

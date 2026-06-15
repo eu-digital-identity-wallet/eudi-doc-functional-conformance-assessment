@@ -4,16 +4,18 @@
 Verify that whenever Wallet uses hash function during presentation for ISO mdoc, it leverages hash algorithm SHA-256.
 
 ## References
-[OIDF.HAIP] section 9
+[HAIP] section 9
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
-EUDI_generic, EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. Wallet engages with the Verifier.

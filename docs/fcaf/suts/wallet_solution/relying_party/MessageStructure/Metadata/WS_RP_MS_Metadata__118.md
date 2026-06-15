@@ -4,16 +4,18 @@
 Verify that when the Wallet receives a Request Object using the verifier_attestation Client Identifier Prefix with the Verifier attestation JWT correctly placed in the jwt JOSE header, the Wallet locates and processes the attestation JWT.
 
 ## References
-[OIDF.OID4VP] section 5.9.3; [OIDF.OID4VP] section 12
+[OpenID4VP] section 5.9.3; [OpenID4VP] section 12
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. Engage wallet-verifier interaction (e.g. click link / scan QR code).

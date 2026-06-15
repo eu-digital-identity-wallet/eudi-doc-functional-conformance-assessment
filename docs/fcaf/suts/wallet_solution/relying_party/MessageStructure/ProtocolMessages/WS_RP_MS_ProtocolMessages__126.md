@@ -4,16 +4,18 @@
 Test that Wallet returns an error after an HTTP error response from the Verifier.
 
 ## References
-[OID4VP] Sections 8.2, 8.5
+[OpenID4VP] Sections 8.2, 8.5
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. The Wallet engages with the verifier.

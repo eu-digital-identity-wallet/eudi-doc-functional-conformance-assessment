@@ -4,16 +4,18 @@
 Verify that when the Wallet receives an Authorization Request under the conditions of Section 5.3 (i.e. require_cryptographic_holder_binding = false) without a state parameter, it rejects the request.
 
 ## References
-[OIDF.OID4VP] sections 5.3, 8.5
+[OpenID4VP] sections 5.3, 8.5
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. Engage wallet-verifier interaction.

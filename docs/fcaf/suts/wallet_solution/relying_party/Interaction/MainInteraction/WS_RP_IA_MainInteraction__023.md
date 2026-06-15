@@ -4,17 +4,19 @@
  Test the Wallet SHOULD treat a claim as if it did not exist in the credential, if its value does not match the one held in the wallets credential.
 
 ## References
-[OID4VP 6.4]
-[OID4VP 6.3]
+[OpenID4VP], Section 6.4
+[OpenID4VP], Section 6.3
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. Verifier sends a Claims Query containing a restriction on the values of a claim.

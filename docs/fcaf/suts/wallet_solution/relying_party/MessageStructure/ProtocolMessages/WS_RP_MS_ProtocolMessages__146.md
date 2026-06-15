@@ -4,10 +4,11 @@
 Verify that the Wallet returns invalid_client when the client_id resolves to a trusted registry entry, but the request attempts to override it with dynamic client_metadata.
 
 ## References
-[OID4VP Section 8.5]
+[OpenID4VP], Section 8.5
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required

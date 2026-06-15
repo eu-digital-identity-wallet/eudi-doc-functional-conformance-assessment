@@ -4,13 +4,13 @@
 Verify that Wallet raises an error if Verifier uses any hashing function other than SHA-256 and that is not included in the Verifier Client Metadata.
 
 ## References
-[OIDF.HAIP] section 8
+[HAIP] section 8
 
 ## Profile applicability
 Wallet does not support other hash algorithms besides SHA-256.
 
 ## EUDI-wallet relevancy
-EUDI_generic, EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 Verifier Client Metadata does not include any other hash algorithms.

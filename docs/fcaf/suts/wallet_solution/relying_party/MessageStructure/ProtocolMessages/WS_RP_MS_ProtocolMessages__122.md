@@ -4,16 +4,18 @@
 Verify negative case that the Wallet cannot accept a claims path pointer that is not an array.
 
 ## References
-[OID4VP] Sections 7, 8.5
+[OpenID4VP] Sections 7, 8.5
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. Engage Wallet-verifier interaction

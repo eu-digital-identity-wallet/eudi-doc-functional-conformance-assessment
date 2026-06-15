@@ -4,7 +4,7 @@
 Verify that when the Wallet receives a Request Object via the DC API where the audience is the origin value prefixed by origin:, all non-key Verifier metadata is taken from client_metadata, and the Wallet processes the request within the DC API context.
 
 ## References
-[OIDF.OID4VP] section 5.9.3, Appendix A.2.
+[OpenID4VP] section 5.9.3, Appendix A.2.
 
 ## Profile applicability
 DC API
@@ -14,12 +14,13 @@ EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. Engage wallet-verifier interaction (e.g. click link / scan QR code).
 2. Wallet receives a Request Object via DC API where audience uses the origin: prefix and all non-key Verifier metadata is in client_metadata.
 3. Wallet parses the Request Object.
-4. Wallet processes the audience as origin:<origin> per DC API rules.
+4. Wallet processes the audience as `origin:<origin>` per DC API rules.
 5. Wallet uses client_metadata for non-key Verifier metadata.
 
 ## Expected results

@@ -4,16 +4,18 @@
 Verify that when the Wallet receives a Request Object using the verifier_attestation Client Identifier Prefix where non-key Verifier metadata is provided outside the client_metadata parameter, the Wallet ignores such metadata and processes only what is contained within client_metadata.
 
 ## References
-[OIDF.OID4VP] section 5.9.3
+[OpenID4VP] section 5.9.3
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. Engage wallet-verifier interaction (e.g. click link / scan QR code).

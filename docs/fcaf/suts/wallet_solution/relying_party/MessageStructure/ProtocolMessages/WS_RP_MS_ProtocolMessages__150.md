@@ -5,10 +5,11 @@ Test the Wallet returns the error message vp_formats_not_supported when the wall
 (vc+sd-jwt case)
 
 ## References
-[OID4VP Section 8.5]
+[OpenID4VP], Section 8.5
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required

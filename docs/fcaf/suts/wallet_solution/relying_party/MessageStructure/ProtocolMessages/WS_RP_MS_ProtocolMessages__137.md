@@ -4,16 +4,18 @@
 Test that the Wallet responds with invalid_scope when the Requested scope value is unknown.
 
 ## References
-[OID4VP] Sections 5.2, 5.5, 8.5
+[OpenID4VP] Sections 5.2, 5.5, 8.5
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. The Wallet engages with the verifier.

@@ -4,16 +4,18 @@
 Verify that when the Wallet receives a Request Object using the verifier_attestation Client Identifier Prefix where the jwt JOSE header is absent or does not contain the Verifier attestation JWT, the Wallet rejects the request.
 
 ## References
-[OID4VP 5.9.3]; [OID4VP 12]
+[OpenID4VP], Section 5.9.3; [OpenID4VP], Section 12
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. Engage wallet-verifier interaction (e.g. click link / scan QR code).

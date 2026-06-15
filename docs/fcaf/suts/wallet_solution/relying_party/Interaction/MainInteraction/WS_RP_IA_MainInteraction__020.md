@@ -4,10 +4,11 @@
 Verify that if the Wallet can satisfy multiple options in claim_sets, it selects the one appearing earliest in the array.
 
 ## References
-[OID4VP 6.4]
+[OpenID4VP], Section 6.4
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required

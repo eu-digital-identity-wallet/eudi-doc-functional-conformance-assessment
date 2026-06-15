@@ -4,16 +4,18 @@
 Test the Wallet ignores an unrecognized parameter in both the Authorization request & the response following a POST to a response_uri.
 
 ## References
-[OID4VP Section 8.2]
+[OpenID4VP], Section 8.2
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. The Wallet engages with the verifier.

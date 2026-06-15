@@ -4,10 +4,11 @@
 Test when the Wallet cannot deliver all claims requested by the Verifier because one of them has a non-matching value, it does NOT return the respective Credential.
 
 ## References
-[OID4VP 6.4]
+[OpenID4VP], Section 6.4
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required

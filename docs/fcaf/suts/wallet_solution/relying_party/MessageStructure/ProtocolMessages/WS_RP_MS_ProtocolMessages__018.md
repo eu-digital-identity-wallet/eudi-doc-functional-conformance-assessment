@@ -4,7 +4,7 @@
 Verify that the Wallet accepts an Authorization Request that contains the transaction_data parameter when the wallet does support this parameter.
 
 ## References
-[OIDF.OID4VP] section 5; [RFC6749]
+[OpenID4VP] section 5; [RFC 6749]
 
 ## Profile applicability
 Wallet does not support transaction_data

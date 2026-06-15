@@ -4,16 +4,18 @@
 Test when the Wallet cannot deliver all non-optional Credentials requested by the Verifier, it MUST NOT return any Credential(s).
 
 ## References
-[OID4VP 6.4]
+[OpenID4VP], Section 6.4
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. The Wallet engages with the Verifier.

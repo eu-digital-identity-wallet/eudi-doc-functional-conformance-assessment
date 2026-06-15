@@ -4,17 +4,18 @@
 Verify that, in the presentation flow via Redirects, if Verifier sends a Signed Authorization Request, but it does not use a JWT-Secured Authorization Request (JAR) [RFC9101] with the `request_uri` parameter, the Wallet responds with an error (detailed or not) or discontinues the transaction.
 
 ## References
-[OIDF.HAIP] section 5.1
-[RFC9101] section 5
+[HAIP] section 5.1
+[RFC 9101] section 5
 
 ## Profile applicability
 Presentations via Redirects
 
 ## EUDI-wallet relevancy
-EUDI_generic, EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. End-user interacts with the Verifier, triggering the Verifier to send a presentation request. 

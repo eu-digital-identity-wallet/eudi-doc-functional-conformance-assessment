@@ -4,16 +4,18 @@
 Verify that the Wallet rejects a Request Object where the typ header parameter equals oauth-authz-req+jwt.
 
 ## References
-[RFC9101]; [OIDF.OID4VP] section 5
+[RFC 9101]; [OpenID4VP] section 5
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_undefined
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. Engage wallet-verifier interaction (e.g. click link / scan QR code).

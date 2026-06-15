@@ -4,7 +4,7 @@
 Test that at step 2.3 of claims path processing If any of the currently selected element(s) is not an array, abort processing and return an error.
 
 ## References
-[OID4VP 7] Section 7.2.1, 7.3
+[OpenID4VP], Section 7 Section 7.2.1, 7.3
 
 ## Profile applicability
 claims path pointer when applied to a JSON-based Credential

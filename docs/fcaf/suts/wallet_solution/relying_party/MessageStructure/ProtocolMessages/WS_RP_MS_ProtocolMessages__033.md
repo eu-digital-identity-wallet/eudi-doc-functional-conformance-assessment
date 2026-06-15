@@ -4,16 +4,18 @@
 Verify that when the Wallet receives an Authorization Request containing a state parameter whose value is not a valid ASCII URL-safe string (e.g. a non-string type or contains disallowed characters), it rejects the request.
 
 ## References
-[OIDF.OID4VP] sections 5.2, 8.5
+[OpenID4VP] sections 5.2, 8.5
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. Engage wallet-verifier interaction.

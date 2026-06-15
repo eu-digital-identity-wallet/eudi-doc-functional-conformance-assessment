@@ -4,7 +4,7 @@
 Test that wallet continues with JAR when it receives a request_uri_method with the value post but does not support this feature.
 
 ## References
-[RFC9101]; [OIDF.OID4VP] section 5, 6.4; DCQL specification
+[RFC 9101]; [OpenID4VP] section 5, 6.4; DCQL specification
 
 ## Profile applicability
 Wallet does not support POST method
@@ -14,6 +14,7 @@ EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. Engage wallet-verifier interaction (e.g. click link / scan QR code).

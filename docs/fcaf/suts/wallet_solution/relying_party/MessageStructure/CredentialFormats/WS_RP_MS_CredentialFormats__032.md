@@ -4,13 +4,13 @@
 Verify that the EUDI Wallet can receive, hold and store a CWT Referenced Token that includes a status claim.
 
 ## References
-[Token Status List (TSL) draft-20] Section 6.3
+[Token Status List] Section 6.3
 
 ## Profile applicability
 The Wallet supports revocation checking via the Token Status List mechanism; The Wallet supports Status List Tokens in CWT format
 
 ## EUDI-wallet relevancy
-EUDI_generic / EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer

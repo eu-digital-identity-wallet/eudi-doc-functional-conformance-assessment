@@ -4,10 +4,11 @@
 Verify that the Wallet ignores unrecognized parameters in the Authorization Request.
 
 ## References
-[OIDF.OID4VP] section 5; [RFC6749]
+[OpenID4VP] section 5; [RFC 6749]
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required

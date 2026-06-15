@@ -3,7 +3,7 @@
 ## Objective
 Verify that a Wallet supporting OAuth 2.0 scope-based Presentation requests processes an Authorization Request using a valid pre-defined scope value, by presenting a credential of the type the scope value identifies.
 ## References
-[OID4VP 5.5]
+[OpenID4VP], Section 5.5
 
 ## Profile applicability
 Wallet supports OAuth 2.0
@@ -13,6 +13,7 @@ EUDI_generic | EUDI_forbidden
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. Engage wallet-verifier interaction (e.g. click link / scan QR code).

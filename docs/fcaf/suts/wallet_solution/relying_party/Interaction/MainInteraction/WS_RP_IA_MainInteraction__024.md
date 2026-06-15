@@ -4,7 +4,7 @@
 Verify that if the Wallet cannot pre-parse the data (e.g., it's encrypted), it still allows the user to proceed with the presentation rather than failing the request.
 
 ## References
-[OID4VP 6.4]
+[OpenID4VP], Section 6.4
 
 ## Profile applicability
 Encrypted data
@@ -14,6 +14,7 @@ EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. Verifier sends a DCQL query with a values restriction. The Wallet holds a matching credential, but the data is encrypted/locked (the Wallet can't check the value yet).

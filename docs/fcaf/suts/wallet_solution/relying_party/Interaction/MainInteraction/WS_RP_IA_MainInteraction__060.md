@@ -4,7 +4,7 @@
 Test the Wallet redirects the user agent to the redirect_uri if this parameter is included in the initial Authorization Request.
 
 ## References
-[OID4VP Section 8]
+[OpenID4VP], Section 8
 
 ## Profile applicability
 Same device
@@ -15,6 +15,7 @@ EUDI_generic | EUDI_forbidden
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. The wallet engages with the verifier.

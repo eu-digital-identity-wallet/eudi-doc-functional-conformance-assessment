@@ -4,10 +4,11 @@
 Test that if the multiple parameter is omitted in a credential query, it defaults to false, and the wallet includes only one presentation in the corresponding response array.
 
 ## References
-[OID4VP Section 8], [OID4VP Section 6.1]
+[OpenID4VP], Section 8, [OpenID4VP], Section 6.1
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required

@@ -4,16 +4,18 @@
 Verify that when transaction_data is provided in the request, the Wallet includes a reference to it in the credential presentation, to ensure transaction integrity.
 
 ## References
-[OID4VP Section 8.4]
+[OpenID4VP], Section 8.4
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. The Wallet engages with the verifier.

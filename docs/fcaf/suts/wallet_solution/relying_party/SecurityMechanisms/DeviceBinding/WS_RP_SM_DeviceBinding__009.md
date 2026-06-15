@@ -4,9 +4,9 @@
 Verify that when the Verifier sets require_cryptographic_holder_binding=false, the Wallet still includes the cnf claim within the SD-JWT component of the SD-JWT VC, providing the underlying credential type inherently includes it.
 
 ## References
-[OIDF.HAIP] section 6.1
-[RFC7800]
-[I-D.ietf-oauth-sd-jwt-vc]
+[HAIP] section 6.1
+[RFC 7800]
+[SD-JWT VC]
 
 ## Profile applicability
 Wallet supports IETF SD-JWT VC

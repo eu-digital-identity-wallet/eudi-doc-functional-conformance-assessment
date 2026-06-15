@@ -4,16 +4,18 @@
 Verify that when the Wallet receives an Authorization Request using the openid_federation Client Identifier Prefix and client_metadata is present, the Wallet ignores the client_metadata parameter and resolves Verifier metadata via OpenID Federation.
 
 ## References
-[OID4VP 5.9.3]
+[OpenID4VP], Section 5.9.3
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_undefined
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. Engage wallet-verifier interaction (e.g. click link / scan QR code).

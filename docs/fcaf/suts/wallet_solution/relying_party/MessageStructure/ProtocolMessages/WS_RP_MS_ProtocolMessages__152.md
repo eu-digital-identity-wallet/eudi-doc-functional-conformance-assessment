@@ -4,16 +4,18 @@
 Test the Wallet returns the error message invalid_request_uri_method when the value of request_uri_method is invalid.
 
 ## References
-[OID4VP Section 8.5]
+[OpenID4VP], Section 8.5
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. The Wallet engages with verifier.

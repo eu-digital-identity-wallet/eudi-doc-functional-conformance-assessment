@@ -4,16 +4,18 @@
 Test that when wallet receives a response_type of "vp_token" in an Authorization Request, that a successful response includes the vp_token parameter.
 
 ## References
-[OIDF.OID4VP] section 5.6
+[OpenID4VP] section 5.6
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. Engage wallet-verifier interaction (e.g. click link / scan QR code).

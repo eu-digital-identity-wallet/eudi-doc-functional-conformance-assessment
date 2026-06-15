@@ -4,16 +4,18 @@
 Test that the Wallet sends the Authorization Response to the provided response_uri using an HTTP POST request.
 
 ## References
-[OID4VP Section 8]
+[OpenID4VP], Section 8
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. The wallet engages with the verifier.

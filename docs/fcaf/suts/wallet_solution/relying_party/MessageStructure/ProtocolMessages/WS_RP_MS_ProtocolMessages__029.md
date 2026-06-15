@@ -4,16 +4,18 @@
 Verify that when a verifier_info attestation omits the credential_ids field, the Wallet applies the attestation to all Credentials requested in the DCQL query.
 
 ## References
-[OIDF.OID4VP] Section 5.1
+[OpenID4VP] Section 5.1
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_optional
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. Engage wallet-verifier interaction (e.g. click link / scan QR code).

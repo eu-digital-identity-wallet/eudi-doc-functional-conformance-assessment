@@ -4,16 +4,18 @@
 Test the Wallet rejects DCQL-query with credentials property "claim_sets" present that is not an array.
 
 ## References
-[OID4VP] Section 6.1, 8.5
+[OpenID4VP] Section 6.1, 8.5
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. The Wallet engages with the Verifier.

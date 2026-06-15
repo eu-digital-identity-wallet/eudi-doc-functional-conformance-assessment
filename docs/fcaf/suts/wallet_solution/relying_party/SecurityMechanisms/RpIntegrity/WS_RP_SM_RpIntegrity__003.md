@@ -4,16 +4,18 @@
 Verify that when the Wallet receives a Request Object via the DC API and the Wallet is configured NOT to validate signatures, it processes the request without signature validation in accordance with its configured profile.
 
 ## References
-[OIDF.OID4VP] Section 5.3, 5.9.3, Appendix A
+[OpenID4VP] Section 5.3, 5.9.3, Appendix A
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_forbidden
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. Engage wallet-verifier interaction via the DC API.

@@ -4,16 +4,17 @@
 Verify that Wallet states explicit in its metadata which other algorithms and key types are supported for the cryptographic operations.
 
 ## References
-[OIDF.HAIP] section 7
+[HAIP] section 7
 
 ## Profile applicability
 Wallet supports other crypto suites
 
 ## EUDI-wallet relevancy
-EUDI_generic, EUDI_optional
+EUDI_generic | EUDI_optional
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. Verifier obtains Wallet Metadata (dynamically, out of band mechanism, or pre-obtained static set).

@@ -4,9 +4,9 @@
 Verify that when Wallet uses `cnf` claim within the SD-JWT component of the SD-JWT VC as described in [I-D.ietf-oauth-sd-jwt-vc], the claim contains the confirmation method identifying the proof of possession key.
 
 ## References
-[OIDF.HAIP] section 6.1
-[RFC7800]
-[I-D.ietf-oauth-sd-jwt-vc]
+[HAIP] section 6.1
+[RFC 7800]
+[SD-JWT VC]
 
 ## Profile applicability
 Wallet supports IETF SD-JWT VC 

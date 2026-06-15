@@ -4,16 +4,17 @@
 Verify that Wallet does not support RSASSA-PSS using SHA-384 and MGF1 with SHA-384 (RS384) for validating signed presentation requests.
 
 ## References
-[OIDF.HAIP] section 8
+[HAIP] section 8
 
 ## Profile applicability
 JOSE algorithm identifier ES257
 
 ## EUDI-wallet relevancy
-EUDI_generic, EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. End-user interacts with the Verifier, triggering the Verifier to send a presentation request.

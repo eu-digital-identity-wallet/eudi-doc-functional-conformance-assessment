@@ -4,17 +4,19 @@
 Verify that, for signed requests, if Verifier does not use Client Identifier Prefix `x509_hash`, the Wallet responds with an error (detailed or not) or discontinues the transaction.
 
 ## References
-[OIDF.HAIP] section 5 (introduction)
-[OIDF.OID4VP] 5.9.3
+[HAIP] section 5 (introduction)
+[OpenID4VP] 5.9.3
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
-EUDI_generic, EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. End-user interacts with the Verifier, triggering the Verifier to send a presentation request. 

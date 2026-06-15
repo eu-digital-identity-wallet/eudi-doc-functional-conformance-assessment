@@ -4,14 +4,14 @@
 Verify that Wallet uses MSO revocation mechanism following requirements defined in ISO/IEC 18013-5 ([ISO.18013-5.second.edition]).
 
 ## References
-[OIDF.HAIP] section 5.3.1
-[ISO.18013-5.second.edition] MSO revocation
+[HAIP] section 5.3.1
+[ISO/IEC 18013-5] MSO revocation
 
 ## Profile applicability
 Wallet supports ISO mdoc
 
 ## EUDI-wallet relevancy
-EUDI_generic, EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 The mdoc's status is set to revoked.

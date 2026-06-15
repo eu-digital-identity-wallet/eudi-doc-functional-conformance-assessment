@@ -4,16 +4,18 @@
 Test that if DCQL does not contain a property "credentials", the Wallet rejects the request.
 
 ## References
-[OID4VP] sections 6, 8.5
+[OpenID4VP] sections 6, 8.5
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. The Wallet engages with the Verifier.

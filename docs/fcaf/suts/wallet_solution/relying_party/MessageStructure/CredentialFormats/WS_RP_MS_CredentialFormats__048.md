@@ -4,17 +4,18 @@
 Verify that Wallet can handle presenting a Credential using JSON serialization if required by the Wallet profile.
 
 ## References
-[OIDF.HAIP] section 6.1
+[HAIP] section 6.1
 
 ## Profile applicability
 Wallet supports IETF SD-JWT VC 
 Wallet profile supports JSON serialization and Credential profile requires it
 
 ## EUDI-wallet relevancy
-EUDI_generic, EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. End-user interacts with the Verifier, triggering the Verifier to send a presentation request.

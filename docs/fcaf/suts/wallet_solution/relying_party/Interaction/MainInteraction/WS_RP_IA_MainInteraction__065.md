@@ -4,17 +4,19 @@
 Verify that Wallet supports receiving a Credential Query from the Verifier in DCQL language, including the object `trusted_authorities` (aki)-based as defined in section 6.1.1.1 of [OIDF.OID4VP].
 
 ## References
-[OIDF.HAIP] section 5 (introduction)
-[OIDF.OID4VP] section 6.1.1.1
+[HAIP] section 5 (introduction)
+[OpenID4VP] section 6.1.1.1
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
-EUDI_generic, EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. The wallet engages with the verifier.

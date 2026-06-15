@@ -4,13 +4,13 @@
 Verify that the EUDI Wallet rejects a JOSE-based Referenced Token where the "uri" claim within "status_list" is malformed.
 
 ## References
-[Token Status List (TSL) draft-20] Section 6.2
+[Token Status List] Section 6.2
 
 ## Profile applicability
 The Wallet supports revocation checking via the Token Status List mechanism; The Wallet supports Status List Tokens in JWT format
 
 ## EUDI-wallet relevancy
-EUDI_generic / EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
@@ -22,7 +22,7 @@ D) The Referenced Token contains the "uri" claim within "status_list" set to a m
 1. Provide a Referenced Token where the "uri" value has no scheme (e.g., example.com/statuslists/1). Verify the Wallet's handling.
 2. Provide a Referenced Token where the "uri" value contains an unencoded space in the host (e.g., https://exam ple.com/statuslists/1). Verify the Wallet's handling.
 3. Provide a Referenced Token where the "uri" value contains invalid percent-encoding (e.g., https://example.com/statuslists/%GG). Verify the Wallet's handling.
-4. Provide a Referenced Token where the "uri" value contains illegal characters (e.g., https://example.com/statuslists/<token>|1). Verify the Wallet's handling.
+4. Provide a Referenced Token where the "uri" value contains illegal characters (e.g., `https://example.com/statuslists/<token>|1`). Verify the Wallet's handling.
 5. Provide a Referenced Token where the "uri" value is an empty string. Verify the Wallet's handling.
 
 ## Expected results

@@ -4,19 +4,20 @@
 Verify that Wallet supports IETF SD-JWT VC and ISO mdoc in the presentation flow. 
 
 ## References
-[OIDF.HAIP] section 5 (introduction)
-[OIDF.HAIP] section 5.3.2
-[OIDF.HAIP] section 6
-[OIDF.OID4VP] appendix B.3
+[HAIP] section 5 (introduction)
+[HAIP] section 5.3.2
+[HAIP] section 6
+[OpenID4VP] appendix B.3
 
 ## Profile applicability
 Wallet supports both ISO mdoc and IETF SD-JWT VC
 
 ## EUDI-wallet relevancy
-EUDI_generic, EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. End-user interacts with the Verifier, triggering the Verifier to send a presentation request.
@@ -37,7 +38,7 @@ EUDI_generic, EUDI_required
 2. This is the case.
 3. Wallet asks for user consent.
 4. This is the case.
-6. Wallet presents Credential to the Verifier successfully.
+5. Wallet presents Credential to the Verifier successfully.
 6. Credential presented has Credential Format Identifier value set to `mso_mdoc`.
 7. This is the case.
 8. This is the case.

@@ -4,7 +4,7 @@
 Test that when processing claims path pointer array, an element at the first level is selected. If the selected element is not an object, abort processing and return an error
 
 ## References
-[OID4VP] Section 7.2.1, 7.3
+[OpenID4VP] Section 7.2.1, 7.3
 
 ## Profile applicability
 claims path pointer when applied to a JSON-based Credential

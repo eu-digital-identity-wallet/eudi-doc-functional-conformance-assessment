@@ -4,10 +4,11 @@
 Test that if credential_sets is provided, the wallet evaluates the request by satisfying all required or omitted Credential Set Queries in the array, while treating Credential Set Queries explicitly marked as required false as optional.
 
 ## References
-[OID4VP 6.2], [OID4VP 6.4.2]
+[OpenID4VP], Section 6.2, [OpenID4VP], Section 6.4.2
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required

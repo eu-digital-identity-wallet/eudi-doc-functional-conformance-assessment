@@ -4,7 +4,7 @@
 Test that at step 2.4 of claims path processing if the component is anything else, the wallet should abort processing and return an error.
 
 ## References
-[OID4VP 7] Section 7.2.1, 7.3
+[OpenID4VP], Section 7 Section 7.2.1, 7.3
 
 ## Profile applicability
 claims path pointer when applied to a JSON-based Credential

@@ -4,10 +4,11 @@
 Test the wallet for non-selectively disclosable credentials, treats an empty query (no claims or claim_sets) as a request for the entire credential rather than returning an error or an empty token.
 
 ## References
-[OID4VP 6.4]
+[OpenID4VP], Section 6.4
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required

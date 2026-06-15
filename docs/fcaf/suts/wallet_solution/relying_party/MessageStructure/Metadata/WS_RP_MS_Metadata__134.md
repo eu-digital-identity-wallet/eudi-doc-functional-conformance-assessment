@@ -4,16 +4,18 @@
 Verify that when the Wallet requires encrypted Request Objects, it advertises public encryption keys in wallet_metadata.jwks and the supported algorithms via authorization_encryption_alg_values_supported and authorization_encryption_enc_values_supported, and the Wallet successfully decrypts the encrypted Request Object received from the Verifier.
 
 ## References
-[OIDF.OID4VP] section 5.10
+[OpenID4VP] section 5.10
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. Engage wallet-verifier interaction (e.g. click link / scan QR code).

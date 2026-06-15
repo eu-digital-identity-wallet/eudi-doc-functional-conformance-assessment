@@ -4,16 +4,18 @@
 Test when valid credential_sets is present, the Wallet can handle these and applies the constraints when processing the request.
 
 ## References
-[OID4VP 6]
+[OpenID4VP], Section 6
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. The Wallet engages with the Verifier.

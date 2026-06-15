@@ -4,13 +4,13 @@
 Verify that the EUDI Wallet accepts a COSE-based Referenced Token containing a valid Status CBOR structure (Map) with at least a "status_list" entry.
 
 ## References
-[Token Status List (TSL) draft-20] Section 6.3
+[Token Status List] Section 6.3
 
 ## Profile applicability
 The Wallet supports revocation checking via the Token Status List mechanism; The Wallet supports Status List Tokens in CWT format
 
 ## EUDI-wallet relevancy
-EUDI_generic / EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer

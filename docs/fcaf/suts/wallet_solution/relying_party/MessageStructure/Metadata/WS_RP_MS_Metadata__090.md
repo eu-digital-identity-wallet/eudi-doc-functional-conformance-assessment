@@ -4,13 +4,13 @@
 Verify that the EUDI Wallet rejects a JOSE-based Referenced Token where the required "uri" claim within "status_list" is missing.
 
 ## References
-[Token Status List (TSL) draft-20] Section 6.2
+[Token Status List] Section 6.2
 
 ## Profile applicability
 The Wallet supports revocation checking via the Token Status List mechanism; The Wallet supports Status List Tokens in JWT format
 
 ## EUDI-wallet relevancy
-EUDI_generic / EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer

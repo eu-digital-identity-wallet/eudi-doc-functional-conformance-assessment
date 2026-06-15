@@ -4,13 +4,13 @@
 Verify that the number, keys, and value types of data items in the StatusListInfo CBOR structure within a COSE-based Referenced Token are correct.
 
 ## References
-[Token Status List (TSL) draft-20] Section 6.3
+[Token Status List] Section 6.3
 
 ## Profile applicability
 The Wallet supports revocation checking via the Token Status List mechanism; The Wallet supports Status List Tokens in CWT format
 
 ## EUDI-wallet relevancy
-EUDI_generic / EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 A) The Issuer has provided a COSE-based Referenced Token to the EUDI Wallet.

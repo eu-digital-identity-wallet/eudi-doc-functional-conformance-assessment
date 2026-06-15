@@ -4,10 +4,11 @@
 Test that when wallet receives a response_type of "vp_token" in an Authorization Request, the Wallet does NOT contain an OAuth 2.0 Authorization Code, Access Token, or Access Token Type in a successful response to the grant request.
 
 ## References
-[OIDF.OID4VP] section 5.6
+[OpenID4VP] section 5.6
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required

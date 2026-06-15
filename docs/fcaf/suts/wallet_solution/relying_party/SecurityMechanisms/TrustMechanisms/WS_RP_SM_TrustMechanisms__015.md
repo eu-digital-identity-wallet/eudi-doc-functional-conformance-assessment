@@ -4,10 +4,11 @@
 Test the Wallet will not return a credential if its X.509 Certificate trust chain cannot be verified against the specified etsi_tl or its cascading lists.
 
 ## References
-[OID4VP 6.1.1.2]
+[OpenID4VP], Section 6.1.1.2
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_optional

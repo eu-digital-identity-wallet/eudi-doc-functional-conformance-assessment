@@ -4,14 +4,14 @@
 Verify that, in the presentation flow via Redirects, Wallet rejects presentation request if the signature validation of the JWT-Secured Authorization Request fails. 
 
 ## References
-[OIDF.HAIP] section 5.1
-[RFC9101] section 5
+[HAIP] section 5.1
+[RFC 9101] section 5
 
 ## Profile applicability
 Presentations via Redirects
 
 ## EUDI-wallet relevancy
-EUDI_generic, EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 A Signature from authorization request is authentic.

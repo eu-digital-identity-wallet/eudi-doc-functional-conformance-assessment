@@ -4,16 +4,18 @@
 Verify that when the Wallet has indicated that encryption is required (via wallet_metadata.jwks and supported algorithms) and the Verifier returns an unencrypted Request Object, the Wallet rejects the Request Object.
 
 ## References
-[OIDF.OID4VP] section 5.10
+[OpenID4VP] section 5.10
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. Engage wallet-verifier interaction (e.g. click link / scan QR code).

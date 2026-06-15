@@ -4,14 +4,14 @@
 Verify that, in the presentation flow via Redirects, the Wallet supports receiving a Signed Authorization Request using JWT-Secured Authorization Request (JAR) [RFC9101] with the `request_uri` parameter. 
 
 ## References
-[OIDF.HAIP] section 5.1
-[RFC9101] section 5
+[HAIP] section 5.1
+[RFC 9101] section 5
 
 ## Profile applicability
 Presentations via Redirects
 
 ## EUDI-wallet relevancy
-EUDI_generic, EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 A) Signature from authorization request is authentic.

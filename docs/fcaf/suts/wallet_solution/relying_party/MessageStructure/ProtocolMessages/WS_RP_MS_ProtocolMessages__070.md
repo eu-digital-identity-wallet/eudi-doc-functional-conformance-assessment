@@ -4,10 +4,11 @@
 Test the Wallet handles DCQL-query when credentials "multiple" property is omitted, as having the default value "false".
 
 ## References
-[OID4VP 6.1]
+[OpenID4VP], Section 6.1
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required

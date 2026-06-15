@@ -4,16 +4,18 @@
 Test that Response Mode direct_post.jwt causes the Wallet to send the Authorization Response using an HTTP POST request.
 
 ## References
-[OID4VP Section 8]
+[OpenID4VP], Section 8
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. The Wallet engages with the verifier.

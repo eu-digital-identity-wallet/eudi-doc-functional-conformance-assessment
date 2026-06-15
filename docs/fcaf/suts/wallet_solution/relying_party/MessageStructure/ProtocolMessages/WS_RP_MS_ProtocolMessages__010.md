@@ -4,10 +4,11 @@
 Verify that the Wallet does not process the request if client_id is missing from the Request Object.
 
 ## References
-[RFC9101]; [OIDF.OID4VP] section 5
+[RFC 9101]; [OpenID4VP] section 5
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required

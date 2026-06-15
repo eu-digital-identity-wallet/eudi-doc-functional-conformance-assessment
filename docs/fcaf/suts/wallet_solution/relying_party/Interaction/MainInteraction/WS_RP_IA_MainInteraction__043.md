@@ -4,10 +4,11 @@
 Test the wallet omits optional DCQL query keys in the presentation when no matching credentials exist.
 
 ## References
-[OID4VP Section 8.1]
+[OpenID4VP], Section 8.1
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required

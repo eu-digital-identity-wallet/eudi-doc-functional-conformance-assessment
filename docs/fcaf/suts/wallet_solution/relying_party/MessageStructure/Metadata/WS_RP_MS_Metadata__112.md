@@ -4,16 +4,18 @@
 Verify that when the Wallet receives an Authorization Request using the openid_federation Client Identifier Prefix containing a valid trust_chain parameter, the Wallet processes the trust_chain and uses it for Verifier trust establishment.
 
 ## References
-[OIDF.OID4VP] section 5.9.3
+[OpenID4VP] section 5.9.3
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_forbidden
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. Engage wallet-verifier interaction (e.g. click link / scan QR code).

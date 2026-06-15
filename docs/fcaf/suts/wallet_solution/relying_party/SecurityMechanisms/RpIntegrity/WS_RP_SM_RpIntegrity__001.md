@@ -4,10 +4,11 @@
 Verify that when the Wallet uses information from a verifier_info attestation and signature validation or binding verification fails, the Wallet rejects the Authorization Request.
 
 ## References
-[OIDF.OID4VP] Section 5.1 and 5.11
+[OpenID4VP] Section 5.1 and 5.11
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_optional

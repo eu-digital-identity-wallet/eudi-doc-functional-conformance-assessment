@@ -4,16 +4,18 @@
 Verify that when the Wallet uses a Client Identifier Prefix that permits signed Request Objects, the Wallet lists supported Request Object signing algorithms in the request_object_signing_alg_values_supported parameter of wallet_metadata.
 
 ## References
-[OIDF.OID4VP] section 5.10
+[OpenID4VP] section 5.10
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. Engage wallet-verifier interaction (e.g. click link / scan QR code).

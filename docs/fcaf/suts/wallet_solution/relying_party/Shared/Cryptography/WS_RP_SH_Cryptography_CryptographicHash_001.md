@@ -4,13 +4,14 @@
 Verify that when presenting an IETF SD-JWT VC, the Wallet produces a Verifiable Presentation whose digests are generated using SHA-256.
 
 ## References
-[OIDF.HAIP] section 8
+[HAIP] section 8
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
-EUDI_generic, EUDI_required
+EUDI_generic | EUDI_required
 
 ## Preconditions
 Wallet holds a presentable IETF SD-JWT VC.

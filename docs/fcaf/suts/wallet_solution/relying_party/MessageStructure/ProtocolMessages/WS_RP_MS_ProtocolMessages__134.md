@@ -4,16 +4,18 @@
 Verify that for direct_post.jwt, the Wallet encapsulates the response in a JWT and delivers it via an HTTP POST body with the correct Content-Type.
 
 ## References
-[OID4VP Section 8.2]
+[OpenID4VP], Section 8.2
 
 ## Profile applicability
 
+none
 
 ## EUDI-wallet relevancy
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
+none
 
 ## Test Scenario
 1. The Wallet engages with the verifier.
