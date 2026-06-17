@@ -1207,7 +1207,7 @@
 <h1 id="ws_rp_dm_addressdata_residentpostalcode_pid_iso-mdoc_001">WS_RP_DM_AddressData_Residentpostalcode_PID_ISO-mdoc_001</h1>
 <h2 id="objective">Objective</h2>
 <p>This test case verifies that the data element <code>resident_postal_code</code> is present in the mdoc data if this is indicated in the ICS.
-Note that <code>resident_postal_code</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier resident_postal_code.</p>
+Note that <code>resident_postal_code</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier <code>resident_postal_code</code>.</p>
 <h2 id="references">References</h2>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.1 (Table 2)</li>
@@ -1217,9 +1217,11 @@ Note that <code>resident_postal_code</code> is the Attribute Identifier in ISO-m
 <h2 id="profile-applicability">Profile applicability</h2>
 <p>The EUDI wallet contains a Credential in ISO-mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element <code>resident_postal_code</code> is present in the mdoc data.</p>
 <h2 id="preconditions">Preconditions</h2>
-<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
-B. All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
-C. The device retrieval mdoc response was retrieved.</p>
+<ol class="precond-alpha">
+<li>A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".</li>
+<li>All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested.</li>
+<li>The device retrieval mdoc response was retrieved.</li>
+</ol>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
 <li>Verify the presence of a data element with identifier <code>resident_postal_code</code> in the device retrieval mdoc response. </li>

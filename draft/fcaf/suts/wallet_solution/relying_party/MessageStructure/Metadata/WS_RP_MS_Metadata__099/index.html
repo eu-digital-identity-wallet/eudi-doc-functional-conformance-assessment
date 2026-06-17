@@ -1216,10 +1216,12 @@
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h2>
 <p>EUDI_generic | EUDI_required</p>
 <h2 id="preconditions">Preconditions</h2>
-<p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
-B) The Referenced Token includes the Status element that contains the Status_list element (index and URI)
-C) The Issuer has provided a COSE-based Referenced Token to the EUDI Wallet.
-D) The Referenced Token contains the "uri" field within "status_list" set to a malformed URI.</p>
+<ol class="precond-alpha">
+<li>The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer</li>
+<li>The Referenced Token includes the Status element that contains the Status_list element (index and URI)</li>
+<li>The Issuer has provided a COSE-based Referenced Token to the EUDI Wallet.</li>
+<li>The Referenced Token contains the "uri" field within "status_list" set to a malformed URI.</li>
+</ol>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
 <li>Provide a Referenced Token where the "uri" value has no scheme (e.g., example.com/statuslists/1). Verify the Wallet's handling.</li>

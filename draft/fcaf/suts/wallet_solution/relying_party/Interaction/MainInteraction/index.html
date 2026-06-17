@@ -1502,14 +1502,14 @@ c. discontinuing the interaction.</li>
 <h4 id="test-scenario_10">Test Scenario</h4>
 <ol>
 <li>The Wallet engages with the Verifier.</li>
-<li>Verifier sends a DCQL query asking only for given_name.</li>
+<li>Verifier sends a DCQL query asking only for <code>given_name</code>.</li>
 <li>Response</li>
 </ol>
 <h4 id="expected-results_10">Expected results</h4>
 <ol>
 <li>Wallet and Verifier can interact.</li>
-<li>The Wallet selects given_name but must also include the mandatory envelope data required to make the credential cryptographically valid.</li>
-<li>The vp_token contains given_name PLUS the mandatory technical fields (e.g., vct, iss, iat).</li>
+<li>The Wallet selects <code>given_name</code> but must also include the mandatory envelope data required to make the credential cryptographically valid.</li>
+<li>The vp_token contains <code>given_name</code> PLUS the mandatory technical fields (e.g., vct, iss, iat).</li>
 </ol>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_ia_maininteraction_016">WS_RP_IA_MainInteraction_016</h3>
@@ -1524,7 +1524,7 @@ c. discontinuing the interaction.</li>
 <h4 id="eudi-wallet-relevancy_11">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_11">Preconditions</h4>
-<p>The Wallet holds an SD-JWT Credential containing multiple claims: given_name, family_name, and birthdate.</p>
+<p>The Wallet holds an SD-JWT Credential containing multiple claims: <code>given_name</code>, <code>family_name</code>, and birthdate.</p>
 <h4 id="test-scenario_11">Test Scenario</h4>
 <ol>
 <li>The Wallet engages with the Verifier</li>
@@ -1550,7 +1550,7 @@ c. discontinuing the interaction.</li>
 <h4 id="eudi-wallet-relevancy_12">EUDI-wallet relevancy</h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_12">Preconditions</h4>
-<p>Wallet holds an ISO mDL with elements: family_name, document_number, and portrait.</p>
+<p>Wallet holds an ISO mDL with elements: <code>family_name</code>, <code>document_number</code>, and portrait.</p>
 <h4 id="test-scenario_12">Test Scenario</h4>
 <ol>
 <li>The Wallet engages with the Verifier</li>

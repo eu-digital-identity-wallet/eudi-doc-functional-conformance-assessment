@@ -1208,7 +1208,7 @@
 <!-- BEGIN INCLUDE ./[A-Z]*.md -->
 <h3 id="ws_rp_dm_addressdata_emailaddress_pid_ietf-sd-jwt-vc_001">WS_RP_DM_AddressData_Emailaddress_PID_IETF-sd-jwt-vc_001</h3>
 <h4 id="objective">Objective</h4>
-<p>This test case verifies that the claim <code>email</code> is present in the Credential in IETF SD-JWT VC format if this is indicated in the ICS. Note that <code>email</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier email_address.</p>
+<p>This test case verifies that the claim <code>email</code> is present in the Credential in IETF SD-JWT VC format if this is indicated in the ICS. Note that <code>email</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier <code>email_address</code>.</p>
 <h4 id="references">References</h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.2 (Table 5)</li>
@@ -1219,9 +1219,11 @@
 <p>The EUDI wallet contains a Credential in SD-JWT VC format with <code>vct</code> = "urn:eudi:pid:".
 The claim <code>email</code> is included in a person identification data.</p>
 <h4 id="preconditions">Preconditions</h4>
-<p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
-B. All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
-C. EUDI wallet presented the Credential successfully.</p>
+<ol class="precond-alpha">
+<li>A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.</li>
+<li>All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.</li>
+<li>EUDI wallet presented the Credential successfully.</li>
+</ol>
 <h4 id="test-scenario">Test Scenario</h4>
 <ol>
 <li>Verify the presence of a claim with identifier <code>email</code> in the Credential presented to the Verifier in IETF SD-JWT VC format.</li>
@@ -1233,7 +1235,7 @@ C. EUDI wallet presented the Credential successfully.</p>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_dm_addressdata_emailaddress_pid_ietf-sd-jwt-vc_003">WS_RP_DM_AddressData_Emailaddress_PID_IETF-sd-jwt-vc_003</h3>
 <h4 id="objective_1">Objective</h4>
-<p>This test case verifies that the claim <code>email</code> is a String encoded in UTF-8. Note that <code>email</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier email_address.</p>
+<p>This test case verifies that the claim <code>email</code> is a String encoded in UTF-8. Note that <code>email</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier <code>email_address</code>.</p>
 <h4 id="references_1">References</h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.2, item 3 (Table 7)</li>
@@ -1243,10 +1245,12 @@ C. EUDI wallet presented the Credential successfully.</p>
 <h4 id="profile-applicability_1">Profile applicability</h4>
 <p>The EUDI wallet contains a Credential in SD-JWT VC format with vct = "urn:eudi:pid:". The claim <code>email</code> is included in a person identification data.</p>
 <h4 id="preconditions_1">Preconditions</h4>
-<p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
-B. All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
-C. EUDI wallet presented the Credential successfully. 
-D. The presence of claim <code>email</code> in the IETF SD-JWT VC Credential presented was verified.</p>
+<ol class="precond-alpha">
+<li>A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.</li>
+<li>All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.</li>
+<li>EUDI wallet presented the Credential successfully.</li>
+<li>The presence of claim <code>email</code> in the IETF SD-JWT VC Credential presented was verified.</li>
+</ol>
 <h4 id="test-scenario_1">Test Scenario</h4>
 <ol>
 <li>Verify that the claim <code>email</code> is a String encoded in UTF-8, supporting the full Unicode range.</li>
@@ -1258,7 +1262,7 @@ D. The presence of claim <code>email</code> in the IETF SD-JWT VC Credential pre
 <!-- END INCLUDE -->
 <h3 id="ws_rp_dm_addressdata_emailaddress_pid_ietf-sd-jwt-vc_4">WS_RP_DM_AddressData_Emailaddress_PID_IETF-sd-jwt-vc_003</h3>
 <h4 id="objective_2">Objective</h4>
-<p>This test case verifies that the value of the claim <code>email</code> is an email address in conformance with [RFC 5322]. Note that <code>email</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier email_address.</p>
+<p>This test case verifies that the value of the claim <code>email</code> is an email address in conformance with [RFC 5322]. Note that <code>email</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier <code>email_address</code>.</p>
 <h4 id="references_2">References</h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.2 (Table 2)</li>
@@ -1269,10 +1273,12 @@ D. The presence of claim <code>email</code> in the IETF SD-JWT VC Credential pre
 <h4 id="profile-applicability_2">Profile applicability</h4>
 <p>The EUDI wallet contains a Credential in SD-JWT VC format with vct = "urn:eudi:pid:". The claim <code>email</code> is included in a person identification data.</p>
 <h4 id="preconditions_2">Preconditions</h4>
-<p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
-B. All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
-C. EUDI wallet presented the Credential successfully. 
-D. The presence of claim <code>email</code> in the IETF SD-JWT VC Credential presented was verified.</p>
+<ol class="precond-alpha">
+<li>A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.</li>
+<li>All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.</li>
+<li>EUDI wallet presented the Credential successfully.</li>
+<li>The presence of claim <code>email</code> in the IETF SD-JWT VC Credential presented was verified.</li>
+</ol>
 <h4 id="test-scenario_2">Test Scenario</h4>
 <ol>
 <li>Verify the value of the email address.</li>
@@ -1284,7 +1290,7 @@ D. The presence of claim <code>email</code> in the IETF SD-JWT VC Credential pre
 <!-- END INCLUDE -->
 <h3 id="ws_rp_dm_addressdata_emailaddress_pid_iso-mdoc_001">WS_RP_DM_AddressData_Emailaddress_PID_ISO-mdoc_001</h3>
 <h4 id="objective_3">Objective</h4>
-<p>This test case verifies that the data element <code>email_address</code> is present in the mdoc data if this is indicated in the ICS. Note that <code>email_address</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier email_address.</p>
+<p>This test case verifies that the data element <code>email_address</code> is present in the mdoc data if this is indicated in the ICS. Note that <code>email_address</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier <code>email_address</code>.</p>
 <h4 id="references_3">References</h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.1 (Table 2)</li>
@@ -1294,9 +1300,11 @@ D. The presence of claim <code>email</code> in the IETF SD-JWT VC Credential pre
 <h4 id="profile-applicability_3">Profile applicability</h4>
 <p>The EUDI wallet contains a Credential in mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element <code>email_address</code> is present in the mdoc data.</p>
 <h4 id="preconditions_3">Preconditions</h4>
-<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
-B. All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
-C. The device retrieval mdoc response was retrieved.</p>
+<ol class="precond-alpha">
+<li>A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".</li>
+<li>All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested.</li>
+<li>The device retrieval mdoc response was retrieved.</li>
+</ol>
 <h4 id="test-scenario_3">Test Scenario</h4>
 <ol>
 <li>Verify the presence of a data element with identifier <code>email_address</code> in the device retrieval mdoc response. </li>
@@ -1310,7 +1318,7 @@ C. The device retrieval mdoc response was retrieved.</p>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_dm_addressdata_emailaddress_pid_iso-mdoc_002">WS_RP_DM_AddressData_Emailaddress_PID_ISO-mdoc_002</h3>
 <h4 id="objective_4">Objective</h4>
-<p>This test case verifies that the DataElementValue of data element <code>email_address</code> is a well-formed CBOR text string. Note that <code>email_address</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier email_address.</p>
+<p>This test case verifies that the DataElementValue of data element <code>email_address</code> is a well-formed CBOR text string. Note that <code>email_address</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier <code>email_address</code>.</p>
 <h4 id="references_4">References</h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.1 (Table 6)</li>
@@ -1321,10 +1329,12 @@ C. The device retrieval mdoc response was retrieved.</p>
 <h4 id="profile-applicability_4">Profile applicability</h4>
 <p>The EUDI wallet contains a Credential in mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element <code>email_address</code> is present in the mdoc data.</p>
 <h4 id="preconditions_4">Preconditions</h4>
-<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
-B. All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
-C. The device retrieval mdoc response was retrieved. 
-D. The presence of data element <code>email_address</code> in the device retrieval mdoc response was verified.</p>
+<ol class="precond-alpha">
+<li>A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".</li>
+<li>All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested.</li>
+<li>The device retrieval mdoc response was retrieved.</li>
+<li>The presence of data element <code>email_address</code> in the device retrieval mdoc response was verified.</li>
+</ol>
 <h4 id="test-scenario_4">Test Scenario</h4>
 <ol>
 <li>Verify the major type encoded on the first byte of the CBOR data item. </li>
@@ -1338,7 +1348,7 @@ D. The presence of data element <code>email_address</code> in the device retriev
 <!-- END INCLUDE -->
 <h3 id="ws_rp_dm_addressdata_emailaddress_pid_iso-mdoc_003">WS_RP_DM_AddressData_Emailaddress_PID_ISO-mdoc_003</h3>
 <h4 id="objective_5">Objective</h4>
-<p>This test case verifies that the DataElementValue of data element email_address is an email address in conformance with [RFC 5322]. Note that <code>email_address</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier email_address.</p>
+<p>This test case verifies that the DataElementValue of data element <code>email_address</code> is an email address in conformance with [RFC 5322]. Note that <code>email_address</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier <code>email_address</code>.</p>
 <h4 id="references_5">References</h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.1 (Table 6)</li>
@@ -1347,16 +1357,18 @@ D. The presence of data element <code>email_address</code> in the device retriev
 <h4 id="eudi-wallet-relevancy_5">EUDI-wallet relevancy</h4>
 <p>EUDI_specific | EUDI_optional</p>
 <h4 id="profile-applicability_5">Profile applicability</h4>
-<p>The EUDI wallet contains a Credential in mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element email_address is present in the mdoc data.</p>
+<p>The EUDI wallet contains a Credential in mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element <code>email_address</code> is present in the mdoc data.</p>
 <h4 id="preconditions_5">Preconditions</h4>
-<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
-B. All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
-C. The device retrieval mdoc response was retrieved. 
-D. The presence of data element email_address in the device retrieval mdoc response was verified.</p>
+<ol class="precond-alpha">
+<li>A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".</li>
+<li>All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested.</li>
+<li>The device retrieval mdoc response was retrieved.</li>
+<li>The presence of data element <code>email_address</code> in the device retrieval mdoc response was verified.</li>
+</ol>
 <h4 id="test-scenario_5">Test Scenario</h4>
 <ol>
 <li>Verify the format of the CBOR data item. </li>
-<li>Verify the value of the email_address.</li>
+<li>Verify the value of the <code>email_address</code>.</li>
 </ol>
 <h4 id="expected-results_5">Expected results</h4>
 <ol>
@@ -1366,7 +1378,7 @@ D. The presence of data element email_address in the device retrieval mdoc respo
 <!-- END INCLUDE -->
 <h3 id="ws_rp_dm_addressdata_mobilephonenumber_pid_ietf-sd-jwt-vc_001">WS_RP_DM_AddressData_Mobilephonenumber_PID_IETF-sd-jwt-vc_001</h3>
 <h4 id="objective_6">Objective</h4>
-<p>This test case verifies that the claim <code>phone_number</code> is present in the Credential in IETF SD-JWT VC format if this is indicated in the ICS. Note that <code>phone_number</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier mobile_phone_number.</p>
+<p>This test case verifies that the claim <code>phone_number</code> is present in the Credential in IETF SD-JWT VC format if this is indicated in the ICS. Note that <code>phone_number</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier <code>mobile_phone_number</code>.</p>
 <h4 id="references_6">References</h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.2 (Table 2)</li>
@@ -1376,9 +1388,11 @@ D. The presence of data element email_address in the device retrieval mdoc respo
 <h4 id="profile-applicability_6">Profile applicability</h4>
 <p>The EUDI wallet contains a Credential in SD-JWT VC format with vct = "urn:eudi:pid:". The claim <code>phone_number</code> is included in a person identification data.</p>
 <h4 id="preconditions_6">Preconditions</h4>
-<p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
-B. All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
-C. EUDI wallet presented the Credential successfully. </p>
+<ol class="precond-alpha">
+<li>A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.</li>
+<li>All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.</li>
+<li>EUDI wallet presented the Credential successfully.</li>
+</ol>
 <h4 id="test-scenario_6">Test Scenario</h4>
 <ol>
 <li>Verify the presence of a claim with identifier <code>phone_number</code> in the Credential presented to the Verifier in IETF SD-JWT VC format.</li>
@@ -1390,7 +1404,7 @@ C. EUDI wallet presented the Credential successfully. </p>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_dm_addressdata_mobilephonenumber_pid_ietf-sd-jwt-vc_002">WS_RP_DM_AddressData_Mobilephonenumber_PID_IETF-sd-jwt-vc_002</h3>
 <h4 id="objective_7">Objective</h4>
-<p>This test case verifies that the claim <code>phone_number</code> is a String encoded in UTF-8. Note that <code>phone_number</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier mobile_phone_number.</p>
+<p>This test case verifies that the claim <code>phone_number</code> is a String encoded in UTF-8. Note that <code>phone_number</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier <code>mobile_phone_number</code>.</p>
 <h4 id="references_7">References</h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.2 (Table 7)</li>
@@ -1400,10 +1414,12 @@ C. EUDI wallet presented the Credential successfully. </p>
 <h4 id="profile-applicability_7">Profile applicability</h4>
 <p>The EUDI wallet contains a Credential in SD-JWT VC format with vct = "urn:eudi:pid:". The claim <code>phone_number</code> is included in a person identification data.</p>
 <h4 id="preconditions_7">Preconditions</h4>
-<p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
-B. All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
-C. EUDI wallet presented the Credential successfully. 
-D. The presence of claim <code>phone_number</code> in the IETF SD-JWT VC Credential presented was verified.</p>
+<ol class="precond-alpha">
+<li>A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.</li>
+<li>All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.</li>
+<li>EUDI wallet presented the Credential successfully.</li>
+<li>The presence of claim <code>phone_number</code> in the IETF SD-JWT VC Credential presented was verified.</li>
+</ol>
 <h4 id="test-scenario_7">Test Scenario</h4>
 <ol>
 <li>Verify that the claim <code>phone_number</code> is a String encoded in UTF-8, supporting the full Unicode range.</li>
@@ -1415,7 +1431,7 @@ D. The presence of claim <code>phone_number</code> in the IETF SD-JWT VC Credent
 <!-- END INCLUDE -->
 <h3 id="ws_rp_dm_addressdata_mobilephonenumber_pid_ietf-sd-jwt-vc_003">WS_RP_DM_AddressData_Mobilephonenumber_PID_IETF-sd-jwt-vc_003</h3>
 <h4 id="objective_8">Objective</h4>
-<p>This test case verifies that the value of the claim <code>phone_number</code> is formatted as an international phone number. Note that <code>phone_number</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier mobile_phone_number.</p>
+<p>This test case verifies that the value of the claim <code>phone_number</code> is formatted as an international phone number. Note that <code>phone_number</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier <code>mobile_phone_number</code>.</p>
 <h4 id="references_8">References</h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.2 (Table 2)</li>
@@ -1425,14 +1441,16 @@ D. The presence of claim <code>phone_number</code> in the IETF SD-JWT VC Credent
 <h4 id="profile-applicability_8">Profile applicability</h4>
 <p>The EUDI wallet contains a Credential in SD-JWT VC format with vct = "urn:eudi:pid:". The claim <code>phone_number</code> is included in a person identification data.</p>
 <h4 id="preconditions_8">Preconditions</h4>
-<p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
-B. All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
-C. EUDI wallet presented the Credential successfully. 
-D. The presence of claim <code>phone_number</code> in the IETF SD-JWT VC Credential presented was verified.</p>
+<ol class="precond-alpha">
+<li>A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.</li>
+<li>All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.</li>
+<li>EUDI wallet presented the Credential successfully.</li>
+<li>The presence of claim <code>phone_number</code> in the IETF SD-JWT VC Credential presented was verified.</li>
+</ol>
 <h4 id="test-scenario_8">Test Scenario</h4>
 <ol>
-<li>Verify the length of the claim phone_number. </li>
-<li>Verify the value from phone_number.</li>
+<li>Verify the length of the claim <code>phone_number</code>. </li>
+<li>Verify the value from <code>phone_number</code>.</li>
 </ol>
 <h4 id="expected-results_8">Expected results</h4>
 <ol>
@@ -1442,7 +1460,7 @@ D. The presence of claim <code>phone_number</code> in the IETF SD-JWT VC Credent
 <!-- END INCLUDE -->
 <h3 id="ws_rp_dm_addressdata_mobilephonenumber_pid_iso-mdoc_001">WS_RP_DM_AddressData_Mobilephonenumber_PID_ISO-mdoc_001</h3>
 <h4 id="objective_9">Objective</h4>
-<p>This test case verifies that the data element <code>mobile_phone_number</code> is present in the mdoc data if this is indicated in the ICS. Note that  <code>mobile_phone_number</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier mobile_phone_number.</p>
+<p>This test case verifies that the data element <code>mobile_phone_number</code> is present in the mdoc data if this is indicated in the ICS. Note that  <code>mobile_phone_number</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier <code>mobile_phone_number</code>.</p>
 <h4 id="references_9">References</h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.1 (Table 2)</li>
@@ -1452,9 +1470,11 @@ D. The presence of claim <code>phone_number</code> in the IETF SD-JWT VC Credent
 <h4 id="profile-applicability_9">Profile applicability</h4>
 <p>The EUDI wallet contains a Credential in ISO-mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element  <code>mobile_phone_number</code> is present in the mdoc data.</p>
 <h4 id="preconditions_9">Preconditions</h4>
-<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
-B. All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
-C. The device retrieval mdoc response was retrieved.</p>
+<ol class="precond-alpha">
+<li>A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".</li>
+<li>All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested.</li>
+<li>The device retrieval mdoc response was retrieved.</li>
+</ol>
 <h4 id="test-scenario_9">Test Scenario</h4>
 <ol>
 <li>Verify the presence of a data element with identifier <code>mobile_phone_number</code> in the device retrieval mdoc response. </li>
@@ -1468,7 +1488,7 @@ C. The device retrieval mdoc response was retrieved.</p>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_dm_addressdata_mobilephonenumber_pid_iso-mdoc_002">WS_RP_DM_AddressData_Mobilephonenumber_PID_ISO-mdoc_002</h3>
 <h4 id="objective_10">Objective</h4>
-<p>This test case verifies that the DataElementValue of data element <code>mobile_phone_number</code> is a well-formed CBOR text string. Note that  <code>mobile_phone_number</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier mobile_phone_number.</p>
+<p>This test case verifies that the DataElementValue of data element <code>mobile_phone_number</code> is a well-formed CBOR text string. Note that  <code>mobile_phone_number</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier <code>mobile_phone_number</code>.</p>
 <h4 id="references_10">References</h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.1 (Table 6)</li>
@@ -1479,10 +1499,12 @@ C. The device retrieval mdoc response was retrieved.</p>
 <h4 id="profile-applicability_10">Profile applicability</h4>
 <p>The EUDI wallet contains a Credential in ISO-mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element <code>mobile_phone_number</code> is present in the mdoc data.</p>
 <h4 id="preconditions_10">Preconditions</h4>
-<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
-B. All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
-C. The device retrieval mdoc response was retrieved. 
-D. The presence of data element  <code>mobile_phone_number</code> in the device retrieval mdoc response was verified.</p>
+<ol class="precond-alpha">
+<li>A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".</li>
+<li>All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested.</li>
+<li>The device retrieval mdoc response was retrieved.</li>
+<li>The presence of data element <code>mobile_phone_number</code> in the device retrieval mdoc response was verified.</li>
+</ol>
 <h4 id="test-scenario_10">Test Scenario</h4>
 <ol>
 <li>Verify the major type encoded on the first byte of the CBOR data item. </li>
@@ -1496,7 +1518,7 @@ D. The presence of data element  <code>mobile_phone_number</code> in the device 
 <!-- END INCLUDE -->
 <h3 id="ws_rp_dm_addressdata_mobilephonenumber_pid_iso-mdoc_003">WS_RP_DM_AddressData_Mobilephonenumber_PID_ISO-mdoc_003</h3>
 <h4 id="objective_11">Objective</h4>
-<p>This test case verifies that the DataElementValue of data element  <code>mobile_phone_number</code> is formatted as an international phone number. Note that  <code>mobile_phone_number</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier mobile_phone_number.</p>
+<p>This test case verifies that the DataElementValue of data element  <code>mobile_phone_number</code> is formatted as an international phone number. Note that  <code>mobile_phone_number</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier <code>mobile_phone_number</code>.</p>
 <h4 id="references_11">References</h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.1 (Table 6)</li>
@@ -1506,10 +1528,12 @@ D. The presence of data element  <code>mobile_phone_number</code> in the device 
 <h4 id="profile-applicability_11">Profile applicability</h4>
 <p>The EUDI wallet contains a Credential in ISO-mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element  <code>mobile_phone_number</code> is present in the mdoc data.</p>
 <h4 id="preconditions_11">Preconditions</h4>
-<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
-B. All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
-C. The device retrieval mdoc response was retrieved. 
-D. The presence of data element <code>mobile_phone_number</code> in the device retrieval mdoc response was verified.</p>
+<ol class="precond-alpha">
+<li>A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".</li>
+<li>All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested.</li>
+<li>The device retrieval mdoc response was retrieved.</li>
+<li>The presence of data element <code>mobile_phone_number</code> in the device retrieval mdoc response was verified.</li>
+</ol>
 <h4 id="test-scenario_11">Test Scenario</h4>
 <ol>
 <li>Verify the format of the CBOR data item. </li>
@@ -1523,7 +1547,7 @@ D. The presence of data element <code>mobile_phone_number</code> in the device r
 <!-- END INCLUDE -->
 <h3 id="ws_rp_dm_addressdata_residentaddress_pid_ietf-sd-jwt-vc_001">WS_RP_DM_AddressData_Residentaddress_PID_IETF-sd-jwt-vc_001</h3>
 <h4 id="objective_12">Objective</h4>
-<p>This test case verifies that the claim <code>address.formatted</code> is present in the Credential in IETF SD-JWT VC format if this is indicated in the ICS. Note that <code>address.formatted</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier resident_address.</p>
+<p>This test case verifies that the claim <code>address.formatted</code> is present in the Credential in IETF SD-JWT VC format if this is indicated in the ICS. Note that <code>address.formatted</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier <code>resident_address</code>.</p>
 <h4 id="references_12">References</h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.2 (Table 2)</li>
@@ -1533,9 +1557,11 @@ D. The presence of data element <code>mobile_phone_number</code> in the device r
 <h4 id="profile-applicability_12">Profile applicability</h4>
 <p>The EUDI wallet contains a Credential in SD-JWT VC format with vct = "urn:eudi:pid:". The claim <code>address.formatted</code> is included in a person identification data.</p>
 <h4 id="preconditions_12">Preconditions</h4>
-<p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
-B. All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
-C. EUDI wallet presented the Credential successfully.</p>
+<ol class="precond-alpha">
+<li>A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.</li>
+<li>All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.</li>
+<li>EUDI wallet presented the Credential successfully.</li>
+</ol>
 <h4 id="test-scenario_12">Test Scenario</h4>
 <ol>
 <li>Verify the presence of a claim with identifier <code>address.formatted</code> in the Credential presented to the Verifier in IETF SD-JWT VC format.</li>
@@ -1547,7 +1573,7 @@ C. EUDI wallet presented the Credential successfully.</p>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_dm_addressdata_residentaddress_pid_ietf-sd-jwt-vc_002">WS_RP_DM_AddressData_Residentaddress_PID_IETF-sd-jwt-vc_002</h3>
 <h4 id="objective_13">Objective</h4>
-<p>This test case verifies that the claim <code>address.formatted</code> is a String encoded in UTF-8. Note that <code>address.formatted</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier resident_address.</p>
+<p>This test case verifies that the claim <code>address.formatted</code> is a String encoded in UTF-8. Note that <code>address.formatted</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier <code>resident_address</code>.</p>
 <h4 id="references_13">References</h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.2, item 3 (Table 7)</li>
@@ -1557,10 +1583,12 @@ C. EUDI wallet presented the Credential successfully.</p>
 <h4 id="profile-applicability_13">Profile applicability</h4>
 <p>The EUDI wallet contains a Credential in SD-JWT VC format with vct = "urn:eudi:pid:". The claim <code>address.formatted</code> is included in a person identification data.</p>
 <h4 id="preconditions_13">Preconditions</h4>
-<p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
-B. All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
-C. EUDI wallet presented the Credential successfully. 
-D. The presence of claim <code>address.formatted</code> in the IETF SD-JWT VC Credential presented was verified.</p>
+<ol class="precond-alpha">
+<li>A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.</li>
+<li>All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.</li>
+<li>EUDI wallet presented the Credential successfully.</li>
+<li>The presence of claim <code>address.formatted</code> in the IETF SD-JWT VC Credential presented was verified.</li>
+</ol>
 <h4 id="test-scenario_13">Test Scenario</h4>
 <ol>
 <li>Verify that the claim <code>address.formatted</code> is a String encoded in UTF-8, supporting the full Unicode range.</li>
@@ -1572,7 +1600,7 @@ D. The presence of claim <code>address.formatted</code> in the IETF SD-JWT VC Cr
 <!-- END INCLUDE -->
 <h3 id="ws_rp_dm_addressdata_residentaddress_pid_iso-mdoc_001">WS_RP_DM_AddressData_Residentaddress_PID_ISO-mdoc_001</h3>
 <h4 id="objective_14">Objective</h4>
-<p>This test case verifies that the data element <code>resident_address</code> is present in the mdoc data if this is indicated in the ICS. Note that <code>resident_address</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier resident_address.</p>
+<p>This test case verifies that the data element <code>resident_address</code> is present in the mdoc data if this is indicated in the ICS. Note that <code>resident_address</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier <code>resident_address</code>.</p>
 <h4 id="references_14">References</h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.1 (Table 2)</li>
@@ -1582,9 +1610,11 @@ D. The presence of claim <code>address.formatted</code> in the IETF SD-JWT VC Cr
 <h4 id="profile-applicability_14">Profile applicability</h4>
 <p>The EUDI wallet contains a Credential in ISO-mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element <code>resident_address</code> is present in the mdoc data.</p>
 <h4 id="preconditions_14">Preconditions</h4>
-<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
-B. All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
-C. The device retrieval mdoc response was retrieved.</p>
+<ol class="precond-alpha">
+<li>A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".</li>
+<li>All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested.</li>
+<li>The device retrieval mdoc response was retrieved.</li>
+</ol>
 <h4 id="test-scenario_14">Test Scenario</h4>
 <ol>
 <li>Verify the presence of a data element with identifier <code>resident_address</code> in the device retrieval mdoc response. </li>
@@ -1598,7 +1628,7 @@ C. The device retrieval mdoc response was retrieved.</p>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_dm_addressdata_residentaddress_pid_iso-mdoc_002">WS_RP_DM_AddressData_Residentaddress_PID_ISO-mdoc_002</h3>
 <h4 id="objective_15">Objective</h4>
-<p>This test case verifies that the DataElementValue of data element <code>resident_address</code> is a well-formed CBOR text string. Note that <code>resident_address</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier resident_address.</p>
+<p>This test case verifies that the DataElementValue of data element <code>resident_address</code> is a well-formed CBOR text string. Note that <code>resident_address</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier <code>resident_address</code>.</p>
 <h4 id="references_15">References</h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.1 (Table 6)</li>
@@ -1609,10 +1639,12 @@ C. The device retrieval mdoc response was retrieved.</p>
 <h4 id="profile-applicability_15">Profile applicability</h4>
 <p>The EUDI wallet contains a Credential in ISO-mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element <code>resident_address</code> is present in the mdoc data.</p>
 <h4 id="preconditions_15">Preconditions</h4>
-<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
-B. All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
-C. The device retrieval mdoc response was retrieved. 
-D. The presence of data element <code>resident_address</code> in the device retrieval mdoc response was verified.</p>
+<ol class="precond-alpha">
+<li>A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".</li>
+<li>All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested.</li>
+<li>The device retrieval mdoc response was retrieved.</li>
+<li>The presence of data element <code>resident_address</code> in the device retrieval mdoc response was verified.</li>
+</ol>
 <h4 id="test-scenario_15">Test Scenario</h4>
 <ol>
 <li>Verify the major type encoded on the first byte of the CBOR data item. </li>
@@ -1626,7 +1658,7 @@ D. The presence of data element <code>resident_address</code> in the device retr
 <!-- END INCLUDE -->
 <h3 id="ws_rp_dm_addressdata_residentcity_pid_ietf-sd-jwt-vc_001">WS_RP_DM_AddressData_Residentcity_PID_IETF-sd-jwt-vc_001</h3>
 <h4 id="objective_16">Objective</h4>
-<p>This test case verifies that the claim <code>address.locality</code> is present in the Credential in IETF SD-JWT VC format if this is indicated in the ICS. Note that <code>address.locality</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier resident_city.</p>
+<p>This test case verifies that the claim <code>address.locality</code> is present in the Credential in IETF SD-JWT VC format if this is indicated in the ICS. Note that <code>address.locality</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier <code>resident_city</code>.</p>
 <h4 id="references_16">References</h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.2 (Table 2)</li>
@@ -1636,9 +1668,11 @@ D. The presence of data element <code>resident_address</code> in the device retr
 <h4 id="profile-applicability_16">Profile applicability</h4>
 <p>The EUDI wallet contains a Credential in SD-JWT VC format with vct = "urn:eudi:pid:". The claim <code>address.locality</code> is included in a person identification data.</p>
 <h4 id="preconditions_16">Preconditions</h4>
-<p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
-B. All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
-C. EUDI wallet presented the Credential successfully.</p>
+<ol class="precond-alpha">
+<li>A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.</li>
+<li>All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.</li>
+<li>EUDI wallet presented the Credential successfully.</li>
+</ol>
 <h4 id="test-scenario_16">Test Scenario</h4>
 <ol>
 <li>Verify the presence of a claim with identifier <code>address.locality</code> in the Credential presented to the Verifier in IETF SD-JWT VC format.</li>
@@ -1650,7 +1684,7 @@ C. EUDI wallet presented the Credential successfully.</p>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_dm_addressdata_residentcity_pid_ietf-sd-jwt-vc_002">WS_RP_DM_AddressData_Residentcity_PID_IETF-sd-jwt-vc_002</h3>
 <h4 id="objective_17">Objective</h4>
-<p>This test case verifies that the claim <code>address.locality</code> is a String encoded in UTF-8. Note that <code>address.locality</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier resident_city.</p>
+<p>This test case verifies that the claim <code>address.locality</code> is a String encoded in UTF-8. Note that <code>address.locality</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier <code>resident_city</code>.</p>
 <h4 id="references_17">References</h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.2, item 3 (Table 7)</li>
@@ -1660,10 +1694,12 @@ C. EUDI wallet presented the Credential successfully.</p>
 <h4 id="profile-applicability_17">Profile applicability</h4>
 <p>The EUDI wallet contains a Credential in SD-JWT VC format with vct = "urn:eudi:pid:". The claim <code>address.locality</code> is included in a person identification data.</p>
 <h4 id="preconditions_17">Preconditions</h4>
-<p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
-B. All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
-C. EUDI wallet presented the Credential successfully. 
-D. The presence of claim <code>address.locality</code> in the IETF SD-JWT VC Credential presented was verified.</p>
+<ol class="precond-alpha">
+<li>A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.</li>
+<li>All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.</li>
+<li>EUDI wallet presented the Credential successfully.</li>
+<li>The presence of claim <code>address.locality</code> in the IETF SD-JWT VC Credential presented was verified.</li>
+</ol>
 <h4 id="test-scenario_17">Test Scenario</h4>
 <ol>
 <li>Verify that the claim <code>address.locality</code> is a String encoded in UTF-8, supporting the full Unicode range.</li>
@@ -1675,7 +1711,7 @@ D. The presence of claim <code>address.locality</code> in the IETF SD-JWT VC Cre
 <!-- END INCLUDE -->
 <h3 id="ws_rp_dm_addressdata_residentcity_pid_iso-mdoc_001">WS_RP_DM_AddressData_Residentcity_PID_ISO-mdoc_001</h3>
 <h4 id="objective_18">Objective</h4>
-<p>This test case verifies that the data element <code>resident_city</code> is present in the mdoc data if this is indicated in the ICS. Note that <code>resident_city</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier resident_city.</p>
+<p>This test case verifies that the data element <code>resident_city</code> is present in the mdoc data if this is indicated in the ICS. Note that <code>resident_city</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier <code>resident_city</code>.</p>
 <h4 id="references_18">References</h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.1 (Table 2)</li>
@@ -1685,9 +1721,11 @@ D. The presence of claim <code>address.locality</code> in the IETF SD-JWT VC Cre
 <h4 id="profile-applicability_18">Profile applicability</h4>
 <p>The EUDI wallet contains a Credential in ISO-mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element <code>resident_city</code> is present in the mdoc data.</p>
 <h4 id="preconditions_18">Preconditions</h4>
-<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
-B. All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
-C. The device retrieval mdoc response was retrieved.</p>
+<ol class="precond-alpha">
+<li>A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".</li>
+<li>All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested.</li>
+<li>The device retrieval mdoc response was retrieved.</li>
+</ol>
 <h4 id="test-scenario_18">Test Scenario</h4>
 <ol>
 <li>Verify the presence of a data element with identifier <code>resident_city</code> in the device retrieval mdoc response. </li>
@@ -1701,7 +1739,7 @@ C. The device retrieval mdoc response was retrieved.</p>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_dm_addressdata_residentcity_pid_iso-mdoc_002">WS_RP_DM_AddressData_Residentcity_PID_ISO-mdoc_002</h3>
 <h4 id="objective_19">Objective</h4>
-<p>This test case verifies that the DataElementValue of data element <code>resident_city</code> is a well-formed CBOR text string. Note that <code>resident_city</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier resident_city.</p>
+<p>This test case verifies that the DataElementValue of data element <code>resident_city</code> is a well-formed CBOR text string. Note that <code>resident_city</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier <code>resident_city</code>.</p>
 <h4 id="references_19">References</h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.1 (Table 6)</li>
@@ -1712,10 +1750,12 @@ C. The device retrieval mdoc response was retrieved.</p>
 <h4 id="profile-applicability_19">Profile applicability</h4>
 <p>The EUDI wallet contains a Credential in ISO-mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element <code>resident_city</code> is present in the mdoc data.</p>
 <h4 id="preconditions_19">Preconditions</h4>
-<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
-B. All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
-C. The device retrieval mdoc response was retrieved. 
-D. The presence of data element <code>resident_city</code> in the device retrieval mdoc response was verified.</p>
+<ol class="precond-alpha">
+<li>A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".</li>
+<li>All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested.</li>
+<li>The device retrieval mdoc response was retrieved.</li>
+<li>The presence of data element <code>resident_city</code> in the device retrieval mdoc response was verified.</li>
+</ol>
 <h4 id="test-scenario_19">Test Scenario</h4>
 <ol>
 <li>Verify the major type encoded on the first byte of the CBOR data item. </li>
@@ -1729,7 +1769,7 @@ D. The presence of data element <code>resident_city</code> in the device retriev
 <!-- END INCLUDE -->
 <h3 id="ws_rp_dm_addressdata_residentcountry_pid_ietf-sd-jwt-vc_001">WS_RP_DM_AddressData_Residentcountry_PID_IETF-sd-jwt-vc_001</h3>
 <h4 id="objective_20">Objective</h4>
-<p>This test case verifies that the claim <code>address.country</code> is present in the Credential in IETF SD-JWT VC format if this is indicated in the ICS. Note that <code>address.country</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier resident_country.</p>
+<p>This test case verifies that the claim <code>address.country</code> is present in the Credential in IETF SD-JWT VC format if this is indicated in the ICS. Note that <code>address.country</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier <code>resident_country</code>.</p>
 <h4 id="references_20">References</h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.2 (Table 2)</li>
@@ -1739,9 +1779,11 @@ D. The presence of data element <code>resident_city</code> in the device retriev
 <h4 id="profile-applicability_20">Profile applicability</h4>
 <p>The EUDI wallet contains a Credential in SD-JWT VC format with vct = "urn:eudi:pid:". The claim <code>address.country</code> is included in a person identification data.</p>
 <h4 id="preconditions_20">Preconditions</h4>
-<p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
-B. All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
-C. EUDI wallet presented the Credential successfully</p>
+<ol class="precond-alpha">
+<li>A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.</li>
+<li>All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.</li>
+<li>EUDI wallet presented the Credential successfully</li>
+</ol>
 <h4 id="test-scenario_20">Test Scenario</h4>
 <ol>
 <li>Verify the presence of a claim with identifier <code>address.country</code> in the Credential presented to the Verifier in IETF SD-JWT VC format.</li>
@@ -1753,7 +1795,7 @@ C. EUDI wallet presented the Credential successfully</p>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_dm_addressdata_residentcountry_pid_ietf-sd-jwt-vc_002">WS_RP_DM_AddressData_Residentcountry_PID_IETF-sd-jwt-vc_002</h3>
 <h4 id="objective_21">Objective</h4>
-<p>This test case verifies that the claim <code>address.country</code> is a String encoded in UTF-8. Note that <code>address.country</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier resident_country.</p>
+<p>This test case verifies that the claim <code>address.country</code> is a String encoded in UTF-8. Note that <code>address.country</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier <code>resident_country</code>.</p>
 <h4 id="references_21">References</h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.2, item 3 (Table 7)</li>
@@ -1763,10 +1805,12 @@ C. EUDI wallet presented the Credential successfully</p>
 <h4 id="profile-applicability_21">Profile applicability</h4>
 <p>The EUDI wallet contains a Credential in SD-JWT VC format with vct = "urn:eudi:pid:". The claim <code>address.country</code> is included in a person identification data.</p>
 <h4 id="preconditions_21">Preconditions</h4>
-<p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
-B. All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
-C. EUDI wallet presented the Credential successfully. 
-D. The presence of claim <code>address.country</code> in the IETF SD-JWT VC Credential presented was verified.</p>
+<ol class="precond-alpha">
+<li>A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.</li>
+<li>All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.</li>
+<li>EUDI wallet presented the Credential successfully.</li>
+<li>The presence of claim <code>address.country</code> in the IETF SD-JWT VC Credential presented was verified.</li>
+</ol>
 <h4 id="test-scenario_21">Test Scenario</h4>
 <ol>
 <li>Verify that the claim <code>address.country</code> is a String encoded in UTF-8, supporting the full Unicode range.</li>
@@ -1778,7 +1822,7 @@ D. The presence of claim <code>address.country</code> in the IETF SD-JWT VC Cred
 <!-- END INCLUDE -->
 <h3 id="ws_rp_dm_addressdata_residentcountry_pid_ietf-sd-jwt-vc_003">WS_RP_DM_AddressData_Residentcountry_PID_IETF-sd-jwt-vc_003</h3>
 <h4 id="objective_22">Objective</h4>
-<p>This test case verifies that the value of the claim <code>address.country</code> contains a valid country code. Note that <code>address.country</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier resident_country.</p>
+<p>This test case verifies that the value of the claim <code>address.country</code> contains a valid country code. Note that <code>address.country</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier <code>resident_country</code>.</p>
 <h4 id="references_22">References</h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.2 (Table 2)</li>
@@ -1790,10 +1834,12 @@ D. The presence of claim <code>address.country</code> in the IETF SD-JWT VC Cred
 <h4 id="profile-applicability_22">Profile applicability</h4>
 <p>The EUDI wallet contains a Credential in SD-JWT VC format with vct = "urn:eudi:pid:". The claim <code>address.country</code> is included in a person identification data.</p>
 <h4 id="preconditions_22">Preconditions</h4>
-<p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
-B. All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
-C. EUDI wallet presented the Credential successfully. 
-D. The presence of claim <code>address.country</code> in the IETF SD-JWT VC Credential presented was verified.</p>
+<ol class="precond-alpha">
+<li>A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.</li>
+<li>All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.</li>
+<li>EUDI wallet presented the Credential successfully.</li>
+<li>The presence of claim <code>address.country</code> in the IETF SD-JWT VC Credential presented was verified.</li>
+</ol>
 <h4 id="test-scenario_22">Test Scenario</h4>
 <ol>
 <li>Verify that the value of the claim <code>address.country</code> contains a valid country code.</li>
@@ -1805,7 +1851,7 @@ D. The presence of claim <code>address.country</code> in the IETF SD-JWT VC Cred
 <!-- END INCLUDE -->
 <h3 id="ws_rp_dm_addressdata_residentcountry_pid_iso-mdoc_001">WS_RP_DM_AddressData_Residentcountry_PID_ISO-mdoc_001</h3>
 <h4 id="objective_23">Objective</h4>
-<p>This test case verifies that the data element <code>resident_country</code> is present in the mdoc data if this is indicated in the ICS. Note that <code>resident_country</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier resident_country.</p>
+<p>This test case verifies that the data element <code>resident_country</code> is present in the mdoc data if this is indicated in the ICS. Note that <code>resident_country</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier <code>resident_country</code>.</p>
 <h4 id="references_23">References</h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.1 (Table 2)</li>
@@ -1815,9 +1861,11 @@ D. The presence of claim <code>address.country</code> in the IETF SD-JWT VC Cred
 <h4 id="profile-applicability_23">Profile applicability</h4>
 <p>The EUDI wallet contains a Credential in ISO-mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element <code>resident_country</code> is present in the mdoc data.</p>
 <h4 id="preconditions_23">Preconditions</h4>
-<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
-B. All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
-C. The device retrieval mdoc response was retrieved.</p>
+<ol class="precond-alpha">
+<li>A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".</li>
+<li>All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested.</li>
+<li>The device retrieval mdoc response was retrieved.</li>
+</ol>
 <h4 id="test-scenario_23">Test Scenario</h4>
 <ol>
 <li>Verify the presence of a data element with identifier <code>resident_country</code> in the device retrieval mdoc response</li>
@@ -1831,7 +1879,7 @@ C. The device retrieval mdoc response was retrieved.</p>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_dm_addressdata_residentcountry_pid_iso-mdoc_002">WS_RP_DM_AddressData_Residentcountry_PID_ISO-mdoc_002</h3>
 <h4 id="objective_24">Objective</h4>
-<p>This test case verifies that the DataElementValue of data element <code>resident_country</code> is a well-formed CBOR text string. Note that <code>resident_country</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier resident_country.</p>
+<p>This test case verifies that the DataElementValue of data element <code>resident_country</code> is a well-formed CBOR text string. Note that <code>resident_country</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier <code>resident_country</code>.</p>
 <h4 id="references_24">References</h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.1 (Table 2)</li>
@@ -1842,10 +1890,12 @@ C. The device retrieval mdoc response was retrieved.</p>
 <h4 id="profile-applicability_24">Profile applicability</h4>
 <p>The EUDI wallet contains a Credential in ISO-mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element <code>resident_country</code> is present in the mdoc data.</p>
 <h4 id="preconditions_24">Preconditions</h4>
-<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
-B. All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
-C. The device retrieval mdoc response was retrieved. 
-D. The presence of data element <code>resident_country</code> in the device retrieval mdoc response was verified.</p>
+<ol class="precond-alpha">
+<li>A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".</li>
+<li>All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested.</li>
+<li>The device retrieval mdoc response was retrieved.</li>
+<li>The presence of data element <code>resident_country</code> in the device retrieval mdoc response was verified.</li>
+</ol>
 <h4 id="test-scenario_24">Test Scenario</h4>
 <ol>
 <li>Verify the major type encoded on the first byte of the CBOR data item.</li>
@@ -1859,7 +1909,7 @@ D. The presence of data element <code>resident_country</code> in the device retr
 <!-- END INCLUDE -->
 <h3 id="ws_rp_dm_addressdata_residentcountry_pid_iso-mdoc_003">WS_RP_DM_AddressData_Residentcountry_PID_ISO-mdoc_003</h3>
 <h4 id="objective_25">Objective</h4>
-<p>This test case verifies that the DataElementValue of data element <code>resident_country</code> contains a valid country code. Note that <code>resident_country</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier resident_country.</p>
+<p>This test case verifies that the DataElementValue of data element <code>resident_country</code> contains a valid country code. Note that <code>resident_country</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier <code>resident_country</code>.</p>
 <h4 id="references_25">References</h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.1 (Table 6)</li>
@@ -1871,10 +1921,12 @@ D. The presence of data element <code>resident_country</code> in the device retr
 <h4 id="profile-applicability_25">Profile applicability</h4>
 <p>The EUDI wallet contains a Credential in ISO-mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element <code>resident_country</code> is present in the mdoc data.</p>
 <h4 id="preconditions_25">Preconditions</h4>
-<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
-B. All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
-C. The device retrieval mdoc response was retrieved. 
-D. The presence of data element <code>resident_country</code> in the device retrieval mdoc response was verified.</p>
+<ol class="precond-alpha">
+<li>A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".</li>
+<li>All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested.</li>
+<li>The device retrieval mdoc response was retrieved.</li>
+<li>The presence of data element <code>resident_country</code> in the device retrieval mdoc response was verified.</li>
+</ol>
 <h4 id="test-scenario_25">Test Scenario</h4>
 <ol>
 <li>Verify that the DataElementValue of the data element contains a valid country code.</li>
@@ -1886,7 +1938,7 @@ D. The presence of data element <code>resident_country</code> in the device retr
 <!-- END INCLUDE -->
 <h3 id="ws_rp_dm_addressdata_residenthousenumber_pid_ietf-sd-jwt-vc_001">WS_RP_DM_AddressData_Residenthousenumber_PID_IETF-sd-jwt-vc_001</h3>
 <h4 id="objective_26">Objective</h4>
-<p>This test case verifies that the claim <code>address.house_number</code> is present in the Credential in IETF SD-JWT VC format if this is indicated in the ICS. Note that <code>address.house_number</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier resident_house_number.</p>
+<p>This test case verifies that the claim <code>address.house_number</code> is present in the Credential in IETF SD-JWT VC format if this is indicated in the ICS. Note that <code>address.house_number</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier <code>resident_house_number</code>.</p>
 <h4 id="references_26">References</h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.2 (Table 2)</li>
@@ -1896,9 +1948,11 @@ D. The presence of data element <code>resident_country</code> in the device retr
 <h4 id="profile-applicability_26">Profile applicability</h4>
 <p>The EUDI wallet contains a Credential in SD-JWT VC format with vct = "urn:eudi:pid:". The claim <code>address.house_number</code> is included in a person identification data.</p>
 <h4 id="preconditions_26">Preconditions</h4>
-<p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
-B. All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
-C. EUDI wallet presented the Credential successfully.</p>
+<ol class="precond-alpha">
+<li>A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.</li>
+<li>All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.</li>
+<li>EUDI wallet presented the Credential successfully.</li>
+</ol>
 <h4 id="test-scenario_26">Test Scenario</h4>
 <ol>
 <li>Verify the presence of a claim with identifier <code>address.house_number</code> in the Credential presented to the Verifier in IETF SD-JWT VC format.</li>
@@ -1910,7 +1964,7 @@ C. EUDI wallet presented the Credential successfully.</p>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_dm_addressdata_residenthousenumber_pid_ietf-sd-jwt-vc_002">WS_RP_DM_AddressData_Residenthousenumber_PID_IETF-sd-jwt-vc_002</h3>
 <h4 id="objective_27">Objective</h4>
-<p>This test case verifies that the claim <code>address.house_number</code> is a String encoded in UTF-8. Note that <code>address.house_number</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier resident_house_number.</p>
+<p>This test case verifies that the claim <code>address.house_number</code> is a String encoded in UTF-8. Note that <code>address.house_number</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier <code>resident_house_number</code>.</p>
 <h4 id="references_27">References</h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.2 (Table 7)</li>
@@ -1920,10 +1974,12 @@ C. EUDI wallet presented the Credential successfully.</p>
 <h4 id="profile-applicability_27">Profile applicability</h4>
 <p>The EUDI wallet contains a Credential in SD-JWT VC format with vct = "urn:eudi:pid:". The claim <code>address.house_number</code> is included in a person identification data.</p>
 <h4 id="preconditions_27">Preconditions</h4>
-<p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
-B. All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
-C. EUDI wallet presented the Credential successfully. 
-D. The presence of claim <code>address.house_number</code> in the IETF SD-JWT VC Credential presented was verified.</p>
+<ol class="precond-alpha">
+<li>A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.</li>
+<li>All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.</li>
+<li>EUDI wallet presented the Credential successfully.</li>
+<li>The presence of claim <code>address.house_number</code> in the IETF SD-JWT VC Credential presented was verified.</li>
+</ol>
 <h4 id="test-scenario_27">Test Scenario</h4>
 <ol>
 <li>Verify that the claim <code>address.house_number</code> is a String encoded in UTF-8, supporting the full Unicode range.</li>
@@ -1935,7 +1991,7 @@ D. The presence of claim <code>address.house_number</code> in the IETF SD-JWT VC
 <!-- END INCLUDE -->
 <h3 id="ws_rp_dm_addressdata_residenthousenumber_pid_iso-mdoc_001">WS_RP_DM_AddressData_Residenthousenumber_PID_ISO-mdoc_001</h3>
 <h4 id="objective_28">Objective</h4>
-<p>This test case verifies that the data element <code>resident_house_number</code> is present in the mdoc data if this is indicated in the ICS. Note that <code>resident_house_number</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier resident_house_number.</p>
+<p>This test case verifies that the data element <code>resident_house_number</code> is present in the mdoc data if this is indicated in the ICS. Note that <code>resident_house_number</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier <code>resident_house_number</code>.</p>
 <h4 id="references_28">References</h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.1 (Table 2)</li>
@@ -1945,9 +2001,11 @@ D. The presence of claim <code>address.house_number</code> in the IETF SD-JWT VC
 <h4 id="profile-applicability_28">Profile applicability</h4>
 <p>The EUDI wallet contains a Credential in ISO-mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element <code>resident_house_number</code> is present in the mdoc data.</p>
 <h4 id="preconditions_28">Preconditions</h4>
-<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
-B. All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
-C. The device retrieval mdoc response was retrieved.</p>
+<ol class="precond-alpha">
+<li>A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".</li>
+<li>All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested.</li>
+<li>The device retrieval mdoc response was retrieved.</li>
+</ol>
 <h4 id="test-scenario_28">Test Scenario</h4>
 <ol>
 <li>Verify the presence of a data element with identifier <code>resident_house_number</code> in the device retrieval mdoc response. </li>
@@ -1961,7 +2019,7 @@ C. The device retrieval mdoc response was retrieved.</p>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_dm_addressdata_residenthousenumber_pid_iso-mdoc_002">WS_RP_DM_AddressData_Residenthousenumber_PID_ISO-mdoc_002</h3>
 <h4 id="objective_29">Objective</h4>
-<p>This test case verifies that the DataElementValue of data element <code>resident_house_number</code> is a well-formed CBOR text string. Note that <code>resident_house_number</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier resident_house_number.</p>
+<p>This test case verifies that the DataElementValue of data element <code>resident_house_number</code> is a well-formed CBOR text string. Note that <code>resident_house_number</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier <code>resident_house_number</code>.</p>
 <h4 id="references_29">References</h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.1 (Table 6)</li>
@@ -1972,10 +2030,12 @@ C. The device retrieval mdoc response was retrieved.</p>
 <h4 id="profile-applicability_29">Profile applicability</h4>
 <p>The EUDI wallet contains a Credential in ISO-mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element <code>resident_house_number</code> is present in the mdoc data.</p>
 <h4 id="preconditions_29">Preconditions</h4>
-<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
-B. All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
-C. The device retrieval mdoc response was retrieved. 
-D. The presence of data element <code>resident_house_number</code> in the device retrieval mdoc response was verified.</p>
+<ol class="precond-alpha">
+<li>A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".</li>
+<li>All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested.</li>
+<li>The device retrieval mdoc response was retrieved.</li>
+<li>The presence of data element <code>resident_house_number</code> in the device retrieval mdoc response was verified.</li>
+</ol>
 <h4 id="test-scenario_29">Test Scenario</h4>
 <ol>
 <li>Verify the major type encoded on the first byte of the CBOR data item. </li>
@@ -1989,7 +2049,7 @@ D. The presence of data element <code>resident_house_number</code> in the device
 <!-- END INCLUDE -->
 <h3 id="ws_rp_dm_addressdata_residentpostalcode_pid_ietf-sd-jwt-vc_001">WS_RP_DM_AddressData_Residentpostalcode_PID_IETF-sd-jwt-vc_001</h3>
 <h4 id="objective_30">Objective</h4>
-<p>This test case verifies that the claim <code>address.postal_code</code> is present in the Credential in IETF SD-JWT VC format if this is indicated in the ICS. Note that <code>address.postal_code</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier resident_postal_code.</p>
+<p>This test case verifies that the claim <code>address.postal_code</code> is present in the Credential in IETF SD-JWT VC format if this is indicated in the ICS. Note that <code>address.postal_code</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier <code>resident_postal_code</code>.</p>
 <h4 id="references_30">References</h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.2 (Table 2)</li>
@@ -1999,9 +2059,11 @@ D. The presence of data element <code>resident_house_number</code> in the device
 <h4 id="profile-applicability_30">Profile applicability</h4>
 <p>The EUDI wallet contains a Credential in SD-JWT VC format with vct = "urn:eudi:pid:". The claim <code>address.postal_code</code> is included in a person identification data.</p>
 <h4 id="preconditions_30">Preconditions</h4>
-<p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
-B. All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
-C. EUDI wallet presented the Credential successfully.</p>
+<ol class="precond-alpha">
+<li>A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.</li>
+<li>All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.</li>
+<li>EUDI wallet presented the Credential successfully.</li>
+</ol>
 <h4 id="test-scenario_30">Test Scenario</h4>
 <ol>
 <li>Verify the presence of a claim with identifier <code>address.postal_code</code> in the Credential presented to the Verifier in IETF SD-JWT VC format.</li>
@@ -2013,7 +2075,7 @@ C. EUDI wallet presented the Credential successfully.</p>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_dm_addressdata_residentpostalcode_pid_ietf-sd-jwt-vc_002">WS_RP_DM_AddressData_Residentpostalcode_PID_IETF-sd-jwt-vc_002</h3>
 <h4 id="objective_31">Objective</h4>
-<p>This test case verifies that the claim <code>address.postal_code</code> is a String encoded in UTF-8. Note that <code>address.postal_code</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier resident_postal_code. </p>
+<p>This test case verifies that the claim <code>address.postal_code</code> is a String encoded in UTF-8. Note that <code>address.postal_code</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier <code>resident_postal_code</code>. </p>
 <h4 id="references_31">References</h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.2, item 3 (Table 7)</li>
@@ -2024,10 +2086,12 @@ C. EUDI wallet presented the Credential successfully.</p>
 <h4 id="profile-applicability_31">Profile applicability</h4>
 <p>The EUDI wallet contains a Credential in SD-JWT VC format with vct = "urn:eudi:pid:". The claim <code>address.postal_code</code> is included in a person identification data.</p>
 <h4 id="preconditions_31">Preconditions</h4>
-<p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
-B. All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
-C. EUDI wallet presented the Credential successfully. 
-D. The presence of claim <code>address.postal_code</code> in the IETF SD-JWT VC Credential presented was verified.</p>
+<ol class="precond-alpha">
+<li>A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.</li>
+<li>All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.</li>
+<li>EUDI wallet presented the Credential successfully.</li>
+<li>The presence of claim <code>address.postal_code</code> in the IETF SD-JWT VC Credential presented was verified.</li>
+</ol>
 <h4 id="test-scenario_31">Test Scenario</h4>
 <ol>
 <li>Verify that the claim <code>address.postal_code</code> is a String encoded in UTF-8, supporting the full Unicode range.</li>
@@ -2040,7 +2104,7 @@ D. The presence of claim <code>address.postal_code</code> in the IETF SD-JWT VC 
 <h3 id="ws_rp_dm_addressdata_residentpostalcode_pid_iso-mdoc_001">WS_RP_DM_AddressData_Residentpostalcode_PID_ISO-mdoc_001</h3>
 <h4 id="objective_32">Objective</h4>
 <p>This test case verifies that the data element <code>resident_postal_code</code> is present in the mdoc data if this is indicated in the ICS.
-Note that <code>resident_postal_code</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier resident_postal_code.</p>
+Note that <code>resident_postal_code</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier <code>resident_postal_code</code>.</p>
 <h4 id="references_32">References</h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.1 (Table 2)</li>
@@ -2050,9 +2114,11 @@ Note that <code>resident_postal_code</code> is the Attribute Identifier in ISO-m
 <h4 id="profile-applicability_32">Profile applicability</h4>
 <p>The EUDI wallet contains a Credential in ISO-mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element <code>resident_postal_code</code> is present in the mdoc data.</p>
 <h4 id="preconditions_32">Preconditions</h4>
-<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
-B. All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
-C. The device retrieval mdoc response was retrieved.</p>
+<ol class="precond-alpha">
+<li>A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".</li>
+<li>All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested.</li>
+<li>The device retrieval mdoc response was retrieved.</li>
+</ol>
 <h4 id="test-scenario_32">Test Scenario</h4>
 <ol>
 <li>Verify the presence of a data element with identifier <code>resident_postal_code</code> in the device retrieval mdoc response. </li>
@@ -2066,7 +2132,7 @@ C. The device retrieval mdoc response was retrieved.</p>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_dm_addressdata_residentpostalcode_pid_iso-mdoc_002">WS_RP_DM_AddressData_Residentpostalcode_PID_ISO-mdoc_002</h3>
 <h4 id="objective_33">Objective</h4>
-<p>This test case verifies that the DataElementValue of data element <code>resident_postal_code</code> is a well-formed CBOR text string. Note that <code>resident_postal_code</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier resident_postal_code.</p>
+<p>This test case verifies that the DataElementValue of data element <code>resident_postal_code</code> is a well-formed CBOR text string. Note that <code>resident_postal_code</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier <code>resident_postal_code</code>.</p>
 <h4 id="references_33">References</h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.1 (Table 6)</li>
@@ -2077,10 +2143,12 @@ C. The device retrieval mdoc response was retrieved.</p>
 <h4 id="profile-applicability_33">Profile applicability</h4>
 <p>The EUDI wallet contains a Credential in ISO-mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element <code>resident_postal_code</code> is present in the mdoc data.</p>
 <h4 id="preconditions_33">Preconditions</h4>
-<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
-B. All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
-C. The device retrieval mdoc response was retrieved. 
-D. The presence of data element <code>resident_postal_code</code> in the device retrieval mdoc response was verified.</p>
+<ol class="precond-alpha">
+<li>A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".</li>
+<li>All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested.</li>
+<li>The device retrieval mdoc response was retrieved.</li>
+<li>The presence of data element <code>resident_postal_code</code> in the device retrieval mdoc response was verified.</li>
+</ol>
 <h4 id="test-scenario_33">Test Scenario</h4>
 <ol>
 <li>Verify the major type encoded on the first byte of the CBOR data item. </li>
@@ -2094,7 +2162,7 @@ D. The presence of data element <code>resident_postal_code</code> in the device 
 <!-- END INCLUDE -->
 <h3 id="ws_rp_dm_addressdata_residentstate_pid_ietf-sd-jwt-vc_001">WS_RP_DM_AddressData_Residentstate_PID_IETF-sd-jwt-vc_001</h3>
 <h4 id="objective_34">Objective</h4>
-<p>This test case verifies that the claim <code>address.region</code> is present in the Credential in IETF SD-JWT VC format if this is indicated in the ICS. Note that <code>address.region</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier resident_state. </p>
+<p>This test case verifies that the claim <code>address.region</code> is present in the Credential in IETF SD-JWT VC format if this is indicated in the ICS. Note that <code>address.region</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier <code>resident_state</code>. </p>
 <h4 id="references_34">References</h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.2 (Table 2)</li>
@@ -2104,9 +2172,11 @@ D. The presence of data element <code>resident_postal_code</code> in the device 
 <h4 id="profile-applicability_34">Profile applicability</h4>
 <p>The EUDI wallet contains a Credential in SD-JWT VC format with vct = "urn:eudi:pid:". The claim <code>address.region</code> is included in a person identification data.</p>
 <h4 id="preconditions_34">Preconditions</h4>
-<p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
-B. All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
-C. EUDI wallet presented the Credential successfully.</p>
+<ol class="precond-alpha">
+<li>A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.</li>
+<li>All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.</li>
+<li>EUDI wallet presented the Credential successfully.</li>
+</ol>
 <h4 id="test-scenario_34">Test Scenario</h4>
 <ol>
 <li>Verify the presence of a claim with identifier <code>address.region</code> in the Credential presented to the Verifier in IETF SD-JWT VC format.</li>
@@ -2118,7 +2188,7 @@ C. EUDI wallet presented the Credential successfully.</p>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_dm_addressdata_residentstate_pid_ietf-sd-jwt-vc_002">WS_RP_DM_AddressData_Residentstate_PID_IETF-sd-jwt-vc_002</h3>
 <h4 id="objective_35">Objective</h4>
-<p>This test case verifies that the claim <code>address.region</code> is a String encoded in UTF-8. Note that <code>address.region</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier resident_state.</p>
+<p>This test case verifies that the claim <code>address.region</code> is a String encoded in UTF-8. Note that <code>address.region</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier <code>resident_state</code>.</p>
 <h4 id="references_35">References</h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.2 (Table 7)</li>
@@ -2128,10 +2198,12 @@ C. EUDI wallet presented the Credential successfully.</p>
 <h4 id="profile-applicability_35">Profile applicability</h4>
 <p>The EUDI wallet contains a Credential in SD-JWT VC format with vct = "urn:eudi:pid:". The claim <code>address.region</code> is included in a person identification data.</p>
 <h4 id="preconditions_35">Preconditions</h4>
-<p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
-B. All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
-C. EUDI wallet presented the Credential successfully. 
-D. The presence of claim <code>address.region</code> in the IETF SD-JWT VC Credential presented was verified.</p>
+<ol class="precond-alpha">
+<li>A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.</li>
+<li>All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.</li>
+<li>EUDI wallet presented the Credential successfully.</li>
+<li>The presence of claim <code>address.region</code> in the IETF SD-JWT VC Credential presented was verified.</li>
+</ol>
 <h4 id="test-scenario_35">Test Scenario</h4>
 <ol>
 <li>Verify that the claim <code>address.region</code> is a String encoded in UTF-8, supporting the full Unicode range.</li>
@@ -2143,7 +2215,7 @@ D. The presence of claim <code>address.region</code> in the IETF SD-JWT VC Crede
 <!-- END INCLUDE -->
 <h3 id="ws_rp_dm_addressdata_residentstate_pid_iso-mdoc_001">WS_RP_DM_AddressData_Residentstate_PID_ISO-mdoc_001</h3>
 <h4 id="objective_36">Objective</h4>
-<p>This test case verifies that the data element <code>resident_state</code> is present in the mdoc data if this is indicated in the ICS. Note that <code>resident_state</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier resident_state.</p>
+<p>This test case verifies that the data element <code>resident_state</code> is present in the mdoc data if this is indicated in the ICS. Note that <code>resident_state</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier <code>resident_state</code>.</p>
 <h4 id="references_36">References</h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.1 (Table 2)</li>
@@ -2153,9 +2225,11 @@ D. The presence of claim <code>address.region</code> in the IETF SD-JWT VC Crede
 <h4 id="profile-applicability_36">Profile applicability</h4>
 <p>The EUDI wallet contains a Credential in ISO-mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element <code>resident_state</code> is present in the mdoc data.</p>
 <h4 id="preconditions_36">Preconditions</h4>
-<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
-B. All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
-C. The device retrieval mdoc response was retrieved.</p>
+<ol class="precond-alpha">
+<li>A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".</li>
+<li>All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested.</li>
+<li>The device retrieval mdoc response was retrieved.</li>
+</ol>
 <h4 id="test-scenario_36">Test Scenario</h4>
 <ol>
 <li>Verify the presence of a data element with identifier <code>resident_state</code> in the device retrieval mdoc response. </li>
@@ -2169,7 +2243,7 @@ C. The device retrieval mdoc response was retrieved.</p>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_dm_addressdata_residentstate_pid_iso-mdoc_002">WS_RP_DM_AddressData_Residentstate_PID_ISO-mdoc_002</h3>
 <h4 id="objective_37">Objective</h4>
-<p>This test case verifies that the DataElementValue of data element <code>resident_state</code> is a well-formed CBOR text string. Note that <code>resident_state</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier resident_state.</p>
+<p>This test case verifies that the DataElementValue of data element <code>resident_state</code> is a well-formed CBOR text string. Note that <code>resident_state</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier <code>resident_state</code>.</p>
 <h4 id="references_37">References</h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.1 (Table 6)</li>
@@ -2180,10 +2254,12 @@ C. The device retrieval mdoc response was retrieved.</p>
 <h4 id="profile-applicability_37">Profile applicability</h4>
 <p>The EUDI wallet contains a Credential in ISO-mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element <code>resident_state</code> is present in the mdoc data.</p>
 <h4 id="preconditions_37">Preconditions</h4>
-<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
-B. All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
-C. The device retrieval mdoc response was retrieved. 
-D. The presence of data element <code>resident_state</code> in the device retrieval mdoc response was verified.</p>
+<ol class="precond-alpha">
+<li>A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".</li>
+<li>All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested.</li>
+<li>The device retrieval mdoc response was retrieved.</li>
+<li>The presence of data element <code>resident_state</code> in the device retrieval mdoc response was verified.</li>
+</ol>
 <h4 id="test-scenario_37">Test Scenario</h4>
 <ol>
 <li>Verify the major type encoded on the first byte of the CBOR data item. </li>
@@ -2197,7 +2273,7 @@ D. The presence of data element <code>resident_state</code> in the device retrie
 <!-- END INCLUDE -->
 <h3 id="ws_rp_dm_addressdata_residentstreet_pid_ietf-sd-jwt-vc_001">WS_RP_DM_AddressData_Residentstreet_PID_IETF-sd-jwt-vc_001</h3>
 <h4 id="objective_38">Objective</h4>
-<p>This test case verifies that the claim <code>address.street_address</code> is present in the Credential in IETF SD-JWT VC format if this is indicated in the ICS. Note that <code>address.street_address</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier resident_street. </p>
+<p>This test case verifies that the claim <code>address.street_address</code> is present in the Credential in IETF SD-JWT VC format if this is indicated in the ICS. Note that <code>address.street_address</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier <code>resident_street</code>. </p>
 <h4 id="references_38">References</h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.2 (Table 2)</li>
@@ -2207,9 +2283,11 @@ D. The presence of data element <code>resident_state</code> in the device retrie
 <h4 id="profile-applicability_38">Profile applicability</h4>
 <p>The EUDI wallet contains a Credential in SD-JWT VC format with vct = "urn:eudi:pid:". The claim <code>address.street_address</code> is included in a person identification data.</p>
 <h4 id="preconditions_38">Preconditions</h4>
-<p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
-B. All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
-C. EUDI wallet presented the Credential successfully.</p>
+<ol class="precond-alpha">
+<li>A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.</li>
+<li>All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.</li>
+<li>EUDI wallet presented the Credential successfully.</li>
+</ol>
 <h4 id="test-scenario_38">Test Scenario</h4>
 <ol>
 <li>Verify the presence of a claim with identifier <code>address.street_address</code> in the Credential presented to the Verifier in IETF SD-JWT VC format.</li>
@@ -2221,7 +2299,7 @@ C. EUDI wallet presented the Credential successfully.</p>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_dm_addressdata_residentstreet_pid_ietf-sd-jwt-vc_002">WS_RP_DM_AddressData_Residentstreet_PID_IETF-sd-jwt-vc_002</h3>
 <h4 id="objective_39">Objective</h4>
-<p>This test case verifies that the claim <code>address.street_address</code> is a String encoded in UTF-8. Note that <code>address.street_address</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier resident_street. </p>
+<p>This test case verifies that the claim <code>address.street_address</code> is a String encoded in UTF-8. Note that <code>address.street_address</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier <code>resident_street</code>. </p>
 <h4 id="references_39">References</h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.2, item 3 (Table 7)</li>
@@ -2231,7 +2309,12 @@ C. EUDI wallet presented the Credential successfully.</p>
 <h4 id="profile-applicability_39">Profile applicability</h4>
 <p>The EUDI wallet contains a Credential in SD-JWT VC format with vct = "urn:eudi:pid:". The claim <code>address.street_address</code> is included in a person identification data.</p>
 <h4 id="preconditions_39">Preconditions</h4>
-<p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.  B. All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. C. EUDI wallet presented the Credential successfully. D. The presence of claim <code>address.street_address</code> in the IETF SD-JWT VC Credential presented was verified.</p>
+<ol class="precond-alpha">
+<li>A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.</li>
+<li>All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.</li>
+<li>EUDI wallet presented the Credential successfully.</li>
+<li>The presence of claim <code>address.street_address</code> in the IETF SD-JWT VC Credential presented was verified.</li>
+</ol>
 <h4 id="test-scenario_39">Test Scenario</h4>
 <ol>
 <li>Verify that the claim <code>address.street_address</code> is a String encoded in UTF-8, supporting the full Unicode range.</li>
@@ -2243,7 +2326,7 @@ C. EUDI wallet presented the Credential successfully.</p>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_dm_addressdata_residentstreet_pid_iso-mdoc_001">WS_RP_DM_AddressData_Residentstreet_PID_ISO-mdoc_001</h3>
 <h4 id="objective_40">Objective</h4>
-<p>This test case verifies that the data element <code>resident_street</code> is present in the mdoc data if this is indicated in the ICS. Note that <code>resident_street</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier resident_street. </p>
+<p>This test case verifies that the data element <code>resident_street</code> is present in the mdoc data if this is indicated in the ICS. Note that <code>resident_street</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier <code>resident_street</code>. </p>
 <h4 id="references_40">References</h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.1 (Table 2)</li>
@@ -2253,9 +2336,11 @@ C. EUDI wallet presented the Credential successfully.</p>
 <h4 id="profile-applicability_40">Profile applicability</h4>
 <p>The EUDI wallet contains a Credential in ISO-mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element <code>resident_street</code> is present in the mdoc data.</p>
 <h4 id="preconditions_40">Preconditions</h4>
-<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
-B. All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
-C. The device retrieval mdoc response was retrieved.</p>
+<ol class="precond-alpha">
+<li>A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".</li>
+<li>All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested.</li>
+<li>The device retrieval mdoc response was retrieved.</li>
+</ol>
 <h4 id="test-scenario_40">Test Scenario</h4>
 <ol>
 <li>Verify the presence of a data element with identifier <code>resident_street</code> in the device retrieval mdoc response. </li>
@@ -2269,7 +2354,7 @@ C. The device retrieval mdoc response was retrieved.</p>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_dm_addressdata_residentstreet_pid_iso-mdoc_002">WS_RP_DM_AddressData_Residentstreet_PID_ISO-mdoc_002</h3>
 <h4 id="objective_41">Objective</h4>
-<p>This test case verifies that the DataElementValue of data element <code>resident_street</code> is a well-formed CBOR text string. Note that <code>resident_street</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier resident_street. </p>
+<p>This test case verifies that the DataElementValue of data element <code>resident_street</code> is a well-formed CBOR text string. Note that <code>resident_street</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier <code>resident_street</code>. </p>
 <h4 id="references_41">References</h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.1 (Table 6)</li>
@@ -2280,10 +2365,12 @@ C. The device retrieval mdoc response was retrieved.</p>
 <h4 id="profile-applicability_41">Profile applicability</h4>
 <p>The EUDI wallet contains a Credential in ISO-mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element <code>resident_street</code> is present in the mdoc data.</p>
 <h4 id="preconditions_41">Preconditions</h4>
-<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
-B. All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
-C. The device retrieval mdoc response was retrieved. 
-D. The presence of data element <code>resident_street</code> in the device retrieval mdoc response was verified.</p>
+<ol class="precond-alpha">
+<li>A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".</li>
+<li>All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested.</li>
+<li>The device retrieval mdoc response was retrieved.</li>
+<li>The presence of data element <code>resident_street</code> in the device retrieval mdoc response was verified.</li>
+</ol>
 <h4 id="test-scenario_41">Test Scenario</h4>
 <ol>
 <li>Verify the major type encoded on the first byte of the CBOR data item. </li>

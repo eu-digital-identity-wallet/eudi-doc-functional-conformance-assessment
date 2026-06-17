@@ -1206,7 +1206,7 @@
 
 <h1 id="ws_rp_dm_credentialmetadata_documentnumber_pid_ietf-sd-jwt-vc_001">WS_RP_DM_Credentialmetadata_Documentnumber_PID_IETF-sd-jwt-vc_001</h1>
 <h2 id="objective">Objective</h2>
-<p>This test case verifies that the claim <code>document_number</code> is present in the Credential in IETF SD-JWT VC format if this is indicated in the ICS. Note that <code>document_number</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier document_number. </p>
+<p>This test case verifies that the claim <code>document_number</code> is present in the Credential in IETF SD-JWT VC format if this is indicated in the ICS. Note that <code>document_number</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier <code>document_number</code>. </p>
 <h2 id="references">References</h2>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.2 (Table 5)</li>
@@ -1216,9 +1216,11 @@
 <h2 id="profile-applicability">Profile applicability</h2>
 <p>The EUDI wallet contains a Credential in SD-JWT VC format with vct = "urn:eudi:pid:". The claim <code>document_number</code> is included in a person identification data.</p>
 <h2 id="preconditions">Preconditions</h2>
-<p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
-B. All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
-C. EUDI wallet presented the Credential successfully.</p>
+<ol class="precond-alpha">
+<li>A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.</li>
+<li>All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.</li>
+<li>EUDI wallet presented the Credential successfully.</li>
+</ol>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
 <li>Verify the presence of a claim with identifier <code>document_number</code> in the Credential presented to the Verifier in IETF SD-JWT VC format.</li>

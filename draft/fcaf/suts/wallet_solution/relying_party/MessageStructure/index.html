@@ -1220,11 +1220,13 @@
 <h5 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h5>
 <p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions">Preconditions</h5>
-<p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
-B) The Referenced Token includes the Status element that contains the Status_list element (index and URI)
-C) The EUDI Wallet has retrieved a Status List Token from the referenced URI
-D) The Status List Token is validated
-E) The Issuer issues a JWT Referenced Token with a status_list claim to the EUDI Wallet.</p>
+<ol class="precond-alpha">
+<li>The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer</li>
+<li>The Referenced Token includes the Status element that contains the Status_list element (index and URI)</li>
+<li>The EUDI Wallet has retrieved a Status List Token from the referenced URI</li>
+<li>The Status List Token is validated</li>
+<li>The Issuer issues a JWT Referenced Token with a status_list claim to the EUDI Wallet.</li>
+</ol>
 <h5 id="test-scenario">Test Scenario</h5>
 <ol>
 <li>Verify that the Wallet accepts and stores the JWT Referenced Token.</li>
@@ -1246,11 +1248,13 @@ E) The Issuer issues a JWT Referenced Token with a status_list claim to the EUDI
 <h5 id="eudi-wallet-relevancy_1">EUDI-wallet relevancy</h5>
 <p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions_1">Preconditions</h5>
-<p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
-B) The Referenced Token includes the Status element that contains the Status_list element (index and URI)
-C) The EUDI Wallet has retrieved a Status List Token from the referenced URI
-D) The Status List Token is validated
-E) The Issuer issues a SD-JWT Referenced Token with a status_list claim to the EUDI Wallet.</p>
+<ol class="precond-alpha">
+<li>The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer</li>
+<li>The Referenced Token includes the Status element that contains the Status_list element (index and URI)</li>
+<li>The EUDI Wallet has retrieved a Status List Token from the referenced URI</li>
+<li>The Status List Token is validated</li>
+<li>The Issuer issues a SD-JWT Referenced Token with a status_list claim to the EUDI Wallet.</li>
+</ol>
 <h5 id="test-scenario_1">Test Scenario</h5>
 <ol>
 <li>Verify that the Wallet accepts and stores the SD-JWT Referenced Token.</li>
@@ -1272,11 +1276,13 @@ E) The Issuer issues a SD-JWT Referenced Token with a status_list claim to the E
 <h5 id="eudi-wallet-relevancy_2">EUDI-wallet relevancy</h5>
 <p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions_2">Preconditions</h5>
-<p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
-B) The Referenced Token includes the Status element that contains the Status_list element (index and URI)
-C) The EUDI Wallet has retrieved a Status List Token from the referenced URI
-D) The Status List Token is validated
-E) The Issuer issues a SD-JWT VC Referenced Token with a status_list claim to the EUDI Wallet.</p>
+<ol class="precond-alpha">
+<li>The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer</li>
+<li>The Referenced Token includes the Status element that contains the Status_list element (index and URI)</li>
+<li>The EUDI Wallet has retrieved a Status List Token from the referenced URI</li>
+<li>The Status List Token is validated</li>
+<li>The Issuer issues a SD-JWT VC Referenced Token with a status_list claim to the EUDI Wallet.</li>
+</ol>
 <h5 id="test-scenario_2">Test Scenario</h5>
 <ol>
 <li>Verify that the Wallet accepts and stores the SD-JWT VC Referenced Token.</li>
@@ -1298,11 +1304,13 @@ E) The Issuer issues a SD-JWT VC Referenced Token with a status_list claim to th
 <h5 id="eudi-wallet-relevancy_3">EUDI-wallet relevancy</h5>
 <p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions_3">Preconditions</h5>
-<p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
-B) The Referenced Token includes the Status element that contains the Status_list element (index and URI)
-C) The EUDI Wallet has retrieved a Status List Token from the referenced URI
-D) The Status List Token is validated
-E) The Issuer issues a CWT Referenced Token with a status claim to the EUDI Wallet.</p>
+<ol class="precond-alpha">
+<li>The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer</li>
+<li>The Referenced Token includes the Status element that contains the Status_list element (index and URI)</li>
+<li>The EUDI Wallet has retrieved a Status List Token from the referenced URI</li>
+<li>The Status List Token is validated</li>
+<li>The Issuer issues a CWT Referenced Token with a status claim to the EUDI Wallet.</li>
+</ol>
 <h5 id="test-scenario_3">Test Scenario</h5>
 <ol>
 <li>Verify that the Wallet accepts and stores the CWT Referenced Token.</li>
@@ -1324,11 +1332,13 @@ E) The Issuer issues a CWT Referenced Token with a status claim to the EUDI Wall
 <h5 id="eudi-wallet-relevancy_4">EUDI-wallet relevancy</h5>
 <p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions_4">Preconditions</h5>
-<p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
-B) The Referenced Token includes the Status element that contains the Status_list element (index and URI)
-C) The EUDI Wallet has retrieved a Status List Token from the referenced URI
-D) The Status List Token is validated
-E) The Issuer issues a ISO mdoc Referenced Token with a status claim to the EUDI Wallet.</p>
+<ol class="precond-alpha">
+<li>The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer</li>
+<li>The Referenced Token includes the Status element that contains the Status_list element (index and URI)</li>
+<li>The EUDI Wallet has retrieved a Status List Token from the referenced URI</li>
+<li>The Status List Token is validated</li>
+<li>The Issuer issues a ISO mdoc Referenced Token with a status claim to the EUDI Wallet.</li>
+</ol>
 <h5 id="test-scenario_4">Test Scenario</h5>
 <ol>
 <li>Verify that the Wallet accepts and stores the ISO mdoc Referenced Token.</li>
@@ -1644,8 +1654,8 @@ c. discontinues the interaction.</li>
 <li>Wallet asks for user consent.</li>
 <li>This is the case.</li>
 <li>Wallet presents Credential in IETF SD-JWT VC format.</li>
-<li>Status` claim is present.</li>
-<li>"Status" claim contains "status_list".</li>
+<li><code>status</code> claim is present.</li>
+<li><code>status</code> claim contains <code>status_list</code>.</li>
 </ol>
 <!-- END INCLUDE -->
 <h4 id="ws_rp_ms_credentialformats_045">WS_RP_MS_CredentialFormats_045</h4>
@@ -1661,8 +1671,10 @@ c. discontinues the interaction.</li>
 <h5 id="eudi-wallet-relevancy_14">EUDI-wallet relevancy</h5>
 <p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions_14">Preconditions</h5>
-<p>A) Credential Issuer issued Credential to the Wallet in IETF SD-JWT VC format, using compact serialization as defined in [RFC9901].
-B) There is a Key Binding JWT.</p>
+<ol class="precond-alpha">
+<li>Credential Issuer issued Credential to the Wallet in IETF SD-JWT VC format, using compact serialization as defined in [RFC9901].</li>
+<li>There is a Key Binding JWT.</li>
+</ol>
 <h5 id="test-scenario_14">Test Scenario</h5>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
@@ -1693,8 +1705,10 @@ The order of the concatenated parts is the Issuer-signed JWT, a tilde character,
 <h5 id="eudi-wallet-relevancy_15">EUDI-wallet relevancy</h5>
 <p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions_15">Preconditions</h5>
-<p>A) Credential Issuer issued Credential to the Wallet in IETF SD-JWT VC format, using compact serialization as defined in [RFC9901].
-B) There is no Key Binding JWT.</p>
+<ol class="precond-alpha">
+<li>Credential Issuer issued Credential to the Wallet in IETF SD-JWT VC format, using compact serialization as defined in [RFC9901].</li>
+<li>There is no Key Binding JWT.</li>
+</ol>
 <h5 id="test-scenario_15">Test Scenario</h5>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
@@ -1755,12 +1769,14 @@ Wallet profile supports JSON serialization and Credential profile requires it</p
 <h5 id="eudi-wallet-relevancy_17">EUDI-wallet relevancy</h5>
 <p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions_17">Preconditions</h5>
-<p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
-B) The Referenced Token includes the Status element that contains the Status_list element (index and URI)
-C) The EUDI Wallet has retrieved a Status List Token from the referenced URI
-D) The Status List Token is validated
-E)The Issuer has provided a JOSE-based Referenced Token to the EUDI Wallet.
-F) The Referenced Token contains a "status" claim containing a valid "status_list" JSON Object.</p>
+<ol class="precond-alpha">
+<li>The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer</li>
+<li>The Referenced Token includes the Status element that contains the Status_list element (index and URI)</li>
+<li>The EUDI Wallet has retrieved a Status List Token from the referenced URI</li>
+<li>The Status List Token is validated</li>
+<li>The Issuer has provided a JOSE-based Referenced Token to the EUDI Wallet.</li>
+<li>The Referenced Token contains a "status" claim containing a valid "status_list" JSON Object.</li>
+</ol>
 <h5 id="test-scenario_17">Test Scenario</h5>
 <ol>
 <li>Verify the presence and content of the "status" claim.</li>
@@ -1782,9 +1798,11 @@ F) The Referenced Token contains a "status" claim containing a valid "status_lis
 <h5 id="eudi-wallet-relevancy_18">EUDI-wallet relevancy</h5>
 <p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions_18">Preconditions</h5>
-<p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
-B)The Issuer has provided a JOSE-based Referenced Token to the EUDI Wallet.
-C) The Referenced Token does not contain the "status" claim.</p>
+<ol class="precond-alpha">
+<li>The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer</li>
+<li>The Issuer has provided a JOSE-based Referenced Token to the EUDI Wallet.</li>
+<li>The Referenced Token does not contain the "status" claim.</li>
+</ol>
 <h5 id="test-scenario_18">Test Scenario</h5>
 <ol>
 <li>Verify the Wallet's handling of the absent "status" claim.</li>
@@ -1806,12 +1824,14 @@ C) The Referenced Token does not contain the "status" claim.</p>
 <h5 id="eudi-wallet-relevancy_19">EUDI-wallet relevancy</h5>
 <p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions_19">Preconditions</h5>
-<p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
-B) The Referenced Token includes the Status element that contains the Status_list element (index and URI)
-C) The EUDI Wallet has retrieved a Status List Token from the referenced URI
-D) The Status List Token is validated
-E) The Issuer has provided a JOSE-based Referenced Token to the EUDI Wallet.
-F) The Referenced Token contains a "status_list" JSON Object within the "status" claim, containing valid "idx" and "uri" fields.</p>
+<ol class="precond-alpha">
+<li>The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer</li>
+<li>The Referenced Token includes the Status element that contains the Status_list element (index and URI)</li>
+<li>The EUDI Wallet has retrieved a Status List Token from the referenced URI</li>
+<li>The Status List Token is validated</li>
+<li>The Issuer has provided a JOSE-based Referenced Token to the EUDI Wallet.</li>
+<li>The Referenced Token contains a "status_list" JSON Object within the "status" claim, containing valid "idx" and "uri" fields.</li>
+</ol>
 <h5 id="test-scenario_19">Test Scenario</h5>
 <ol>
 <li>Verify the presence of "status_list" within the "status" claim and its "idx" and "uri" fields.</li>
@@ -1833,9 +1853,11 @@ F) The Referenced Token contains a "status_list" JSON Object within the "status"
 <h5 id="eudi-wallet-relevancy_20">EUDI-wallet relevancy</h5>
 <p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions_20">Preconditions</h5>
-<p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
-B) The Issuer has provided a JOSE-based Referenced Token to the EUDI Wallet.
-C) The Referenced Token contains the "status" claim but without a "status_list" object.</p>
+<ol class="precond-alpha">
+<li>The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer</li>
+<li>The Issuer has provided a JOSE-based Referenced Token to the EUDI Wallet.</li>
+<li>The Referenced Token contains the "status" claim but without a "status_list" object.</li>
+</ol>
 <h5 id="test-scenario_20">Test Scenario</h5>
 <ol>
 <li>Verify the Wallet's handling of the absent "status_list" within the "status" claim.</li>
@@ -1857,12 +1879,14 @@ C) The Referenced Token contains the "status" claim but without a "status_list" 
 <h5 id="eudi-wallet-relevancy_21">EUDI-wallet relevancy</h5>
 <p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions_21">Preconditions</h5>
-<p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
-B) The Referenced Token includes the Status element that contains the Status_list element (index and URI)
-C) The EUDI Wallet has retrieved a Status List Token from the referenced URI
-D) The Status List Token is validated
-E) The Issuer has provided a JOSE-based Referenced Token to the EUDI Wallet.
-F) The Referenced Token contains the "idx" claim within "status_list" set to a valid non-negative integer.</p>
+<ol class="precond-alpha">
+<li>The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer</li>
+<li>The Referenced Token includes the Status element that contains the Status_list element (index and URI)</li>
+<li>The EUDI Wallet has retrieved a Status List Token from the referenced URI</li>
+<li>The Status List Token is validated</li>
+<li>The Issuer has provided a JOSE-based Referenced Token to the EUDI Wallet.</li>
+<li>The Referenced Token contains the "idx" claim within "status_list" set to a valid non-negative integer.</li>
+</ol>
 <h5 id="test-scenario_21">Test Scenario</h5>
 <ol>
 <li>Verify the value of the "idx" claim within "status_list".</li>
@@ -1884,10 +1908,12 @@ F) The Referenced Token contains the "idx" claim within "status_list" set to a v
 <h5 id="eudi-wallet-relevancy_22">EUDI-wallet relevancy</h5>
 <p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions_22">Preconditions</h5>
-<p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
-B) The Referenced Token includes the Status element that contains the Status_list element (index and URI)
-C) The Issuer has provided a JOSE-based Referenced Token to the EUDI Wallet.
-D) The Referenced Token contains the "idx" claim within "status_list" set to a negative integer.</p>
+<ol class="precond-alpha">
+<li>The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer</li>
+<li>The Referenced Token includes the Status element that contains the Status_list element (index and URI)</li>
+<li>The Issuer has provided a JOSE-based Referenced Token to the EUDI Wallet.</li>
+<li>The Referenced Token contains the "idx" claim within "status_list" set to a negative integer.</li>
+</ol>
 <h5 id="test-scenario_22">Test Scenario</h5>
 <ol>
 <li>Verify the Wallet's handling of the negative "idx" value.</li>
@@ -1909,9 +1935,11 @@ D) The Referenced Token contains the "idx" claim within "status_list" set to a n
 <h5 id="eudi-wallet-relevancy_23">EUDI-wallet relevancy</h5>
 <p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions_23">Preconditions</h5>
-<p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
-B) The Issuer has provided a JOSE-based Referenced Token to the EUDI Wallet.
-C) The Referenced Token does not contain the "idx" claim within "status_list".</p>
+<ol class="precond-alpha">
+<li>The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer</li>
+<li>The Issuer has provided a JOSE-based Referenced Token to the EUDI Wallet.</li>
+<li>The Referenced Token does not contain the "idx" claim within "status_list".</li>
+</ol>
 <h5 id="test-scenario_23">Test Scenario</h5>
 <ol>
 <li>Verify the Wallet's handling of the missing "idx" claim.</li>
@@ -1933,12 +1961,14 @@ C) The Referenced Token does not contain the "idx" claim within "status_list".</
 <h5 id="eudi-wallet-relevancy_24">EUDI-wallet relevancy</h5>
 <p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions_24">Preconditions</h5>
-<p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
-B) The Referenced Token includes the Status element that contains the Status_list element (index and URI)
-C) The EUDI Wallet has retrieved a Status List Token from the referenced URI
-D) The Status List Token is validated
-E) The Issuer has provided a JOSE-based Referenced Token to the EUDI Wallet.
-F) The Referenced Token contains the "uri" claim within "status_list" set to a valid URI per RFC 3986.</p>
+<ol class="precond-alpha">
+<li>The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer</li>
+<li>The Referenced Token includes the Status element that contains the Status_list element (index and URI)</li>
+<li>The EUDI Wallet has retrieved a Status List Token from the referenced URI</li>
+<li>The Status List Token is validated</li>
+<li>The Issuer has provided a JOSE-based Referenced Token to the EUDI Wallet.</li>
+<li>The Referenced Token contains the "uri" claim within "status_list" set to a valid URI per RFC 3986.</li>
+</ol>
 <h5 id="test-scenario_24">Test Scenario</h5>
 <ol>
 <li>Verify the value of the "uri" claim within "status_list".</li>
@@ -1960,10 +1990,12 @@ F) The Referenced Token contains the "uri" claim within "status_list" set to a v
 <h5 id="eudi-wallet-relevancy_25">EUDI-wallet relevancy</h5>
 <p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions_25">Preconditions</h5>
-<p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
-B) The Referenced Token includes the Status element that contains the Status_list element (index and URI)
-C) The Issuer has provided a JOSE-based Referenced Token to the EUDI Wallet.
-D) The Referenced Token contains the "uri" claim within "status_list" set to a malformed URI.</p>
+<ol class="precond-alpha">
+<li>The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer</li>
+<li>The Referenced Token includes the Status element that contains the Status_list element (index and URI)</li>
+<li>The Issuer has provided a JOSE-based Referenced Token to the EUDI Wallet.</li>
+<li>The Referenced Token contains the "uri" claim within "status_list" set to a malformed URI.</li>
+</ol>
 <h5 id="test-scenario_25">Test Scenario</h5>
 <ol>
 <li>Provide a Referenced Token where the "uri" value has no scheme (e.g., example.com/statuslists/1). Verify the Wallet's handling.</li>
@@ -1993,9 +2025,11 @@ D) The Referenced Token contains the "uri" claim within "status_list" set to a m
 <h5 id="eudi-wallet-relevancy_26">EUDI-wallet relevancy</h5>
 <p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions_26">Preconditions</h5>
-<p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
-B) The Issuer has provided a JOSE-based Referenced Token to the EUDI Wallet.
-C) The Referenced Token does not contain the "uri" claim within "status_list".</p>
+<ol class="precond-alpha">
+<li>The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer</li>
+<li>The Issuer has provided a JOSE-based Referenced Token to the EUDI Wallet.</li>
+<li>The Referenced Token does not contain the "uri" claim within "status_list".</li>
+</ol>
 <h5 id="test-scenario_26">Test Scenario</h5>
 <ol>
 <li>Verify the Wallet's handling of the missing "uri" claim.</li>
@@ -2017,12 +2051,14 @@ C) The Referenced Token does not contain the "uri" claim within "status_list".</
 <h5 id="eudi-wallet-relevancy_27">EUDI-wallet relevancy</h5>
 <p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions_27">Preconditions</h5>
-<p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
-B) The Referenced Token includes the Status element that contains the Status_list element (index and URI)
-C) The EUDI Wallet has retrieved a Status List Token from the referenced URI
-D) The Status List Token is validated
-E) The Issuer has provided a COSE-based Referenced Token to the EUDI Wallet.
-F) The Referenced Token contains a valid Status CBOR structure (Map) with at least a "status_list" entry.</p>
+<ol class="precond-alpha">
+<li>The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer</li>
+<li>The Referenced Token includes the Status element that contains the Status_list element (index and URI)</li>
+<li>The EUDI Wallet has retrieved a Status List Token from the referenced URI</li>
+<li>The Status List Token is validated</li>
+<li>The Issuer has provided a COSE-based Referenced Token to the EUDI Wallet.</li>
+<li>The Referenced Token contains a valid Status CBOR structure (Map) with at least a "status_list" entry.</li>
+</ol>
 <h5 id="test-scenario_27">Test Scenario</h5>
 <ol>
 <li>Verify the presence and content of the Status CBOR structure.</li>
@@ -2044,9 +2080,11 @@ F) The Referenced Token contains a valid Status CBOR structure (Map) with at lea
 <h5 id="eudi-wallet-relevancy_28">EUDI-wallet relevancy</h5>
 <p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions_28">Preconditions</h5>
-<p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
-B) The Issuer has provided a COSE-based Referenced Token to the EUDI Wallet.
-C) The Referenced Token contains an empty Status CBOR Map.</p>
+<ol class="precond-alpha">
+<li>The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer</li>
+<li>The Issuer has provided a COSE-based Referenced Token to the EUDI Wallet.</li>
+<li>The Referenced Token contains an empty Status CBOR Map.</li>
+</ol>
 <h5 id="test-scenario_28">Test Scenario</h5>
 <ol>
 <li>Verify the Wallet's handling of the empty Status CBOR Map.</li>
@@ -2068,12 +2106,14 @@ C) The Referenced Token contains an empty Status CBOR Map.</p>
 <h5 id="eudi-wallet-relevancy_29">EUDI-wallet relevancy</h5>
 <p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions_29">Preconditions</h5>
-<p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
-B) The Referenced Token includes the Status element that contains the Status_list element (index and URI)
-C) The EUDI Wallet has retrieved a Status List Token from the referenced URI
-D) The Status List Token is validated
-E) The Issuer has provided a COSE-based Referenced Token to the EUDI Wallet.
-F) The Referenced Token contains a "status_list" CBOR structure within the Status Map, containing valid "idx" and "uri" fields.</p>
+<ol class="precond-alpha">
+<li>The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer</li>
+<li>The Referenced Token includes the Status element that contains the Status_list element (index and URI)</li>
+<li>The EUDI Wallet has retrieved a Status List Token from the referenced URI</li>
+<li>The Status List Token is validated</li>
+<li>The Issuer has provided a COSE-based Referenced Token to the EUDI Wallet.</li>
+<li>The Referenced Token contains a "status_list" CBOR structure within the Status Map, containing valid "idx" and "uri" fields.</li>
+</ol>
 <h5 id="test-scenario_29">Test Scenario</h5>
 <ol>
 <li>Verify the presence of "status_list" within the Status Map and its "idx" and "uri" fields.</li>
@@ -2095,9 +2135,11 @@ F) The Referenced Token contains a "status_list" CBOR structure within the Statu
 <h5 id="eudi-wallet-relevancy_30">EUDI-wallet relevancy</h5>
 <p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions_30">Preconditions</h5>
-<p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
-B) The Issuer has provided a COSE-based Referenced Token to the EUDI Wallet.
-C) The Referenced Token contains the Status Map present but without a "status_list" entry.</p>
+<ol class="precond-alpha">
+<li>The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer</li>
+<li>The Issuer has provided a COSE-based Referenced Token to the EUDI Wallet.</li>
+<li>The Referenced Token contains the Status Map present but without a "status_list" entry.</li>
+</ol>
 <h5 id="test-scenario_30">Test Scenario</h5>
 <ol>
 <li>Verify the Wallet's handling of the absent "status_list" within the Status Map.</li>
@@ -2119,12 +2161,14 @@ C) The Referenced Token contains the Status Map present but without a "status_li
 <h5 id="eudi-wallet-relevancy_31">EUDI-wallet relevancy</h5>
 <p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions_31">Preconditions</h5>
-<p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
-B) The Referenced Token includes the Status element that contains the Status_list element (index and URI)
-C) The EUDI Wallet has retrieved a Status List Token from the referenced URI
-D) The Status List Token is validated
-E) The Issuer has provided a COSE-based Referenced Token to the EUDI Wallet.
-F) The Referenced Token contains the "idx" field within "status_list" set to a valid unsigned integer.</p>
+<ol class="precond-alpha">
+<li>The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer</li>
+<li>The Referenced Token includes the Status element that contains the Status_list element (index and URI)</li>
+<li>The EUDI Wallet has retrieved a Status List Token from the referenced URI</li>
+<li>The Status List Token is validated</li>
+<li>The Issuer has provided a COSE-based Referenced Token to the EUDI Wallet.</li>
+<li>The Referenced Token contains the "idx" field within "status_list" set to a valid unsigned integer.</li>
+</ol>
 <h5 id="test-scenario_31">Test Scenario</h5>
 <ol>
 <li>Verify the value of the "idx" field within "status_list" is of major type 0.</li>
@@ -2146,10 +2190,12 @@ F) The Referenced Token contains the "idx" field within "status_list" set to a v
 <h5 id="eudi-wallet-relevancy_32">EUDI-wallet relevancy</h5>
 <p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions_32">Preconditions</h5>
-<p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
-B) The Referenced Token includes the Status element that contains the Status_list element (index and URI)
-C) The Issuer has provided a COSE-based Referenced Token to the EUDI Wallet.
-D) The Referenced Token contains the "idx" field within "status_list" set to an invalid type (negative or wrong CBOR type).</p>
+<ol class="precond-alpha">
+<li>The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer</li>
+<li>The Referenced Token includes the Status element that contains the Status_list element (index and URI)</li>
+<li>The Issuer has provided a COSE-based Referenced Token to the EUDI Wallet.</li>
+<li>The Referenced Token contains the "idx" field within "status_list" set to an invalid type (negative or wrong CBOR type).</li>
+</ol>
 <h5 id="test-scenario_32">Test Scenario</h5>
 <ol>
 <li>Verify the Wallet's handling of the invalid "idx" type.</li>
@@ -2171,9 +2217,11 @@ D) The Referenced Token contains the "idx" field within "status_list" set to an 
 <h5 id="eudi-wallet-relevancy_33">EUDI-wallet relevancy</h5>
 <p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions_33">Preconditions</h5>
-<p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
-B) The Issuer has provided a COSE-based Referenced Token to the EUDI Wallet.
-C) The Referenced Token does not contain the "idx" field within "status_list".</p>
+<ol class="precond-alpha">
+<li>The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer</li>
+<li>The Issuer has provided a COSE-based Referenced Token to the EUDI Wallet.</li>
+<li>The Referenced Token does not contain the "idx" field within "status_list".</li>
+</ol>
 <h5 id="test-scenario_33">Test Scenario</h5>
 <ol>
 <li>Verify the Wallet's handling of the missing "idx" field.</li>
@@ -2195,12 +2243,14 @@ C) The Referenced Token does not contain the "idx" field within "status_list".</
 <h5 id="eudi-wallet-relevancy_34">EUDI-wallet relevancy</h5>
 <p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions_34">Preconditions</h5>
-<p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
-B) The Referenced Token includes the Status element that contains the Status_list element (index and URI)
-C) The EUDI Wallet has retrieved a Status List Token from the referenced URI
-D) The Status List Token is validated
-E) The Issuer has provided a COSE-based Referenced Token to the EUDI Wallet.
-F) The Referenced Token contains the "uri" field within "status_list" set to a valid text string URI.</p>
+<ol class="precond-alpha">
+<li>The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer</li>
+<li>The Referenced Token includes the Status element that contains the Status_list element (index and URI)</li>
+<li>The EUDI Wallet has retrieved a Status List Token from the referenced URI</li>
+<li>The Status List Token is validated</li>
+<li>The Issuer has provided a COSE-based Referenced Token to the EUDI Wallet.</li>
+<li>The Referenced Token contains the "uri" field within "status_list" set to a valid text string URI.</li>
+</ol>
 <h5 id="test-scenario_34">Test Scenario</h5>
 <ol>
 <li>Verify the value of the "uri" field within "status_list" is of major type 3.</li>
@@ -2222,10 +2272,12 @@ F) The Referenced Token contains the "uri" field within "status_list" set to a v
 <h5 id="eudi-wallet-relevancy_35">EUDI-wallet relevancy</h5>
 <p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions_35">Preconditions</h5>
-<p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
-B) The Referenced Token includes the Status element that contains the Status_list element (index and URI)
-C) The Issuer has provided a COSE-based Referenced Token to the EUDI Wallet.
-D) The Referenced Token contains the "uri" field within "status_list" set to a malformed URI.</p>
+<ol class="precond-alpha">
+<li>The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer</li>
+<li>The Referenced Token includes the Status element that contains the Status_list element (index and URI)</li>
+<li>The Issuer has provided a COSE-based Referenced Token to the EUDI Wallet.</li>
+<li>The Referenced Token contains the "uri" field within "status_list" set to a malformed URI.</li>
+</ol>
 <h5 id="test-scenario_35">Test Scenario</h5>
 <ol>
 <li>Provide a Referenced Token where the "uri" value has no scheme (e.g., example.com/statuslists/1). Verify the Wallet's handling.</li>
@@ -2255,9 +2307,11 @@ D) The Referenced Token contains the "uri" field within "status_list" set to a m
 <h5 id="eudi-wallet-relevancy_36">EUDI-wallet relevancy</h5>
 <p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions_36">Preconditions</h5>
-<p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
-B) The Issuer has provided a COSE-based Referenced Token to the EUDI Wallet.
-C) The Referenced Token does not contain the "uri" field within "status_list".</p>
+<ol class="precond-alpha">
+<li>The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer</li>
+<li>The Issuer has provided a COSE-based Referenced Token to the EUDI Wallet.</li>
+<li>The Referenced Token does not contain the "uri" field within "status_list".</li>
+</ol>
 <h5 id="test-scenario_36">Test Scenario</h5>
 <ol>
 <li>Verify the Wallet's handling of the missing "uri" field.</li>
@@ -2279,12 +2333,14 @@ C) The Referenced Token does not contain the "uri" field within "status_list".</
 <h5 id="eudi-wallet-relevancy_37">EUDI-wallet relevancy</h5>
 <p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions_37">Preconditions</h5>
-<p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
-B) The Referenced Token includes the Status element that contains the Status_list element (index and URI)
-C) The EUDI Wallet has retrieved a Status List Token from the referenced URI
-D) The Status List Token is validated
-E) The Issuer has provided a COSE-based Referenced Token to the EUDI Wallet.
-F) The Referenced Token contains the status claim at CBOR label 65535 containing a valid Status CBOR structure.</p>
+<ol class="precond-alpha">
+<li>The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer</li>
+<li>The Referenced Token includes the Status element that contains the Status_list element (index and URI)</li>
+<li>The EUDI Wallet has retrieved a Status List Token from the referenced URI</li>
+<li>The Status List Token is validated</li>
+<li>The Issuer has provided a COSE-based Referenced Token to the EUDI Wallet.</li>
+<li>The Referenced Token contains the status claim at CBOR label 65535 containing a valid Status CBOR structure.</li>
+</ol>
 <h5 id="test-scenario_37">Test Scenario</h5>
 <ol>
 <li>Verify the presence of the status claim at CBOR label 65535.</li>
@@ -2306,9 +2362,11 @@ F) The Referenced Token contains the status claim at CBOR label 65535 containing
 <h5 id="eudi-wallet-relevancy_38">EUDI-wallet relevancy</h5>
 <p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions_38">Preconditions</h5>
-<p>A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
-B) The Issuer has provided a COSE-based Referenced Token to the EUDI Wallet.
-C) The Referenced Token contains the status claim at CBOR label 65535 missing.</p>
+<ol class="precond-alpha">
+<li>The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer</li>
+<li>The Issuer has provided a COSE-based Referenced Token to the EUDI Wallet.</li>
+<li>The Referenced Token contains the status claim at CBOR label 65535 missing.</li>
+</ol>
 <h5 id="test-scenario_38">Test Scenario</h5>
 <ol>
 <li>Verify the Wallet's handling of the missing status claim at label 65535.</li>
@@ -2330,9 +2388,11 @@ C) The Referenced Token contains the status claim at CBOR label 65535 missing.</
 <h5 id="eudi-wallet-relevancy_39">EUDI-wallet relevancy</h5>
 <p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions_39">Preconditions</h5>
-<p>A) The Issuer has provided a COSE-based Referenced Token to the EUDI Wallet.
-B) The Referenced Token contains a status claim with a "status_list" CBOR structure.
-C) The status_list structure passed basic CBOR well-formedness checks.</p>
+<ol class="precond-alpha">
+<li>The Issuer has provided a COSE-based Referenced Token to the EUDI Wallet.</li>
+<li>The Referenced Token contains a status claim with a "status_list" CBOR structure.</li>
+<li>The status_list structure passed basic CBOR well-formedness checks.</li>
+</ol>
 <h5 id="test-scenario_39">Test Scenario</h5>
 <ol>
 <li>Verify the additional information encoded on the last five bits of the first byte of the status_list map.</li>
@@ -2798,7 +2858,9 @@ C) The status_list structure passed basic CBOR well-formedness checks.</p>
 <h5 id="eudi-wallet-relevancy_56">EUDI-wallet relevancy</h5>
 <p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions_56">Preconditions</h5>
-<p>A. Wallet has a configured list of trusted issuers for Verifier Attestation JWTs.</p>
+<ol class="precond-alpha">
+<li>Wallet has a configured list of trusted issuers for Verifier Attestation JWTs.</li>
+</ol>
 <h5 id="test-scenario_56">Test Scenario</h5>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -2826,7 +2888,9 @@ C) The status_list structure passed basic CBOR well-formedness checks.</p>
 <h5 id="eudi-wallet-relevancy_57">EUDI-wallet relevancy</h5>
 <p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions_57">Preconditions</h5>
-<p>A. Wallet has a configured list of trusted issuers for Verifier Attestation JWTs.</p>
+<ol class="precond-alpha">
+<li>Wallet has a configured list of trusted issuers for Verifier Attestation JWTs.</li>
+</ol>
 <h5 id="test-scenario_57">Test Scenario</h5>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -2854,7 +2918,9 @@ C) The status_list structure passed basic CBOR well-formedness checks.</p>
 <h5 id="eudi-wallet-relevancy_58">EUDI-wallet relevancy</h5>
 <p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions_58">Preconditions</h5>
-<p>A. Wallet has a configured list of trusted issuers for Verifier Attestation JWTs.</p>
+<ol class="precond-alpha">
+<li>Wallet has a configured list of trusted issuers for Verifier Attestation JWTs.</li>
+</ol>
 <h5 id="test-scenario_58">Test Scenario</h5>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -2996,7 +3062,9 @@ C) The status_list structure passed basic CBOR well-formedness checks.</p>
 <h5 id="eudi-wallet-relevancy_63">EUDI-wallet relevancy</h5>
 <p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions_63">Preconditions</h5>
-<p>A. Wallet has a configured trust anchor for X.509 certificate chain validation.</p>
+<ol class="precond-alpha">
+<li>Wallet has a configured trust anchor for X.509 certificate chain validation.</li>
+</ol>
 <h5 id="test-scenario_63">Test Scenario</h5>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
@@ -3026,7 +3094,9 @@ C) The status_list structure passed basic CBOR well-formedness checks.</p>
 <h5 id="eudi-wallet-relevancy_64">EUDI-wallet relevancy</h5>
 <p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions_64">Preconditions</h5>
-<p>A. Wallet has a configured trust anchor for X.509 certificate chain validation.</p>
+<ol class="precond-alpha">
+<li>Wallet has a configured trust anchor for X.509 certificate chain validation.</li>
+</ol>
 <h5 id="test-scenario_64">Test Scenario</h5>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>

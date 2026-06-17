@@ -1216,9 +1216,11 @@
 <h2 id="profile-applicability">Profile applicability</h2>
 <p>The EUDI wallet contains a Credential in mdoc format with DocType = "eu.europa.ec.eudi.pid.1", which contains data elements in a domestic namespace.</p>
 <h2 id="preconditions">Preconditions</h2>
-<p>A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
-B. All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested, as well as data elements in the domestic namespace indicated in the ICS. 
-C. The device retrieval mdoc response was retrieved.</p>
+<ol class="precond-alpha">
+<li>A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".</li>
+<li>All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested, as well as data elements in the domestic namespace indicated in the ICS.</li>
+<li>The device retrieval mdoc response was retrieved.</li>
+</ol>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
 <li>Verify data elements in the domestic namespace are present.</li>

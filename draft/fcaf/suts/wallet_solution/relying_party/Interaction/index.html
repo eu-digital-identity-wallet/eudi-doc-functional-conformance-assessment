@@ -1556,14 +1556,14 @@ c. discontinuing the interaction.</li>
 <h5 id="test-scenario_12">Test Scenario</h5>
 <ol>
 <li>The Wallet engages with the Verifier.</li>
-<li>Verifier sends a DCQL query asking only for given_name.</li>
+<li>Verifier sends a DCQL query asking only for <code>given_name</code>.</li>
 <li>Response</li>
 </ol>
 <h5 id="expected-results_12">Expected results</h5>
 <ol>
 <li>Wallet and Verifier can interact.</li>
-<li>The Wallet selects given_name but must also include the mandatory envelope data required to make the credential cryptographically valid.</li>
-<li>The vp_token contains given_name PLUS the mandatory technical fields (e.g., vct, iss, iat).</li>
+<li>The Wallet selects <code>given_name</code> but must also include the mandatory envelope data required to make the credential cryptographically valid.</li>
+<li>The vp_token contains <code>given_name</code> PLUS the mandatory technical fields (e.g., vct, iss, iat).</li>
 </ol>
 <!-- END INCLUDE -->
 <h4 id="ws_rp_ia_maininteraction_016">WS_RP_IA_MainInteraction_016</h4>
@@ -1578,7 +1578,7 @@ c. discontinuing the interaction.</li>
 <h5 id="eudi-wallet-relevancy_13">EUDI-wallet relevancy</h5>
 <p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions_13">Preconditions</h5>
-<p>The Wallet holds an SD-JWT Credential containing multiple claims: given_name, family_name, and birthdate.</p>
+<p>The Wallet holds an SD-JWT Credential containing multiple claims: <code>given_name</code>, <code>family_name</code>, and birthdate.</p>
 <h5 id="test-scenario_13">Test Scenario</h5>
 <ol>
 <li>The Wallet engages with the Verifier</li>
@@ -1604,7 +1604,7 @@ c. discontinuing the interaction.</li>
 <h5 id="eudi-wallet-relevancy_14">EUDI-wallet relevancy</h5>
 <p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions_14">Preconditions</h5>
-<p>Wallet holds an ISO mDL with elements: family_name, document_number, and portrait.</p>
+<p>Wallet holds an ISO mDL with elements: <code>family_name</code>, <code>document_number</code>, and portrait.</p>
 <h5 id="test-scenario_14">Test Scenario</h5>
 <ol>
 <li>The Wallet engages with the Verifier</li>
@@ -3015,7 +3015,9 @@ OIDF.HAIP</p>
 <h5 id="eudi-wallet-relevancy_66">EUDI-wallet relevancy</h5>
 <p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions_66">Preconditions</h5>
-<p>A) Signature from authorization request is authentic.</p>
+<ol class="precond-alpha">
+<li>Signature from authorization request is authentic.</li>
+</ol>
 <h5 id="test-scenario_66">Test Scenario</h5>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
@@ -3043,7 +3045,7 @@ OIDF.HAIP</p>
 <!-- BEGIN INCLUDE ./[A-Z]*.md -->
 <h4 id="ws_rp_ia_supportive_001">WS_RP_IA_Supportive_%001</h4>
 <h5 id="objective_67">Objective</h5>
-<p>Verify that, in the presentation flow via Redirects, Wallet processes successfully HTTP response to the Wallet's HTTP POST to the <code>response_uri', including</code>redirect_uri`.</p>
+<p>Verify that, in the presentation flow via Redirects, Wallet processes successfully HTTP response to the Wallet's HTTP POST to the <code>response_uri</code>, including <code>redirect_uri</code>.</p>
 <h5 id="references_67">References</h5>
 <ul>
 <li>[HAIP] Section 5.1</li>

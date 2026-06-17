@@ -1206,7 +1206,7 @@
 
 <h1 id="ws_rp_dm_credentialmetadata_expirydate_pid_ietf-sd-jwt-vc_004">WS_RP_DM_Credentialmetadata_Expirydate_PID_IETF-sd-jwt-vc_004</h1>
 <h2 id="objective">Objective</h2>
-<p>This test case verifies that the claim <code>date_of_expiry</code> contains a valid date. Note that <code>date_of_expiry</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier expiry_date. </p>
+<p>This test case verifies that the claim <code>date_of_expiry</code> contains a valid date. Note that <code>date_of_expiry</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier <code>expiry_date</code>. </p>
 <h2 id="references">References</h2>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.2, item 4 (Table 8)</li>
@@ -1218,10 +1218,12 @@
 <h2 id="profile-applicability">Profile applicability</h2>
 <p>The EUDI wallet contains a Credential in IETF SD-JWT VC format. <code>vct</code> claim includes base type of person identification "urn:eudi:pid:1".</p>
 <h2 id="preconditions">Preconditions</h2>
-<p>A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.<br />
-B. All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
-C. EUDI wallet presented the Credential successfully. 
-D. The presence of claim <code>date_of_expiry</code> in the IETF SD-JWT VC Credential presented was verified.</p>
+<ol class="precond-alpha">
+<li>A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.</li>
+<li>All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.</li>
+<li>EUDI wallet presented the Credential successfully.</li>
+<li>The presence of claim <code>date_of_expiry</code> in the IETF SD-JWT VC Credential presented was verified.</li>
+</ol>
 <h2 id="test-scenario">Test Scenario</h2>
 <ol>
 <li>Verify the value of date-fullyear. </li>
