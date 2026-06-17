@@ -14,15 +14,11 @@ EUDI_specific | EUDI_optional
 The EUDI wallet contains a Credential in mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element `issuing_jurisdiction` is present in the EU PID data.
 
 ## Preconditions
-A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".
-
-B. All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested.
-
-C. The device retrieval mdoc response was retrieved.
-
-D. The presence and format of data element `issuing_jurisdiction` in the device retrieval mdoc response was verified.
-
-E. The presence and format of data element `issuing_country` in the device retrieval mdoc response was verified.
+1. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".
+2. All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested.
+3. The device retrieval mdoc response was retrieved.
+4. The presence and format of data element `issuing_jurisdiction` in the device retrieval mdoc response was verified.
+5. The presence and format of data element `issuing_country` in the device retrieval mdoc response was verified.
 
 ## Test Scenario
 1. Verify the first two UTF-8 encoded characters in the data element. 

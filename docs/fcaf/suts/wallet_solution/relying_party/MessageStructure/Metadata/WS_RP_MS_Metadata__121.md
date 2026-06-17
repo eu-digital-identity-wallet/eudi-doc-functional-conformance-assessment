@@ -14,7 +14,7 @@ none
 EUDI_generic | EUDI_required
 
 ## Preconditions
-A. Wallet has a configured list of trusted issuers for Verifier Attestation JWTs.
+1. Wallet has a configured list of trusted issuers for Verifier Attestation JWTs.
 
 ## Test Scenario
 1. Engage wallet-verifier interaction (e.g. click link / scan QR code).

@@ -13,13 +13,10 @@ The Wallet supports revocation checking via the Token Status List mechanism; The
 EUDI_generic | EUDI_required
 
 ## Preconditions
-A. The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
-
-B. The Referenced Token includes the Status element that contains the Status_list element (index and URI)
-
-C. The Issuer has provided a COSE-based Referenced Token to the EUDI Wallet.
-
-D. The Referenced Token contains the "idx" field within "status_list" set to an invalid type (negative or wrong CBOR type).
+1. The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
+2. The Referenced Token includes the Status element that contains the Status_list element (index and URI)
+3. The Issuer has provided a COSE-based Referenced Token to the EUDI Wallet.
+4. The Referenced Token contains the "idx" field within "status_list" set to an invalid type (negative or wrong CBOR type).
 
 ## Test Scenario
 1. Verify the Wallet's handling of the invalid "idx" type.

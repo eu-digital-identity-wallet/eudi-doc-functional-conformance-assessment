@@ -14,11 +14,9 @@ The EUDI wallet contains a Credential in SD-JWT VC format with `vct` = "urn:eudi
 The claim `email` is included in a person identification data.
 
 ## Preconditions
-A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.
-
-B. All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.
-
-C. EUDI wallet presented the Credential successfully.
+1. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.
+2. All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.
+3. EUDI wallet presented the Credential successfully.
 
 ## Test Scenario
 1. Verify the presence of a claim with identifier `email` in the Credential presented to the Verifier in IETF SD-JWT VC format.

@@ -13,13 +13,10 @@ EUDI_specific | EUDI_required
 The EUDI wallet contains a Credential in IETF SD-JWT VC format. `vct` claim includes base type of person identification "urn:eudi:pid:1", which contains data elements in a domestic namespace.
 
 ## Preconditions
-A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.
-
-B. All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.
-
-C. EUDI wallet presented the Credential successfully.
-
-D. The presence of claim from domestic namespace in the IETF SD-JWT VC Credential presented was verified.
+1. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.
+2. All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.
+3. EUDI wallet presented the Credential successfully.
+4. The presence of claim from domestic namespace in the IETF SD-JWT VC Credential presented was verified.
 
 ## Test Scenario
 1. Verify that the domestic namespace complies with a valid the domestic namespace identifier.

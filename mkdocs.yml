@@ -60,12 +60,15 @@ extra:
     provider: mike
     alias: true
 
+hooks:
+  - hooks/precond_alpha.py
+
 plugins:
   - mike
   - tags
   - privacy
   - social
-  - include-markdown  
+  - include-markdown
 
 nav:
   - European Digital Identity Wallet: https://eudi.dev/latest/

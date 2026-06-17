@@ -12,13 +12,10 @@ EUDI_specific | EUDI_optional
 The EUDI wallet contains a Credential in SD-JWT VC format with vct = "urn:eudi:pid:". The claim `email` is included in a person identification data.
 
 ## Preconditions
-A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.
-
-B. All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.
-
-C. EUDI wallet presented the Credential successfully.
-
-D. The presence of claim `email` in the IETF SD-JWT VC Credential presented was verified.
+1. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.
+2. All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.
+3. EUDI wallet presented the Credential successfully.
+4. The presence of claim `email` in the IETF SD-JWT VC Credential presented was verified.
 
 ## Test Scenario
 1. Verify that the claim `email` is a String encoded in UTF-8, supporting the full Unicode range.

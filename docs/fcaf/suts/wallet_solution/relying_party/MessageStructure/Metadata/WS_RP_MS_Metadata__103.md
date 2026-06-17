@@ -13,11 +13,9 @@ The Wallet supports revocation checking via the Token Status List mechanism; The
 EUDI_generic | EUDI_required
 
 ## Preconditions
-A. The Issuer has provided a COSE-based Referenced Token to the EUDI Wallet.
-
-B. The Referenced Token contains a status claim with a "status_list" CBOR structure.
-
-C. The status_list structure passed basic CBOR well-formedness checks.
+1. The Issuer has provided a COSE-based Referenced Token to the EUDI Wallet.
+2. The Referenced Token contains a status claim with a "status_list" CBOR structure.
+3. The status_list structure passed basic CBOR well-formedness checks.
 
 ## Test Scenario
 1. Verify the additional information encoded on the last five bits of the first byte of the status_list map.

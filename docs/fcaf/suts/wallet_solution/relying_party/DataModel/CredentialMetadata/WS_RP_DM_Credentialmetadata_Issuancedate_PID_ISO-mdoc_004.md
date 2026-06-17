@@ -15,13 +15,10 @@ EUDI_specific | EUDI_optional
 The EUDI wallet contains a Credential in mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element `issuance_date` is present in the mdoc data.
 
 ## Preconditions
-A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".
-
-B. All mandatory data elements within namespace "org.iso.18013.5.1" and all data elements indicated as present in the ICS were requested.
-
-C. The device retrieval mdoc response was retrieved.
-
-D. The presence of data element `issuance_date` in the device retrieval mdoc response was verified.
+1. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".
+2. All mandatory data elements within namespace "org.iso.18013.5.1" and all data elements indicated as present in the ICS were requested.
+3. The device retrieval mdoc response was retrieved.
+4. The presence of data element `issuance_date` in the device retrieval mdoc response was verified.
 
 ## Test Scenario
 1. Verify the value of date-fullyear. 

@@ -13,7 +13,7 @@ Wallet supports other hash algorithms besides SHA-256.
 EUDI_generic | EUDI_required
 
 ## Preconditions
-A. Verifier Client Metadata does not include any other hash algorithms.
+1. Verifier Client Metadata does not include any other hash algorithms.
 
 ## Test Scenario
 1. Wallet engages with the Verifier. 

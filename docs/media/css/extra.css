@@ -81,3 +81,11 @@
 /* Reference / relevancy tables inside test cases */
 .md-typeset h5 ~ table:not([class]) { font-size: .76rem; }
 .md-typeset h5 ~ table:not([class]) th { white-space: nowrap; }
+
+/* Preconditions render with uppercase-alphabetic markers (A., B., C., ...).
+   The list is authored as a normal numbered Markdown list; the precond-alpha
+   class is added by the hooks/precond_alpha.py MkDocs hook to the <ol> that
+   follows a "Preconditions" heading. The PDF build does the same via
+   pandoc/filters/precond_alpha.lua. Test Scenario / Expected results stay
+   numeric. */
+.md-typeset ol.precond-alpha { list-style-type: upper-alpha; }

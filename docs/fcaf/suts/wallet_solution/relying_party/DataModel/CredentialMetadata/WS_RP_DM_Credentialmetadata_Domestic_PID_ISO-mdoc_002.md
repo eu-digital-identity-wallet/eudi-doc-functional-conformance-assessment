@@ -13,13 +13,10 @@ EUDI_specific | EUDI_required
 The EUDI wallet contains a Credential in mdoc format with DocType = "eu.europa.ec.eudi.pid.1", which contains data elements in a domestic namespace.
 
 ## Preconditions
-A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".
-
-B. All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested, as well as data elements in the domestic namespace indicated in the ICS.
-
-C. The device retrieval mdoc response was retrieved.
-
-D. The presence of data element in the domestic namespace in the device retrieval mdoc response was verified.
+1. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".
+2. All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested, as well as data elements in the domestic namespace indicated in the ICS.
+3. The device retrieval mdoc response was retrieved.
+4. The presence of data element in the domestic namespace in the device retrieval mdoc response was verified.
 
 ## Test Scenario
 1. Verify the data elements in the domestic namespace comply use a valid the domestic namespace identifier.

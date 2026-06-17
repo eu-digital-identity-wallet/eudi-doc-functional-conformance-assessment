@@ -140,6 +140,7 @@ pdf:
 		--resource-path=$(DOCS_DIR):$(FCAF_DIR):$(DOCS_DIR)/media:$(BUILD_DIR) \
 		--lua-filter=$(PANDOC_DATA_DIR)/filters/ics_table.lua \
 		--lua-filter=$(PANDOC_DATA_DIR)/filters/mermaid.lua \
+		--lua-filter=$(PANDOC_DATA_DIR)/filters/precond_alpha.lua \
 		--metadata date="v$(VERSION)  $(BUILD)" \
 		$(PANDOC_DATA_DIR)/$(METADATA_FILE) \
 		-o $(PDF_OUT) \
