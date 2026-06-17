@@ -1,7 +1,7 @@
 # WS_RP_DM_IdentifyingData_Birthdate_PID_IETF-sd-jwt-vc_002
 
 ## Objective
-This test case verifies that the claim `birthdate` is a String encoded in UTF-8. Note that `birthdate` is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier birth_date.
+This test case verifies that the claim `birthdate` is a String encoded in UTF-8. Note that `birthdate` is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier `birth_date`.
 
 ## References
 - [PID rulebook] Annex 3.01 paragraph 3.1.4, Section 4.2 (Table 7)
@@ -14,9 +14,12 @@ EUDI_specific | EUDI_required
 The EUDI wallet contains a Credential in IETF SD-JWT VC format. `vct` claim includes base type of person identification "urn:eudi:pid:1".
 
 ## Preconditions
-A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.  
-B. All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
-C. EUDI wallet presented the Credential successfully. 
+A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.
+
+B. All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.
+
+C. EUDI wallet presented the Credential successfully.
+
 D. The presence of claim element `birthdate` in the IETF SD-JWT VC Credential presented was verified.
 
 ## Test Scenario

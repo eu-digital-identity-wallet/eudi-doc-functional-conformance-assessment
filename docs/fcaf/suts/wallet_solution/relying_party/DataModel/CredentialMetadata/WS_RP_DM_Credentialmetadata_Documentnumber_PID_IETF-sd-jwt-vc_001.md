@@ -1,7 +1,7 @@
 # WS_RP_DM_Credentialmetadata_Documentnumber_PID_IETF-sd-jwt-vc_001
 
 ## Objective
-This test case verifies that the claim `document_number` is present in the Credential in IETF SD-JWT VC format if this is indicated in the ICS. Note that `document_number` is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier document_number. 
+This test case verifies that the claim `document_number` is present in the Credential in IETF SD-JWT VC format if this is indicated in the ICS. Note that `document_number` is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier `document_number`. 
 
 ## References
 - [PID rulebook] Annex 3.01, Section 4.2 (Table 5)
@@ -13,8 +13,10 @@ EUDI_specific | EUDI_optional
 The EUDI wallet contains a Credential in SD-JWT VC format with vct = "urn:eudi:pid:". The claim `document_number` is included in a person identification data.
 
 ## Preconditions
-A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.  
-B. All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
+A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.
+
+B. All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.
+
 C. EUDI wallet presented the Credential successfully.
 
 ## Test Scenario

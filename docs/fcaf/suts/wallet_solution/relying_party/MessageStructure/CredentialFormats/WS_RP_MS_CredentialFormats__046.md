@@ -15,8 +15,9 @@ Wallet supports IETF SD-JWT VC without key-binding
 EUDI_generic | EUDI_required
 
 ## Preconditions
-A) Credential Issuer issued Credential to the Wallet in IETF SD-JWT VC format, using compact serialization as defined in [RFC9901].
-B) There is no Key Binding JWT.
+A. Credential Issuer issued Credential to the Wallet in IETF SD-JWT VC format, using compact serialization as defined in [RFC9901].
+
+B. There is no Key Binding JWT.
 
 ## Test Scenario
 1. End-user interacts with the Verifier, triggering the Verifier to send a presentation request.

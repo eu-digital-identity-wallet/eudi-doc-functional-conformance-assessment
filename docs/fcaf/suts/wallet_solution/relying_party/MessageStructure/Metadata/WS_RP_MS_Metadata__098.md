@@ -13,12 +13,17 @@ The Wallet supports revocation checking via the Token Status List mechanism; The
 EUDI_generic | EUDI_required
 
 ## Preconditions
-A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
-B) The Referenced Token includes the Status element that contains the Status_list element (index and URI)
-C) The EUDI Wallet has retrieved a Status List Token from the referenced URI
-D) The Status List Token is validated
-E) The Issuer has provided a COSE-based Referenced Token to the EUDI Wallet.
-F) The Referenced Token contains the "uri" field within "status_list" set to a valid text string URI.
+A. The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
+
+B. The Referenced Token includes the Status element that contains the Status_list element (index and URI)
+
+C. The EUDI Wallet has retrieved a Status List Token from the referenced URI
+
+D. The Status List Token is validated
+
+E. The Issuer has provided a COSE-based Referenced Token to the EUDI Wallet.
+
+F. The Referenced Token contains the "uri" field within "status_list" set to a valid text string URI.
 
 ## Test Scenario
 1. Verify the value of the "uri" field within "status_list" is of major type 3.

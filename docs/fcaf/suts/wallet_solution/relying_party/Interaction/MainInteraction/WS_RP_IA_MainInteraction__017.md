@@ -13,7 +13,7 @@ ISO mDL
 EUDI_generic | EUDI_required
 
 ## Preconditions
-Wallet holds an ISO mDL with elements: family_name, document_number, and portrait.
+Wallet holds an ISO mDL with elements: `family_name`, `document_number`, and portrait.
 
 ## Test Scenario
 1. The Wallet engages with the Verifier

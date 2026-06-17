@@ -13,9 +13,11 @@ The Wallet supports revocation checking via the Token Status List mechanism; The
 EUDI_generic | EUDI_required
 
 ## Preconditions
-A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
-B) The Issuer has provided a COSE-based Referenced Token to the EUDI Wallet.
-C) The Referenced Token contains the status claim at CBOR label 65535 missing.
+A. The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
+
+B. The Issuer has provided a COSE-based Referenced Token to the EUDI Wallet.
+
+C. The Referenced Token contains the status claim at CBOR label 65535 missing.
 
 ## Test Scenario
 1. Verify the Wallet's handling of the missing status claim at label 65535.

@@ -1,7 +1,7 @@
 # WS_RP_DM_AddressData_Emailaddress_PID_ISO-mdoc_003
 
 ## Objective
-This test case verifies that the DataElementValue of data element email_address is an email address in conformance with [RFC 5322]. Note that `email_address` is the Attribute Identifier in ISO-mdoc for the Data Identifier email_address.
+This test case verifies that the DataElementValue of data element `email_address` is an email address in conformance with [RFC 5322]. Note that `email_address` is the Attribute Identifier in ISO-mdoc for the Data Identifier `email_address`.
 
 ## References
 - [PID rulebook] Annex 3.01, Section 4.1 (Table 6)
@@ -11,17 +11,20 @@ This test case verifies that the DataElementValue of data element email_address 
 EUDI_specific | EUDI_optional
 
 ## Profile applicability
-The EUDI wallet contains a Credential in mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element email_address is present in the mdoc data.
+The EUDI wallet contains a Credential in mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element `email_address` is present in the mdoc data.
 
 ## Preconditions
-A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
-B. All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
-C. The device retrieval mdoc response was retrieved. 
-D. The presence of data element email_address in the device retrieval mdoc response was verified.
+A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".
+
+B. All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested.
+
+C. The device retrieval mdoc response was retrieved.
+
+D. The presence of data element `email_address` in the device retrieval mdoc response was verified.
 
 ## Test Scenario
 1. Verify the format of the CBOR data item. 
-2. Verify the value of the email_address.
+2. Verify the value of the `email_address`.
 
 ## Expected results
 1. The data item contains at least 1 UTF-8 character. 

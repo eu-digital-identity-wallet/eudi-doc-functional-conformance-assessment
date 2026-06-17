@@ -15,7 +15,7 @@ Presentations via Redirects
 EUDI_generic | EUDI_required
 
 ## Preconditions
-A) Signature from authorization request is authentic.
+A. Signature from authorization request is authentic.
 
 ## Test Scenario
 1. End-user interacts with the Verifier, triggering the Verifier to send a presentation request.

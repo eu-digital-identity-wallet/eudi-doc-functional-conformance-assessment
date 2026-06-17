@@ -16,7 +16,7 @@ none
 EUDI_generic | EUDI_required
 
 ## Preconditions
-A. X.509 certificate is configured 
+A. X.509 certificate is configured
 
 ## Test Scenario
 1. Engage wallet-verifier interaction (e.g. click link / scan QR code).

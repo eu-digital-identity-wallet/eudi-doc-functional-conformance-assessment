@@ -1,7 +1,7 @@
 # WS_RP_DM_Credentialmetadata_Issuingcountry_PID_ISO-mdoc_002
 
 ## Objective
-This test case verifies that the DataElementValue of data element `issuing_country` is a well-formed CBOR text string. Note that `issuing_country` is the Attribute Identifier in ISO-mdoc for the Data Identifier issuing_country. 
+This test case verifies that the DataElementValue of data element `issuing_country` is a well-formed CBOR text string. Note that `issuing_country` is the Attribute Identifier in ISO-mdoc for the Data Identifier `issuing_country`. 
 
 ## References
 - [PID rulebook] Annex 3.01, Section 4.1 (Table 6)
@@ -14,9 +14,12 @@ EUDI_specific | EUDI_required
 The EUDI wallet contains a Credential in mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element `issuing_country` is present in the mdoc data.
 
 ## Preconditions
-A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
-B. All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
-C. The device retrieval mdoc response was retrieved. 
+A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".
+
+B. All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested.
+
+C. The device retrieval mdoc response was retrieved.
+
 D. The presence of data element `issuing_country` in the device retrieval mdoc response was verified.
 
 ## Test Scenario

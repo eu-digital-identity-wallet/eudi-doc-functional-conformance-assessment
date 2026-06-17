@@ -13,11 +13,15 @@ The Wallet supports revocation checking via the Token Status List mechanism; The
 EUDI_generic | EUDI_required
 
 ## Preconditions
-A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
-B) The Referenced Token includes the Status element that contains the Status_list element (index and URI)
-C) The EUDI Wallet has retrieved a Status List Token from the referenced URI
-D) The Status List Token is validated
-E) The Issuer issues a SD-JWT Referenced Token with a status_list claim to the EUDI Wallet.
+A. The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
+
+B. The Referenced Token includes the Status element that contains the Status_list element (index and URI)
+
+C. The EUDI Wallet has retrieved a Status List Token from the referenced URI
+
+D. The Status List Token is validated
+
+E. The Issuer issues a SD-JWT Referenced Token with a status_list claim to the EUDI Wallet.
 
 ## Test Scenario
 1. Verify that the Wallet accepts and stores the SD-JWT Referenced Token.

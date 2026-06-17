@@ -1,7 +1,7 @@
 # WS_RP_DM_Credentialmetadata_Issuingjurisdiction_PID_ISO-mdoc_001
 
 ## Objective
-This test case verifies that the data element `issuing_jurisdiction` is present in the mdoc data if this is indicated in the ICS. Note that `issuing_jurisdiction` is the Attribute Identifier in ISO-mdoc for the Data Identifier issuing_jurisdiction. 
+This test case verifies that the data element `issuing_jurisdiction` is present in the mdoc data if this is indicated in the ICS. Note that `issuing_jurisdiction` is the Attribute Identifier in ISO-mdoc for the Data Identifier `issuing_jurisdiction`. 
 
 ## References
 - [PID rulebook] Annex 3.01, Section 4.1 (Table 2)
@@ -13,8 +13,10 @@ EUDI_specific | EUDI_optional
 The EUDI wallet contains a Credential in mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element `issuing_jurisdiction` is present in the mdoc data.
 
 ## Preconditions
-A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
-B. All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
+A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".
+
+B. All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested.
+
 C. The device retrieval mdoc response was retrieved.
 
 ## Test Scenario

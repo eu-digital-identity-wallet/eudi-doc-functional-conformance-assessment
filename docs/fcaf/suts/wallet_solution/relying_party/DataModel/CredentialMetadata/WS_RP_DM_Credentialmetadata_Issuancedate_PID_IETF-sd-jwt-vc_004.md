@@ -1,7 +1,7 @@
 # WS_RP_DM_Credentialmetadata_Issuancedate_PID_IETF-sd-jwt-vc_004
 
 ## Objective
-This test case verifies that the claim `date_of_issuance` contains a valid date. Note that `date_of_issuance` is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier issuance_date. 
+This test case verifies that the claim `date_of_issuance` contains a valid date. Note that `date_of_issuance` is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier `issuance_date`. 
 
 ## References
 - [PID rulebook] Annex 3.01, Section 4.2 (Table 8)
@@ -15,9 +15,12 @@ EUDI_specific | EUDI_optional
 The EUDI wallet contains a Credential in IETF SD-JWT VC format. `vct` claim includes base type of person identification "urn:eudi:pid:1".
 
 ## Preconditions
-A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.  
-B. All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
-C. EUDI wallet presented the Credential successfully. 
+A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.
+
+B. All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.
+
+C. EUDI wallet presented the Credential successfully.
+
 D. The presence of claim `date_of_issuance` in the IETF SD-JWT VC Credential presented was verified.
 
 ## Test Scenario

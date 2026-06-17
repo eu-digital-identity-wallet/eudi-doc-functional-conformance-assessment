@@ -1,7 +1,7 @@
 # WS_RP_DM_Credentialmetadata_Expirydate_PID_IETF-sd-jwt-vc_003
 
 ## Objective
-This test case verifies that the format of the claim `date_of_expiry` is correct. Note that `date_of_expiry` is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier expiry_date. 
+This test case verifies that the format of the claim `date_of_expiry` is correct. Note that `date_of_expiry` is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier `expiry_date`. 
 
 ## References
 - [PID rulebook] Annex 3.01, Section 4.2 (Table 8)
@@ -14,9 +14,12 @@ EUDI_specific | EUDI_required
 The EUDI wallet contains a Credential in IETF SD-JWT VC format. `vct` claim includes base type of person identification "urn:eudi:pid:1".
 
 ## Preconditions
-A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.  
-B. All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
-C. EUDI wallet presented the Credential successfully. 
+A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.
+
+B. All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.
+
+C. EUDI wallet presented the Credential successfully.
+
 D. The presence of claim `date_of_expiry` in the IETF SD-JWT VC Credential presented was verified.
 
 ## Test Scenario
@@ -24,7 +27,7 @@ D. The presence of claim `date_of_expiry` in the IETF SD-JWT VC Credential prese
 2. Verify the characters used in the format of the value of the claim.
 
 ## Expected results
-1. The length of the claim is 10 UTF-8 encoded characters. 
-2. The characters used have the following format: date-fullyear "-" date-month "-" date-mday. Where: 
-* date-fullyear consists of four decimal digits. 
-* date-month and date-mday consist of two decimal digits.
+1. The length of the claim is 10 UTF-8 encoded characters.
+2. The characters used have the following format: date-fullyear "-" date-month "-" date-mday. Where:
+    * date-fullyear consists of four decimal digits.
+    * date-month and date-mday consist of two decimal digits.
