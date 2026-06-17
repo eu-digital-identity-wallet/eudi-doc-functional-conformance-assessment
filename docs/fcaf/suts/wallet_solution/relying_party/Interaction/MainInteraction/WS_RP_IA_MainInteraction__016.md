@@ -13,7 +13,7 @@ SD-JWT
 EUDI_generic | EUDI_required
 
 ## Preconditions
-The Wallet holds an SD-JWT Credential containing multiple claims: given_name, family_name, and birthdate.
+The Wallet holds an SD-JWT Credential containing multiple claims: `given_name`, `family_name`, and birthdate.
 
 ## Test Scenario
 1. The Wallet engages with the Verifier

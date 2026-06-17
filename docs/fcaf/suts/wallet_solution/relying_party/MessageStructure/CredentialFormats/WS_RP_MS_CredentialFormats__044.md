@@ -34,6 +34,6 @@ none
 3. Wallet asks for user consent.
 4. This is the case.
 5. Wallet presents Credential in IETF SD-JWT VC format.
-6. Status` claim is present.
-7. "Status" claim contains "status_list".
+6. `status` claim is present.
+7. `status` claim contains `status_list`.
 

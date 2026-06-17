@@ -1,7 +1,7 @@
 # WS_RP_DM_AddressData_Residentcountry_PID_ISO-mdoc_003
 
 ## Objective
-This test case verifies that the DataElementValue of data element `resident_country` contains a valid country code. Note that `resident_country` is the Attribute Identifier in ISO-mdoc for the Data Identifier resident_country.
+This test case verifies that the DataElementValue of data element `resident_country` contains a valid country code. Note that `resident_country` is the Attribute Identifier in ISO-mdoc for the Data Identifier `resident_country`.
 
 
 ## References
@@ -16,10 +16,10 @@ EUDI_specific | EUDI_optional
 The EUDI wallet contains a Credential in ISO-mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element `resident_country` is present in the mdoc data.
 
 ## Preconditions
-A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
-B. All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
-C. The device retrieval mdoc response was retrieved. 
-D. The presence of data element `resident_country` in the device retrieval mdoc response was verified.
+1. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".
+2. All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested.
+3. The device retrieval mdoc response was retrieved.
+4. The presence of data element `resident_country` in the device retrieval mdoc response was verified.
 
 ## Test Scenario
 1. Verify that the DataElementValue of the data element contains a valid country code.

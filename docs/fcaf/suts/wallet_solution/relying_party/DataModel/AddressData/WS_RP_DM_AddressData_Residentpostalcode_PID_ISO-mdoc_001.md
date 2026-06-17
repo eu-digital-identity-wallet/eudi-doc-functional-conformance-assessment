@@ -2,7 +2,7 @@
 
 ## Objective
 This test case verifies that the data element `resident_postal_code` is present in the mdoc data if this is indicated in the ICS.
-Note that `resident_postal_code` is the Attribute Identifier in ISO-mdoc for the Data Identifier resident_postal_code.
+Note that `resident_postal_code` is the Attribute Identifier in ISO-mdoc for the Data Identifier `resident_postal_code`.
 
 ## References
 - [PID rulebook] Annex 3.01, Section 4.1 (Table 2)
@@ -14,9 +14,9 @@ EUDI_specific | EUDI_optional
 The EUDI wallet contains a Credential in ISO-mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element `resident_postal_code` is present in the mdoc data.
 
 ## Preconditions
-A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
-B. All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
-C. The device retrieval mdoc response was retrieved.
+1. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".
+2. All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested.
+3. The device retrieval mdoc response was retrieved.
 
 ## Test Scenario
 1. Verify the presence of a data element with identifier `resident_postal_code` in the device retrieval mdoc response. 

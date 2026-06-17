@@ -1,7 +1,7 @@
 # WS_RP_DM_Credentialmetadata_Issuancedate_PID_ISO-mdoc_002
 
 ## Objective
-This test case verifies that the DataElementValue of data element `issuance_date` is encoded as a well-formed #6.0(tstr) or #6.1004(tstr). Note that `issuance_date` is the Attribute Identifier in ISO-mdoc for the Data Identifier issuance_date. 
+This test case verifies that the DataElementValue of data element `issuance_date` is encoded as a well-formed #6.0(tstr) or #6.1004(tstr). Note that `issuance_date` is the Attribute Identifier in ISO-mdoc for the Data Identifier `issuance_date`. 
 
 ## References
 - [PID rulebook] Annex 3.01, Section 4.1 (Table 6)
@@ -16,10 +16,10 @@ EUDI_specific | EUDI_optional
 The EUDI wallet contains a Credential in mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element `issuance_date` is present in the mdoc data.
 
 ## Preconditions
-A. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1". 
-B. All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested. 
-C. The device retrieval mdoc response was retrieved. 
-D. The presence of data element `issuance_date` in the device retrieval mdoc response was verified.
+1. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".
+2. All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested.
+3. The device retrieval mdoc response was retrieved.
+4. The presence of data element `issuance_date` in the device retrieval mdoc response was verified.
 
 ## Test Scenario
 1. Verify the major type encoded on the first byte of the CBOR data item. 

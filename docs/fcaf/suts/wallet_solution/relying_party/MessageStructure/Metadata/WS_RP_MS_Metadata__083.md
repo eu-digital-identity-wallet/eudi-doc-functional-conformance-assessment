@@ -13,12 +13,12 @@ The Wallet supports revocation checking via the Token Status List mechanism; The
 EUDI_generic | EUDI_required
 
 ## Preconditions
-A) The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
-B) The Referenced Token includes the Status element that contains the Status_list element (index and URI)
-C) The EUDI Wallet has retrieved a Status List Token from the referenced URI
-D) The Status List Token is validated
-E) The Issuer has provided a JOSE-based Referenced Token to the EUDI Wallet.
-F) The Referenced Token contains a "status_list" JSON Object within the "status" claim, containing valid "idx" and "uri" fields.
+1. The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
+2. The Referenced Token includes the Status element that contains the Status_list element (index and URI)
+3. The EUDI Wallet has retrieved a Status List Token from the referenced URI
+4. The Status List Token is validated
+5. The Issuer has provided a JOSE-based Referenced Token to the EUDI Wallet.
+6. The Referenced Token contains a "status_list" JSON Object within the "status" claim, containing valid "idx" and "uri" fields.
 
 ## Test Scenario
 1. Verify the presence of "status_list" within the "status" claim and its "idx" and "uri" fields.

@@ -11,6 +11,7 @@ release-candidate and released version tags.
 
 ## [Latest draft]
 
+- Rendering and formatting pass across test cases (editorial only, no functional change): Preconditions are authored as a numbered Markdown list and rendered with uppercase-alphabetic markers (A., B., C., ...) on the website and in the PDF; nested bullet lists in the date-format Expected results are correctly indented under their parent step; and missing backticks were added around claim and data-element identifiers (for example `issuance_date`).
 - Relying Party (WS_RP) test cases for OpenID4VP sections 5-8: Authorization Request, DCQL, claims path pointer, and Response.
 - Token Status List (TSL) test cases (section 6).
 - PID data-model test cases for ISO mdoc and IETF SD-JWT VC formats (ISO/IEC 18013-5).

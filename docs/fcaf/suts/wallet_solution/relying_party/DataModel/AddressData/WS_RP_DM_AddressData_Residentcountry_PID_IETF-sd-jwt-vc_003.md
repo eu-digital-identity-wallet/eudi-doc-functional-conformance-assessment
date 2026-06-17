@@ -1,7 +1,7 @@
 # WS_RP_DM_AddressData_Residentcountry_PID_IETF-sd-jwt-vc_003
 
 ## Objective
-This test case verifies that the value of the claim `address.country` contains a valid country code. Note that `address.country` is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier resident_country.
+This test case verifies that the value of the claim `address.country` contains a valid country code. Note that `address.country` is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier `resident_country`.
 
 
 ## References
@@ -16,10 +16,10 @@ EUDI_specific | EUDI_optional
 The EUDI wallet contains a Credential in SD-JWT VC format with vct = "urn:eudi:pid:". The claim `address.country` is included in a person identification data.
 
 ## Preconditions
-A. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.  
-B. All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested. 
-C. EUDI wallet presented the Credential successfully. 
-D. The presence of claim `address.country` in the IETF SD-JWT VC Credential presented was verified.
+1. A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.
+2. All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.
+3. EUDI wallet presented the Credential successfully.
+4. The presence of claim `address.country` in the IETF SD-JWT VC Credential presented was verified.
 
 ## Test Scenario
 1. Verify that the value of the claim `address.country` contains a valid country code.

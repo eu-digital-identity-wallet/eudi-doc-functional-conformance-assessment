@@ -14,7 +14,7 @@ none
 EUDI_generic | EUDI_required
 
 ## Preconditions
-A. Wallet has a configured trust anchor for X.509 certificate chain validation.
+1. Wallet has a configured trust anchor for X.509 certificate chain validation.
 
 ## Test Scenario
 1. Engage wallet-verifier interaction (e.g. click link / scan QR code).
