@@ -1,74 +1,107 @@
-# copied from https://github.com/eu-digital-identity-wallet/eudi-docs-site/blob/main/mkdocs.yml
+# ============================================================
+# eudi-doc-functional-conformance-assessment (conformance.eudi.dev)
+# Theme / markdown / plugins mirror the ARF canonical config.
+# Site-specific: nav, repo_url, asset paths, include-markdown plugin,
+#                precond_alpha hook + media/css/fcaf.css overrides.
+# Note: mermaid is now provided by the superfences custom_fence (Material's
+#       built-in integration), so the old extra_javascript mermaid include
+#       and javascripts/mermaid-init.js are no longer needed.
+# ============================================================
+
 site_name: European Digital Identity
 site_author: European Commission - DG CNECT
-
+site_url: https://conformance.eudi.dev
 repo_url: https://github.com/eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment
 repo_name: eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment
-site_url: https://conformance.eudi.dev
+edit_uri: edit/main/docs/
+copyright: European Union, 2025 - Licensed under the EUPL-1.2 or later
 
+# ---------------- SHARED THEME BLOCK (identical to ARF) ----------------
 theme:
   name: material
-  navigation_depth: 3  
+  custom_dir: overrides
+  icon:
+    repo: fontawesome/brands/github
   palette:
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
+      primary: custom
+      accent: custom
       toggle:
-        icon: material/brightness-4
+        icon: material/brightness-7
         name: Switch to light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
+      primary: custom
+      accent: custom
       toggle:
-        icon: material/brightness-7
+        icon: material/brightness-4
         name: Switch to dark mode
-
   features:
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.path
+    - navigation.indexes
     - navigation.top
     - navigation.footer
-    - navigation.indexes
-# functional conformance specific - start
+    - navigation.tracking
     - toc.integrate
     - toc.follow
-# functional conformance specific - end
-
-  icon:
-    repo: fontawesome/brands/github
-
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.action.edit
+    - content.action.view
+    - content.code.copy
   logo: media/images/logo_eudi_white.svg
   favicon: media/images/favicon.ico
 
 extra_css:
-  - media/css/extra.css
+  - media/css/extra.css          # shared canonical theme (same file contents everywhere)
+  - media/css/fcaf.css           # site-specific overrides; MUST load after extra.css
 
+# ---------------- SHARED MARKDOWN BLOCK (identical to ARF, minus snippets) ----------------
 markdown_extensions:
   - footnotes
   - sane_lists
   - tables
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.details
   - pymdownx.tilde
-  - toc:
-      toc_depth: 4  
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+  # toc_depth=4 stops the (integrated) nav at the
+  # structural area/group level (h1-h4); test-case IDs render as h5 and their
+  # sub-items (Objective, References, ...) as h6, so they stay out of the nav.
+  - toc:
+      toc_depth: 4
+      permalink: true
+      permalink_title: Link to this section
+
+# ---------------- SHARED PLUGINS BLOCK + site-specific include-markdown ----------------
+plugins:
+  - search
+  - tags
+  - privacy
+  - social
+  - mike
+  - include-markdown            # conformance-specific
+
+# ---------------- SITE-SPECIFIC hooks ----------------
+# Adds the `precond-alpha` class to the <ol> after a "Preconditions" heading so
+# media/css/fcaf.css can render it with upper-alpha (A./B./C.) markers.
+hooks:
+  - hooks/precond_alpha.py
 
 extra:
   version:
     provider: mike
     alias: true
-
-hooks:
-  - hooks/precond_alpha.py
-
-plugins:
-  - mike
-  - tags
-  - privacy
-  - social
-  - include-markdown
 
 nav:
   - European Digital Identity Wallet: https://eudi.dev/latest/
@@ -96,7 +129,3 @@ nav:
           - Test spec template: fcaf/templates/test-spec-template.md
       - References: fcaf/references.md
       - Changelog: fcaf/CHANGELOG.md
-
-extra_javascript:
-  - https://unpkg.com/mermaid@10/dist/mermaid.min.js
-  - javascripts/mermaid-init.js
