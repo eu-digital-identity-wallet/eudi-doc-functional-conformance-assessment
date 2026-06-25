@@ -1,9 +1,23 @@
 # Changelog
 
+This is the **framework & site** changelog - build/CI, MkDocs configuration, styling, templates,
+governance and other scaffolding outside `docs/fcaf/`. Changes to the **test-case content** itself
+are tracked in the FCAF changelog ([`docs/fcaf/CHANGELOG.md`](docs/fcaf/CHANGELOG.md)), per maturity stage.
+
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semverdoc.org/).
+
+## [Unreleased]
+- Improve rendering of test cases on the documentation site: each aggregated test case is now
+  shown as a separated card with legible section labels (Objective, References, …).
+- Clean up the documentation site navigation for the aggregated test-suite pages: the left-hand
+  navigation no longer lists every individual test case and its section sub-headings (Objective,
+  References, …); the table of contents now stops at the test area/group level.
+- Fix PDF generation by expanding MkDocs `include-markdown` directives before passing content to
+  Pandoc, preventing raw include placeholders from appearing in generated PDFs.
+- Improve PDF rendering of dense ICS tables by applying PDF-specific column widths and compact table styling for ICS tables.
 
 ## [0.0.1]
 - Initial version.

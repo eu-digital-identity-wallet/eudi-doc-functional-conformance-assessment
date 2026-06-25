@@ -21,10 +21,6 @@
 # -----------------------------------------------------------------------------
 DOCS_DIR        := docs
 FCAF_DIR        := $(DOCS_DIR)/fcaf
-FCAF_DOCS       := $(shell find $(FCAF_DIR) -type f -name '*.md' | LC_ALL=C sort)
-
-# PDF inputs (in order)
-SOURCE_DOCS     := $(FCAF_DOCS)
 
 BUILD_DIR       := build
 SITE_DIR        := site
@@ -48,12 +44,16 @@ MIKE     ?= $(VENV_DIR)/bin/mike
 # -----------------------------------------------------------------------------
 PANDOC          := pandoc
 PDF_ENGINE      := xelatex
+PDF_PYTHON      := python3
 
 PANDOC_DATA_DIR := pandoc
 PDF_TEMPLATE    := templates/eisvogel.latex
 METADATA_FILE   := metadata.yml
 
 PDF_OUT         := $(BUILD_DIR)/pdf/fcaf-framework.pdf
+PDF_COMBINED    := $(BUILD_DIR)/pdf/combined.md
+PDF_ASSEMBLE    := $(PANDOC_DATA_DIR)/assemble_pdf.py
+PDF_TOC_DEPTH   := 3
 
 # -----------------------------------------------------------------------------
 # Targets
@@ -70,7 +70,7 @@ help:
 	@echo "  make local_serve_versions              Run mike serve locally (versioned)"
 	@echo "  make mkdocs                            Build static HTML site"
 	@echo "  make ci_mike_deploy VERSION=x.y.z      Deploy versioned site with mike (push)"
-	@echo "  make pdf VERSION=x.y.z                 Build PDF from overview + all docs/fcaf/**/*.md"
+	@echo "  make pdf VERSION=x.y.z                 Build PDF from expanded Functional Conformance docs"
 	@echo "  make dist VERSION=x.y.z                Zip PDFs into build/dist/"
 	@echo "  make clean                             Remove build artifacts + venv"
 	@echo ""
@@ -126,19 +126,26 @@ ci_mike_deploy_draft: install_deps
 # -----------------------------------------------------------------------------
 pdf:
 	@command -v $(PANDOC) >/dev/null || (echo "pandoc not installed"; exit 1)
+	@command -v $(PDF_PYTHON) >/dev/null || (echo "$(PDF_PYTHON) not installed"; exit 1)
 	@mkdir -p $(BUILD_DIR)/pdf
+	$(PDF_PYTHON) $(PDF_ASSEMBLE) > $(PDF_COMBINED)
+	@! grep -q '{%' $(PDF_COMBINED) || (echo "Unexpanded template directive found in $(PDF_COMBINED)"; exit 1)
 	$(PANDOC) \
 		--from markdown+gfm_auto_identifiers+strikeout \
 		--toc \
+		--toc-depth=$(PDF_TOC_DEPTH) \
 		--pdf-engine=$(PDF_ENGINE) \
 		--data-dir=$(PANDOC_DATA_DIR) \
 		--template=$(PDF_TEMPLATE) \
-		--resource-path=$(DOCS_DIR):$(DOCS_DIR)/media:build \
+		--resource-path=$(DOCS_DIR):$(FCAF_DIR):$(DOCS_DIR)/media:$(BUILD_DIR) \
+		--lua-filter=$(PANDOC_DATA_DIR)/filters/ics_table.lua \
 		--lua-filter=$(PANDOC_DATA_DIR)/filters/mermaid.lua \
+		--lua-filter=$(PANDOC_DATA_DIR)/filters/precond_alpha.lua \
 		--metadata date="v$(VERSION)  $(BUILD)" \
 		$(PANDOC_DATA_DIR)/$(METADATA_FILE) \
 		-o $(PDF_OUT) \
-		$(SOURCE_DOCS)
+		$(PDF_COMBINED)
+	@rm -f $(PDF_COMBINED)
 
 dist:
 	@mkdir -p $(BUILD_DIR)/dist
