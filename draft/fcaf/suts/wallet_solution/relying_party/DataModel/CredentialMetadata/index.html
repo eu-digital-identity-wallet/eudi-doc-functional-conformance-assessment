@@ -51,6 +51,8 @@
     
       <link rel="stylesheet" href="../../../../../../media/css/extra.css">
     
+      <link rel="stylesheet" href="../../../../../../media/css/fcaf.css">
+    
     <script>__md_scope=new URL("../../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -78,7 +80,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -139,20 +141,20 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
   
@@ -163,6 +165,53 @@
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
     
     
       <div class="md-header__source">
@@ -1201,410 +1250,423 @@
 
 
   
+    <a href="https://github.com/eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment/edit/main/docs/fcaf/suts/wallet_solution/relying_party/DataModel/CredentialMetadata/index.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment/raw/main/docs/fcaf/suts/wallet_solution/relying_party/DataModel/CredentialMetadata/index.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
   
 
 
-<h1 id="data-model-credential-metadata">Data Model - Credential Metadata</h1>
+<h1 id="data-model-credential-metadata">Data Model - Credential Metadata<a class="headerlink" href="#data-model-credential-metadata" title="Link to this section">&para;</a></h1>
 <!-- BEGIN INCLUDE ./[A-Z]*.md -->
-<h3 id="ws_rp_dm_credentialmetadata_credentialstructure007">WS_RP_DM_CredentialMetadata_CredentialStructure007</h3>
-<h4 id="objective">Objective</h4>
+<h3 id="ws_rp_dm_credentialmetadata_credentialstructure007">WS_RP_DM_CredentialMetadata_CredentialStructure007<a class="headerlink" href="#ws_rp_dm_credentialmetadata_credentialstructure007" title="Link to this section">&para;</a></h3>
+<h4 id="objective">Objective<a class="headerlink" href="#objective" title="Link to this section">&para;</a></h4>
 <p>Test when valid credential_sets is present, the Wallet can handle these and applies the constraints when processing the request.</p>
-<h4 id="references">References</h4>
+<h4 id="references">References<a class="headerlink" href="#references" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[OpenID4VP] Section 6</li>
 </ul>
-<h4 id="profile-applicability">Profile applicability</h4>
+<h4 id="profile-applicability">Profile applicability<a class="headerlink" href="#profile-applicability" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions">Preconditions</h4>
+<h4 id="preconditions">Preconditions<a class="headerlink" href="#preconditions" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario">Test Scenario</h4>
+<h4 id="test-scenario">Test Scenario<a class="headerlink" href="#test-scenario" title="Link to this section">&para;</a></h4>
 <ol>
 <li>The Wallet engages with the Verifier.</li>
 <li>The Verifier sends an Authorization Request with a DCQL-query with a valid "credential_sets" property.</li>
 <li>The Wallet evaluates the request.</li>
 </ol>
-<h4 id="expected-results">Expected results</h4>
+<h4 id="expected-results">Expected results<a class="headerlink" href="#expected-results" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Wallet and Verifier can interact.</li>
 <li>Wallet receives the request.</li>
 <li>The wallet MUST have used the constraints defined by "credential_sets", to create its response.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_dm_credentialmetadata_credentialstructure008">WS_RP_DM_CredentialMetadata_CredentialStructure008</h3>
-<h4 id="objective_1">Objective</h4>
+<h3 id="ws_rp_dm_credentialmetadata_credentialstructure008">WS_RP_DM_CredentialMetadata_CredentialStructure008<a class="headerlink" href="#ws_rp_dm_credentialmetadata_credentialstructure008" title="Link to this section">&para;</a></h3>
+<h4 id="objective_1">Objective<a class="headerlink" href="#objective_1" title="Link to this section">&para;</a></h4>
 <p>Test the wallet can process and match each entry in the credentials' parameter of the DCQL, with credentials present in the wallet.</p>
-<h4 id="references_1">References</h4>
+<h4 id="references_1">References<a class="headerlink" href="#references_1" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[OpenID4VP] Section 6.1</li>
 </ul>
-<h4 id="profile-applicability_1">Profile applicability</h4>
+<h4 id="profile-applicability_1">Profile applicability<a class="headerlink" href="#profile-applicability_1" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="eudi-wallet-relevancy_1">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_1">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_1" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_1">Preconditions</h4>
+<h4 id="preconditions_1">Preconditions<a class="headerlink" href="#preconditions_1" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_1">Test Scenario</h4>
+<h4 id="test-scenario_1">Test Scenario<a class="headerlink" href="#test-scenario_1" title="Link to this section">&para;</a></h4>
 <ol>
 <li>The Wallet engages with the Verifier.</li>
 <li>The Verifier sends an Authorization Request with a DCQL-query.</li>
 <li>The Wallet evaluates the request.</li>
 </ol>
-<h4 id="expected-results_1">Expected results</h4>
+<h4 id="expected-results_1">Expected results<a class="headerlink" href="#expected-results_1" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Wallet and Verifier can interact.</li>
 <li>Wallet receives the request.</li>
 <li>The wallet response must show that it processes each entry in the credentials' parameter, where appropriate matching with credentials present in wallet.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_dm_credentialmetadata_credentialstructure009">WS_RP_DM_CredentialMetadata_CredentialStructure009</h3>
-<h4 id="objective_2">Objective</h4>
+<h3 id="ws_rp_dm_credentialmetadata_credentialstructure009">WS_RP_DM_CredentialMetadata_CredentialStructure009<a class="headerlink" href="#ws_rp_dm_credentialmetadata_credentialstructure009" title="Link to this section">&para;</a></h3>
+<h4 id="objective_2">Objective<a class="headerlink" href="#objective_2" title="Link to this section">&para;</a></h4>
 <p>Test that a wallet which holds no matching credentials to the DCQL "credentials", will NOT return any credentials</p>
-<h4 id="references_2">References</h4>
+<h4 id="references_2">References<a class="headerlink" href="#references_2" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[OpenID4VP] Section 6.1</li>
 </ul>
-<h4 id="profile-applicability_2">Profile applicability</h4>
+<h4 id="profile-applicability_2">Profile applicability<a class="headerlink" href="#profile-applicability_2" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="eudi-wallet-relevancy_2">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_2">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_2" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_2">Preconditions</h4>
+<h4 id="preconditions_2">Preconditions<a class="headerlink" href="#preconditions_2" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_2">Test Scenario</h4>
+<h4 id="test-scenario_2">Test Scenario<a class="headerlink" href="#test-scenario_2" title="Link to this section">&para;</a></h4>
 <ol>
 <li>The Wallet engages with the Verifier.</li>
 <li>The Verifier sends an Authorization Request with a DCQL-query with "credentials" that the wallet does NOT contain.</li>
 <li>The Wallet evaluates the request.</li>
 </ol>
-<h4 id="expected-results_2">Expected results</h4>
+<h4 id="expected-results_2">Expected results<a class="headerlink" href="#expected-results_2" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Wallet and Verifier can interact.</li>
 <li>Wallet receives the request.</li>
 <li>The wallet will either return an "invalid request" error, or an empty VP token</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_dm_credentialmetadata_credentialstructure010">WS_RP_DM_CredentialMetadata_CredentialStructure010</h3>
-<h4 id="objective_3">Objective</h4>
+<h3 id="ws_rp_dm_credentialmetadata_credentialstructure010">WS_RP_DM_CredentialMetadata_CredentialStructure010<a class="headerlink" href="#ws_rp_dm_credentialmetadata_credentialstructure010" title="Link to this section">&para;</a></h3>
+<h4 id="objective_3">Objective<a class="headerlink" href="#objective_3" title="Link to this section">&para;</a></h4>
 <p>Test that if the credentials' property "claim_sets" is present then it is used as per the rules defined in [OID4VP 6.4.1]</p>
-<h4 id="references_3">References</h4>
+<h4 id="references_3">References<a class="headerlink" href="#references_3" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[OpenID4VP] Section 6.1</li>
 </ul>
-<h4 id="profile-applicability_3">Profile applicability</h4>
+<h4 id="profile-applicability_3">Profile applicability<a class="headerlink" href="#profile-applicability_3" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="eudi-wallet-relevancy_3">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_3">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_3" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_3">Preconditions</h4>
+<h4 id="preconditions_3">Preconditions<a class="headerlink" href="#preconditions_3" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_3">Test Scenario</h4>
+<h4 id="test-scenario_3">Test Scenario<a class="headerlink" href="#test-scenario_3" title="Link to this section">&para;</a></h4>
 <ol>
 <li>The Wallet engages with the Verifier.</li>
 <li>The Verifier sends an Authorization Request with a DCQL-query with a credential with a claim_sets.</li>
 <li>The Wallet evaluates the request.</li>
 </ol>
-<h4 id="expected-results_3">Expected results</h4>
+<h4 id="expected-results_3">Expected results<a class="headerlink" href="#expected-results_3" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Wallet and Verifier can interact.</li>
 <li>Wallet receives the request.</li>
 <li>The wallet correctly uses the "claims_sets" to determine which claims to send, as per the rules in [OID4VP 6.4.1]</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_dm_credentialmetadata_documentnumber_pid_ietf-sd-jwt-vc_001">WS_RP_DM_Credentialmetadata_Documentnumber_PID_IETF-sd-jwt-vc_001</h3>
-<h4 id="objective_4">Objective</h4>
+<h3 id="ws_rp_dm_credentialmetadata_documentnumber_pid_ietf-sd-jwt-vc_001">WS_RP_DM_Credentialmetadata_Documentnumber_PID_IETF-sd-jwt-vc_001<a class="headerlink" href="#ws_rp_dm_credentialmetadata_documentnumber_pid_ietf-sd-jwt-vc_001" title="Link to this section">&para;</a></h3>
+<h4 id="objective_4">Objective<a class="headerlink" href="#objective_4" title="Link to this section">&para;</a></h4>
 <p>This test case verifies that the claim <code>document_number</code> is present in the Credential in IETF SD-JWT VC format if this is indicated in the ICS. Note that <code>document_number</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier <code>document_number</code>. </p>
-<h4 id="references_4">References</h4>
+<h4 id="references_4">References<a class="headerlink" href="#references_4" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.2 (Table 5)</li>
 </ul>
-<h4 id="eudi-wallet-relevancy_4">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_4">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_4" title="Link to this section">&para;</a></h4>
 <p>EUDI_specific | EUDI_optional</p>
-<h4 id="profile-applicability_4">Profile applicability</h4>
+<h4 id="profile-applicability_4">Profile applicability<a class="headerlink" href="#profile-applicability_4" title="Link to this section">&para;</a></h4>
 <p>The EUDI wallet contains a Credential in SD-JWT VC format with vct = "urn:eudi:pid:". The claim <code>document_number</code> is included in a person identification data.</p>
-<h4 id="preconditions_4">Preconditions</h4>
-<ol class="precond-alpha">
+<h4 id="preconditions_4">Preconditions<a class="headerlink" href="#preconditions_4" title="Link to this section">&para;</a></h4>
+<ol>
 <li>A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.</li>
 <li>All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.</li>
 <li>EUDI wallet presented the Credential successfully.</li>
 </ol>
-<h4 id="test-scenario_4">Test Scenario</h4>
+<h4 id="test-scenario_4">Test Scenario<a class="headerlink" href="#test-scenario_4" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Verify the presence of a claim with identifier <code>document_number</code> in the Credential presented to the Verifier in IETF SD-JWT VC format.</li>
 </ol>
-<h4 id="expected-results_4">Expected results</h4>
+<h4 id="expected-results_4">Expected results<a class="headerlink" href="#expected-results_4" title="Link to this section">&para;</a></h4>
 <ol>
 <li>One claim with identifier <code>document_number</code> is present.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_dm_credentialmetadata_documentnumber_pid_ietf-sd-jwt-vc_002">WS_RP_DM_Credentialmetadata_Documentnumber_PID_IETF-sd-jwt-vc_002</h3>
-<h4 id="objective_5">Objective</h4>
+<h3 id="ws_rp_dm_credentialmetadata_documentnumber_pid_ietf-sd-jwt-vc_002">WS_RP_DM_Credentialmetadata_Documentnumber_PID_IETF-sd-jwt-vc_002<a class="headerlink" href="#ws_rp_dm_credentialmetadata_documentnumber_pid_ietf-sd-jwt-vc_002" title="Link to this section">&para;</a></h3>
+<h4 id="objective_5">Objective<a class="headerlink" href="#objective_5" title="Link to this section">&para;</a></h4>
 <p>This test case verifies that the value of the <code>document_number</code> is a String. Note that <code>document_number</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier <code>document_number</code>.</p>
-<h4 id="references_5">References</h4>
+<h4 id="references_5">References<a class="headerlink" href="#references_5" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.2 (Table 8)</li>
 </ul>
-<h4 id="eudi-wallet-relevancy_5">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_5">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_5" title="Link to this section">&para;</a></h4>
 <p>EUDI_specific | EUDI_optional</p>
-<h4 id="profile-applicability_5">Profile applicability</h4>
+<h4 id="profile-applicability_5">Profile applicability<a class="headerlink" href="#profile-applicability_5" title="Link to this section">&para;</a></h4>
 <p>The EUDI wallet contains a Credential in IETF SD-JWT VC format. <code>vct</code> claim includes base type of person identification "urn:eudi:pid:1".</p>
-<h4 id="preconditions_5">Preconditions</h4>
-<ol class="precond-alpha">
+<h4 id="preconditions_5">Preconditions<a class="headerlink" href="#preconditions_5" title="Link to this section">&para;</a></h4>
+<ol>
 <li>A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.</li>
 <li>All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.</li>
 <li>EUDI wallet presented the Credential successfully.</li>
 <li>The presence of claim <code>document_number</code> in the IETF SD-JWT VC Credential presented was verified.</li>
 </ol>
-<h4 id="test-scenario_5">Test Scenario</h4>
+<h4 id="test-scenario_5">Test Scenario<a class="headerlink" href="#test-scenario_5" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Verify that the claim <code>document_number</code> is a String encoded in UTF-8, supporting the full Unicode range.</li>
 </ol>
-<h4 id="expected-results_5">Expected results</h4>
+<h4 id="expected-results_5">Expected results<a class="headerlink" href="#expected-results_5" title="Link to this section">&para;</a></h4>
 <ol>
 <li>The claim <code>document_number</code> is a String encoded in UTF-8, supporting the full Unicode range.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_dm_credentialmetadata_documentnumber_pid_iso-mdoc_001">WS_RP_DM_Credentialmetadata_Documentnumber_PID_ISO-mdoc_001</h3>
-<h4 id="objective_6">Objective</h4>
+<h3 id="ws_rp_dm_credentialmetadata_documentnumber_pid_iso-mdoc_001">WS_RP_DM_Credentialmetadata_Documentnumber_PID_ISO-mdoc_001<a class="headerlink" href="#ws_rp_dm_credentialmetadata_documentnumber_pid_iso-mdoc_001" title="Link to this section">&para;</a></h3>
+<h4 id="objective_6">Objective<a class="headerlink" href="#objective_6" title="Link to this section">&para;</a></h4>
 <p>This test case verifies that the data element <code>document_number</code> is present in the mdoc data if this is indicated in the ICS. Note that <code>document_number</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier <code>document_number</code>. </p>
-<h4 id="references_6">References</h4>
+<h4 id="references_6">References<a class="headerlink" href="#references_6" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.1 (Table 2)</li>
 </ul>
-<h4 id="eudi-wallet-relevancy_6">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_6">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_6" title="Link to this section">&para;</a></h4>
 <p>EUDI_specific | EUDI_optional</p>
-<h4 id="profile-applicability_6">Profile applicability</h4>
+<h4 id="profile-applicability_6">Profile applicability<a class="headerlink" href="#profile-applicability_6" title="Link to this section">&para;</a></h4>
 <p>The EUDI wallet contains a Credential in ISO-mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element <code>document_number</code> is present in the mdoc data.</p>
-<h4 id="preconditions_6">Preconditions</h4>
-<ol class="precond-alpha">
+<h4 id="preconditions_6">Preconditions<a class="headerlink" href="#preconditions_6" title="Link to this section">&para;</a></h4>
+<ol>
 <li>A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".</li>
 <li>All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested.</li>
 <li>The device retrieval mdoc response was retrieved.</li>
 </ol>
-<h4 id="test-scenario_6">Test Scenario</h4>
+<h4 id="test-scenario_6">Test Scenario<a class="headerlink" href="#test-scenario_6" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Verify the presence of a data element with identifier <code>document_number</code> in the device retrieval mdoc response. </li>
 <li>Verify the absence of an <code>ErrorItem</code> for data element <code>document_number</code>.</li>
 </ol>
-<h4 id="expected-results_6">Expected results</h4>
+<h4 id="expected-results_6">Expected results<a class="headerlink" href="#expected-results_6" title="Link to this section">&para;</a></h4>
 <ol>
 <li>One data element with identifier <code>document_number</code> is present. </li>
 <li>There is no <code>ErrorItem</code> for data element <code>document_number</code>.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_dm_credentialmetadata_documentnumber_pid_iso-mdoc_002">WS_RP_DM_Credentialmetadata_Documentnumber_PID_ISO-mdoc_002</h3>
-<h4 id="objective_7">Objective</h4>
+<h3 id="ws_rp_dm_credentialmetadata_documentnumber_pid_iso-mdoc_002">WS_RP_DM_Credentialmetadata_Documentnumber_PID_ISO-mdoc_002<a class="headerlink" href="#ws_rp_dm_credentialmetadata_documentnumber_pid_iso-mdoc_002" title="Link to this section">&para;</a></h3>
+<h4 id="objective_7">Objective<a class="headerlink" href="#objective_7" title="Link to this section">&para;</a></h4>
 <p>This test case verifies that the DataElementValue of data element <code>document_number</code> is a well-formed CBOR text string. Note that <code>document_number</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier <code>document_number</code>. </p>
-<h4 id="references_7">References</h4>
+<h4 id="references_7">References<a class="headerlink" href="#references_7" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.1 (Table 6)</li>
 <li>[RFC7049] Section 2.1</li>
 </ul>
-<h4 id="eudi-wallet-relevancy_7">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_7">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_7" title="Link to this section">&para;</a></h4>
 <p>EUDI_specific | EUDI_optional</p>
-<h4 id="profile-applicability_7">Profile applicability</h4>
+<h4 id="profile-applicability_7">Profile applicability<a class="headerlink" href="#profile-applicability_7" title="Link to this section">&para;</a></h4>
 <p>The EUDI wallet contains a Credential in ISO-mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element <code>document_number</code> is present in the mdoc data.</p>
-<h4 id="preconditions_7">Preconditions</h4>
-<ol class="precond-alpha">
+<h4 id="preconditions_7">Preconditions<a class="headerlink" href="#preconditions_7" title="Link to this section">&para;</a></h4>
+<ol>
 <li>A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".</li>
 <li>All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested.</li>
 <li>The device retrieval mdoc response was retrieved.</li>
 <li>The presence of data element <code>document_number</code> in the device retrieval mdoc response was verified.</li>
 </ol>
-<h4 id="test-scenario_7">Test Scenario</h4>
+<h4 id="test-scenario_7">Test Scenario<a class="headerlink" href="#test-scenario_7" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Verify the major type encoded on the first byte of the CBOR data item. </li>
 <li>Verify the encoding of the data item value.</li>
 </ol>
-<h4 id="expected-results_7">Expected results</h4>
+<h4 id="expected-results_7">Expected results<a class="headerlink" href="#expected-results_7" title="Link to this section">&para;</a></h4>
 <ol>
 <li>The major type value is equal to 3. </li>
 <li>All bytes in the data item value are UTF-8 encoded characters.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_dm_credentialmetadata_domestic_pid_ietf-sd-jwt-vc_001">WS_RP_DM_Credentialmetadata_Domestic_PID_IETF-sd-jwt-vc_001</h3>
-<h4 id="objective_8">Objective</h4>
+<h3 id="ws_rp_dm_credentialmetadata_domestic_pid_ietf-sd-jwt-vc_001">WS_RP_DM_Credentialmetadata_Domestic_PID_IETF-sd-jwt-vc_001<a class="headerlink" href="#ws_rp_dm_credentialmetadata_domestic_pid_ietf-sd-jwt-vc_001" title="Link to this section">&para;</a></h3>
+<h4 id="objective_8">Objective<a class="headerlink" href="#objective_8" title="Link to this section">&para;</a></h4>
 <p>This test case verifies domestic elements in an appropriate namespace are present, if these have been indicated in the ICS.</p>
-<h4 id="references_8">References</h4>
+<h4 id="references_8">References<a class="headerlink" href="#references_8" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.2</li>
 </ul>
-<h4 id="eudi-wallet-relevancy_8">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_8">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_8" title="Link to this section">&para;</a></h4>
 <p>EUDI_specific | EUDI_required</p>
-<h4 id="profile-applicability_8">Profile applicability</h4>
+<h4 id="profile-applicability_8">Profile applicability<a class="headerlink" href="#profile-applicability_8" title="Link to this section">&para;</a></h4>
 <p>The EUDI wallet contains a Credential in IETF SD-JWT VC format. <code>vct</code> claim includes base type of person identification "urn:eudi:pid:1", which contains data elements in a domestic namespace.</p>
-<h4 id="preconditions_8">Preconditions</h4>
-<ol class="precond-alpha">
+<h4 id="preconditions_8">Preconditions<a class="headerlink" href="#preconditions_8" title="Link to this section">&para;</a></h4>
+<ol>
 <li>A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.</li>
 <li>All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.</li>
 <li>EUDI wallet presented the Credential successfully.</li>
 </ol>
-<h4 id="test-scenario_8">Test Scenario</h4>
+<h4 id="test-scenario_8">Test Scenario<a class="headerlink" href="#test-scenario_8" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Verify claims in the domestic namespace are present.</li>
 </ol>
-<h4 id="expected-results_8">Expected results</h4>
+<h4 id="expected-results_8">Expected results<a class="headerlink" href="#expected-results_8" title="Link to this section">&para;</a></h4>
 <ol>
 <li>One or more data claims in the indicated namespace are present.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_dm_credentialmetadata_domestic_pid_ietf-sd-jwt-vc_002">WS_RP_DM_Credentialmetadata_Domestic_PID_IETF-sd-jwt-vc_002</h3>
-<h4 id="objective_9">Objective</h4>
+<h3 id="ws_rp_dm_credentialmetadata_domestic_pid_ietf-sd-jwt-vc_002">WS_RP_DM_Credentialmetadata_Domestic_PID_IETF-sd-jwt-vc_002<a class="headerlink" href="#ws_rp_dm_credentialmetadata_domestic_pid_ietf-sd-jwt-vc_002" title="Link to this section">&para;</a></h3>
+<h4 id="objective_9">Objective<a class="headerlink" href="#objective_9" title="Link to this section">&para;</a></h4>
 <p>This test case verifies domestic claims are located in a valid domestic namespace, if these have been indicated in the ICS.</p>
-<h4 id="references_9">References</h4>
+<h4 id="references_9">References<a class="headerlink" href="#references_9" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.2</li>
 </ul>
-<h4 id="eudi-wallet-relevancy_9">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_9">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_9" title="Link to this section">&para;</a></h4>
 <p>EUDI_specific | EUDI_required</p>
-<h4 id="profile-applicability_9">Profile applicability</h4>
+<h4 id="profile-applicability_9">Profile applicability<a class="headerlink" href="#profile-applicability_9" title="Link to this section">&para;</a></h4>
 <p>The EUDI wallet contains a Credential in IETF SD-JWT VC format. <code>vct</code> claim includes base type of person identification "urn:eudi:pid:1", which contains data elements in a domestic namespace.</p>
-<h4 id="preconditions_9">Preconditions</h4>
-<ol class="precond-alpha">
+<h4 id="preconditions_9">Preconditions<a class="headerlink" href="#preconditions_9" title="Link to this section">&para;</a></h4>
+<ol>
 <li>A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.</li>
 <li>All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.</li>
 <li>EUDI wallet presented the Credential successfully.</li>
 <li>The presence of claim from domestic namespace in the IETF SD-JWT VC Credential presented was verified.</li>
 </ol>
-<h4 id="test-scenario_9">Test Scenario</h4>
+<h4 id="test-scenario_9">Test Scenario<a class="headerlink" href="#test-scenario_9" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Verify that the domestic namespace complies with a valid the domestic namespace identifier.</li>
 </ol>
-<h4 id="expected-results_9">Expected results</h4>
+<h4 id="expected-results_9">Expected results<a class="headerlink" href="#expected-results_9" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Domestic namespace complies with a valid the domestic namespace identifier.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_dm_credentialmetadata_domestic_pid_iso-mdoc_001">WS_RP_DM_Credentialmetadata_Domestic_PID_ISO-mdoc_001</h3>
-<h4 id="objective_10">Objective</h4>
+<h3 id="ws_rp_dm_credentialmetadata_domestic_pid_iso-mdoc_001">WS_RP_DM_Credentialmetadata_Domestic_PID_ISO-mdoc_001<a class="headerlink" href="#ws_rp_dm_credentialmetadata_domestic_pid_iso-mdoc_001" title="Link to this section">&para;</a></h3>
+<h4 id="objective_10">Objective<a class="headerlink" href="#objective_10" title="Link to this section">&para;</a></h4>
 <p>This test case verifies domestic elements in an appropriate namespace are present, if these have been indicated in the ICS.</p>
-<h4 id="references_10">References</h4>
+<h4 id="references_10">References<a class="headerlink" href="#references_10" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.1</li>
 </ul>
-<h4 id="eudi-wallet-relevancy_10">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_10">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_10" title="Link to this section">&para;</a></h4>
 <p>EUDI_specific | EUDI_required</p>
-<h4 id="profile-applicability_10">Profile applicability</h4>
+<h4 id="profile-applicability_10">Profile applicability<a class="headerlink" href="#profile-applicability_10" title="Link to this section">&para;</a></h4>
 <p>The EUDI wallet contains a Credential in mdoc format with DocType = "eu.europa.ec.eudi.pid.1", which contains data elements in a domestic namespace.</p>
-<h4 id="preconditions_10">Preconditions</h4>
-<ol class="precond-alpha">
+<h4 id="preconditions_10">Preconditions<a class="headerlink" href="#preconditions_10" title="Link to this section">&para;</a></h4>
+<ol>
 <li>A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".</li>
 <li>All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested, as well as data elements in the domestic namespace indicated in the ICS.</li>
 <li>The device retrieval mdoc response was retrieved.</li>
 </ol>
-<h4 id="test-scenario_10">Test Scenario</h4>
+<h4 id="test-scenario_10">Test Scenario<a class="headerlink" href="#test-scenario_10" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Verify data elements in the domestic namespace are present.</li>
 </ol>
-<h4 id="expected-results_10">Expected results</h4>
+<h4 id="expected-results_10">Expected results<a class="headerlink" href="#expected-results_10" title="Link to this section">&para;</a></h4>
 <ol>
 <li>One or more data elements in the indicated namespace are present.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_dm_credentialmetadata_domestic_pid_iso-mdoc_002">WS_RP_DM_Credentialmetadata_Domestic_PID_ISO-mdoc_002</h3>
-<h4 id="objective_11">Objective</h4>
+<h3 id="ws_rp_dm_credentialmetadata_domestic_pid_iso-mdoc_002">WS_RP_DM_Credentialmetadata_Domestic_PID_ISO-mdoc_002<a class="headerlink" href="#ws_rp_dm_credentialmetadata_domestic_pid_iso-mdoc_002" title="Link to this section">&para;</a></h3>
+<h4 id="objective_11">Objective<a class="headerlink" href="#objective_11" title="Link to this section">&para;</a></h4>
 <p>This test case verifies domestic elements are located in a valid domestic namespace, if these have been indicated in the ICS.</p>
-<h4 id="references_11">References</h4>
+<h4 id="references_11">References<a class="headerlink" href="#references_11" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.1</li>
 </ul>
-<h4 id="eudi-wallet-relevancy_11">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_11">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_11" title="Link to this section">&para;</a></h4>
 <p>EUDI_specific | EUDI_required</p>
-<h4 id="profile-applicability_11">Profile applicability</h4>
+<h4 id="profile-applicability_11">Profile applicability<a class="headerlink" href="#profile-applicability_11" title="Link to this section">&para;</a></h4>
 <p>The EUDI wallet contains a Credential in mdoc format with DocType = "eu.europa.ec.eudi.pid.1", which contains data elements in a domestic namespace.</p>
-<h4 id="preconditions_11">Preconditions</h4>
-<ol class="precond-alpha">
+<h4 id="preconditions_11">Preconditions<a class="headerlink" href="#preconditions_11" title="Link to this section">&para;</a></h4>
+<ol>
 <li>A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".</li>
 <li>All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested, as well as data elements in the domestic namespace indicated in the ICS.</li>
 <li>The device retrieval mdoc response was retrieved.</li>
 <li>The presence of data element in the domestic namespace in the device retrieval mdoc response was verified.</li>
 </ol>
-<h4 id="test-scenario_11">Test Scenario</h4>
+<h4 id="test-scenario_11">Test Scenario<a class="headerlink" href="#test-scenario_11" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Verify the data elements in the domestic namespace comply use a valid the domestic namespace identifier.</li>
 </ol>
-<h4 id="expected-results_11">Expected results</h4>
+<h4 id="expected-results_11">Expected results<a class="headerlink" href="#expected-results_11" title="Link to this section">&para;</a></h4>
 <ol>
 <li>The domestic namespace: Use a prefix ‘eu.europa.ec.eudi.pid.’ Followed by a ISO 3166-1 alpha-2 country code or the ISO 3166-2 region code. Optionally followed by a dot and a number.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_dm_credentialmetadata_expirydate_pid_ietf-sd-jwt-vc_001">WS_RP_DM_Credentialmetadata_Expirydate_PID_IETF-sd-jwt-vc_001</h3>
-<h4 id="objective_12">Objective</h4>
+<h3 id="ws_rp_dm_credentialmetadata_expirydate_pid_ietf-sd-jwt-vc_001">WS_RP_DM_Credentialmetadata_Expirydate_PID_IETF-sd-jwt-vc_001<a class="headerlink" href="#ws_rp_dm_credentialmetadata_expirydate_pid_ietf-sd-jwt-vc_001" title="Link to this section">&para;</a></h3>
+<h4 id="objective_12">Objective<a class="headerlink" href="#objective_12" title="Link to this section">&para;</a></h4>
 <p>This test case verifies that the claim <code>date_of_expiry</code> is present in the Credential in IETF SD-JWT VC format. Note that <code>date_of_expiry</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier <code>expiry_date</code>. </p>
-<h4 id="references_12">References</h4>
+<h4 id="references_12">References<a class="headerlink" href="#references_12" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.2 (Table 5)</li>
 </ul>
-<h4 id="eudi-wallet-relevancy_12">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_12">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_12" title="Link to this section">&para;</a></h4>
 <p>EUDI_specific | EUDI_required</p>
-<h4 id="profile-applicability_12">Profile applicability</h4>
+<h4 id="profile-applicability_12">Profile applicability<a class="headerlink" href="#profile-applicability_12" title="Link to this section">&para;</a></h4>
 <p>The EUDI wallet contains a Credential in IETF SD-JWT VC format. <code>vct</code> claim includes base type of person identification "urn:eudi:pid:1".</p>
-<h4 id="preconditions_12">Preconditions</h4>
-<ol class="precond-alpha">
+<h4 id="preconditions_12">Preconditions<a class="headerlink" href="#preconditions_12" title="Link to this section">&para;</a></h4>
+<ol>
 <li>A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.</li>
 <li>All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.</li>
 <li>EUDI wallet presented the Credential successfully.</li>
 </ol>
-<h4 id="test-scenario_12">Test Scenario</h4>
+<h4 id="test-scenario_12">Test Scenario<a class="headerlink" href="#test-scenario_12" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Verify the presence of a claim with identifier <code>date_of_expiry</code> in the Credential presented to the Verifier in IETF SD-JWT VC format.</li>
 </ol>
-<h4 id="expected-results_12">Expected results</h4>
+<h4 id="expected-results_12">Expected results<a class="headerlink" href="#expected-results_12" title="Link to this section">&para;</a></h4>
 <ol>
 <li>One claim with identifier <code>date_of_expiry</code> is present.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_dm_credentialmetadata_expirydate_pid_ietf-sd-jwt-vc_002">WS_RP_DM_Credentialmetadata_Expirydate_PID_IETF-sd-jwt-vc_002</h3>
-<h4 id="objective_13">Objective</h4>
+<h3 id="ws_rp_dm_credentialmetadata_expirydate_pid_ietf-sd-jwt-vc_002">WS_RP_DM_Credentialmetadata_Expirydate_PID_IETF-sd-jwt-vc_002<a class="headerlink" href="#ws_rp_dm_credentialmetadata_expirydate_pid_ietf-sd-jwt-vc_002" title="Link to this section">&para;</a></h3>
+<h4 id="objective_13">Objective<a class="headerlink" href="#objective_13" title="Link to this section">&para;</a></h4>
 <p>This test case verifies that the claim <code>date_of_expiry</code> is a String encoded in UTF-8. Note that <code>date_of_expiry</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier <code>expiry_date</code>. </p>
-<h4 id="references_13">References</h4>
+<h4 id="references_13">References<a class="headerlink" href="#references_13" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.2, item 4 (Table 8)</li>
 </ul>
-<h4 id="eudi-wallet-relevancy_13">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_13">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_13" title="Link to this section">&para;</a></h4>
 <p>EUDI_specific | EUDI_required</p>
-<h4 id="profile-applicability_13">Profile applicability</h4>
+<h4 id="profile-applicability_13">Profile applicability<a class="headerlink" href="#profile-applicability_13" title="Link to this section">&para;</a></h4>
 <p>The EUDI wallet contains a Credential in IETF SD-JWT VC format. <code>vct</code> claim includes base type of person identification "urn:eudi:pid:1".</p>
-<h4 id="preconditions_13">Preconditions</h4>
-<ol class="precond-alpha">
+<h4 id="preconditions_13">Preconditions<a class="headerlink" href="#preconditions_13" title="Link to this section">&para;</a></h4>
+<ol>
 <li>A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.</li>
 <li>All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.</li>
 <li>EUDI wallet presented the Credential successfully.</li>
 <li>The presence of claim <code>date_of_expiry</code> in the IETF SD-JWT VC Credential presented was verified.</li>
 </ol>
-<h4 id="test-scenario_13">Test Scenario</h4>
+<h4 id="test-scenario_13">Test Scenario<a class="headerlink" href="#test-scenario_13" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Verify that the claim <code>date_of_expiry</code> is a String encoded in UTF-8, supporting the full Unicode range.</li>
 </ol>
-<h4 id="expected-results_13">Expected results</h4>
+<h4 id="expected-results_13">Expected results<a class="headerlink" href="#expected-results_13" title="Link to this section">&para;</a></h4>
 <ol>
 <li>The claim <code>date_of_expiry</code> is a String encoded in UTF-8, supporting the full Unicode range.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_dm_credentialmetadata_expirydate_pid_ietf-sd-jwt-vc_003">WS_RP_DM_Credentialmetadata_Expirydate_PID_IETF-sd-jwt-vc_003</h3>
-<h4 id="objective_14">Objective</h4>
+<h3 id="ws_rp_dm_credentialmetadata_expirydate_pid_ietf-sd-jwt-vc_003">WS_RP_DM_Credentialmetadata_Expirydate_PID_IETF-sd-jwt-vc_003<a class="headerlink" href="#ws_rp_dm_credentialmetadata_expirydate_pid_ietf-sd-jwt-vc_003" title="Link to this section">&para;</a></h3>
+<h4 id="objective_14">Objective<a class="headerlink" href="#objective_14" title="Link to this section">&para;</a></h4>
 <p>This test case verifies that the format of the claim <code>date_of_expiry</code> is correct. Note that <code>date_of_expiry</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier <code>expiry_date</code>. </p>
-<h4 id="references_14">References</h4>
+<h4 id="references_14">References<a class="headerlink" href="#references_14" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.2 (Table 8)</li>
 <li>[RFC3339] Section 5.6</li>
 </ul>
-<h4 id="eudi-wallet-relevancy_14">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_14">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_14" title="Link to this section">&para;</a></h4>
 <p>EUDI_specific | EUDI_required</p>
-<h4 id="profile-applicability_14">Profile applicability</h4>
+<h4 id="profile-applicability_14">Profile applicability<a class="headerlink" href="#profile-applicability_14" title="Link to this section">&para;</a></h4>
 <p>The EUDI wallet contains a Credential in IETF SD-JWT VC format. <code>vct</code> claim includes base type of person identification "urn:eudi:pid:1".</p>
-<h4 id="preconditions_14">Preconditions</h4>
-<ol class="precond-alpha">
+<h4 id="preconditions_14">Preconditions<a class="headerlink" href="#preconditions_14" title="Link to this section">&para;</a></h4>
+<ol>
 <li>A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.</li>
 <li>All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.</li>
 <li>EUDI wallet presented the Credential successfully.</li>
 <li>The presence of claim <code>date_of_expiry</code> in the IETF SD-JWT VC Credential presented was verified.</li>
 </ol>
-<h4 id="test-scenario_14">Test Scenario</h4>
+<h4 id="test-scenario_14">Test Scenario<a class="headerlink" href="#test-scenario_14" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Verify the length of the claim <code>date_of_expiry</code>. </li>
 <li>Verify the characters used in the format of the value of the claim.</li>
 </ol>
-<h4 id="expected-results_14">Expected results</h4>
+<h4 id="expected-results_14">Expected results<a class="headerlink" href="#expected-results_14" title="Link to this section">&para;</a></h4>
 <ol>
 <li>The length of the claim is 10 UTF-8 encoded characters.</li>
 <li>The characters used have the following format: date-fullyear "-" date-month "-" date-mday. Where:<ul>
@@ -1614,96 +1676,96 @@
 </li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_dm_credentialmetadata_expirydate_pid_ietf-sd-jwt-vc_004">WS_RP_DM_Credentialmetadata_Expirydate_PID_IETF-sd-jwt-vc_004</h3>
-<h4 id="objective_15">Objective</h4>
+<h3 id="ws_rp_dm_credentialmetadata_expirydate_pid_ietf-sd-jwt-vc_004">WS_RP_DM_Credentialmetadata_Expirydate_PID_IETF-sd-jwt-vc_004<a class="headerlink" href="#ws_rp_dm_credentialmetadata_expirydate_pid_ietf-sd-jwt-vc_004" title="Link to this section">&para;</a></h3>
+<h4 id="objective_15">Objective<a class="headerlink" href="#objective_15" title="Link to this section">&para;</a></h4>
 <p>This test case verifies that the claim <code>date_of_expiry</code> contains a valid date. Note that <code>date_of_expiry</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier <code>expiry_date</code>. </p>
-<h4 id="references_15">References</h4>
+<h4 id="references_15">References<a class="headerlink" href="#references_15" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.2, item 4 (Table 8)</li>
 <li>[ISO 8601-1:2019] 4.2.1, 4.3.2</li>
 <li>[RFC3339] Sections 5.6, 5.7</li>
 </ul>
-<h4 id="eudi-wallet-relevancy_15">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_15">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_15" title="Link to this section">&para;</a></h4>
 <p>EUDI_specific | EUDI_required</p>
-<h4 id="profile-applicability_15">Profile applicability</h4>
+<h4 id="profile-applicability_15">Profile applicability<a class="headerlink" href="#profile-applicability_15" title="Link to this section">&para;</a></h4>
 <p>The EUDI wallet contains a Credential in IETF SD-JWT VC format. <code>vct</code> claim includes base type of person identification "urn:eudi:pid:1".</p>
-<h4 id="preconditions_15">Preconditions</h4>
-<ol class="precond-alpha">
+<h4 id="preconditions_15">Preconditions<a class="headerlink" href="#preconditions_15" title="Link to this section">&para;</a></h4>
+<ol>
 <li>A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.</li>
 <li>All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.</li>
 <li>EUDI wallet presented the Credential successfully.</li>
 <li>The presence of claim <code>date_of_expiry</code> in the IETF SD-JWT VC Credential presented was verified.</li>
 </ol>
-<h4 id="test-scenario_15">Test Scenario</h4>
+<h4 id="test-scenario_15">Test Scenario<a class="headerlink" href="#test-scenario_15" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Verify the value of date-fullyear. </li>
 <li>Verify the value of date-month. </li>
 <li>Verify the value of date-mday.</li>
 </ol>
-<h4 id="expected-results_15">Expected results</h4>
+<h4 id="expected-results_15">Expected results<a class="headerlink" href="#expected-results_15" title="Link to this section">&para;</a></h4>
 <ol>
 <li>The value of date-fullyear is between "0000" and "9999" inclusive. </li>
 <li>The value of date-month is between "01" and "12" inclusive. </li>
 <li>The value of date-mday is between "01" and the maximum value specified in section 5.7 of RFC 3339 inclusive.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_dm_credentialmetadata_expirydate_pid_iso-mdoc_001">WS_RP_DM_Credentialmetadata_Expirydate_PID_ISO-mdoc_001</h3>
-<h4 id="objective_16">Objective</h4>
+<h3 id="ws_rp_dm_credentialmetadata_expirydate_pid_iso-mdoc_001">WS_RP_DM_Credentialmetadata_Expirydate_PID_ISO-mdoc_001<a class="headerlink" href="#ws_rp_dm_credentialmetadata_expirydate_pid_iso-mdoc_001" title="Link to this section">&para;</a></h3>
+<h4 id="objective_16">Objective<a class="headerlink" href="#objective_16" title="Link to this section">&para;</a></h4>
 <p>This test case verifies that the data element <code>expiry_date</code> is present in the mdoc data. Note that <code>expiry_date</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier <code>expiry_date</code>. </p>
-<h4 id="references_16">References</h4>
+<h4 id="references_16">References<a class="headerlink" href="#references_16" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.1 (Table 5)</li>
 </ul>
-<h4 id="eudi-wallet-relevancy_16">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_16">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_16" title="Link to this section">&para;</a></h4>
 <p>EUDI_specific | EUDI_required</p>
-<h4 id="profile-applicability_16">Profile applicability</h4>
+<h4 id="profile-applicability_16">Profile applicability<a class="headerlink" href="#profile-applicability_16" title="Link to this section">&para;</a></h4>
 <p>The EUDI wallet contains a Credential in mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element <code>expiry_date</code> is present in the mdoc data.</p>
-<h4 id="preconditions_16">Preconditions</h4>
-<ol class="precond-alpha">
+<h4 id="preconditions_16">Preconditions<a class="headerlink" href="#preconditions_16" title="Link to this section">&para;</a></h4>
+<ol>
 <li>A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".</li>
 <li>All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested.</li>
 <li>The device retrieval mdoc response was retrieved.</li>
 </ol>
-<h4 id="test-scenario_16">Test Scenario</h4>
+<h4 id="test-scenario_16">Test Scenario<a class="headerlink" href="#test-scenario_16" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Verify the presence of a data element with identifier <code>expiry_date</code> in the device retrieval mdoc response. </li>
 <li>Verify the absence of an <code>ErrorItem</code> for data element <code>expiry_date</code>.</li>
 </ol>
-<h4 id="expected-results_16">Expected results</h4>
+<h4 id="expected-results_16">Expected results<a class="headerlink" href="#expected-results_16" title="Link to this section">&para;</a></h4>
 <ol>
 <li>One data element with identifier <code>expiry_date</code> is present. </li>
 <li>There is no <code>ErrorItem</code> for data element <code>expiry_date</code>.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_dm_credentialmetadata_expirydate_pid_iso-mdoc_002">WS_RP_DM_Credentialmetadata_Expirydate_PID_ISO-mdoc_002</h3>
-<h4 id="objective_17">Objective</h4>
+<h3 id="ws_rp_dm_credentialmetadata_expirydate_pid_iso-mdoc_002">WS_RP_DM_Credentialmetadata_Expirydate_PID_ISO-mdoc_002<a class="headerlink" href="#ws_rp_dm_credentialmetadata_expirydate_pid_iso-mdoc_002" title="Link to this section">&para;</a></h3>
+<h4 id="objective_17">Objective<a class="headerlink" href="#objective_17" title="Link to this section">&para;</a></h4>
 <p>This test case verifies that the DataElementValue of data element <code>expiry_date</code> is encoded as a well-formed #6.0(tstr) or #6.1004(tstr). Note that <code>expiry_date</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier <code>expiry_date</code>.</p>
-<h4 id="references_17">References</h4>
+<h4 id="references_17">References<a class="headerlink" href="#references_17" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.1 (Table 6)</li>
 <li>[RFC7049] Sections 2.1, 2.4</li>
 <li>[RFC8610] Appendix D</li>
 <li>[RFC8943] Section 2.1</li>
 </ul>
-<h4 id="eudi-wallet-relevancy_17">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_17">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_17" title="Link to this section">&para;</a></h4>
 <p>EUDI_specific | EUDI_required</p>
-<h4 id="profile-applicability_17">Profile applicability</h4>
+<h4 id="profile-applicability_17">Profile applicability<a class="headerlink" href="#profile-applicability_17" title="Link to this section">&para;</a></h4>
 <p>The EUDI wallet contains a Credential in mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element <code>expiry_date</code> is present in the mdoc data.</p>
-<h4 id="preconditions_17">Preconditions</h4>
-<ol class="precond-alpha">
+<h4 id="preconditions_17">Preconditions<a class="headerlink" href="#preconditions_17" title="Link to this section">&para;</a></h4>
+<ol>
 <li>A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".</li>
 <li>All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested.</li>
 <li>The device retrieval mdoc response was retrieved.</li>
 <li>The presence of data element <code>expiry_date</code> in the device retrieval mdoc response was verified.</li>
 </ol>
-<h4 id="test-scenario_17">Test Scenario</h4>
+<h4 id="test-scenario_17">Test Scenario<a class="headerlink" href="#test-scenario_17" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Verify the major type encoded on the first byte of the CBOR data item. </li>
 <li>Verify the value of the tag. </li>
 <li>Verify the major type of the nested CBOR data item. </li>
 <li>Verify the encoding of the data item value.</li>
 </ol>
-<h4 id="expected-results_17">Expected results</h4>
+<h4 id="expected-results_17">Expected results<a class="headerlink" href="#expected-results_17" title="Link to this section">&para;</a></h4>
 <ol>
 <li>The major type value is equal to 6. </li>
 <li>The value and encoding of the tag is one of the following: tag value = 0 (indicating a date-time tstr). The value of the additional information on the only byte is 0. Tag value = 1004 (indicating a full-date tstr). The value of the additional information on the first byte is 25 and the value of the next two bytes is '03 EC'. </li>
@@ -1711,31 +1773,31 @@
 <li>All bytes in the data item value are UTF-8 encoded characters.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_dm_credentialmetadata_expirydate_pid_iso-mdoc_003">WS_RP_DM_Credentialmetadata_Expirydate_PID_ISO-mdoc_003</h3>
-<h4 id="objective_18">Objective</h4>
+<h3 id="ws_rp_dm_credentialmetadata_expirydate_pid_iso-mdoc_003">WS_RP_DM_Credentialmetadata_Expirydate_PID_ISO-mdoc_003<a class="headerlink" href="#ws_rp_dm_credentialmetadata_expirydate_pid_iso-mdoc_003" title="Link to this section">&para;</a></h3>
+<h4 id="objective_18">Objective<a class="headerlink" href="#objective_18" title="Link to this section">&para;</a></h4>
 <p>This test case verifies that the format of the DataElementValue of data element <code>expiry_date</code> is correct. Note that <code>expiry_date</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier <code>expiry_date</code>.</p>
-<h4 id="references_18">References</h4>
+<h4 id="references_18">References<a class="headerlink" href="#references_18" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.1 (Table 6)</li>
 <li>[RFC3339] Section 5.6</li>
 </ul>
-<h4 id="eudi-wallet-relevancy_18">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_18">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_18" title="Link to this section">&para;</a></h4>
 <p>EUDI_specific | EUDI_required</p>
-<h4 id="profile-applicability_18">Profile applicability</h4>
+<h4 id="profile-applicability_18">Profile applicability<a class="headerlink" href="#profile-applicability_18" title="Link to this section">&para;</a></h4>
 <p>The EUDI wallet contains a Credential in mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element <code>expiry_date</code> is present in the mdoc data.</p>
-<h4 id="preconditions_18">Preconditions</h4>
-<ol class="precond-alpha">
+<h4 id="preconditions_18">Preconditions<a class="headerlink" href="#preconditions_18" title="Link to this section">&para;</a></h4>
+<ol>
 <li>A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".</li>
 <li>All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested.</li>
 <li>The device retrieval mdoc response was retrieved.</li>
 <li>The presence of data element <code>expiry_date</code> in the device retrieval mdoc response was verified.</li>
 </ol>
-<h4 id="test-scenario_18">Test Scenario</h4>
+<h4 id="test-scenario_18">Test Scenario<a class="headerlink" href="#test-scenario_18" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Verify the length of the data element.</li>
 <li>Verify the characters used in the format of the DataElementValue of the data element.</li>
 </ol>
-<h4 id="expected-results_18">Expected results</h4>
+<h4 id="expected-results_18">Expected results<a class="headerlink" href="#expected-results_18" title="Link to this section">&para;</a></h4>
 <ol>
 <li>If the value of the tag is equal to:<ul>
 <li>0, the length of the data element is equal to 20 UTF-8 encoded characters.</li>
@@ -1757,27 +1819,27 @@
 </li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_dm_credentialmetadata_expirydate_pid_iso-mdoc_004">WS_RP_DM_Credentialmetadata_Expirydate_PID_ISO-mdoc_004</h3>
-<h4 id="objective_19">Objective</h4>
+<h3 id="ws_rp_dm_credentialmetadata_expirydate_pid_iso-mdoc_004">WS_RP_DM_Credentialmetadata_Expirydate_PID_ISO-mdoc_004<a class="headerlink" href="#ws_rp_dm_credentialmetadata_expirydate_pid_iso-mdoc_004" title="Link to this section">&para;</a></h3>
+<h4 id="objective_19">Objective<a class="headerlink" href="#objective_19" title="Link to this section">&para;</a></h4>
 <p>This test case verifies that the DataElementValue of data element <code>expiry_date</code> contains a valid date and time. Note that <code>expiry_date</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier <code>expiry_date</code>.</p>
-<h4 id="references_19">References</h4>
+<h4 id="references_19">References<a class="headerlink" href="#references_19" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.1 (Table 6)</li>
 <li>[ISO 8601-1:2019] 4.2.1, 4.3.2</li>
 <li>[RFC3339] Sections 5.6, 5.7</li>
 </ul>
-<h4 id="eudi-wallet-relevancy_19">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_19">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_19" title="Link to this section">&para;</a></h4>
 <p>EUDI_specific | EUDI_required</p>
-<h4 id="profile-applicability_19">Profile applicability</h4>
+<h4 id="profile-applicability_19">Profile applicability<a class="headerlink" href="#profile-applicability_19" title="Link to this section">&para;</a></h4>
 <p>The EUDI wallet contains a Credential in mdoc format with DocType ="eu.europa.ec.eudi.pid.1". Data element <code>expiry_date</code> is present in the mdoc data.</p>
-<h4 id="preconditions_19">Preconditions</h4>
-<ol class="precond-alpha">
+<h4 id="preconditions_19">Preconditions<a class="headerlink" href="#preconditions_19" title="Link to this section">&para;</a></h4>
+<ol>
 <li>A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".</li>
 <li>All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested.</li>
 <li>The device retrieval mdoc response was retrieved.</li>
 <li>The presence of data element <code>expiry_date</code> in the device retrieval mdoc response was verified.</li>
 </ol>
-<h4 id="test-scenario_19">Test Scenario</h4>
+<h4 id="test-scenario_19">Test Scenario<a class="headerlink" href="#test-scenario_19" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Verify the value of date-fullyear. </li>
 <li>Verify the value of date-month. </li>
@@ -1786,7 +1848,7 @@
 <li>If present, verify the value of time-minute. </li>
 <li>If present, verify the value of time-second.</li>
 </ol>
-<h4 id="expected-results_19">Expected results</h4>
+<h4 id="expected-results_19">Expected results<a class="headerlink" href="#expected-results_19" title="Link to this section">&para;</a></h4>
 <ol>
 <li>The value of date-fullyear is between "0000" and "9999" inclusive. </li>
 <li>The value of date-month is between "01" and "12" inclusive. </li>
@@ -1796,84 +1858,84 @@
 <li>If present, the value of time-second is between "00" and "60" inclusive.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_dm_credentialmetadata_issuancedate_pid_ietf-sd-jwt-vc_001">WS_RP_DM_Credentialmetadata_Issuancedate_PID_IETF-sd-jwt-vc_001</h3>
-<h4 id="objective_20">Objective</h4>
+<h3 id="ws_rp_dm_credentialmetadata_issuancedate_pid_ietf-sd-jwt-vc_001">WS_RP_DM_Credentialmetadata_Issuancedate_PID_IETF-sd-jwt-vc_001<a class="headerlink" href="#ws_rp_dm_credentialmetadata_issuancedate_pid_ietf-sd-jwt-vc_001" title="Link to this section">&para;</a></h3>
+<h4 id="objective_20">Objective<a class="headerlink" href="#objective_20" title="Link to this section">&para;</a></h4>
 <p>This test case verifies that the claim <code>date_of_issuance</code> is present in the Credential in IETF SD-JWT VC format if this is indicated in the ICS. Note that <code>date_of_issuance</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier <code>issuance_date</code>. </p>
-<h4 id="references_20">References</h4>
+<h4 id="references_20">References<a class="headerlink" href="#references_20" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.2 (Table 5)</li>
 </ul>
-<h4 id="eudi-wallet-relevancy_20">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_20">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_20" title="Link to this section">&para;</a></h4>
 <p>EUDI_specific | EUDI_optional</p>
-<h4 id="profile-applicability_20">Profile applicability</h4>
+<h4 id="profile-applicability_20">Profile applicability<a class="headerlink" href="#profile-applicability_20" title="Link to this section">&para;</a></h4>
 <p>The EUDI wallet contains a Credential in SD-JWT VC format with vct = "urn:eudi:pid:". The claim <code>date_of_issuance</code> is included in a person identification data.</p>
-<h4 id="preconditions_20">Preconditions</h4>
-<ol class="precond-alpha">
+<h4 id="preconditions_20">Preconditions<a class="headerlink" href="#preconditions_20" title="Link to this section">&para;</a></h4>
+<ol>
 <li>A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.</li>
 <li>All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.</li>
 <li>EUDI wallet presented the Credential successfully.</li>
 </ol>
-<h4 id="test-scenario_20">Test Scenario</h4>
+<h4 id="test-scenario_20">Test Scenario<a class="headerlink" href="#test-scenario_20" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Verify the presence of a claim with identifier <code>date_of_issuance</code> in the Credential presented to the Verifier in IETF SD-JWT VC format.</li>
 </ol>
-<h4 id="expected-results_20">Expected results</h4>
+<h4 id="expected-results_20">Expected results<a class="headerlink" href="#expected-results_20" title="Link to this section">&para;</a></h4>
 <ol>
 <li>One claim with identifier <code>date_of_issuance</code> is present.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_dm_credentialmetadata_issuancedate_pid_ietf-sd-jwt-vc_002">WS_RP_DM_Credentialmetadata_Issuancedate_PID_IETF-sd-jwt-vc_002</h3>
-<h4 id="objective_21">Objective</h4>
+<h3 id="ws_rp_dm_credentialmetadata_issuancedate_pid_ietf-sd-jwt-vc_002">WS_RP_DM_Credentialmetadata_Issuancedate_PID_IETF-sd-jwt-vc_002<a class="headerlink" href="#ws_rp_dm_credentialmetadata_issuancedate_pid_ietf-sd-jwt-vc_002" title="Link to this section">&para;</a></h3>
+<h4 id="objective_21">Objective<a class="headerlink" href="#objective_21" title="Link to this section">&para;</a></h4>
 <p>This test case verifies that the claim <code>date_of_issuance</code> is a String encoded in UTF-8. Note that <code>date_of_issuance</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier <code>issuance_date</code>. </p>
-<h4 id="references_21">References</h4>
+<h4 id="references_21">References<a class="headerlink" href="#references_21" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.2, item 4 (Table 8)</li>
 </ul>
-<h4 id="eudi-wallet-relevancy_21">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_21">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_21" title="Link to this section">&para;</a></h4>
 <p>EUDI_specific | EUDI_optional</p>
-<h4 id="profile-applicability_21">Profile applicability</h4>
+<h4 id="profile-applicability_21">Profile applicability<a class="headerlink" href="#profile-applicability_21" title="Link to this section">&para;</a></h4>
 <p>The EUDI wallet contains a Credential in SD-JWT VC format with vct = "urn:eudi:pid:". The claim <code>date_of_issuance</code> is included in a person identification data.</p>
-<h4 id="preconditions_21">Preconditions</h4>
-<ol class="precond-alpha">
+<h4 id="preconditions_21">Preconditions<a class="headerlink" href="#preconditions_21" title="Link to this section">&para;</a></h4>
+<ol>
 <li>A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.</li>
 <li>All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.</li>
 <li>EUDI wallet presented the Credential successfully.</li>
 <li>The presence of claim <code>date_of_issuance</code> in the IETF SD-JWT VC Credential presented was verified.</li>
 </ol>
-<h4 id="test-scenario_21">Test Scenario</h4>
+<h4 id="test-scenario_21">Test Scenario<a class="headerlink" href="#test-scenario_21" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Verify that the claim <code>date_of_issuance</code> is a String encoded in UTF-8, supporting the full Unicode range</li>
 </ol>
-<h4 id="expected-results_21">Expected results</h4>
+<h4 id="expected-results_21">Expected results<a class="headerlink" href="#expected-results_21" title="Link to this section">&para;</a></h4>
 <ol>
 <li>The claim <code>date_of_issuance</code> is a String encoded in UTF-8, supporting the full Unicode range.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_dm_credentialmetadata_issuancedate_pid_ietf-sd-jwt-vc_003">WS_RP_DM_Credentialmetadata_Issuancedate_PID_IETF-sd-jwt-vc_003</h3>
-<h4 id="objective_22">Objective</h4>
+<h3 id="ws_rp_dm_credentialmetadata_issuancedate_pid_ietf-sd-jwt-vc_003">WS_RP_DM_Credentialmetadata_Issuancedate_PID_IETF-sd-jwt-vc_003<a class="headerlink" href="#ws_rp_dm_credentialmetadata_issuancedate_pid_ietf-sd-jwt-vc_003" title="Link to this section">&para;</a></h3>
+<h4 id="objective_22">Objective<a class="headerlink" href="#objective_22" title="Link to this section">&para;</a></h4>
 <p>This test case verifies that the format of the claim <code>date_of_issuance</code> is correct. Note that <code>date_of_issuance</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier <code>issuance_date</code>. </p>
-<h4 id="references_22">References</h4>
+<h4 id="references_22">References<a class="headerlink" href="#references_22" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.2 (Table 8)</li>
 <li>[RFC3339] Section 5.6</li>
 </ul>
-<h4 id="eudi-wallet-relevancy_22">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_22">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_22" title="Link to this section">&para;</a></h4>
 <p>EUDI_specific | EUDI_optional</p>
-<h4 id="profile-applicability_22">Profile applicability</h4>
+<h4 id="profile-applicability_22">Profile applicability<a class="headerlink" href="#profile-applicability_22" title="Link to this section">&para;</a></h4>
 <p>The EUDI wallet contains a Credential in IETF SD-JWT VC format. <code>vct</code> claim includes base type of person identification "urn:eudi:pid:1".</p>
-<h4 id="preconditions_22">Preconditions</h4>
-<ol class="precond-alpha">
+<h4 id="preconditions_22">Preconditions<a class="headerlink" href="#preconditions_22" title="Link to this section">&para;</a></h4>
+<ol>
 <li>A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.</li>
 <li>All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.</li>
 <li>EUDI wallet presented the Credential successfully.</li>
 <li>The presence of claim <code>date_of_issuance</code> in the IETF SD-JWT VC Credential presented was verified.</li>
 </ol>
-<h4 id="test-scenario_22">Test Scenario</h4>
+<h4 id="test-scenario_22">Test Scenario<a class="headerlink" href="#test-scenario_22" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Verify the length of the claim <code>date_of_issuance</code>. </li>
 <li>Verify the characters used in the format of the value of the claim.</li>
 </ol>
-<h4 id="expected-results_22">Expected results</h4>
+<h4 id="expected-results_22">Expected results<a class="headerlink" href="#expected-results_22" title="Link to this section">&para;</a></h4>
 <ol>
 <li>The length of the claim is 10 UTF-8 encoded characters.</li>
 <li>The characters used have the following format: date-fullyear "-" date-month "-" date-mday. Where:<ul>
@@ -1883,96 +1945,96 @@
 </li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_dm_credentialmetadata_issuancedate_pid_ietf-sd-jwt-vc_004">WS_RP_DM_Credentialmetadata_Issuancedate_PID_IETF-sd-jwt-vc_004</h3>
-<h4 id="objective_23">Objective</h4>
+<h3 id="ws_rp_dm_credentialmetadata_issuancedate_pid_ietf-sd-jwt-vc_004">WS_RP_DM_Credentialmetadata_Issuancedate_PID_IETF-sd-jwt-vc_004<a class="headerlink" href="#ws_rp_dm_credentialmetadata_issuancedate_pid_ietf-sd-jwt-vc_004" title="Link to this section">&para;</a></h3>
+<h4 id="objective_23">Objective<a class="headerlink" href="#objective_23" title="Link to this section">&para;</a></h4>
 <p>This test case verifies that the claim <code>date_of_issuance</code> contains a valid date. Note that <code>date_of_issuance</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier <code>issuance_date</code>. </p>
-<h4 id="references_23">References</h4>
+<h4 id="references_23">References<a class="headerlink" href="#references_23" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.2 (Table 8)</li>
 <li>[ISO 8601-1:2019] 4.2.1, 4.3.2</li>
 <li>[RFC3339] Sections 5.6, 5.7</li>
 </ul>
-<h4 id="eudi-wallet-relevancy_23">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_23">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_23" title="Link to this section">&para;</a></h4>
 <p>EUDI_specific | EUDI_optional</p>
-<h4 id="profile-applicability_23">Profile applicability</h4>
+<h4 id="profile-applicability_23">Profile applicability<a class="headerlink" href="#profile-applicability_23" title="Link to this section">&para;</a></h4>
 <p>The EUDI wallet contains a Credential in IETF SD-JWT VC format. <code>vct</code> claim includes base type of person identification "urn:eudi:pid:1".</p>
-<h4 id="preconditions_23">Preconditions</h4>
-<ol class="precond-alpha">
+<h4 id="preconditions_23">Preconditions<a class="headerlink" href="#preconditions_23" title="Link to this section">&para;</a></h4>
+<ol>
 <li>A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.</li>
 <li>All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.</li>
 <li>EUDI wallet presented the Credential successfully.</li>
 <li>The presence of claim <code>date_of_issuance</code> in the IETF SD-JWT VC Credential presented was verified.</li>
 </ol>
-<h4 id="test-scenario_23">Test Scenario</h4>
+<h4 id="test-scenario_23">Test Scenario<a class="headerlink" href="#test-scenario_23" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Verify the value of date-fullyear. </li>
 <li>Verify the value of date-month. </li>
 <li>Verify the value of date-mday.</li>
 </ol>
-<h4 id="expected-results_23">Expected results</h4>
+<h4 id="expected-results_23">Expected results<a class="headerlink" href="#expected-results_23" title="Link to this section">&para;</a></h4>
 <ol>
 <li>The value of date-fullyear is between "0000" and "9999" inclusive. </li>
 <li>The value of date-month is between "01" and "12" inclusive. </li>
 <li>The value of date-mday is between "01" and the maximum value specified in section 5.7 of RFC 3339 inclusive.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_dm_credentialmetadata_issuancedate_pid_iso-mdoc_001">WS_RP_DM_Credentialmetadata_Issuancedate_PID_ISO-mdoc_001</h3>
-<h4 id="objective_24">Objective</h4>
+<h3 id="ws_rp_dm_credentialmetadata_issuancedate_pid_iso-mdoc_001">WS_RP_DM_Credentialmetadata_Issuancedate_PID_ISO-mdoc_001<a class="headerlink" href="#ws_rp_dm_credentialmetadata_issuancedate_pid_iso-mdoc_001" title="Link to this section">&para;</a></h3>
+<h4 id="objective_24">Objective<a class="headerlink" href="#objective_24" title="Link to this section">&para;</a></h4>
 <p>This test case verifies that the data element <code>issuance_date</code> is present in the mdoc data if this is indicated in the ICS. Note that <code>issuance_date</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier <code>issuance_date</code>. </p>
-<h4 id="references_24">References</h4>
+<h4 id="references_24">References<a class="headerlink" href="#references_24" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.1 (Table 2)</li>
 </ul>
-<h4 id="eudi-wallet-relevancy_24">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_24">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_24" title="Link to this section">&para;</a></h4>
 <p>EUDI_specific | EUDI_optional</p>
-<h4 id="profile-applicability_24">Profile applicability</h4>
+<h4 id="profile-applicability_24">Profile applicability<a class="headerlink" href="#profile-applicability_24" title="Link to this section">&para;</a></h4>
 <p>The EUDI wallet contains a Credential in mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element <code>issuance_date</code> is present in the mdoc data.</p>
-<h4 id="preconditions_24">Preconditions</h4>
-<ol class="precond-alpha">
+<h4 id="preconditions_24">Preconditions<a class="headerlink" href="#preconditions_24" title="Link to this section">&para;</a></h4>
+<ol>
 <li>A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".</li>
 <li>All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested.</li>
 <li>The device retrieval mdoc response was retrieved.</li>
 </ol>
-<h4 id="test-scenario_24">Test Scenario</h4>
+<h4 id="test-scenario_24">Test Scenario<a class="headerlink" href="#test-scenario_24" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Verify the presence of a data element with identifier <code>issuance_date</code> in the device retrieval mdoc response</li>
 <li>Verify the absence of an <code>ErrorItem</code> for data element <code>issuance_date</code>.</li>
 </ol>
-<h4 id="expected-results_24">Expected results</h4>
+<h4 id="expected-results_24">Expected results<a class="headerlink" href="#expected-results_24" title="Link to this section">&para;</a></h4>
 <ol>
 <li>One data element with identifier <code>issuance_date</code> is present. </li>
 <li>There is no <code>ErrorItem</code> for data element <code>issuance_date</code>.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_dm_credentialmetadata_issuancedate_pid_iso-mdoc_002">WS_RP_DM_Credentialmetadata_Issuancedate_PID_ISO-mdoc_002</h3>
-<h4 id="objective_25">Objective</h4>
+<h3 id="ws_rp_dm_credentialmetadata_issuancedate_pid_iso-mdoc_002">WS_RP_DM_Credentialmetadata_Issuancedate_PID_ISO-mdoc_002<a class="headerlink" href="#ws_rp_dm_credentialmetadata_issuancedate_pid_iso-mdoc_002" title="Link to this section">&para;</a></h3>
+<h4 id="objective_25">Objective<a class="headerlink" href="#objective_25" title="Link to this section">&para;</a></h4>
 <p>This test case verifies that the DataElementValue of data element <code>issuance_date</code> is encoded as a well-formed #6.0(tstr) or #6.1004(tstr). Note that <code>issuance_date</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier <code>issuance_date</code>. </p>
-<h4 id="references_25">References</h4>
+<h4 id="references_25">References<a class="headerlink" href="#references_25" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.1 (Table 6)</li>
 <li>[RFC7049] Sections 2.1, 2.4</li>
 <li>[RFC8610] Appendix D</li>
 <li>[RFC8943] Section 2.1</li>
 </ul>
-<h4 id="eudi-wallet-relevancy_25">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_25">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_25" title="Link to this section">&para;</a></h4>
 <p>EUDI_specific | EUDI_optional</p>
-<h4 id="profile-applicability_25">Profile applicability</h4>
+<h4 id="profile-applicability_25">Profile applicability<a class="headerlink" href="#profile-applicability_25" title="Link to this section">&para;</a></h4>
 <p>The EUDI wallet contains a Credential in mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element <code>issuance_date</code> is present in the mdoc data.</p>
-<h4 id="preconditions_25">Preconditions</h4>
-<ol class="precond-alpha">
+<h4 id="preconditions_25">Preconditions<a class="headerlink" href="#preconditions_25" title="Link to this section">&para;</a></h4>
+<ol>
 <li>A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".</li>
 <li>All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested.</li>
 <li>The device retrieval mdoc response was retrieved.</li>
 <li>The presence of data element <code>issuance_date</code> in the device retrieval mdoc response was verified.</li>
 </ol>
-<h4 id="test-scenario_25">Test Scenario</h4>
+<h4 id="test-scenario_25">Test Scenario<a class="headerlink" href="#test-scenario_25" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Verify the major type encoded on the first byte of the CBOR data item. </li>
 <li>Verify the value of the tag. </li>
 <li>Verify the major type of the nested CBOR data item. </li>
 <li>Verify the encoding of the data item value.</li>
 </ol>
-<h4 id="expected-results_25">Expected results</h4>
+<h4 id="expected-results_25">Expected results<a class="headerlink" href="#expected-results_25" title="Link to this section">&para;</a></h4>
 <ol>
 <li>The major type value is equal to 6. </li>
 <li>The value and encoding of the tag is one of the following: tag value = 0 (indicating a date-time tstr). The value of the additional information on the only byte is 0. Tag value = 1004 (indicating a full-date tstr). The value of the additional information on the first byte is 25 and the value of the next two bytes is '03 EC'.</li>
@@ -1980,31 +2042,31 @@
 <li>All bytes in the data item value are UTF-8 encoded characters.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_dm_credentialmetadata_issuancedate_pid_iso-mdoc_003">WS_RP_DM_Credentialmetadata_Issuancedate_PID_ISO-mdoc_003</h3>
-<h4 id="objective_26">Objective</h4>
+<h3 id="ws_rp_dm_credentialmetadata_issuancedate_pid_iso-mdoc_003">WS_RP_DM_Credentialmetadata_Issuancedate_PID_ISO-mdoc_003<a class="headerlink" href="#ws_rp_dm_credentialmetadata_issuancedate_pid_iso-mdoc_003" title="Link to this section">&para;</a></h3>
+<h4 id="objective_26">Objective<a class="headerlink" href="#objective_26" title="Link to this section">&para;</a></h4>
 <p>This test case verifies that the format of the DataElementValue of data element <code>issuance_date</code> is correct. Note that <code>issuance_date</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier <code>issuance_date</code>. </p>
-<h4 id="references_26">References</h4>
+<h4 id="references_26">References<a class="headerlink" href="#references_26" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.1 (Table 6)</li>
 <li>[RFC3339] Section 5.6</li>
 </ul>
-<h4 id="eudi-wallet-relevancy_26">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_26">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_26" title="Link to this section">&para;</a></h4>
 <p>EUDI_specific | EUDI_optional</p>
-<h4 id="profile-applicability_26">Profile applicability</h4>
+<h4 id="profile-applicability_26">Profile applicability<a class="headerlink" href="#profile-applicability_26" title="Link to this section">&para;</a></h4>
 <p>The EUDI wallet contains a Credential in mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element <code>issuance_date</code> is present in the mdoc data.</p>
-<h4 id="preconditions_26">Preconditions</h4>
-<ol class="precond-alpha">
+<h4 id="preconditions_26">Preconditions<a class="headerlink" href="#preconditions_26" title="Link to this section">&para;</a></h4>
+<ol>
 <li>A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".</li>
 <li>All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested.</li>
 <li>The device retrieval mdoc response was retrieved.</li>
 <li>The presence of data element <code>issuance_date</code> in the device retrieval mdoc response was verified.</li>
 </ol>
-<h4 id="test-scenario_26">Test Scenario</h4>
+<h4 id="test-scenario_26">Test Scenario<a class="headerlink" href="#test-scenario_26" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Verify the length of the data element. </li>
 <li>Verify the characters used in the format of the DataElementValue of the data element.</li>
 </ol>
-<h4 id="expected-results_26">Expected results</h4>
+<h4 id="expected-results_26">Expected results<a class="headerlink" href="#expected-results_26" title="Link to this section">&para;</a></h4>
 <ol>
 <li>If the value of the tag is equal to:<ul>
 <li>0, the length of the data element is equal to 20 UTF-8 encoded characters.</li>
@@ -2026,27 +2088,27 @@
 </li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_dm_credentialmetadata_issuancedate_pid_iso-mdoc_004">WS_RP_DM_Credentialmetadata_Issuancedate_PID_ISO-mdoc_004</h3>
-<h4 id="objective_27">Objective</h4>
+<h3 id="ws_rp_dm_credentialmetadata_issuancedate_pid_iso-mdoc_004">WS_RP_DM_Credentialmetadata_Issuancedate_PID_ISO-mdoc_004<a class="headerlink" href="#ws_rp_dm_credentialmetadata_issuancedate_pid_iso-mdoc_004" title="Link to this section">&para;</a></h3>
+<h4 id="objective_27">Objective<a class="headerlink" href="#objective_27" title="Link to this section">&para;</a></h4>
 <p>This test case verifies that the DataElementValue of data element <code>issuance_date</code> contains a valid date and time. Note that <code>issuance_date</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier <code>issuance_date</code>. </p>
-<h4 id="references_27">References</h4>
+<h4 id="references_27">References<a class="headerlink" href="#references_27" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.1 (Table 6)</li>
 <li>[ISO 8601-1:2019] 4.2.1, 4.3.2</li>
 <li>[RFC3339] Sections 5.6, 5.7</li>
 </ul>
-<h4 id="eudi-wallet-relevancy_27">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_27">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_27" title="Link to this section">&para;</a></h4>
 <p>EUDI_specific | EUDI_optional</p>
-<h4 id="profile-applicability_27">Profile applicability</h4>
+<h4 id="profile-applicability_27">Profile applicability<a class="headerlink" href="#profile-applicability_27" title="Link to this section">&para;</a></h4>
 <p>The EUDI wallet contains a Credential in mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element <code>issuance_date</code> is present in the mdoc data.</p>
-<h4 id="preconditions_27">Preconditions</h4>
-<ol class="precond-alpha">
+<h4 id="preconditions_27">Preconditions<a class="headerlink" href="#preconditions_27" title="Link to this section">&para;</a></h4>
+<ol>
 <li>A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".</li>
 <li>All mandatory data elements within namespace "org.iso.18013.5.1" and all data elements indicated as present in the ICS were requested.</li>
 <li>The device retrieval mdoc response was retrieved.</li>
 <li>The presence of data element <code>issuance_date</code> in the device retrieval mdoc response was verified.</li>
 </ol>
-<h4 id="test-scenario_27">Test Scenario</h4>
+<h4 id="test-scenario_27">Test Scenario<a class="headerlink" href="#test-scenario_27" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Verify the value of date-fullyear. </li>
 <li>Verify the value of date-month. </li>
@@ -2055,7 +2117,7 @@
 <li>If present, verify the value of all time-minute.</li>
 <li>If present, verify the value of time-second.</li>
 </ol>
-<h4 id="expected-results_27">Expected results</h4>
+<h4 id="expected-results_27">Expected results<a class="headerlink" href="#expected-results_27" title="Link to this section">&para;</a></h4>
 <ol>
 <li>The value of date-fullyear is between "0000" and "9999" inclusive. </li>
 <li>The value of date-month is between "01" and "12" inclusive. </li>
@@ -2065,462 +2127,462 @@
 <li>If present, the value of time-second is between "00" and "60" inclusive.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_dm_credentialmetadata_issuingauthority_pid_ietf-sd-jwt-vc_001">WS_RP_DM_Credentialmetadata_Issuingauthority_PID_IETF-sd-jwt-vc_001</h3>
-<h4 id="objective_28">Objective</h4>
+<h3 id="ws_rp_dm_credentialmetadata_issuingauthority_pid_ietf-sd-jwt-vc_001">WS_RP_DM_Credentialmetadata_Issuingauthority_PID_IETF-sd-jwt-vc_001<a class="headerlink" href="#ws_rp_dm_credentialmetadata_issuingauthority_pid_ietf-sd-jwt-vc_001" title="Link to this section">&para;</a></h3>
+<h4 id="objective_28">Objective<a class="headerlink" href="#objective_28" title="Link to this section">&para;</a></h4>
 <p>This test case verifies that the claim <code>issuing_authority</code> is present in the Credential in IETF SD-JWT VC format. Note that <code>issuing_authority</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier <code>issuing_authority</code>. </p>
-<h4 id="references_28">References</h4>
+<h4 id="references_28">References<a class="headerlink" href="#references_28" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.2 (Table 5)</li>
 </ul>
-<h4 id="eudi-wallet-relevancy_28">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_28">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_28" title="Link to this section">&para;</a></h4>
 <p>EUDI_specific | EUDI_required</p>
-<h4 id="profile-applicability_28">Profile applicability</h4>
+<h4 id="profile-applicability_28">Profile applicability<a class="headerlink" href="#profile-applicability_28" title="Link to this section">&para;</a></h4>
 <p>The EUDI wallet contains a Credential in SD-JWT VC format with vct = "urn:eudi:pid:". The claim <code>issuing_authority</code> is included in a person identification data.</p>
-<h4 id="preconditions_28">Preconditions</h4>
-<ol class="precond-alpha">
+<h4 id="preconditions_28">Preconditions<a class="headerlink" href="#preconditions_28" title="Link to this section">&para;</a></h4>
+<ol>
 <li>A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.</li>
 <li>All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.</li>
 <li>EUDI wallet presented the Credential successfully.</li>
 </ol>
-<h4 id="test-scenario_28">Test Scenario</h4>
+<h4 id="test-scenario_28">Test Scenario<a class="headerlink" href="#test-scenario_28" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Verify the presence of a claim with identifier <code>issuing_authority</code> in the Credential presented to the Verifier in IETF SD-JWT VC format.</li>
 </ol>
-<h4 id="expected-results_28">Expected results</h4>
+<h4 id="expected-results_28">Expected results<a class="headerlink" href="#expected-results_28" title="Link to this section">&para;</a></h4>
 <ol>
 <li>One claim with identifier <code>issuing_authority</code> is present.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_dm_credentialmetadata_issuingauthority_pid_ietf-sd-jwt-vc_002">WS_RP_DM_Credentialmetadata_Issuingauthority_PID_IETF-sd-jwt-vc_002</h3>
-<h4 id="objective_29">Objective</h4>
+<h3 id="ws_rp_dm_credentialmetadata_issuingauthority_pid_ietf-sd-jwt-vc_002">WS_RP_DM_Credentialmetadata_Issuingauthority_PID_IETF-sd-jwt-vc_002<a class="headerlink" href="#ws_rp_dm_credentialmetadata_issuingauthority_pid_ietf-sd-jwt-vc_002" title="Link to this section">&para;</a></h3>
+<h4 id="objective_29">Objective<a class="headerlink" href="#objective_29" title="Link to this section">&para;</a></h4>
 <p>This test case verifies that the claim <code>issuing_authority</code> is a String encoded in UTF-8. Note that <code>issuing_authority</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier <code>issuing_authority</code>. </p>
-<h4 id="references_29">References</h4>
+<h4 id="references_29">References<a class="headerlink" href="#references_29" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.2 (Table 8)</li>
 </ul>
-<h4 id="eudi-wallet-relevancy_29">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_29">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_29" title="Link to this section">&para;</a></h4>
 <p>EUDI_specific | EUDI_required</p>
-<h4 id="profile-applicability_29">Profile applicability</h4>
+<h4 id="profile-applicability_29">Profile applicability<a class="headerlink" href="#profile-applicability_29" title="Link to this section">&para;</a></h4>
 <p>The EUDI wallet contains a Credential in SD-JWT VC format with vct = "urn:eudi:pid:". The claim <code>issuing_authority</code> is included in a person identification data.</p>
-<h4 id="preconditions_29">Preconditions</h4>
-<ol class="precond-alpha">
+<h4 id="preconditions_29">Preconditions<a class="headerlink" href="#preconditions_29" title="Link to this section">&para;</a></h4>
+<ol>
 <li>A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.</li>
 <li>All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.</li>
 <li>EUDI wallet presented the Credential successfully.</li>
 <li>The presence of claim <code>issuing_authority</code> in the IETF SD-JWT VC Credential presented was verified.</li>
 </ol>
-<h4 id="test-scenario_29">Test Scenario</h4>
+<h4 id="test-scenario_29">Test Scenario<a class="headerlink" href="#test-scenario_29" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Verify that the claim <code>issuing_authority</code> is a String encoded in UTF-8, supporting the full Unicode range</li>
 </ol>
-<h4 id="expected-results_29">Expected results</h4>
+<h4 id="expected-results_29">Expected results<a class="headerlink" href="#expected-results_29" title="Link to this section">&para;</a></h4>
 <ol>
 <li>The claim <code>issuing_authority</code> is a String encoded in UTF-8, supporting the full Unicode range.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_dm_credentialmetadata_issuingauthority_pid_iso-mdoc_001">WS_RP_DM_Credentialmetadata_Issuingauthority_PID_ISO-mdoc_001</h3>
-<h4 id="objective_30">Objective</h4>
+<h3 id="ws_rp_dm_credentialmetadata_issuingauthority_pid_iso-mdoc_001">WS_RP_DM_Credentialmetadata_Issuingauthority_PID_ISO-mdoc_001<a class="headerlink" href="#ws_rp_dm_credentialmetadata_issuingauthority_pid_iso-mdoc_001" title="Link to this section">&para;</a></h3>
+<h4 id="objective_30">Objective<a class="headerlink" href="#objective_30" title="Link to this section">&para;</a></h4>
 <p>This test case verifies that the data element <code>issuing_authority</code> is present in the mdoc data. Note that <code>issuing_authority</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier <code>issuing_authority</code>. </p>
-<h4 id="references_30">References</h4>
+<h4 id="references_30">References<a class="headerlink" href="#references_30" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.1 (Table 2)</li>
 </ul>
-<h4 id="eudi-wallet-relevancy_30">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_30">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_30" title="Link to this section">&para;</a></h4>
 <p>EUDI_specific | EUDI_required</p>
-<h4 id="profile-applicability_30">Profile applicability</h4>
+<h4 id="profile-applicability_30">Profile applicability<a class="headerlink" href="#profile-applicability_30" title="Link to this section">&para;</a></h4>
 <p>The EUDI wallet contains a Credential in mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element <code>issuing_authority</code> is present in the mdoc data.</p>
-<h4 id="preconditions_30">Preconditions</h4>
-<ol class="precond-alpha">
+<h4 id="preconditions_30">Preconditions<a class="headerlink" href="#preconditions_30" title="Link to this section">&para;</a></h4>
+<ol>
 <li>A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".</li>
 <li>All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested.</li>
 <li>The device retrieval mdoc response was retrieved.</li>
 </ol>
-<h4 id="test-scenario_30">Test Scenario</h4>
+<h4 id="test-scenario_30">Test Scenario<a class="headerlink" href="#test-scenario_30" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Verify the presence of a data element with identifier <code>issuing_authority</code> in the device retrieval mdoc response.</li>
 <li>Verify the absence of an <code>ErrorItem</code> for data element <code>issuing_authority</code>.</li>
 </ol>
-<h4 id="expected-results_30">Expected results</h4>
+<h4 id="expected-results_30">Expected results<a class="headerlink" href="#expected-results_30" title="Link to this section">&para;</a></h4>
 <ol>
 <li>One data element with identifier <code>issuing_authority</code> is present. </li>
 <li>There is no <code>ErrorItem</code> for data element <code>issuing_authority</code>.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_dm_credentialmetadata_issuingauthority_pid_iso-mdoc_002">WS_RP_DM_Credentialmetadata_Issuingauthority_PID_ISO-mdoc_002</h3>
-<h4 id="objective_31">Objective</h4>
+<h3 id="ws_rp_dm_credentialmetadata_issuingauthority_pid_iso-mdoc_002">WS_RP_DM_Credentialmetadata_Issuingauthority_PID_ISO-mdoc_002<a class="headerlink" href="#ws_rp_dm_credentialmetadata_issuingauthority_pid_iso-mdoc_002" title="Link to this section">&para;</a></h3>
+<h4 id="objective_31">Objective<a class="headerlink" href="#objective_31" title="Link to this section">&para;</a></h4>
 <p>This test case verifies that the DataElementValue of data element <code>issuing_authority</code> is a well-formed CBOR text string. Note that <code>issuing_authority</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier <code>issuing_authority</code>.</p>
-<h4 id="references_31">References</h4>
+<h4 id="references_31">References<a class="headerlink" href="#references_31" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.1 (Table 6)</li>
 <li>[RFC7049] Section 2.1</li>
 </ul>
-<h4 id="eudi-wallet-relevancy_31">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_31">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_31" title="Link to this section">&para;</a></h4>
 <p>EUDI_specific | EUDI_required</p>
-<h4 id="profile-applicability_31">Profile applicability</h4>
+<h4 id="profile-applicability_31">Profile applicability<a class="headerlink" href="#profile-applicability_31" title="Link to this section">&para;</a></h4>
 <p>The EUDI wallet contains a Credential in mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element <code>issuing_authority</code> is present in the mdoc data.</p>
-<h4 id="preconditions_31">Preconditions</h4>
-<ol class="precond-alpha">
+<h4 id="preconditions_31">Preconditions<a class="headerlink" href="#preconditions_31" title="Link to this section">&para;</a></h4>
+<ol>
 <li>A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".</li>
 <li>All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested.</li>
 <li>The device retrieval mdoc response was retrieved.</li>
 <li>The presence of data element <code>issuing_authority</code> in the device retrieval mdoc response was verified.</li>
 </ol>
-<h4 id="test-scenario_31">Test Scenario</h4>
+<h4 id="test-scenario_31">Test Scenario<a class="headerlink" href="#test-scenario_31" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Verify the major type encoded on the first byte of the CBOR data item. </li>
 <li>Verify the encoding of the data item value.</li>
 </ol>
-<h4 id="expected-results_31">Expected results</h4>
+<h4 id="expected-results_31">Expected results<a class="headerlink" href="#expected-results_31" title="Link to this section">&para;</a></h4>
 <ol>
 <li>The major type value is equal to 3. </li>
 <li>All bytes in the data item value are UTF-8 encoded characters.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_dm_credentialmetadata_issuingcountry_pid_ietf-sd-jwt-vc_001">WS_RP_DM_Credentialmetadata_Issuingcountry_PID_IETF-sd-jwt-vc_001</h3>
-<h4 id="objective_32">Objective</h4>
+<h3 id="ws_rp_dm_credentialmetadata_issuingcountry_pid_ietf-sd-jwt-vc_001">WS_RP_DM_Credentialmetadata_Issuingcountry_PID_IETF-sd-jwt-vc_001<a class="headerlink" href="#ws_rp_dm_credentialmetadata_issuingcountry_pid_ietf-sd-jwt-vc_001" title="Link to this section">&para;</a></h3>
+<h4 id="objective_32">Objective<a class="headerlink" href="#objective_32" title="Link to this section">&para;</a></h4>
 <p>This test case verifies that the claim <code>issuing_country</code> is present in the Credential in IETF SD-JWT VC format. Note that <code>issuing_country</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier <code>issuing_country</code>. </p>
-<h4 id="references_32">References</h4>
+<h4 id="references_32">References<a class="headerlink" href="#references_32" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.2 (Table 5)</li>
 </ul>
-<h4 id="eudi-wallet-relevancy_32">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_32">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_32" title="Link to this section">&para;</a></h4>
 <p>EUDI_specific | EUDI_required</p>
-<h4 id="profile-applicability_32">Profile applicability</h4>
+<h4 id="profile-applicability_32">Profile applicability<a class="headerlink" href="#profile-applicability_32" title="Link to this section">&para;</a></h4>
 <p>The EUDI wallet contains a Credential in IETF SD-JWT VC format. <code>vct</code> claim includes base type of person identification "urn:eudi:pid:1".</p>
-<h4 id="preconditions_32">Preconditions</h4>
-<ol class="precond-alpha">
+<h4 id="preconditions_32">Preconditions<a class="headerlink" href="#preconditions_32" title="Link to this section">&para;</a></h4>
+<ol>
 <li>A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.</li>
 <li>All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.</li>
 <li>EUDI wallet presented the Credential successfully.</li>
 </ol>
-<h4 id="test-scenario_32">Test Scenario</h4>
+<h4 id="test-scenario_32">Test Scenario<a class="headerlink" href="#test-scenario_32" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Verify the presence of a claim with identifier <code>issuing_country</code> in the Credential presented to the Verifier in IETF SD-JWT VC format.</li>
 </ol>
-<h4 id="expected-results_32">Expected results</h4>
+<h4 id="expected-results_32">Expected results<a class="headerlink" href="#expected-results_32" title="Link to this section">&para;</a></h4>
 <ol>
 <li>One claim with identifier <code>issuing_country</code> is present.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_dm_credentialmetadata_issuingcountry_pid_ietf-sd-jwt-vc_002">WS_RP_DM_Credentialmetadata_Issuingcountry_PID_IETF-sd-jwt-vc_002</h3>
-<h4 id="objective_33">Objective</h4>
+<h3 id="ws_rp_dm_credentialmetadata_issuingcountry_pid_ietf-sd-jwt-vc_002">WS_RP_DM_Credentialmetadata_Issuingcountry_PID_IETF-sd-jwt-vc_002<a class="headerlink" href="#ws_rp_dm_credentialmetadata_issuingcountry_pid_ietf-sd-jwt-vc_002" title="Link to this section">&para;</a></h3>
+<h4 id="objective_33">Objective<a class="headerlink" href="#objective_33" title="Link to this section">&para;</a></h4>
 <p>This test case verifies that the claim <code>issuing_country</code> is a String encoded in UTF-8. Note that <code>issuing_country</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier <code>issuing_country</code>. </p>
-<h4 id="references_33">References</h4>
+<h4 id="references_33">References<a class="headerlink" href="#references_33" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.2 (Table 8)</li>
 <li>[RFC7049] Section 2.1</li>
 </ul>
-<h4 id="eudi-wallet-relevancy_33">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_33">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_33" title="Link to this section">&para;</a></h4>
 <p>EUDI_specific | EUDI_required</p>
-<h4 id="profile-applicability_33">Profile applicability</h4>
+<h4 id="profile-applicability_33">Profile applicability<a class="headerlink" href="#profile-applicability_33" title="Link to this section">&para;</a></h4>
 <p>The EUDI wallet contains a Credential in IETF SD-JWT VC format. <code>vct</code> claim includes base type of person identification "urn:eudi:pid:1".</p>
-<h4 id="preconditions_33">Preconditions</h4>
-<ol class="precond-alpha">
+<h4 id="preconditions_33">Preconditions<a class="headerlink" href="#preconditions_33" title="Link to this section">&para;</a></h4>
+<ol>
 <li>A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.</li>
 <li>All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.</li>
 <li>EUDI wallet presented the Credential successfully.</li>
 <li>The presence of claim <code>issuing_country</code> in the IETF SD-JWT VC Credential presented was verified.</li>
 </ol>
-<h4 id="test-scenario_33">Test Scenario</h4>
+<h4 id="test-scenario_33">Test Scenario<a class="headerlink" href="#test-scenario_33" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Verify that the claim <code>issuing_country</code> is a String encoded in UTF-8, supporting the full Unicode range</li>
 </ol>
-<h4 id="expected-results_33">Expected results</h4>
+<h4 id="expected-results_33">Expected results<a class="headerlink" href="#expected-results_33" title="Link to this section">&para;</a></h4>
 <ol>
 <li>The claim <code>issuing_country</code> is a String encoded in UTF-8, supporting the full Unicode range.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_dm_credentialmetadata_issuingcountry_pid_ietf-sd-jwt-vc_003">WS_RP_DM_Credentialmetadata_Issuingcountry_PID_IETF-sd-jwt-vc_003</h3>
-<h4 id="objective_34">Objective</h4>
+<h3 id="ws_rp_dm_credentialmetadata_issuingcountry_pid_ietf-sd-jwt-vc_003">WS_RP_DM_Credentialmetadata_Issuingcountry_PID_IETF-sd-jwt-vc_003<a class="headerlink" href="#ws_rp_dm_credentialmetadata_issuingcountry_pid_ietf-sd-jwt-vc_003" title="Link to this section">&para;</a></h3>
+<h4 id="objective_34">Objective<a class="headerlink" href="#objective_34" title="Link to this section">&para;</a></h4>
 <p>This test case verifies that the value of the claim <code>issuing_country</code> contains a valid country code. Note that <code>issuing_country</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier <code>issuing_country</code>. </p>
-<h4 id="references_34">References</h4>
+<h4 id="references_34">References<a class="headerlink" href="#references_34" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.2 (Table 5)</li>
 <li>[ISO 3166-1:2020] 6.1</li>
 <li>[ISO 3166-1:2020] 8.3</li>
 </ul>
-<h4 id="eudi-wallet-relevancy_34">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_34">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_34" title="Link to this section">&para;</a></h4>
 <p>EUDI_specific | EUDI_required</p>
-<h4 id="profile-applicability_34">Profile applicability</h4>
+<h4 id="profile-applicability_34">Profile applicability<a class="headerlink" href="#profile-applicability_34" title="Link to this section">&para;</a></h4>
 <p>The EUDI wallet contains a Credential in SD-JWT VC format with vct = "urn:eudi:pid:". The claim <code>issuing_country</code> is included in a person identification data.</p>
-<h4 id="preconditions_34">Preconditions</h4>
-<ol class="precond-alpha">
+<h4 id="preconditions_34">Preconditions<a class="headerlink" href="#preconditions_34" title="Link to this section">&para;</a></h4>
+<ol>
 <li>A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.</li>
 <li>All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.</li>
 <li>EUDI wallet presented the Credential successfully.</li>
 <li>The presence of claim <code>issuing_country</code> in the IETF SD-JWT VC Credential presented was verified.</li>
 </ol>
-<h4 id="test-scenario_34">Test Scenario</h4>
+<h4 id="test-scenario_34">Test Scenario<a class="headerlink" href="#test-scenario_34" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Verify that the value of the claim <code>issuing_country</code> contains a valid country code.</li>
 </ol>
-<h4 id="expected-results_34">Expected results</h4>
+<h4 id="expected-results_34">Expected results<a class="headerlink" href="#expected-results_34" title="Link to this section">&para;</a></h4>
 <ol>
 <li>The value of the claim <code>issuing_country</code>, an alpha-2 code, corresponding to a country name: Listed in ISO 3166-1:2020, 6.1. Not listed in ISO 3166-1:2020, 6.1. In this case, the user-assigned country codes may be used, which consist in the series of letters AA, QM to QZ, XA to XZ, and ZZ (ISO 3166-1:2020, 8.3).</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_dm_credentialmetadata_issuingcountry_pid_iso-mdoc_001">WS_RP_DM_Credentialmetadata_Issuingcountry_PID_ISO-mdoc_001</h3>
-<h4 id="objective_35">Objective</h4>
+<h3 id="ws_rp_dm_credentialmetadata_issuingcountry_pid_iso-mdoc_001">WS_RP_DM_Credentialmetadata_Issuingcountry_PID_ISO-mdoc_001<a class="headerlink" href="#ws_rp_dm_credentialmetadata_issuingcountry_pid_iso-mdoc_001" title="Link to this section">&para;</a></h3>
+<h4 id="objective_35">Objective<a class="headerlink" href="#objective_35" title="Link to this section">&para;</a></h4>
 <p>This test case verifies that the data element <code>issuing_country</code> is present in the mdoc data. Note that <code>issuing_country</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier <code>issuing_country</code>. </p>
-<h4 id="references_35">References</h4>
+<h4 id="references_35">References<a class="headerlink" href="#references_35" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.1 (Table 2)</li>
 </ul>
-<h4 id="eudi-wallet-relevancy_35">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_35">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_35" title="Link to this section">&para;</a></h4>
 <p>EUDI_specific | EUDI_required</p>
-<h4 id="profile-applicability_35">Profile applicability</h4>
+<h4 id="profile-applicability_35">Profile applicability<a class="headerlink" href="#profile-applicability_35" title="Link to this section">&para;</a></h4>
 <p>The EUDI wallet contains a Credential in mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element <code>issuing_country</code> is present in the mdoc data.</p>
-<h4 id="preconditions_35">Preconditions</h4>
-<ol class="precond-alpha">
+<h4 id="preconditions_35">Preconditions<a class="headerlink" href="#preconditions_35" title="Link to this section">&para;</a></h4>
+<ol>
 <li>A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".</li>
 <li>All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested.</li>
 <li>The device retrieval mdoc response was retrieved.</li>
 </ol>
-<h4 id="test-scenario_35">Test Scenario</h4>
+<h4 id="test-scenario_35">Test Scenario<a class="headerlink" href="#test-scenario_35" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Verify the presence of a data element with identifier <code>issuing_country</code> in the device retrieval mdoc response. </li>
 <li>Verify the absence of an <code>ErrorItem</code> for data element <code>issuing_country</code>.</li>
 </ol>
-<h4 id="expected-results_35">Expected results</h4>
+<h4 id="expected-results_35">Expected results<a class="headerlink" href="#expected-results_35" title="Link to this section">&para;</a></h4>
 <ol>
 <li>One data element with identifier <code>issuing_country</code> is present. </li>
 <li>There is no <code>ErrorItem</code> for data element <code>issuing_country</code>.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_dm_credentialmetadata_issuingcountry_pid_iso-mdoc_002">WS_RP_DM_Credentialmetadata_Issuingcountry_PID_ISO-mdoc_002</h3>
-<h4 id="objective_36">Objective</h4>
+<h3 id="ws_rp_dm_credentialmetadata_issuingcountry_pid_iso-mdoc_002">WS_RP_DM_Credentialmetadata_Issuingcountry_PID_ISO-mdoc_002<a class="headerlink" href="#ws_rp_dm_credentialmetadata_issuingcountry_pid_iso-mdoc_002" title="Link to this section">&para;</a></h3>
+<h4 id="objective_36">Objective<a class="headerlink" href="#objective_36" title="Link to this section">&para;</a></h4>
 <p>This test case verifies that the DataElementValue of data element <code>issuing_country</code> is a well-formed CBOR text string. Note that <code>issuing_country</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier <code>issuing_country</code>. </p>
-<h4 id="references_36">References</h4>
+<h4 id="references_36">References<a class="headerlink" href="#references_36" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.1 (Table 6)</li>
 <li>[RFC7049] Section 2.1</li>
 </ul>
-<h4 id="eudi-wallet-relevancy_36">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_36">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_36" title="Link to this section">&para;</a></h4>
 <p>EUDI_specific | EUDI_required</p>
-<h4 id="profile-applicability_36">Profile applicability</h4>
+<h4 id="profile-applicability_36">Profile applicability<a class="headerlink" href="#profile-applicability_36" title="Link to this section">&para;</a></h4>
 <p>The EUDI wallet contains a Credential in mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element <code>issuing_country</code> is present in the mdoc data.</p>
-<h4 id="preconditions_36">Preconditions</h4>
-<ol class="precond-alpha">
+<h4 id="preconditions_36">Preconditions<a class="headerlink" href="#preconditions_36" title="Link to this section">&para;</a></h4>
+<ol>
 <li>A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".</li>
 <li>All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested.</li>
 <li>The device retrieval mdoc response was retrieved.</li>
 <li>The presence of data element <code>issuing_country</code> in the device retrieval mdoc response was verified.</li>
 </ol>
-<h4 id="test-scenario_36">Test Scenario</h4>
+<h4 id="test-scenario_36">Test Scenario<a class="headerlink" href="#test-scenario_36" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Verify the major type encoded on the first byte of the CBOR data item. </li>
 <li>Verify the encoding of the data item value.</li>
 </ol>
-<h4 id="expected-results_36">Expected results</h4>
+<h4 id="expected-results_36">Expected results<a class="headerlink" href="#expected-results_36" title="Link to this section">&para;</a></h4>
 <ol>
 <li>The major type value is equal to 3. </li>
 <li>All bytes in the data item value are UTF-8 encoded characters.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_dm_credentialmetadata_issuingcountry_pid_iso-mdoc_003">WS_RP_DM_Credentialmetadata_Issuingcountry_PID_ISO-mdoc_003</h3>
-<h4 id="objective_37">Objective</h4>
+<h3 id="ws_rp_dm_credentialmetadata_issuingcountry_pid_iso-mdoc_003">WS_RP_DM_Credentialmetadata_Issuingcountry_PID_ISO-mdoc_003<a class="headerlink" href="#ws_rp_dm_credentialmetadata_issuingcountry_pid_iso-mdoc_003" title="Link to this section">&para;</a></h3>
+<h4 id="objective_37">Objective<a class="headerlink" href="#objective_37" title="Link to this section">&para;</a></h4>
 <p>This test case verifies that the DataElementValue of data element <code>issuing_country</code> contains a valid country code. Note that <code>issuing_country</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier <code>issuing_country</code>. </p>
-<h4 id="references_37">References</h4>
+<h4 id="references_37">References<a class="headerlink" href="#references_37" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.1 (Table 6)</li>
 <li>[ISO 3166-1:2020] 6.1</li>
 <li>[ISO 3166-1:2020] 8.3</li>
 </ul>
-<h4 id="eudi-wallet-relevancy_37">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_37">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_37" title="Link to this section">&para;</a></h4>
 <p>EUDI_specific | EUDI_required</p>
-<h4 id="profile-applicability_37">Profile applicability</h4>
+<h4 id="profile-applicability_37">Profile applicability<a class="headerlink" href="#profile-applicability_37" title="Link to this section">&para;</a></h4>
 <p>The EUDI wallet contains a Credential in mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element <code>issuing_country</code> is present in the mdoc data.</p>
-<h4 id="preconditions_37">Preconditions</h4>
-<ol class="precond-alpha">
+<h4 id="preconditions_37">Preconditions<a class="headerlink" href="#preconditions_37" title="Link to this section">&para;</a></h4>
+<ol>
 <li>A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".</li>
 <li>All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested.</li>
 <li>The device retrieval mdoc response was retrieved.</li>
 <li>The presence of data element <code>issuing_country</code> in the device retrieval mdoc response was verified.</li>
 </ol>
-<h4 id="test-scenario_37">Test Scenario</h4>
+<h4 id="test-scenario_37">Test Scenario<a class="headerlink" href="#test-scenario_37" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Verify the first two UTF-8 encoded characters in the data element.</li>
 <li>Verify the third UTF-8 encoded character in the data element.</li>
 <li>Verify that the remaining UTF-8 encoded characters in the data element constitute a valid value.</li>
 </ol>
-<h4 id="expected-results_37">Expected results</h4>
+<h4 id="expected-results_37">Expected results<a class="headerlink" href="#expected-results_37" title="Link to this section">&para;</a></h4>
 <ol>
 <li>The first two UTF-8 encoded characters shall refer to the same country as the DataElementValue of data element <code>issuing_country</code>.</li>
 <li>The third UTF-8 encoded character is "-".</li>
 <li>The remaining UTF-8 encoded characters form a code corresponding to a country subdivision listed in ISO 3166-2:2020, 6.1 (according to the corresponding country code).</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_dm_credentialmetadata_issuingjurisdiction_pid_ietf-sd-jwt-vc_001">WS_RP_DM_Credentialmetadata_Issuingjurisdiction_PID_IETF-sd-jwt-vc_001</h3>
-<h4 id="objective_38">Objective</h4>
+<h3 id="ws_rp_dm_credentialmetadata_issuingjurisdiction_pid_ietf-sd-jwt-vc_001">WS_RP_DM_Credentialmetadata_Issuingjurisdiction_PID_IETF-sd-jwt-vc_001<a class="headerlink" href="#ws_rp_dm_credentialmetadata_issuingjurisdiction_pid_ietf-sd-jwt-vc_001" title="Link to this section">&para;</a></h3>
+<h4 id="objective_38">Objective<a class="headerlink" href="#objective_38" title="Link to this section">&para;</a></h4>
 <p>This test case verifies that the claim <code>issuing_jurisdiction</code> is present in the Credential in IETF SD-JWT VC format if this is indicated in the ICS. Note that <code>issuing_jurisdiction</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier <code>issuing_jurisdiction</code>. </p>
-<h4 id="references_38">References</h4>
+<h4 id="references_38">References<a class="headerlink" href="#references_38" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.2 (Table 5)</li>
 </ul>
-<h4 id="eudi-wallet-relevancy_38">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_38">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_38" title="Link to this section">&para;</a></h4>
 <p>EUDI_specific | EUDI_optional</p>
-<h4 id="profile-applicability_38">Profile applicability</h4>
+<h4 id="profile-applicability_38">Profile applicability<a class="headerlink" href="#profile-applicability_38" title="Link to this section">&para;</a></h4>
 <p>The EUDI wallet contains a Credential in SD-JWT VC format with vct = "urn:eudi:pid:". The claim <code>issuing_jurisdiction</code> is included in a person identification data.</p>
-<h4 id="preconditions_38">Preconditions</h4>
-<ol class="precond-alpha">
+<h4 id="preconditions_38">Preconditions<a class="headerlink" href="#preconditions_38" title="Link to this section">&para;</a></h4>
+<ol>
 <li>A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.</li>
 <li>All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.</li>
 <li>EUDI wallet presented the Credential successfully.</li>
 </ol>
-<h4 id="test-scenario_38">Test Scenario</h4>
+<h4 id="test-scenario_38">Test Scenario<a class="headerlink" href="#test-scenario_38" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Verify the presence of a claim with identifier <code>issuing_jurisdiction</code> in the Credential presented to the Verifier in IETF SD-JWT VC format.</li>
 </ol>
-<h4 id="expected-results_38">Expected results</h4>
+<h4 id="expected-results_38">Expected results<a class="headerlink" href="#expected-results_38" title="Link to this section">&para;</a></h4>
 <ol>
 <li>One claim with identifier <code>issuing_jurisdiction</code> is present.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_dm_credentialmetadata_issuingjurisdiction_pid_ietf-sd-jwt-vc_002">WS_RP_DM_Credentialmetadata_Issuingjurisdiction_PID_IETF-sd-jwt-vc_002</h3>
-<h4 id="objective_39">Objective</h4>
+<h3 id="ws_rp_dm_credentialmetadata_issuingjurisdiction_pid_ietf-sd-jwt-vc_002">WS_RP_DM_Credentialmetadata_Issuingjurisdiction_PID_IETF-sd-jwt-vc_002<a class="headerlink" href="#ws_rp_dm_credentialmetadata_issuingjurisdiction_pid_ietf-sd-jwt-vc_002" title="Link to this section">&para;</a></h3>
+<h4 id="objective_39">Objective<a class="headerlink" href="#objective_39" title="Link to this section">&para;</a></h4>
 <p>This test case verifies that the claim <code>issuing_jurisdiction</code> is a String encoded in UTF-8. Note that <code>issuing_jurisdiction</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier <code>issuing_jurisdiction</code>. </p>
-<h4 id="references_39">References</h4>
+<h4 id="references_39">References<a class="headerlink" href="#references_39" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.2 (Table 8)</li>
 <li>[RFC7049] Section 2.1</li>
 </ul>
-<h4 id="eudi-wallet-relevancy_39">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_39">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_39" title="Link to this section">&para;</a></h4>
 <p>EUDI_specific | EUDI_optional</p>
-<h4 id="profile-applicability_39">Profile applicability</h4>
+<h4 id="profile-applicability_39">Profile applicability<a class="headerlink" href="#profile-applicability_39" title="Link to this section">&para;</a></h4>
 <p>The EUDI wallet contains a Credential in SD-JWT VC format with vct = "urn:eudi:pid:". The claim <code>issuing_jurisdiction</code> is included in a person identification data.</p>
-<h4 id="preconditions_39">Preconditions</h4>
-<ol class="precond-alpha">
+<h4 id="preconditions_39">Preconditions<a class="headerlink" href="#preconditions_39" title="Link to this section">&para;</a></h4>
+<ol>
 <li>A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.</li>
 <li>All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.</li>
 <li>EUDI wallet presented the Credential successfully.</li>
 <li>The presence of claim <code>issuing_jurisdiction</code> in the IETF SD-JWT VC Credential presented was verified.</li>
 </ol>
-<h4 id="test-scenario_39">Test Scenario</h4>
+<h4 id="test-scenario_39">Test Scenario<a class="headerlink" href="#test-scenario_39" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Verify that the claim <code>issuing_jurisdiction</code> is a String encoded in UTF-8, supporting the full Unicode range</li>
 </ol>
-<h4 id="expected-results_39">Expected results</h4>
+<h4 id="expected-results_39">Expected results<a class="headerlink" href="#expected-results_39" title="Link to this section">&para;</a></h4>
 <ol>
 <li>The claim <code>issuing_jurisdiction</code> is a String encoded in UTF-8, supporting the full Unicode range.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_dm_credentialmetadata_issuingjurisdiction_pid_ietf-sd-jwt-vc_003">WS_RP_DM_Credentialmetadata_Issuingjurisdiction_PID_IETF-sd-jwt-vc_003</h3>
-<h4 id="objective_40">Objective</h4>
+<h3 id="ws_rp_dm_credentialmetadata_issuingjurisdiction_pid_ietf-sd-jwt-vc_003">WS_RP_DM_Credentialmetadata_Issuingjurisdiction_PID_IETF-sd-jwt-vc_003<a class="headerlink" href="#ws_rp_dm_credentialmetadata_issuingjurisdiction_pid_ietf-sd-jwt-vc_003" title="Link to this section">&para;</a></h3>
+<h4 id="objective_40">Objective<a class="headerlink" href="#objective_40" title="Link to this section">&para;</a></h4>
 <p>This test case verifies that the value of the claim <code>issuing_jurisdiction</code> contains a valid country subdivision code. Note that <code>issuing_jurisdiction</code> is the Attribute Identifier in IETF SD-JWT VC for the Data Identifier <code>issuing_jurisdiction</code>. </p>
-<h4 id="references_40">References</h4>
+<h4 id="references_40">References<a class="headerlink" href="#references_40" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.2 (Table 5)</li>
 <li>[ISO 3166-2:2020] 8</li>
 </ul>
-<h4 id="eudi-wallet-relevancy_40">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_40">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_40" title="Link to this section">&para;</a></h4>
 <p>EUDI_specific | EUDI_optional</p>
-<h4 id="profile-applicability_40">Profile applicability</h4>
+<h4 id="profile-applicability_40">Profile applicability<a class="headerlink" href="#profile-applicability_40" title="Link to this section">&para;</a></h4>
 <p>The EUDI wallet contains a Credential in SD-JWT VC format with vct = "urn:eudi:pid:". The claim <code>issuing_jurisdiction</code> is included in a person identification data.</p>
-<h4 id="preconditions_40">Preconditions</h4>
-<ol class="precond-alpha">
+<h4 id="preconditions_40">Preconditions<a class="headerlink" href="#preconditions_40" title="Link to this section">&para;</a></h4>
+<ol>
 <li>A presentation request was sent to the EUDI wallet, to retrieve a PID Credential in IETF SD-JWT VC format.</li>
 <li>All mandatory data elements within namespace "urn:eudi:pid:" and all data elements indicated as present in the ICS were requested.</li>
 <li>EUDI wallet presented the Credential successfully.</li>
 <li>The presence of claim <code>issuing_jurisdiction</code> in the IETF SD-JWT VC Credential presented was verified.</li>
 </ol>
-<h4 id="test-scenario_40">Test Scenario</h4>
+<h4 id="test-scenario_40">Test Scenario<a class="headerlink" href="#test-scenario_40" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Verify the first two UTF-8 encoded characters in claim <code>issuing_jurisdiction</code>.</li>
 <li>Verify the third UTF-8 encoded character in the claim <code>issuing_jurisdiction</code>.</li>
 <li>Verify that the remaining UTF-8 encoded characters in the claim <code>issuing_jurisdiction</code> constitute a valid value.</li>
 </ol>
-<h4 id="expected-results_40">Expected results</h4>
+<h4 id="expected-results_40">Expected results<a class="headerlink" href="#expected-results_40" title="Link to this section">&para;</a></h4>
 <ol>
 <li>The first two UTF-8 encoded characters refer to the same country as the claim <code>issuing_country</code>.</li>
 <li>The third UTF-8 encoded character is "-".</li>
 <li>The remaining UTF-8 encoded characters form a code corresponding to a country subdivision listed in ISO 3166-2:2020, 6.1 (according to the corresponding country code).</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_dm_credentialmetadata_issuingjurisdiction_pid_iso-mdoc_001">WS_RP_DM_Credentialmetadata_Issuingjurisdiction_PID_ISO-mdoc_001</h3>
-<h4 id="objective_41">Objective</h4>
+<h3 id="ws_rp_dm_credentialmetadata_issuingjurisdiction_pid_iso-mdoc_001">WS_RP_DM_Credentialmetadata_Issuingjurisdiction_PID_ISO-mdoc_001<a class="headerlink" href="#ws_rp_dm_credentialmetadata_issuingjurisdiction_pid_iso-mdoc_001" title="Link to this section">&para;</a></h3>
+<h4 id="objective_41">Objective<a class="headerlink" href="#objective_41" title="Link to this section">&para;</a></h4>
 <p>This test case verifies that the data element <code>issuing_jurisdiction</code> is present in the mdoc data if this is indicated in the ICS. Note that <code>issuing_jurisdiction</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier <code>issuing_jurisdiction</code>. </p>
-<h4 id="references_41">References</h4>
+<h4 id="references_41">References<a class="headerlink" href="#references_41" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.1 (Table 2)</li>
 </ul>
-<h4 id="eudi-wallet-relevancy_41">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_41">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_41" title="Link to this section">&para;</a></h4>
 <p>EUDI_specific | EUDI_optional</p>
-<h4 id="profile-applicability_41">Profile applicability</h4>
+<h4 id="profile-applicability_41">Profile applicability<a class="headerlink" href="#profile-applicability_41" title="Link to this section">&para;</a></h4>
 <p>The EUDI wallet contains a Credential in mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element <code>issuing_jurisdiction</code> is present in the mdoc data.</p>
-<h4 id="preconditions_41">Preconditions</h4>
-<ol class="precond-alpha">
+<h4 id="preconditions_41">Preconditions<a class="headerlink" href="#preconditions_41" title="Link to this section">&para;</a></h4>
+<ol>
 <li>A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".</li>
 <li>All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested.</li>
 <li>The device retrieval mdoc response was retrieved.</li>
 </ol>
-<h4 id="test-scenario_41">Test Scenario</h4>
+<h4 id="test-scenario_41">Test Scenario<a class="headerlink" href="#test-scenario_41" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Verify the presence of a data element with identifier <code>issuing_jurisdiction</code> in the device retrieval mdoc response. </li>
 <li>Verify the absence of an <code>ErrorItem</code> for data element <code>issuing_jurisdiction</code>.</li>
 </ol>
-<h4 id="expected-results_41">Expected results</h4>
+<h4 id="expected-results_41">Expected results<a class="headerlink" href="#expected-results_41" title="Link to this section">&para;</a></h4>
 <ol>
 <li>One data element with identifier <code>issuing_jurisdiction</code> is present. </li>
 <li>There is no <code>ErrorItem</code> for data element <code>issuing_jurisdiction</code>.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_dm_credentialmetadata_issuingjurisdiction_pid_iso-mdoc_002">WS_RP_DM_Credentialmetadata_Issuingjurisdiction_PID_ISO-mdoc_002</h3>
-<h4 id="objective_42">Objective</h4>
+<h3 id="ws_rp_dm_credentialmetadata_issuingjurisdiction_pid_iso-mdoc_002">WS_RP_DM_Credentialmetadata_Issuingjurisdiction_PID_ISO-mdoc_002<a class="headerlink" href="#ws_rp_dm_credentialmetadata_issuingjurisdiction_pid_iso-mdoc_002" title="Link to this section">&para;</a></h3>
+<h4 id="objective_42">Objective<a class="headerlink" href="#objective_42" title="Link to this section">&para;</a></h4>
 <p>This test case verifies that the DataElementValue of data element <code>issuing_jurisdiction</code> is a well-formed CBOR text string. Note that <code>issuing_jurisdiction</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier <code>issuing_jurisdiction</code>. </p>
-<h4 id="references_42">References</h4>
+<h4 id="references_42">References<a class="headerlink" href="#references_42" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.1 (Table 6)</li>
 <li>[RFC7049] Section 2.1</li>
 </ul>
-<h4 id="eudi-wallet-relevancy_42">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_42">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_42" title="Link to this section">&para;</a></h4>
 <p>EUDI_specific | EUDI_optional</p>
-<h4 id="profile-applicability_42">Profile applicability</h4>
+<h4 id="profile-applicability_42">Profile applicability<a class="headerlink" href="#profile-applicability_42" title="Link to this section">&para;</a></h4>
 <p>The EUDI wallet contains a Credential in mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element <code>issuing_jurisdiction</code> is present in the mdoc data.</p>
-<h4 id="preconditions_42">Preconditions</h4>
-<ol class="precond-alpha">
+<h4 id="preconditions_42">Preconditions<a class="headerlink" href="#preconditions_42" title="Link to this section">&para;</a></h4>
+<ol>
 <li>A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".</li>
 <li>All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested.</li>
 <li>The device retrieval mdoc response was retrieved.</li>
 <li>The presence of data element <code>issuing_jurisdiction</code> in the device retrieval mdoc response was verified.</li>
 </ol>
-<h4 id="test-scenario_42">Test Scenario</h4>
+<h4 id="test-scenario_42">Test Scenario<a class="headerlink" href="#test-scenario_42" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Verify the major type encoded on the first byte of the CBOR data item. </li>
 <li>Verify the encoding of the data item value.</li>
 </ol>
-<h4 id="expected-results_42">Expected results</h4>
+<h4 id="expected-results_42">Expected results<a class="headerlink" href="#expected-results_42" title="Link to this section">&para;</a></h4>
 <ol>
 <li>The major type value is equal to 3. </li>
 <li>All bytes in the data item value are UTF-8 encoded characters.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_dm_credentialmetadata_issuingjurisdiction_pid_iso-mdoc_003">WS_RP_DM_Credentialmetadata_Issuingjurisdiction_PID_ISO-mdoc_003</h3>
-<h4 id="objective_43">Objective</h4>
+<h3 id="ws_rp_dm_credentialmetadata_issuingjurisdiction_pid_iso-mdoc_003">WS_RP_DM_Credentialmetadata_Issuingjurisdiction_PID_ISO-mdoc_003<a class="headerlink" href="#ws_rp_dm_credentialmetadata_issuingjurisdiction_pid_iso-mdoc_003" title="Link to this section">&para;</a></h3>
+<h4 id="objective_43">Objective<a class="headerlink" href="#objective_43" title="Link to this section">&para;</a></h4>
 <p>This test case verifies that the DataElementValue of data element <code>issuing_jurisdiction</code> contains a valid country subdivision code. Note that <code>issuing_jurisdiction</code> is the Attribute Identifier in ISO-mdoc for the Data Identifier <code>issuing_jurisdiction</code>.</p>
-<h4 id="references_43">References</h4>
+<h4 id="references_43">References<a class="headerlink" href="#references_43" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[PID rulebook] Annex 3.01, Section 4.1 (Table 6)</li>
 <li>[ISO 3166-2:2020] 6.1</li>
 </ul>
-<h4 id="eudi-wallet-relevancy_43">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_43">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_43" title="Link to this section">&para;</a></h4>
 <p>EUDI_specific | EUDI_optional</p>
-<h4 id="profile-applicability_43">Profile applicability</h4>
+<h4 id="profile-applicability_43">Profile applicability<a class="headerlink" href="#profile-applicability_43" title="Link to this section">&para;</a></h4>
 <p>The EUDI wallet contains a Credential in mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element <code>issuing_jurisdiction</code> is present in the EU PID data.</p>
-<h4 id="preconditions_43">Preconditions</h4>
-<ol class="precond-alpha">
+<h4 id="preconditions_43">Preconditions<a class="headerlink" href="#preconditions_43" title="Link to this section">&para;</a></h4>
+<ol>
 <li>A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".</li>
 <li>All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested.</li>
 <li>The device retrieval mdoc response was retrieved.</li>
 <li>The presence and format of data element <code>issuing_jurisdiction</code> in the device retrieval mdoc response was verified.</li>
 <li>The presence and format of data element <code>issuing_country</code> in the device retrieval mdoc response was verified.</li>
 </ol>
-<h4 id="test-scenario_43">Test Scenario</h4>
+<h4 id="test-scenario_43">Test Scenario<a class="headerlink" href="#test-scenario_43" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Verify the first two UTF-8 encoded characters in the data element. </li>
 <li>Verify the third UTF-8 encoded character in the data element. </li>
 <li>Verify that the remaining UTF-8 encoded characters in the data element constitute a valid value.</li>
 </ol>
-<h4 id="expected-results_43">Expected results</h4>
+<h4 id="expected-results_43">Expected results<a class="headerlink" href="#expected-results_43" title="Link to this section">&para;</a></h4>
 <ol>
 <li>The first two UTF-8 encoded characters shall refer to the same country as the DataElementValue of data element <code>issuing_country</code>. </li>
 <li>The third UTF-8 encoded character is "-". </li>
@@ -2565,6 +2627,10 @@
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
+    <div class="md-copyright__highlight">
+      European Union, 2025 - Licensed under the EUPL-1.2 or later
+    </div>
+  
   
     Made with
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
@@ -2586,14 +2652,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.top", "navigation.footer", "navigation.indexes", "toc.integrate", "toc.follow"], "search": "../../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.indexes", "navigation.top", "navigation.footer", "navigation.tracking", "toc.integrate", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.action.edit", "content.action.view", "content.code.copy"], "search": "../../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
       <script src="../../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
-      
-        <script src="../../../../../../assets/external/unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
-      
-        <script src="../../../../../../javascripts/mermaid-init.js"></script>
       
     
   </body>

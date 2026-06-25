@@ -51,6 +51,8 @@
     
       <link rel="stylesheet" href="../../../../../../media/css/extra.css">
     
+      <link rel="stylesheet" href="../../../../../../media/css/fcaf.css">
+    
     <script>__md_scope=new URL("../../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -78,7 +80,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -139,20 +141,20 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
   
@@ -163,6 +165,53 @@
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
     
     
       <div class="md-header__source">
@@ -1201,32 +1250,45 @@
 
 
   
+    <a href="https://github.com/eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment/edit/main/docs/fcaf/suts/wallet_solution/relying_party/SecurityMechanisms/RpIntegrity/index.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment/raw/main/docs/fcaf/suts/wallet_solution/relying_party/SecurityMechanisms/RpIntegrity/index.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
   
 
 
-<h1 id="security-mechanisms-rp-integrity">Security Mechanisms - RP Integrity</h1>
+<h1 id="security-mechanisms-rp-integrity">Security Mechanisms - RP Integrity<a class="headerlink" href="#security-mechanisms-rp-integrity" title="Link to this section">&para;</a></h1>
 <!-- BEGIN INCLUDE ./[A-Z]*.md -->
-<h3 id="ws_rp_sm_rpintegrity_cryptographicsignature002">WS_RP_SM_RpIntegrity_CryptographicSignature002</h3>
-<h4 id="objective">Objective</h4>
+<h3 id="ws_rp_sm_rpintegrity_cryptographicsignature002">WS_RP_SM_RpIntegrity_CryptographicSignature002<a class="headerlink" href="#ws_rp_sm_rpintegrity_cryptographicsignature002" title="Link to this section">&para;</a></h3>
+<h4 id="objective">Objective<a class="headerlink" href="#objective" title="Link to this section">&para;</a></h4>
 <p>Verify that Wallet does not support RSASSA-PSS using SHA-384 and MGF1 with SHA-384 (RS384) for validating signed presentation requests.</p>
-<h4 id="references">References</h4>
+<h4 id="references">References<a class="headerlink" href="#references" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[HAIP] Section 8</li>
 </ul>
-<h4 id="profile-applicability">Profile applicability</h4>
+<h4 id="profile-applicability">Profile applicability<a class="headerlink" href="#profile-applicability" title="Link to this section">&para;</a></h4>
 <p>JOSE algorithm identifier ES257</p>
-<h4 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions">Preconditions</h4>
+<h4 id="preconditions">Preconditions<a class="headerlink" href="#preconditions" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario">Test Scenario</h4>
+<h4 id="test-scenario">Test Scenario<a class="headerlink" href="#test-scenario" title="Link to this section">&para;</a></h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
 <li>Verifier sends presentation request for Credential.</li>
 <li>Verify that Wallet receives signed request using RSASSA-PSS using SHA-384 and MGF1 with SHA-384 (RS384).from the Verifier.</li>
 <li>Wallet processes the request.</li>
 </ol>
-<h4 id="expected-results">Expected results</h4>
+<h4 id="expected-results">Expected results<a class="headerlink" href="#expected-results" title="Link to this section">&para;</a></h4>
 <ol>
 <li>This is the case.</li>
 <li>This is the case.</li>
@@ -1237,27 +1299,27 @@ b. returns general error,
 c. only discontinues the transaction.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_sm_rpintegrity_cryptographicsignature003">WS_RP_SM_RpIntegrity_CryptographicSignature003</h3>
-<h4 id="objective_1">Objective</h4>
+<h3 id="ws_rp_sm_rpintegrity_cryptographicsignature003">WS_RP_SM_RpIntegrity_CryptographicSignature003<a class="headerlink" href="#ws_rp_sm_rpintegrity_cryptographicsignature003" title="Link to this section">&para;</a></h3>
+<h4 id="objective_1">Objective<a class="headerlink" href="#objective_1" title="Link to this section">&para;</a></h4>
 <p>Verify that Wallet supports ECDSA with P-256 and SHA-256 (COSE algorithm identifier -7) for validating signed presentation requests.</p>
-<h4 id="references_1">References</h4>
+<h4 id="references_1">References<a class="headerlink" href="#references_1" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[HAIP] Section 7</li>
 </ul>
-<h4 id="profile-applicability_1">Profile applicability</h4>
+<h4 id="profile-applicability_1">Profile applicability<a class="headerlink" href="#profile-applicability_1" title="Link to this section">&para;</a></h4>
 <p>COSE algorithm identifier -7 supported</p>
-<h4 id="eudi-wallet-relevancy_1">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_1">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_1" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_1">Preconditions</h4>
+<h4 id="preconditions_1">Preconditions<a class="headerlink" href="#preconditions_1" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_1">Test Scenario</h4>
+<h4 id="test-scenario_1">Test Scenario<a class="headerlink" href="#test-scenario_1" title="Link to this section">&para;</a></h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
 <li>Verifier sends presentation request for Credential.</li>
 <li>Verify that Wallet receives signed request using ECDSA with P-256 and SHA-256 (COSE algorithm identifier -7) from the Verifier.</li>
 <li>Verify if Wallet is able to validate signed request from the Verifier that used ECDSA with P-256 and SHA-256 (COSE algorithm identifier -7) </li>
 </ol>
-<h4 id="expected-results_1">Expected results</h4>
+<h4 id="expected-results_1">Expected results<a class="headerlink" href="#expected-results_1" title="Link to this section">&para;</a></h4>
 <ol>
 <li>This is the case.</li>
 <li>This is the case.</li>
@@ -1265,27 +1327,27 @@ c. only discontinues the transaction.</li>
 <li>Wallet is able to validate signed request from the Verifier that used ECDSA with P-256 and SHA-256 (JOSE algorithm identifier ES256; COSE algorithm identifier -7) </li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_sm_rpintegrity_cryptographicsignature004">WS_RP_SM_RpIntegrity_CryptographicSignature004</h3>
-<h4 id="objective_2">Objective</h4>
+<h3 id="ws_rp_sm_rpintegrity_cryptographicsignature004">WS_RP_SM_RpIntegrity_CryptographicSignature004<a class="headerlink" href="#ws_rp_sm_rpintegrity_cryptographicsignature004" title="Link to this section">&para;</a></h3>
+<h4 id="objective_2">Objective<a class="headerlink" href="#objective_2" title="Link to this section">&para;</a></h4>
 <p>Verify that Wallet supports ECDSA with P-256 and SHA-256 (COSE algorithm identifier -9) for validating signed presentation requests.</p>
-<h4 id="references_2">References</h4>
+<h4 id="references_2">References<a class="headerlink" href="#references_2" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[HAIP] Section 7</li>
 </ul>
-<h4 id="profile-applicability_2">Profile applicability</h4>
+<h4 id="profile-applicability_2">Profile applicability<a class="headerlink" href="#profile-applicability_2" title="Link to this section">&para;</a></h4>
 <p>COSE algorithm identifier -9 supported</p>
-<h4 id="eudi-wallet-relevancy_2">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_2">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_2" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_2">Preconditions</h4>
+<h4 id="preconditions_2">Preconditions<a class="headerlink" href="#preconditions_2" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_2">Test Scenario</h4>
+<h4 id="test-scenario_2">Test Scenario<a class="headerlink" href="#test-scenario_2" title="Link to this section">&para;</a></h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
 <li>Verifier sends presentation request for Credential.</li>
 <li>Verify that Wallet receives signed request using ECDSA with P-256 and SHA-256 (COSE algorithm identifier -9) from the Verifier.</li>
 <li>Verify if Wallet is able to validate signed request from the Verifier that used ECDSA with P-256 and SHA-256 (COSE algorithm identifier -9) </li>
 </ol>
-<h4 id="expected-results_2">Expected results</h4>
+<h4 id="expected-results_2">Expected results<a class="headerlink" href="#expected-results_2" title="Link to this section">&para;</a></h4>
 <ol>
 <li>This is the case.</li>
 <li>This is the case.</li>
@@ -1293,98 +1355,98 @@ c. only discontinues the transaction.</li>
 <li>Wallet is able to validate signed request from the Verifier that used ECDSA with P-256 and SHA-256 (JOSE algorithm identifier ES256; COSE algorithm identifier -9) </li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_sm_rpintegrity_001">WS_RP_SM_RpIntegrity_001</h3>
-<h4 id="objective_3">Objective</h4>
+<h3 id="ws_rp_sm_rpintegrity_001">WS_RP_SM_RpIntegrity_001<a class="headerlink" href="#ws_rp_sm_rpintegrity_001" title="Link to this section">&para;</a></h3>
+<h4 id="objective_3">Objective<a class="headerlink" href="#objective_3" title="Link to this section">&para;</a></h4>
 <p>Verify that when the Wallet uses information from a verifier_info attestation and signature validation or binding verification fails, the Wallet rejects the Authorization Request.</p>
-<h4 id="references_3">References</h4>
+<h4 id="references_3">References<a class="headerlink" href="#references_3" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[OpenID4VP] Sections 5.1, 5.11</li>
 </ul>
-<h4 id="profile-applicability_3">Profile applicability</h4>
+<h4 id="profile-applicability_3">Profile applicability<a class="headerlink" href="#profile-applicability_3" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="eudi-wallet-relevancy_3">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_3">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_3" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_optional</p>
-<h4 id="preconditions_3">Preconditions</h4>
+<h4 id="preconditions_3">Preconditions<a class="headerlink" href="#preconditions_3" title="Link to this section">&para;</a></h4>
 <p>Wallet elected to use verifier_info</p>
-<h4 id="test-scenario_3">Test Scenario</h4>
+<h4 id="test-scenario_3">Test Scenario<a class="headerlink" href="#test-scenario_3" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
 <li>Wallet receives an Authorization Request containing a verifier_info array whose attestation objects include a data member matching the declared format, but with either an invalid signature or incorrect binding to the Verifier/purpose.</li>
 <li>Wallet chooses to use the information from verifier_info, attempts to validate the signature and check binding.</li>
 </ol>
-<h4 id="expected-results_3">Expected results</h4>
+<h4 id="expected-results_3">Expected results<a class="headerlink" href="#expected-results_3" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
 <li>Wallet successfully receives and parses the Authorization Request.</li>
 <li>Wallet rejects the Authorization Request due to signature or binding failure; presentation flow is not initiated.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_sm_rpintegrity_002">WS_RP_SM_RpIntegrity_002</h3>
-<h4 id="objective_4">Objective</h4>
+<h3 id="ws_rp_sm_rpintegrity_002">WS_RP_SM_RpIntegrity_002<a class="headerlink" href="#ws_rp_sm_rpintegrity_002" title="Link to this section">&para;</a></h3>
+<h4 id="objective_4">Objective<a class="headerlink" href="#objective_4" title="Link to this section">&para;</a></h4>
 <p>Verify that when the Wallet receives a signed Request Object via the DC API with an invalid signature and is configured to validate signatures, it rejects the request.</p>
-<h4 id="references_4">References</h4>
+<h4 id="references_4">References<a class="headerlink" href="#references_4" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[OpenID4VP] Sections 5.3, 5.9.3, Appendix A</li>
 </ul>
-<h4 id="profile-applicability_4">Profile applicability</h4>
+<h4 id="profile-applicability_4">Profile applicability<a class="headerlink" href="#profile-applicability_4" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="eudi-wallet-relevancy_4">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_4">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_4" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_forbidden</p>
-<h4 id="preconditions_4">Preconditions</h4>
+<h4 id="preconditions_4">Preconditions<a class="headerlink" href="#preconditions_4" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_4">Test Scenario</h4>
+<h4 id="test-scenario_4">Test Scenario<a class="headerlink" href="#test-scenario_4" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Engage wallet-verifier interaction via the DC API.</li>
 <li>Wallet receives a Request Object via the DC API carrying an invalid signature.</li>
 <li>Wallet attempts to validate the signature.</li>
 </ol>
-<h4 id="expected-results_4">Expected results</h4>
+<h4 id="expected-results_4">Expected results<a class="headerlink" href="#expected-results_4" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
 <li>Wallet processes the Request Object.</li>
 <li>Wallet rejects the Authorization Request due to signature validation failure; presentation flow is not initiated.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_sm_rpintegrity_003">WS_RP_SM_RpIntegrity_003</h3>
-<h4 id="objective_5">Objective</h4>
+<h3 id="ws_rp_sm_rpintegrity_003">WS_RP_SM_RpIntegrity_003<a class="headerlink" href="#ws_rp_sm_rpintegrity_003" title="Link to this section">&para;</a></h3>
+<h4 id="objective_5">Objective<a class="headerlink" href="#objective_5" title="Link to this section">&para;</a></h4>
 <p>Verify that when the Wallet receives a Request Object via the DC API and the Wallet is configured NOT to validate signatures, it processes the request without signature validation in accordance with its configured profile.</p>
-<h4 id="references_5">References</h4>
+<h4 id="references_5">References<a class="headerlink" href="#references_5" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[OpenID4VP] Sections 5.3, 5.9.3, Appendix A</li>
 </ul>
-<h4 id="profile-applicability_5">Profile applicability</h4>
+<h4 id="profile-applicability_5">Profile applicability<a class="headerlink" href="#profile-applicability_5" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="eudi-wallet-relevancy_5">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_5">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_5" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_forbidden</p>
-<h4 id="preconditions_5">Preconditions</h4>
+<h4 id="preconditions_5">Preconditions<a class="headerlink" href="#preconditions_5" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_5">Test Scenario</h4>
+<h4 id="test-scenario_5">Test Scenario<a class="headerlink" href="#test-scenario_5" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Engage wallet-verifier interaction via the DC API.</li>
 <li>Wallet receives a Request Object via the DC API.</li>
 <li>Wallet proceeds without signature validation.</li>
 </ol>
-<h4 id="expected-results_5">Expected results</h4>
+<h4 id="expected-results_5">Expected results<a class="headerlink" href="#expected-results_5" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
 <li>Wallet processes the Request Object.</li>
 <li>Wallet processes the request without signature validation in accordance with its configured profile; presentation flow proceeds.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_sm_rpintegrity_004">WS_RP_SM_RpIntegrity_004</h3>
-<h4 id="objective_6">Objective</h4>
+<h3 id="ws_rp_sm_rpintegrity_004">WS_RP_SM_RpIntegrity_004<a class="headerlink" href="#ws_rp_sm_rpintegrity_004" title="Link to this section">&para;</a></h3>
+<h4 id="objective_6">Objective<a class="headerlink" href="#objective_6" title="Link to this section">&para;</a></h4>
 <p>Verify that when the Wallet is configured to validate signatures on Request Objects received via the DC API and receives a Request Object with a valid signature, it successfully validates the signature and processes the request.</p>
-<h4 id="references_6">References</h4>
+<h4 id="references_6">References<a class="headerlink" href="#references_6" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[OpenID4VP] Section 5.9.3</li>
 </ul>
-<h4 id="profile-applicability_6">Profile applicability</h4>
+<h4 id="profile-applicability_6">Profile applicability<a class="headerlink" href="#profile-applicability_6" title="Link to this section">&para;</a></h4>
 <p>DC API</p>
-<h4 id="eudi-wallet-relevancy_6">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_6">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_6" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_6">Preconditions</h4>
+<h4 id="preconditions_6">Preconditions<a class="headerlink" href="#preconditions_6" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_6">Test Scenario</h4>
+<h4 id="test-scenario_6">Test Scenario<a class="headerlink" href="#test-scenario_6" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Engage wallet-verifier interaction via the DC API.</li>
 <li>Wallet receives a Request Object via the DC API carrying a valid signature.</li>
@@ -1392,7 +1454,7 @@ c. only discontinues the transaction.</li>
 <li>Wallet validates the signature according to its configured profile and trust anchors.</li>
 <li>Wallet proceeds with request processing.</li>
 </ol>
-<h4 id="expected-results_6">Expected results</h4>
+<h4 id="expected-results_6">Expected results<a class="headerlink" href="#expected-results_6" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Wallet-verifier interaction via the DC API is successfully initiated.</li>
 <li>Wallet successfully receives the Request Object.</li>
@@ -1401,27 +1463,27 @@ c. only discontinues the transaction.</li>
 <li>Wallet processes the request and the presentation flow proceeds normally.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_sm_rpintegrity_005">WS_RP_SM_RpIntegrity_005</h3>
-<h4 id="objective_7">Objective</h4>
+<h3 id="ws_rp_sm_rpintegrity_005">WS_RP_SM_RpIntegrity_005<a class="headerlink" href="#ws_rp_sm_rpintegrity_005" title="Link to this section">&para;</a></h3>
+<h4 id="objective_7">Objective<a class="headerlink" href="#objective_7" title="Link to this section">&para;</a></h4>
 <p>Verify that when the Wallet is configured to validate signatures on Request Objects received via the DC API and receives a Request Object with an invalid signature, it rejects the request.</p>
-<h4 id="references_7">References</h4>
+<h4 id="references_7">References<a class="headerlink" href="#references_7" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[OpenID4VP] Section 5.9.3</li>
 </ul>
-<h4 id="profile-applicability_7">Profile applicability</h4>
+<h4 id="profile-applicability_7">Profile applicability<a class="headerlink" href="#profile-applicability_7" title="Link to this section">&para;</a></h4>
 <p>DC API</p>
-<h4 id="eudi-wallet-relevancy_7">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_7">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_7" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_7">Preconditions</h4>
+<h4 id="preconditions_7">Preconditions<a class="headerlink" href="#preconditions_7" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_7">Test Scenario</h4>
+<h4 id="test-scenario_7">Test Scenario<a class="headerlink" href="#test-scenario_7" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Engage wallet-verifier interaction via the DC API.</li>
 <li>Wallet receives a Request Object via the DC API carrying an invalid signature.</li>
 <li>Wallet parses the Request Object.</li>
 <li>Wallet attempts to validate the signature.</li>
 </ol>
-<h4 id="expected-results_7">Expected results</h4>
+<h4 id="expected-results_7">Expected results<a class="headerlink" href="#expected-results_7" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Wallet-verifier interaction via the DC API is successfully initiated.</li>
 <li>Wallet successfully receives the Request Object.</li>
@@ -1429,20 +1491,20 @@ c. only discontinues the transaction.</li>
 <li>Wallet rejects the Authorization Request due to signature validation failure; presentation flow is not initiated.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_sm_rpintegrity_006">WS_RP_SM_RpIntegrity_006</h3>
-<h4 id="objective_8">Objective</h4>
+<h3 id="ws_rp_sm_rpintegrity_006">WS_RP_SM_RpIntegrity_006<a class="headerlink" href="#ws_rp_sm_rpintegrity_006" title="Link to this section">&para;</a></h3>
+<h4 id="objective_8">Objective<a class="headerlink" href="#objective_8" title="Link to this section">&para;</a></h4>
 <p>Verify that when the Wallet receives a Request Object signed using the decentralized_identifier Client Identifier Prefix where the signing key is identified by the kid JOSE header and is present in the verificationMethod of the resolved DID Document, the Wallet successfully verifies the signature.</p>
-<h4 id="references_8">References</h4>
+<h4 id="references_8">References<a class="headerlink" href="#references_8" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[OpenID4VP] Section 5.9.3</li>
 </ul>
-<h4 id="profile-applicability_8">Profile applicability</h4>
+<h4 id="profile-applicability_8">Profile applicability<a class="headerlink" href="#profile-applicability_8" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="eudi-wallet-relevancy_8">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_8">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_8" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_8">Preconditions</h4>
+<h4 id="preconditions_8">Preconditions<a class="headerlink" href="#preconditions_8" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_8">Test Scenario</h4>
+<h4 id="test-scenario_8">Test Scenario<a class="headerlink" href="#test-scenario_8" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
 <li>Wallet receives a Request Object signed with the DID's private key and using the decentralized_identifier: Client Identifier Prefix; the kid header identifies the signing key.</li>
@@ -1450,7 +1512,7 @@ c. only discontinues the transaction.</li>
 <li>Wallet resolves the DID Document for the Verifier and locates the public key identified by kid in verificationMethod.</li>
 <li>Wallet verifies the Request Object signature using that public key.</li>
 </ol>
-<h4 id="expected-results_8">Expected results</h4>
+<h4 id="expected-results_8">Expected results<a class="headerlink" href="#expected-results_8" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
 <li>Wallet successfully receives the Request Object.</li>
@@ -1459,20 +1521,20 @@ c. only discontinues the transaction.</li>
 <li>Wallet successfully verifies the signature using the public key from the DID Document verificationMethod; request is processed.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_sm_rpintegrity_007">WS_RP_SM_RpIntegrity_007</h3>
-<h4 id="objective_9">Objective</h4>
+<h3 id="ws_rp_sm_rpintegrity_007">WS_RP_SM_RpIntegrity_007<a class="headerlink" href="#ws_rp_sm_rpintegrity_007" title="Link to this section">&para;</a></h3>
+<h4 id="objective_9">Objective<a class="headerlink" href="#objective_9" title="Link to this section">&para;</a></h4>
 <p>Verify that when the Wallet receives a Request Object using the decentralized_identifier Client Identifier Prefix where the signing key is NOT listed in the verificationMethod of the resolved DID Document, the Wallet rejects the request.</p>
-<h4 id="references_9">References</h4>
+<h4 id="references_9">References<a class="headerlink" href="#references_9" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[OpenID4VP] Section 5.9.3</li>
 </ul>
-<h4 id="profile-applicability_9">Profile applicability</h4>
+<h4 id="profile-applicability_9">Profile applicability<a class="headerlink" href="#profile-applicability_9" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="eudi-wallet-relevancy_9">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_9">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_9" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_9">Preconditions</h4>
+<h4 id="preconditions_9">Preconditions<a class="headerlink" href="#preconditions_9" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_9">Test Scenario</h4>
+<h4 id="test-scenario_9">Test Scenario<a class="headerlink" href="#test-scenario_9" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
 <li>Wallet receives a Request Object using decentralized_identifier: prefix where the signing key is NOT listed in the resolved DID Document verificationMethod.</li>
@@ -1480,7 +1542,7 @@ c. only discontinues the transaction.</li>
 <li>Wallet resolves the DID Document and attempts to locate the signing key.</li>
 <li>Wallet attempts signature verification.</li>
 </ol>
-<h4 id="expected-results_9">Expected results</h4>
+<h4 id="expected-results_9">Expected results<a class="headerlink" href="#expected-results_9" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
 <li>Wallet successfully receives the Request Object.</li>
@@ -1489,20 +1551,20 @@ c. only discontinues the transaction.</li>
 <li>Wallet rejects the Request Object and returns an invalid_request error due to signature verification failure; presentation flow is not initiated.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_sm_rpintegrity_008">WS_RP_SM_RpIntegrity_008</h3>
-<h4 id="objective_10">Objective</h4>
+<h3 id="ws_rp_sm_rpintegrity_008">WS_RP_SM_RpIntegrity_008<a class="headerlink" href="#ws_rp_sm_rpintegrity_008" title="Link to this section">&para;</a></h3>
+<h4 id="objective_10">Objective<a class="headerlink" href="#objective_10" title="Link to this section">&para;</a></h4>
 <p>Verify that the Request Object is signed with the private key corresponding to the public key in the attestation cnf claim (proof of possession).</p>
-<h4 id="references_10">References</h4>
+<h4 id="references_10">References<a class="headerlink" href="#references_10" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[OpenID4VP] Section 5.9.3</li>
 </ul>
-<h4 id="profile-applicability_10">Profile applicability</h4>
+<h4 id="profile-applicability_10">Profile applicability<a class="headerlink" href="#profile-applicability_10" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="eudi-wallet-relevancy_10">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_10">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_10" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_10">Preconditions</h4>
+<h4 id="preconditions_10">Preconditions<a class="headerlink" href="#preconditions_10" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_10">Test Scenario</h4>
+<h4 id="test-scenario_10">Test Scenario<a class="headerlink" href="#test-scenario_10" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
 <li>Wallet receives a Request Object using verifier_attestation: prefix; the attestation JWT contains a cnf claim with the Verifier's public key; the Request Object signature is made using the corresponding private key.</li>
@@ -1510,7 +1572,7 @@ c. only discontinues the transaction.</li>
 <li>Wallet extracts the public key from the cnf claim of the attestation JWT.</li>
 <li>Wallet verifies the Request Object signature using that public key.</li>
 </ol>
-<h4 id="expected-results_10">Expected results</h4>
+<h4 id="expected-results_10">Expected results<a class="headerlink" href="#expected-results_10" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
 <li>Wallet successfully receives the Request Object.</li>
@@ -1519,20 +1581,20 @@ c. only discontinues the transaction.</li>
 <li>Wallet successfully verifies proof of possession; presentation flow proceeds.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_sm_rpintegrity_009">WS_RP_SM_RpIntegrity_009</h3>
-<h4 id="objective_11">Objective</h4>
+<h3 id="ws_rp_sm_rpintegrity_009">WS_RP_SM_RpIntegrity_009<a class="headerlink" href="#ws_rp_sm_rpintegrity_009" title="Link to this section">&para;</a></h3>
+<h4 id="objective_11">Objective<a class="headerlink" href="#objective_11" title="Link to this section">&para;</a></h4>
 <p>Verify that the Request Object is signed with the private key corresponding to the public key in the attestation cnf claim (proof of possession).</p>
-<h4 id="references_11">References</h4>
+<h4 id="references_11">References<a class="headerlink" href="#references_11" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[OpenID4VP] Section 5.9.3</li>
 </ul>
-<h4 id="profile-applicability_11">Profile applicability</h4>
+<h4 id="profile-applicability_11">Profile applicability<a class="headerlink" href="#profile-applicability_11" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="eudi-wallet-relevancy_11">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_11">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_11" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_11">Preconditions</h4>
+<h4 id="preconditions_11">Preconditions<a class="headerlink" href="#preconditions_11" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_11">Test Scenario</h4>
+<h4 id="test-scenario_11">Test Scenario<a class="headerlink" href="#test-scenario_11" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
 <li>Wallet receives a Request Object using verifier_attestation: prefix where the Request Object signature is made with a key that does NOT match the cnf claim public key.</li>
@@ -1540,7 +1602,7 @@ c. only discontinues the transaction.</li>
 <li>Wallet extracts the public key from the cnf claim.</li>
 <li>Wallet attempts signature verification.</li>
 </ol>
-<h4 id="expected-results_11">Expected results</h4>
+<h4 id="expected-results_11">Expected results<a class="headerlink" href="#expected-results_11" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
 <li>Wallet successfully receives the Request Object.</li>
@@ -1549,27 +1611,27 @@ c. only discontinues the transaction.</li>
 <li>Wallet rejects the Request Object and returns an invalid_request error due to failed proof of possession; presentation flow is not initiated.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_sm_rpintegrity_010">WS_RP_SM_RpIntegrity_010</h3>
-<h4 id="objective_12">Objective</h4>
+<h3 id="ws_rp_sm_rpintegrity_010">WS_RP_SM_RpIntegrity_010<a class="headerlink" href="#ws_rp_sm_rpintegrity_010" title="Link to this section">&para;</a></h3>
+<h4 id="objective_12">Objective<a class="headerlink" href="#objective_12" title="Link to this section">&para;</a></h4>
 <p>Verify that when the Wallet receives a Request Object whose Verifier attestation JWT has a valid signature and an iss claim identifying a trusted issuer of Verifier attestations, the Wallet establishes trust and processes the request.</p>
-<h4 id="references_12">References</h4>
+<h4 id="references_12">References<a class="headerlink" href="#references_12" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[OpenID4VP] Section 5.9.3</li>
 </ul>
-<h4 id="profile-applicability_12">Profile applicability</h4>
+<h4 id="profile-applicability_12">Profile applicability<a class="headerlink" href="#profile-applicability_12" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="eudi-wallet-relevancy_12">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_12">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_12" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_12">Preconditions</h4>
+<h4 id="preconditions_12">Preconditions<a class="headerlink" href="#preconditions_12" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_12">Test Scenario</h4>
+<h4 id="test-scenario_12">Test Scenario<a class="headerlink" href="#test-scenario_12" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
 <li>Wallet receives a Request Object with a Verifier attestation JWT whose iss identifies a trusted issuer and whose signature is valid.</li>
 <li>Wallet parses the Request Object and the attestation JWT.</li>
 <li>Wallet validates the attestation JWT signature and checks the iss against its trusted issuer list.</li>
 </ol>
-<h4 id="expected-results_12">Expected results</h4>
+<h4 id="expected-results_12">Expected results<a class="headerlink" href="#expected-results_12" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
 <li>Wallet successfully receives the Request Object.</li>
@@ -1577,27 +1639,27 @@ c. only discontinues the transaction.</li>
 <li>Wallet successfully validates the signature and trust; request is processed; presentation flow proceeds.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_sm_rpintegrity_011">WS_RP_SM_RpIntegrity_011</h3>
-<h4 id="objective_13">Objective</h4>
+<h3 id="ws_rp_sm_rpintegrity_011">WS_RP_SM_RpIntegrity_011<a class="headerlink" href="#ws_rp_sm_rpintegrity_011" title="Link to this section">&para;</a></h3>
+<h4 id="objective_13">Objective<a class="headerlink" href="#objective_13" title="Link to this section">&para;</a></h4>
 <p>Verify that when the Wallet receives a Request Object whose Verifier attestation JWT has an iss claim NOT listed among the Wallet's trusted issuers, the Wallet refuses the request.</p>
-<h4 id="references_13">References</h4>
+<h4 id="references_13">References<a class="headerlink" href="#references_13" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[OpenID4VP] Section 5.9.3</li>
 </ul>
-<h4 id="profile-applicability_13">Profile applicability</h4>
+<h4 id="profile-applicability_13">Profile applicability<a class="headerlink" href="#profile-applicability_13" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="eudi-wallet-relevancy_13">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_13">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_13" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_13">Preconditions</h4>
+<h4 id="preconditions_13">Preconditions<a class="headerlink" href="#preconditions_13" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_13">Test Scenario</h4>
+<h4 id="test-scenario_13">Test Scenario<a class="headerlink" href="#test-scenario_13" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
 <li>Wallet receives a Request Object with a Verifier attestation JWT whose iss is NOT in the Wallet's trusted issuer list.</li>
 <li>Wallet parses the Request Object and the attestation JWT.</li>
 <li>Wallet checks the iss claim against its trusted issuer list.</li>
 </ol>
-<h4 id="expected-results_13">Expected results</h4>
+<h4 id="expected-results_13">Expected results<a class="headerlink" href="#expected-results_13" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
 <li>Wallet successfully receives the Request Object.</li>
@@ -1605,27 +1667,27 @@ c. only discontinues the transaction.</li>
 <li>Wallet refuses the request and returns an invalid_client error due to untrusted attestation issuer; presentation flow is not initiated.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_sm_rpintegrity_012">WS_RP_SM_RpIntegrity_012</h3>
-<h4 id="objective_14">Objective</h4>
+<h3 id="ws_rp_sm_rpintegrity_012">WS_RP_SM_RpIntegrity_012<a class="headerlink" href="#ws_rp_sm_rpintegrity_012" title="Link to this section">&para;</a></h3>
+<h4 id="objective_14">Objective<a class="headerlink" href="#objective_14" title="Link to this section">&para;</a></h4>
 <p>Verify that when the Wallet receives a Request Object whose Verifier attestation JWT signature is invalid, the Wallet refuses the request.</p>
-<h4 id="references_14">References</h4>
+<h4 id="references_14">References<a class="headerlink" href="#references_14" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[OpenID4VP] Section 5.9.3</li>
 </ul>
-<h4 id="profile-applicability_14">Profile applicability</h4>
+<h4 id="profile-applicability_14">Profile applicability<a class="headerlink" href="#profile-applicability_14" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="eudi-wallet-relevancy_14">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_14">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_14" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_14">Preconditions</h4>
+<h4 id="preconditions_14">Preconditions<a class="headerlink" href="#preconditions_14" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_14">Test Scenario</h4>
+<h4 id="test-scenario_14">Test Scenario<a class="headerlink" href="#test-scenario_14" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
 <li>Wallet receives a Request Object with a Verifier attestation JWT whose signature is invalid.</li>
 <li>Wallet parses the Request Object and the attestation JWT.</li>
 <li>Wallet attempts to validate the attestation JWT signature.</li>
 </ol>
-<h4 id="expected-results_14">Expected results</h4>
+<h4 id="expected-results_14">Expected results<a class="headerlink" href="#expected-results_14" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
 <li>Wallet successfully receives the Request Object.</li>
@@ -1633,23 +1695,23 @@ c. only discontinues the transaction.</li>
 <li>Wallet refuses the request and returns an invalid_client error due to invalid attestation JWT signature; presentation flow is not initiated.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_sm_rpintegrity_013">WS_RP_SM_RpIntegrity_013</h3>
-<h4 id="objective_15">Objective</h4>
+<h3 id="ws_rp_sm_rpintegrity_013">WS_RP_SM_RpIntegrity_013<a class="headerlink" href="#ws_rp_sm_rpintegrity_013" title="Link to this section">&para;</a></h3>
+<h4 id="objective_15">Objective<a class="headerlink" href="#objective_15" title="Link to this section">&para;</a></h4>
 <p>Verify that when the Wallet receives a Request Object using an X.509-based Client Identifier Prefix (x509_san_dns or x509_hash) signed with the private key corresponding to the public key in the leaf certificate of the x5c JOSE header chain, the Wallet successfully verifies the signature.</p>
-<h4 id="references_15">References</h4>
+<h4 id="references_15">References<a class="headerlink" href="#references_15" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[OpenID4VP] Section 5.9.3</li>
 <li>[RFC7515]</li>
 </ul>
-<h4 id="profile-applicability_15">Profile applicability</h4>
+<h4 id="profile-applicability_15">Profile applicability<a class="headerlink" href="#profile-applicability_15" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="eudi-wallet-relevancy_15">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_15">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_15" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_15">Preconditions</h4>
-<ol class="precond-alpha">
+<h4 id="preconditions_15">Preconditions<a class="headerlink" href="#preconditions_15" title="Link to this section">&para;</a></h4>
+<ol>
 <li>X.509 certificate is configured</li>
 </ol>
-<h4 id="test-scenario_15">Test Scenario</h4>
+<h4 id="test-scenario_15">Test Scenario<a class="headerlink" href="#test-scenario_15" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
 <li>Wallet receives a signed Request Object using an X.509-based prefix where the signature is made with the leaf certificate's private key and x5c contains the certificate chain.</li>
@@ -1657,7 +1719,7 @@ c. only discontinues the transaction.</li>
 <li>Wallet extracts the leaf certificate's public key from x5c.</li>
 <li>Wallet verifies the Request Object signature using the leaf certificate public key.</li>
 </ol>
-<h4 id="expected-results_15">Expected results</h4>
+<h4 id="expected-results_15">Expected results<a class="headerlink" href="#expected-results_15" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
 <li>Wallet successfully receives the Request Object.</li>
@@ -1666,30 +1728,30 @@ c. only discontinues the transaction.</li>
 <li>Wallet successfully verifies the signature; request is accepted; presentation flow proceeds.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_sm_rpintegrity_014">WS_RP_SM_RpIntegrity_014</h3>
-<h4 id="objective_16">Objective</h4>
+<h3 id="ws_rp_sm_rpintegrity_014">WS_RP_SM_RpIntegrity_014<a class="headerlink" href="#ws_rp_sm_rpintegrity_014" title="Link to this section">&para;</a></h3>
+<h4 id="objective_16">Objective<a class="headerlink" href="#objective_16" title="Link to this section">&para;</a></h4>
 <p>Verify that when the Wallet receives a Request Object using an X.509-based Client Identifier Prefix where the x5c JOSE header is missing, the Wallet rejects the request.</p>
-<h4 id="references_16">References</h4>
+<h4 id="references_16">References<a class="headerlink" href="#references_16" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[OpenID4VP] Section 5.9.3</li>
 <li>[RFC7515]</li>
 </ul>
-<h4 id="profile-applicability_16">Profile applicability</h4>
+<h4 id="profile-applicability_16">Profile applicability<a class="headerlink" href="#profile-applicability_16" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="eudi-wallet-relevancy_16">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_16">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_16" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_16">Preconditions</h4>
-<ol class="precond-alpha">
+<h4 id="preconditions_16">Preconditions<a class="headerlink" href="#preconditions_16" title="Link to this section">&para;</a></h4>
+<ol>
 <li>X.509 certificate is configured</li>
 </ol>
-<h4 id="test-scenario_16">Test Scenario</h4>
+<h4 id="test-scenario_16">Test Scenario<a class="headerlink" href="#test-scenario_16" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
 <li>Wallet receives a signed Request Object using an X.509-based prefix where the x5c JOSE header is missing.</li>
 <li>Wallet parses the Request Object JOSE header.</li>
 <li>Wallet attempts to extract the leaf certificate public key for signature verification.</li>
 </ol>
-<h4 id="expected-results_16">Expected results</h4>
+<h4 id="expected-results_16">Expected results<a class="headerlink" href="#expected-results_16" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
 <li>Wallet successfully receives the Request Object.</li>
@@ -1697,30 +1759,30 @@ c. only discontinues the transaction.</li>
 <li>Wallet rejects the Request Object and returns an invalid_request error due to missing x5c header; presentation flow is not initiated.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_sm_rpintegrity_015">WS_RP_SM_RpIntegrity_015</h3>
-<h4 id="objective_17">Objective</h4>
+<h3 id="ws_rp_sm_rpintegrity_015">WS_RP_SM_RpIntegrity_015<a class="headerlink" href="#ws_rp_sm_rpintegrity_015" title="Link to this section">&para;</a></h3>
+<h4 id="objective_17">Objective<a class="headerlink" href="#objective_17" title="Link to this section">&para;</a></h4>
 <p>Verify that when the Wallet receives a Request Object using an X.509-based Client Identifier Prefix where the signature key does NOT correspond to the leaf certificate in x5c, the Wallet rejects the request.</p>
-<h4 id="references_17">References</h4>
+<h4 id="references_17">References<a class="headerlink" href="#references_17" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[OpenID4VP] Section 5.9.3</li>
 <li>[RFC7515]</li>
 </ul>
-<h4 id="profile-applicability_17">Profile applicability</h4>
+<h4 id="profile-applicability_17">Profile applicability<a class="headerlink" href="#profile-applicability_17" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="eudi-wallet-relevancy_17">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_17">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_17" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_17">Preconditions</h4>
-<ol class="precond-alpha">
+<h4 id="preconditions_17">Preconditions<a class="headerlink" href="#preconditions_17" title="Link to this section">&para;</a></h4>
+<ol>
 <li>X.509 certificate is configured</li>
 </ol>
-<h4 id="test-scenario_17">Test Scenario</h4>
+<h4 id="test-scenario_17">Test Scenario<a class="headerlink" href="#test-scenario_17" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
 <li>Wallet receives a signed Request Object using an X.509-based prefix where the signature key does NOT correspond to the leaf certificate in x5c.</li>
 <li>Wallet parses the Request Object and x5c.</li>
 <li>Wallet attempts signature verification using the leaf certificate public key.</li>
 </ol>
-<h4 id="expected-results_17">Expected results</h4>
+<h4 id="expected-results_17">Expected results<a class="headerlink" href="#expected-results_17" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
 <li>Wallet successfully receives the Request Object.</li>
@@ -1728,20 +1790,20 @@ c. only discontinues the transaction.</li>
 <li>Wallet rejects the Request Object and returns an invalid_request error due to signature verification failure; presentation flow is not initiated.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_sm_rpintegrity_016">WS_RP_SM_RpIntegrity_016</h3>
-<h4 id="objective_18">Objective</h4>
+<h3 id="ws_rp_sm_rpintegrity_016">WS_RP_SM_RpIntegrity_016<a class="headerlink" href="#ws_rp_sm_rpintegrity_016" title="Link to this section">&para;</a></h3>
+<h4 id="objective_18">Objective<a class="headerlink" href="#objective_18" title="Link to this section">&para;</a></h4>
 <p>Verify that when the Wallet receives a Request Object using an X.509-based Client Identifier Prefix with a valid signature and a complete X.509 trust chain leading to a trusted root, the Wallet validates both the signature and the chain.</p>
-<h4 id="references_18">References</h4>
+<h4 id="references_18">References<a class="headerlink" href="#references_18" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[OpenID4VP] Section 5.9.3</li>
 </ul>
-<h4 id="profile-applicability_18">Profile applicability</h4>
+<h4 id="profile-applicability_18">Profile applicability<a class="headerlink" href="#profile-applicability_18" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="eudi-wallet-relevancy_18">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_18">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_18" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_18">Preconditions</h4>
+<h4 id="preconditions_18">Preconditions<a class="headerlink" href="#preconditions_18" title="Link to this section">&para;</a></h4>
 <p>x5c JOSE header contains the full certificate chain.</p>
-<h4 id="test-scenario_18">Test Scenario</h4>
+<h4 id="test-scenario_18">Test Scenario<a class="headerlink" href="#test-scenario_18" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
 <li>Wallet receives a Request Object using an X.509-based prefix where the x5c chain is complete and leads to a trusted root, and the signature is valid.</li>
@@ -1749,7 +1811,7 @@ c. only discontinues the transaction.</li>
 <li>Wallet validates the X.509 trust chain.</li>
 <li>Wallet validates the Request Object signature using the leaf certificate.</li>
 </ol>
-<h4 id="expected-results_18">Expected results</h4>
+<h4 id="expected-results_18">Expected results<a class="headerlink" href="#expected-results_18" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
 <li>Wallet successfully receives the Request Object.</li>
@@ -1758,27 +1820,27 @@ c. only discontinues the transaction.</li>
 <li>Wallet successfully validates the signature; request is processed; presentation flow proceeds.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_sm_rpintegrity_017">WS_RP_SM_RpIntegrity_017</h3>
-<h4 id="objective_19">Objective</h4>
+<h3 id="ws_rp_sm_rpintegrity_017">WS_RP_SM_RpIntegrity_017<a class="headerlink" href="#ws_rp_sm_rpintegrity_017" title="Link to this section">&para;</a></h3>
+<h4 id="objective_19">Objective<a class="headerlink" href="#objective_19" title="Link to this section">&para;</a></h4>
 <p>Verify that when the Wallet receives a Request Object using an X.509-based Client Identifier Prefix where the X.509 trust chain is incomplete or leads to an untrusted root, the Wallet rejects the request.</p>
-<h4 id="references_19">References</h4>
+<h4 id="references_19">References<a class="headerlink" href="#references_19" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[OpenID4VP] Section 5.9.3</li>
 </ul>
-<h4 id="profile-applicability_19">Profile applicability</h4>
+<h4 id="profile-applicability_19">Profile applicability<a class="headerlink" href="#profile-applicability_19" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="eudi-wallet-relevancy_19">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_19">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_19" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_19">Preconditions</h4>
+<h4 id="preconditions_19">Preconditions<a class="headerlink" href="#preconditions_19" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_19">Test Scenario</h4>
+<h4 id="test-scenario_19">Test Scenario<a class="headerlink" href="#test-scenario_19" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
 <li>Wallet receives a Request Object using an X.509-based prefix where the x5c chain is incomplete or leads to an untrusted root.</li>
 <li>Wallet parses the Request Object and x5c.</li>
 <li>Wallet attempts to validate the X.509 trust chain.</li>
 </ol>
-<h4 id="expected-results_19">Expected results</h4>
+<h4 id="expected-results_19">Expected results<a class="headerlink" href="#expected-results_19" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
 <li>Wallet successfully receives the Request Object.</li>
@@ -1786,20 +1848,20 @@ c. only discontinues the transaction.</li>
 <li>Wallet rejects the Request Object and returns an invalid_request error due to failed trust chain validation; presentation flow is not initiated.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_sm_rpintegrity_018">WS_RP_SM_RpIntegrity_018</h3>
-<h4 id="objective_20">Objective</h4>
+<h3 id="ws_rp_sm_rpintegrity_018">WS_RP_SM_RpIntegrity_018<a class="headerlink" href="#ws_rp_sm_rpintegrity_018" title="Link to this section">&para;</a></h3>
+<h4 id="objective_20">Objective<a class="headerlink" href="#objective_20" title="Link to this section">&para;</a></h4>
 <p>Verify that when the Wallet receives a Request Object using the x509_hash Client Identifier Prefix with a valid signature and a complete X.509 trust chain leading to a trusted root, the Wallet validates both the signature and the chain.</p>
-<h4 id="references_20">References</h4>
+<h4 id="references_20">References<a class="headerlink" href="#references_20" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[OpenID4VP] Section 5.9.3</li>
 </ul>
-<h4 id="profile-applicability_20">Profile applicability</h4>
+<h4 id="profile-applicability_20">Profile applicability<a class="headerlink" href="#profile-applicability_20" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="eudi-wallet-relevancy_20">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_20">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_20" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_20">Preconditions</h4>
+<h4 id="preconditions_20">Preconditions<a class="headerlink" href="#preconditions_20" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_20">Test Scenario</h4>
+<h4 id="test-scenario_20">Test Scenario<a class="headerlink" href="#test-scenario_20" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
 <li>Wallet receives a Request Object using x509_hash: prefix where the signature is valid and the certificate chain in x5c is complete and leads to a trusted root.</li>
@@ -1807,7 +1869,7 @@ c. only discontinues the transaction.</li>
 <li>Wallet validates the X.509 trust chain.</li>
 <li>Wallet validates the Request Object signature.</li>
 </ol>
-<h4 id="expected-results_20">Expected results</h4>
+<h4 id="expected-results_20">Expected results<a class="headerlink" href="#expected-results_20" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
 <li>Wallet successfully receives the Request Object.</li>
@@ -1816,27 +1878,27 @@ c. only discontinues the transaction.</li>
 <li>Wallet successfully validates the signature; request is accepted; presentation flow proceeds.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_sm_rpintegrity_019">WS_RP_SM_RpIntegrity_019</h3>
-<h4 id="objective_21">Objective</h4>
+<h3 id="ws_rp_sm_rpintegrity_019">WS_RP_SM_RpIntegrity_019<a class="headerlink" href="#ws_rp_sm_rpintegrity_019" title="Link to this section">&para;</a></h3>
+<h4 id="objective_21">Objective<a class="headerlink" href="#objective_21" title="Link to this section">&para;</a></h4>
 <p>Verify that when the Wallet receives a Request Object using the x509_hash Client Identifier Prefix where the X.509 trust chain is broken or leads to an untrusted root, the Wallet rejects the request.</p>
-<h4 id="references_21">References</h4>
+<h4 id="references_21">References<a class="headerlink" href="#references_21" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[OpenID4VP] Section 5.9.3</li>
 </ul>
-<h4 id="profile-applicability_21">Profile applicability</h4>
+<h4 id="profile-applicability_21">Profile applicability<a class="headerlink" href="#profile-applicability_21" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="eudi-wallet-relevancy_21">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_21">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_21" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_21">Preconditions</h4>
+<h4 id="preconditions_21">Preconditions<a class="headerlink" href="#preconditions_21" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_21">Test Scenario</h4>
+<h4 id="test-scenario_21">Test Scenario<a class="headerlink" href="#test-scenario_21" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
 <li>Wallet receives a Request Object using x509_hash: prefix where the certificate chain in x5c is broken or leads to an untrusted root.</li>
 <li>Wallet parses the Request Object and x5c.</li>
 <li>Wallet attempts to validate the X.509 trust chain.</li>
 </ol>
-<h4 id="expected-results_21">Expected results</h4>
+<h4 id="expected-results_21">Expected results<a class="headerlink" href="#expected-results_21" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
 <li>Wallet successfully receives the Request Object.</li>
@@ -1844,20 +1906,20 @@ c. only discontinues the transaction.</li>
 <li>Wallet rejects the Request Object and returns an invalid_request error due to failed trust chain validation; presentation flow is not initiated.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_sm_rpintegrity_020">WS_RP_SM_RpIntegrity_020</h3>
-<h4 id="objective_22">Objective</h4>
+<h3 id="ws_rp_sm_rpintegrity_020">WS_RP_SM_RpIntegrity_020<a class="headerlink" href="#ws_rp_sm_rpintegrity_020" title="Link to this section">&para;</a></h3>
+<h4 id="objective_22">Objective<a class="headerlink" href="#objective_22" title="Link to this section">&para;</a></h4>
 <p>Verify that when the Wallet receives a Request Object using the x509_hash Client Identifier Prefix with valid signature and trust chain, and all non-key Verifier metadata is provided within the client_metadata parameter, the Wallet uses client_metadata as the source of all non-key metadata.</p>
-<h4 id="references_22">References</h4>
+<h4 id="references_22">References<a class="headerlink" href="#references_22" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[OpenID4VP] Section 5.9.3</li>
 </ul>
-<h4 id="profile-applicability_22">Profile applicability</h4>
+<h4 id="profile-applicability_22">Profile applicability<a class="headerlink" href="#profile-applicability_22" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="eudi-wallet-relevancy_22">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_22">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_22" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_22">Preconditions</h4>
+<h4 id="preconditions_22">Preconditions<a class="headerlink" href="#preconditions_22" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_22">Test Scenario</h4>
+<h4 id="test-scenario_22">Test Scenario<a class="headerlink" href="#test-scenario_22" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
 <li>Wallet receives a Request Object using x509_hash: prefix where signature is valid, trust chain leads to a trusted root, and all non-key Verifier metadata is in client_metadata.</li>
@@ -1865,7 +1927,7 @@ c. only discontinues the transaction.</li>
 <li>Wallet validates signature and trust chain.</li>
 <li>Wallet extracts non-key Verifier metadata from client_metadata.</li>
 </ol>
-<h4 id="expected-results_22">Expected results</h4>
+<h4 id="expected-results_22">Expected results<a class="headerlink" href="#expected-results_22" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
 <li>Wallet successfully receives the Request Object.</li>
@@ -1874,27 +1936,27 @@ c. only discontinues the transaction.</li>
 <li>Wallet obtains all non-key Verifier metadata from client_metadata; request is accepted; presentation flow proceeds.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_sm_rpintegrity_021">WS_RP_SM_RpIntegrity_021</h3>
-<h4 id="objective_23">Objective</h4>
+<h3 id="ws_rp_sm_rpintegrity_021">WS_RP_SM_RpIntegrity_021<a class="headerlink" href="#ws_rp_sm_rpintegrity_021" title="Link to this section">&para;</a></h3>
+<h4 id="objective_23">Objective<a class="headerlink" href="#objective_23" title="Link to this section">&para;</a></h4>
 <p>Verify that when the Wallet receives a Request Object using the x509_hash Client Identifier Prefix where non-key Verifier metadata is provided outside the client_metadata parameter, the Wallet ignores such metadata and processes only what is contained within client_metadata.</p>
-<h4 id="references_23">References</h4>
+<h4 id="references_23">References<a class="headerlink" href="#references_23" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[OpenID4VP] Section 5.9.3</li>
 </ul>
-<h4 id="profile-applicability_23">Profile applicability</h4>
+<h4 id="profile-applicability_23">Profile applicability<a class="headerlink" href="#profile-applicability_23" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="eudi-wallet-relevancy_23">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_23">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_23" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_23">Preconditions</h4>
+<h4 id="preconditions_23">Preconditions<a class="headerlink" href="#preconditions_23" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_23">Test Scenario</h4>
+<h4 id="test-scenario_23">Test Scenario<a class="headerlink" href="#test-scenario_23" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
 <li>Wallet receives a Request Object using x509_hash: prefix where some non-key Verifier metadata is provided outside the client_metadata parameter.</li>
 <li>Wallet parses the Request Object.</li>
 <li>Wallet extracts Verifier metadata from the Request Object.</li>
 </ol>
-<h4 id="expected-results_23">Expected results</h4>
+<h4 id="expected-results_23">Expected results<a class="headerlink" href="#expected-results_23" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
 <li>Wallet successfully receives the Request Object.</li>
@@ -1902,20 +1964,20 @@ c. only discontinues the transaction.</li>
 <li>Wallet ignores non-key Verifier metadata provided outside client_metadata and processes only the metadata within client_metadata; presentation flow proceeds.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_sm_rpintegrity_022">WS_RP_SM_RpIntegrity_022</h3>
-<h4 id="objective_24">Objective</h4>
+<h3 id="ws_rp_sm_rpintegrity_022">WS_RP_SM_RpIntegrity_022<a class="headerlink" href="#ws_rp_sm_rpintegrity_022" title="Link to this section">&para;</a></h3>
+<h4 id="objective_24">Objective<a class="headerlink" href="#objective_24" title="Link to this section">&para;</a></h4>
 <p>Verify that when the Wallet receives a Request Object via the DC API where the audience is the origin value prefixed by origin:, all non-key Verifier metadata is taken from client_metadata, and the Wallet processes the request within the DC API context.</p>
-<h4 id="references_24">References</h4>
+<h4 id="references_24">References<a class="headerlink" href="#references_24" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[OpenID4VP] Section 5.9.3, Appendix A.2</li>
 </ul>
-<h4 id="profile-applicability_24">Profile applicability</h4>
+<h4 id="profile-applicability_24">Profile applicability<a class="headerlink" href="#profile-applicability_24" title="Link to this section">&para;</a></h4>
 <p>DC API</p>
-<h4 id="eudi-wallet-relevancy_24">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_24">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_24" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_24">Preconditions</h4>
+<h4 id="preconditions_24">Preconditions<a class="headerlink" href="#preconditions_24" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_24">Test Scenario</h4>
+<h4 id="test-scenario_24">Test Scenario<a class="headerlink" href="#test-scenario_24" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
 <li>Wallet receives a Request Object via DC API where audience uses the origin: prefix and all non-key Verifier metadata is in client_metadata.</li>
@@ -1923,7 +1985,7 @@ c. only discontinues the transaction.</li>
 <li>Wallet processes the audience as <code>origin:&lt;origin&gt;</code> per DC API rules.</li>
 <li>Wallet uses client_metadata for non-key Verifier metadata.</li>
 </ol>
-<h4 id="expected-results_24">Expected results</h4>
+<h4 id="expected-results_24">Expected results<a class="headerlink" href="#expected-results_24" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Wallet-verifier interaction via the DC API is successfully initiated.</li>
 <li>Wallet successfully receives the Request Object.</li>
@@ -1932,21 +1994,21 @@ c. only discontinues the transaction.</li>
 <li>Wallet uses client_metadata for all non-key Verifier metadata; presentation flow proceeds within the DC API context.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_sm_rpintegrity_023">WS_RP_SM_RpIntegrity_023</h3>
-<h4 id="objective_25">Objective</h4>
+<h3 id="ws_rp_sm_rpintegrity_023">WS_RP_SM_RpIntegrity_023<a class="headerlink" href="#ws_rp_sm_rpintegrity_023" title="Link to this section">&para;</a></h3>
+<h4 id="objective_25">Objective<a class="headerlink" href="#objective_25" title="Link to this section">&para;</a></h4>
 <p>Verify that, for signed requests, Wallet accepts Client Identifier Prefix <code>x509_hash</code> as defined in section 5.9.3 of [OIDF.OID4VP].</p>
-<h4 id="references_25">References</h4>
+<h4 id="references_25">References<a class="headerlink" href="#references_25" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[HAIP] Section 5 (introduction)</li>
 <li>[OpenID4VP] Section 5.9.3</li>
 </ul>
-<h4 id="profile-applicability_25">Profile applicability</h4>
+<h4 id="profile-applicability_25">Profile applicability<a class="headerlink" href="#profile-applicability_25" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="eudi-wallet-relevancy_25">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_25">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_25" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_25">Preconditions</h4>
+<h4 id="preconditions_25">Preconditions<a class="headerlink" href="#preconditions_25" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_25">Test Scenario</h4>
+<h4 id="test-scenario_25">Test Scenario<a class="headerlink" href="#test-scenario_25" title="Link to this section">&para;</a></h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request. </li>
 <li>Verifier sends signed presentation request.</li>
@@ -1955,7 +2017,7 @@ c. only discontinues the transaction.</li>
 <li>User gives consent.</li>
 <li>Verify if Wallet presents Credential successfully. </li>
 </ol>
-<h4 id="expected-results_25">Expected results</h4>
+<h4 id="expected-results_25">Expected results<a class="headerlink" href="#expected-results_25" title="Link to this section">&para;</a></h4>
 <ol>
 <li>This is the case.  </li>
 <li>This is the case.</li>
@@ -1965,28 +2027,28 @@ c. only discontinues the transaction.</li>
 <li>Wallet presents Credential successfully. </li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_sm_rpintegrity_024">WS_RP_SM_RpIntegrity_024</h3>
-<h4 id="objective_26">Objective</h4>
+<h3 id="ws_rp_sm_rpintegrity_024">WS_RP_SM_RpIntegrity_024<a class="headerlink" href="#ws_rp_sm_rpintegrity_024" title="Link to this section">&para;</a></h3>
+<h4 id="objective_26">Objective<a class="headerlink" href="#objective_26" title="Link to this section">&para;</a></h4>
 <p>Verify that, for signed requests, if Verifier does not use Client Identifier Prefix <code>x509_hash</code>, the Wallet responds with an error (detailed or not) or discontinues the transaction.</p>
-<h4 id="references_26">References</h4>
+<h4 id="references_26">References<a class="headerlink" href="#references_26" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[HAIP] Section 5 (introduction)</li>
 <li>[OpenID4VP] Section 5.9.3</li>
 </ul>
-<h4 id="profile-applicability_26">Profile applicability</h4>
+<h4 id="profile-applicability_26">Profile applicability<a class="headerlink" href="#profile-applicability_26" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="eudi-wallet-relevancy_26">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_26">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_26" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_26">Preconditions</h4>
+<h4 id="preconditions_26">Preconditions<a class="headerlink" href="#preconditions_26" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_26">Test Scenario</h4>
+<h4 id="test-scenario_26">Test Scenario<a class="headerlink" href="#test-scenario_26" title="Link to this section">&para;</a></h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request. </li>
 <li>Verifier sends a signed presentation request.</li>
 <li>Verifier does not use Client Prefix "x509_hash".</li>
 <li>Wallet processes the request.</li>
 </ol>
-<h4 id="expected-results_26">Expected results</h4>
+<h4 id="expected-results_26">Expected results<a class="headerlink" href="#expected-results_26" title="Link to this section">&para;</a></h4>
 <ol>
 <li>This is the case.</li>
 <li>This is the case.</li>
@@ -1996,27 +2058,27 @@ b. answers with an error without providing details or,
 c. discontinues the interaction.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_sm_rpintegrity_025">WS_RP_SM_RpIntegrity_025</h3>
-<h4 id="objective_27">Objective</h4>
+<h3 id="ws_rp_sm_rpintegrity_025">WS_RP_SM_RpIntegrity_025<a class="headerlink" href="#ws_rp_sm_rpintegrity_025" title="Link to this section">&para;</a></h3>
+<h4 id="objective_27">Objective<a class="headerlink" href="#objective_27" title="Link to this section">&para;</a></h4>
 <p>Verify that if X.509 certificate of the trust anchor is included in the <code>x5c</code> JOSE header of the signed request, the Wallet responds with an error (detailed or not) or discontinues the transaction.</p>
-<h4 id="references_27">References</h4>
+<h4 id="references_27">References<a class="headerlink" href="#references_27" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[HAIP] Section 5 (introduction)</li>
 </ul>
-<h4 id="profile-applicability_27">Profile applicability</h4>
+<h4 id="profile-applicability_27">Profile applicability<a class="headerlink" href="#profile-applicability_27" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="eudi-wallet-relevancy_27">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_27">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_27" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_27">Preconditions</h4>
+<h4 id="preconditions_27">Preconditions<a class="headerlink" href="#preconditions_27" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_27">Test Scenario</h4>
+<h4 id="test-scenario_27">Test Scenario<a class="headerlink" href="#test-scenario_27" title="Link to this section">&para;</a></h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
 <li>Verifier sends signed presentation request.</li>
 <li>Verifier includes X.509 certificate of the trust anchor in the <code>x5c</code> JOSE header of the signed request.</li>
 <li>Wallet processes the request.</li>
 </ol>
-<h4 id="expected-results_27">Expected results</h4>
+<h4 id="expected-results_27">Expected results<a class="headerlink" href="#expected-results_27" title="Link to this section">&para;</a></h4>
 <ol>
 <li>This is the case.</li>
 <li>This is the case.</li>
@@ -2027,27 +2089,27 @@ b. answers with an error without providing details or,
 c. discontinues the interaction.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_sm_rpintegrity_026">WS_RP_SM_RpIntegrity_026</h3>
-<h4 id="objective_28">Objective</h4>
+<h3 id="ws_rp_sm_rpintegrity_026">WS_RP_SM_RpIntegrity_026<a class="headerlink" href="#ws_rp_sm_rpintegrity_026" title="Link to this section">&para;</a></h3>
+<h4 id="objective_28">Objective<a class="headerlink" href="#objective_28" title="Link to this section">&para;</a></h4>
 <p>Verify that if X.509 certificate signing the request is self-signed, the Wallet responds with an error (detailed or not) or discontinues the transaction.</p>
-<h4 id="references_28">References</h4>
+<h4 id="references_28">References<a class="headerlink" href="#references_28" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[HAIP] Section 5 (introduction)</li>
 </ul>
-<h4 id="profile-applicability_28">Profile applicability</h4>
+<h4 id="profile-applicability_28">Profile applicability<a class="headerlink" href="#profile-applicability_28" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="eudi-wallet-relevancy_28">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_28">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_28" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_28">Preconditions</h4>
+<h4 id="preconditions_28">Preconditions<a class="headerlink" href="#preconditions_28" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_28">Test Scenario</h4>
+<h4 id="test-scenario_28">Test Scenario<a class="headerlink" href="#test-scenario_28" title="Link to this section">&para;</a></h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
 <li>Verifier sends signed presentation request.</li>
 <li>X.509 certificate signing the request is self-signed.</li>
 <li>Wallet processes the request.</li>
 </ol>
-<h4 id="expected-results_28">Expected results</h4>
+<h4 id="expected-results_28">Expected results<a class="headerlink" href="#expected-results_28" title="Link to this section">&para;</a></h4>
 <ol>
 <li>This is the case.</li>
 <li>This is the case.</li>
@@ -2058,28 +2120,28 @@ b. answers with an error without providing details or,
 c. discontinues the interaction.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_sm_rpintegrity_027">WS_RP_SM_RpIntegrity_027</h3>
-<h4 id="objective_29">Objective</h4>
+<h3 id="ws_rp_sm_rpintegrity_027">WS_RP_SM_RpIntegrity_027<a class="headerlink" href="#ws_rp_sm_rpintegrity_027" title="Link to this section">&para;</a></h3>
+<h4 id="objective_29">Objective<a class="headerlink" href="#objective_29" title="Link to this section">&para;</a></h4>
 <p>Verify that, in the presentation flow via Redirects, Wallet rejects presentation request if the signature validation of the JWT-Secured Authorization Request fails. </p>
-<h4 id="references_29">References</h4>
+<h4 id="references_29">References<a class="headerlink" href="#references_29" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[HAIP] Section 5.1</li>
 <li>[RFC9101] Section 5</li>
 </ul>
-<h4 id="profile-applicability_29">Profile applicability</h4>
+<h4 id="profile-applicability_29">Profile applicability<a class="headerlink" href="#profile-applicability_29" title="Link to this section">&para;</a></h4>
 <p>Presentations via Redirects</p>
-<h4 id="eudi-wallet-relevancy_29">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_29">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_29" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_29">Preconditions</h4>
+<h4 id="preconditions_29">Preconditions<a class="headerlink" href="#preconditions_29" title="Link to this section">&para;</a></h4>
 <p>A Signature from authorization request is authentic.</p>
-<h4 id="test-scenario_29">Test Scenario</h4>
+<h4 id="test-scenario_29">Test Scenario<a class="headerlink" href="#test-scenario_29" title="Link to this section">&para;</a></h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
 <li>Verifier sends Signed Authorization Request using JWT-Secured Authorization Request (JAR) [RFC9101] with the <code>request_uri</code> parameter, and signature is authentic.</li>
 <li>Verify if the Wallet obtains the request object from the <code>request_uri</code>.</li>
 <li>Wallet checks signature on the request object.</li>
 </ol>
-<h4 id="expected-results_29">Expected results</h4>
+<h4 id="expected-results_29">Expected results<a class="headerlink" href="#expected-results_29" title="Link to this section">&para;</a></h4>
 <ol>
 <li>This is the case.</li>
 <li>This is the case.</li>
@@ -2090,129 +2152,129 @@ b. answers with an error without providing details or,
 c. discontinues the interaction.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_sm_rpintegrity_028">WS_RP_SM_RpIntegrity_028</h3>
-<h4 id="objective_30">Objective</h4>
+<h3 id="ws_rp_sm_rpintegrity_028">WS_RP_SM_RpIntegrity_028<a class="headerlink" href="#ws_rp_sm_rpintegrity_028" title="Link to this section">&para;</a></h3>
+<h4 id="objective_30">Objective<a class="headerlink" href="#objective_30" title="Link to this section">&para;</a></h4>
 <p>Verify that Wallet supports unsigned, requests.</p>
-<h4 id="references_30">References</h4>
+<h4 id="references_30">References<a class="headerlink" href="#references_30" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[HAIP] Section 5.2</li>
 </ul>
-<h4 id="profile-applicability_30">Profile applicability</h4>
+<h4 id="profile-applicability_30">Profile applicability<a class="headerlink" href="#profile-applicability_30" title="Link to this section">&para;</a></h4>
 <p>Presentations via the W3C Digital Credentials API or equivalent platform.</p>
-<h4 id="eudi-wallet-relevancy_30">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_30">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_30" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_30">Preconditions</h4>
+<h4 id="preconditions_30">Preconditions<a class="headerlink" href="#preconditions_30" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_30">Test Scenario</h4>
+<h4 id="test-scenario_30">Test Scenario<a class="headerlink" href="#test-scenario_30" title="Link to this section">&para;</a></h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
 <li>Verifier sends unsigned request.</li>
 <li>Verify if Wallet answers unsigned request successfully.</li>
 </ol>
-<h4 id="expected-results_30">Expected results</h4>
+<h4 id="expected-results_30">Expected results<a class="headerlink" href="#expected-results_30" title="Link to this section">&para;</a></h4>
 <ol>
 <li>This is the case.</li>
 <li>This is the case. </li>
 <li>Wallet answers unsigned request successfully.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_sm_rpintegrity_029">WS_RP_SM_RpIntegrity_029</h3>
-<h4 id="objective_31">Objective</h4>
+<h3 id="ws_rp_sm_rpintegrity_029">WS_RP_SM_RpIntegrity_029<a class="headerlink" href="#ws_rp_sm_rpintegrity_029" title="Link to this section">&para;</a></h3>
+<h4 id="objective_31">Objective<a class="headerlink" href="#objective_31" title="Link to this section">&para;</a></h4>
 <p>Verify that Wallet supports signed requests.</p>
-<h4 id="references_31">References</h4>
+<h4 id="references_31">References<a class="headerlink" href="#references_31" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[HAIP] Section 5.2</li>
 </ul>
-<h4 id="profile-applicability_31">Profile applicability</h4>
+<h4 id="profile-applicability_31">Profile applicability<a class="headerlink" href="#profile-applicability_31" title="Link to this section">&para;</a></h4>
 <p>Presentations via the W3C Digital Credentials API or equivalent platform.</p>
-<h4 id="eudi-wallet-relevancy_31">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_31">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_31" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_31">Preconditions</h4>
+<h4 id="preconditions_31">Preconditions<a class="headerlink" href="#preconditions_31" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_31">Test Scenario</h4>
+<h4 id="test-scenario_31">Test Scenario<a class="headerlink" href="#test-scenario_31" title="Link to this section">&para;</a></h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
 <li>Verifier sends signed request.</li>
 <li>Verify if Wallet answers signed request successfully.</li>
 </ol>
-<h4 id="expected-results_31">Expected results</h4>
+<h4 id="expected-results_31">Expected results<a class="headerlink" href="#expected-results_31" title="Link to this section">&para;</a></h4>
 <ol>
 <li>This is the case.</li>
 <li>This is the case. </li>
 <li>Wallet answers signed request successfully.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_sm_rpintegrity_030">WS_RP_SM_RpIntegrity_030</h3>
-<h4 id="objective_32">Objective</h4>
+<h3 id="ws_rp_sm_rpintegrity_030">WS_RP_SM_RpIntegrity_030<a class="headerlink" href="#ws_rp_sm_rpintegrity_030" title="Link to this section">&para;</a></h3>
+<h4 id="objective_32">Objective<a class="headerlink" href="#objective_32" title="Link to this section">&para;</a></h4>
 <p>Verify that Wallet supports multi-signed requests.</p>
-<h4 id="references_32">References</h4>
+<h4 id="references_32">References<a class="headerlink" href="#references_32" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[HAIP] Section 5.2</li>
 </ul>
-<h4 id="profile-applicability_32">Profile applicability</h4>
+<h4 id="profile-applicability_32">Profile applicability<a class="headerlink" href="#profile-applicability_32" title="Link to this section">&para;</a></h4>
 <p>Presentations via the W3C Digital Credentials API or equivalent platform.</p>
-<h4 id="eudi-wallet-relevancy_32">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_32">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_32" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_32">Preconditions</h4>
+<h4 id="preconditions_32">Preconditions<a class="headerlink" href="#preconditions_32" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_32">Test Scenario</h4>
+<h4 id="test-scenario_32">Test Scenario<a class="headerlink" href="#test-scenario_32" title="Link to this section">&para;</a></h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
 <li>Verifier sends multi-signed request.</li>
 <li>Verify if Wallet answers multi-signed request successfully.</li>
 </ol>
-<h4 id="expected-results_32">Expected results</h4>
+<h4 id="expected-results_32">Expected results<a class="headerlink" href="#expected-results_32" title="Link to this section">&para;</a></h4>
 <ol>
 <li>This is the case.</li>
 <li>This is the case. </li>
 <li>Wallet answers multi-signed request successfully.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_sm_rpintegrity_031">WS_RP_SM_RpIntegrity_031</h3>
-<h4 id="objective_33">Objective</h4>
+<h3 id="ws_rp_sm_rpintegrity_031">WS_RP_SM_RpIntegrity_031<a class="headerlink" href="#ws_rp_sm_rpintegrity_031" title="Link to this section">&para;</a></h3>
+<h4 id="objective_33">Objective<a class="headerlink" href="#objective_33" title="Link to this section">&para;</a></h4>
 <p>Verify that Wallet supports ECDSA with P-256 and SHA-256 (JOSE algorithm identifier ES256) for validating signed presentation requests.</p>
-<h4 id="references_33">References</h4>
+<h4 id="references_33">References<a class="headerlink" href="#references_33" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[HAIP] Section 7</li>
 </ul>
-<h4 id="profile-applicability_33">Profile applicability</h4>
+<h4 id="profile-applicability_33">Profile applicability<a class="headerlink" href="#profile-applicability_33" title="Link to this section">&para;</a></h4>
 <p>JOSE algorithm identifier ES256</p>
-<h4 id="eudi-wallet-relevancy_33">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_33">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_33" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_33">Preconditions</h4>
+<h4 id="preconditions_33">Preconditions<a class="headerlink" href="#preconditions_33" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_33">Test Scenario</h4>
+<h4 id="test-scenario_33">Test Scenario<a class="headerlink" href="#test-scenario_33" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Verify that Wallet receives signed request using ECDSA with P-256 and SHA-256 (JOSE algorithm identifier ES256) from the Verifier.</li>
 <li>Verify if Wallet is able to validate signed request from the Verifier that used ECDSA with P-256 and SHA-256 (JOSE algorithm identifier ES256) </li>
 </ol>
-<h4 id="expected-results_33">Expected results</h4>
+<h4 id="expected-results_33">Expected results<a class="headerlink" href="#expected-results_33" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Wallet receives signed request using ECDSA with P-256 and SHA-256 (JOSE algorithm identifier ES256) from the Verifier.</li>
 <li>Wallet is able to validate signed request from the Verifier that used ECDSA with P-256 and SHA-256 (JOSE algorithm identifier ES256) </li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_sm_rpintegrity_032">WS_RP_SM_RpIntegrity_032</h3>
-<h4 id="objective_34">Objective</h4>
+<h3 id="ws_rp_sm_rpintegrity_032">WS_RP_SM_RpIntegrity_032<a class="headerlink" href="#ws_rp_sm_rpintegrity_032" title="Link to this section">&para;</a></h3>
+<h4 id="objective_34">Objective<a class="headerlink" href="#objective_34" title="Link to this section">&para;</a></h4>
 <p>Verify that Wallet does not support RSASSA-PSS using SHA-384 and MGF1 with SHA-384 (RS384) for validating signed presentation requests.</p>
-<h4 id="references_34">References</h4>
+<h4 id="references_34">References<a class="headerlink" href="#references_34" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[HAIP] Section 8</li>
 </ul>
-<h4 id="profile-applicability_34">Profile applicability</h4>
+<h4 id="profile-applicability_34">Profile applicability<a class="headerlink" href="#profile-applicability_34" title="Link to this section">&para;</a></h4>
 <p>JOSE algorithm identifier ES257</p>
-<h4 id="eudi-wallet-relevancy_34">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_34">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_34" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_34">Preconditions</h4>
+<h4 id="preconditions_34">Preconditions<a class="headerlink" href="#preconditions_34" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_34">Test Scenario</h4>
+<h4 id="test-scenario_34">Test Scenario<a class="headerlink" href="#test-scenario_34" title="Link to this section">&para;</a></h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
 <li>Verifier sends presentation request for Credential.</li>
 <li>Verify that Wallet receives signed request using RSASSA-PSS using SHA-384 and MGF1 with SHA-384 (RS384).from the Verifier.</li>
 <li>Wallet processes the request.</li>
 </ol>
-<h4 id="expected-results_34">Expected results</h4>
+<h4 id="expected-results_34">Expected results<a class="headerlink" href="#expected-results_34" title="Link to this section">&para;</a></h4>
 <ol>
 <li>This is the case.</li>
 <li>This is the case.</li>
@@ -2223,27 +2285,27 @@ b. returns general error,
 c. only discontinues the transaction.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_sm_rpintegrity_033">WS_RP_SM_RpIntegrity_033</h3>
-<h4 id="objective_35">Objective</h4>
+<h3 id="ws_rp_sm_rpintegrity_033">WS_RP_SM_RpIntegrity_033<a class="headerlink" href="#ws_rp_sm_rpintegrity_033" title="Link to this section">&para;</a></h3>
+<h4 id="objective_35">Objective<a class="headerlink" href="#objective_35" title="Link to this section">&para;</a></h4>
 <p>Verify that Wallet supports ECDSA with P-256 and SHA-256 (COSE algorithm identifier -7) for validating signed presentation requests.</p>
-<h4 id="references_35">References</h4>
+<h4 id="references_35">References<a class="headerlink" href="#references_35" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[HAIP] Section 7</li>
 </ul>
-<h4 id="profile-applicability_35">Profile applicability</h4>
+<h4 id="profile-applicability_35">Profile applicability<a class="headerlink" href="#profile-applicability_35" title="Link to this section">&para;</a></h4>
 <p>COSE algorithm identifier -7 supported</p>
-<h4 id="eudi-wallet-relevancy_35">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_35">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_35" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_35">Preconditions</h4>
+<h4 id="preconditions_35">Preconditions<a class="headerlink" href="#preconditions_35" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_35">Test Scenario</h4>
+<h4 id="test-scenario_35">Test Scenario<a class="headerlink" href="#test-scenario_35" title="Link to this section">&para;</a></h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
 <li>Verifier sends presentation request for Credential.</li>
 <li>Verify that Wallet receives signed request using ECDSA with P-256 and SHA-256 (COSE algorithm identifier -7) from the Verifier.</li>
 <li>Verify if Wallet is able to validate signed request from the Verifier that used ECDSA with P-256 and SHA-256 (COSE algorithm identifier -7) </li>
 </ol>
-<h4 id="expected-results_35">Expected results</h4>
+<h4 id="expected-results_35">Expected results<a class="headerlink" href="#expected-results_35" title="Link to this section">&para;</a></h4>
 <ol>
 <li>This is the case.</li>
 <li>This is the case.</li>
@@ -2251,27 +2313,27 @@ c. only discontinues the transaction.</li>
 <li>Wallet is able to validate signed request from the Verifier that used ECDSA with P-256 and SHA-256 (JOSE algorithm identifier ES256; COSE algorithm identifier -7) </li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_sm_rpintegrity_034">WS_RP_SM_RpIntegrity_034</h3>
-<h4 id="objective_36">Objective</h4>
+<h3 id="ws_rp_sm_rpintegrity_034">WS_RP_SM_RpIntegrity_034<a class="headerlink" href="#ws_rp_sm_rpintegrity_034" title="Link to this section">&para;</a></h3>
+<h4 id="objective_36">Objective<a class="headerlink" href="#objective_36" title="Link to this section">&para;</a></h4>
 <p>Verify that Wallet supports ECDSA with P-256 and SHA-256 (COSE algorithm identifier -9) for validating signed presentation requests.</p>
-<h4 id="references_36">References</h4>
+<h4 id="references_36">References<a class="headerlink" href="#references_36" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[HAIP] Section 7</li>
 </ul>
-<h4 id="profile-applicability_36">Profile applicability</h4>
+<h4 id="profile-applicability_36">Profile applicability<a class="headerlink" href="#profile-applicability_36" title="Link to this section">&para;</a></h4>
 <p>COSE algorithm identifier -9 supported</p>
-<h4 id="eudi-wallet-relevancy_36">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_36">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_36" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_36">Preconditions</h4>
+<h4 id="preconditions_36">Preconditions<a class="headerlink" href="#preconditions_36" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_36">Test Scenario</h4>
+<h4 id="test-scenario_36">Test Scenario<a class="headerlink" href="#test-scenario_36" title="Link to this section">&para;</a></h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
 <li>Verifier sends presentation request for Credential.</li>
 <li>Verify that Wallet receives signed request using ECDSA with P-256 and SHA-256 (COSE algorithm identifier -9) from the Verifier.</li>
 <li>Verify if Wallet is able to validate signed request from the Verifier that used ECDSA with P-256 and SHA-256 (COSE algorithm identifier -9) </li>
 </ol>
-<h4 id="expected-results_36">Expected results</h4>
+<h4 id="expected-results_36">Expected results<a class="headerlink" href="#expected-results_36" title="Link to this section">&para;</a></h4>
 <ol>
 <li>This is the case.</li>
 <li>This is the case.</li>
@@ -2317,6 +2379,10 @@ c. only discontinues the transaction.</li>
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
+    <div class="md-copyright__highlight">
+      European Union, 2025 - Licensed under the EUPL-1.2 or later
+    </div>
+  
   
     Made with
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
@@ -2338,14 +2404,10 @@ c. only discontinues the transaction.</li>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.top", "navigation.footer", "navigation.indexes", "toc.integrate", "toc.follow"], "search": "../../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.indexes", "navigation.top", "navigation.footer", "navigation.tracking", "toc.integrate", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.action.edit", "content.action.view", "content.code.copy"], "search": "../../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
       <script src="../../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
-      
-        <script src="../../../../../../assets/external/unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
-      
-        <script src="../../../../../../javascripts/mermaid-init.js"></script>
       
     
   </body>

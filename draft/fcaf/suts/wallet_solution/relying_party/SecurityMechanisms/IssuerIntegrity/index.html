@@ -51,6 +51,8 @@
     
       <link rel="stylesheet" href="../../../../../../media/css/extra.css">
     
+      <link rel="stylesheet" href="../../../../../../media/css/fcaf.css">
+    
     <script>__md_scope=new URL("../../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -78,7 +80,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -139,20 +141,20 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
   
@@ -163,6 +165,53 @@
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
     
     
       <div class="md-header__source">
@@ -1201,59 +1250,72 @@
 
 
   
+    <a href="https://github.com/eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment/edit/main/docs/fcaf/suts/wallet_solution/relying_party/SecurityMechanisms/IssuerIntegrity/index.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment/raw/main/docs/fcaf/suts/wallet_solution/relying_party/SecurityMechanisms/IssuerIntegrity/index.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
   
 
 
-<h1 id="security-mechanisms-issuer-integrity">Security Mechanisms - Issuer Integrity</h1>
+<h1 id="security-mechanisms-issuer-integrity">Security Mechanisms - Issuer Integrity<a class="headerlink" href="#security-mechanisms-issuer-integrity" title="Link to this section">&para;</a></h1>
 <!-- BEGIN INCLUDE ./[A-Z]*.md -->
-<h3 id="ws_rp_sm_issuerintegrity_012">WS_RP_SM_IssuerIntegrity_012</h3>
-<h4 id="objective">Objective</h4>
+<h3 id="ws_rp_sm_issuerintegrity_012">WS_RP_SM_IssuerIntegrity_012<a class="headerlink" href="#ws_rp_sm_issuerintegrity_012" title="Link to this section">&para;</a></h3>
+<h4 id="objective">Objective<a class="headerlink" href="#objective" title="Link to this section">&para;</a></h4>
 <p>Verify that Wallet uses MSO revocation mechanism following requirements defined in ISO/IEC 18013-5 ([ISO.18013-5.second.edition]).</p>
-<h4 id="references">References</h4>
+<h4 id="references">References<a class="headerlink" href="#references" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[HAIP] Section 5.3.1</li>
 <li>TODO: [ISO/IEC 18013-5] MSO revocation</li>
 </ul>
-<h4 id="profile-applicability">Profile applicability</h4>
+<h4 id="profile-applicability">Profile applicability<a class="headerlink" href="#profile-applicability" title="Link to this section">&para;</a></h4>
 <p>Wallet supports ISO mdoc</p>
-<h4 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions">Preconditions</h4>
+<h4 id="preconditions">Preconditions<a class="headerlink" href="#preconditions" title="Link to this section">&para;</a></h4>
 <p>The mdoc's status is set to revoked.</p>
-<h4 id="test-scenario">Test Scenario</h4>
+<h4 id="test-scenario">Test Scenario<a class="headerlink" href="#test-scenario" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Wallet and verifier engage.</li>
 <li>Verifier sends request for a revoked MSO.</li>
 <li>Wallet sends response.</li>
 </ol>
-<h4 id="expected-results">Expected results</h4>
+<h4 id="expected-results">Expected results<a class="headerlink" href="#expected-results" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Wallet and verifier successfully engage.</li>
 <li>Wallet processes request.</li>
 <li>Wallet returns error to verifier, without revealing reason (revocation of MSO).</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_sm_issuerintegrity_013">WS_RP_SM_IssuerIntegrity_013</h3>
-<h4 id="objective_1">Objective</h4>
+<h3 id="ws_rp_sm_issuerintegrity_013">WS_RP_SM_IssuerIntegrity_013<a class="headerlink" href="#ws_rp_sm_issuerintegrity_013" title="Link to this section">&para;</a></h3>
+<h4 id="objective_1">Objective<a class="headerlink" href="#objective_1" title="Link to this section">&para;</a></h4>
 <p>Verify that Wallet supports X.509 certificate-based key resolution to validate the issuer signature of an SD-JWT VC.</p>
-<h4 id="references_1">References</h4>
+<h4 id="references_1">References<a class="headerlink" href="#references_1" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[HAIP] Section 6.1.1</li>
 </ul>
-<h4 id="profile-applicability_1">Profile applicability</h4>
+<h4 id="profile-applicability_1">Profile applicability<a class="headerlink" href="#profile-applicability_1" title="Link to this section">&para;</a></h4>
 <p>Wallet supports IETF SD-JWT VC </p>
-<h4 id="eudi-wallet-relevancy_1">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_1">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_1" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_1">Preconditions</h4>
+<h4 id="preconditions_1">Preconditions<a class="headerlink" href="#preconditions_1" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_1">Test Scenario</h4>
+<h4 id="test-scenario_1">Test Scenario<a class="headerlink" href="#test-scenario_1" title="Link to this section">&para;</a></h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
 <li>Verifier sends presentation request for Credential in IETF SD-JWT VC format.</li>
 <li>Verify if Wallet presents the Credential in IETF SD-JWT VC format.</li>
 <li>Check header's content from Credential presented by the Wallet.</li>
 </ol>
-<h4 id="expected-results_1">Expected results</h4>
+<h4 id="expected-results_1">Expected results<a class="headerlink" href="#expected-results_1" title="Link to this section">&para;</a></h4>
 <ol>
 <li>This is the case.</li>
 <li>Wallet presents the Credential in IETF SD-JWT VC format.</li>
@@ -1261,26 +1323,26 @@
 <li>Wallet verifies the header's content from Credential</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_sm_issuerintegrity_014">WS_RP_SM_IssuerIntegrity_014</h3>
-<h4 id="objective_2">Objective</h4>
+<h3 id="ws_rp_sm_issuerintegrity_014">WS_RP_SM_IssuerIntegrity_014<a class="headerlink" href="#ws_rp_sm_issuerintegrity_014" title="Link to this section">&para;</a></h3>
+<h4 id="objective_2">Objective<a class="headerlink" href="#objective_2" title="Link to this section">&para;</a></h4>
 <p>Verify that when Wallet is presenting the Credential in IETF SD-JWT VC format, the X.509 certificate of the trust anchor is not included in the <code>x5c</code> JOSE header of the SD-JWT VC. </p>
-<h4 id="references_2">References</h4>
+<h4 id="references_2">References<a class="headerlink" href="#references_2" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[HAIP] Section 6.1.1</li>
 </ul>
-<h4 id="profile-applicability_2">Profile applicability</h4>
+<h4 id="profile-applicability_2">Profile applicability<a class="headerlink" href="#profile-applicability_2" title="Link to this section">&para;</a></h4>
 <p>Wallet supports IETF SD-JWT VC </p>
-<h4 id="eudi-wallet-relevancy_2">EUDI-wallet relevancy</h4>
+<h4 id="eudi-wallet-relevancy_2">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_2" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_2">Preconditions</h4>
+<h4 id="preconditions_2">Preconditions<a class="headerlink" href="#preconditions_2" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_2">Test Scenario</h4>
+<h4 id="test-scenario_2">Test Scenario<a class="headerlink" href="#test-scenario_2" title="Link to this section">&para;</a></h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
 <li>Wallet receives a presentation request for a Credential in IETF SD-JWT VC format.</li>
 <li>Wallet presents the Credential in IETF SD-JWT VC format.</li>
 </ol>
-<h4 id="expected-results_2">Expected results</h4>
+<h4 id="expected-results_2">Expected results<a class="headerlink" href="#expected-results_2" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Wallet and verifier interact.</li>
 <li>Wallet processes the presentation request for a Credential in IETF SD-JWT VC format.</li>
@@ -1325,6 +1387,10 @@
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
+    <div class="md-copyright__highlight">
+      European Union, 2025 - Licensed under the EUPL-1.2 or later
+    </div>
+  
   
     Made with
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
@@ -1346,14 +1412,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.top", "navigation.footer", "navigation.indexes", "toc.integrate", "toc.follow"], "search": "../../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.indexes", "navigation.top", "navigation.footer", "navigation.tracking", "toc.integrate", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.action.edit", "content.action.view", "content.code.copy"], "search": "../../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
       <script src="../../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
-      
-        <script src="../../../../../../assets/external/unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
-      
-        <script src="../../../../../../javascripts/mermaid-init.js"></script>
       
     
   </body>

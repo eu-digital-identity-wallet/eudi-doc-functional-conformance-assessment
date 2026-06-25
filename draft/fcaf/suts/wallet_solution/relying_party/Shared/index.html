@@ -51,6 +51,8 @@
     
       <link rel="stylesheet" href="../../../../../media/css/extra.css">
     
+      <link rel="stylesheet" href="../../../../../media/css/fcaf.css">
+    
     <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -78,7 +80,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -139,20 +141,20 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
   
@@ -163,6 +165,53 @@
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
     
     
       <div class="md-header__source">
@@ -1201,188 +1250,201 @@
 
 
   
+    <a href="https://github.com/eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment/edit/main/docs/fcaf/suts/wallet_solution/relying_party/Shared/index.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment/raw/main/docs/fcaf/suts/wallet_solution/relying_party/Shared/index.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
   
 
 
-<h1 id="shared">Shared</h1>
+<h1 id="shared">Shared<a class="headerlink" href="#shared" title="Link to this section">&para;</a></h1>
 <!-- BEGIN INCLUDE ./*/index.md -->
-<h2 id="shared-cryptography">Shared - Cryptography</h2>
+<h2 id="shared-cryptography">Shared - Cryptography<a class="headerlink" href="#shared-cryptography" title="Link to this section">&para;</a></h2>
 <!-- BEGIN INCLUDE ./[A-Z]*.md -->
-<h4 id="ws_rp_sh_cryptography_cryptographichash001">WS_RP_SH_Cryptography_CryptographicHash001</h4>
-<h5 id="objective">Objective</h5>
+<h4 id="ws_rp_sh_cryptography_cryptographichash001">WS_RP_SH_Cryptography_CryptographicHash001<a class="headerlink" href="#ws_rp_sh_cryptography_cryptographichash001" title="Link to this section">&para;</a></h4>
+<h5 id="objective">Objective<a class="headerlink" href="#objective" title="Link to this section">&para;</a></h5>
 <p>Verify that when presenting an IETF SD-JWT VC, the Wallet produces a Verifiable Presentation whose digests are generated using SHA-256.</p>
-<h5 id="references">References</h5>
+<h5 id="references">References<a class="headerlink" href="#references" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[HAIP] Section 8</li>
 </ul>
-<h5 id="profile-applicability">Profile applicability</h5>
+<h5 id="profile-applicability">Profile applicability<a class="headerlink" href="#profile-applicability" title="Link to this section">&para;</a></h5>
 <p>none</p>
-<h5 id="eudi-wallet-relevancy">EUDI-wallet relevancy</h5>
+<h5 id="eudi-wallet-relevancy">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="preconditions">Preconditions</h5>
+<h5 id="preconditions">Preconditions<a class="headerlink" href="#preconditions" title="Link to this section">&para;</a></h5>
 <p>Wallet holds a presentable IETF SD-JWT VC.</p>
-<h5 id="test-scenario">Test Scenario</h5>
+<h5 id="test-scenario">Test Scenario<a class="headerlink" href="#test-scenario" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
 <li>Wallet receives Authorization Request. </li>
 <li>Wallet returns the Authorization Response. Inspect the vp_token and the Verifier's validation outcome of the SD-JWT VC digests under SHA-256.</li>
 </ol>
-<h5 id="expected-results">Expected results</h5>
+<h5 id="expected-results">Expected results<a class="headerlink" href="#expected-results" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Wallet-Verifier interaction is successfully initiated.</li>
 <li>Wallet successfully processes Authorization Request. </li>
 <li>Wallet sends an Authorization Response whose vp_token holds the SD-JWT VC with SHA-256-based digests.</li>
 </ol>
 <!-- END INCLUDE -->
-<h4 id="ws_rp_sh_cryptography_cryptographichash002">WS_RP_SH_Cryptography_CryptographicHash002</h4>
-<h5 id="objective_1">Objective</h5>
+<h4 id="ws_rp_sh_cryptography_cryptographichash002">WS_RP_SH_Cryptography_CryptographicHash002<a class="headerlink" href="#ws_rp_sh_cryptography_cryptographichash002" title="Link to this section">&para;</a></h4>
+<h5 id="objective_1">Objective<a class="headerlink" href="#objective_1" title="Link to this section">&para;</a></h5>
 <p>Verify that whenever Wallet uses hash function during presentation for ISO mdoc, it leverages hash algorithm SHA-256.</p>
-<h5 id="references_1">References</h5>
+<h5 id="references_1">References<a class="headerlink" href="#references_1" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[HAIP] Section 9</li>
 </ul>
-<h5 id="profile-applicability_1">Profile applicability</h5>
+<h5 id="profile-applicability_1">Profile applicability<a class="headerlink" href="#profile-applicability_1" title="Link to this section">&para;</a></h5>
 <p>none</p>
-<h5 id="eudi-wallet-relevancy_1">EUDI-wallet relevancy</h5>
+<h5 id="eudi-wallet-relevancy_1">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_1" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="preconditions_1">Preconditions</h5>
+<h5 id="preconditions_1">Preconditions<a class="headerlink" href="#preconditions_1" title="Link to this section">&para;</a></h5>
 <p>none</p>
-<h5 id="test-scenario_1">Test Scenario</h5>
+<h5 id="test-scenario_1">Test Scenario<a class="headerlink" href="#test-scenario_1" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Wallet engages with the Verifier.</li>
 <li>Wallet receives Authorization Request. </li>
 <li>Wallet returns the Authorization Response and receives the response acknowledging the presentation.</li>
 </ol>
-<h5 id="expected-results_1">Expected results</h5>
+<h5 id="expected-results_1">Expected results<a class="headerlink" href="#expected-results_1" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Wallet successfully engages with the Verifier.</li>
 <li>Wallet processes Authorization Request. </li>
 <li>Wallet sends an Authorization Response whose vp_token holds the ISO mdoc with SHA-256-based digests.</li>
 </ol>
 <!-- END INCLUDE -->
-<h4 id="ws_rp_sh_cryptography_cryptographichash006">WS_RP_SH_Cryptography_CryptographicHash006</h4>
-<h5 id="objective_2">Objective</h5>
+<h4 id="ws_rp_sh_cryptography_cryptographichash006">WS_RP_SH_Cryptography_CryptographicHash006<a class="headerlink" href="#ws_rp_sh_cryptography_cryptographichash006" title="Link to this section">&para;</a></h4>
+<h5 id="objective_2">Objective<a class="headerlink" href="#objective_2" title="Link to this section">&para;</a></h5>
 <p>Verify that Wallet includes in its metadata information related to other hash algorithms supported, if the Wallet profile allows other hash algorithms</p>
-<h5 id="references_2">References</h5>
+<h5 id="references_2">References<a class="headerlink" href="#references_2" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[HAIP] Section 8</li>
 </ul>
-<h5 id="profile-applicability_2">Profile applicability</h5>
+<h5 id="profile-applicability_2">Profile applicability<a class="headerlink" href="#profile-applicability_2" title="Link to this section">&para;</a></h5>
 <p>Wallet supports other hash algorithms besides SHA-256.</p>
-<h5 id="eudi-wallet-relevancy_2">EUDI-wallet relevancy</h5>
+<h5 id="eudi-wallet-relevancy_2">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_2" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="preconditions_2">Preconditions</h5>
+<h5 id="preconditions_2">Preconditions<a class="headerlink" href="#preconditions_2" title="Link to this section">&para;</a></h5>
 <p>There is a defined mechanism for this Wallet profile, through which Verifier receives Wallet Metadata.</p>
-<h5 id="test-scenario_2">Test Scenario</h5>
+<h5 id="test-scenario_2">Test Scenario<a class="headerlink" href="#test-scenario_2" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Verify if Wallet includes other hash algorithms supported (besides SHA-256) in its Metadata.</li>
 </ol>
-<h5 id="expected-results_2">Expected results</h5>
+<h5 id="expected-results_2">Expected results<a class="headerlink" href="#expected-results_2" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Wallet does include other hash algorithms supported (besides SHA-256) in its Metadata.</li>
 </ol>
 <!-- END INCLUDE -->
-<h4 id="ws_rp_sh_cryptography_cryptographichash007">WS_RP_SH_Cryptography_CryptographicHash007</h4>
-<h5 id="objective_3">Objective</h5>
+<h4 id="ws_rp_sh_cryptography_cryptographichash007">WS_RP_SH_Cryptography_CryptographicHash007<a class="headerlink" href="#ws_rp_sh_cryptography_cryptographichash007" title="Link to this section">&para;</a></h4>
+<h5 id="objective_3">Objective<a class="headerlink" href="#objective_3" title="Link to this section">&para;</a></h5>
 <p>Verify that Wallet does not use other hash algorithm than SHA-256 during presentation if that is not supported by the Verifier.</p>
-<h5 id="references_3">References</h5>
+<h5 id="references_3">References<a class="headerlink" href="#references_3" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[HAIP] Section 8</li>
 </ul>
-<h5 id="profile-applicability_3">Profile applicability</h5>
+<h5 id="profile-applicability_3">Profile applicability<a class="headerlink" href="#profile-applicability_3" title="Link to this section">&para;</a></h5>
 <p>Wallet supports other hash algorithms besides SHA-256.</p>
-<h5 id="eudi-wallet-relevancy_3">EUDI-wallet relevancy</h5>
+<h5 id="eudi-wallet-relevancy_3">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_3" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="preconditions_3">Preconditions</h5>
-<ol class="precond-alpha">
+<h5 id="preconditions_3">Preconditions<a class="headerlink" href="#preconditions_3" title="Link to this section">&para;</a></h5>
+<ol>
 <li>Verifier Client Metadata does not include any other hash algorithms.</li>
 </ol>
-<h5 id="test-scenario_3">Test Scenario</h5>
+<h5 id="test-scenario_3">Test Scenario<a class="headerlink" href="#test-scenario_3" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Wallet engages with the Verifier. </li>
 <li>Wallet receives the Authorization Request whose client metadata advertises SHA-256 only.</li>
 <li>Wallet returns the Authorization Response and receives the response acknowledging the presentation.</li>
 </ol>
-<h5 id="expected-results_3">Expected results</h5>
+<h5 id="expected-results_3">Expected results<a class="headerlink" href="#expected-results_3" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Wallet successfully initiates the interaction and </li>
 <li>Wallet receives the Authorization Request advertising SHA-256 only.</li>
 <li>Wallet sends an Authorization Response whose vp_token holds SHA-256-based digests.</li>
 </ol>
 <!-- END INCLUDE -->
-<h4 id="ws_rp_sh_cryptography_cryptographichash008">WS_RP_SH_Cryptography_CryptographicHash008</h4>
-<h5 id="objective_4">Objective</h5>
+<h4 id="ws_rp_sh_cryptography_cryptographichash008">WS_RP_SH_Cryptography_CryptographicHash008<a class="headerlink" href="#ws_rp_sh_cryptography_cryptographichash008" title="Link to this section">&para;</a></h4>
+<h5 id="objective_4">Objective<a class="headerlink" href="#objective_4" title="Link to this section">&para;</a></h5>
 <p>Verify that Wallet raises an error if Verifier uses any hashing function other than SHA-256 and that is not included in the Verifier Client Metadata.</p>
-<h5 id="references_4">References</h5>
+<h5 id="references_4">References<a class="headerlink" href="#references_4" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[HAIP] Section 8</li>
 </ul>
-<h5 id="profile-applicability_4">Profile applicability</h5>
+<h5 id="profile-applicability_4">Profile applicability<a class="headerlink" href="#profile-applicability_4" title="Link to this section">&para;</a></h5>
 <p>Wallet does not support other hash algorithms besides SHA-256.</p>
-<h5 id="eudi-wallet-relevancy_4">EUDI-wallet relevancy</h5>
+<h5 id="eudi-wallet-relevancy_4">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_4" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="preconditions_4">Preconditions</h5>
+<h5 id="preconditions_4">Preconditions<a class="headerlink" href="#preconditions_4" title="Link to this section">&para;</a></h5>
 <p>Verifier Client Metadata does not include any other hash algorithms.
 Verifier uses other hashing functions than SHA-256.</p>
-<h5 id="test-scenario_4">Test Scenario</h5>
+<h5 id="test-scenario_4">Test Scenario<a class="headerlink" href="#test-scenario_4" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Verify if Wallet raises an error when Verifier uses any hashing function other than SHA-256.</li>
 </ol>
-<h5 id="expected-results_4">Expected results</h5>
+<h5 id="expected-results_4">Expected results<a class="headerlink" href="#expected-results_4" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Wallet raises an error when Verifier uses any hashing function other than SHA-256.</li>
 </ol>
 <!-- END INCLUDE -->
-<h4 id="ws_rp_sh_cryptography_cryptographichash010">WS_RP_SH_Cryptography_CryptographicHash010</h4>
-<h5 id="objective_5">Objective</h5>
+<h4 id="ws_rp_sh_cryptography_cryptographichash010">WS_RP_SH_Cryptography_CryptographicHash010<a class="headerlink" href="#ws_rp_sh_cryptography_cryptographichash010" title="Link to this section">&para;</a></h4>
+<h5 id="objective_5">Objective<a class="headerlink" href="#objective_5" title="Link to this section">&para;</a></h5>
 <p>Verify that when the credential to be presented uses a digest hash algorithm other than SHA-256 that the Wallet does not support, the Wallet does not produce a presentation for that credential.</p>
-<h5 id="references_5">References</h5>
+<h5 id="references_5">References<a class="headerlink" href="#references_5" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[HAIP] Section 8</li>
 </ul>
-<h5 id="profile-applicability_5">Profile applicability</h5>
+<h5 id="profile-applicability_5">Profile applicability<a class="headerlink" href="#profile-applicability_5" title="Link to this section">&para;</a></h5>
 <p>Wallet does not support other hash algorithms besides SHA-256.</p>
-<h5 id="eudi-wallet-relevancy_5">EUDI-wallet relevancy</h5>
+<h5 id="eudi-wallet-relevancy_5">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_5" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="preconditions_5">Preconditions</h5>
+<h5 id="preconditions_5">Preconditions<a class="headerlink" href="#preconditions_5" title="Link to this section">&para;</a></h5>
 <p>Credential Issuer Metadata does not include any other hash algorithms.
 Credential Issuer uses other hashing functions than SHA-256.</p>
-<h5 id="test-scenario_5">Test Scenario</h5>
+<h5 id="test-scenario_5">Test Scenario<a class="headerlink" href="#test-scenario_5" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Wallet engages with the Verifier.  </li>
 <li>Wallet receives the Authorization Request targeting the credential whose digest algorithm is not SHA-256.</li>
 <li>Wallet processes the Authorization Request.</li>
 </ol>
-<h5 id="expected-results_5">Expected results</h5>
+<h5 id="expected-results_5">Expected results<a class="headerlink" href="#expected-results_5" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Wallet successfully initiates the interaction.</li>
 <li>Wallet receives the Authorization Request.</li>
 <li>Wallet does not send an Authorization Response containing a vp_token for that credential, presentation is terminated. </li>
 </ol>
 <!-- END INCLUDE -->
-<h4 id="ws_rp_sh_cryptography_encryption002">WS_RP_SH_Cryptography_Encryption002</h4>
-<h5 id="objective_6">Objective</h5>
+<h4 id="ws_rp_sh_cryptography_encryption002">WS_RP_SH_Cryptography_Encryption002<a class="headerlink" href="#ws_rp_sh_cryptography_encryption002" title="Link to this section">&para;</a></h4>
+<h5 id="objective_6">Objective<a class="headerlink" href="#objective_6" title="Link to this section">&para;</a></h5>
 <p>Verify that if <code>encrypted_response_enc_values_supported</code> within client metadata from the Verifier, does not include A256GCM, and Wallet only supports A256GCM, the Wallet responds with an error.</p>
-<h5 id="references_6">References</h5>
+<h5 id="references_6">References<a class="headerlink" href="#references_6" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[HAIP] Section 5 (introduction)</li>
 <li>[OpenID4VP] Section 8.3</li>
 <li>[RFC7516] Section 4.1.2</li>
 </ul>
-<h5 id="profile-applicability_6">Profile applicability</h5>
+<h5 id="profile-applicability_6">Profile applicability<a class="headerlink" href="#profile-applicability_6" title="Link to this section">&para;</a></h5>
 <p>Wallet supports only A256GCM</p>
-<h5 id="eudi-wallet-relevancy_6">EUDI-wallet relevancy</h5>
+<h5 id="eudi-wallet-relevancy_6">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_6" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="preconditions_6">Preconditions</h5>
+<h5 id="preconditions_6">Preconditions<a class="headerlink" href="#preconditions_6" title="Link to this section">&para;</a></h5>
 <p>none</p>
-<h5 id="test-scenario_6">Test Scenario</h5>
+<h5 id="test-scenario_6">Test Scenario<a class="headerlink" href="#test-scenario_6" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
 <li>Wallet receives an Authorization Request using response mode direct_post.jwt, whose client metadata lists encrypted_response_enc_values_supported without A256GCM.</li>
 <li>Wallet processes the request.</li>
 <li>Wallet returns its response to the Authorization Request.</li>
 </ol>
-<h5 id="expected-results_6">Expected results</h5>
+<h5 id="expected-results_6">Expected results<a class="headerlink" href="#expected-results_6" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
 <li>Wallet receives the Authorization Request</li>
@@ -1392,20 +1454,20 @@ Credential Issuer uses other hashing functions than SHA-256.</p>
 <!-- END INCLUDE -->
 
 <!-- END INCLUDE -->
-<h2 id="shared-encodings">Shared - Encodings</h2>
+<h2 id="shared-encodings">Shared - Encodings<a class="headerlink" href="#shared-encodings" title="Link to this section">&para;</a></h2>
 <!-- BEGIN INCLUDE ./[A-Z]*.md -->
-<h4 id="ws_rp_sh_encoding_textualencoding001">WS_RP_SH_Encoding_TextualEncoding001</h4>
-<h5 id="objective_7">Objective</h5>
+<h4 id="ws_rp_sh_encoding_textualencoding001">WS_RP_SH_Encoding_TextualEncoding001<a class="headerlink" href="#ws_rp_sh_encoding_textualencoding001" title="Link to this section">&para;</a></h4>
+<h5 id="objective_7">Objective<a class="headerlink" href="#objective_7" title="Link to this section">&para;</a></h5>
 <p>Test that in a claims path pointer array, a string value indicates the respected key is to be selected.</p>
-<h5 id="references_7">References</h5>
+<h5 id="references_7">References<a class="headerlink" href="#references_7" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[OpenID4VP] Section 7</li>
 </ul>
-<h5 id="profile-applicability_7">Profile applicability</h5>
+<h5 id="profile-applicability_7">Profile applicability<a class="headerlink" href="#profile-applicability_7" title="Link to this section">&para;</a></h5>
 <p>claims path pointer when applied to a JSON-based Credential</p>
-<h5 id="eudi-wallet-relevancy_7">EUDI-wallet relevancy</h5>
+<h5 id="eudi-wallet-relevancy_7">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_7" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="preconditions_7">Preconditions</h5>
+<h5 id="preconditions_7">Preconditions<a class="headerlink" href="#preconditions_7" title="Link to this section">&para;</a></h5>
 <p>Wallet has a credential:
 {
   "name": "Arthur Dent",
@@ -1426,7 +1488,7 @@ Credential Issuer uses other hashing functions than SHA-256.</p>
   ],
   "nationalities": ["British", "Betelgeusian"]
 }</p>
-<h5 id="test-scenario_7">Test Scenario</h5>
+<h5 id="test-scenario_7">Test Scenario<a class="headerlink" href="#test-scenario_7" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Engage wallet-verifier interaction.</li>
 <li>Verifier sends an Authorization Request with a DCQL query containing a claims path pointer where one element is a string (e.g. path: ["name"]).</li>
@@ -1435,7 +1497,7 @@ Credential Issuer uses other hashing functions than SHA-256.</p>
 <li>Wallet selects the claim value at the key indicated by the string element.</li>
 <li>Wallet generates and returns the Authorization Response.</li>
 </ol>
-<h5 id="expected-results_7">Expected results</h5>
+<h5 id="expected-results_7">Expected results<a class="headerlink" href="#expected-results_7" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
 <li>Wallet successfully receives the Authorization Request.</li>
@@ -1445,18 +1507,18 @@ Credential Issuer uses other hashing functions than SHA-256.</p>
 <li>Wallet returns an Authorization Response containing only the selected claim value.</li>
 </ol>
 <!-- END INCLUDE -->
-<h4 id="ws_rp_sh_encoding_textualencoding002">WS_RP_SH_Encoding_TextualEncoding002</h4>
-<h5 id="objective_8">Objective</h5>
+<h4 id="ws_rp_sh_encoding_textualencoding002">WS_RP_SH_Encoding_TextualEncoding002<a class="headerlink" href="#ws_rp_sh_encoding_textualencoding002" title="Link to this section">&para;</a></h4>
+<h5 id="objective_8">Objective<a class="headerlink" href="#objective_8" title="Link to this section">&para;</a></h5>
 <p>Test that a null value indicates that all elements of the currently selected array(s) are to be selected.</p>
-<h5 id="references_8">References</h5>
+<h5 id="references_8">References<a class="headerlink" href="#references_8" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[OpenID4VP] Section 7</li>
 </ul>
-<h5 id="profile-applicability_8">Profile applicability</h5>
+<h5 id="profile-applicability_8">Profile applicability<a class="headerlink" href="#profile-applicability_8" title="Link to this section">&para;</a></h5>
 <p>claims path pointer when applied to a JSON-based Credential</p>
-<h5 id="eudi-wallet-relevancy_8">EUDI-wallet relevancy</h5>
+<h5 id="eudi-wallet-relevancy_8">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_8" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="preconditions_8">Preconditions</h5>
+<h5 id="preconditions_8">Preconditions<a class="headerlink" href="#preconditions_8" title="Link to this section">&para;</a></h5>
 <p>{
   "name": "Arthur Dent",
   "address": {
@@ -1476,7 +1538,7 @@ Credential Issuer uses other hashing functions than SHA-256.</p>
   ],
   "nationalities": ["British", "Betelgeusian"]
 }</p>
-<h5 id="test-scenario_8">Test Scenario</h5>
+<h5 id="test-scenario_8">Test Scenario<a class="headerlink" href="#test-scenario_8" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Engage wallet-verifier interaction.</li>
 <li>Verifier sends an Authorization Request with a DCQL query containing a claims path pointer where one element is null and the currently selected element at that position is an array (e.g. path: ["degrees", null, "type"]).</li>
@@ -1485,7 +1547,7 @@ Credential Issuer uses other hashing functions than SHA-256.</p>
 <li>Wallet expands the null element to select all elements of the currently selected array(s).</li>
 <li>Wallet generates and returns the Authorization Response.</li>
 </ol>
-<h5 id="expected-results_8">Expected results</h5>
+<h5 id="expected-results_8">Expected results<a class="headerlink" href="#expected-results_8" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
 <li>Wallet successfully receives the Authorization Request.</li>
@@ -1495,18 +1557,18 @@ Credential Issuer uses other hashing functions than SHA-256.</p>
 <li>Wallet returns an Authorization Response containing all selected claim values.</li>
 </ol>
 <!-- END INCLUDE -->
-<h4 id="ws_rp_sh_encoding_textualencoding003">WS_RP_SH_Encoding_TextualEncoding003</h4>
-<h5 id="objective_9">Objective</h5>
+<h4 id="ws_rp_sh_encoding_textualencoding003">WS_RP_SH_Encoding_TextualEncoding003<a class="headerlink" href="#ws_rp_sh_encoding_textualencoding003" title="Link to this section">&para;</a></h4>
+<h5 id="objective_9">Objective<a class="headerlink" href="#objective_9" title="Link to this section">&para;</a></h5>
 <p>Test that a non-negative integer indicates that the respective index in an array is to be selected.</p>
-<h5 id="references_9">References</h5>
+<h5 id="references_9">References<a class="headerlink" href="#references_9" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[OpenID4VP] Section 7</li>
 </ul>
-<h5 id="profile-applicability_9">Profile applicability</h5>
+<h5 id="profile-applicability_9">Profile applicability<a class="headerlink" href="#profile-applicability_9" title="Link to this section">&para;</a></h5>
 <p>claims path pointer when applied to a JSON-based Credential</p>
-<h5 id="eudi-wallet-relevancy_9">EUDI-wallet relevancy</h5>
+<h5 id="eudi-wallet-relevancy_9">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_9" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="preconditions_9">Preconditions</h5>
+<h5 id="preconditions_9">Preconditions<a class="headerlink" href="#preconditions_9" title="Link to this section">&para;</a></h5>
 <p>{
   "name": "Arthur Dent",
   "address": {
@@ -1526,7 +1588,7 @@ Credential Issuer uses other hashing functions than SHA-256.</p>
   ],
   "nationalities": ["British", "Betelgeusian"]
 }</p>
-<h5 id="test-scenario_9">Test Scenario</h5>
+<h5 id="test-scenario_9">Test Scenario<a class="headerlink" href="#test-scenario_9" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Engage wallet-verifier interaction.</li>
 <li>Verifier sends an Authorization Request with a DCQL query containing a claims path pointer where one element is a non-negative integer and the currently selected element at that position is an array (e.g. path: ["nationalities", 1]).</li>
@@ -1535,7 +1597,7 @@ Credential Issuer uses other hashing functions than SHA-256.</p>
 <li>Wallet selects the array element at the index indicated by the integer.</li>
 <li>Wallet generates and returns the Authorization Response.</li>
 </ol>
-<h5 id="expected-results_9">Expected results</h5>
+<h5 id="expected-results_9">Expected results<a class="headerlink" href="#expected-results_9" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
 <li>Wallet successfully receives the Authorization Request.</li>
@@ -1545,18 +1607,18 @@ Credential Issuer uses other hashing functions than SHA-256.</p>
 <li>Wallet returns an Authorization Response containing only the selected array element value.</li>
 </ol>
 <!-- END INCLUDE -->
-<h4 id="ws_rp_sh_encoding_textualencoding004">WS_RP_SH_Encoding_TextualEncoding004</h4>
-<h5 id="objective_10">Objective</h5>
+<h4 id="ws_rp_sh_encoding_textualencoding004">WS_RP_SH_Encoding_TextualEncoding004<a class="headerlink" href="#ws_rp_sh_encoding_textualencoding004" title="Link to this section">&para;</a></h4>
+<h5 id="objective_10">Objective<a class="headerlink" href="#objective_10" title="Link to this section">&para;</a></h5>
 <p>Test that the claims path pointer array is processed left to right</p>
-<h5 id="references_10">References</h5>
+<h5 id="references_10">References<a class="headerlink" href="#references_10" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[OpenID4VP] Sections 7, 7.1.1</li>
 </ul>
-<h5 id="profile-applicability_10">Profile applicability</h5>
+<h5 id="profile-applicability_10">Profile applicability<a class="headerlink" href="#profile-applicability_10" title="Link to this section">&para;</a></h5>
 <p>claims path pointer when applied to a JSON-based Credential</p>
-<h5 id="eudi-wallet-relevancy_10">EUDI-wallet relevancy</h5>
+<h5 id="eudi-wallet-relevancy_10">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_10" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="preconditions_10">Preconditions</h5>
+<h5 id="preconditions_10">Preconditions<a class="headerlink" href="#preconditions_10" title="Link to this section">&para;</a></h5>
 <p>{
   "name": "Arthur Dent",
   "address": {
@@ -1576,14 +1638,14 @@ Credential Issuer uses other hashing functions than SHA-256.</p>
   ],
   "nationalities": ["British", "Betelgeusian"]
 }</p>
-<h5 id="test-scenario_10">Test Scenario</h5>
+<h5 id="test-scenario_10">Test Scenario<a class="headerlink" href="#test-scenario_10" title="Link to this section">&para;</a></h5>
 <ol>
 <li>The Wallet engages with the Verifier</li>
 <li>A Verifier sends a request With a DCQL-query with <code>path</code> array: ["street_address", "address"].</li>
 <li>Wallet handles request</li>
 <li>Wallet responds to request.</li>
 </ol>
-<h5 id="expected-results_10">Expected results</h5>
+<h5 id="expected-results_10">Expected results<a class="headerlink" href="#expected-results_10" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Wallet and Verifier can interact.</li>
 <li>Wallet receives the request.</li>
@@ -1591,27 +1653,27 @@ Credential Issuer uses other hashing functions than SHA-256.</p>
 <li>Verify the wallet responds with an error</li>
 </ol>
 <!-- END INCLUDE -->
-<h4 id="ws_rp_sh_encoding_textualencoding005">WS_RP_SH_Encoding_TextualEncoding005</h4>
-<h5 id="objective_11">Objective</h5>
+<h4 id="ws_rp_sh_encoding_textualencoding005">WS_RP_SH_Encoding_TextualEncoding005<a class="headerlink" href="#ws_rp_sh_encoding_textualencoding005" title="Link to this section">&para;</a></h4>
+<h5 id="objective_11">Objective<a class="headerlink" href="#objective_11" title="Link to this section">&para;</a></h5>
 <p>Test that the Wallet handles DCQL-query for SD-JWT VC credential with a matching top-level claim path pointer.</p>
-<h5 id="references_11">References</h5>
+<h5 id="references_11">References<a class="headerlink" href="#references_11" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[OpenID4VP] Sections 7, 7.1.1</li>
 </ul>
-<h5 id="profile-applicability_11">Profile applicability</h5>
+<h5 id="profile-applicability_11">Profile applicability<a class="headerlink" href="#profile-applicability_11" title="Link to this section">&para;</a></h5>
 <p>claims path pointer when applied to a JSON-based Credential</p>
-<h5 id="eudi-wallet-relevancy_11">EUDI-wallet relevancy</h5>
+<h5 id="eudi-wallet-relevancy_11">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_11" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="preconditions_11">Preconditions</h5>
+<h5 id="preconditions_11">Preconditions<a class="headerlink" href="#preconditions_11" title="Link to this section">&para;</a></h5>
 <p>The Wallet contains an attestation with a specific top-level attribute.</p>
-<h5 id="test-scenario_11">Test Scenario</h5>
+<h5 id="test-scenario_11">Test Scenario<a class="headerlink" href="#test-scenario_11" title="Link to this section">&para;</a></h5>
 <ol>
 <li>The Wallet engages with the Verifier</li>
 <li>A Verifier sends a request With a DCQL-query with a claims for the attestation with <code>path</code> with value an array containing the named attribute.</li>
 <li>Wallet handles request</li>
 <li>Wallet responds to request.</li>
 </ol>
-<h5 id="expected-results_11">Expected results</h5>
+<h5 id="expected-results_11">Expected results<a class="headerlink" href="#expected-results_11" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Wallet and Verifier can interact.</li>
 <li>Wallet receives the request.</li>
@@ -1619,27 +1681,27 @@ Credential Issuer uses other hashing functions than SHA-256.</p>
 <li>Verify the wallet responds with the credential, including selective disclosure of the named attribute.</li>
 </ol>
 <!-- END INCLUDE -->
-<h4 id="ws_rp_sh_encoding_textualencoding006">WS_RP_SH_Encoding_TextualEncoding006</h4>
-<h5 id="objective_12">Objective</h5>
+<h4 id="ws_rp_sh_encoding_textualencoding006">WS_RP_SH_Encoding_TextualEncoding006<a class="headerlink" href="#ws_rp_sh_encoding_textualencoding006" title="Link to this section">&para;</a></h4>
+<h5 id="objective_12">Objective<a class="headerlink" href="#objective_12" title="Link to this section">&para;</a></h5>
 <p>Test that the Wallet handles DCQL-query for SD-JWT VC credential with a non-matching top-level claim path pointer.</p>
-<h5 id="references_12">References</h5>
+<h5 id="references_12">References<a class="headerlink" href="#references_12" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[OpenID4VP] Sections 7, 7.1.1</li>
 </ul>
-<h5 id="profile-applicability_12">Profile applicability</h5>
+<h5 id="profile-applicability_12">Profile applicability<a class="headerlink" href="#profile-applicability_12" title="Link to this section">&para;</a></h5>
 <p>claims path pointer when applied to a JSON-based Credential</p>
-<h5 id="eudi-wallet-relevancy_12">EUDI-wallet relevancy</h5>
+<h5 id="eudi-wallet-relevancy_12">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_12" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="preconditions_12">Preconditions</h5>
+<h5 id="preconditions_12">Preconditions<a class="headerlink" href="#preconditions_12" title="Link to this section">&para;</a></h5>
 <p>The Wallet contains an attestation without a specific top-level attribute.</p>
-<h5 id="test-scenario_12">Test Scenario</h5>
+<h5 id="test-scenario_12">Test Scenario<a class="headerlink" href="#test-scenario_12" title="Link to this section">&para;</a></h5>
 <ol>
 <li>The Wallet engages with the Verifier</li>
 <li>A Verifier sends a request With a DCQL-query with a claims for the attestation with <code>path</code> with value an array containing the name of the specified top-level attribute</li>
 <li>Wallet handles request</li>
 <li>Wallet responds to request.</li>
 </ol>
-<h5 id="expected-results_12">Expected results</h5>
+<h5 id="expected-results_12">Expected results<a class="headerlink" href="#expected-results_12" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Wallet and Verifier can interact.</li>
 <li>Wallet receives the request.</li>
@@ -1650,18 +1712,18 @@ b. answering with an error without providing details or,
 c. discontinuing the interaction.</li>
 </ol>
 <!-- END INCLUDE -->
-<h4 id="ws_rp_sh_encoding_textualencoding007">WS_RP_SH_Encoding_TextualEncoding007</h4>
-<h5 id="objective_13">Objective</h5>
+<h4 id="ws_rp_sh_encoding_textualencoding007">WS_RP_SH_Encoding_TextualEncoding007<a class="headerlink" href="#ws_rp_sh_encoding_textualencoding007" title="Link to this section">&para;</a></h4>
+<h5 id="objective_13">Objective<a class="headerlink" href="#objective_13" title="Link to this section">&para;</a></h5>
 <p>Test that when processing claims path pointer array, an element at the first level is selected. If the selected element is not an object, abort processing and return an error</p>
-<h5 id="references_13">References</h5>
+<h5 id="references_13">References<a class="headerlink" href="#references_13" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[OpenID4VP] Sections 7.2.1, 7.3</li>
 </ul>
-<h5 id="profile-applicability_13">Profile applicability</h5>
+<h5 id="profile-applicability_13">Profile applicability<a class="headerlink" href="#profile-applicability_13" title="Link to this section">&para;</a></h5>
 <p>claims path pointer when applied to a JSON-based Credential</p>
-<h5 id="eudi-wallet-relevancy_13">EUDI-wallet relevancy</h5>
+<h5 id="eudi-wallet-relevancy_13">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_13" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="preconditions_13">Preconditions</h5>
+<h5 id="preconditions_13">Preconditions<a class="headerlink" href="#preconditions_13" title="Link to this section">&para;</a></h5>
 <p>The wallet contains the credentials
 {
   "name": "Arthur Dent",
@@ -1682,7 +1744,7 @@ c. discontinuing the interaction.</li>
   ],
   "nationalities": ["British", "Betelgeusian"]
 }</p>
-<h5 id="test-scenario_13">Test Scenario</h5>
+<h5 id="test-scenario_13">Test Scenario<a class="headerlink" href="#test-scenario_13" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Engage wallet-verifier interaction.</li>
 <li>Verifier sends an Authorization Request with a DCQL query containing a claims path pointer where a string element is applied to a value that is NOT a JSON object (e.g. claims path pointer: ["name", "firstname"] where name is a string).</li>
@@ -1690,7 +1752,7 @@ c. discontinuing the interaction.</li>
 <li>Wallet evaluates the claims path pointer against the matching JSON-based Credential.</li>
 <li>Wallet detects that the currently selected element is not an object when the string path element is applied.</li>
 </ol>
-<h5 id="expected-results_13">Expected results</h5>
+<h5 id="expected-results_13">Expected results<a class="headerlink" href="#expected-results_13" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
 <li>Wallet successfully receives the Authorization Request.</li>
@@ -1699,18 +1761,18 @@ c. discontinuing the interaction.</li>
 <li>Wallet aborts processing and returns an error (e.g. invalid_request); presentation flow is not initiated.</li>
 </ol>
 <!-- END INCLUDE -->
-<h4 id="ws_rp_sh_encoding_textualencoding008">WS_RP_SH_Encoding_TextualEncoding008</h4>
-<h5 id="objective_14">Objective</h5>
+<h4 id="ws_rp_sh_encoding_textualencoding008">WS_RP_SH_Encoding_TextualEncoding008<a class="headerlink" href="#ws_rp_sh_encoding_textualencoding008" title="Link to this section">&para;</a></h4>
+<h5 id="objective_14">Objective<a class="headerlink" href="#objective_14" title="Link to this section">&para;</a></h5>
 <p>Test the following condition when processing claims path pointer array is at step 2.1: if the key does not exist in element currently selected, remove that element from the selection.</p>
-<h5 id="references_14">References</h5>
+<h5 id="references_14">References<a class="headerlink" href="#references_14" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[OpenID4VP] Sections 7.2.1, 7.3</li>
 </ul>
-<h5 id="profile-applicability_14">Profile applicability</h5>
+<h5 id="profile-applicability_14">Profile applicability<a class="headerlink" href="#profile-applicability_14" title="Link to this section">&para;</a></h5>
 <p>claims path pointer when applied to a JSON-based Credential</p>
-<h5 id="eudi-wallet-relevancy_14">EUDI-wallet relevancy</h5>
+<h5 id="eudi-wallet-relevancy_14">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_14" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="preconditions_14">Preconditions</h5>
+<h5 id="preconditions_14">Preconditions<a class="headerlink" href="#preconditions_14" title="Link to this section">&para;</a></h5>
 <p>{
   "name": "Arthur Dent",
   "address": {
@@ -1729,7 +1791,7 @@ c. discontinuing the interaction.</li>
   ],
   "nationalities": ["British", "Betelgeusian"]
 }</p>
-<h5 id="test-scenario_14">Test Scenario</h5>
+<h5 id="test-scenario_14">Test Scenario<a class="headerlink" href="#test-scenario_14" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Engage wallet-verifier interaction. </li>
 <li>Verifier sends an Authorization Request with a DCQL query containing a claims path pointer where a string component targets a key that is absent from one or more currently selected element(s) (e.g. claims path pointer: ["degrees", null, "type"] where one entry of degrees has no type field).</li>
@@ -1738,7 +1800,7 @@ c. discontinuing the interaction.</li>
 <li>Wallet identifies element(s) where the targeted key is absent and removes them from the selection.</li>
 <li>Wallet generates and returns the Authorization Response.</li>
 </ol>
-<h5 id="expected-results_14">Expected results</h5>
+<h5 id="expected-results_14">Expected results<a class="headerlink" href="#expected-results_14" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
 <li>Wallet successfully receives the Authorization Request.</li>
@@ -1748,18 +1810,18 @@ c. discontinuing the interaction.</li>
 <li>Wallet returns an Authorization Response containing only the retained selected values; presentation flow proceeds.</li>
 </ol>
 <!-- END INCLUDE -->
-<h4 id="ws_rp_sh_encoding_textualencoding009">WS_RP_SH_Encoding_TextualEncoding009</h4>
-<h5 id="objective_15">Objective</h5>
+<h4 id="ws_rp_sh_encoding_textualencoding009">WS_RP_SH_Encoding_TextualEncoding009<a class="headerlink" href="#ws_rp_sh_encoding_textualencoding009" title="Link to this section">&para;</a></h4>
+<h5 id="objective_15">Objective<a class="headerlink" href="#objective_15" title="Link to this section">&para;</a></h5>
 <p>Test that at step 2.2 of claims path processing if any of the currently selected element(s) is not an array, abort processing and return an error.</p>
-<h5 id="references_15">References</h5>
+<h5 id="references_15">References<a class="headerlink" href="#references_15" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[OpenID4VP] Sections 7, 7.2.1, 7.3</li>
 </ul>
-<h5 id="profile-applicability_15">Profile applicability</h5>
+<h5 id="profile-applicability_15">Profile applicability<a class="headerlink" href="#profile-applicability_15" title="Link to this section">&para;</a></h5>
 <p>claims path pointer when applied to a JSON-based Credential</p>
-<h5 id="eudi-wallet-relevancy_15">EUDI-wallet relevancy</h5>
+<h5 id="eudi-wallet-relevancy_15">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_15" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="preconditions_15">Preconditions</h5>
+<h5 id="preconditions_15">Preconditions<a class="headerlink" href="#preconditions_15" title="Link to this section">&para;</a></h5>
 <p>{
   "name": "Arthur Dent",
   "address": {
@@ -1779,7 +1841,7 @@ c. discontinuing the interaction.</li>
   ],
   "nationalities": ["British", "Betelgeusian"]
 }</p>
-<h5 id="test-scenario_15">Test Scenario</h5>
+<h5 id="test-scenario_15">Test Scenario<a class="headerlink" href="#test-scenario_15" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Engage wallet-verifier interaction.</li>
 <li>Verifier sends an Authorization Request with a DCQL query containing a claims path pointer where a null component is applied to a currently selected element that is NOT an array (e.g. claims path pointer: ["address", null, "street_address"] where address is a JSON object rather than an array).</li>
@@ -1787,7 +1849,7 @@ c. discontinuing the interaction.</li>
 <li>Wallet evaluates the claims path pointer against the matching JSON-based Credential.</li>
 <li>Wallet detects that the currently selected element is not an array when the null component is applied.</li>
 </ol>
-<h5 id="expected-results_15">Expected results</h5>
+<h5 id="expected-results_15">Expected results<a class="headerlink" href="#expected-results_15" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
 <li>Wallet successfully receives the Authorization Request.</li>
@@ -1796,18 +1858,18 @@ c. discontinuing the interaction.</li>
 <li>Wallet aborts processing and returns an error (e.g. invalid_request) due to the null component being applied to a non-array element; presentation flow is not initiated.</li>
 </ol>
 <!-- END INCLUDE -->
-<h4 id="ws_rp_sh_encoding_textualencoding010">WS_RP_SH_Encoding_TextualEncoding010</h4>
-<h5 id="objective_16">Objective</h5>
+<h4 id="ws_rp_sh_encoding_textualencoding010">WS_RP_SH_Encoding_TextualEncoding010<a class="headerlink" href="#ws_rp_sh_encoding_textualencoding010" title="Link to this section">&para;</a></h4>
+<h5 id="objective_16">Objective<a class="headerlink" href="#objective_16" title="Link to this section">&para;</a></h5>
 <p>Test that at step 2.3 of claims path processing If any of the currently selected element(s) is not an array, abort processing and return an error.</p>
-<h5 id="references_16">References</h5>
+<h5 id="references_16">References<a class="headerlink" href="#references_16" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[OpenID4VP] Sections 7, 7.2.1, 7.3</li>
 </ul>
-<h5 id="profile-applicability_16">Profile applicability</h5>
+<h5 id="profile-applicability_16">Profile applicability<a class="headerlink" href="#profile-applicability_16" title="Link to this section">&para;</a></h5>
 <p>claims path pointer when applied to a JSON-based Credential</p>
-<h5 id="eudi-wallet-relevancy_16">EUDI-wallet relevancy</h5>
+<h5 id="eudi-wallet-relevancy_16">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_16" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="preconditions_16">Preconditions</h5>
+<h5 id="preconditions_16">Preconditions<a class="headerlink" href="#preconditions_16" title="Link to this section">&para;</a></h5>
 <p>{
   "name": "Arthur Dent",
   "address": {
@@ -1826,7 +1888,7 @@ c. discontinuing the interaction.</li>
   ],
   "nationalities": ["British", "Betelgeusian"]
 }</p>
-<h5 id="test-scenario_16">Test Scenario</h5>
+<h5 id="test-scenario_16">Test Scenario<a class="headerlink" href="#test-scenario_16" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Engage wallet-verifier interaction.</li>
 <li>Verifier sends an Authorization Request with a DCQL query containing a claims path pointer where a non-negative integer component is applied to a currently selected element that is NOT an array (e.g. claims path pointer: ["address", "house_no", null] where house_no is a string).</li>
@@ -1834,7 +1896,7 @@ c. discontinuing the interaction.</li>
 <li>Wallet evaluates the claims path pointer against the matching JSON-based Credential.</li>
 <li>Wallet detects that the currently selected element is not an array when the integer component is applied.</li>
 </ol>
-<h5 id="expected-results_16">Expected results</h5>
+<h5 id="expected-results_16">Expected results<a class="headerlink" href="#expected-results_16" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
 <li>Wallet successfully receives the Authorization Request.</li>
@@ -1843,25 +1905,25 @@ c. discontinuing the interaction.</li>
 <li>Wallet aborts processing and returns an error (e.g. invalid_request) due to the integer component being applied to a non-array element; presentation flow is not initiated.</li>
 </ol>
 <!-- END INCLUDE -->
-<h4 id="ws_rp_sh_encoding_textualencoding011">WS_RP_SH_Encoding_TextualEncoding011</h4>
-<h5 id="objective_17">Objective</h5>
+<h4 id="ws_rp_sh_encoding_textualencoding011">WS_RP_SH_Encoding_TextualEncoding011<a class="headerlink" href="#ws_rp_sh_encoding_textualencoding011" title="Link to this section">&para;</a></h4>
+<h5 id="objective_17">Objective<a class="headerlink" href="#objective_17" title="Link to this section">&para;</a></h5>
 <p>Test that at step 2.3 of claims path processing, if the index does not exist in a selected array, remove that array from the selection. </p>
-<h5 id="references_17">References</h5>
+<h5 id="references_17">References<a class="headerlink" href="#references_17" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[OpenID4VP] Sections 7, 7.2.1, 7.3</li>
 </ul>
-<h5 id="profile-applicability_17">Profile applicability</h5>
+<h5 id="profile-applicability_17">Profile applicability<a class="headerlink" href="#profile-applicability_17" title="Link to this section">&para;</a></h5>
 <p>claims path pointer when applied to a JSON-based Credential</p>
-<h5 id="eudi-wallet-relevancy_17">EUDI-wallet relevancy</h5>
+<h5 id="eudi-wallet-relevancy_17">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_17" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="preconditions_17">Preconditions</h5>
+<h5 id="preconditions_17">Preconditions<a class="headerlink" href="#preconditions_17" title="Link to this section">&para;</a></h5>
 <p>{
   "degrees": [
     ["Bachelor of Science"], 
     ["Master of Science", "Ph.D."]
   ]
 }</p>
-<h5 id="test-scenario_17">Test Scenario</h5>
+<h5 id="test-scenario_17">Test Scenario<a class="headerlink" href="#test-scenario_17" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Engage wallet-verifier interaction.</li>
 <li>Verifier sends an Authorization Request with a DCQL query containing a claims path pointer where a non-negative integer index is applied to selected array(s), and the index is out of range for at least one of those arrays (e.g. path: ["degrees", null, 1] where some degrees entries have only one element).</li>
@@ -1870,7 +1932,7 @@ c. discontinuing the interaction.</li>
 <li>Wallet identifies array(s) where the requested index is out of range and removes them from the selection.</li>
 <li>Wallet generates and returns the Authorization Response.</li>
 </ol>
-<h5 id="expected-results_17">Expected results</h5>
+<h5 id="expected-results_17">Expected results<a class="headerlink" href="#expected-results_17" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
 <li>Wallet successfully receives the Authorization Request.</li>
@@ -1880,18 +1942,18 @@ c. discontinuing the interaction.</li>
 <li>Wallet returns an Authorization Response containing only the retained selected values; presentation flow proceeds.</li>
 </ol>
 <!-- END INCLUDE -->
-<h4 id="ws_rp_sh_encoding_textualencoding012">WS_RP_SH_Encoding_TextualEncoding012</h4>
-<h5 id="objective_18">Objective</h5>
+<h4 id="ws_rp_sh_encoding_textualencoding012">WS_RP_SH_Encoding_TextualEncoding012<a class="headerlink" href="#ws_rp_sh_encoding_textualencoding012" title="Link to this section">&para;</a></h4>
+<h5 id="objective_18">Objective<a class="headerlink" href="#objective_18" title="Link to this section">&para;</a></h5>
 <p>Test that at step 2.4 of claims path processing if the component is anything else, the wallet should abort processing and return an error.</p>
-<h5 id="references_18">References</h5>
+<h5 id="references_18">References<a class="headerlink" href="#references_18" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[OpenID4VP] Sections 7, 7.2.1, 7.3</li>
 </ul>
-<h5 id="profile-applicability_18">Profile applicability</h5>
+<h5 id="profile-applicability_18">Profile applicability<a class="headerlink" href="#profile-applicability_18" title="Link to this section">&para;</a></h5>
 <p>claims path pointer when applied to a JSON-based Credential</p>
-<h5 id="eudi-wallet-relevancy_18">EUDI-wallet relevancy</h5>
+<h5 id="eudi-wallet-relevancy_18">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_18" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="preconditions_18">Preconditions</h5>
+<h5 id="preconditions_18">Preconditions<a class="headerlink" href="#preconditions_18" title="Link to this section">&para;</a></h5>
 <p>{
   "address": {
     "street": {
@@ -1901,7 +1963,7 @@ c. discontinuing the interaction.</li>
     }
   }
 }</p>
-<h5 id="test-scenario_18">Test Scenario</h5>
+<h5 id="test-scenario_18">Test Scenario<a class="headerlink" href="#test-scenario_18" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Engage wallet-verifier interaction.</li>
 <li>Verifier sends an Authorization Request with a DCQL query containing a claims path pointer with a component of an unsupported type (e.g. path: ["address", "street", false]).</li>
@@ -1909,7 +1971,7 @@ c. discontinuing the interaction.</li>
 <li>Wallet validates the structure of the claims path pointer.</li>
 <li>Wallet detects a component of an unsupported type.</li>
 </ol>
-<h5 id="expected-results_18">Expected results</h5>
+<h5 id="expected-results_18">Expected results<a class="headerlink" href="#expected-results_18" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
 <li>Wallet successfully receives the Authorization Request.</li>
@@ -1918,18 +1980,18 @@ c. discontinuing the interaction.</li>
 <li>Wallet aborts processing and returns an error (e.g. invalid_request) due to an unsupported component type in the claims path pointer; presentation flow is not initiated.</li>
 </ol>
 <!-- END INCLUDE -->
-<h4 id="ws_rp_sh_encoding_textualencoding013">WS_RP_SH_Encoding_TextualEncoding013</h4>
-<h5 id="objective_19">Objective</h5>
+<h4 id="ws_rp_sh_encoding_textualencoding013">WS_RP_SH_Encoding_TextualEncoding013<a class="headerlink" href="#ws_rp_sh_encoding_textualencoding013" title="Link to this section">&para;</a></h4>
+<h5 id="objective_19">Objective<a class="headerlink" href="#objective_19" title="Link to this section">&para;</a></h5>
 <p>Test that at Step 3 of claims path processing, if the set of elements currently selected is empty, abort processing and return an error. </p>
-<h5 id="references_19">References</h5>
+<h5 id="references_19">References<a class="headerlink" href="#references_19" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[OpenID4VP] Sections 7, 7.2.1, 7.3</li>
 </ul>
-<h5 id="profile-applicability_19">Profile applicability</h5>
+<h5 id="profile-applicability_19">Profile applicability<a class="headerlink" href="#profile-applicability_19" title="Link to this section">&para;</a></h5>
 <p>claims path pointer when applied to a JSON-based Credential</p>
-<h5 id="eudi-wallet-relevancy_19">EUDI-wallet relevancy</h5>
+<h5 id="eudi-wallet-relevancy_19">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_19" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="preconditions_19">Preconditions</h5>
+<h5 id="preconditions_19">Preconditions<a class="headerlink" href="#preconditions_19" title="Link to this section">&para;</a></h5>
 <p>{
   "address": {
     "street": {
@@ -1939,7 +2001,7 @@ c. discontinuing the interaction.</li>
     }
   }
 }</p>
-<h5 id="test-scenario_19">Test Scenario</h5>
+<h5 id="test-scenario_19">Test Scenario<a class="headerlink" href="#test-scenario_19" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Engage wallet-verifier interaction.</li>
 <li>Verifier sends an Authorization Request with a DCQL query whose claims path pointer resolves to an empty set against the matching Credential (e.g. claims path pointer: ["address", "postal_code"] where the Credential has no postal_code field under address).</li>
@@ -1947,7 +2009,7 @@ c. discontinuing the interaction.</li>
 <li>Wallet evaluates the claims path pointer against the matching JSON-based Credential.</li>
 <li>Wallet observes that the resulting set of selected JSON elements is empty.</li>
 </ol>
-<h5 id="expected-results_19">Expected results</h5>
+<h5 id="expected-results_19">Expected results<a class="headerlink" href="#expected-results_19" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
 <li>Wallet successfully receives the Authorization Request.</li>
@@ -1956,20 +2018,20 @@ c. discontinuing the interaction.</li>
 <li>Wallet aborts processing and returns an error (e.g. invalid_request) because the set of selected JSON elements is empty; presentation flow is not initiated.</li>
 </ol>
 <!-- END INCLUDE -->
-<h4 id="ws_rp_sh_encoding_textualencoding014">WS_RP_SH_Encoding_TextualEncoding014</h4>
-<h5 id="objective_20">Objective</h5>
+<h4 id="ws_rp_sh_encoding_textualencoding014">WS_RP_SH_Encoding_TextualEncoding014<a class="headerlink" href="#ws_rp_sh_encoding_textualencoding014" title="Link to this section">&para;</a></h4>
+<h5 id="objective_20">Objective<a class="headerlink" href="#objective_20" title="Link to this section">&para;</a></h5>
 <p>Verify that when the Wallet receives a DCQL query with a claims path pointer applied to an ISO mdoc Credential, where the path is a two-element array containing a valid namespace and a valid data element identifier, the Wallet selects the corresponding data element and returns it CBOR-encoded in the Authorization Response.</p>
-<h5 id="references_20">References</h5>
+<h5 id="references_20">References<a class="headerlink" href="#references_20" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[OpenID4VP] Sections 7, 7.2, 7.4</li>
 </ul>
-<h5 id="profile-applicability_20">Profile applicability</h5>
+<h5 id="profile-applicability_20">Profile applicability<a class="headerlink" href="#profile-applicability_20" title="Link to this section">&para;</a></h5>
 <p>claims path pointer when applied to a credential in ISO mdoc</p>
-<h5 id="eudi-wallet-relevancy_20">EUDI-wallet relevancy</h5>
+<h5 id="eudi-wallet-relevancy_20">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_20" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="preconditions_20">Preconditions</h5>
+<h5 id="preconditions_20">Preconditions<a class="headerlink" href="#preconditions_20" title="Link to this section">&para;</a></h5>
 <p>The wallet has an ISO mdoc credential with data element specified in verifier request</p>
-<h5 id="test-scenario_20">Test Scenario</h5>
+<h5 id="test-scenario_20">Test Scenario<a class="headerlink" href="#test-scenario_20" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Engage wallet-verifier interaction.</li>
 <li>Verifier sends an Authorization Request with a DCQL query containing a claims path pointer path: ["org.iso.18013.5.1", "first_name"] applied to an ISO mdoc Credential.</li>
@@ -1978,7 +2040,7 @@ c. discontinuing the interaction.</li>
 <li>Wallet selects the matching data element value and CBOR-encodes it.</li>
 <li>Wallet generates and returns the Authorization Response.</li>
 </ol>
-<h5 id="expected-results_20">Expected results</h5>
+<h5 id="expected-results_20">Expected results<a class="headerlink" href="#expected-results_20" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
 <li>Wallet successfully receives the Authorization Request.</li>
@@ -1988,20 +2050,20 @@ c. discontinuing the interaction.</li>
 <li>Wallet returns an Authorization Response containing the selected first_name value CBOR-encoded; presentation flow proceeds.</li>
 </ol>
 <!-- END INCLUDE -->
-<h4 id="ws_rp_sh_encoding_textualencoding015">WS_RP_SH_Encoding_TextualEncoding015</h4>
-<h5 id="objective_21">Objective</h5>
+<h4 id="ws_rp_sh_encoding_textualencoding015">WS_RP_SH_Encoding_TextualEncoding015<a class="headerlink" href="#ws_rp_sh_encoding_textualencoding015" title="Link to this section">&para;</a></h4>
+<h5 id="objective_21">Objective<a class="headerlink" href="#objective_21" title="Link to this section">&para;</a></h5>
 <p>Test that the first element of mdoc claims path pointer refers to a namespace.</p>
-<h5 id="references_21">References</h5>
+<h5 id="references_21">References<a class="headerlink" href="#references_21" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[OpenID4VP] Sections 7, 7.2, 7.4</li>
 </ul>
-<h5 id="profile-applicability_21">Profile applicability</h5>
+<h5 id="profile-applicability_21">Profile applicability<a class="headerlink" href="#profile-applicability_21" title="Link to this section">&para;</a></h5>
 <p>claims path pointer when applied to a credential in ISO mdoc</p>
-<h5 id="eudi-wallet-relevancy_21">EUDI-wallet relevancy</h5>
+<h5 id="eudi-wallet-relevancy_21">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_21" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="preconditions_21">Preconditions</h5>
+<h5 id="preconditions_21">Preconditions<a class="headerlink" href="#preconditions_21" title="Link to this section">&para;</a></h5>
 <p>The wallet has an ISO mdoc credential with data element specified in verifier request</p>
-<h5 id="test-scenario_21">Test Scenario</h5>
+<h5 id="test-scenario_21">Test Scenario<a class="headerlink" href="#test-scenario_21" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Engage wallet-verifier interaction.</li>
 <li>Verifier sends an Authorization Request with a DCQL query containing a claims path pointer path: ["org.iso.18013.5.1", "first_name"].</li>
@@ -2010,7 +2072,7 @@ c. discontinuing the interaction.</li>
 <li>Wallet selects the data element identified by the second element within that namespace.</li>
 <li>Wallet generates and returns the Authorization Response.</li>
 </ol>
-<h5 id="expected-results_21">Expected results</h5>
+<h5 id="expected-results_21">Expected results<a class="headerlink" href="#expected-results_21" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
 <li>Wallet successfully receives the Authorization Request.</li>
@@ -2020,24 +2082,24 @@ c. discontinuing the interaction.</li>
 <li>Wallet returns an Authorization Response containing the first_name value CBOR-encoded; presentation flow proceeds.</li>
 </ol>
 <!-- END INCLUDE -->
-<h4 id="ws_rp_sh_encoding_textualencoding016">WS_RP_SH_Encoding_TextualEncoding016</h4>
-<h5 id="objective_22">Objective</h5>
+<h4 id="ws_rp_sh_encoding_textualencoding016">WS_RP_SH_Encoding_TextualEncoding016<a class="headerlink" href="#ws_rp_sh_encoding_textualencoding016" title="Link to this section">&para;</a></h4>
+<h5 id="objective_22">Objective<a class="headerlink" href="#objective_22" title="Link to this section">&para;</a></h5>
 <p>Verify that if the first element of the path does not match any namespace in the mdoc, the Wallet aborts and returns an error.</p>
-<h5 id="references_22">References</h5>
+<h5 id="references_22">References<a class="headerlink" href="#references_22" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[OpenID4VP] Sections 7, 7.2.1 step 2, 7.4</li>
 </ul>
-<h5 id="profile-applicability_22">Profile applicability</h5>
+<h5 id="profile-applicability_22">Profile applicability<a class="headerlink" href="#profile-applicability_22" title="Link to this section">&para;</a></h5>
 <p>claims path pointer when applied to a credential in ISO mdoc</p>
-<h5 id="eudi-wallet-relevancy_22">EUDI-wallet relevancy</h5>
+<h5 id="eudi-wallet-relevancy_22">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_22" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="preconditions_22">Preconditions</h5>
+<h5 id="preconditions_22">Preconditions<a class="headerlink" href="#preconditions_22" title="Link to this section">&para;</a></h5>
 <p>{
   "org.iso.18013.5.1": {
     "first_name": "Alice"
   }
 }</p>
-<h5 id="test-scenario_22">Test Scenario</h5>
+<h5 id="test-scenario_22">Test Scenario<a class="headerlink" href="#test-scenario_22" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Engage wallet-verifier interaction.</li>
 <li>Verifier sends an Authorization Request with a DCQL query containing a claims path pointer path: ["org.iso.18013.5.1", "first_name"] whose first element does NOT match any namespace in the Credential.</li>
@@ -2045,7 +2107,7 @@ c. discontinuing the interaction.</li>
 <li>Wallet attempts to locate the namespace identified by the first element in the mdoc Credential.</li>
 <li>Wallet detects that no matching namespace exists.</li>
 </ol>
-<h5 id="expected-results_22">Expected results</h5>
+<h5 id="expected-results_22">Expected results<a class="headerlink" href="#expected-results_22" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
 <li>Wallet successfully receives the Authorization Request.</li>
@@ -2054,24 +2116,24 @@ c. discontinuing the interaction.</li>
 <li>Wallet aborts processing and returns an error (e.g. invalid_request) due to the namespace not being present in the mdoc Credential; presentation flow is not initiated.</li>
 </ol>
 <!-- END INCLUDE -->
-<h4 id="ws_rp_sh_encoding_textualencoding017">WS_RP_SH_Encoding_TextualEncoding017</h4>
-<h5 id="objective_23">Objective</h5>
+<h4 id="ws_rp_sh_encoding_textualencoding017">WS_RP_SH_Encoding_TextualEncoding017<a class="headerlink" href="#ws_rp_sh_encoding_textualencoding017" title="Link to this section">&para;</a></h4>
+<h5 id="objective_23">Objective<a class="headerlink" href="#objective_23" title="Link to this section">&para;</a></h5>
 <p>Test that the second element of mdoc claims path pointer refers to a data element identifier.</p>
-<h5 id="references_23">References</h5>
+<h5 id="references_23">References<a class="headerlink" href="#references_23" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[OpenID4VP] Section 7</li>
 </ul>
-<h5 id="profile-applicability_23">Profile applicability</h5>
+<h5 id="profile-applicability_23">Profile applicability<a class="headerlink" href="#profile-applicability_23" title="Link to this section">&para;</a></h5>
 <p>claims path pointer when applied to a credential in ISO mdoc</p>
-<h5 id="eudi-wallet-relevancy_23">EUDI-wallet relevancy</h5>
+<h5 id="eudi-wallet-relevancy_23">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_23" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="preconditions_23">Preconditions</h5>
+<h5 id="preconditions_23">Preconditions<a class="headerlink" href="#preconditions_23" title="Link to this section">&para;</a></h5>
 <p>{
   "org.iso.18013.5.1": {
     "first_name": "Alice"
   }
 }</p>
-<h5 id="test-scenario_23">Test Scenario</h5>
+<h5 id="test-scenario_23">Test Scenario<a class="headerlink" href="#test-scenario_23" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Engage wallet-verifier interaction.</li>
 <li>Verifier sends an Authorization Request with a DCQL query containing a claims path pointer path: ["org.iso.18013.5.1", "first_name"].</li>
@@ -2079,7 +2141,7 @@ c. discontinuing the interaction.</li>
 <li>Wallet resolves the namespace from the first element.</li>
 <li>Wallet looks up the data element identifier (second element) within that namespace and selects its value.6. Wallet generates and returns the Authorization Response.</li>
 </ol>
-<h5 id="expected-results_23">Expected results</h5>
+<h5 id="expected-results_23">Expected results<a class="headerlink" href="#expected-results_23" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
 <li>Wallet successfully receives the Authorization Request.</li>
@@ -2089,27 +2151,27 @@ c. discontinuing the interaction.</li>
 <li>Wallet returns an Authorization Response containing the value "Alice" CBOR-encoded; presentation flow proceeds.</li>
 </ol>
 <!-- END INCLUDE -->
-<h4 id="ws_rp_sh_encoding_textualencoding018">WS_RP_SH_Encoding_TextualEncoding018</h4>
-<h5 id="objective_24">Objective</h5>
+<h4 id="ws_rp_sh_encoding_textualencoding018">WS_RP_SH_Encoding_TextualEncoding018<a class="headerlink" href="#ws_rp_sh_encoding_textualencoding018" title="Link to this section">&para;</a></h4>
+<h5 id="objective_24">Objective<a class="headerlink" href="#objective_24" title="Link to this section">&para;</a></h5>
 <p>Test that the claims path pointer does not contain exactly two components then abort processing and return an error.</p>
-<h5 id="references_24">References</h5>
+<h5 id="references_24">References<a class="headerlink" href="#references_24" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[OpenID4VP] Section 7</li>
 </ul>
-<h5 id="profile-applicability_24">Profile applicability</h5>
+<h5 id="profile-applicability_24">Profile applicability<a class="headerlink" href="#profile-applicability_24" title="Link to this section">&para;</a></h5>
 <p>claims path pointer when applied to a credential in ISO mdoc</p>
-<h5 id="eudi-wallet-relevancy_24">EUDI-wallet relevancy</h5>
+<h5 id="eudi-wallet-relevancy_24">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_24" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="preconditions_24">Preconditions</h5>
+<h5 id="preconditions_24">Preconditions<a class="headerlink" href="#preconditions_24" title="Link to this section">&para;</a></h5>
 <p>none</p>
-<h5 id="test-scenario_24">Test Scenario</h5>
+<h5 id="test-scenario_24">Test Scenario<a class="headerlink" href="#test-scenario_24" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Engage wallet-verifier interaction.</li>
 <li>Verifier sends an Authorization Request with a DCQL query containing a claims path pointer with a wrong number of components for an mdoc (e.g. path: ["org.iso.18013.5.1"]).</li>
 <li>Wallet parses the Authorization Request and validates the structure of the claims path pointer.</li>
 <li>Wallet detects the wrong number of components.</li>
 </ol>
-<h5 id="expected-results_24">Expected results</h5>
+<h5 id="expected-results_24">Expected results<a class="headerlink" href="#expected-results_24" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
 <li>Wallet successfully receives the Authorization Request.</li>
@@ -2117,27 +2179,27 @@ c. discontinuing the interaction.</li>
 <li>Wallet aborts processing and returns an error (e.g. invalid_request) due to the path not containing exactly two components; presentation flow is not initiated.</li>
 </ol>
 <!-- END INCLUDE -->
-<h4 id="ws_rp_sh_encoding_textualencoding019">WS_RP_SH_Encoding_TextualEncoding019</h4>
-<h5 id="objective_25">Objective</h5>
+<h4 id="ws_rp_sh_encoding_textualencoding019">WS_RP_SH_Encoding_TextualEncoding019<a class="headerlink" href="#ws_rp_sh_encoding_textualencoding019" title="Link to this section">&para;</a></h4>
+<h5 id="objective_25">Objective<a class="headerlink" href="#objective_25" title="Link to this section">&para;</a></h5>
 <p>Test that the claims path pointer is not a string then abort processing and return an error.</p>
-<h5 id="references_25">References</h5>
+<h5 id="references_25">References<a class="headerlink" href="#references_25" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[OpenID4VP] Section 7</li>
 </ul>
-<h5 id="profile-applicability_25">Profile applicability</h5>
+<h5 id="profile-applicability_25">Profile applicability<a class="headerlink" href="#profile-applicability_25" title="Link to this section">&para;</a></h5>
 <p>claims path pointer when applied to a credential in ISO mdoc</p>
-<h5 id="eudi-wallet-relevancy_25">EUDI-wallet relevancy</h5>
+<h5 id="eudi-wallet-relevancy_25">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_25" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="preconditions_25">Preconditions</h5>
+<h5 id="preconditions_25">Preconditions<a class="headerlink" href="#preconditions_25" title="Link to this section">&para;</a></h5>
 <p>none</p>
-<h5 id="test-scenario_25">Test Scenario</h5>
+<h5 id="test-scenario_25">Test Scenario<a class="headerlink" href="#test-scenario_25" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Engage wallet-verifier interaction.</li>
 <li>Verifier sends an Authorization Request with a DCQL query containing a claims path pointer where a component is not a string (e.g. path: ["org.iso.18013.5.1", 123]).</li>
 <li>Wallet parses the Authorization Request and validates the structure of the claims path pointer.</li>
 <li>Wallet detects a non-string component.</li>
 </ol>
-<h5 id="expected-results_25">Expected results</h5>
+<h5 id="expected-results_25">Expected results<a class="headerlink" href="#expected-results_25" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
 <li>Wallet successfully receives the Authorization Request.</li>
@@ -2145,31 +2207,31 @@ c. discontinuing the interaction.</li>
 <li>Wallet aborts processing and returns an error (e.g. invalid_request) due to a non-string component in the mdoc claims path pointer; presentation flow is not initiated.</li>
 </ol>
 <!-- END INCLUDE -->
-<h4 id="ws_rp_sh_encoding_textualencoding020">WS_RP_SH_Encoding_TextualEncoding020</h4>
-<h5 id="objective_26">Objective</h5>
+<h4 id="ws_rp_sh_encoding_textualencoding020">WS_RP_SH_Encoding_TextualEncoding020<a class="headerlink" href="#ws_rp_sh_encoding_textualencoding020" title="Link to this section">&para;</a></h4>
+<h5 id="objective_26">Objective<a class="headerlink" href="#objective_26" title="Link to this section">&para;</a></h5>
 <p>Test claims path pointer processing by selecting the data element referenced by the second component. If the data element does not exist in the Credential it MUST abort processing and return an error.</p>
-<h5 id="references_26">References</h5>
+<h5 id="references_26">References<a class="headerlink" href="#references_26" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[OpenID4VP] Section 7</li>
 </ul>
-<h5 id="profile-applicability_26">Profile applicability</h5>
+<h5 id="profile-applicability_26">Profile applicability<a class="headerlink" href="#profile-applicability_26" title="Link to this section">&para;</a></h5>
 <p>claims path pointer when applied to a credential in ISO mdoc</p>
-<h5 id="eudi-wallet-relevancy_26">EUDI-wallet relevancy</h5>
+<h5 id="eudi-wallet-relevancy_26">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_26" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="preconditions_26">Preconditions</h5>
+<h5 id="preconditions_26">Preconditions<a class="headerlink" href="#preconditions_26" title="Link to this section">&para;</a></h5>
 <p>{
   "org.iso.18013.5.1": {
     "first_name": "Alice"
   }
 }</p>
-<h5 id="test-scenario_26">Test Scenario</h5>
+<h5 id="test-scenario_26">Test Scenario<a class="headerlink" href="#test-scenario_26" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Engage wallet-verifier interaction.</li>
 <li>Verifier sends an Authorization Request with a DCQL query containing a claims path pointer where the second component does not exist within the resolved namespace (e.g. path: ["org.iso.18013.5.1", "Bob"]).</li>
 <li>Wallet parses the Authorization Request, resolves the namespace, and looks up the data element identifier within it.</li>
 <li>Wallet detects that the data element is not present.</li>
 </ol>
-<h5 id="expected-results_26">Expected results</h5>
+<h5 id="expected-results_26">Expected results<a class="headerlink" href="#expected-results_26" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
 <li>Wallet successfully receives the Authorization Request.</li>
@@ -2177,31 +2239,31 @@ c. discontinuing the interaction.</li>
 <li>Wallet aborts processing and returns an error (e.g. invalid_request) because the data element identifier is not present in the namespace; presentation flow is not initiated.</li>
 </ol>
 <!-- END INCLUDE -->
-<h4 id="ws_rp_sh_encoding_textualencoding021">WS_RP_SH_Encoding_TextualEncoding021</h4>
-<h5 id="objective_27">Objective</h5>
+<h4 id="ws_rp_sh_encoding_textualencoding021">WS_RP_SH_Encoding_TextualEncoding021<a class="headerlink" href="#ws_rp_sh_encoding_textualencoding021" title="Link to this section">&para;</a></h4>
+<h5 id="objective_27">Objective<a class="headerlink" href="#objective_27" title="Link to this section">&para;</a></h5>
 <p>Verify that the wallet can successfully select the data element references by the second component of a claims path pointer.</p>
-<h5 id="references_27">References</h5>
+<h5 id="references_27">References<a class="headerlink" href="#references_27" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[OpenID4VP] Section 7</li>
 </ul>
-<h5 id="profile-applicability_27">Profile applicability</h5>
+<h5 id="profile-applicability_27">Profile applicability<a class="headerlink" href="#profile-applicability_27" title="Link to this section">&para;</a></h5>
 <p>claims path pointer when applied to a credential in ISO mdoc</p>
-<h5 id="eudi-wallet-relevancy_27">EUDI-wallet relevancy</h5>
+<h5 id="eudi-wallet-relevancy_27">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_27" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="preconditions_27">Preconditions</h5>
+<h5 id="preconditions_27">Preconditions<a class="headerlink" href="#preconditions_27" title="Link to this section">&para;</a></h5>
 <p>{
   "org.iso.18013.5.1": {
     "first_name": "Alice"
   }
 }</p>
-<h5 id="test-scenario_27">Test Scenario</h5>
+<h5 id="test-scenario_27">Test Scenario<a class="headerlink" href="#test-scenario_27" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Engage wallet-verifier interaction.</li>
 <li>Verifier sends an Authorization Request with a DCQL query containing a claims path pointer path: ["org.iso.18013.5.1", "first_name"].</li>
 <li>Wallet parses the Authorization Request, resolves the namespace, and selects the data element value within it.</li>
 <li>Wallet CBOR-encodes the value and returns it in the Authorization Response.</li>
 </ol>
-<h5 id="expected-results_27">Expected results</h5>
+<h5 id="expected-results_27">Expected results<a class="headerlink" href="#expected-results_27" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
 <li>Wallet successfully receives the Authorization Request.</li>
@@ -2209,27 +2271,27 @@ c. discontinuing the interaction.</li>
 <li>Wallet returns an Authorization Response containing "Alice" CBOR-encoded; presentation flow proceeds.</li>
 </ol>
 <!-- END INCLUDE -->
-<h4 id="ws_rp_sh_encoding_textualencoding022">WS_RP_SH_Encoding_TextualEncoding022</h4>
-<h5 id="objective_28">Objective</h5>
+<h4 id="ws_rp_sh_encoding_textualencoding022">WS_RP_SH_Encoding_TextualEncoding022<a class="headerlink" href="#ws_rp_sh_encoding_textualencoding022" title="Link to this section">&para;</a></h4>
+<h5 id="objective_28">Objective<a class="headerlink" href="#objective_28" title="Link to this section">&para;</a></h5>
 <p>Test that when the wallet sends the authorization response using HTTP POST, the names and values in the body MUST be encoded using UTF-8</p>
-<h5 id="references_28">References</h5>
+<h5 id="references_28">References<a class="headerlink" href="#references_28" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[OpenID4VP] Section 8</li>
 </ul>
-<h5 id="profile-applicability_28">Profile applicability</h5>
+<h5 id="profile-applicability_28">Profile applicability<a class="headerlink" href="#profile-applicability_28" title="Link to this section">&para;</a></h5>
 <p>none</p>
-<h5 id="eudi-wallet-relevancy_28">EUDI-wallet relevancy</h5>
+<h5 id="eudi-wallet-relevancy_28">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_28" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="preconditions_28">Preconditions</h5>
+<h5 id="preconditions_28">Preconditions<a class="headerlink" href="#preconditions_28" title="Link to this section">&para;</a></h5>
 <p>Wallet has a credential containing non-ASCII characters</p>
-<h5 id="test-scenario_28">Test Scenario</h5>
+<h5 id="test-scenario_28">Test Scenario<a class="headerlink" href="#test-scenario_28" title="Link to this section">&para;</a></h5>
 <ol>
 <li>The wallet engages with the verifier.</li>
 <li>The verifier sends an Authorization request to the wallet, with response mode=direct_post.jwt, requesting the non_ASCII credential</li>
 <li>Wallet processes request</li>
 <li>Test the HTTP POST body sent by wallet</li>
 </ol>
-<h5 id="expected-results_28">Expected results</h5>
+<h5 id="expected-results_28">Expected results<a class="headerlink" href="#expected-results_28" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated</li>
 <li>Wallet receives request</li>
@@ -2277,6 +2339,10 @@ c. discontinuing the interaction.</li>
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
+    <div class="md-copyright__highlight">
+      European Union, 2025 - Licensed under the EUPL-1.2 or later
+    </div>
+  
   
     Made with
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
@@ -2298,14 +2364,10 @@ c. discontinuing the interaction.</li>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.top", "navigation.footer", "navigation.indexes", "toc.integrate", "toc.follow"], "search": "../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.indexes", "navigation.top", "navigation.footer", "navigation.tracking", "toc.integrate", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.action.edit", "content.action.view", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
       <script src="../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
-      
-        <script src="../../../../../assets/external/unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
-      
-        <script src="../../../../../javascripts/mermaid-init.js"></script>
       
     
   </body>
