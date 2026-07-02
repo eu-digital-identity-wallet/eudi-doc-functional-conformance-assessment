@@ -1,61 +1,20 @@
 # Changelog
 
-This is the **framework & site** changelog - build/CI, MkDocs configuration, styling, templates,
-governance and other scaffolding outside `docs/fcaf/`. Changes to the **test-case content** itself
-are tracked in the FCAF changelog ([`docs/fcaf/CHANGELOG.md`](docs/fcaf/CHANGELOG.md)), per maturity stage.
+This is the **framework & site** changelog: build/CI, MkDocs configuration, styling, templates,
+governance and other scaffolding outside `docs/fcaf/`. Test-case content is tracked separately in
+the FCAF changelog ([`docs/fcaf/CHANGELOG.md`](docs/fcaf/CHANGELOG.md)).
 
-All notable changes to this project will be documented in this file.
+Unversioned, newest first. Release versioning lives only in the FCAF changelog.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semverdoc.org/).
-
-## [Unreleased]
-- Improve rendering of test cases on the documentation site: each aggregated test case is now
-  shown as a separated card with legible section labels (Objective, References, …).
-- Clean up the documentation site navigation for the aggregated test-suite pages: the left-hand
-  navigation no longer lists every individual test case and its section sub-headings (Objective,
-  References, …); the table of contents now stops at the test area/group level.
-- Fix PDF generation by expanding MkDocs `include-markdown` directives before passing content to
-  Pandoc, preventing raw include placeholders from appearing in generated PDFs.
-- Improve PDF rendering of dense ICS tables by applying PDF-specific column widths and compact table styling for ICS tables.
-
-## [0.0.1]
+- Streamline this framework (non-FCAF) changelog: drop versioning, keep a flat newest-first list.
+- Adopt the shared EUDI Wallet documentation theme.
+- Clean up the test-suite navigation so it no longer lists every test case and its sub-headings.
+- Render aggregated test cases as separate, legible cards.
+- Render Preconditions as an A./B./C. list; minor list and backtick formatting fixes.
+- Fix PDF generation of `include-markdown` content and ICS table rendering.
+- Update roadmap, governance model and issue templates.
+- Embed functional conformance into eudi.dev.
+- Align terminology for EUDI actors with the Regulation.
+- Add the EUDI relevancy section to the test template.
+- Fix CI release and PDF/website generation workflows.
 - Initial version.
-
-## [0.0.2]
-- Corrected timeline for public facing website.
-
-## [0.0.3]
-- Fixed PDF and website generation workflows.
-- Minor editorial changes
-
-## [0.0.4]
-- Fix PDF and website generation workflows.
-
-## [0.0.5]
-- Fix github workflow to allow immutable releases.
-- Disable workflow dispatcher in github workflow.
-
-## [0.0.6]
-- Update roadmap
-- Minor editorial changes
-- Add EUDI relevancy section to template
-
-## [0.0.7]
-- Aligned terminology for EUDI actors with Regulation
-- Minor editorial changes
-
-## [0.0.8]
-- Aligned terminology for EUDI actors with Regulation
-- Minor editorial changes
-
-## [0.0.9]
-- Changed title of main nav bar to be embedded into eudi.dev
-
-## [0.0.10]
-- Embed fucntional conformance into eudi.dev
-
-## [0.1.0]
-- Update roadmap to reflect iterative process model
-- Update governance model
-- Add issue templates
