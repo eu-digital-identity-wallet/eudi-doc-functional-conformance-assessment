@@ -6,6 +6,7 @@ the FCAF changelog ([`docs/fcaf/CHANGELOG.md`](docs/fcaf/CHANGELOG.md)).
 
 Unversioned, newest first. Release versioning lives only in the FCAF changelog.
 
+- Switch the Architecture and reference framework nav link to the ARF `/about/` page, for coherence with the ARF deployment.
 - Streamline this framework (non-FCAF) changelog: drop versioning, keep a flat newest-first list.
 - Adopt the shared EUDI Wallet documentation theme.
 - Clean up the test-suite navigation so it no longer lists every test case and its sub-headings.
