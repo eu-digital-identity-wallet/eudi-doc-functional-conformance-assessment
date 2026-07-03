@@ -115,11 +115,14 @@ ci_mike_deploy: install_deps
 	@PATH="$(CURDIR)/.venv/bin:$$PATH" \
 	  $(MIKE) set-default --allow-empty --push latest
 
+# Draft deploy (submitted branch): the draft is the current published content,
+# so it carries BOTH aliases - latest-draft and latest - and latest is the site
+# default. This makes /, /latest/ and /latest-draft/ all resolve to submitted.
 ci_mike_deploy_draft: install_deps
 	@PATH="$(CURDIR)/.venv/bin:$$PATH" \
-	  $(MIKE) deploy --push --update-aliases "draft" latest-draft
+	  $(MIKE) deploy --push --update-aliases "draft" latest-draft latest
 	@PATH="$(CURDIR)/.venv/bin:$$PATH" \
-	  $(MIKE) set-default --allow-empty --push latest-draft
+	  $(MIKE) set-default --allow-empty --push latest
 
 # -----------------------------------------------------------------------------
 # PDF generation

@@ -3,9 +3,13 @@
 # Theme / markdown / plugins mirror the ARF canonical config.
 # Site-specific: nav, repo_url, asset paths, include-markdown plugin,
 #                precond_alpha hook + media/css/fcaf.css overrides.
-# Note: mermaid is now provided by the superfences custom_fence (Material's
-#       built-in integration), so the old extra_javascript mermaid include
-#       and javascripts/mermaid-init.js are no longer needed.
+# Mermaid: the superfences custom_fence emits <pre class="mermaid">, but the
+#          runtime is loaded via a self-hosted extra_javascript include (see
+#          bottom of file). Material's built-in mermaid loader is NOT relied on
+#          here: with the privacy plugin it self-hosts mermaid under an absolute
+#          site_url path (/assets/external/...), which 404s under mike's
+#          versioned subpaths (/latest/, /x.y.z/). The self-hosted include uses
+#          a page-relative URL, so it resolves correctly under every mike alias.
 # ============================================================
 
 site_name: European Digital Identity
@@ -102,6 +106,14 @@ extra:
   version:
     provider: mike
     alias: true
+
+# ---------------- Mermaid runtime (self-hosted; mike/privacy-safe) ----------------
+# Page-relative paths so they resolve under every mike alias (/latest/, /x.y.z/).
+# Loaded before Material's bundle checks for a global `mermaid`, so its built-in
+# loader (whose privacy-rewritten absolute URL 404s under mike) is skipped.
+extra_javascript:
+  - media/js/mermaid.min.js
+  - media/js/mermaid-init.js
 
 nav:
   - European Digital Identity Wallet: https://eudi.dev/latest/
