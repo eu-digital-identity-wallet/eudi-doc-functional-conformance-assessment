@@ -6,6 +6,8 @@ the FCAF changelog ([`docs/fcaf/CHANGELOG.md`](docs/fcaf/CHANGELOG.md)).
 
 Unversioned, newest first. Release versioning lives only in the FCAF changelog.
 
+- Fix mermaid diagram rendering on the deployed (mike) site: load the runtime from a self-hosted, page-relative script so it resolves under every version alias, instead of Material's built-in loader whose absolute URL 404s under versioned paths.
+- Point both the `latest` and `latest-draft` site aliases at the submitted draft.
 - Switch the Architecture and reference framework nav link to the ARF `/about/` page, for coherence with the ARF deployment.
 - Streamline this framework (non-FCAF) changelog: drop versioning, keep a flat newest-first list.
 - Adopt the shared EUDI Wallet documentation theme.
