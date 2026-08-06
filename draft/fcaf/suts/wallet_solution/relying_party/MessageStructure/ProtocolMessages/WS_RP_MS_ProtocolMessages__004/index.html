@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../../../../../../../media/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -27,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../../../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -1268,29 +1268,29 @@
 
 <h1 id="ws_rp_ms_protocolmessages_004">WS_RP_MS_ProtocolMessages_004<a class="headerlink" href="#ws_rp_ms_protocolmessages_004" title="Link to this section">&para;</a></h1>
 <h2 id="objective">Objective<a class="headerlink" href="#objective" title="Link to this section">&para;</a></h2>
-<p>Verify that the Wallet can process an Authorization Request sent as a Request Object by VALUE, where the Request Object includes the typ JOSE header parameter with the value oauth-authz-req+jwt.</p>
+<p>Verify that the Wallet, when interacting using OpenID4VP, accepts an Authorization Request sent as a Request Object where the <code>typ</code> header parameter has the correct value of <code>oauth-authz-req+jwt</code>.</p>
 <h2 id="references">References<a class="headerlink" href="#references" title="Link to this section">&para;</a></h2>
-<ul>
-<li>[RFC9101]</li>
-<li>[OpenID4VP] Section 5</li>
-</ul>
+<p>[OpenID4VP] section 5
+[RFC9101]</p>
 <h2 id="profile-applicability">Profile applicability<a class="headerlink" href="#profile-applicability" title="Link to this section">&para;</a></h2>
-<p>none</p>
+<p>None.</p>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy" title="Link to this section">&para;</a></h2>
 <p>EUDI_generic | EUDI_required</p>
 <h2 id="preconditions">Preconditions<a class="headerlink" href="#preconditions" title="Link to this section">&para;</a></h2>
-<p>none</p>
+<p>A. Wallet is set to 'default_configuration_1'.
+B. Wallet and Verifier are engaged, and a presentation using the OpenID4VP protocol has been triggered.</p>
 <h2 id="test-scenario">Test Scenario<a class="headerlink" href="#test-scenario" title="Link to this section">&para;</a></h2>
 <ol>
-<li>Engage wallet-verifier interaction (e.g. click link / scan QR code).</li>
-<li>Wallet receives an Authorization Request containing a Request Object embedded directly by value with typ header = oauth-authz-req+jwt.</li>
-<li>Wallet inspects the typ JOSE header parameter of the Request Object.</li>
+<li>Verifier sends an Authorization Request containing a Signed Request Object, where the Request Object:<ol>
+<li>contains all minimal required parameters to request 'default_credential_A',</li>
+<li>is valid, including a valid signature,</li>
+<li>has a <code>typ</code> header parameter with the value <code>oauth-authz-req+jwt</code>.</li>
+</ol>
+</li>
 </ol>
 <h2 id="expected-results">Expected results<a class="headerlink" href="#expected-results" title="Link to this section">&para;</a></h2>
 <ol>
-<li>Wallet-verifier interaction is successfully initiated.</li>
-<li>Wallet receives and parses the Request Object directly from the Authorization Request.</li>
-<li>Wallet validates the typ header value as oauth-authz-req+jwt and proceeds with the presentation flow.</li>
+<li>Wallet responds with a presentation of 'default_credential_A'.</li>
 </ol>
 
 
@@ -1356,7 +1356,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../../../../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.indexes", "navigation.top", "navigation.footer", "navigation.tracking", "toc.integrate", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.action.edit", "content.action.view", "content.code.copy"], "search": "../../../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
-      <script src="../../../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../../../../../../media/js/mermaid.min.js"></script>
       

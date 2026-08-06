@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../../../../../../media/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -27,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -1333,8 +1333,290 @@
 <li>Wallet answers successfully (presents the Credential) without rejecting transaction.</li>
 </ol>
 <!-- END INCLUDE -->
+<h3 id="ws_rp_ia_protocolflow_002a">WS_RP_IA_ProtocolFlow_002a<a class="headerlink" href="#ws_rp_ia_protocolflow_002a" title="Link to this section">&para;</a></h3>
+<h4 id="objective_2">Objective<a class="headerlink" href="#objective_2" title="Link to this section">&para;</a></h4>
+<p>Verify that, in the presentation flow via Redirects, the Wallet supports receiving a Signed Authorization Request using JWT-Secured Authorization Request (JAR, [RFC9101]) through the <code>request_uri</code> parameter, when the <code>request_uri_method</code> parameter has value <code>get</code>.</p>
+<h4 id="references_2">References<a class="headerlink" href="#references_2" title="Link to this section">&para;</a></h4>
+<p>[HAIP] section 5.1
+[OpenID4VP] section 5, 5.1
+[RFC9101] section 5</p>
+<h4 id="eudi-wallet-relevancy_2">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_2" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="profile-applicability_2">Profile applicability<a class="headerlink" href="#profile-applicability_2" title="Link to this section">&para;</a></h4>
+<p>None</p>
+<h4 id="technology">Technology<a class="headerlink" href="#technology" title="Link to this section">&para;</a></h4>
+<p>Presentation via Redirects
+Same-device flow</p>
+<h4 id="preconditions_2">Preconditions<a class="headerlink" href="#preconditions_2" title="Link to this section">&para;</a></h4>
+<p>A. Wallet is set to 'default_configuration_1'
+B. End-user interacts with Verifier using a User-agent.</p>
+<h4 id="test-scenario_2">Test Scenario<a class="headerlink" href="#test-scenario_2" title="Link to this section">&para;</a></h4>
+<ol>
+<li>The Verifier provides an invocation URL for a OID4VP request via redirects using Request Object by reference (i.e. <code>eu-eaap://</code> link), with<ol>
+<li>a valid HTTPS link as value for the <code>request_uri</code> parameter,</li>
+<li>the value <code>get</code> for the <code>request_uri_method</code> parameter.</li>
+</ol>
+</li>
+<li>End-user triggers the provided link to be followed.</li>
+<li>Verify the request made to the <code>request_uri</code> endpoint.</li>
+<li>The Verifier responds to the HTTP request at the <code>request_uri</code> endpoint with a valid Signed Request Object requesting 'default_credential_A'.</li>
+</ol>
+<h4 id="expected-results_2">Expected results<a class="headerlink" href="#expected-results_2" title="Link to this section">&para;</a></h4>
+<ol>
+<li>User-agent presents an option to the End-user to engage the presentation.</li>
+<li>The Wallet is invoked.</li>
+<li>Wallet makes a HTTP request at the Verifier's endpoint, using a TLS connection. The HTTP request:<ol>
+<li>Uses the GET method.</li>
+<li>Has the 'hostname', and 'port-number' if applicable, of the provided <code>request_uri</code> as <code>Host</code> header.</li>
+<li>Requests the 'path' of the <code>request_uri</code>, without a query or fragment part.</li>
+</ol>
+</li>
+<li>Wallet responds with a presentation of 'default_credential_A'.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_protocolflow_002b">WS_RP_IA_ProtocolFlow_002b<a class="headerlink" href="#ws_rp_ia_protocolflow_002b" title="Link to this section">&para;</a></h3>
+<h4 id="objective_3">Objective<a class="headerlink" href="#objective_3" title="Link to this section">&para;</a></h4>
+<p>Verify that, in the presentation flow via Redirects, a "Request URI method <code>post</code>"-supporting Wallet supports receiving a Signed Authorization Request using JWT-Secured Authorization Request (JAR, [RFC9101]) through the <code>request_uri</code> parameter, when the <code>request_uri_method</code> parameter has value <code>post</code>.</p>
+<h4 id="references_3">References<a class="headerlink" href="#references_3" title="Link to this section">&para;</a></h4>
+<p>[HAIP] section 5.1
+[OpenID4VP] section 5, 5.1, 5.10
+[RFC9101] section 5</p>
+<h4 id="eudi-wallet-relevancy_3">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_3" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_optional</p>
+<h4 id="profile-applicability_3">Profile applicability<a class="headerlink" href="#profile-applicability_3" title="Link to this section">&para;</a></h4>
+<p>Wallet does support the Request URI Method <code>post</code></p>
+<h4 id="technology_1">Technology<a class="headerlink" href="#technology_1" title="Link to this section">&para;</a></h4>
+<p>Presentation via Redirects
+Same-device flow</p>
+<h4 id="preconditions_3">Preconditions<a class="headerlink" href="#preconditions_3" title="Link to this section">&para;</a></h4>
+<p>A. Wallet is set to 'default_configuration_1'
+B. End-user interacts with Verifier using a User-agent.</p>
+<h4 id="test-scenario_3">Test Scenario<a class="headerlink" href="#test-scenario_3" title="Link to this section">&para;</a></h4>
+<ol>
+<li>The Verifier provides an invocation URL for a OID4VP request via redirects using Request Object by reference (i.e. <code>eu-eaap://</code> link), with<ol>
+<li>a valid HTTPS link as value for the <code>request_uri</code> parameter,</li>
+<li>the value <code>post</code> for the <code>request_uri_method</code> parameter.</li>
+</ol>
+</li>
+<li>End-user triggers the provided link to be followed.</li>
+<li>Verify the request made to the <code>request_uri</code> endpoint.</li>
+<li>The Verifier responds to the HTTP request at the <code>request_uri</code> endpoint with a valid Signed Request Object requesting 'default_credential_A'.</li>
+</ol>
+<h4 id="expected-results_3">Expected results<a class="headerlink" href="#expected-results_3" title="Link to this section">&para;</a></h4>
+<ol>
+<li>User-agent presents an option to the End-user to engage the presentation.</li>
+<li>The Wallet is invoked.</li>
+<li>Wallet makes a HTTP request at the Verifier's endpoint, using a TLS connection. The HTTP request:<ol>
+<li>Uses the POST method.</li>
+<li>Has the 'hostname', and 'port-number' if applicable, of the provided <code>request_uri</code> as <code>Host</code> header.</li>
+<li>Requests the 'path' of the <code>request_uri</code>, without a query or fragment part.</li>
+</ol>
+</li>
+<li>Wallet responds to the request with a presentation of 'default_credential_A'.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_protocolflow_002c">WS_RP_IA_ProtocolFlow_002c<a class="headerlink" href="#ws_rp_ia_protocolflow_002c" title="Link to this section">&para;</a></h3>
+<h4 id="objective_4">Objective<a class="headerlink" href="#objective_4" title="Link to this section">&para;</a></h4>
+<p>Verify that, in the presentation flow via Redirects, the Wallet supports receiving a Signed Authorization Request using JWT-Secured Authorization Request (JAR, [RFC9101]) through the <code>request_uri</code> parameter, when the <code>request_uri_method</code> parameter is omitted.</p>
+<h4 id="references_4">References<a class="headerlink" href="#references_4" title="Link to this section">&para;</a></h4>
+<p>[HAIP] section 5.1
+[OpenID4VP] section 5, 5.1
+[RFC9101] section 5</p>
+<h4 id="eudi-wallet-relevancy_4">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_4" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="profile-applicability_4">Profile applicability<a class="headerlink" href="#profile-applicability_4" title="Link to this section">&para;</a></h4>
+<p>None</p>
+<h4 id="technology_2">Technology<a class="headerlink" href="#technology_2" title="Link to this section">&para;</a></h4>
+<p>Presentation via Redirects
+Same-device flow</p>
+<h4 id="preconditions_4">Preconditions<a class="headerlink" href="#preconditions_4" title="Link to this section">&para;</a></h4>
+<p>A. Wallet is set to 'default_configuration_1'
+B. End-user interacts with Verifier using a User-agent.</p>
+<h4 id="test-scenario_4">Test Scenario<a class="headerlink" href="#test-scenario_4" title="Link to this section">&para;</a></h4>
+<ol>
+<li>The Verifier provides an invocation URL for a OID4VP request via redirects using Request Object by reference (i.e. <code>eu-eaap://</code> link), with<ol>
+<li>a valid HTTPS link as value for the <code>request_uri</code> parameter,</li>
+<li>omitting the <code>request_uri_method</code> parameter.</li>
+</ol>
+</li>
+<li>End-user triggers the provided link to be followed.</li>
+<li>Verify the request made to the <code>request_uri</code> endpoint.</li>
+<li>The Verifier responds to the HTTP request at the <code>request_uri</code> endpoint with a valid Signed Request Object requesting 'default_credential_A'.</li>
+</ol>
+<h4 id="expected-results_4">Expected results<a class="headerlink" href="#expected-results_4" title="Link to this section">&para;</a></h4>
+<ol>
+<li>User-agent presents an option to the End-user to engage the presentation.</li>
+<li>The Wallet is invoked.</li>
+<li>Wallet makes a HTTP request at the Verifier's endpoint, using a TLS connection. The HTTP request:<ol>
+<li>Uses the GET method.</li>
+<li>Has the 'hostname', and 'port-number' if applicable, of the provided <code>request_uri</code> as <code>Host</code> header.</li>
+<li>Requests the 'path' of the <code>request_uri</code>, without a query or fragment part.</li>
+</ol>
+</li>
+<li>Wallet responds with a presentation of 'default_credential_A'.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_protocolflow_002d">WS_RP_IA_ProtocolFlow_002d<a class="headerlink" href="#ws_rp_ia_protocolflow_002d" title="Link to this section">&para;</a></h3>
+<h4 id="objective_5">Objective<a class="headerlink" href="#objective_5" title="Link to this section">&para;</a></h4>
+<p>Verify that, in the presentation flow via Redirects, a non-"Request URI method <code>post</code>"-supporting Wallet supports receiving a Signed Authorization Request using JWT-Secured Authorization Request (JAR, [RFC9101]) through the <code>request_uri</code> parameter, when the <code>request_uri_method</code> parameter has value <code>post</code>.</p>
+<h4 id="references_5">References<a class="headerlink" href="#references_5" title="Link to this section">&para;</a></h4>
+<p>[HAIP] section 5.1
+[OpenID4VP] section 5, 5.1
+[RFC9101] section 5</p>
+<h4 id="eudi-wallet-relevancy_5">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_5" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_optional</p>
+<h4 id="profile-applicability_5">Profile applicability<a class="headerlink" href="#profile-applicability_5" title="Link to this section">&para;</a></h4>
+<p>Wallet does not support the Request URI Method <code>post</code></p>
+<h4 id="technology_3">Technology<a class="headerlink" href="#technology_3" title="Link to this section">&para;</a></h4>
+<p>Presentation via Redirects
+Same-device flow</p>
+<h4 id="preconditions_5">Preconditions<a class="headerlink" href="#preconditions_5" title="Link to this section">&para;</a></h4>
+<p>A. Wallet is set to 'default_configuration_1'
+B. End-user interacts with Verifier using a User-agent.</p>
+<h4 id="test-scenario_5">Test Scenario<a class="headerlink" href="#test-scenario_5" title="Link to this section">&para;</a></h4>
+<ol>
+<li>The Verifier provides an invocation URL for a OID4VP request via redirects using Request Object by reference (i.e. <code>eu-eaap://</code> link), with<ol>
+<li>a valid HTTPS link as value for the <code>request_uri</code> parameter,</li>
+<li>the value <code>post</code> for the <code>request_uri_method</code> parameter.</li>
+</ol>
+</li>
+<li>End-user triggers the provided link to be followed.</li>
+<li>Verify the request made to the <code>request_uri</code> endpoint.</li>
+<li>The Verifier responds to the HTTP request at the <code>request_uri</code> endpoint with a valid Signed Request Object requesting 'default_credential_A'.</li>
+</ol>
+<h4 id="expected-results_5">Expected results<a class="headerlink" href="#expected-results_5" title="Link to this section">&para;</a></h4>
+<ol>
+<li>User-agent presents an option to the End-user to engage the presentation.</li>
+<li>The Wallet is invoked.</li>
+<li>Wallet makes a HTTP request at the Verifier's endpoint, using a TLS connection. The HTTP request:<ol>
+<li>Uses the GET method.</li>
+<li>Has the 'hostname', and 'port-number' if applicable, of the provided <code>request_uri</code> as <code>Host</code> header.</li>
+<li>Requests the 'path' of the <code>request_uri</code>, without a query or fragment part.</li>
+</ol>
+</li>
+<li>Wallet responds to the request with a presentation of 'default_credential_A'.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_protocolflow_002e_uf">WS_RP_IA_ProtocolFlow_002e_UF<a class="headerlink" href="#ws_rp_ia_protocolflow_002e_uf" title="Link to this section">&para;</a></h3>
+<h4 id="objective_6">Objective<a class="headerlink" href="#objective_6" title="Link to this section">&para;</a></h4>
+<p>Verify that, in the presentation flow via Redirects, the Wallet rejects receiving a Signed Authorization Request using JWT-Secured Authorization Request (JAR, [RFC9101]) through the <code>request_uri</code> parameter, when the <code>request_uri_method</code> parameter has an invalid value.</p>
+<h4 id="references_6">References<a class="headerlink" href="#references_6" title="Link to this section">&para;</a></h4>
+<p>[HAIP] section 5.1
+[OpenID4VP] section 5, 5.1, 8.5
+[RFC9101] section 5</p>
+<h4 id="eudi-wallet-relevancy_6">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_6" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="profile-applicability_6">Profile applicability<a class="headerlink" href="#profile-applicability_6" title="Link to this section">&para;</a></h4>
+<p>Wallet does support the Request URI Method <code>post</code></p>
+<h4 id="technology_4">Technology<a class="headerlink" href="#technology_4" title="Link to this section">&para;</a></h4>
+<p>Presentation via Redirects
+Same-device flow</p>
+<h4 id="preconditions_6">Preconditions<a class="headerlink" href="#preconditions_6" title="Link to this section">&para;</a></h4>
+<p>A. Wallet is set to 'default_configuration_1'
+B. End-user interacts with Verifier using a User-agent.</p>
+<h4 id="test-scenario_6">Test Scenario<a class="headerlink" href="#test-scenario_6" title="Link to this section">&para;</a></h4>
+<ol>
+<li>The Verifier provides an invocation URL for a OID4VP request via redirects using Request Object by reference (i.e. <code>eu-eaap://</code> link), with<ol>
+<li>a valid HTTPS link as value for the <code>request_uri</code> parameter,</li>
+<li>an invalid value, i.e. anything other than <code>get</code> or <code>post</code>, for the <code>request_uri_method</code> parameter.</li>
+</ol>
+</li>
+<li>End-user triggers the provided link to be followed.</li>
+</ol>
+<h4 id="expected-results_6">Expected results<a class="headerlink" href="#expected-results_6" title="Link to this section">&para;</a></h4>
+<ol>
+<li>User-agent presents option to End-user to engage presentation.</li>
+<li>The Wallet is invoked and does not engage with the Verifier, i.e. no request is received at the endpoint stated in <code>request_uri</code>, informing the User on the invalid link provided, if applicable.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_protocolflow_003a">WS_RP_IA_ProtocolFlow_003a<a class="headerlink" href="#ws_rp_ia_protocolflow_003a" title="Link to this section">&para;</a></h3>
+<h4 id="objective_7">Objective<a class="headerlink" href="#objective_7" title="Link to this section">&para;</a></h4>
+<p>Verify that the Wallet, in the presentation flow via DC API using OpenID4VP, supports the Response mode <code>dc_api.jwt</code>.</p>
+<h4 id="references_7">References<a class="headerlink" href="#references_7" title="Link to this section">&para;</a></h4>
+<p>[HAIP] section 5.2
+[OpenID4VP] section 8.3, A.2
+[DC API]</p>
+<h4 id="eudi-wallet-relevancy_7">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_7" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="profile-applicability_7">Profile applicability<a class="headerlink" href="#profile-applicability_7" title="Link to this section">&para;</a></h4>
+<p>None</p>
+<h4 id="technology_5">Technology<a class="headerlink" href="#technology_5" title="Link to this section">&para;</a></h4>
+<p>Presentation via the W3C Digital Credentials API or equivalent platform API.
+Presentation using OpenID4VP</p>
+<h4 id="preconditions_7">Preconditions<a class="headerlink" href="#preconditions_7" title="Link to this section">&para;</a></h4>
+<p>A. Wallet is set to 'default_configuration_1'
+B. End-user interacts with Verifier using a User-agent.</p>
+<h4 id="test-scenario_7">Test Scenario<a class="headerlink" href="#test-scenario_7" title="Link to this section">&para;</a></h4>
+<ol>
+<li>The Verifier provides a OpenID4VP Request Object to the User-agent for usage with the W3C DC API or equivalent platform API, where the Request Object:<ol>
+<li>is requesting presentation of <code>default_credential_A</code>,</li>
+<li>has the <code>response_mode</code> parameter set to the value <code>dc_api.jwt</code>,</li>
+<li>having all other required parameters with valid values,</li>
+<li>and valid signed.</li>
+</ol>
+</li>
+<li>End-user triggers the mediating API to initiate the provided Request Object.</li>
+<li>Verify the Authorization Response received.</li>
+</ol>
+<h4 id="expected-results_7">Expected results<a class="headerlink" href="#expected-results_7" title="Link to this section">&para;</a></h4>
+<ol>
+<li>User-agent presents option to End-user to engage presentation.</li>
+<li>The Wallet is invoked.</li>
+<li>The Authorization Response is made available as response through the W3C DC API or equivalent platform API as an encrypted JWT, that is a series of 5 sets of base64url-encoded concatenated by periods ('.').</li>
+</ol>
+<h4 id="comments">Comments<a class="headerlink" href="#comments" title="Link to this section">&para;</a></h4>
+<ul>
+<li>Note: validation of the encrypted JWT itself as Authorization Response, is done in other test cases.</li>
+</ul>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_protocolflow_003b">WS_RP_IA_ProtocolFlow_003b<a class="headerlink" href="#ws_rp_ia_protocolflow_003b" title="Link to this section">&para;</a></h3>
+<h4 id="objective_8">Objective<a class="headerlink" href="#objective_8" title="Link to this section">&para;</a></h4>
+<p>Verify that the Wallet, in the presentation flow via DC API using OpenID4VP, does not provide a response with the Response mode <code>dc_api</code>.</p>
+<h4 id="references_8">References<a class="headerlink" href="#references_8" title="Link to this section">&para;</a></h4>
+<p>[HAIP] section 5.2
+[OpenID4VP] section 8.5, A.2
+[DC API]</p>
+<h4 id="eudi-wallet-relevancy_8">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_8" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="profile-applicability_8">Profile applicability<a class="headerlink" href="#profile-applicability_8" title="Link to this section">&para;</a></h4>
+<p>None</p>
+<h4 id="technology_6">Technology<a class="headerlink" href="#technology_6" title="Link to this section">&para;</a></h4>
+<p>Presentation via the W3C Digital Credentials API or equivalent platform API.
+Presentation using OpenID4VP</p>
+<h4 id="preconditions_8">Preconditions<a class="headerlink" href="#preconditions_8" title="Link to this section">&para;</a></h4>
+<p>A. Wallet is set to 'default_configuration_1'
+B. End-user interacts with Verifier using a User-agent.</p>
+<h4 id="test-scenario_8">Test Scenario<a class="headerlink" href="#test-scenario_8" title="Link to this section">&para;</a></h4>
+<ol>
+<li>The Verifier provides a OpenID4VP Request Object to the User-agent for usage with the W3C DC API or equivalent platform API, where the Request Object:<ol>
+<li>is requesting presentation of <code>default_credential_A</code>,</li>
+<li>has the <code>response_mode</code> parameter set to the value <code>dc_api</code>,</li>
+<li>having all other required parameters with valid values,</li>
+<li>and valid signed.</li>
+</ol>
+</li>
+<li>End-user triggers the mediating API to initiate the provided Request Object.</li>
+<li>Verify the Authorization Response received.</li>
+</ol>
+<h4 id="expected-results_8">Expected results<a class="headerlink" href="#expected-results_8" title="Link to this section">&para;</a></h4>
+<ol>
+<li>User-agent presents option to End-user to engage presentation.</li>
+<li>The Wallet is invoked.</li>
+<li>Wallet does not complete the presentation interaction, and<ol>
+<li>informs, if applicable, the user of an invalid request, and</li>
+<li>aborting the interaction with the Verifier, either by<ol>
+<li>responding with an error <code>invalid_request</code>, or</li>
+<li>responding by returning an error without any details, or</li>
+<li>discontinuing the interaction, e.g. by closing the communication channel, if applicable.</li>
+</ol>
+</li>
+<li>if any response is shared to the Verifier, the response does not include a <code>vp_token</code>.</li>
+</ol>
+</li>
+</ol>
+<!-- END INCLUDE -->
 
-<!-- BEGIN INCLUDE ./[A-Z]*.md -->
+<!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md -->
 
 
 
@@ -1399,7 +1681,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../../../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.indexes", "navigation.top", "navigation.footer", "navigation.tracking", "toc.integrate", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.action.edit", "content.action.view", "content.code.copy"], "search": "../../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
-      <script src="../../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../../../../../media/js/mermaid.min.js"></script>
       

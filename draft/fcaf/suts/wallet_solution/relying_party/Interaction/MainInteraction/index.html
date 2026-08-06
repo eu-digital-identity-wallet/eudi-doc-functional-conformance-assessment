@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../../../../../../media/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -27,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -1495,26 +1495,168 @@ c. discontinuing the interaction.</li>
 <li>The Wallet hides "Address" and "Phone." Presents user with name claim on UI.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_ia_maininteraction_013">WS_RP_IA_MainInteraction_013<a class="headerlink" href="#ws_rp_ia_maininteraction_013" title="Link to this section">&para;</a></h3>
+<h3 id="ws_rp_ia_maininteraction_012a">WS_RP_IA_MainInteraction_012a<a class="headerlink" href="#ws_rp_ia_maininteraction_012a" title="Link to this section">&para;</a></h3>
 <h4 id="objective_8">Objective<a class="headerlink" href="#objective_8" title="Link to this section">&para;</a></h4>
-<p>Verify that if a User unchecks a claim in the Wallet UI, it is excluded from the response.</p>
+<p>Verify that the Wallet responds to a DCQL-query for a single claim with disclosure of that claim, and does not include other selectively disclosable claims, for a credential in SD-JWT VC format.</p>
 <h4 id="references_8">References<a class="headerlink" href="#references_8" title="Link to this section">&para;</a></h4>
+<p>[HAIP] section 5, 5.3.2
+[OpenID4VP] section 6.1, 6.3, B.3.5</p>
+<h4 id="eudi-wallet-relevancy_8">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_8" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="profile-applicability_8">Profile applicability<a class="headerlink" href="#profile-applicability_8" title="Link to this section">&para;</a></h4>
+<p>None</p>
+<h4 id="preconditions_8">Preconditions<a class="headerlink" href="#preconditions_8" title="Link to this section">&para;</a></h4>
+<p>A. Wallet is set to 'default_configuration_1'
+B. Wallet and Verifier are engaged, and a presentation using OpenID4VP has been initiated.</p>
+<h4 id="test-scenario_8">Test Scenario<a class="headerlink" href="#test-scenario_8" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Verifier sends a request with a valid DCQL query, with a <code>credentials</code> property that is an array containing one object with the following properties:<ol>
+<li>the <code>format</code> property with the value <code>dc+sd-jwt</code>.</li>
+<li>the <code>claims</code> property, as an array with one object containing a <code>path</code> property with as value an array containing one element that is a string, with the name of a top-level claim that is selectively disclosable in 'default_credential_A'.</li>
+<li>the <code>meta</code> property, containing a <code>vct_values</code> property with as value an array containing one element that is a string with the verifiable credential type of 'default_credential_A'.</li>
+</ol>
+</li>
+<li>Verify the received presentation.</li>
+</ol>
+<h4 id="expected-results_8">Expected results<a class="headerlink" href="#expected-results_8" title="Link to this section">&para;</a></h4>
+<ol>
+<li>The Wallet responds with a presentation of 'default_credential_A'.</li>
+<li>The presentation has the following characteristics:<ol>
+<li>The presentation is for a credential in SD-JWT VC format, of the verifiable credential type and with the <code>vct</code> claim as requested.</li>
+<li>The presentation contains the disclosure of the claim requested, as top-level claim in the verifiable credential.</li>
+<li>The presentation does not contain any other disclosures for claims that allow for selective disclosure in the SD-JWT VC credential.</li>
+</ol>
+</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_012b">WS_RP_IA_MainInteraction_012b<a class="headerlink" href="#ws_rp_ia_maininteraction_012b" title="Link to this section">&para;</a></h3>
+<h4 id="objective_9">Objective<a class="headerlink" href="#objective_9" title="Link to this section">&para;</a></h4>
+<p>Verify that the Wallet responds to a DCQL-query for a single claim with disclosure of that data element, and does not include other data elements, for a credential in mdoc format.</p>
+<h4 id="references_9">References<a class="headerlink" href="#references_9" title="Link to this section">&para;</a></h4>
+<p>[HAIP] section 5, 5.3.1
+[OpenID4VP] section 6.1, 6.3, B.2.3</p>
+<h4 id="eudi-wallet-relevancy_9">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_9" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="profile-applicability_9">Profile applicability<a class="headerlink" href="#profile-applicability_9" title="Link to this section">&para;</a></h4>
+<p>None</p>
+<h4 id="preconditions_9">Preconditions<a class="headerlink" href="#preconditions_9" title="Link to this section">&para;</a></h4>
+<p>A. Wallet is set to 'default_configuration_1'
+B. Wallet and Verifier are engaged, and a presentation using OpenID4VP has been initiated.</p>
+<h4 id="test-scenario_9">Test Scenario<a class="headerlink" href="#test-scenario_9" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Verifier sends a request with a valid DCQL query, with a <code>credentials</code> property that is an array containing one object with the following properties:<ol>
+<li>the <code>format</code> property with the value <code>mso_mdoc</code>.</li>
+<li>the <code>claims</code> property, as an array with one object containing a <code>path</code> property with as value an array containing two elements that are a string, with as values the namespace and identifier of a data element in 'default_credential_A'.</li>
+<li>the <code>meta</code> property, containing a <code>doctype_value</code> property with as value a string with the doctype of 'default_credential_A'.</li>
+</ol>
+</li>
+<li>Verify the received presentation.</li>
+</ol>
+<h4 id="expected-results_9">Expected results<a class="headerlink" href="#expected-results_9" title="Link to this section">&para;</a></h4>
+<ol>
+<li>The Wallet responds with a presentation of 'default_credential_A'.</li>
+<li>The presentation has the following characteristics:<ol>
+<li>The presentation is for a document in mdoc format, of the document type and with the <code>docType</code> as requested.</li>
+<li>The presentation contains the data element requested.</li>
+<li>The presentation does not contain any other data elements of the mdoc document.</li>
+</ol>
+</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_012c_uf">WS_RP_IA_MainInteraction_012c_UF<a class="headerlink" href="#ws_rp_ia_maininteraction_012c_uf" title="Link to this section">&para;</a></h3>
+<h4 id="objective_10">Objective<a class="headerlink" href="#objective_10" title="Link to this section">&para;</a></h4>
+<p>Verify that the Wallet does not present a credential in response to a DCQL-query for a single claim not present in any matching credential in SD-JWT VC format.</p>
+<h4 id="references_10">References<a class="headerlink" href="#references_10" title="Link to this section">&para;</a></h4>
+<p>[HAIP] section 5, 5.3.2
+[OpenID4VP] section 6.1, 6.3, 6.4, 8.5, B.3.5</p>
+<h4 id="eudi-wallet-relevancy_10">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_10" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="profile-applicability_10">Profile applicability<a class="headerlink" href="#profile-applicability_10" title="Link to this section">&para;</a></h4>
+<p>None</p>
+<h4 id="preconditions_10">Preconditions<a class="headerlink" href="#preconditions_10" title="Link to this section">&para;</a></h4>
+<p>A. Wallet is set to 'default_configuration_1'
+B. Wallet and Verifier are engaged, and a presentation using OpenID4VP has been initiated.</p>
+<h4 id="test-scenario_10">Test Scenario<a class="headerlink" href="#test-scenario_10" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Verifier sends a request with a valid DCQL query, with a <code>credentials</code> property that is an array containing one object with the following properties:<ol>
+<li>the <code>format</code> property with the value <code>dc+sd-jwt</code>.</li>
+<li>the <code>claims</code> property, as an array with one object containing a <code>path</code> property with as value an array containing one element that is a string with a value that is not a name of any top-level selectively disclosable claim in 'default_credential_A'.</li>
+<li>the <code>meta</code> property, containing a <code>vct_values</code> property with as value an array containing one element that is a string with the verifiable credential type of 'default_credential_A'.</li>
+</ol>
+</li>
+</ol>
+<h4 id="expected-results_10">Expected results<a class="headerlink" href="#expected-results_10" title="Link to this section">&para;</a></h4>
+<ol>
+<li>The Wallet does not complete the presentation interaction, and<ol>
+<li>informs, if applicable, the user of not having the requested credential, and</li>
+<li>aborting the interaction with the Verifier, either by<ol>
+<li>responding with an error <code>access_denied</code>, or</li>
+<li>responding by returning an error without any details, or</li>
+<li>discontinuing the interaction, e.g. by closing the communication channel, if applicable.</li>
+</ol>
+</li>
+<li>if any response is shared to the Verifier, the response does not include a <code>vp_token</code>.</li>
+</ol>
+</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_012d_uf">WS_RP_IA_MainInteraction_012d_UF<a class="headerlink" href="#ws_rp_ia_maininteraction_012d_uf" title="Link to this section">&para;</a></h3>
+<h4 id="objective_11">Objective<a class="headerlink" href="#objective_11" title="Link to this section">&para;</a></h4>
+<p>Verify that the Wallet does not present a credential in response to a DCQL-query for a single data element not present in any matching credential in mdoc format.</p>
+<h4 id="references_11">References<a class="headerlink" href="#references_11" title="Link to this section">&para;</a></h4>
+<p>[HAIP] section 5, 5.3.1
+[OpenID4VP] section 6.1, 6.3, 6.4, 8.5, B.2.3</p>
+<h4 id="eudi-wallet-relevancy_11">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_11" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="profile-applicability_11">Profile applicability<a class="headerlink" href="#profile-applicability_11" title="Link to this section">&para;</a></h4>
+<p>None</p>
+<h4 id="preconditions_11">Preconditions<a class="headerlink" href="#preconditions_11" title="Link to this section">&para;</a></h4>
+<p>A. Wallet is set to 'default_configuration_1'
+B. Wallet and Verifier are engaged, and a presentation using OpenID4VP has been initiated.</p>
+<h4 id="test-scenario_11">Test Scenario<a class="headerlink" href="#test-scenario_11" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Verifier sends a request with a valid DCQL query, with a <code>credentials</code> property that is an array containing one object with the following properties:<ol>
+<li>the <code>format</code> property with the value <code>mso_mdoc</code>.</li>
+<li>the <code>claims</code> property, as an array with one object containing a <code>path</code> property with as value an array containing two elements that are a string, with as values the namespace and identifier of a data element that is not present in 'default_credential_A'.</li>
+<li>the <code>meta</code> property, containing a <code>doctype_value</code> property with as value a string with the doctype of 'default_credential_A'.</li>
+</ol>
+</li>
+</ol>
+<h4 id="expected-results_11">Expected results<a class="headerlink" href="#expected-results_11" title="Link to this section">&para;</a></h4>
+<ol>
+<li>The Wallet does not complete the presentation interaction, and<ol>
+<li>informs, if applicable, the user of not having the requested credential, and</li>
+<li>aborting the interaction with the Verifier, either by<ol>
+<li>responding with an error <code>access_denied</code>, or</li>
+<li>responding by returning an error without any details, or</li>
+<li>discontinuing the interaction, e.g. by closing the communication channel, if applicable.</li>
+</ol>
+</li>
+<li>if any response is shared to the Verifier, the response does not include a <code>vp_token</code>.</li>
+</ol>
+</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_013">WS_RP_IA_MainInteraction_013<a class="headerlink" href="#ws_rp_ia_maininteraction_013" title="Link to this section">&para;</a></h3>
+<h4 id="objective_12">Objective<a class="headerlink" href="#objective_12" title="Link to this section">&para;</a></h4>
+<p>Verify that if a User unchecks a claim in the Wallet UI, it is excluded from the response.</p>
+<h4 id="references_12">References<a class="headerlink" href="#references_12" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[OpenID4VP] Section 6.4</li>
 </ul>
-<h4 id="profile-applicability_8">Profile applicability<a class="headerlink" href="#profile-applicability_8" title="Link to this section">&para;</a></h4>
+<h4 id="profile-applicability_12">Profile applicability<a class="headerlink" href="#profile-applicability_12" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="eudi-wallet-relevancy_8">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_8" title="Link to this section">&para;</a></h4>
+<h4 id="eudi-wallet-relevancy_12">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_12" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_8">Preconditions<a class="headerlink" href="#preconditions_8" title="Link to this section">&para;</a></h4>
+<h4 id="preconditions_12">Preconditions<a class="headerlink" href="#preconditions_12" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_8">Test Scenario<a class="headerlink" href="#test-scenario_8" title="Link to this section">&para;</a></h4>
+<h4 id="test-scenario_12">Test Scenario<a class="headerlink" href="#test-scenario_12" title="Link to this section">&para;</a></h4>
 <ol>
 <li>The Wallet engages with the Verifier.</li>
 <li>Verifier sends a DCQL query requesting claims "name" and "address", which the wallet has both.</li>
 <li>Unchecking claim in UI excludes it from the response.</li>
 </ol>
-<h4 id="expected-results_8">Expected results<a class="headerlink" href="#expected-results_8" title="Link to this section">&para;</a></h4>
+<h4 id="expected-results_12">Expected results<a class="headerlink" href="#expected-results_12" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Wallet and Verifier can interact.</li>
 <li>Wallet receives the request.</li>
@@ -1522,113 +1664,8 @@ c. discontinuing the interaction.</li>
 </ol>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_ia_maininteraction_014">WS_RP_IA_MainInteraction_014<a class="headerlink" href="#ws_rp_ia_maininteraction_014" title="Link to this section">&para;</a></h3>
-<h4 id="objective_9">Objective<a class="headerlink" href="#objective_9" title="Link to this section">&para;</a></h4>
-<p>A Credential presentation may include "extra" claims not selected according to rules, if they are requested by a different query within the same session.</p>
-<h4 id="references_9">References<a class="headerlink" href="#references_9" title="Link to this section">&para;</a></h4>
-<ul>
-<li>[OpenID4VP] Section 6.4</li>
-</ul>
-<h4 id="profile-applicability_9">Profile applicability<a class="headerlink" href="#profile-applicability_9" title="Link to this section">&para;</a></h4>
-<p>none</p>
-<h4 id="eudi-wallet-relevancy_9">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_9" title="Link to this section">&para;</a></h4>
-<p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_9">Preconditions<a class="headerlink" href="#preconditions_9" title="Link to this section">&para;</a></h4>
-<p>Wallet has one ID with Name, Address, and Age.</p>
-<h4 id="test-scenario_9">Test Scenario<a class="headerlink" href="#test-scenario_9" title="Link to this section">&para;</a></h4>
-<ol>
-<li>The Wallet engages with the Verifier.</li>
-<li>Verifier sends one request with two DCQL queries: Query 1: Asks for Name. Query 2: Asks for Address</li>
-<li>Wallet handles query</li>
-</ol>
-<h4 id="expected-results_9">Expected results<a class="headerlink" href="#expected-results_9" title="Link to this section">&para;</a></h4>
-<ol>
-<li>Wallet and Verifier can interact.</li>
-<li>Wallet receives the request.
-3a. The Wallet identifies that both queries can be satisfied by the same credential. It selects the "union" of both requests (Name + Address).
-3b. The vp_token contains both Name and Address. Age remains hidden.</li>
-</ol>
-<!-- END INCLUDE -->
-<h3 id="ws_rp_ia_maininteraction_015">WS_RP_IA_MainInteraction_015<a class="headerlink" href="#ws_rp_ia_maininteraction_015" title="Link to this section">&para;</a></h3>
-<h4 id="objective_10">Objective<a class="headerlink" href="#objective_10" title="Link to this section">&para;</a></h4>
-<p>A Credential presentation may include "extra" claims not selected according to rules, if they are non-selective (fixed) technical fields that cannot be hidden.</p>
-<h4 id="references_10">References<a class="headerlink" href="#references_10" title="Link to this section">&para;</a></h4>
-<ul>
-<li>[OpenID4VP] Section 6.4</li>
-</ul>
-<h4 id="profile-applicability_10">Profile applicability<a class="headerlink" href="#profile-applicability_10" title="Link to this section">&para;</a></h4>
-<p>none</p>
-<h4 id="eudi-wallet-relevancy_10">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_10" title="Link to this section">&para;</a></h4>
-<p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_10">Preconditions<a class="headerlink" href="#preconditions_10" title="Link to this section">&para;</a></h4>
-<p>Wallet has an SD-JWT credential. By definition, the vct (type) and iss (issuer) fields are fixed/mandatory and cannot be hidden.</p>
-<h4 id="test-scenario_10">Test Scenario<a class="headerlink" href="#test-scenario_10" title="Link to this section">&para;</a></h4>
-<ol>
-<li>The Wallet engages with the Verifier.</li>
-<li>Verifier sends a DCQL query asking only for <code>given_name</code>.</li>
-<li>Response</li>
-</ol>
-<h4 id="expected-results_10">Expected results<a class="headerlink" href="#expected-results_10" title="Link to this section">&para;</a></h4>
-<ol>
-<li>Wallet and Verifier can interact.</li>
-<li>The Wallet selects <code>given_name</code> but must also include the mandatory envelope data required to make the credential cryptographically valid.</li>
-<li>The vp_token contains <code>given_name</code> PLUS the mandatory technical fields (e.g., vct, iss, iat).</li>
-</ol>
-<!-- END INCLUDE -->
-<h3 id="ws_rp_ia_maininteraction_016">WS_RP_IA_MainInteraction_016<a class="headerlink" href="#ws_rp_ia_maininteraction_016" title="Link to this section">&para;</a></h3>
-<h4 id="objective_11">Objective<a class="headerlink" href="#objective_11" title="Link to this section">&para;</a></h4>
-<p>Test that when claims is absent in the request the Wallet MUST return only the claims that are mandatory to present, NO selectively disclosable claims.</p>
-<h4 id="references_11">References<a class="headerlink" href="#references_11" title="Link to this section">&para;</a></h4>
-<ul>
-<li>[OpenID4VP] Section 6.4</li>
-</ul>
-<h4 id="profile-applicability_11">Profile applicability<a class="headerlink" href="#profile-applicability_11" title="Link to this section">&para;</a></h4>
-<p>SD-JWT</p>
-<h4 id="eudi-wallet-relevancy_11">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_11" title="Link to this section">&para;</a></h4>
-<p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_11">Preconditions<a class="headerlink" href="#preconditions_11" title="Link to this section">&para;</a></h4>
-<p>The Wallet holds an SD-JWT Credential containing multiple claims: <code>given_name</code>, <code>family_name</code>, and birthdate.</p>
-<h4 id="test-scenario_11">Test Scenario<a class="headerlink" href="#test-scenario_11" title="Link to this section">&para;</a></h4>
-<ol>
-<li>The Wallet engages with the Verifier</li>
-<li>A Verifier sends a request for a Credential the wallet holds, but the claims object is absent.</li>
-<li>Wallet handles request</li>
-</ol>
-<h4 id="expected-results_11">Expected results<a class="headerlink" href="#expected-results_11" title="Link to this section">&para;</a></h4>
-<ol>
-<li>Wallet and Verifier can interact.</li>
-<li>Wallet receives the request.</li>
-<li>Wallet generates a valid response containing signature and key binding, but one which contains zero disclosures.</li>
-</ol>
-<!-- END INCLUDE -->
-<h3 id="ws_rp_ia_maininteraction_017">WS_RP_IA_MainInteraction_017<a class="headerlink" href="#ws_rp_ia_maininteraction_017" title="Link to this section">&para;</a></h3>
-<h4 id="objective_12">Objective<a class="headerlink" href="#objective_12" title="Link to this section">&para;</a></h4>
-<p>Test that when claims is absent in the request the Wallet MUST return only the claims that are mandatory to present, NO selectively disclosable claims.</p>
-<h4 id="references_12">References<a class="headerlink" href="#references_12" title="Link to this section">&para;</a></h4>
-<ul>
-<li>[OpenID4VP] Section 6.4</li>
-</ul>
-<h4 id="profile-applicability_12">Profile applicability<a class="headerlink" href="#profile-applicability_12" title="Link to this section">&para;</a></h4>
-<p>ISO mDL</p>
-<h4 id="eudi-wallet-relevancy_12">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_12" title="Link to this section">&para;</a></h4>
-<p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_12">Preconditions<a class="headerlink" href="#preconditions_12" title="Link to this section">&para;</a></h4>
-<p>Wallet holds an ISO mDL with elements: <code>family_name</code>, <code>document_number</code>, and portrait.</p>
-<h4 id="test-scenario_12">Test Scenario<a class="headerlink" href="#test-scenario_12" title="Link to this section">&para;</a></h4>
-<ol>
-<li>The Wallet engages with the Verifier</li>
-<li>A Verifier sends a request for a Credential the wallet holds, but the claims object is absent.</li>
-<li>Wallet handles request</li>
-</ol>
-<h4 id="expected-results_12">Expected results<a class="headerlink" href="#expected-results_12" title="Link to this section">&para;</a></h4>
-<ol>
-<li>Wallet and Verifier can interact.</li>
-<li>Wallet receives the request.</li>
-<li>Wallet received query, and generates a valid response showing licence is authentic but giving zero personal data</li>
-</ol>
-<!-- END INCLUDE -->
-<h3 id="ws_rp_ia_maininteraction_018">WS_RP_IA_MainInteraction_018<a class="headerlink" href="#ws_rp_ia_maininteraction_018" title="Link to this section">&para;</a></h3>
 <h4 id="objective_13">Objective<a class="headerlink" href="#objective_13" title="Link to this section">&para;</a></h4>
-<p>Test that if claims is present, but claim_sets is absent the wallet treats all entries listed in claims as mandatory and returns them all.</p>
+<p>A Credential presentation may include "extra" claims not selected according to rules, if they are requested by a different query within the same session.</p>
 <h4 id="references_13">References<a class="headerlink" href="#references_13" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[OpenID4VP] Section 6.4</li>
@@ -1638,23 +1675,24 @@ c. discontinuing the interaction.</li>
 <h4 id="eudi-wallet-relevancy_13">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_13" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_13">Preconditions<a class="headerlink" href="#preconditions_13" title="Link to this section">&para;</a></h4>
-<p>none</p>
+<p>Wallet has one ID with Name, Address, and Age.</p>
 <h4 id="test-scenario_13">Test Scenario<a class="headerlink" href="#test-scenario_13" title="Link to this section">&para;</a></h4>
 <ol>
 <li>The Wallet engages with the Verifier.</li>
-<li>Verifier sends a DCQL query with a credentials object with claims but no claim_sets</li>
-<li>Wallet processes DCQL</li>
+<li>Verifier sends one request with two DCQL queries: Query 1: Asks for Name. Query 2: Asks for Address</li>
+<li>Wallet handles query</li>
 </ol>
 <h4 id="expected-results_13">Expected results<a class="headerlink" href="#expected-results_13" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Wallet and Verifier can interact.</li>
-<li>Wallet received query</li>
-<li>Wallet identifies the missing claim_sets and returns all claims listed</li>
+<li>Wallet receives the request.
+3a. The Wallet identifies that both queries can be satisfied by the same credential. It selects the "union" of both requests (Name + Address).
+3b. The vp_token contains both Name and Address. Age remains hidden.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_ia_maininteraction_019">WS_RP_IA_MainInteraction_019<a class="headerlink" href="#ws_rp_ia_maininteraction_019" title="Link to this section">&para;</a></h3>
+<h3 id="ws_rp_ia_maininteraction_015">WS_RP_IA_MainInteraction_015<a class="headerlink" href="#ws_rp_ia_maininteraction_015" title="Link to this section">&para;</a></h3>
 <h4 id="objective_14">Objective<a class="headerlink" href="#objective_14" title="Link to this section">&para;</a></h4>
-<p>Test that when a claim_sets is present, the Wallet automatically selects and returns only the first satisfiable combination from claim_sets based on the verifier's preference order, preventing disclosure of multiple sets.</p>
+<p>A Credential presentation may include "extra" claims not selected according to rules, if they are non-selective (fixed) technical fields that cannot be hidden.</p>
 <h4 id="references_14">References<a class="headerlink" href="#references_14" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[OpenID4VP] Section 6.4</li>
@@ -1664,71 +1702,75 @@ c. discontinuing the interaction.</li>
 <h4 id="eudi-wallet-relevancy_14">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_14" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_14">Preconditions<a class="headerlink" href="#preconditions_14" title="Link to this section">&para;</a></h4>
-<p>The wallet contains credentials that can satisfy all claim sets defined in the request.</p>
+<p>Wallet has an SD-JWT credential. By definition, the vct (type) and iss (issuer) fields are fixed/mandatory and cannot be hidden.</p>
 <h4 id="test-scenario_14">Test Scenario<a class="headerlink" href="#test-scenario_14" title="Link to this section">&para;</a></h4>
 <ol>
 <li>The Wallet engages with the Verifier.</li>
-<li>The Verifier sends an Authorization Request with a valid DCQL query containing a claim_sets property holding 3 distinct claim set objects in a specific order of preference.</li>
-<li>The Wallet generates a response and prompts the user to authorize the release of data.</li>
-<li>The wallet sends the response.</li>
+<li>Verifier sends a DCQL query asking only for <code>given_name</code>.</li>
+<li>Response</li>
 </ol>
 <h4 id="expected-results_14">Expected results<a class="headerlink" href="#expected-results_14" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Wallet and Verifier can interact.</li>
-<li>The Wallet recieves the request.</li>
-<li>The user Authorizes the presentation without requiring them to manually choose between different claim sets.</li>
-<li>The Verifier receives a response containing only the data requested in the first claim set object, proving that the wallet automatically prioritised the first match and excluded all subsequent satisfiable sets.</li>
+<li>The Wallet selects <code>given_name</code> but must also include the mandatory envelope data required to make the credential cryptographically valid.</li>
+<li>The vp_token contains <code>given_name</code> PLUS the mandatory technical fields (e.g., vct, iss, iat).</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_ia_maininteraction_020">WS_RP_IA_MainInteraction_020<a class="headerlink" href="#ws_rp_ia_maininteraction_020" title="Link to this section">&para;</a></h3>
+<h3 id="ws_rp_ia_maininteraction_016">WS_RP_IA_MainInteraction_016<a class="headerlink" href="#ws_rp_ia_maininteraction_016" title="Link to this section">&para;</a></h3>
 <h4 id="objective_15">Objective<a class="headerlink" href="#objective_15" title="Link to this section">&para;</a></h4>
-<p>Verify that if the Wallet can satisfy multiple options in claim_sets, it selects the one appearing earliest in the array.</p>
+<p>Test that when claims is absent in the request the Wallet MUST return only the claims that are mandatory to present, NO selectively disclosable claims.</p>
 <h4 id="references_15">References<a class="headerlink" href="#references_15" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[OpenID4VP] Section 6.4</li>
 </ul>
 <h4 id="profile-applicability_15">Profile applicability<a class="headerlink" href="#profile-applicability_15" title="Link to this section">&para;</a></h4>
-<p>none</p>
+<p>SD-JWT</p>
 <h4 id="eudi-wallet-relevancy_15">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_15" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_15">Preconditions<a class="headerlink" href="#preconditions_15" title="Link to this section">&para;</a></h4>
-<p>Wallet has data for #2 and #3 of verifiers claim_sets</p>
+<p>The Wallet holds an SD-JWT Credential containing multiple claims: <code>given_name</code>, <code>family_name</code>, and birthdate.</p>
 <h4 id="test-scenario_15">Test Scenario<a class="headerlink" href="#test-scenario_15" title="Link to this section">&para;</a></h4>
 <ol>
-<li>The Wallet engages with the Verifier.</li>
-<li>Verifier sends claim_sets with 3 options (#1,#2,#3)</li>
+<li>The Wallet engages with the Verifier</li>
+<li>A Verifier sends a request for a Credential the wallet holds, but the claims object is absent.</li>
+<li>Wallet handles request</li>
 </ol>
 <h4 id="expected-results_15">Expected results<a class="headerlink" href="#expected-results_15" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Wallet and Verifier can interact.</li>
-<li>Wallet responds with #2</li>
+<li>Wallet receives the request.</li>
+<li>Wallet generates a valid response containing signature and key binding, but one which contains zero disclosures.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_ia_maininteraction_021">WS_RP_IA_MainInteraction_021<a class="headerlink" href="#ws_rp_ia_maininteraction_021" title="Link to this section">&para;</a></h3>
+<h3 id="ws_rp_ia_maininteraction_017">WS_RP_IA_MainInteraction_017<a class="headerlink" href="#ws_rp_ia_maininteraction_017" title="Link to this section">&para;</a></h3>
 <h4 id="objective_16">Objective<a class="headerlink" href="#objective_16" title="Link to this section">&para;</a></h4>
-<p>Test If the Wallet cannot satisfy any of the options in the claim_sets, it MUST NOT return any claims.</p>
+<p>Test that when claims is absent in the request the Wallet MUST return only the claims that are mandatory to present, NO selectively disclosable claims.</p>
 <h4 id="references_16">References<a class="headerlink" href="#references_16" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[OpenID4VP] Section 6.4</li>
 </ul>
 <h4 id="profile-applicability_16">Profile applicability<a class="headerlink" href="#profile-applicability_16" title="Link to this section">&para;</a></h4>
-<p>none</p>
+<p>ISO mDL</p>
 <h4 id="eudi-wallet-relevancy_16">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_16" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_16">Preconditions<a class="headerlink" href="#preconditions_16" title="Link to this section">&para;</a></h4>
-<p>none</p>
+<p>Wallet holds an ISO mDL with elements: <code>family_name</code>, <code>document_number</code>, and portrait.</p>
 <h4 id="test-scenario_16">Test Scenario<a class="headerlink" href="#test-scenario_16" title="Link to this section">&para;</a></h4>
 <ol>
-<li>Verifier sends a DCQL query with a claim_sets that includes a claim the Wallet does not have.</li>
+<li>The Wallet engages with the Verifier</li>
+<li>A Verifier sends a request for a Credential the wallet holds, but the claims object is absent.</li>
+<li>Wallet handles request</li>
 </ol>
 <h4 id="expected-results_16">Expected results<a class="headerlink" href="#expected-results_16" title="Link to this section">&para;</a></h4>
 <ol>
-<li>Wallet will not return any claims.</li>
+<li>Wallet and Verifier can interact.</li>
+<li>Wallet receives the request.</li>
+<li>Wallet received query, and generates a valid response showing licence is authentic but giving zero personal data</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_ia_maininteraction_022">WS_RP_IA_MainInteraction_022<a class="headerlink" href="#ws_rp_ia_maininteraction_022" title="Link to this section">&para;</a></h3>
+<h3 id="ws_rp_ia_maininteraction_018">WS_RP_IA_MainInteraction_018<a class="headerlink" href="#ws_rp_ia_maininteraction_018" title="Link to this section">&para;</a></h3>
 <h4 id="objective_17">Objective<a class="headerlink" href="#objective_17" title="Link to this section">&para;</a></h4>
-<p>Test that Claim_sets MUST NOT be supported if claims is absent.</p>
+<p>Test that if claims is present, but claim_sets is absent the wallet treats all entries listed in claims as mandatory and returns them all.</p>
 <h4 id="references_17">References<a class="headerlink" href="#references_17" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[OpenID4VP] Section 6.4</li>
@@ -1741,60 +1783,72 @@ c. discontinuing the interaction.</li>
 <p>none</p>
 <h4 id="test-scenario_17">Test Scenario<a class="headerlink" href="#test-scenario_17" title="Link to this section">&para;</a></h4>
 <ol>
-<li>Verifier sends a DCQL query with a credential with claim_sets, but missing claims</li>
+<li>The Wallet engages with the Verifier.</li>
+<li>Verifier sends a DCQL query with a credentials object with claims but no claim_sets</li>
+<li>Wallet processes DCQL</li>
 </ol>
 <h4 id="expected-results_17">Expected results<a class="headerlink" href="#expected-results_17" title="Link to this section">&para;</a></h4>
 <ol>
-<li>Wallet identifies invalid query, returns error.</li>
+<li>Wallet and Verifier can interact.</li>
+<li>Wallet received query</li>
+<li>Wallet identifies the missing claim_sets and returns all claims listed</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_ia_maininteraction_023">WS_RP_IA_MainInteraction_023<a class="headerlink" href="#ws_rp_ia_maininteraction_023" title="Link to this section">&para;</a></h3>
+<h3 id="ws_rp_ia_maininteraction_019">WS_RP_IA_MainInteraction_019<a class="headerlink" href="#ws_rp_ia_maininteraction_019" title="Link to this section">&para;</a></h3>
 <h4 id="objective_18">Objective<a class="headerlink" href="#objective_18" title="Link to this section">&para;</a></h4>
-<p>Test the Wallet SHOULD treat a claim as if it did not exist in the credential, if its value does not match the one held in the wallets credential.</p>
+<p>Test that when a claim_sets is present, the Wallet automatically selects and returns only the first satisfiable combination from claim_sets based on the verifier's preference order, preventing disclosure of multiple sets.</p>
 <h4 id="references_18">References<a class="headerlink" href="#references_18" title="Link to this section">&para;</a></h4>
 <ul>
-<li>[OpenID4VP] Sections 6.4, 6.3</li>
+<li>[OpenID4VP] Section 6.4</li>
 </ul>
 <h4 id="profile-applicability_18">Profile applicability<a class="headerlink" href="#profile-applicability_18" title="Link to this section">&para;</a></h4>
 <p>none</p>
 <h4 id="eudi-wallet-relevancy_18">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_18" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_18">Preconditions<a class="headerlink" href="#preconditions_18" title="Link to this section">&para;</a></h4>
-<p>none</p>
+<p>The wallet contains credentials that can satisfy all claim sets defined in the request.</p>
 <h4 id="test-scenario_18">Test Scenario<a class="headerlink" href="#test-scenario_18" title="Link to this section">&para;</a></h4>
 <ol>
-<li>Verifier sends a Claims Query containing a restriction on the values of a claim.</li>
+<li>The Wallet engages with the Verifier.</li>
+<li>The Verifier sends an Authorization Request with a valid DCQL query containing a claim_sets property holding 3 distinct claim set objects in a specific order of preference.</li>
+<li>The Wallet generates a response and prompts the user to authorize the release of data.</li>
+<li>The wallet sends the response.</li>
 </ol>
 <h4 id="expected-results_18">Expected results<a class="headerlink" href="#expected-results_18" title="Link to this section">&para;</a></h4>
 <ol>
-<li>Wallet sees values do not match, logically considers that specific claim as not being present for this matching flow.</li>
+<li>Wallet and Verifier can interact.</li>
+<li>The Wallet recieves the request.</li>
+<li>The user Authorizes the presentation without requiring them to manually choose between different claim sets.</li>
+<li>The Verifier receives a response containing only the data requested in the first claim set object, proving that the wallet automatically prioritised the first match and excluded all subsequent satisfiable sets.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_ia_maininteraction_024">WS_RP_IA_MainInteraction_024<a class="headerlink" href="#ws_rp_ia_maininteraction_024" title="Link to this section">&para;</a></h3>
+<h3 id="ws_rp_ia_maininteraction_020">WS_RP_IA_MainInteraction_020<a class="headerlink" href="#ws_rp_ia_maininteraction_020" title="Link to this section">&para;</a></h3>
 <h4 id="objective_19">Objective<a class="headerlink" href="#objective_19" title="Link to this section">&para;</a></h4>
-<p>Verify that if the Wallet cannot pre-parse the data (e.g., it's encrypted), it still allows the user to proceed with the presentation rather than failing the request.</p>
+<p>Verify that if the Wallet can satisfy multiple options in claim_sets, it selects the one appearing earliest in the array.</p>
 <h4 id="references_19">References<a class="headerlink" href="#references_19" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[OpenID4VP] Section 6.4</li>
 </ul>
 <h4 id="profile-applicability_19">Profile applicability<a class="headerlink" href="#profile-applicability_19" title="Link to this section">&para;</a></h4>
-<p>Encrypted data</p>
+<p>none</p>
 <h4 id="eudi-wallet-relevancy_19">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_19" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_19">Preconditions<a class="headerlink" href="#preconditions_19" title="Link to this section">&para;</a></h4>
-<p>none</p>
+<p>Wallet has data for #2 and #3 of verifiers claim_sets</p>
 <h4 id="test-scenario_19">Test Scenario<a class="headerlink" href="#test-scenario_19" title="Link to this section">&para;</a></h4>
 <ol>
-<li>Verifier sends a DCQL query with a values restriction. The Wallet holds a matching credential, but the data is encrypted/locked (the Wallet can't check the value yet).</li>
+<li>The Wallet engages with the Verifier.</li>
+<li>Verifier sends claim_sets with 3 options (#1,#2,#3)</li>
 </ol>
 <h4 id="expected-results_19">Expected results<a class="headerlink" href="#expected-results_19" title="Link to this section">&para;</a></h4>
 <ol>
-<li>The Wallet identifies the Type matches and allows the user to present the credential anyway (as the Credential Type and Path match the request.)</li>
+<li>Wallet and Verifier can interact.</li>
+<li>Wallet responds with #2</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_ia_maininteraction_025">WS_RP_IA_MainInteraction_025<a class="headerlink" href="#ws_rp_ia_maininteraction_025" title="Link to this section">&para;</a></h3>
+<h3 id="ws_rp_ia_maininteraction_021">WS_RP_IA_MainInteraction_021<a class="headerlink" href="#ws_rp_ia_maininteraction_021" title="Link to this section">&para;</a></h3>
 <h4 id="objective_20">Objective<a class="headerlink" href="#objective_20" title="Link to this section">&para;</a></h4>
-<p>Test that if the wallet can only return part of the claims in the claim_sets object, it will not return that set but move onto next one.</p>
+<p>Test If the Wallet cannot satisfy any of the options in the claim_sets, it MUST NOT return any claims.</p>
 <h4 id="references_20">References<a class="headerlink" href="#references_20" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[OpenID4VP] Section 6.4</li>
@@ -1806,30 +1860,118 @@ c. discontinuing the interaction.</li>
 <h4 id="preconditions_20">Preconditions<a class="headerlink" href="#preconditions_20" title="Link to this section">&para;</a></h4>
 <p>none</p>
 <h4 id="test-scenario_20">Test Scenario<a class="headerlink" href="#test-scenario_20" title="Link to this section">&para;</a></h4>
-<p>Verifier sends a claim_set requiring 3 claims, but the Wallet only has 2 of them, it MUST NOT return that set. It must move to the next option in the array.</p>
+<ol>
+<li>Verifier sends a DCQL query with a claim_sets that includes a claim the Wallet does not have.</li>
+</ol>
 <h4 id="expected-results_20">Expected results<a class="headerlink" href="#expected-results_20" title="Link to this section">&para;</a></h4>
-<p>The Wallet only has 2 of them, so it MUST NOT return that set. It must move to the next option in the array. The response should reflect this.</p>
+<ol>
+<li>Wallet will not return any claims.</li>
+</ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_ia_maininteraction_026">WS_RP_IA_MainInteraction_026<a class="headerlink" href="#ws_rp_ia_maininteraction_026" title="Link to this section">&para;</a></h3>
+<h3 id="ws_rp_ia_maininteraction_022">WS_RP_IA_MainInteraction_022<a class="headerlink" href="#ws_rp_ia_maininteraction_022" title="Link to this section">&para;</a></h3>
 <h4 id="objective_21">Objective<a class="headerlink" href="#objective_21" title="Link to this section">&para;</a></h4>
-<p>Test when the Wallet cannot deliver all claims requested by the Verifier, because it doesn't have one of them, then it does NOT return the respective Credential.</p>
+<p>Test that Claim_sets MUST NOT be supported if claims is absent.</p>
 <h4 id="references_21">References<a class="headerlink" href="#references_21" title="Link to this section">&para;</a></h4>
 <ul>
-<li>[OpenID4VP] Sections 6.4, 8.5</li>
+<li>[OpenID4VP] Section 6.4</li>
 </ul>
 <h4 id="profile-applicability_21">Profile applicability<a class="headerlink" href="#profile-applicability_21" title="Link to this section">&para;</a></h4>
 <p>none</p>
 <h4 id="eudi-wallet-relevancy_21">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_21" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_21">Preconditions<a class="headerlink" href="#preconditions_21" title="Link to this section">&para;</a></h4>
-<p>The wallet contains a credential that satisfies only one of the two required claims requested by the Verifier.</p>
+<p>none</p>
 <h4 id="test-scenario_21">Test Scenario<a class="headerlink" href="#test-scenario_21" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Verifier sends a DCQL query with a credential with claim_sets, but missing claims</li>
+</ol>
+<h4 id="expected-results_21">Expected results<a class="headerlink" href="#expected-results_21" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Wallet identifies invalid query, returns error.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_023">WS_RP_IA_MainInteraction_023<a class="headerlink" href="#ws_rp_ia_maininteraction_023" title="Link to this section">&para;</a></h3>
+<h4 id="objective_22">Objective<a class="headerlink" href="#objective_22" title="Link to this section">&para;</a></h4>
+<p>Test the Wallet SHOULD treat a claim as if it did not exist in the credential, if its value does not match the one held in the wallets credential.</p>
+<h4 id="references_22">References<a class="headerlink" href="#references_22" title="Link to this section">&para;</a></h4>
+<ul>
+<li>[OpenID4VP] Sections 6.4, 6.3</li>
+</ul>
+<h4 id="profile-applicability_22">Profile applicability<a class="headerlink" href="#profile-applicability_22" title="Link to this section">&para;</a></h4>
+<p>none</p>
+<h4 id="eudi-wallet-relevancy_22">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_22" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_22">Preconditions<a class="headerlink" href="#preconditions_22" title="Link to this section">&para;</a></h4>
+<p>none</p>
+<h4 id="test-scenario_22">Test Scenario<a class="headerlink" href="#test-scenario_22" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Verifier sends a Claims Query containing a restriction on the values of a claim.</li>
+</ol>
+<h4 id="expected-results_22">Expected results<a class="headerlink" href="#expected-results_22" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Wallet sees values do not match, logically considers that specific claim as not being present for this matching flow.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_024">WS_RP_IA_MainInteraction_024<a class="headerlink" href="#ws_rp_ia_maininteraction_024" title="Link to this section">&para;</a></h3>
+<h4 id="objective_23">Objective<a class="headerlink" href="#objective_23" title="Link to this section">&para;</a></h4>
+<p>Verify that if the Wallet cannot pre-parse the data (e.g., it's encrypted), it still allows the user to proceed with the presentation rather than failing the request.</p>
+<h4 id="references_23">References<a class="headerlink" href="#references_23" title="Link to this section">&para;</a></h4>
+<ul>
+<li>[OpenID4VP] Section 6.4</li>
+</ul>
+<h4 id="profile-applicability_23">Profile applicability<a class="headerlink" href="#profile-applicability_23" title="Link to this section">&para;</a></h4>
+<p>Encrypted data</p>
+<h4 id="eudi-wallet-relevancy_23">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_23" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_23">Preconditions<a class="headerlink" href="#preconditions_23" title="Link to this section">&para;</a></h4>
+<p>none</p>
+<h4 id="test-scenario_23">Test Scenario<a class="headerlink" href="#test-scenario_23" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Verifier sends a DCQL query with a values restriction. The Wallet holds a matching credential, but the data is encrypted/locked (the Wallet can't check the value yet).</li>
+</ol>
+<h4 id="expected-results_23">Expected results<a class="headerlink" href="#expected-results_23" title="Link to this section">&para;</a></h4>
+<ol>
+<li>The Wallet identifies the Type matches and allows the user to present the credential anyway (as the Credential Type and Path match the request.)</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_025">WS_RP_IA_MainInteraction_025<a class="headerlink" href="#ws_rp_ia_maininteraction_025" title="Link to this section">&para;</a></h3>
+<h4 id="objective_24">Objective<a class="headerlink" href="#objective_24" title="Link to this section">&para;</a></h4>
+<p>Test that if the wallet can only return part of the claims in the claim_sets object, it will not return that set but move onto next one.</p>
+<h4 id="references_24">References<a class="headerlink" href="#references_24" title="Link to this section">&para;</a></h4>
+<ul>
+<li>[OpenID4VP] Section 6.4</li>
+</ul>
+<h4 id="profile-applicability_24">Profile applicability<a class="headerlink" href="#profile-applicability_24" title="Link to this section">&para;</a></h4>
+<p>none</p>
+<h4 id="eudi-wallet-relevancy_24">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_24" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_24">Preconditions<a class="headerlink" href="#preconditions_24" title="Link to this section">&para;</a></h4>
+<p>none</p>
+<h4 id="test-scenario_24">Test Scenario<a class="headerlink" href="#test-scenario_24" title="Link to this section">&para;</a></h4>
+<p>Verifier sends a claim_set requiring 3 claims, but the Wallet only has 2 of them, it MUST NOT return that set. It must move to the next option in the array.</p>
+<h4 id="expected-results_24">Expected results<a class="headerlink" href="#expected-results_24" title="Link to this section">&para;</a></h4>
+<p>The Wallet only has 2 of them, so it MUST NOT return that set. It must move to the next option in the array. The response should reflect this.</p>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_026">WS_RP_IA_MainInteraction_026<a class="headerlink" href="#ws_rp_ia_maininteraction_026" title="Link to this section">&para;</a></h3>
+<h4 id="objective_25">Objective<a class="headerlink" href="#objective_25" title="Link to this section">&para;</a></h4>
+<p>Test when the Wallet cannot deliver all claims requested by the Verifier, because it doesn't have one of them, then it does NOT return the respective Credential.</p>
+<h4 id="references_25">References<a class="headerlink" href="#references_25" title="Link to this section">&para;</a></h4>
+<ul>
+<li>[OpenID4VP] Sections 6.4, 8.5</li>
+</ul>
+<h4 id="profile-applicability_25">Profile applicability<a class="headerlink" href="#profile-applicability_25" title="Link to this section">&para;</a></h4>
+<p>none</p>
+<h4 id="eudi-wallet-relevancy_25">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_25" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_25">Preconditions<a class="headerlink" href="#preconditions_25" title="Link to this section">&para;</a></h4>
+<p>The wallet contains a credential that satisfies only one of the two required claims requested by the Verifier.</p>
+<h4 id="test-scenario_25">Test Scenario<a class="headerlink" href="#test-scenario_25" title="Link to this section">&para;</a></h4>
 <ol>
 <li>The Wallet engages with the Verifier.</li>
 <li>The Verifier sends an Authorization Request with a valid DCQL query requesting a specific credential type with 2 required claims.</li>
 <li>The Wallet processes the request.</li>
 </ol>
-<h4 id="expected-results_21">Expected results<a class="headerlink" href="#expected-results_21" title="Link to this section">&para;</a></h4>
+<h4 id="expected-results_25">Expected results<a class="headerlink" href="#expected-results_25" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Wallet and Verifier can interact.</li>
 <li>The Wallet does not prompt the user to release the partially matching credential, or indicates to the user that no matching credentials are available.</li>
@@ -1837,113 +1979,8 @@ c. discontinuing the interaction.</li>
 </ol>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_ia_maininteraction_027">WS_RP_IA_MainInteraction_027<a class="headerlink" href="#ws_rp_ia_maininteraction_027" title="Link to this section">&para;</a></h3>
-<h4 id="objective_22">Objective<a class="headerlink" href="#objective_22" title="Link to this section">&para;</a></h4>
-<p>Test when the Wallet cannot deliver all claims requested by the Verifier because one of them has a non-matching value, it does NOT return the respective Credential.</p>
-<h4 id="references_22">References<a class="headerlink" href="#references_22" title="Link to this section">&para;</a></h4>
-<ul>
-<li>[OpenID4VP] Section 6.4</li>
-</ul>
-<h4 id="profile-applicability_22">Profile applicability<a class="headerlink" href="#profile-applicability_22" title="Link to this section">&para;</a></h4>
-<p>none</p>
-<h4 id="eudi-wallet-relevancy_22">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_22" title="Link to this section">&para;</a></h4>
-<p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_22">Preconditions<a class="headerlink" href="#preconditions_22" title="Link to this section">&para;</a></h4>
-<p>The wallet contains a credential that holds both requested claims, but one of those claims has a value that does not match the constraints requested by the Verifier.</p>
-<h4 id="test-scenario_22">Test Scenario<a class="headerlink" href="#test-scenario_22" title="Link to this section">&para;</a></h4>
-<ol>
-<li>The Wallet engages with the Verifier.</li>
-<li>The Verifier sends an Authorization Request with a valid DCQL query requesting a specific credential type with 2 required claims containing specific value constraints.</li>
-<li>The Wallet processes the request.</li>
-</ol>
-<h4 id="expected-results_22">Expected results<a class="headerlink" href="#expected-results_22" title="Link to this section">&para;</a></h4>
-<ol>
-<li>Wallet and Verifier can interact.</li>
-<li>The Wallet does not prompt the user to release the non-matching credential, or indicates to the user that no valid matching credentials are available.</li>
-<li>The Verifier receives a privacy-preserving response completely excluding the credential with the non-matching value.</li>
-</ol>
-<!-- END INCLUDE -->
-<h3 id="ws_rp_ia_maininteraction_028">WS_RP_IA_MainInteraction_028<a class="headerlink" href="#ws_rp_ia_maininteraction_028" title="Link to this section">&para;</a></h3>
-<h4 id="objective_23">Objective<a class="headerlink" href="#objective_23" title="Link to this section">&para;</a></h4>
-<p>Test the wallet for non-selectively disclosable credentials, treats an empty query (no claims or claim_sets) as a request for the entire credential rather than returning an error or an empty token.</p>
-<h4 id="references_23">References<a class="headerlink" href="#references_23" title="Link to this section">&para;</a></h4>
-<ul>
-<li>[OpenID4VP] Section 6.4</li>
-</ul>
-<h4 id="profile-applicability_23">Profile applicability<a class="headerlink" href="#profile-applicability_23" title="Link to this section">&para;</a></h4>
-<p>none</p>
-<h4 id="eudi-wallet-relevancy_23">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_23" title="Link to this section">&para;</a></h4>
-<p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_23">Preconditions<a class="headerlink" href="#preconditions_23" title="Link to this section">&para;</a></h4>
-<p>Wallet holds credential that does NOT support selective disclosure</p>
-<h4 id="test-scenario_23">Test Scenario<a class="headerlink" href="#test-scenario_23" title="Link to this section">&para;</a></h4>
-<ol>
-<li>Verifier sends a DCQL query with a credentials object with no claims or claim_sets</li>
-<li>Wallet processes DCQL</li>
-</ol>
-<h4 id="expected-results_23">Expected results<a class="headerlink" href="#expected-results_23" title="Link to this section">&para;</a></h4>
-<ol>
-<li>Wallet received query</li>
-<li>Wallet identifies the format as non-selective and interprets the missing claims as a "Full Disclosure" request.</li>
-</ol>
-<!-- END INCLUDE -->
-<h3 id="ws_rp_ia_maininteraction_029">WS_RP_IA_MainInteraction_029<a class="headerlink" href="#ws_rp_ia_maininteraction_029" title="Link to this section">&para;</a></h3>
-<h4 id="objective_24">Objective<a class="headerlink" href="#objective_24" title="Link to this section">&para;</a></h4>
-<p>Test that if credential_sets is provided, the wallet evaluates the request by satisfying all required or omitted Credential Set Queries in the array, while treating Credential Set Queries explicitly marked as required false as optional.</p>
-<h4 id="references_24">References<a class="headerlink" href="#references_24" title="Link to this section">&para;</a></h4>
-<ul>
-<li>[OpenID4VP] Sections 6.2, 6.4.2</li>
-</ul>
-<h4 id="profile-applicability_24">Profile applicability<a class="headerlink" href="#profile-applicability_24" title="Link to this section">&para;</a></h4>
-<p>none</p>
-<h4 id="eudi-wallet-relevancy_24">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_24" title="Link to this section">&para;</a></h4>
-<p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_24">Preconditions<a class="headerlink" href="#preconditions_24" title="Link to this section">&para;</a></h4>
-<p>The wallet contains a valid credential that satisfies the criteria for Credential Query A, but does not contain any credential that satisfies Credential Query B.</p>
-<h4 id="test-scenario_24">Test Scenario<a class="headerlink" href="#test-scenario_24" title="Link to this section">&para;</a></h4>
-<ol>
-<li>The Wallet engages with the Verifier.</li>
-<li>The Verifier sends an Authorization Request with a valid DCQL query containing a credential_sets array with two Credential Set Query objects:
-Set 1: Contains an options array for Credential Query A and is marked as required: true.
-Set 2: Contains an options array for Credential Query B and is explicitly marked as required: false.</li>
-<li>The Wallet processes the request.</li>
-</ol>
-<h4 id="expected-results_24">Expected results<a class="headerlink" href="#expected-results_24" title="Link to this section">&para;</a></h4>
-<ol>
-<li>Wallet and Verifier can interact.</li>
-<li>The Wallet prompts the user to release the credential matching Credential Query A, indicating that the overall presentation requirements can be met despite the missing optional credential.</li>
-<li>The Verifier receives an response containing the credential for Credential Query A, completing the interaction successfully.</li>
-</ol>
-<!-- END INCLUDE -->
-<h3 id="ws_rp_ia_maininteraction_030">WS_RP_IA_MainInteraction_030<a class="headerlink" href="#ws_rp_ia_maininteraction_030" title="Link to this section">&para;</a></h3>
-<h4 id="objective_25">Objective<a class="headerlink" href="#objective_25" title="Link to this section">&para;</a></h4>
-<p>Test the Wallet returns presentations of a set of Credentials that match to one of the options inside the Credential Set Query.</p>
-<h4 id="references_25">References<a class="headerlink" href="#references_25" title="Link to this section">&para;</a></h4>
-<ul>
-<li>[OpenID4VP] Section 6.4</li>
-</ul>
-<h4 id="profile-applicability_25">Profile applicability<a class="headerlink" href="#profile-applicability_25" title="Link to this section">&para;</a></h4>
-<p>none</p>
-<h4 id="eudi-wallet-relevancy_25">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_25" title="Link to this section">&para;</a></h4>
-<p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_25">Preconditions<a class="headerlink" href="#preconditions_25" title="Link to this section">&para;</a></h4>
-<p>none</p>
-<h4 id="test-scenario_25">Test Scenario<a class="headerlink" href="#test-scenario_25" title="Link to this section">&para;</a></h4>
-<ol>
-<li>The Wallet engages with the Verifier.</li>
-<li>Verifier sends a DCQL query, including a "credential_sets";
-"credentials" includes 1 the wallet has, 1 it does not, "credential_sets" contains one set with the existing credential in wallet.</li>
-<li>Wallet handles query</li>
-</ol>
-<h4 id="expected-results_25">Expected results<a class="headerlink" href="#expected-results_25" title="Link to this section">&para;</a></h4>
-<ol>
-<li>Wallet and Verifier can interact.</li>
-<li>Wallet received query</li>
-<li>The wallet returns the credential set that matched</li>
-</ol>
-<!-- END INCLUDE -->
-<h3 id="ws_rp_ia_maininteraction_031">WS_RP_IA_MainInteraction_031<a class="headerlink" href="#ws_rp_ia_maininteraction_031" title="Link to this section">&para;</a></h3>
 <h4 id="objective_26">Objective<a class="headerlink" href="#objective_26" title="Link to this section">&para;</a></h4>
-<p>Test the Wallet will not return presentations of a set of Credentials that do NOT match to one of the options inside the Credential Set Query.</p>
+<p>Test when the Wallet cannot deliver all claims requested by the Verifier because one of them has a non-matching value, it does NOT return the respective Credential.</p>
 <h4 id="references_26">References<a class="headerlink" href="#references_26" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[OpenID4VP] Section 6.4</li>
@@ -1953,24 +1990,23 @@ Set 2: Contains an options array for Credential Query B and is explicitly marked
 <h4 id="eudi-wallet-relevancy_26">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_26" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_26">Preconditions<a class="headerlink" href="#preconditions_26" title="Link to this section">&para;</a></h4>
-<p>none</p>
+<p>The wallet contains a credential that holds both requested claims, but one of those claims has a value that does not match the constraints requested by the Verifier.</p>
 <h4 id="test-scenario_26">Test Scenario<a class="headerlink" href="#test-scenario_26" title="Link to this section">&para;</a></h4>
 <ol>
 <li>The Wallet engages with the Verifier.</li>
-<li>Verifier sends a DCQL query, including a "credential_sets";
-"credentials" includes 1 the wallet has, 1 it does not, "credential_sets" contains one set with both an existing credential and a non-existing credential in wallet.</li>
-<li>Wallet handles query</li>
+<li>The Verifier sends an Authorization Request with a valid DCQL query requesting a specific credential type with 2 required claims containing specific value constraints.</li>
+<li>The Wallet processes the request.</li>
 </ol>
 <h4 id="expected-results_26">Expected results<a class="headerlink" href="#expected-results_26" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Wallet and Verifier can interact.</li>
-<li>Wallet received query</li>
-<li>The wallet does NOT return the credential set</li>
+<li>The Wallet does not prompt the user to release the non-matching credential, or indicates to the user that no valid matching credentials are available.</li>
+<li>The Verifier receives a privacy-preserving response completely excluding the credential with the non-matching value.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_ia_maininteraction_032">WS_RP_IA_MainInteraction_032<a class="headerlink" href="#ws_rp_ia_maininteraction_032" title="Link to this section">&para;</a></h3>
+<h3 id="ws_rp_ia_maininteraction_028">WS_RP_IA_MainInteraction_028<a class="headerlink" href="#ws_rp_ia_maininteraction_028" title="Link to this section">&para;</a></h3>
 <h4 id="objective_27">Objective<a class="headerlink" href="#objective_27" title="Link to this section">&para;</a></h4>
-<p>Test that the wallet does not return credentials if they do not match the requested constraints.</p>
+<p>Test the wallet for non-selectively disclosable credentials, treats an empty query (no claims or claim_sets) as a request for the entire credential rather than returning an error or an empty token.</p>
 <h4 id="references_27">References<a class="headerlink" href="#references_27" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[OpenID4VP] Section 6.4</li>
@@ -1980,63 +2016,49 @@ Set 2: Contains an options array for Credential Query B and is explicitly marked
 <h4 id="eudi-wallet-relevancy_27">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_27" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_27">Preconditions<a class="headerlink" href="#preconditions_27" title="Link to this section">&para;</a></h4>
-<p>Wallet has PID saying (over 18: false)</p>
+<p>Wallet holds credential that does NOT support selective disclosure</p>
 <h4 id="test-scenario_27">Test Scenario<a class="headerlink" href="#test-scenario_27" title="Link to this section">&para;</a></h4>
 <ol>
-<li>The Wallet engages with the Verifier.</li>
-<li>Verifier sends a DCQL query, asking for matching credential to wallet where the PID is (over 18: true)</li>
-<li>Wallet handles query</li>
+<li>Verifier sends a DCQL query with a credentials object with no claims or claim_sets</li>
+<li>Wallet processes DCQL</li>
 </ol>
 <h4 id="expected-results_27">Expected results<a class="headerlink" href="#expected-results_27" title="Link to this section">&para;</a></h4>
 <ol>
-<li>Wallet and Verifier can interact.</li>
 <li>Wallet received query</li>
-<li>Wallet sees that constraint is not passed in the matching credential request and hence the credential is not offered. If no others are available wallet states that: I have no credentials to meet your requirement.</li>
+<li>Wallet identifies the format as non-selective and interprets the missing claims as a "Full Disclosure" request.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_ia_maininteraction_033">WS_RP_IA_MainInteraction_033<a class="headerlink" href="#ws_rp_ia_maininteraction_033" title="Link to this section">&para;</a></h3>
+<h3 id="ws_rp_ia_maininteraction_029">WS_RP_IA_MainInteraction_029<a class="headerlink" href="#ws_rp_ia_maininteraction_029" title="Link to this section">&para;</a></h3>
 <h4 id="objective_28">Objective<a class="headerlink" href="#objective_28" title="Link to this section">&para;</a></h4>
-<p>Verify that the Wallet correctly evaluates a combination of value constraints in a single DCQL Query, withholding any credentials that fail even a single individual requested criterion.</p>
+<p>Test that if credential_sets is provided, the wallet evaluates the request by satisfying all required or omitted Credential Set Queries in the array, while treating Credential Set Queries explicitly marked as required false as optional.</p>
 <h4 id="references_28">References<a class="headerlink" href="#references_28" title="Link to this section">&para;</a></h4>
 <ul>
-<li>[OpenID4VP] Section 6.4</li>
+<li>[OpenID4VP] Sections 6.2, 6.4.2</li>
 </ul>
-<h4 id="eudi-wallet-relevancy_28">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_28" title="Link to this section">&para;</a></h4>
-<p>EUDI_generic | EUDI_required</p>
 <h4 id="profile-applicability_28">Profile applicability<a class="headerlink" href="#profile-applicability_28" title="Link to this section">&para;</a></h4>
 <p>none</p>
+<h4 id="eudi-wallet-relevancy_28">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_28" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_28">Preconditions<a class="headerlink" href="#preconditions_28" title="Link to this section">&para;</a></h4>
-<p>The wallet contains multiple credentials of the same type, provisioned as follows:
-Credential A (Full Match): Perfectly satisfies all criteria, including an <code>expiry</code> = 2025
-Credential B1 (Fails Age): Matches everything else, but <code>age</code> = 17.
-Credential B2 (Fails Data Type): Matches everything else, but <code>kg</code> = 10.5 (float mismatch).
-Credential B3 (Fails Case): Matches everything else, but <code>country</code> = "Spain" (capitalized).
-Credential B4 (Fails Whitespace): Matches everything else, but <code>name</code> = "Smith" (missing trailing space).
-Credential B5 (Fails Encoding): Matches everything else, but <code>city</code> = "Munchen" (missing umlaut).
-Credential B6 (Fails Array): Matches everything else, but <code>array</code> = ["FR", "DE"] (multi-element array).
-Credential B7 (Fails Expiry Boundary): Matches everything else, but <code>expiry</code> = 2026 (violates <code>&lt;=</code> condition).</p>
+<p>The wallet contains a valid credential that satisfies the criteria for Credential Query A, but does not contain any credential that satisfies Credential Query B.</p>
 <h4 id="test-scenario_28">Test Scenario<a class="headerlink" href="#test-scenario_28" title="Link to this section">&para;</a></h4>
 <ol>
 <li>The Wallet engages with the Verifier.</li>
-<li>The Verifier sends an Authorization Request with a single DCQL query targeting a single credential with the following combined value constraints:
-   * Logical boundaries: <code>age &gt;= 18</code> and <code>expiry &lt;= 2025</code>
-   * Data type strictness: <code>kg == 10</code>
-   * Case sensitivity: <code>country == "spain"</code>
-   * Whitespace sensitivity: <code>name == "Smith "</code>
-   * Character encoding: <code>city == "München"</code>
-   * Array constraints: Requesting a single-element array <code>["FR"]</code></li>
+<li>The Verifier sends an Authorization Request with a valid DCQL query containing a credential_sets array with two Credential Set Query objects:
+Set 1: Contains an options array for Credential Query A and is marked as required: true.
+Set 2: Contains an options array for Credential Query B and is explicitly marked as required: false.</li>
 <li>The Wallet processes the request.</li>
 </ol>
 <h4 id="expected-results_28">Expected results<a class="headerlink" href="#expected-results_28" title="Link to this section">&para;</a></h4>
 <ol>
-<li>Wallet and Verifier successfully initiate interaction.</li>
-<li>The Wallet only prompts the user to release Credential A. </li>
-<li>The Wallet completely excludes all target "trap" credentials (B1 through B7) from the user selection prompt.</li>
+<li>Wallet and Verifier can interact.</li>
+<li>The Wallet prompts the user to release the credential matching Credential Query A, indicating that the overall presentation requirements can be met despite the missing optional credential.</li>
+<li>The Verifier receives an response containing the credential for Credential Query A, completing the interaction successfully.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_ia_maininteraction_034">WS_RP_IA_MainInteraction_034<a class="headerlink" href="#ws_rp_ia_maininteraction_034" title="Link to this section">&para;</a></h3>
+<h3 id="ws_rp_ia_maininteraction_030">WS_RP_IA_MainInteraction_030<a class="headerlink" href="#ws_rp_ia_maininteraction_030" title="Link to this section">&para;</a></h3>
 <h4 id="objective_29">Objective<a class="headerlink" href="#objective_29" title="Link to this section">&para;</a></h4>
-<p>Test when the Wallet cannot deliver all non-optional Credentials requested by the Verifier, it MUST NOT return any Credential(s).</p>
+<p>Test the Wallet returns presentations of a set of Credentials that match to one of the options inside the Credential Set Query.</p>
 <h4 id="references_29">References<a class="headerlink" href="#references_29" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[OpenID4VP] Section 6.4</li>
@@ -2050,365 +2072,497 @@ Credential B7 (Fails Expiry Boundary): Matches everything else, but <code>expiry
 <h4 id="test-scenario_29">Test Scenario<a class="headerlink" href="#test-scenario_29" title="Link to this section">&para;</a></h4>
 <ol>
 <li>The Wallet engages with the Verifier.</li>
-<li>The verifier sends a DCQL query requesting 2 non-optional credentials; The wallet only has 1 of them</li>
+<li>Verifier sends a DCQL query, including a "credential_sets";
+"credentials" includes 1 the wallet has, 1 it does not, "credential_sets" contains one set with the existing credential in wallet.</li>
 <li>Wallet handles query</li>
 </ol>
 <h4 id="expected-results_29">Expected results<a class="headerlink" href="#expected-results_29" title="Link to this section">&para;</a></h4>
 <ol>
-<li>Wallet sees it can return 1 credential, it cannot return the other</li>
-<li>Wallet does NOT return EITHER credential, sends a privacy keeping requirement not met response</li>
+<li>Wallet and Verifier can interact.</li>
+<li>Wallet received query</li>
+<li>The wallet returns the credential set that matched</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_ia_maininteraction_035">WS_RP_IA_MainInteraction_035<a class="headerlink" href="#ws_rp_ia_maininteraction_035" title="Link to this section">&para;</a></h3>
+<h3 id="ws_rp_ia_maininteraction_031">WS_RP_IA_MainInteraction_031<a class="headerlink" href="#ws_rp_ia_maininteraction_031" title="Link to this section">&para;</a></h3>
 <h4 id="objective_30">Objective<a class="headerlink" href="#objective_30" title="Link to this section">&para;</a></h4>
-<p>Test that the wallet returns the VP token in the Authorization response if the response type value is vp_token.</p>
+<p>Test the Wallet will not return presentations of a set of Credentials that do NOT match to one of the options inside the Credential Set Query.</p>
 <h4 id="references_30">References<a class="headerlink" href="#references_30" title="Link to this section">&para;</a></h4>
 <ul>
-<li>[OpenID4VP] Section 8</li>
+<li>[OpenID4VP] Section 6.4</li>
 </ul>
 <h4 id="profile-applicability_30">Profile applicability<a class="headerlink" href="#profile-applicability_30" title="Link to this section">&para;</a></h4>
 <p>none</p>
 <h4 id="eudi-wallet-relevancy_30">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_30" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_30">Preconditions<a class="headerlink" href="#preconditions_30" title="Link to this section">&para;</a></h4>
-<p>The wallet contains a valid, matching credential requested by the Verifier.</p>
+<p>none</p>
 <h4 id="test-scenario_30">Test Scenario<a class="headerlink" href="#test-scenario_30" title="Link to this section">&para;</a></h4>
 <ol>
 <li>The Wallet engages with the Verifier.</li>
-<li>The Verifier sends an Authorization Request with the response_type value set to vp_token and a valid dcql_query requesting the wallet's stored credential.</li>
-<li>The Wallet processes the request and the user Authorizes the presentation.</li>
+<li>Verifier sends a DCQL query, including a "credential_sets";
+"credentials" includes 1 the wallet has, 1 it does not, "credential_sets" contains one set with both an existing credential and a non-existing credential in wallet.</li>
+<li>Wallet handles query</li>
 </ol>
 <h4 id="expected-results_30">Expected results<a class="headerlink" href="#expected-results_30" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Wallet and Verifier can interact.</li>
-<li>The Wallet prompts the user to release the requested credential.</li>
-<li>The Verifier receives an Authorization Response containing a valid vp_token parameter holding the cryptographically signed credential data.</li>
+<li>Wallet received query</li>
+<li>The wallet does NOT return the credential set</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_ia_maininteraction_036">WS_RP_IA_MainInteraction_036<a class="headerlink" href="#ws_rp_ia_maininteraction_036" title="Link to this section">&para;</a></h3>
+<h3 id="ws_rp_ia_maininteraction_032">WS_RP_IA_MainInteraction_032<a class="headerlink" href="#ws_rp_ia_maininteraction_032" title="Link to this section">&para;</a></h3>
 <h4 id="objective_31">Objective<a class="headerlink" href="#objective_31" title="Link to this section">&para;</a></h4>
-<p>Test that the vp_token parameter returned by the wallet must be a JSON-encoded object.</p>
+<p>Test that the wallet does not return credentials if they do not match the requested constraints.</p>
 <h4 id="references_31">References<a class="headerlink" href="#references_31" title="Link to this section">&para;</a></h4>
 <ul>
-<li>[OpenID4VP] Section 8</li>
+<li>[OpenID4VP] Section 6.4</li>
 </ul>
 <h4 id="profile-applicability_31">Profile applicability<a class="headerlink" href="#profile-applicability_31" title="Link to this section">&para;</a></h4>
 <p>none</p>
 <h4 id="eudi-wallet-relevancy_31">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_31" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_31">Preconditions<a class="headerlink" href="#preconditions_31" title="Link to this section">&para;</a></h4>
-<p>The wallet contains a valid, matching credential requested by the Verifier.</p>
+<p>Wallet has PID saying (over 18: false)</p>
 <h4 id="test-scenario_31">Test Scenario<a class="headerlink" href="#test-scenario_31" title="Link to this section">&para;</a></h4>
 <ol>
-<li>The wallet engages with the verifier.</li>
-<li>The Verifier sends an Authorization Request with a valid dcql_query requesting the wallet's stored credential.</li>
-<li>The Wallet processes the request, the user Authorizes the presentation, and the wallet transmits the response payload.</li>
+<li>The Wallet engages with the Verifier.</li>
+<li>Verifier sends a DCQL query, asking for matching credential to wallet where the PID is (over 18: true)</li>
+<li>Wallet handles query</li>
 </ol>
 <h4 id="expected-results_31">Expected results<a class="headerlink" href="#expected-results_31" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Wallet and Verifier can interact.</li>
-<li>The Wallet prompts the user to release the requested credential.</li>
-<li>The Verifier receives an Authorization Response where the vp_token parameter is successfully parsed as a valid, well-formed JSON object containing the requested credential structure.</li>
+<li>Wallet received query</li>
+<li>Wallet sees that constraint is not passed in the matching credential request and hence the credential is not offered. If no others are available wallet states that: I have no credentials to meet your requirement.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_ia_maininteraction_037">WS_RP_IA_MainInteraction_037<a class="headerlink" href="#ws_rp_ia_maininteraction_037" title="Link to this section">&para;</a></h3>
+<h3 id="ws_rp_ia_maininteraction_033">WS_RP_IA_MainInteraction_033<a class="headerlink" href="#ws_rp_ia_maininteraction_033" title="Link to this section">&para;</a></h3>
 <h4 id="objective_32">Objective<a class="headerlink" href="#objective_32" title="Link to this section">&para;</a></h4>
-<p>Test that the vp_token parameter returned by the wallet, contains ID(s), aligning with the ID value of the credential query.</p>
+<p>Verify that the Wallet correctly evaluates a combination of value constraints in a single DCQL Query, withholding any credentials that fail even a single individual requested criterion.</p>
 <h4 id="references_32">References<a class="headerlink" href="#references_32" title="Link to this section">&para;</a></h4>
 <ul>
-<li>[OpenID4VP] Section 8.1</li>
+<li>[OpenID4VP] Section 6.4</li>
 </ul>
-<h4 id="profile-applicability_32">Profile applicability<a class="headerlink" href="#profile-applicability_32" title="Link to this section">&para;</a></h4>
-<p>none</p>
 <h4 id="eudi-wallet-relevancy_32">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_32" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
+<h4 id="profile-applicability_32">Profile applicability<a class="headerlink" href="#profile-applicability_32" title="Link to this section">&para;</a></h4>
+<p>none</p>
 <h4 id="preconditions_32">Preconditions<a class="headerlink" href="#preconditions_32" title="Link to this section">&para;</a></h4>
-<p>The wallet contains a valid, matching credential requested by the Verifier.</p>
+<p>The wallet contains multiple credentials of the same type, provisioned as follows:
+Credential A (Full Match): Perfectly satisfies all criteria, including an <code>expiry</code> = 2025
+Credential B1 (Fails Age): Matches everything else, but <code>age</code> = 17.
+Credential B2 (Fails Data Type): Matches everything else, but <code>kg</code> = 10.5 (float mismatch).
+Credential B3 (Fails Case): Matches everything else, but <code>country</code> = "Spain" (capitalized).
+Credential B4 (Fails Whitespace): Matches everything else, but <code>name</code> = "Smith" (missing trailing space).
+Credential B5 (Fails Encoding): Matches everything else, but <code>city</code> = "Munchen" (missing umlaut).
+Credential B6 (Fails Array): Matches everything else, but <code>array</code> = ["FR", "DE"] (multi-element array).
+Credential B7 (Fails Expiry Boundary): Matches everything else, but <code>expiry</code> = 2026 (violates <code>&lt;=</code> condition).</p>
 <h4 id="test-scenario_32">Test Scenario<a class="headerlink" href="#test-scenario_32" title="Link to this section">&para;</a></h4>
 <ol>
-<li>The wallet engages with the verifier.</li>
-<li>The Verifier sends an Authorization Request with a valid dcql_query requesting the wallet's stored credential using a specific, defined credential query ID.</li>
-<li>The Wallet processes the request, the user Authorizes the presentation, and the wallet transmits the response payload.</li>
+<li>The Wallet engages with the Verifier.</li>
+<li>The Verifier sends an Authorization Request with a single DCQL query targeting a single credential with the following combined value constraints:
+   * Logical boundaries: <code>age &gt;= 18</code> and <code>expiry &lt;= 2025</code>
+   * Data type strictness: <code>kg == 10</code>
+   * Case sensitivity: <code>country == "spain"</code>
+   * Whitespace sensitivity: <code>name == "Smith "</code>
+   * Character encoding: <code>city == "München"</code>
+   * Array constraints: Requesting a single-element array <code>["FR"]</code></li>
+<li>The Wallet processes the request.</li>
 </ol>
 <h4 id="expected-results_32">Expected results<a class="headerlink" href="#expected-results_32" title="Link to this section">&para;</a></h4>
 <ol>
-<li>Wallet and Verifier can interact.</li>
-<li>The Wallet prompts the user to release the requested credential.</li>
-<li>The Verifier receives an Authorization Response where the top-level keys within the vp_token object exactly match the credential query ID specified in the request.</li>
+<li>Wallet and Verifier successfully initiate interaction.</li>
+<li>The Wallet only prompts the user to release Credential A. </li>
+<li>The Wallet completely excludes all target "trap" credentials (B1 through B7) from the user selection prompt.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_ia_maininteraction_038">WS_RP_IA_MainInteraction_038<a class="headerlink" href="#ws_rp_ia_maininteraction_038" title="Link to this section">&para;</a></h3>
+<h3 id="ws_rp_ia_maininteraction_034">WS_RP_IA_MainInteraction_034<a class="headerlink" href="#ws_rp_ia_maininteraction_034" title="Link to this section">&para;</a></h3>
 <h4 id="objective_33">Objective<a class="headerlink" href="#objective_33" title="Link to this section">&para;</a></h4>
-<p>Test that the vp_token parameter returned by the wallet contains entries where the value(s) are formatted as array(s) of presentation(s) matching the respective credential query ID.</p>
+<p>Test when the Wallet cannot deliver all non-optional Credentials requested by the Verifier, it MUST NOT return any Credential(s).</p>
 <h4 id="references_33">References<a class="headerlink" href="#references_33" title="Link to this section">&para;</a></h4>
 <ul>
-<li>[OpenID4VP] Section 8</li>
+<li>[OpenID4VP] Section 6.4</li>
 </ul>
 <h4 id="profile-applicability_33">Profile applicability<a class="headerlink" href="#profile-applicability_33" title="Link to this section">&para;</a></h4>
 <p>none</p>
 <h4 id="eudi-wallet-relevancy_33">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_33" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_33">Preconditions<a class="headerlink" href="#preconditions_33" title="Link to this section">&para;</a></h4>
-<p>The wallet contains a valid, matching credential requested by the Verifier.</p>
+<p>none</p>
 <h4 id="test-scenario_33">Test Scenario<a class="headerlink" href="#test-scenario_33" title="Link to this section">&para;</a></h4>
 <ol>
-<li>The wallet engages with the verifier.</li>
-<li>The Verifier sends an Authorization Request with a valid dcql_query requesting the wallet's stored credential using a specific, defined credential query ID.</li>
-<li>The Wallet processes the request, the user Authorizes the presentation, and the wallet transmits the response payload.</li>
+<li>The Wallet engages with the Verifier.</li>
+<li>The verifier sends a DCQL query requesting 2 non-optional credentials; The wallet only has 1 of them</li>
+<li>Wallet handles query</li>
 </ol>
 <h4 id="expected-results_33">Expected results<a class="headerlink" href="#expected-results_33" title="Link to this section">&para;</a></h4>
 <ol>
-<li>Wallet and Verifier can interact.</li>
-<li>The Wallet prompts the user to release the requested credential.</li>
-<li>The Verifier receives an Authorization Response where the value associated with the credential query ID key inside the vp_token parameter is an array containing the requested presentation data.</li>
+<li>Wallet sees it can return 1 credential, it cannot return the other</li>
+<li>Wallet does NOT return EITHER credential, sends a privacy keeping requirement not met response</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_ia_maininteraction_039">WS_RP_IA_MainInteraction_039<a class="headerlink" href="#ws_rp_ia_maininteraction_039" title="Link to this section">&para;</a></h3>
+<h3 id="ws_rp_ia_maininteraction_034a">WS_RP_IA_MainInteraction_034a<a class="headerlink" href="#ws_rp_ia_maininteraction_034a" title="Link to this section">&para;</a></h3>
 <h4 id="objective_34">Objective<a class="headerlink" href="#objective_34" title="Link to this section">&para;</a></h4>
-<p>Test that when the wallet returns a vp_token parameter for a multi-credential request, all returned key-value pairs simultaneously and correctly match their respective credential queries.</p>
+<p>Verify that the Wallet responds to a DCQL-query for two selectively disclosable claims with disclosure of both claims, and does not include other selectively disclosable claims, for a credential in SD-JWT VC format.</p>
 <h4 id="references_34">References<a class="headerlink" href="#references_34" title="Link to this section">&para;</a></h4>
-<ul>
-<li>[OpenID4VP] Section 8</li>
-</ul>
-<h4 id="profile-applicability_34">Profile applicability<a class="headerlink" href="#profile-applicability_34" title="Link to this section">&para;</a></h4>
-<p>none</p>
+<p>[OpenID4VP] section 7.1</p>
 <h4 id="eudi-wallet-relevancy_34">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_34" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
+<h4 id="profile-applicability_34">Profile applicability<a class="headerlink" href="#profile-applicability_34" title="Link to this section">&para;</a></h4>
+<p>None</p>
+<h4 id="technology">Technology<a class="headerlink" href="#technology" title="Link to this section">&para;</a></h4>
+<p>Credential in SD-JWT VC format</p>
 <h4 id="preconditions_34">Preconditions<a class="headerlink" href="#preconditions_34" title="Link to this section">&para;</a></h4>
-<p>The wallet contains two distinct valid credentials that can satisfy separate queries simultaneously.</p>
+<p>A. Wallet is set to 'default_configuration_1'
+B. Wallet and Verifier are engaged, and a presentation using OpenID4VP has been initiated.</p>
 <h4 id="test-scenario_34">Test Scenario<a class="headerlink" href="#test-scenario_34" title="Link to this section">&para;</a></h4>
 <ol>
-<li>The wallet engages with the verifier.</li>
-<li>The Verifier sends an Authorization Request with a valid dcql_query requesting two separate credentials using two distinct query IDs.</li>
-<li>The Wallet processes the request, the user Authorizes the presentation of both credentials, and the wallet transmits the response payload.</li>
+<li>Verifier sends a request with a valid DCQL query, with a <code>credentials</code> property that is an array containing one object with the following properties:<ol>
+<li>the <code>format</code> property with the value <code>dc+sd-jwt</code>.</li>
+<li>the <code>claims</code> property, as an array with:<ol>
+<li>one object containing a <code>path</code> property with as value an array containing one element that is a string, with the name of a top-level claim that is selectively disclosable in 'default_credential_A'.</li>
+<li>one object containing a <code>path</code> property with as value an array containing one element that is a string, with the name of another top-level claim that is selectively disclosable in 'default_credential_A'.</li>
+</ol>
+</li>
+<li>the <code>meta</code> property, containing a <code>vct_values</code> property with as value an array containing one element that is a string with the verifiable credential type of 'default_credential_A'.</li>
+</ol>
+</li>
+<li>Verify the received presentation.</li>
 </ol>
 <h4 id="expected-results_34">Expected results<a class="headerlink" href="#expected-results_34" title="Link to this section">&para;</a></h4>
 <ol>
-<li>Wallet and Verifier can interact.</li>
-<li>The Wallet prompts the user to release both requested credentials.</li>
-<li>The Verifier receives an Authorization Response where the vp_token parameter is a single JSON object containing both distinct keys, with each key strictly mapping to its respective signed presentation value.</li>
+<li>The Wallet responds with a presentation of 'default_credential_A'.</li>
+<li>The presentation has the following characteristics:<ol>
+<li>The presentation is for a credential in SD-JWT VC format, of the verifiable credential type and with the <code>vct</code> claim as requested.</li>
+<li>The presentation contains the disclosures of both claims requested, as top-level claims in the verifiable credential.</li>
+<li>The presentation does not contain any other disclosures for claims that allow for selective disclosure in the SD-JWT VC credential.</li>
+</ol>
+</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_ia_maininteraction_040">WS_RP_IA_MainInteraction_040<a class="headerlink" href="#ws_rp_ia_maininteraction_040" title="Link to this section">&para;</a></h3>
+<h3 id="ws_rp_ia_maininteraction_034b">WS_RP_IA_MainInteraction_034b<a class="headerlink" href="#ws_rp_ia_maininteraction_034b" title="Link to this section">&para;</a></h3>
 <h4 id="objective_35">Objective<a class="headerlink" href="#objective_35" title="Link to this section">&para;</a></h4>
-<p>Test that if the multiple parameter is omitted in a credential query, it defaults to false, and the wallet includes only one presentation in the corresponding response array.</p>
+<p>Verify that the Wallet responds to a DCQL-query for two data elements with both data elements present, and does not include other data elements, for a credential in mdoc format.</p>
 <h4 id="references_35">References<a class="headerlink" href="#references_35" title="Link to this section">&para;</a></h4>
-<ul>
-<li>[OpenID4VP] Sections 8, 6.1</li>
-</ul>
-<h4 id="profile-applicability_35">Profile applicability<a class="headerlink" href="#profile-applicability_35" title="Link to this section">&para;</a></h4>
-<p>none</p>
+<p>[OpenID4VP] section 7.2</p>
 <h4 id="eudi-wallet-relevancy_35">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_35" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
+<h4 id="profile-applicability_35">Profile applicability<a class="headerlink" href="#profile-applicability_35" title="Link to this section">&para;</a></h4>
+<p>None</p>
+<h4 id="technology_1">Technology<a class="headerlink" href="#technology_1" title="Link to this section">&para;</a></h4>
+<p>Credential in mdoc format</p>
 <h4 id="preconditions_35">Preconditions<a class="headerlink" href="#preconditions_35" title="Link to this section">&para;</a></h4>
-<p>The wallet contains at least two distinct valid credentials that can satisfy the same single credential query (e.g., two different digital diplomas).</p>
+<p>A. Wallet is set to 'default_configuration_1'
+B. Wallet and Verifier are engaged, and a presentation using OpenID4VP has been initiated.</p>
 <h4 id="test-scenario_35">Test Scenario<a class="headerlink" href="#test-scenario_35" title="Link to this section">&para;</a></h4>
 <ol>
-<li>The wallet engages with the verifier.</li>
-<li>The Verifier sends an Authorization Request with a valid dcql_query requesting a credential, where the multiple attribute for that query is completely omitted.</li>
-<li>The Wallet processes the request, the user selects and Authorizes the maximum no. of credential for presentation allowed, and the wallet transmits the response payload.</li>
+<li>Verifier sends a request with a valid DCQL query, with a <code>credentials</code> property that is an array containing one object with the following properties:<ol>
+<li>the <code>format</code> property with the value <code>mso_mdoc</code>.</li>
+<li>the <code>claims</code> property, as an array with:<ol>
+<li>one object containing a <code>path</code> property whose value is an array containing two elements that are a string, with as values the namespace and identifier of a data element in 'default_credential_A'.</li>
+<li>one object containing a <code>path</code> property whose value is an array containing two elements that are a string, with as values the namespace and identifier of another data element in 'default_credential_A'.</li>
+</ol>
+</li>
+<li>the <code>meta</code> property, containing a <code>doctype_value</code> property that is a string with as value the doctype of 'default_credential_A'.</li>
+</ol>
+</li>
+<li>Verify the received presentation.</li>
 </ol>
 <h4 id="expected-results_35">Expected results<a class="headerlink" href="#expected-results_35" title="Link to this section">&para;</a></h4>
 <ol>
-<li>Wallet and Verifier can interact.</li>
-<li>The Wallet recieves request.</li>
-<li>The Verifier receives an Authorization Response where the array associated with the credential query ID inside the vp_token object contains exactly one presentation.</li>
+<li>The Wallet responds with a presentation of 'default_credential_A'.</li>
+<li>The presentation has the following characteristics:<ol>
+<li>The presentation is for a credential in mdoc format, and has the doctype as requested.</li>
+<li>The presentation contains both requested data elements.</li>
+<li>The presentation does not contain any other data elements in the mdoc credential.</li>
+</ol>
+</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_ia_maininteraction_041">WS_RP_IA_MainInteraction_041<a class="headerlink" href="#ws_rp_ia_maininteraction_041" title="Link to this section">&para;</a></h3>
+<h3 id="ws_rp_ia_maininteraction_034c">WS_RP_IA_MainInteraction_034c<a class="headerlink" href="#ws_rp_ia_maininteraction_034c" title="Link to this section">&para;</a></h3>
 <h4 id="objective_36">Objective<a class="headerlink" href="#objective_36" title="Link to this section">&para;</a></h4>
-<p>Test that if the multiple parameter is explicitly set to false in a credential query, the wallet includes only one presentation in the corresponding response array.</p>
+<p>Verify that the Wallet responds to a DCQL-query selecting one element of a top-level array claim by its array index, and does not include other selectively disclosable claims, for a credential in SD-JWT VC format.</p>
 <h4 id="references_36">References<a class="headerlink" href="#references_36" title="Link to this section">&para;</a></h4>
-<ul>
-<li>[OpenID4VP] Section 8</li>
-</ul>
-<h4 id="profile-applicability_36">Profile applicability<a class="headerlink" href="#profile-applicability_36" title="Link to this section">&para;</a></h4>
-<p>none</p>
+<p>[OpenID4VP] section 7.1</p>
 <h4 id="eudi-wallet-relevancy_36">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_36" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
+<h4 id="profile-applicability_36">Profile applicability<a class="headerlink" href="#profile-applicability_36" title="Link to this section">&para;</a></h4>
+<p>None</p>
+<h4 id="technology_2">Technology<a class="headerlink" href="#technology_2" title="Link to this section">&para;</a></h4>
+<p>Credential in SD-JWT VC format</p>
 <h4 id="preconditions_36">Preconditions<a class="headerlink" href="#preconditions_36" title="Link to this section">&para;</a></h4>
-<p>The wallet contains at least two distinct valid credentials that can satisfy the same single credential query.</p>
+<p>A. Wallet is set to 'default_configuration_1'
+B. Wallet and Verifier are engaged, and a presentation using OpenID4VP has been initiated.</p>
 <h4 id="test-scenario_36">Test Scenario<a class="headerlink" href="#test-scenario_36" title="Link to this section">&para;</a></h4>
 <ol>
-<li>The wallet engages with the verifier.</li>
-<li>The Verifier sends an Authorization Request with a valid dcql_query requesting a credential, where the multiple attribute for that query is explicitly set to false.</li>
-<li>The Wallet processes the request, the user selects and Authorizes the maximum no. of credential for presentation allowed, and the wallet transmits the response payload.</li>
+<li>Verifier sends a request with a valid DCQL query, with a <code>credentials</code> property that is an array containing one object with the following properties:<ol>
+<li>the <code>format</code> property with the value <code>dc+sd-jwt</code>.</li>
+<li>the <code>claims</code> property, as an array with one object containing a <code>path</code> property with as value an array containing two elements,<ol>
+<li>the first a string, with the name of a top-level claim that is an array of which the elements are selectively disclosable in 'default_credential_A'.</li>
+<li>the second an integer (e.g. 1) that is an index present in that array.</li>
+</ol>
+</li>
+<li>the <code>meta</code> property, containing a <code>vct_values</code> property with as value an array containing one element that is a string with the verifiable credential type of 'default_credential_A'.</li>
+</ol>
+</li>
+<li>Verify the received presentation.</li>
 </ol>
 <h4 id="expected-results_36">Expected results<a class="headerlink" href="#expected-results_36" title="Link to this section">&para;</a></h4>
 <ol>
-<li>Wallet and Verifier can interact.</li>
-<li>The Wallet recieves request.</li>
-<li>The Verifier receives an Authorization Response where the array associated with the credential query ID inside the vp_token object contains exactly one presentation.</li>
+<li>The Wallet responds with a presentation of 'default_credential_A'.</li>
+<li>The presentation has the following characteristics:<ol>
+<li>The presentation is for a credential in SD-JWT VC format, of the verifiable credential type and with the <code>vct</code> claim as requested.</li>
+<li>The presentation contains the disclosure of the array element selected by the requested index.</li>
+<li>The presentation does not contain any other disclosures for claims that allow for selective disclosure in the SD-JWT VC credential.</li>
+</ol>
+</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_ia_maininteraction_042">WS_RP_IA_MainInteraction_042<a class="headerlink" href="#ws_rp_ia_maininteraction_042" title="Link to this section">&para;</a></h3>
+<h3 id="ws_rp_ia_maininteraction_034d">WS_RP_IA_MainInteraction_034d<a class="headerlink" href="#ws_rp_ia_maininteraction_034d" title="Link to this section">&para;</a></h3>
 <h4 id="objective_37">Objective<a class="headerlink" href="#objective_37" title="Link to this section">&para;</a></h4>
-<p>Test the wallet does NOT include entries in the vp_token, for optional Credential Queries, when there are no matching Credentials.</p>
+<p>Verify that the Wallet responds to a DCQL-query selecting one property of a top-level object claim, and does not include other selectively disclosable claims, for a credential in SD-JWT VC format.</p>
 <h4 id="references_37">References<a class="headerlink" href="#references_37" title="Link to this section">&para;</a></h4>
-<ul>
-<li>[OpenID4VP] Section 8</li>
-</ul>
-<h4 id="profile-applicability_37">Profile applicability<a class="headerlink" href="#profile-applicability_37" title="Link to this section">&para;</a></h4>
-<p>none</p>
+<p>[OpenID4VP] section 7.1</p>
 <h4 id="eudi-wallet-relevancy_37">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_37" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
+<h4 id="profile-applicability_37">Profile applicability<a class="headerlink" href="#profile-applicability_37" title="Link to this section">&para;</a></h4>
+<p>None</p>
+<h4 id="technology_3">Technology<a class="headerlink" href="#technology_3" title="Link to this section">&para;</a></h4>
+<p>Credential in SD-JWT VC format</p>
 <h4 id="preconditions_37">Preconditions<a class="headerlink" href="#preconditions_37" title="Link to this section">&para;</a></h4>
-<p>Wallet does NOT contain credential A.
-Wallet does contain credential B.</p>
+<p>A. Wallet is set to 'default_configuration_1'
+B. Wallet and Verifier are engaged, and a presentation using OpenID4VP has been initiated.</p>
 <h4 id="test-scenario_37">Test Scenario<a class="headerlink" href="#test-scenario_37" title="Link to this section">&para;</a></h4>
 <ol>
-<li>The wallet engages with the verifier.</li>
-<li>The verifier sends a request where credential query includes an optional credential A, along with a non-optional credential B.</li>
-<li>The wallet returns a vp_token parameter in its response</li>
+<li>Verifier sends a request with a valid DCQL query, with a <code>credentials</code> property that is an array containing one object with the following properties:<ol>
+<li>the <code>format</code> property with the value <code>dc+sd-jwt</code>.</li>
+<li>the <code>claims</code> property, as an array with one object containing a <code>path</code> property with as value an array containing two elements,<ol>
+<li>the first a string, with the name of a top-level claim that is an object of which the properties are selectively disclosable in 'default_credential_A'.</li>
+<li>the second a string, with the name of a property present in that object.</li>
+</ol>
+</li>
+<li>the <code>meta</code> property, containing a <code>vct_values</code> property with as value an array containing one element that is a string with the verifiable credential type of 'default_credential_A'.</li>
+</ol>
+</li>
+<li>Verify the received presentation.</li>
 </ol>
 <h4 id="expected-results_37">Expected results<a class="headerlink" href="#expected-results_37" title="Link to this section">&para;</a></h4>
 <ol>
-<li>Wallet-verifier interaction is successfully initiated</li>
-<li>Wallet receives request, and user gives permission.</li>
-<li>Verify the vp_token entries contains only credential B</li>
+<li>The Wallet responds with a presentation of 'default_credential_A'.</li>
+<li>The presentation has the following characteristics:<ol>
+<li>The presentation is for a credential in SD-JWT VC format, of the verifiable credential type and with the <code>vct</code> claim as requested.</li>
+<li>The presentation contains the disclosure of the selected property of the top-level object claim.</li>
+<li>The presentation does not contain any other disclosures for claims that allow for selective disclosure in the SD-JWT VC credential.</li>
+</ol>
+</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_ia_maininteraction_043">WS_RP_IA_MainInteraction_043<a class="headerlink" href="#ws_rp_ia_maininteraction_043" title="Link to this section">&para;</a></h3>
+<h3 id="ws_rp_ia_maininteraction_034e">WS_RP_IA_MainInteraction_034e<a class="headerlink" href="#ws_rp_ia_maininteraction_034e" title="Link to this section">&para;</a></h3>
 <h4 id="objective_38">Objective<a class="headerlink" href="#objective_38" title="Link to this section">&para;</a></h4>
-<p>Test the wallet omits optional DCQL query keys in the presentation when no matching credentials exist.</p>
+<p>Verify that the Wallet responds to a DCQL-query selecting all elements of a top-level array claim with a <code>null</code> path component, and does not include other selectively disclosable claims, for a credential in SD-JWT VC format.</p>
 <h4 id="references_38">References<a class="headerlink" href="#references_38" title="Link to this section">&para;</a></h4>
-<ul>
-<li>[OpenID4VP] Section 8.1</li>
-</ul>
-<h4 id="profile-applicability_38">Profile applicability<a class="headerlink" href="#profile-applicability_38" title="Link to this section">&para;</a></h4>
-<p>none</p>
+<p>[OpenID4VP] section 7.1</p>
 <h4 id="eudi-wallet-relevancy_38">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_38" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
+<h4 id="profile-applicability_38">Profile applicability<a class="headerlink" href="#profile-applicability_38" title="Link to this section">&para;</a></h4>
+<p>None</p>
+<h4 id="technology_4">Technology<a class="headerlink" href="#technology_4" title="Link to this section">&para;</a></h4>
+<p>Credential in SD-JWT VC format</p>
 <h4 id="preconditions_38">Preconditions<a class="headerlink" href="#preconditions_38" title="Link to this section">&para;</a></h4>
-<p>Wallet does NOT contain matching credentials for the queries optional credentials.</p>
+<p>A. Wallet is set to 'default_configuration_1'
+B. Wallet and Verifier are engaged, and a presentation using OpenID4VP has been initiated.</p>
 <h4 id="test-scenario_38">Test Scenario<a class="headerlink" href="#test-scenario_38" title="Link to this section">&para;</a></h4>
 <ol>
-<li>The wallet engages with the verifier.</li>
-<li>The verifier sends a request where credential query includes some optional credentials.</li>
-<li>The wallet returns an empty vp_token parameter in its response.</li>
+<li>Verifier sends a request with a valid DCQL query, with a <code>credentials</code> property that is an array containing one object with the following properties:<ol>
+<li>the <code>format</code> property with the value <code>dc+sd-jwt</code>.</li>
+<li>the <code>claims</code> property, as an array with one object containing a <code>path</code> property with as value an array containing two elements,<ol>
+<li>the first a string, with the name of a top-level claim that is an array of which all elements are selectively disclosable in 'default_credential_A'.</li>
+<li>the second a <code>null</code> value.</li>
+</ol>
+</li>
+<li>the <code>meta</code> property, containing a <code>vct_values</code> property with as value an array containing one element that is a string with the verifiable credential type of 'default_credential_A'.</li>
+</ol>
+</li>
+<li>Verify the received presentation.</li>
 </ol>
 <h4 id="expected-results_38">Expected results<a class="headerlink" href="#expected-results_38" title="Link to this section">&para;</a></h4>
 <ol>
-<li>Wallet-verifier interaction is successfully initiated.</li>
-<li>Wallet receives request, user gives consent.</li>
-<li>Verify the vp_token returned is empty and does NOT contain key IDs from the optional credentials.</li>
+<li>The Wallet responds with a presentation of 'default_credential_A'.</li>
+<li>The presentation has the following characteristics:<ol>
+<li>The presentation is for a credential in SD-JWT VC format, of the verifiable credential type and with the <code>vct</code> claim as requested.</li>
+<li>The presentation contains the disclosures of all elements of the selected top-level array claim.</li>
+<li>The presentation does not contain any other disclosures for claims that allow for selective disclosure in the SD-JWT VC credential.</li>
+</ol>
+</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_ia_maininteraction_046">WS_RP_IA_MainInteraction_046<a class="headerlink" href="#ws_rp_ia_maininteraction_046" title="Link to this section">&para;</a></h3>
+<h3 id="ws_rp_ia_maininteraction_034f">WS_RP_IA_MainInteraction_034f<a class="headerlink" href="#ws_rp_ia_maininteraction_034f" title="Link to this section">&para;</a></h3>
 <h4 id="objective_39">Objective<a class="headerlink" href="#objective_39" title="Link to this section">&para;</a></h4>
-<p>Test for responses of size &gt; URL limits of user agents, the Wallet can respond to the Verifier using the direct_post mechanism.</p>
+<p>Verify that the Wallet responds to a DCQL-query selecting the first element of a top-level array claim, and does not include other selectively disclosable claims, for a credential in SD-JWT VC format.</p>
 <h4 id="references_39">References<a class="headerlink" href="#references_39" title="Link to this section">&para;</a></h4>
-<ul>
-<li>[OpenID4VP] Section 8</li>
-</ul>
-<h4 id="profile-applicability_39">Profile applicability<a class="headerlink" href="#profile-applicability_39" title="Link to this section">&para;</a></h4>
-<p>Same device
-response_mode=direct_post.jwt</p>
+<p>[OpenID4VP] section 7.1</p>
 <h4 id="eudi-wallet-relevancy_39">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_39" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
+<h4 id="profile-applicability_39">Profile applicability<a class="headerlink" href="#profile-applicability_39" title="Link to this section">&para;</a></h4>
+<p>None</p>
+<h4 id="technology_5">Technology<a class="headerlink" href="#technology_5" title="Link to this section">&para;</a></h4>
+<p>Credential in SD-JWT VC format</p>
 <h4 id="preconditions_39">Preconditions<a class="headerlink" href="#preconditions_39" title="Link to this section">&para;</a></h4>
-<p>The wallet contains a large credential where the resulting presentation size exceeds the typical URL length limit of a user agent.</p>
+<p>A. Wallet is set to 'default_configuration_1'
+B. Wallet and Verifier are engaged, and a presentation using OpenID4VP has been initiated.</p>
 <h4 id="test-scenario_39">Test Scenario<a class="headerlink" href="#test-scenario_39" title="Link to this section">&para;</a></h4>
 <ol>
-<li>The wallet engages with the verifier.</li>
-<li>The verifier sends a request for the large credential, with parameter <code>response_mode=direct_post.jwt</code> and a <code>response_uri</code> of the verifier.</li>
-<li>The wallet processes the request.</li>
-<li>The wallet responds with an Authorization response.</li>
+<li>Verifier sends a request with a valid DCQL query, with a <code>credentials</code> property that is an array containing one object with the following properties:<ol>
+<li>the <code>format</code> property with the value <code>dc+sd-jwt</code>.</li>
+<li>the <code>claims</code> property, as an array with one object containing a <code>path</code> property with as value an array containing two elements,<ol>
+<li>the first a string, with the name of a top-level claim that is an array of which the elements are selectively disclosable in 'default_credential_A'.</li>
+<li>the second the integer <code>0</code>.</li>
+</ol>
+</li>
+<li>the <code>meta</code> property, containing a <code>vct_values</code> property with as value an array containing one element that is a string with the verifiable credential type of 'default_credential_A'.</li>
+</ol>
+</li>
+<li>Verify the received presentation.</li>
 </ol>
 <h4 id="expected-results_39">Expected results<a class="headerlink" href="#expected-results_39" title="Link to this section">&para;</a></h4>
 <ol>
-<li>Wallet-verifier interaction is successfully initiated</li>
-<li>Wallet receives request</li>
-<li>The wallet processes the request successfully, recognises that the response exceeds the user-agent URL limit, and prepares to submit it to the response_uri.</li>
-<li>Verify the wallet submits the response to the response_uri, with the Authorization Response as body of the HTTP-request using the POST method.</li>
+<li>The Wallet responds with a presentation of 'default_credential_A'.</li>
+<li>The presentation has the following characteristics:<ol>
+<li>The presentation is for a credential in SD-JWT VC format, of the verifiable credential type and with the <code>vct</code> claim as requested.</li>
+<li>The presentation contains the disclosure of the first element of the selected top-level array claim.</li>
+<li>The presentation does not contain any other disclosures for claims that allow for selective disclosure in the SD-JWT VC credential.</li>
+</ol>
+</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_ia_maininteraction_049">WS_RP_IA_MainInteraction_049<a class="headerlink" href="#ws_rp_ia_maininteraction_049" title="Link to this section">&para;</a></h3>
+<h3 id="ws_rp_ia_maininteraction_034g">WS_RP_IA_MainInteraction_034g<a class="headerlink" href="#ws_rp_ia_maininteraction_034g" title="Link to this section">&para;</a></h3>
 <h4 id="objective_40">Objective<a class="headerlink" href="#objective_40" title="Link to this section">&para;</a></h4>
-<p>Test when using response mode "direct_post.jwt" the Wallet encodes the Authorization Response, in the HTTP POST request body, using format defined by application/x‑www‑form‑urlencoded.</p>
+<p>Verify that the Wallet responds to a DCQL-query selecting the last element of a top-level array claim, and does not include other selectively disclosable claims, for a credential in SD-JWT VC format.</p>
 <h4 id="references_40">References<a class="headerlink" href="#references_40" title="Link to this section">&para;</a></h4>
-<ul>
-<li>[OpenID4VP] Section 8</li>
-</ul>
-<h4 id="profile-applicability_40">Profile applicability<a class="headerlink" href="#profile-applicability_40" title="Link to this section">&para;</a></h4>
-<p>Same device custom URL</p>
+<p>[OpenID4VP] section 7.1</p>
 <h4 id="eudi-wallet-relevancy_40">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_40" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
+<h4 id="profile-applicability_40">Profile applicability<a class="headerlink" href="#profile-applicability_40" title="Link to this section">&para;</a></h4>
+<p>None</p>
+<h4 id="technology_6">Technology<a class="headerlink" href="#technology_6" title="Link to this section">&para;</a></h4>
+<p>Credential in SD-JWT VC format</p>
 <h4 id="preconditions_40">Preconditions<a class="headerlink" href="#preconditions_40" title="Link to this section">&para;</a></h4>
-<p>none</p>
+<p>A. Wallet is set to 'default_configuration_1'
+B. Wallet and Verifier are engaged, and a presentation using OpenID4VP has been initiated.</p>
 <h4 id="test-scenario_40">Test Scenario<a class="headerlink" href="#test-scenario_40" title="Link to this section">&para;</a></h4>
 <ol>
-<li>The wallet engages with the verifier.</li>
-<li>The verifier sends a request, with parameter <code>response_mode=direct_post.jwt</code> and a <code>response_uri</code> of the verifier.</li>
-<li>The wallet processes the request.</li>
-<li>The wallet responds with request object</li>
+<li>Verifier sends a request with a valid DCQL query, with a <code>credentials</code> property that is an array containing one object with the following properties:<ol>
+<li>the <code>format</code> property with the value <code>dc+sd-jwt</code>.</li>
+<li>the <code>claims</code> property, as an array with one object containing a <code>path</code> property with as value an array containing two elements,<ol>
+<li>the first a string, with the name of a top-level claim that is an array of which the elements are selectively disclosable in 'default_credential_A'.</li>
+<li>the second an integer with the value the length of that array minus 1 (i.e. 0-based index of the last element).</li>
+</ol>
+</li>
+<li>the <code>meta</code> property, containing a <code>vct_values</code> property with as value an array containing one element that is a string with the verifiable credential type of 'default_credential_A'.</li>
+</ol>
+</li>
+<li>Verify the received presentation.</li>
 </ol>
 <h4 id="expected-results_40">Expected results<a class="headerlink" href="#expected-results_40" title="Link to this section">&para;</a></h4>
 <ol>
-<li>Wallet-verifier interaction is successfully initiated</li>
-<li>Wallet receives request</li>
-<li>The wallet processes the request successfully and prepares an Authorization Response encoded as application/x-www-form-urlencoded for submission to the response_uri.</li>
-<li>Verify the wallet submits the response including the Authorization Response encoded using format defined by application/x‑www‑form‑urlencoded.</li>
+<li>The Wallet responds with a presentation of 'default_credential_A'.</li>
+<li>The presentation has the following characteristics:<ol>
+<li>The presentation is for a credential in SD-JWT VC format, of the verifiable credential type and with the <code>vct</code> claim as requested.</li>
+<li>The presentation contains the disclosure of the last element of the selected top-level array claim.</li>
+<li>The presentation does not contain any other disclosures for claims that allow for selective disclosure in the SD-JWT VC credential.</li>
+</ol>
+</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_ia_maininteraction_052">WS_RP_IA_MainInteraction_052<a class="headerlink" href="#ws_rp_ia_maininteraction_052" title="Link to this section">&para;</a></h3>
+<h3 id="ws_rp_ia_maininteraction_034h_uf">WS_RP_IA_MainInteraction_034h_UF<a class="headerlink" href="#ws_rp_ia_maininteraction_034h_uf" title="Link to this section">&para;</a></h3>
 <h4 id="objective_41">Objective<a class="headerlink" href="#objective_41" title="Link to this section">&para;</a></h4>
-<p>Test all parameters in the HTTP POST request body are encoded using UTF‑8.</p>
+<p>Verify that the Wallet does not present a credential in response to a DCQL-query requesting two claims, of which one is selectively disclosable in the held credential and the other is not present in it, for a credential in SD-JWT VC format.</p>
 <h4 id="references_41">References<a class="headerlink" href="#references_41" title="Link to this section">&para;</a></h4>
-<ul>
-<li>[OpenID4VP] Section 8</li>
-</ul>
-<h4 id="profile-applicability_41">Profile applicability<a class="headerlink" href="#profile-applicability_41" title="Link to this section">&para;</a></h4>
-<p>Same device
-response_mode=direct_post.jwt</p>
+<p>[OpenID4VP] section 7.1</p>
 <h4 id="eudi-wallet-relevancy_41">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_41" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
+<h4 id="profile-applicability_41">Profile applicability<a class="headerlink" href="#profile-applicability_41" title="Link to this section">&para;</a></h4>
+<p>None</p>
+<h4 id="technology_7">Technology<a class="headerlink" href="#technology_7" title="Link to this section">&para;</a></h4>
+<p>Credential in SD-JWT VC format</p>
 <h4 id="preconditions_41">Preconditions<a class="headerlink" href="#preconditions_41" title="Link to this section">&para;</a></h4>
-<p>none</p>
+<p>A. Wallet is set to 'default_configuration_1'
+B. Wallet and Verifier are engaged, and a presentation using OpenID4VP has been initiated.</p>
 <h4 id="test-scenario_41">Test Scenario<a class="headerlink" href="#test-scenario_41" title="Link to this section">&para;</a></h4>
 <ol>
-<li>The wallet engages with the verifier.</li>
-<li>The verifier sends a request, with parameter <code>response_mode=direct_post.jwt</code> and a <code>response_uri</code> of the verifier.</li>
-<li>The wallet processes the request.</li>
-<li>The wallet responds with an Authorization response.</li>
+<li>Verifier sends a request with a valid DCQL query, with a <code>credentials</code> property that is an array containing one object with the following properties:<ol>
+<li>the <code>format</code> property with the value <code>dc+sd-jwt</code>.</li>
+<li>the <code>claims</code> property, as an array with:<ol>
+<li>one object containing a <code>path</code> property whose value is an array containing one element that is a string, with the name of a top-level claim that is selectively disclosable in 'default_credential_A'.</li>
+<li>one object containing a <code>path</code> property whose value is an array containing one element that is a string, with a value that is not the name of any claim in 'default_credential_A'.</li>
+</ol>
+</li>
+<li>the <code>meta</code> property, containing a <code>vct_values</code> property whose value is an array containing one element that is a string with as value the verifiable credential type of 'default_credential_A'.</li>
+</ol>
+</li>
+<li>Verify the received presentation.</li>
 </ol>
 <h4 id="expected-results_41">Expected results<a class="headerlink" href="#expected-results_41" title="Link to this section">&para;</a></h4>
 <ol>
-<li>Wallet-verifier interaction is successfully initiated</li>
-<li>Wallet receives request</li>
-<li>The wallet processes the request successfully and prepares the HTTP POST body with all parameters encoded using UTF-8.</li>
-<li>Verify that all parameters in the HTTP POST request body are encoded using UTF‑8.</li>
+<li>The Wallet does not complete the presentation interaction, and<ol>
+<li>informs, if applicable, the user of not having the requested credential as it does not have the requested attributes, and</li>
+<li>aborting the interaction with the Verifier, either by<ol>
+<li>responding with an error <code>access_denied</code>, or</li>
+<li>responding by returning an error without any details, or</li>
+<li>discontinuing the interaction, e.g. by closing the communication channel, if applicable.</li>
+</ol>
+</li>
+<li>if any response is shared to the Verifier, the response does not include a <code>vp_token</code>.</li>
+</ol>
+</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_ia_maininteraction_053">WS_RP_IA_MainInteraction_053<a class="headerlink" href="#ws_rp_ia_maininteraction_053" title="Link to this section">&para;</a></h3>
+<h3 id="ws_rp_ia_maininteraction_034i_uf">WS_RP_IA_MainInteraction_034i_UF<a class="headerlink" href="#ws_rp_ia_maininteraction_034i_uf" title="Link to this section">&para;</a></h3>
 <h4 id="objective_42">Objective<a class="headerlink" href="#objective_42" title="Link to this section">&para;</a></h4>
-<p>Test that the wallet rejects a request when the response_uri parameter is missing and when Response Mode = direct_post.jwt</p>
+<p>Verify that the Wallet does not present a credential in response to a DCQL-query requesting two data elements, of which one is not present in the held credential, for a credential in mdoc format.</p>
 <h4 id="references_42">References<a class="headerlink" href="#references_42" title="Link to this section">&para;</a></h4>
-<ul>
-<li>[OpenID4VP] Section 8</li>
-</ul>
-<h4 id="profile-applicability_42">Profile applicability<a class="headerlink" href="#profile-applicability_42" title="Link to this section">&para;</a></h4>
-<p>none</p>
+<p>[OpenID4VP] section 7.2</p>
 <h4 id="eudi-wallet-relevancy_42">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_42" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
+<h4 id="profile-applicability_42">Profile applicability<a class="headerlink" href="#profile-applicability_42" title="Link to this section">&para;</a></h4>
+<p>None</p>
+<h4 id="technology_8">Technology<a class="headerlink" href="#technology_8" title="Link to this section">&para;</a></h4>
+<p>Credential in mdoc format</p>
 <h4 id="preconditions_42">Preconditions<a class="headerlink" href="#preconditions_42" title="Link to this section">&para;</a></h4>
-<p>none</p>
+<p>A. Wallet is set to 'default_configuration_1'
+B. Wallet and Verifier are engaged, and a presentation using OpenID4VP has been initiated.</p>
 <h4 id="test-scenario_42">Test Scenario<a class="headerlink" href="#test-scenario_42" title="Link to this section">&para;</a></h4>
 <ol>
-<li>The wallet engages with the verifier.</li>
-<li>The verifier sends a request, with parameter <code>response_mode=direct_post.jwt</code> and missing <code>response_uri</code> parameter.</li>
-<li>The wallet processes the request.</li>
+<li>Verifier sends a request with a valid DCQL query, with a <code>credentials</code> property that is an array containing one object with the following properties:<ol>
+<li>the <code>format</code> property with the value <code>mso_mdoc</code>.</li>
+<li>the <code>claims</code> property, as an array with:<ol>
+<li>one object containing a <code>path</code> property whose value is an array containing two elements that are a string, with as values the namespace and identifier of a data element in 'default_credential_A'.</li>
+<li>one object containing a <code>path</code> property whose value is an array containing two elements that are a string, with as values the namespace and identifier of a data element not present in 'default_credential_A'.</li>
+</ol>
+</li>
+<li>the <code>meta</code> property, containing a <code>doctype_value</code> property that is a string with as value the doctype of 'default_credential_A'.</li>
+</ol>
+</li>
+<li>Verify the received presentation.</li>
 </ol>
 <h4 id="expected-results_42">Expected results<a class="headerlink" href="#expected-results_42" title="Link to this section">&para;</a></h4>
 <ol>
-<li>Wallet-verifier interaction is successfully initiated</li>
-<li>Wallet receives request</li>
-<li>Wallet returns an error.</li>
+<li>The Wallet does not complete the presentation interaction, and<ol>
+<li>informs, if applicable, the user of not having the requested credential as it does not have the requested attributes, and</li>
+<li>aborting the interaction with the Verifier, either by<ol>
+<li>responding with an error <code>access_denied</code>, or</li>
+<li>responding by returning an error without any details, or</li>
+<li>discontinuing the interaction, e.g. by closing the communication channel, if applicable.</li>
+</ol>
+</li>
+<li>if any response is shared to the Verifier, the response does not include a <code>vp_token</code>.</li>
+</ol>
+</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_ia_maininteraction_054">WS_RP_IA_MainInteraction_054<a class="headerlink" href="#ws_rp_ia_maininteraction_054" title="Link to this section">&para;</a></h3>
+<h3 id="ws_rp_ia_maininteraction_035">WS_RP_IA_MainInteraction_035<a class="headerlink" href="#ws_rp_ia_maininteraction_035" title="Link to this section">&para;</a></h3>
 <h4 id="objective_43">Objective<a class="headerlink" href="#objective_43" title="Link to this section">&para;</a></h4>
-<p>Test that the Wallet sends the Authorization Response to the provided response_uri using an HTTP POST request.</p>
+<p>Test that the wallet returns the VP token in the Authorization response if the response type value is vp_token.</p>
 <h4 id="references_43">References<a class="headerlink" href="#references_43" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[OpenID4VP] Section 8</li>
@@ -2418,25 +2572,23 @@ response_mode=direct_post.jwt</p>
 <h4 id="eudi-wallet-relevancy_43">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_43" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_43">Preconditions<a class="headerlink" href="#preconditions_43" title="Link to this section">&para;</a></h4>
-<p>none</p>
+<p>The wallet contains a valid, matching credential requested by the Verifier.</p>
 <h4 id="test-scenario_43">Test Scenario<a class="headerlink" href="#test-scenario_43" title="Link to this section">&para;</a></h4>
 <ol>
-<li>The wallet engages with the verifier.</li>
-<li>The verifier sends a request, with parameter <code>response_mode=direct_post.jwt</code> and a <code>response_uri</code> of the verifier.</li>
-<li>The wallet processes the request.</li>
-<li>The wallet responds with an Authorization response.</li>
+<li>The Wallet engages with the Verifier.</li>
+<li>The Verifier sends an Authorization Request with the response_type value set to vp_token and a valid dcql_query requesting the wallet's stored credential.</li>
+<li>The Wallet processes the request and the user Authorizes the presentation.</li>
 </ol>
 <h4 id="expected-results_43">Expected results<a class="headerlink" href="#expected-results_43" title="Link to this section">&para;</a></h4>
 <ol>
-<li>Wallet-verifier interaction is successfully initiated</li>
-<li>Wallet receives request</li>
-<li>The wallet processes the request successfully and prepares the Authorization Response for submission to the response_uri.</li>
-<li>Verify the wallet submits the response to the response_uri</li>
+<li>Wallet and Verifier can interact.</li>
+<li>The Wallet prompts the user to release the requested credential.</li>
+<li>The Verifier receives an Authorization Response containing a valid vp_token parameter holding the cryptographically signed credential data.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_ia_maininteraction_055">WS_RP_IA_MainInteraction_055<a class="headerlink" href="#ws_rp_ia_maininteraction_055" title="Link to this section">&para;</a></h3>
+<h3 id="ws_rp_ia_maininteraction_036">WS_RP_IA_MainInteraction_036<a class="headerlink" href="#ws_rp_ia_maininteraction_036" title="Link to this section">&para;</a></h3>
 <h4 id="objective_44">Objective<a class="headerlink" href="#objective_44" title="Link to this section">&para;</a></h4>
-<p>When the response_uri parameter is present, the redirect_uri Authorization Request parameter MUST NOT be present. </p>
+<p>Test that the vp_token parameter returned by the wallet must be a JSON-encoded object.</p>
 <h4 id="references_44">References<a class="headerlink" href="#references_44" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[OpenID4VP] Section 8</li>
@@ -2446,49 +2598,49 @@ response_mode=direct_post.jwt</p>
 <h4 id="eudi-wallet-relevancy_44">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_44" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_44">Preconditions<a class="headerlink" href="#preconditions_44" title="Link to this section">&para;</a></h4>
-<p>none</p>
+<p>The wallet contains a valid, matching credential requested by the Verifier.</p>
 <h4 id="test-scenario_44">Test Scenario<a class="headerlink" href="#test-scenario_44" title="Link to this section">&para;</a></h4>
 <ol>
 <li>The wallet engages with the verifier.</li>
-<li>The verifier sends a request, with parameter <code>response_mode=direct_post.jwt</code> and a <code>response_uri</code> of the verifier, AND a redirect_uri.</li>
-<li>The wallet processes the request.</li>
+<li>The Verifier sends an Authorization Request with a valid dcql_query requesting the wallet's stored credential.</li>
+<li>The Wallet processes the request, the user Authorizes the presentation, and the wallet transmits the response payload.</li>
 </ol>
 <h4 id="expected-results_44">Expected results<a class="headerlink" href="#expected-results_44" title="Link to this section">&para;</a></h4>
 <ol>
-<li>Wallet-verifier interaction is successfully initiated</li>
-<li>Wallet receives request</li>
-<li>Wallet returns an error.</li>
+<li>Wallet and Verifier can interact.</li>
+<li>The Wallet prompts the user to release the requested credential.</li>
+<li>The Verifier receives an Authorization Response where the vp_token parameter is successfully parsed as a valid, well-formed JSON object containing the requested credential structure.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_ia_maininteraction_056">WS_RP_IA_MainInteraction_056<a class="headerlink" href="#ws_rp_ia_maininteraction_056" title="Link to this section">&para;</a></h3>
+<h3 id="ws_rp_ia_maininteraction_037">WS_RP_IA_MainInteraction_037<a class="headerlink" href="#ws_rp_ia_maininteraction_037" title="Link to this section">&para;</a></h3>
 <h4 id="objective_45">Objective<a class="headerlink" href="#objective_45" title="Link to this section">&para;</a></h4>
-<p>Test that the Wallet validates the response_uri according to the strict matching rules defined in [OID4VP] Section 5.9, and rejects the request if the value is invalid.</p>
+<p>Test that the vp_token parameter returned by the wallet, contains ID(s), aligning with the ID value of the credential query.</p>
 <h4 id="references_45">References<a class="headerlink" href="#references_45" title="Link to this section">&para;</a></h4>
 <ul>
-<li>[OpenID4VP] Section 8</li>
+<li>[OpenID4VP] Section 8.1</li>
 </ul>
 <h4 id="profile-applicability_45">Profile applicability<a class="headerlink" href="#profile-applicability_45" title="Link to this section">&para;</a></h4>
 <p>none</p>
 <h4 id="eudi-wallet-relevancy_45">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_45" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_45">Preconditions<a class="headerlink" href="#preconditions_45" title="Link to this section">&para;</a></h4>
-<p>none</p>
+<p>The wallet contains a valid, matching credential requested by the Verifier.</p>
 <h4 id="test-scenario_45">Test Scenario<a class="headerlink" href="#test-scenario_45" title="Link to this section">&para;</a></h4>
 <ol>
 <li>The wallet engages with the verifier.</li>
-<li>The verifier sends a request, with parameter <code>response_mode=direct_post.jwt</code> and an invalid <code>response_uri</code> (not following rules in [OID4VP] section 5.9)</li>
-<li>The wallet processes the request.</li>
+<li>The Verifier sends an Authorization Request with a valid dcql_query requesting the wallet's stored credential using a specific, defined credential query ID.</li>
+<li>The Wallet processes the request, the user Authorizes the presentation, and the wallet transmits the response payload.</li>
 </ol>
 <h4 id="expected-results_45">Expected results<a class="headerlink" href="#expected-results_45" title="Link to this section">&para;</a></h4>
 <ol>
-<li>Wallet-verifier interaction is successfully initiated</li>
-<li>Wallet receives request</li>
-<li>Wallet returns an error.</li>
+<li>Wallet and Verifier can interact.</li>
+<li>The Wallet prompts the user to release the requested credential.</li>
+<li>The Verifier receives an Authorization Response where the top-level keys within the vp_token object exactly match the credential query ID specified in the request.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_ia_maininteraction_057">WS_RP_IA_MainInteraction_057<a class="headerlink" href="#ws_rp_ia_maininteraction_057" title="Link to this section">&para;</a></h3>
+<h3 id="ws_rp_ia_maininteraction_038">WS_RP_IA_MainInteraction_038<a class="headerlink" href="#ws_rp_ia_maininteraction_038" title="Link to this section">&para;</a></h3>
 <h4 id="objective_46">Objective<a class="headerlink" href="#objective_46" title="Link to this section">&para;</a></h4>
-<p>Test that Wallet accepts an HTTP 200 response with Content-Type: application/json after sending the Authorization Response to the response_uri.</p>
+<p>Test that the vp_token parameter returned by the wallet contains entries where the value(s) are formatted as array(s) of presentation(s) matching the respective credential query ID.</p>
 <h4 id="references_46">References<a class="headerlink" href="#references_46" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[OpenID4VP] Section 8</li>
@@ -2498,8 +2650,357 @@ response_mode=direct_post.jwt</p>
 <h4 id="eudi-wallet-relevancy_46">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_46" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_46">Preconditions<a class="headerlink" href="#preconditions_46" title="Link to this section">&para;</a></h4>
-<p>none</p>
+<p>The wallet contains a valid, matching credential requested by the Verifier.</p>
 <h4 id="test-scenario_46">Test Scenario<a class="headerlink" href="#test-scenario_46" title="Link to this section">&para;</a></h4>
+<ol>
+<li>The wallet engages with the verifier.</li>
+<li>The Verifier sends an Authorization Request with a valid dcql_query requesting the wallet's stored credential using a specific, defined credential query ID.</li>
+<li>The Wallet processes the request, the user Authorizes the presentation, and the wallet transmits the response payload.</li>
+</ol>
+<h4 id="expected-results_46">Expected results<a class="headerlink" href="#expected-results_46" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Wallet and Verifier can interact.</li>
+<li>The Wallet prompts the user to release the requested credential.</li>
+<li>The Verifier receives an Authorization Response where the value associated with the credential query ID key inside the vp_token parameter is an array containing the requested presentation data.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_039">WS_RP_IA_MainInteraction_039<a class="headerlink" href="#ws_rp_ia_maininteraction_039" title="Link to this section">&para;</a></h3>
+<h4 id="objective_47">Objective<a class="headerlink" href="#objective_47" title="Link to this section">&para;</a></h4>
+<p>Test that when the wallet returns a vp_token parameter for a multi-credential request, all returned key-value pairs simultaneously and correctly match their respective credential queries.</p>
+<h4 id="references_47">References<a class="headerlink" href="#references_47" title="Link to this section">&para;</a></h4>
+<ul>
+<li>[OpenID4VP] Section 8</li>
+</ul>
+<h4 id="profile-applicability_47">Profile applicability<a class="headerlink" href="#profile-applicability_47" title="Link to this section">&para;</a></h4>
+<p>none</p>
+<h4 id="eudi-wallet-relevancy_47">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_47" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_47">Preconditions<a class="headerlink" href="#preconditions_47" title="Link to this section">&para;</a></h4>
+<p>The wallet contains two distinct valid credentials that can satisfy separate queries simultaneously.</p>
+<h4 id="test-scenario_47">Test Scenario<a class="headerlink" href="#test-scenario_47" title="Link to this section">&para;</a></h4>
+<ol>
+<li>The wallet engages with the verifier.</li>
+<li>The Verifier sends an Authorization Request with a valid dcql_query requesting two separate credentials using two distinct query IDs.</li>
+<li>The Wallet processes the request, the user Authorizes the presentation of both credentials, and the wallet transmits the response payload.</li>
+</ol>
+<h4 id="expected-results_47">Expected results<a class="headerlink" href="#expected-results_47" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Wallet and Verifier can interact.</li>
+<li>The Wallet prompts the user to release both requested credentials.</li>
+<li>The Verifier receives an Authorization Response where the vp_token parameter is a single JSON object containing both distinct keys, with each key strictly mapping to its respective signed presentation value.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_040">WS_RP_IA_MainInteraction_040<a class="headerlink" href="#ws_rp_ia_maininteraction_040" title="Link to this section">&para;</a></h3>
+<h4 id="objective_48">Objective<a class="headerlink" href="#objective_48" title="Link to this section">&para;</a></h4>
+<p>Test that if the multiple parameter is omitted in a credential query, it defaults to false, and the wallet includes only one presentation in the corresponding response array.</p>
+<h4 id="references_48">References<a class="headerlink" href="#references_48" title="Link to this section">&para;</a></h4>
+<ul>
+<li>[OpenID4VP] Sections 8, 6.1</li>
+</ul>
+<h4 id="profile-applicability_48">Profile applicability<a class="headerlink" href="#profile-applicability_48" title="Link to this section">&para;</a></h4>
+<p>none</p>
+<h4 id="eudi-wallet-relevancy_48">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_48" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_48">Preconditions<a class="headerlink" href="#preconditions_48" title="Link to this section">&para;</a></h4>
+<p>The wallet contains at least two distinct valid credentials that can satisfy the same single credential query (e.g., two different digital diplomas).</p>
+<h4 id="test-scenario_48">Test Scenario<a class="headerlink" href="#test-scenario_48" title="Link to this section">&para;</a></h4>
+<ol>
+<li>The wallet engages with the verifier.</li>
+<li>The Verifier sends an Authorization Request with a valid dcql_query requesting a credential, where the multiple attribute for that query is completely omitted.</li>
+<li>The Wallet processes the request, the user selects and Authorizes the maximum no. of credential for presentation allowed, and the wallet transmits the response payload.</li>
+</ol>
+<h4 id="expected-results_48">Expected results<a class="headerlink" href="#expected-results_48" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Wallet and Verifier can interact.</li>
+<li>The Wallet recieves request.</li>
+<li>The Verifier receives an Authorization Response where the array associated with the credential query ID inside the vp_token object contains exactly one presentation.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_041">WS_RP_IA_MainInteraction_041<a class="headerlink" href="#ws_rp_ia_maininteraction_041" title="Link to this section">&para;</a></h3>
+<h4 id="objective_49">Objective<a class="headerlink" href="#objective_49" title="Link to this section">&para;</a></h4>
+<p>Test that if the multiple parameter is explicitly set to false in a credential query, the wallet includes only one presentation in the corresponding response array.</p>
+<h4 id="references_49">References<a class="headerlink" href="#references_49" title="Link to this section">&para;</a></h4>
+<ul>
+<li>[OpenID4VP] Section 8</li>
+</ul>
+<h4 id="profile-applicability_49">Profile applicability<a class="headerlink" href="#profile-applicability_49" title="Link to this section">&para;</a></h4>
+<p>none</p>
+<h4 id="eudi-wallet-relevancy_49">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_49" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_49">Preconditions<a class="headerlink" href="#preconditions_49" title="Link to this section">&para;</a></h4>
+<p>The wallet contains at least two distinct valid credentials that can satisfy the same single credential query.</p>
+<h4 id="test-scenario_49">Test Scenario<a class="headerlink" href="#test-scenario_49" title="Link to this section">&para;</a></h4>
+<ol>
+<li>The wallet engages with the verifier.</li>
+<li>The Verifier sends an Authorization Request with a valid dcql_query requesting a credential, where the multiple attribute for that query is explicitly set to false.</li>
+<li>The Wallet processes the request, the user selects and Authorizes the maximum no. of credential for presentation allowed, and the wallet transmits the response payload.</li>
+</ol>
+<h4 id="expected-results_49">Expected results<a class="headerlink" href="#expected-results_49" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Wallet and Verifier can interact.</li>
+<li>The Wallet recieves request.</li>
+<li>The Verifier receives an Authorization Response where the array associated with the credential query ID inside the vp_token object contains exactly one presentation.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_042">WS_RP_IA_MainInteraction_042<a class="headerlink" href="#ws_rp_ia_maininteraction_042" title="Link to this section">&para;</a></h3>
+<h4 id="objective_50">Objective<a class="headerlink" href="#objective_50" title="Link to this section">&para;</a></h4>
+<p>Test the wallet does NOT include entries in the vp_token, for optional Credential Queries, when there are no matching Credentials.</p>
+<h4 id="references_50">References<a class="headerlink" href="#references_50" title="Link to this section">&para;</a></h4>
+<ul>
+<li>[OpenID4VP] Section 8</li>
+</ul>
+<h4 id="profile-applicability_50">Profile applicability<a class="headerlink" href="#profile-applicability_50" title="Link to this section">&para;</a></h4>
+<p>none</p>
+<h4 id="eudi-wallet-relevancy_50">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_50" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_50">Preconditions<a class="headerlink" href="#preconditions_50" title="Link to this section">&para;</a></h4>
+<p>Wallet does NOT contain credential A.
+Wallet does contain credential B.</p>
+<h4 id="test-scenario_50">Test Scenario<a class="headerlink" href="#test-scenario_50" title="Link to this section">&para;</a></h4>
+<ol>
+<li>The wallet engages with the verifier.</li>
+<li>The verifier sends a request where credential query includes an optional credential A, along with a non-optional credential B.</li>
+<li>The wallet returns a vp_token parameter in its response</li>
+</ol>
+<h4 id="expected-results_50">Expected results<a class="headerlink" href="#expected-results_50" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Wallet-verifier interaction is successfully initiated</li>
+<li>Wallet receives request, and user gives permission.</li>
+<li>Verify the vp_token entries contains only credential B</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_043">WS_RP_IA_MainInteraction_043<a class="headerlink" href="#ws_rp_ia_maininteraction_043" title="Link to this section">&para;</a></h3>
+<h4 id="objective_51">Objective<a class="headerlink" href="#objective_51" title="Link to this section">&para;</a></h4>
+<p>Test the wallet omits optional DCQL query keys in the presentation when no matching credentials exist.</p>
+<h4 id="references_51">References<a class="headerlink" href="#references_51" title="Link to this section">&para;</a></h4>
+<ul>
+<li>[OpenID4VP] Section 8.1</li>
+</ul>
+<h4 id="profile-applicability_51">Profile applicability<a class="headerlink" href="#profile-applicability_51" title="Link to this section">&para;</a></h4>
+<p>none</p>
+<h4 id="eudi-wallet-relevancy_51">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_51" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_51">Preconditions<a class="headerlink" href="#preconditions_51" title="Link to this section">&para;</a></h4>
+<p>Wallet does NOT contain matching credentials for the queries optional credentials.</p>
+<h4 id="test-scenario_51">Test Scenario<a class="headerlink" href="#test-scenario_51" title="Link to this section">&para;</a></h4>
+<ol>
+<li>The wallet engages with the verifier.</li>
+<li>The verifier sends a request where credential query includes some optional credentials.</li>
+<li>The wallet returns an empty vp_token parameter in its response.</li>
+</ol>
+<h4 id="expected-results_51">Expected results<a class="headerlink" href="#expected-results_51" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Wallet-verifier interaction is successfully initiated.</li>
+<li>Wallet receives request, user gives consent.</li>
+<li>Verify the vp_token returned is empty and does NOT contain key IDs from the optional credentials.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_046">WS_RP_IA_MainInteraction_046<a class="headerlink" href="#ws_rp_ia_maininteraction_046" title="Link to this section">&para;</a></h3>
+<h4 id="objective_52">Objective<a class="headerlink" href="#objective_52" title="Link to this section">&para;</a></h4>
+<p>Test for responses of size &gt; URL limits of user agents, the Wallet can respond to the Verifier using the direct_post mechanism.</p>
+<h4 id="references_52">References<a class="headerlink" href="#references_52" title="Link to this section">&para;</a></h4>
+<ul>
+<li>[OpenID4VP] Section 8</li>
+</ul>
+<h4 id="profile-applicability_52">Profile applicability<a class="headerlink" href="#profile-applicability_52" title="Link to this section">&para;</a></h4>
+<p>Same device
+response_mode=direct_post.jwt</p>
+<h4 id="eudi-wallet-relevancy_52">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_52" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_52">Preconditions<a class="headerlink" href="#preconditions_52" title="Link to this section">&para;</a></h4>
+<p>The wallet contains a large credential where the resulting presentation size exceeds the typical URL length limit of a user agent.</p>
+<h4 id="test-scenario_52">Test Scenario<a class="headerlink" href="#test-scenario_52" title="Link to this section">&para;</a></h4>
+<ol>
+<li>The wallet engages with the verifier.</li>
+<li>The verifier sends a request for the large credential, with parameter <code>response_mode=direct_post.jwt</code> and a <code>response_uri</code> of the verifier.</li>
+<li>The wallet processes the request.</li>
+<li>The wallet responds with an Authorization response.</li>
+</ol>
+<h4 id="expected-results_52">Expected results<a class="headerlink" href="#expected-results_52" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Wallet-verifier interaction is successfully initiated</li>
+<li>Wallet receives request</li>
+<li>The wallet processes the request successfully, recognises that the response exceeds the user-agent URL limit, and prepares to submit it to the response_uri.</li>
+<li>Verify the wallet submits the response to the response_uri, with the Authorization Response as body of the HTTP-request using the POST method.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_049">WS_RP_IA_MainInteraction_049<a class="headerlink" href="#ws_rp_ia_maininteraction_049" title="Link to this section">&para;</a></h3>
+<h4 id="objective_53">Objective<a class="headerlink" href="#objective_53" title="Link to this section">&para;</a></h4>
+<p>Test when using response mode "direct_post.jwt" the Wallet encodes the Authorization Response, in the HTTP POST request body, using format defined by application/x‑www‑form‑urlencoded.</p>
+<h4 id="references_53">References<a class="headerlink" href="#references_53" title="Link to this section">&para;</a></h4>
+<ul>
+<li>[OpenID4VP] Section 8</li>
+</ul>
+<h4 id="profile-applicability_53">Profile applicability<a class="headerlink" href="#profile-applicability_53" title="Link to this section">&para;</a></h4>
+<p>Same device custom URL</p>
+<h4 id="eudi-wallet-relevancy_53">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_53" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_53">Preconditions<a class="headerlink" href="#preconditions_53" title="Link to this section">&para;</a></h4>
+<p>none</p>
+<h4 id="test-scenario_53">Test Scenario<a class="headerlink" href="#test-scenario_53" title="Link to this section">&para;</a></h4>
+<ol>
+<li>The wallet engages with the verifier.</li>
+<li>The verifier sends a request, with parameter <code>response_mode=direct_post.jwt</code> and a <code>response_uri</code> of the verifier.</li>
+<li>The wallet processes the request.</li>
+<li>The wallet responds with request object</li>
+</ol>
+<h4 id="expected-results_53">Expected results<a class="headerlink" href="#expected-results_53" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Wallet-verifier interaction is successfully initiated</li>
+<li>Wallet receives request</li>
+<li>The wallet processes the request successfully and prepares an Authorization Response encoded as application/x-www-form-urlencoded for submission to the response_uri.</li>
+<li>Verify the wallet submits the response including the Authorization Response encoded using format defined by application/x‑www‑form‑urlencoded.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_052">WS_RP_IA_MainInteraction_052<a class="headerlink" href="#ws_rp_ia_maininteraction_052" title="Link to this section">&para;</a></h3>
+<h4 id="objective_54">Objective<a class="headerlink" href="#objective_54" title="Link to this section">&para;</a></h4>
+<p>Test all parameters in the HTTP POST request body are encoded using UTF‑8.</p>
+<h4 id="references_54">References<a class="headerlink" href="#references_54" title="Link to this section">&para;</a></h4>
+<ul>
+<li>[OpenID4VP] Section 8</li>
+</ul>
+<h4 id="profile-applicability_54">Profile applicability<a class="headerlink" href="#profile-applicability_54" title="Link to this section">&para;</a></h4>
+<p>Same device
+response_mode=direct_post.jwt</p>
+<h4 id="eudi-wallet-relevancy_54">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_54" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_54">Preconditions<a class="headerlink" href="#preconditions_54" title="Link to this section">&para;</a></h4>
+<p>none</p>
+<h4 id="test-scenario_54">Test Scenario<a class="headerlink" href="#test-scenario_54" title="Link to this section">&para;</a></h4>
+<ol>
+<li>The wallet engages with the verifier.</li>
+<li>The verifier sends a request, with parameter <code>response_mode=direct_post.jwt</code> and a <code>response_uri</code> of the verifier.</li>
+<li>The wallet processes the request.</li>
+<li>The wallet responds with an Authorization response.</li>
+</ol>
+<h4 id="expected-results_54">Expected results<a class="headerlink" href="#expected-results_54" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Wallet-verifier interaction is successfully initiated</li>
+<li>Wallet receives request</li>
+<li>The wallet processes the request successfully and prepares the HTTP POST body with all parameters encoded using UTF-8.</li>
+<li>Verify that all parameters in the HTTP POST request body are encoded using UTF‑8.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_053">WS_RP_IA_MainInteraction_053<a class="headerlink" href="#ws_rp_ia_maininteraction_053" title="Link to this section">&para;</a></h3>
+<h4 id="objective_55">Objective<a class="headerlink" href="#objective_55" title="Link to this section">&para;</a></h4>
+<p>Test that the wallet rejects a request when the response_uri parameter is missing and when Response Mode = direct_post.jwt</p>
+<h4 id="references_55">References<a class="headerlink" href="#references_55" title="Link to this section">&para;</a></h4>
+<ul>
+<li>[OpenID4VP] Section 8</li>
+</ul>
+<h4 id="profile-applicability_55">Profile applicability<a class="headerlink" href="#profile-applicability_55" title="Link to this section">&para;</a></h4>
+<p>none</p>
+<h4 id="eudi-wallet-relevancy_55">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_55" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_55">Preconditions<a class="headerlink" href="#preconditions_55" title="Link to this section">&para;</a></h4>
+<p>none</p>
+<h4 id="test-scenario_55">Test Scenario<a class="headerlink" href="#test-scenario_55" title="Link to this section">&para;</a></h4>
+<ol>
+<li>The wallet engages with the verifier.</li>
+<li>The verifier sends a request, with parameter <code>response_mode=direct_post.jwt</code> and missing <code>response_uri</code> parameter.</li>
+<li>The wallet processes the request.</li>
+</ol>
+<h4 id="expected-results_55">Expected results<a class="headerlink" href="#expected-results_55" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Wallet-verifier interaction is successfully initiated</li>
+<li>Wallet receives request</li>
+<li>Wallet returns an error.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_054">WS_RP_IA_MainInteraction_054<a class="headerlink" href="#ws_rp_ia_maininteraction_054" title="Link to this section">&para;</a></h3>
+<h4 id="objective_56">Objective<a class="headerlink" href="#objective_56" title="Link to this section">&para;</a></h4>
+<p>Test that the Wallet sends the Authorization Response to the provided response_uri using an HTTP POST request.</p>
+<h4 id="references_56">References<a class="headerlink" href="#references_56" title="Link to this section">&para;</a></h4>
+<ul>
+<li>[OpenID4VP] Section 8</li>
+</ul>
+<h4 id="profile-applicability_56">Profile applicability<a class="headerlink" href="#profile-applicability_56" title="Link to this section">&para;</a></h4>
+<p>none</p>
+<h4 id="eudi-wallet-relevancy_56">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_56" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_56">Preconditions<a class="headerlink" href="#preconditions_56" title="Link to this section">&para;</a></h4>
+<p>none</p>
+<h4 id="test-scenario_56">Test Scenario<a class="headerlink" href="#test-scenario_56" title="Link to this section">&para;</a></h4>
+<ol>
+<li>The wallet engages with the verifier.</li>
+<li>The verifier sends a request, with parameter <code>response_mode=direct_post.jwt</code> and a <code>response_uri</code> of the verifier.</li>
+<li>The wallet processes the request.</li>
+<li>The wallet responds with an Authorization response.</li>
+</ol>
+<h4 id="expected-results_56">Expected results<a class="headerlink" href="#expected-results_56" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Wallet-verifier interaction is successfully initiated</li>
+<li>Wallet receives request</li>
+<li>The wallet processes the request successfully and prepares the Authorization Response for submission to the response_uri.</li>
+<li>Verify the wallet submits the response to the response_uri</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_055">WS_RP_IA_MainInteraction_055<a class="headerlink" href="#ws_rp_ia_maininteraction_055" title="Link to this section">&para;</a></h3>
+<h4 id="objective_57">Objective<a class="headerlink" href="#objective_57" title="Link to this section">&para;</a></h4>
+<p>When the response_uri parameter is present, the redirect_uri Authorization Request parameter MUST NOT be present. </p>
+<h4 id="references_57">References<a class="headerlink" href="#references_57" title="Link to this section">&para;</a></h4>
+<ul>
+<li>[OpenID4VP] Section 8</li>
+</ul>
+<h4 id="profile-applicability_57">Profile applicability<a class="headerlink" href="#profile-applicability_57" title="Link to this section">&para;</a></h4>
+<p>none</p>
+<h4 id="eudi-wallet-relevancy_57">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_57" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_57">Preconditions<a class="headerlink" href="#preconditions_57" title="Link to this section">&para;</a></h4>
+<p>none</p>
+<h4 id="test-scenario_57">Test Scenario<a class="headerlink" href="#test-scenario_57" title="Link to this section">&para;</a></h4>
+<ol>
+<li>The wallet engages with the verifier.</li>
+<li>The verifier sends a request, with parameter <code>response_mode=direct_post.jwt</code> and a <code>response_uri</code> of the verifier, AND a redirect_uri.</li>
+<li>The wallet processes the request.</li>
+</ol>
+<h4 id="expected-results_57">Expected results<a class="headerlink" href="#expected-results_57" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Wallet-verifier interaction is successfully initiated</li>
+<li>Wallet receives request</li>
+<li>Wallet returns an error.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_056">WS_RP_IA_MainInteraction_056<a class="headerlink" href="#ws_rp_ia_maininteraction_056" title="Link to this section">&para;</a></h3>
+<h4 id="objective_58">Objective<a class="headerlink" href="#objective_58" title="Link to this section">&para;</a></h4>
+<p>Test that the Wallet validates the response_uri according to the strict matching rules defined in [OID4VP] Section 5.9, and rejects the request if the value is invalid.</p>
+<h4 id="references_58">References<a class="headerlink" href="#references_58" title="Link to this section">&para;</a></h4>
+<ul>
+<li>[OpenID4VP] Section 8</li>
+</ul>
+<h4 id="profile-applicability_58">Profile applicability<a class="headerlink" href="#profile-applicability_58" title="Link to this section">&para;</a></h4>
+<p>none</p>
+<h4 id="eudi-wallet-relevancy_58">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_58" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_58">Preconditions<a class="headerlink" href="#preconditions_58" title="Link to this section">&para;</a></h4>
+<p>none</p>
+<h4 id="test-scenario_58">Test Scenario<a class="headerlink" href="#test-scenario_58" title="Link to this section">&para;</a></h4>
+<ol>
+<li>The wallet engages with the verifier.</li>
+<li>The verifier sends a request, with parameter <code>response_mode=direct_post.jwt</code> and an invalid <code>response_uri</code> (not following rules in [OID4VP] section 5.9)</li>
+<li>The wallet processes the request.</li>
+</ol>
+<h4 id="expected-results_58">Expected results<a class="headerlink" href="#expected-results_58" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Wallet-verifier interaction is successfully initiated</li>
+<li>Wallet receives request</li>
+<li>Wallet returns an error.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_maininteraction_057">WS_RP_IA_MainInteraction_057<a class="headerlink" href="#ws_rp_ia_maininteraction_057" title="Link to this section">&para;</a></h3>
+<h4 id="objective_59">Objective<a class="headerlink" href="#objective_59" title="Link to this section">&para;</a></h4>
+<p>Test that Wallet accepts an HTTP 200 response with Content-Type: application/json after sending the Authorization Response to the response_uri.</p>
+<h4 id="references_59">References<a class="headerlink" href="#references_59" title="Link to this section">&para;</a></h4>
+<ul>
+<li>[OpenID4VP] Section 8</li>
+</ul>
+<h4 id="profile-applicability_59">Profile applicability<a class="headerlink" href="#profile-applicability_59" title="Link to this section">&para;</a></h4>
+<p>none</p>
+<h4 id="eudi-wallet-relevancy_59">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_59" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_59">Preconditions<a class="headerlink" href="#preconditions_59" title="Link to this section">&para;</a></h4>
+<p>none</p>
+<h4 id="test-scenario_59">Test Scenario<a class="headerlink" href="#test-scenario_59" title="Link to this section">&para;</a></h4>
 <ol>
 <li>The wallet engages with the verifier.</li>
 <li>The verifier sends a request, with parameter 'response_mode=direct_post.jwt', and a valid response_uri.</li>
@@ -2507,7 +3008,7 @@ response_mode=direct_post.jwt</p>
 <li>The wallet responds with an Authorization response.</li>
 <li>Verifier sends an HTTP status code of 200 + a JSON body</li>
 </ol>
-<h4 id="expected-results_46">Expected results<a class="headerlink" href="#expected-results_46" title="Link to this section">&para;</a></h4>
+<h4 id="expected-results_59">Expected results<a class="headerlink" href="#expected-results_59" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated</li>
 <li>Wallet receives request</li>
@@ -2517,27 +3018,27 @@ response_mode=direct_post.jwt</p>
 </ol>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_ia_maininteraction_060">WS_RP_IA_MainInteraction_060<a class="headerlink" href="#ws_rp_ia_maininteraction_060" title="Link to this section">&para;</a></h3>
-<h4 id="objective_47">Objective<a class="headerlink" href="#objective_47" title="Link to this section">&para;</a></h4>
+<h4 id="objective_60">Objective<a class="headerlink" href="#objective_60" title="Link to this section">&para;</a></h4>
 <p>Test the Wallet redirects the user agent to the redirect_uri if this parameter is included in the initial Authorization Request.</p>
-<h4 id="references_47">References<a class="headerlink" href="#references_47" title="Link to this section">&para;</a></h4>
+<h4 id="references_60">References<a class="headerlink" href="#references_60" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[OpenID4VP] Section 8</li>
 </ul>
-<h4 id="profile-applicability_47">Profile applicability<a class="headerlink" href="#profile-applicability_47" title="Link to this section">&para;</a></h4>
+<h4 id="profile-applicability_60">Profile applicability<a class="headerlink" href="#profile-applicability_60" title="Link to this section">&para;</a></h4>
 <p>Same device
 response_mode=direct_post</p>
-<h4 id="eudi-wallet-relevancy_47">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_47" title="Link to this section">&para;</a></h4>
+<h4 id="eudi-wallet-relevancy_60">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_60" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_forbidden</p>
-<h4 id="preconditions_47">Preconditions<a class="headerlink" href="#preconditions_47" title="Link to this section">&para;</a></h4>
+<h4 id="preconditions_60">Preconditions<a class="headerlink" href="#preconditions_60" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_47">Test Scenario<a class="headerlink" href="#test-scenario_47" title="Link to this section">&para;</a></h4>
+<h4 id="test-scenario_60">Test Scenario<a class="headerlink" href="#test-scenario_60" title="Link to this section">&para;</a></h4>
 <ol>
 <li>The wallet engages with the verifier.</li>
 <li>The verifier sends an Authorization request, with response_type=vp_token, and parameter redirect_uri.</li>
 <li>The wallet processes the request.</li>
 <li>The wallet constructs the URL.</li>
 </ol>
-<h4 id="expected-results_47">Expected results<a class="headerlink" href="#expected-results_47" title="Link to this section">&para;</a></h4>
+<h4 id="expected-results_60">Expected results<a class="headerlink" href="#expected-results_60" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
 <li>Wallet receives request.</li>
@@ -2546,20 +3047,20 @@ response_mode=direct_post</p>
 </ol>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_ia_maininteraction_061">WS_RP_IA_MainInteraction_061<a class="headerlink" href="#ws_rp_ia_maininteraction_061" title="Link to this section">&para;</a></h3>
-<h4 id="objective_48">Objective<a class="headerlink" href="#objective_48" title="Link to this section">&para;</a></h4>
+<h4 id="objective_61">Objective<a class="headerlink" href="#objective_61" title="Link to this section">&para;</a></h4>
 <p>Test the Wallet handles a redirect_uri when a response_uri returns after a successful Response.</p>
-<h4 id="references_48">References<a class="headerlink" href="#references_48" title="Link to this section">&para;</a></h4>
+<h4 id="references_61">References<a class="headerlink" href="#references_61" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[OpenID4VP] Section 8.2</li>
 </ul>
-<h4 id="profile-applicability_48">Profile applicability<a class="headerlink" href="#profile-applicability_48" title="Link to this section">&para;</a></h4>
+<h4 id="profile-applicability_61">Profile applicability<a class="headerlink" href="#profile-applicability_61" title="Link to this section">&para;</a></h4>
 <p>Same device
 response_mode=direct_post.jwt</p>
-<h4 id="eudi-wallet-relevancy_48">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_48" title="Link to this section">&para;</a></h4>
+<h4 id="eudi-wallet-relevancy_61">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_61" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_48">Preconditions<a class="headerlink" href="#preconditions_48" title="Link to this section">&para;</a></h4>
+<h4 id="preconditions_61">Preconditions<a class="headerlink" href="#preconditions_61" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_48">Test Scenario<a class="headerlink" href="#test-scenario_48" title="Link to this section">&para;</a></h4>
+<h4 id="test-scenario_61">Test Scenario<a class="headerlink" href="#test-scenario_61" title="Link to this section">&para;</a></h4>
 <ol>
 <li>The wallet engages with the verifier.</li>
 <li>The verifier sends an Authorization request, with response_type=vp_token, response_mode=direct_post.jwt and parameter response_uri.</li>
@@ -2567,7 +3068,7 @@ response_mode=direct_post.jwt</p>
 <li>The verifier responds with HTTP 200 and a JSON body containing a redirect_uri.</li>
 <li>Wallet processes JSON and triggers User agent.</li>
 </ol>
-<h4 id="expected-results_48">Expected results<a class="headerlink" href="#expected-results_48" title="Link to this section">&para;</a></h4>
+<h4 id="expected-results_61">Expected results<a class="headerlink" href="#expected-results_61" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
 <li>Wallet receives request.</li>
@@ -2577,20 +3078,20 @@ response_mode=direct_post.jwt</p>
 </ol>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_ia_maininteraction_064">WS_RP_IA_MainInteraction_064<a class="headerlink" href="#ws_rp_ia_maininteraction_064" title="Link to this section">&para;</a></h3>
-<h4 id="objective_49">Objective<a class="headerlink" href="#objective_49" title="Link to this section">&para;</a></h4>
+<h4 id="objective_62">Objective<a class="headerlink" href="#objective_62" title="Link to this section">&para;</a></h4>
 <p>Test the Wallet handles a redirect_uri when a response_uri returns after an error response.</p>
-<h4 id="references_49">References<a class="headerlink" href="#references_49" title="Link to this section">&para;</a></h4>
+<h4 id="references_62">References<a class="headerlink" href="#references_62" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[OpenID4VP] Section 8.2</li>
 </ul>
-<h4 id="profile-applicability_49">Profile applicability<a class="headerlink" href="#profile-applicability_49" title="Link to this section">&para;</a></h4>
+<h4 id="profile-applicability_62">Profile applicability<a class="headerlink" href="#profile-applicability_62" title="Link to this section">&para;</a></h4>
 <p>Same device
 response_mode=direct_post.jwt</p>
-<h4 id="eudi-wallet-relevancy_49">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_49" title="Link to this section">&para;</a></h4>
+<h4 id="eudi-wallet-relevancy_62">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_62" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_49">Preconditions<a class="headerlink" href="#preconditions_49" title="Link to this section">&para;</a></h4>
+<h4 id="preconditions_62">Preconditions<a class="headerlink" href="#preconditions_62" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_49">Test Scenario<a class="headerlink" href="#test-scenario_49" title="Link to this section">&para;</a></h4>
+<h4 id="test-scenario_62">Test Scenario<a class="headerlink" href="#test-scenario_62" title="Link to this section">&para;</a></h4>
 <ol>
 <li>The wallet engages with the verifier.</li>
 <li>The verifier sends an Authorization request, with response_type=vp_token, response_mode=direct_post.jwt and parameter response_uri.</li>
@@ -2598,7 +3099,7 @@ response_mode=direct_post.jwt</p>
 <li>The verifier responds with HTTP error 400 and a JSON body containing a redirect_uri.</li>
 <li>Wallet processes error and the JSON and triggers User agent.</li>
 </ol>
-<h4 id="expected-results_49">Expected results<a class="headerlink" href="#expected-results_49" title="Link to this section">&para;</a></h4>
+<h4 id="expected-results_62">Expected results<a class="headerlink" href="#expected-results_62" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
 <li>Wallet receives request.</li>
@@ -2608,20 +3109,20 @@ response_mode=direct_post.jwt</p>
 </ol>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_ia_maininteraction_065">WS_RP_IA_MainInteraction_065<a class="headerlink" href="#ws_rp_ia_maininteraction_065" title="Link to this section">&para;</a></h3>
-<h4 id="objective_50">Objective<a class="headerlink" href="#objective_50" title="Link to this section">&para;</a></h4>
+<h4 id="objective_63">Objective<a class="headerlink" href="#objective_63" title="Link to this section">&para;</a></h4>
 <p>Verify that Wallet supports receiving a Credential Query from the Verifier in DCQL language, including the object <code>trusted_authorities</code> (aki)-based as defined in section 6.1.1.1 of [OIDF.OID4VP].</p>
-<h4 id="references_50">References<a class="headerlink" href="#references_50" title="Link to this section">&para;</a></h4>
+<h4 id="references_63">References<a class="headerlink" href="#references_63" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[HAIP] Section 5</li>
 <li>[OpenID4VP] Section 6.1.1.1</li>
 </ul>
-<h4 id="profile-applicability_50">Profile applicability<a class="headerlink" href="#profile-applicability_50" title="Link to this section">&para;</a></h4>
+<h4 id="profile-applicability_63">Profile applicability<a class="headerlink" href="#profile-applicability_63" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="eudi-wallet-relevancy_50">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_50" title="Link to this section">&para;</a></h4>
+<h4 id="eudi-wallet-relevancy_63">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_63" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_50">Preconditions<a class="headerlink" href="#preconditions_50" title="Link to this section">&para;</a></h4>
+<h4 id="preconditions_63">Preconditions<a class="headerlink" href="#preconditions_63" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_50">Test Scenario<a class="headerlink" href="#test-scenario_50" title="Link to this section">&para;</a></h4>
+<h4 id="test-scenario_63">Test Scenario<a class="headerlink" href="#test-scenario_63" title="Link to this section">&para;</a></h4>
 <ol>
 <li>The wallet engages with the verifier.</li>
 <li>The verifier sends an Authorization Request containing a DCQL credential query that specifies an Authority Key Identifier (AKI) inside the trusted_authorities object.</li>
@@ -2630,7 +3131,7 @@ response_mode=direct_post.jwt</p>
 <li>The user provides consent.</li>
 <li>The wallet transmits the Authorization Response back to the verifier.</li>
 </ol>
-<h4 id="expected-results_50">Expected results<a class="headerlink" href="#expected-results_50" title="Link to this section">&para;</a></h4>
+<h4 id="expected-results_63">Expected results<a class="headerlink" href="#expected-results_63" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
 <li>Wallet receives the request.</li>
@@ -2641,22 +3142,22 @@ response_mode=direct_post.jwt</p>
 </ol>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_ia_maininteraction_066">WS_RP_IA_MainInteraction_066<a class="headerlink" href="#ws_rp_ia_maininteraction_066" title="Link to this section">&para;</a></h3>
-<h4 id="objective_51">Objective<a class="headerlink" href="#objective_51" title="Link to this section">&para;</a></h4>
+<h4 id="objective_64">Objective<a class="headerlink" href="#objective_64" title="Link to this section">&para;</a></h4>
 <p>Verify the HAIP requirement that, in the presentation flow via Redirects, Wallet raises an error if Verifier does not include <code>redirect_uri</code> in the HTTP response to the Wallet's HTTP POST to the <code>response_uri</code>, as defined in section 8.2 of [OIDF.OID4VP].</p>
-<h4 id="references_51">References<a class="headerlink" href="#references_51" title="Link to this section">&para;</a></h4>
+<h4 id="references_64">References<a class="headerlink" href="#references_64" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[HAIP] Section 5.1</li>
 <li>[OpenID4VP] Section 8.2</li>
 </ul>
-<h4 id="profile-applicability_51">Profile applicability<a class="headerlink" href="#profile-applicability_51" title="Link to this section">&para;</a></h4>
+<h4 id="profile-applicability_64">Profile applicability<a class="headerlink" href="#profile-applicability_64" title="Link to this section">&para;</a></h4>
 <p>Same device
 response_mode=direct_post.jwt
 OIDF.HAIP</p>
-<h4 id="eudi-wallet-relevancy_51">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_51" title="Link to this section">&para;</a></h4>
+<h4 id="eudi-wallet-relevancy_64">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_64" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_51">Preconditions<a class="headerlink" href="#preconditions_51" title="Link to this section">&para;</a></h4>
+<h4 id="preconditions_64">Preconditions<a class="headerlink" href="#preconditions_64" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_51">Test Scenario<a class="headerlink" href="#test-scenario_51" title="Link to this section">&para;</a></h4>
+<h4 id="test-scenario_64">Test Scenario<a class="headerlink" href="#test-scenario_64" title="Link to this section">&para;</a></h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request. </li>
 <li>Verifier sends presentation request using <code>response_mode</code> <code>direct_post.jwt</code> and including <code>response_uri</code>.</li>
@@ -2664,7 +3165,7 @@ OIDF.HAIP</p>
 <li>Verifier response to Wallet HTTP POST does not include <code>redirect_uri</code>. </li>
 <li>Wallet processes the request.</li>
 </ol>
-<h4 id="expected-results_51">Expected results<a class="headerlink" href="#expected-results_51" title="Link to this section">&para;</a></h4>
+<h4 id="expected-results_64">Expected results<a class="headerlink" href="#expected-results_64" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
 <li>Wallet receives request.</li>
@@ -2674,22 +3175,22 @@ OIDF.HAIP</p>
 </ol>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_ia_maininteraction_067">WS_RP_IA_MainInteraction_067<a class="headerlink" href="#ws_rp_ia_maininteraction_067" title="Link to this section">&para;</a></h3>
-<h4 id="objective_52">Objective<a class="headerlink" href="#objective_52" title="Link to this section">&para;</a></h4>
+<h4 id="objective_65">Objective<a class="headerlink" href="#objective_65" title="Link to this section">&para;</a></h4>
 <p>Verify the HAIP requirement that, in the presentation flow via Redirects, Wallet follows <code>redirect_uri</code> sent by the Verifier.</p>
-<h4 id="references_52">References<a class="headerlink" href="#references_52" title="Link to this section">&para;</a></h4>
+<h4 id="references_65">References<a class="headerlink" href="#references_65" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[HAIP] Section 5.1</li>
 <li>[OpenID4VP] Section 8.2</li>
 </ul>
-<h4 id="profile-applicability_52">Profile applicability<a class="headerlink" href="#profile-applicability_52" title="Link to this section">&para;</a></h4>
+<h4 id="profile-applicability_65">Profile applicability<a class="headerlink" href="#profile-applicability_65" title="Link to this section">&para;</a></h4>
 <p>Same device
 response_mode=direct_post.jwt
 OIDF.HAIP</p>
-<h4 id="eudi-wallet-relevancy_52">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_52" title="Link to this section">&para;</a></h4>
+<h4 id="eudi-wallet-relevancy_65">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_65" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_52">Preconditions<a class="headerlink" href="#preconditions_52" title="Link to this section">&para;</a></h4>
+<h4 id="preconditions_65">Preconditions<a class="headerlink" href="#preconditions_65" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_52">Test Scenario<a class="headerlink" href="#test-scenario_52" title="Link to this section">&para;</a></h4>
+<h4 id="test-scenario_65">Test Scenario<a class="headerlink" href="#test-scenario_65" title="Link to this section">&para;</a></h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request. </li>
 <li>Verifier sends presentation request using <code>response_mode</code> <code>direct_post.jwt</code> and including <code>response_uri</code>.</li>
@@ -2697,7 +3198,7 @@ OIDF.HAIP</p>
 <li>Verifier response to Wallet HTTP POST includes <code>redirect_uri</code>. </li>
 <li>Wallet processes the request.</li>
 </ol>
-<h4 id="expected-results_52">Expected results<a class="headerlink" href="#expected-results_52" title="Link to this section">&para;</a></h4>
+<h4 id="expected-results_65">Expected results<a class="headerlink" href="#expected-results_65" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
 <li>Wallet receives request.</li>
@@ -2707,7 +3208,7 @@ OIDF.HAIP</p>
 </ol>
 <!-- END INCLUDE -->
 
-<!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md -->
+<!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md -->
 
 
 
@@ -2772,7 +3273,7 @@ OIDF.HAIP</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../../../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.indexes", "navigation.top", "navigation.footer", "navigation.tracking", "toc.integrate", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.action.edit", "content.action.view", "content.code.copy"], "search": "../../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
-      <script src="../../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../../../../../media/js/mermaid.min.js"></script>
       

@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../../../../../../media/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -27,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -1668,8 +1668,149 @@ A mock ETSI trusted List is active to be used</p>
 <li>Wallet answers Credential Query successfully</li>
 </ol>
 <!-- END INCLUDE -->
+<h3 id="ws_rp_sm_trustmechanisms__101">WS_RP_SM_TrustMechanisms__101<a class="headerlink" href="#ws_rp_sm_trustmechanisms__101" title="Link to this section">&para;</a></h3>
+<h4 id="objective_14">Objective<a class="headerlink" href="#objective_14" title="Link to this section">&para;</a></h4>
+<p>Verify that the Wallet accepts a valid Wallet Relying Party Registration Certificate, when using OpenID4VP presentation.</p>
+<h4 id="references_14">References<a class="headerlink" href="#references_14" title="Link to this section">&para;</a></h4>
+<p>[ETSI TS 119 472-2] section 6.3.2.2
+[ETSI TS 119 475] section 5.1.3, 5.2.4
+[OpenID4VP] sections 5.1 and 5.11.1</p>
+<h4 id="profile-applicability_14">Profile applicability<a class="headerlink" href="#profile-applicability_14" title="Link to this section">&para;</a></h4>
+<h4 id="technology">Technology<a class="headerlink" href="#technology" title="Link to this section">&para;</a></h4>
+<p>WRPRC</p>
+<h4 id="eudi-wallet-relevancy_14">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_14" title="Link to this section">&para;</a></h4>
+<p>EUDI_specific | EUDI_required</p>
+<h4 id="preconditions_14">Preconditions<a class="headerlink" href="#preconditions_14" title="Link to this section">&para;</a></h4>
+<p>A. Wallet is set to 'default_configuration_1'
+B. Wallet trusts the CA issuing a Relying Party's WRPAC (i.e. through the EUDI trust lists).
+C. Wallet trusts the CA issuing a Relying Party's WRPRC (i.e. through the EUDI trust lists).
+D. Wallet and Verifier are engaged, and a presentation using OpenID4VP has been triggered.</p>
+<h4 id="test-scenario_14">Test Scenario<a class="headerlink" href="#test-scenario_14" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Verifier sends a Request Object to the Wallet. The Request Object:<ol>
+<li>contains all required parameters with valid values to request 'default_credential_A'.</li>
+<li>has a valid WRPAC.</li>
+<li>is signed by the Verifier using the private key corresponding to the public key in the valid WRPAC.</li>
+<li>contains a <code>verifier_info</code> property, with the following properties:<ol>
+<li>has a <code>format</code> property with the value <code>registration_cert</code>,</li>
+<li>has a <code>data</code> property with as value a string with the base64url encoding of a valid WRPRC, where<ol>
+<li>the WRPRC's <code>sub</code> field has the same value as the WRPAC's <code>organizationIdentifier</code>.</li>
+<li>the WRPRC does not contain a <code>usesIntermediary</code> field.</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h4 id="expected-results_14">Expected results<a class="headerlink" href="#expected-results_14" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Wallet responds with a presentation of 'default_credential_A'.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_sm_trustmechanisms__101b_uf">WS_RP_SM_TrustMechanisms__101b_UF<a class="headerlink" href="#ws_rp_sm_trustmechanisms__101b_uf" title="Link to this section">&para;</a></h3>
+<h4 id="objective_15">Objective<a class="headerlink" href="#objective_15" title="Link to this section">&para;</a></h4>
+<p>Verify that the Wallet does not present a credential to a Relying Party, if a Wallet Relying Party Registration Certificate with an invalid signature is used, when using OpenID4VP presentation.</p>
+<h4 id="references_15">References<a class="headerlink" href="#references_15" title="Link to this section">&para;</a></h4>
+<p>[ETSI TS 119 472-2] section 6.3.2.2
+[ETSI TS 119 475] section 5.1.3, 5.2.4
+[OpenID4VP] sections 5.1 and 5.11.1</p>
+<h4 id="profile-applicability_15">Profile applicability<a class="headerlink" href="#profile-applicability_15" title="Link to this section">&para;</a></h4>
+<h4 id="technology_1">Technology<a class="headerlink" href="#technology_1" title="Link to this section">&para;</a></h4>
+<p>WRPRC</p>
+<h4 id="eudi-wallet-relevancy_15">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_15" title="Link to this section">&para;</a></h4>
+<p>EUDI_specific | EUDI_required</p>
+<h4 id="preconditions_15">Preconditions<a class="headerlink" href="#preconditions_15" title="Link to this section">&para;</a></h4>
+<p>A. Wallet is set to 'default_configuration_1'
+B. Wallet trusts the CA issuing a Relying Party's WRPAC (i.e. through the EUDI trust lists).
+C. Wallet trusts the CA issuing a Relying Party's WRPRC (i.e. through the EUDI trust lists).
+D. Wallet and Verifier are engaged, and a presentation using OpenID4VP has been triggered.</p>
+<h4 id="test-scenario_15">Test Scenario<a class="headerlink" href="#test-scenario_15" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Verifier sends a Request Object to the Wallet. The Request Object:<ol>
+<li>contains all required parameters with valid values to request 'default_credential_A'.</li>
+<li>has a valid WRPAC.</li>
+<li>is signed by the Verifier using the private key corresponding to the public key in the valid WRPAC.</li>
+<li>contains a <code>verifier_info</code> property, with the following properties:<ol>
+<li>has a <code>format</code> property with the value <code>registration_cert</code>,</li>
+<li>has a <code>data</code> property with as value a string with the base64url encoding of a WRPRC, where<ol>
+<li>the WRPRC has an invalid signature value (e.g. using a XOR pattern on a valid signature value).</li>
+<li>the WRPRC's <code>sub</code> field has the same value as the WRPAC's <code>organizationIdentifier</code>.</li>
+<li>the WRPRC does not contain a <code>usesIntermediary</code> field.</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h4 id="expected-results_15">Expected results<a class="headerlink" href="#expected-results_15" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Wallet does not complete the presentation interaction, and<ol>
+<li>informs, if applicable, the user of not having the requested credential, and</li>
+<li>aborting the interaction with the Verifier, either by<ol>
+<li>responding with an error <code>invalid_request</code>, or</li>
+<li>responding by returning an error without any details, or</li>
+<li>discontinuing the interaction, e.g. by closing the communication channel, if applicable.</li>
+</ol>
+</li>
+<li>if any response is shared to the Verifier, the response does not include a <code>vp_token</code>.</li>
+</ol>
+</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_sm_trustmechanisms__101c_uf">WS_RP_SM_TrustMechanisms__101c_UF<a class="headerlink" href="#ws_rp_sm_trustmechanisms__101c_uf" title="Link to this section">&para;</a></h3>
+<h4 id="objective_16">Objective<a class="headerlink" href="#objective_16" title="Link to this section">&para;</a></h4>
+<p>Verify that the Wallet does not present a credential to a Relying Party, if a Wallet Relying Party Registration Certificate is used that does not match to the same organization of the WRPAC used, when using OpenID4VP presentation.</p>
+<h4 id="references_16">References<a class="headerlink" href="#references_16" title="Link to this section">&para;</a></h4>
+<p>[ETSI TS 119 472-2] section 6.3.2.2
+[ETSI TS 119 475] section 5.1.3, 5.2.4
+[OpenID4VP] sections 5.1 and 5.11.1</p>
+<h4 id="profile-applicability_16">Profile applicability<a class="headerlink" href="#profile-applicability_16" title="Link to this section">&para;</a></h4>
+<h4 id="technology_2">Technology<a class="headerlink" href="#technology_2" title="Link to this section">&para;</a></h4>
+<p>WRPRC</p>
+<h4 id="eudi-wallet-relevancy_16">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_16" title="Link to this section">&para;</a></h4>
+<p>EUDI_specific | EUDI_required</p>
+<h4 id="preconditions_16">Preconditions<a class="headerlink" href="#preconditions_16" title="Link to this section">&para;</a></h4>
+<p>A. Wallet is set to 'default_configuration_1'
+B. Wallet trusts the CA issuing a Relying Party's WRPAC (i.e. through the EUDI trust lists).
+C. Wallet trusts the CA issuing a Relying Party's WRPRC (i.e. through the EUDI trust lists).
+D. Wallet and Verifier are engaged, and a presentation using OpenID4VP has been triggered.</p>
+<h4 id="test-scenario_16">Test Scenario<a class="headerlink" href="#test-scenario_16" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Verifier sends a Request Object to the Wallet. The Request Object:<ol>
+<li>contains all required parameters with valid values to request 'default_credential_A'.</li>
+<li>has a valid WRPAC.</li>
+<li>is signed by the Verifier using the private key corresponding to the public key in the valid WRPAC.</li>
+<li>contains a <code>verifier_info</code> property, with the following properties:<ol>
+<li>has a <code>format</code> property with the value <code>registration_cert</code>,</li>
+<li>has a <code>data</code> property with as value a string with the base64url encoding of a valid WRPRC, where<ol>
+<li>the WRPRC's <code>sub</code> field has a different value from the WRPAC's <code>organizationIdentifier</code>.</li>
+<li>the WRPRC does not contain a <code>usesIntermediary</code> field.</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h4 id="expected-results_16">Expected results<a class="headerlink" href="#expected-results_16" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Wallet does not complete the presentation interaction, and<ol>
+<li>informs, if applicable, the user of not having the requested credential, and</li>
+<li>aborting the interaction with the Verifier, either by<ol>
+<li>responding with an error <code>invalid_request</code>, or</li>
+<li>responding by returning an error without any details, or</li>
+<li>discontinuing the interaction, e.g. by closing the communication channel, if applicable.</li>
+</ol>
+</li>
+<li>if any response is shared to the Verifier, the response does not include a <code>vp_token</code>.</li>
+</ol>
+</li>
+</ol>
+<!-- END INCLUDE -->
 
-<!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md -->
+<!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md -->
 
 
 
@@ -1734,7 +1875,7 @@ A mock ETSI trusted List is active to be used</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../../../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.indexes", "navigation.top", "navigation.footer", "navigation.tracking", "toc.integrate", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.action.edit", "content.action.view", "content.code.copy"], "search": "../../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
-      <script src="../../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../../../../../media/js/mermaid.min.js"></script>
       

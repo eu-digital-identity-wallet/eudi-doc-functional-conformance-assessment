@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../../media/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -31,7 +31,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -1275,10 +1275,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#6-preconditions" class="md-nav__link">
+  <a href="#6-technology" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6. Preconditions
+        6. Technology
       
     </span>
   </a>
@@ -1286,10 +1286,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#7-test-scenario" class="md-nav__link">
+  <a href="#7-preconditions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7. Test scenario
+        7. Preconditions
       
     </span>
   </a>
@@ -1297,10 +1297,32 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#8-expected-results" class="md-nav__link">
+  <a href="#8-test-scenario" class="md-nav__link">
     <span class="md-ellipsis">
       
-        8. Expected results
+        8. Test scenario
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-expected-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Expected results
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-comment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Comment
       
     </span>
   </a>
@@ -1485,9 +1507,11 @@ Test specifications are intended for <strong>automated or semi-automated</strong
 <li>References</li>
 <li>EUDI-wallet relevancy</li>
 <li>Profile applicability</li>
+<li>Technology</li>
 <li>Preconditions</li>
 <li>Test scenario</li>
 <li>Expected results</li>
+<li>Comment</li>
 </ol>
 <h3 id="1-test-case-identifier">1. Test case identifier<a class="headerlink" href="#1-test-case-identifier" title="Link to this section">&para;</a></h3>
 <ul>
@@ -1510,20 +1534,33 @@ Test specifications are intended for <strong>automated or semi-automated</strong
 <li>Applicable profile(s), if any.</li>
 <li>Rules for when the test is <strong>Not Applicable</strong>.</li>
 </ul>
-<h3 id="6-preconditions">6. Preconditions<a class="headerlink" href="#6-preconditions" title="Link to this section">&para;</a></h3>
+<h3 id="6-technology">6. Technology<a class="headerlink" href="#6-technology" title="Link to this section">&para;</a></h3>
+<ul>
+<li>The specific technology, credential format, or transmission mechanism variant the
+  test targets (e.g. <code>Credential in SD-JWT VC format</code>, <code>Credential in mdoc format</code>,
+  <code>Presentations via Redirects</code>, <code>Presentations via the W3C Digital Credentials API</code>).</li>
+<li>This is the discriminator between sibling test cases that share an objective but
+  differ by technology (for example the SD-JWT VC and mdoc variants of the same query).</li>
+<li>Omit the field only where the test is technology-agnostic.</li>
+</ul>
+<h3 id="7-preconditions">7. Preconditions<a class="headerlink" href="#7-preconditions" title="Link to this section">&para;</a></h3>
 <ul>
 <li>Required initial state and configuration.</li>
 </ul>
-<h3 id="7-test-scenario">7. Test scenario<a class="headerlink" href="#7-test-scenario" title="Link to this section">&para;</a></h3>
+<h3 id="8-test-scenario">8. Test scenario<a class="headerlink" href="#8-test-scenario" title="Link to this section">&para;</a></h3>
 <p>For each step:</p>
 <ul>
 <li>Step ID</li>
 <li>Description</li>
 <li>Inputs/configuration (if applicable)</li>
 </ul>
-<h3 id="8-expected-results">8. Expected results<a class="headerlink" href="#8-expected-results" title="Link to this section">&para;</a></h3>
+<h3 id="9-expected-results">9. Expected results<a class="headerlink" href="#9-expected-results" title="Link to this section">&para;</a></h3>
 <ul>
 <li>Expected outcomes per step and pass/fail criteria.</li>
+</ul>
+<h3 id="10-comment">10. Comment<a class="headerlink" href="#10-comment" title="Link to this section">&para;</a></h3>
+<ul>
+<li>Optional comment(s)</li>
 </ul>
 
 
@@ -1627,7 +1664,7 @@ Test specifications are intended for <strong>automated or semi-automated</strong
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.indexes", "navigation.top", "navigation.footer", "navigation.tracking", "toc.integrate", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.action.edit", "content.action.view", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../../media/js/mermaid.min.js"></script>
       

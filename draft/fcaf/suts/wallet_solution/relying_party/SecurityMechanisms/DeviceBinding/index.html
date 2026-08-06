@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../../../../../../media/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -27,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -1620,8 +1620,112 @@
 <li>Verify that the Wallet successfully includes a structurally valid KB-JWT in the presentation payload, checking it aligns with definition held here: [OIDF.HAIP 6.1.1.1]</li>
 </ol>
 <!-- END INCLUDE -->
+<h3 id="ws_rp_sm_devicebinding_012a">WS_RP_SM_DeviceBinding_012a<a class="headerlink" href="#ws_rp_sm_devicebinding_012a" title="Link to this section">&para;</a></h3>
+<h4 id="objective_11">Objective<a class="headerlink" href="#objective_11" title="Link to this section">&para;</a></h4>
+<p>Verify that the Wallet includes a key binding JWT with an acceptable signature algorithm, if a presented credential in SD-JWT VC format is key bound.</p>
+<h4 id="references_11">References<a class="headerlink" href="#references_11" title="Link to this section">&para;</a></h4>
+<p>[HAIP] section 6.1
+[OpenID4VP] section 8, B.3.6
+[SD-JWT VC] section 3.4
+[RFC9901] section 4.1.2, 7.3
+[RFC7515] section 4.1.1
+[ECCG ACM] section 5.2</p>
+<h4 id="profile-applicability_11">Profile applicability<a class="headerlink" href="#profile-applicability_11" title="Link to this section">&para;</a></h4>
+<p>None.</p>
+<h4 id="technology">Technology<a class="headerlink" href="#technology" title="Link to this section">&para;</a></h4>
+<p>Credential in SD-JWT VC format
+Credential with key-binding
+Issuer uses compact serialization of SD-JWT and SD-JWT VC</p>
+<h4 id="eudi-wallet-relevancy_11">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_11" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_11">Preconditions<a class="headerlink" href="#preconditions_11" title="Link to this section">&para;</a></h4>
+<p>A. Wallet is set to 'default_configuration_1'.
+B. Verifier requested a credential to be presented, using a valid, trusted request for 'default_credential_A', which is key bound, and requesting presentation in SD-JWT VC format.
+C. The Wallet transmitted a syntactically correct presentation in the <code>vp_token</code> of the Authorization Response.
+D. The presentation value of the credential is a syntactically correct serialization in compact serialization format of an SD-JWT VC.
+E. The presentation value of the credential contains a correctly serialized KB-JWT.</p>
+<h4 id="test-scenario_11">Test Scenario<a class="headerlink" href="#test-scenario_11" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Verify the signature algorithm (<code>alg</code> in protected header) used for the KB-JWT.</li>
+</ol>
+<h4 id="expected-results_11">Expected results<a class="headerlink" href="#expected-results_11" title="Link to this section">&para;</a></h4>
+<ol>
+<li>The signature algorithm in <code>alg</code> is on the list of acceptable algorithms [ECCG ACM], and does not have the value <code>none</code>.</li>
+</ol>
+<h4 id="comments">Comments<a class="headerlink" href="#comments" title="Link to this section">&para;</a></h4>
+<ul>
+<li>Note that not all acceptable algorithms in [ECCG ACM] are standardized for usage with JOSE. See IANA registry on JOSE algorithms for standardized algorithm identifiers and their specifications.</li>
+</ul>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_sm_devicebinding_012b">WS_RP_SM_DeviceBinding_012b<a class="headerlink" href="#ws_rp_sm_devicebinding_012b" title="Link to this section">&para;</a></h3>
+<h4 id="objective_12">Objective<a class="headerlink" href="#objective_12" title="Link to this section">&para;</a></h4>
+<p>Verify that the Wallet includes a valid signed key binding JWT cryptographically bound to the credential, if a presented credential in SD-JWT VC format is key bound.</p>
+<h4 id="references_12">References<a class="headerlink" href="#references_12" title="Link to this section">&para;</a></h4>
+<p>[HAIP] section 6.1
+[OpenID4VP] section 8, B.3.6
+[SD-JWT VC] section 3.4
+[RFC9901] section 4.1.2, 7.3
+[RFC7515]</p>
+<h4 id="profile-applicability_12">Profile applicability<a class="headerlink" href="#profile-applicability_12" title="Link to this section">&para;</a></h4>
+<p>None.</p>
+<h4 id="technology_1">Technology<a class="headerlink" href="#technology_1" title="Link to this section">&para;</a></h4>
+<p>Credential in SD-JWT VC format
+Credential with key-binding
+Issuer uses compact serialization of SD-JWT and SD-JWT VC</p>
+<h4 id="eudi-wallet-relevancy_12">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_12" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_12">Preconditions<a class="headerlink" href="#preconditions_12" title="Link to this section">&para;</a></h4>
+<p>A. Wallet is set to 'default_configuration_1'.
+B. Verifier requested a credential to be presented, using a valid, trusted request for 'default_credential_A', which is key bound, and requesting presentation in SD-JWT VC format.
+C. The Wallet transmitted a syntactically correct presentation in the <code>vp_token</code> of the Authorization Response.
+D. The presentation value of the credential is a syntactically correct serialization in compact serialization format of an SD-JWT VC.
+E. The presentation value of the credential contains a valid signed SD-JWT.
+F. The SD-JWT has a top-level <code>cnf</code> claim.
+G. The presentation value of the credential contains a correctly serialized KB-JWT.
+H. The KB-JWT uses an acceptable signature algorithm.</p>
+<h4 id="test-scenario_12">Test Scenario<a class="headerlink" href="#test-scenario_12" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Verify the KB-JWT signature using the public key identified by the <code>cnf</code> claim in the presented SD-JWT.</li>
+</ol>
+<h4 id="expected-results_12">Expected results<a class="headerlink" href="#expected-results_12" title="Link to this section">&para;</a></h4>
+<ol>
+<li>The signature is valid.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_sm_devicebinding_012c">WS_RP_SM_DeviceBinding_012c<a class="headerlink" href="#ws_rp_sm_devicebinding_012c" title="Link to this section">&para;</a></h3>
+<h4 id="objective_13">Objective<a class="headerlink" href="#objective_13" title="Link to this section">&para;</a></h4>
+<p>Verify that the Wallet contains a key binding JWT bound to the presented SD-JWT VC, if a presented credential in SD-JWT VC format is key bound.</p>
+<h4 id="references_13">References<a class="headerlink" href="#references_13" title="Link to this section">&para;</a></h4>
+<p>[HAIP] section 6.1
+[OpenID4VP] section 8, B.3.6
+[SD-JWT VC] section 3.4
+[RFC9901] section 4.3.1, 7.3</p>
+<h4 id="profile-applicability_13">Profile applicability<a class="headerlink" href="#profile-applicability_13" title="Link to this section">&para;</a></h4>
+<p>None.</p>
+<h4 id="technology_2">Technology<a class="headerlink" href="#technology_2" title="Link to this section">&para;</a></h4>
+<p>Credential in SD-JWT VC format
+Credential with key-binding
+Issuer uses compact serialization of SD-JWT and SD-JWT VC</p>
+<h4 id="eudi-wallet-relevancy_13">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_13" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_13">Preconditions<a class="headerlink" href="#preconditions_13" title="Link to this section">&para;</a></h4>
+<p>A. Wallet is set to 'default_configuration_1'.
+B. Verifier requested a credential to be presented, using a valid, trusted request for 'default_credential_A', which is key bound, and requesting presentation in SD-JWT VC format.
+C. The Wallet transmitted a syntactically correct presentation in the <code>vp_token</code> of the Authorization Response.
+D. The presentation value of the credential is a syntactically correct serialization in compact serialization format of an SD-JWT VC.
+E. The presentation value of the credential contains a valid signed SD-JWT.
+F. The presentation value of the credential contains a valid signed KB-JWT.</p>
+<h4 id="test-scenario_13">Test Scenario<a class="headerlink" href="#test-scenario_13" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Verify the value of the <code>sd_hash</code> claim of the KB-JWT.</li>
+</ol>
+<h4 id="expected-results_13">Expected results<a class="headerlink" href="#expected-results_13" title="Link to this section">&para;</a></h4>
+<ol>
+<li>The value of <code>sd_hash</code> claim of the KB-JWT is equal to the base64url-encoded digest over the presented SD-JWT.</li>
+</ol>
+<!-- END INCLUDE -->
 
-<!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md -->
+<!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md -->
 
 
 
@@ -1686,7 +1790,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../../../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.indexes", "navigation.top", "navigation.footer", "navigation.tracking", "toc.integrate", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.action.edit", "content.action.view", "content.code.copy"], "search": "../../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
-      <script src="../../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../../../../../media/js/mermaid.min.js"></script>
       

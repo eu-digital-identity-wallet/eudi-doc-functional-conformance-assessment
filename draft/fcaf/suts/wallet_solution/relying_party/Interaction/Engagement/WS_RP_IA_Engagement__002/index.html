@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../../../../../../../media/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -27,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../../../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -1268,26 +1268,28 @@
 
 <h1 id="ws_rp_ia_engagement_002">WS_RP_IA_Engagement_002<a class="headerlink" href="#ws_rp_ia_engagement_002" title="Link to this section">&para;</a></h1>
 <h2 id="objective">Objective<a class="headerlink" href="#objective" title="Link to this section">&para;</a></h2>
-<p>Verify that Wallet supports invocation via the W3C Digital Credentials API or an equivalent platform API. </p>
+<p>Verify that the Wallet supports invocation via the W3C Digital Credentials API or an equivalent platform API using OpenID4VP and HAIP.</p>
 <h2 id="references">References<a class="headerlink" href="#references" title="Link to this section">&para;</a></h2>
-<ul>
-<li>[HAIP] Section 5.2</li>
-</ul>
-<h2 id="profile-applicability">Profile applicability<a class="headerlink" href="#profile-applicability" title="Link to this section">&para;</a></h2>
-<p>Presentations via the W3C Digital Credentials API or equivalent platform.</p>
+<p>[ETSI TS 119 472-2] section 6.5
+[HAIP] section 5.2
+[OpenID4VP] section A</p>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy" title="Link to this section">&para;</a></h2>
 <p>EUDI_generic | EUDI_required</p>
+<h2 id="profile-applicability">Profile applicability<a class="headerlink" href="#profile-applicability" title="Link to this section">&para;</a></h2>
+<p>None</p>
+<h2 id="technology">Technology<a class="headerlink" href="#technology" title="Link to this section">&para;</a></h2>
+<p>Presentation via the W3C Digital Credentials API or an equivalent platform API</p>
 <h2 id="preconditions">Preconditions<a class="headerlink" href="#preconditions" title="Link to this section">&para;</a></h2>
-<p>none</p>
+<p>A. End-user is engaging with a Verifier using a User-agent.</p>
 <h2 id="test-scenario">Test Scenario<a class="headerlink" href="#test-scenario" title="Link to this section">&para;</a></h2>
 <ol>
-<li>Verifier invokes Wallet via W3C Digital Credentials API or an equivalent platform API. </li>
-<li>Verify if Wallet is invoked successfully.</li>
+<li>Verifier provides a signed OpenID4VP Authorization Request to the User-agent for use via the W3C Digital Credentials API or an equivalent platform API.</li>
+<li>End-user triggers the request (e.g. clicks a button).</li>
 </ol>
 <h2 id="expected-results">Expected results<a class="headerlink" href="#expected-results" title="Link to this section">&para;</a></h2>
 <ol>
-<li>This is the case.</li>
-<li>Wallet is invoked through W3C Digital Credentials API or an equivalent platform API successfully. </li>
+<li>User-agent presents an option to the End-user to engage the presentation.</li>
+<li>Wallet is invoked successfully through the W3C Digital Credentials API or an equivalent platform API.</li>
 </ol>
 
 
@@ -1353,7 +1355,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../../../../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.indexes", "navigation.top", "navigation.footer", "navigation.tracking", "toc.integrate", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.action.edit", "content.action.view", "content.code.copy"], "search": "../../../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
-      <script src="../../../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../../../../../../media/js/mermaid.min.js"></script>
       

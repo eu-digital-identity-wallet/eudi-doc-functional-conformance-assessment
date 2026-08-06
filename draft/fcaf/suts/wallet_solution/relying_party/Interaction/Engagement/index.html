@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../../../../../../media/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -27,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -1292,32 +1292,88 @@
 <li>Wallet is invoked successfully.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_ia_engagement_002">WS_RP_IA_Engagement_002<a class="headerlink" href="#ws_rp_ia_engagement_002" title="Link to this section">&para;</a></h3>
+<h3 id="ws_rp_ia_engagement_001a">WS_RP_IA_Engagement_001a<a class="headerlink" href="#ws_rp_ia_engagement_001a" title="Link to this section">&para;</a></h3>
 <h4 id="objective_1">Objective<a class="headerlink" href="#objective_1" title="Link to this section">&para;</a></h4>
-<p>Verify that Wallet supports invocation via the W3C Digital Credentials API or an equivalent platform API. </p>
+<p>Verify that, in a presentation flow via Redirects, the Wallet can be invoked through the custom URL scheme <code>haip-vp://</code>, if supported by the Wallet.</p>
 <h4 id="references_1">References<a class="headerlink" href="#references_1" title="Link to this section">&para;</a></h4>
-<ul>
-<li>[HAIP] Section 5.2</li>
-</ul>
-<h4 id="profile-applicability_1">Profile applicability<a class="headerlink" href="#profile-applicability_1" title="Link to this section">&para;</a></h4>
-<p>Presentations via the W3C Digital Credentials API or equivalent platform.</p>
+<p>[HAIP] section 5.1
+[OpenID4VP] section 9</p>
 <h4 id="eudi-wallet-relevancy_1">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_1" title="Link to this section">&para;</a></h4>
-<p>EUDI_generic | EUDI_required</p>
+<p>EUDI_generic | EUDI_optional</p>
+<h4 id="profile-applicability_1">Profile applicability<a class="headerlink" href="#profile-applicability_1" title="Link to this section">&para;</a></h4>
+<p>Wallet supports to be invoked through the custom URL scheme <code>haip-vp://</code>.</p>
+<h4 id="technology">Technology<a class="headerlink" href="#technology" title="Link to this section">&para;</a></h4>
+<p>Presentation via Redirects</p>
 <h4 id="preconditions_1">Preconditions<a class="headerlink" href="#preconditions_1" title="Link to this section">&para;</a></h4>
-<p>none</p>
+<p>A. The End-user is engaging with a Verifier using a User-agent.</p>
 <h4 id="test-scenario_1">Test Scenario<a class="headerlink" href="#test-scenario_1" title="Link to this section">&para;</a></h4>
 <ol>
-<li>Verifier invokes Wallet via W3C Digital Credentials API or an equivalent platform API. </li>
-<li>Verify if Wallet is invoked successfully.</li>
+<li>Verifier provides presentation link to the User-agent using URL scheme <code>haip-vp://</code>.
+    NOTE: The EUDI Wallet should not support this redirects-based mechanism for cross-device presentation flows, e.g. by presenting the link as QR-code; implementing it for cross-device use should not by itself trigger non-compliance.</li>
+<li>End-user triggers the link to be followed (e.g. clicks a button or link).</li>
 </ol>
 <h4 id="expected-results_1">Expected results<a class="headerlink" href="#expected-results_1" title="Link to this section">&para;</a></h4>
 <ol>
-<li>This is the case.</li>
-<li>Wallet is invoked through W3C Digital Credentials API or an equivalent platform API successfully. </li>
+<li>User-agent presents an option to the End-user to engage the presentation.</li>
+<li>Wallet is invoked successfully.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_engagement_001b">WS_RP_IA_Engagement_001b<a class="headerlink" href="#ws_rp_ia_engagement_001b" title="Link to this section">&para;</a></h3>
+<h4 id="objective_2">Objective<a class="headerlink" href="#objective_2" title="Link to this section">&para;</a></h4>
+<p>Verify that, in a presentation flow via Redirects, the Wallet can be invoked through the custom URL scheme <code>eu-eaap://</code>.</p>
+<h4 id="references_2">References<a class="headerlink" href="#references_2" title="Link to this section">&para;</a></h4>
+<p>[ETSI TS 119 472-2] section 6.4.1 
+[HAIP] section 5.1
+[OpenID4VP] section 9</p>
+<h4 id="eudi-wallet-relevancy_2">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_2" title="Link to this section">&para;</a></h4>
+<p>EUDI_specific | EUDI_required</p>
+<h4 id="profile-applicability_2">Profile applicability<a class="headerlink" href="#profile-applicability_2" title="Link to this section">&para;</a></h4>
+<p>None</p>
+<h4 id="technology_1">Technology<a class="headerlink" href="#technology_1" title="Link to this section">&para;</a></h4>
+<p>Presentation via Redirects
+Wallet supports to be invoked through the custom URL scheme "eu-eaap://".</p>
+<h4 id="preconditions_2">Preconditions<a class="headerlink" href="#preconditions_2" title="Link to this section">&para;</a></h4>
+<p>A. The End-user is engaging with a Verifier using a User-agent.</p>
+<h4 id="test-scenario_2">Test Scenario<a class="headerlink" href="#test-scenario_2" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Verifier provides a presentation link to the User-agent using the custom URL scheme <code>eu-eaap://</code>.
+    NOTE: The EUDI Wallet should not support this redirects-based mechanism for cross-device presentation flows, e.g. by presenting the link as QR-code; implementing it for cross-device use should not by itself trigger non-compliance.</li>
+<li>End-user triggers the link to be followed (e.g. clicks a button or link).</li>
+</ol>
+<h4 id="expected-results_2">Expected results<a class="headerlink" href="#expected-results_2" title="Link to this section">&para;</a></h4>
+<ol>
+<li>User-agent presents option to End-user to engage presentation.</li>
+<li>Wallet is invoked successfully.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ia_engagement_002">WS_RP_IA_Engagement_002<a class="headerlink" href="#ws_rp_ia_engagement_002" title="Link to this section">&para;</a></h3>
+<h4 id="objective_3">Objective<a class="headerlink" href="#objective_3" title="Link to this section">&para;</a></h4>
+<p>Verify that the Wallet supports invocation via the W3C Digital Credentials API or an equivalent platform API using OpenID4VP and HAIP.</p>
+<h4 id="references_3">References<a class="headerlink" href="#references_3" title="Link to this section">&para;</a></h4>
+<p>[ETSI TS 119 472-2] section 6.5
+[HAIP] section 5.2
+[OpenID4VP] section A</p>
+<h4 id="eudi-wallet-relevancy_3">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_3" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="profile-applicability_3">Profile applicability<a class="headerlink" href="#profile-applicability_3" title="Link to this section">&para;</a></h4>
+<p>None</p>
+<h4 id="technology_2">Technology<a class="headerlink" href="#technology_2" title="Link to this section">&para;</a></h4>
+<p>Presentation via the W3C Digital Credentials API or an equivalent platform API</p>
+<h4 id="preconditions_3">Preconditions<a class="headerlink" href="#preconditions_3" title="Link to this section">&para;</a></h4>
+<p>A. End-user is engaging with a Verifier using a User-agent.</p>
+<h4 id="test-scenario_3">Test Scenario<a class="headerlink" href="#test-scenario_3" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Verifier provides a signed OpenID4VP Authorization Request to the User-agent for use via the W3C Digital Credentials API or an equivalent platform API.</li>
+<li>End-user triggers the request (e.g. clicks a button).</li>
+</ol>
+<h4 id="expected-results_3">Expected results<a class="headerlink" href="#expected-results_3" title="Link to this section">&para;</a></h4>
+<ol>
+<li>User-agent presents an option to the End-user to engage the presentation.</li>
+<li>Wallet is invoked successfully through the W3C Digital Credentials API or an equivalent platform API.</li>
 </ol>
 <!-- END INCLUDE -->
 
-<!-- BEGIN INCLUDE ./[A-Z]*.md -->
+<!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md -->
 
 
 
@@ -1382,7 +1438,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../../../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.indexes", "navigation.top", "navigation.footer", "navigation.tracking", "toc.integrate", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.action.edit", "content.action.view", "content.code.copy"], "search": "../../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
-      <script src="../../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../../../../../media/js/mermaid.min.js"></script>
       
