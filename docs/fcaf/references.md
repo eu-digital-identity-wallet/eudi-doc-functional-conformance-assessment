@@ -5,6 +5,12 @@ Note: same syntax to be used as for EUDIw ARF. The Version column records the sp
 
 | **Item Reference** | **Version** | **Standard name/details**|
 |--------------------|-------------|---------------------------|
+| [ECCG ACM] | v2.0 | [ECCG ACM](https://certification.enisa.europa.eu/document/download/a845662b-aee0-484e-9191-890c4cfa7aaa_en?filename=ECCG%20Agreed%20Cryptographic%20Mechanisms%20version%202.pdf):European Cybersecurity Certification Group Sub-group on Cryptography; Agreed Cryptographic Mechanisms |
+| [EU CIR 2024/2979] | consolidated 2026-06-24 | [Commission Implementing Regulation (EU) 2024/2979](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402979), on the integrity and core functionalities of European Digital Identity Wallets. |
+| [EU CIR 2024/2982] | consolidated 2026-06-24 | [Commission Implementing Regulation (EU) 2024/2982](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402982), on protocols and interfaces supported by the European Digital Identity Wallet Framework. |
+| [ETSI TS 119 472-1] | v1.2.1 | [ETSI TS 119 472-1](https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications/issues/316): Profiles for Electronic Attestations of Attributes; Part 1: General requirements. |
+| [ETSI TS 119 472-2] | v1.2.1 | [ETSI TS 119 472-2](https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications/issues/285): Profiles for Electronic Attestations of Attributes; Part 2: Profiles for EAA/PID presentation. |
+| [ETSI TS 119 472-3] | v1.1.1 | [ETSI TS 119 472-3](https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications/issues/398): Profiles for Electronic Attestations of Attributes; Part 3: Profiles for EAA/PID issuance. |
 | [ETSI TS 119 612] | v2.4.1 | [ETSI TS 119 612](https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications/issues/41): Electronic Signatures and Infrastructures (ESI); Trusted Lists |
 | [ISO/IEC 18013-5] | 2021 (ed1) | [ISO/IEC 18013-5](https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications/issues/84), Personal identification - ISO-compliant driving licence - Part 5: Mobile driving licence (mDL) application |
 | [ISO/IEC TS 18013-6] | 2025 (ed2) | [ISO/IEC 18013-6](https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications/issues/84), Personal identification - ISO-compliant driving licence - Part 6: mDL test methods |
