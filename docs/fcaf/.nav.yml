@@ -1,0 +1,24 @@
+# This fragment is owned and versioned with the FCAF content. Paths are
+# relative to docs/fcaf and are prefixed by hooks/fcaf_nav.py at build time.
+nav:
+  - Introduction: introduction.md
+  - Terminology: terminology.md
+  - Methodology: index.md
+  - Using the FCAF: using-fcaf.md
+  - Defaults: defaults.md
+  - Test Suites by SUTs:
+      - Overview: suts/index.md
+      - Wallet Solution (SUT):
+          - Overview: suts/wallet_solution/index.md
+          - Test Classes:
+              - Relying Party (ws_rp): suts/wallet_solution/relying_party/ws_rp.md
+              - Attestation Provider (ws_ap): suts/wallet_solution/attestation_provider/ws_ap.md
+              - PID Provider (ws_pp): suts/wallet_solution/pid_provider/ws_pp.md
+              - Infrastructure (ws_inf): suts/wallet_solution/infrastructure/ws_inf.md
+              - UI (ws_ui): suts/wallet_solution/ui/ws_ui.md
+  - Templates:
+      - Overview: templates/index.md
+      - Test spec template: templates/test-spec-template.md
+  - ICS: ics.md
+  - References: references.md
+  - Changelog: CHANGELOG.md

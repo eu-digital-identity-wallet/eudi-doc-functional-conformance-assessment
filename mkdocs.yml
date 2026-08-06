@@ -101,6 +101,7 @@ plugins:
 # media/css/fcaf.css can render it with upper-alpha (A./B./C.) markers.
 hooks:
   - hooks/precond_alpha.py
+  - hooks/fcaf_nav.py
 
 extra:
   version:
@@ -123,21 +124,3 @@ nav:
   - Reference Implementation: https://docs.eudi.dev/latest/
   - Functional Conformance:
       - Home: index.md
-      - Introduction: fcaf/introduction.md
-      - Terminology: fcaf/terminology.md
-      - Methodology: fcaf/index.md
-      - Test Suites by SUTs:
-          - Overview: fcaf/suts/index.md
-          - Wallet Solution (SUT):
-              - Overview: fcaf/suts/wallet_solution/index.md
-              - Test Classes:
-                  - Relying Party (ws_rp): fcaf/suts/wallet_solution/relying_party/ws_rp.md
-                  - Attestation Provider (ws_ap): fcaf/suts/wallet_solution/attestation_provider/ws_ap.md
-                  - PID Provider (ws_pp): fcaf/suts/wallet_solution/pid_provider/ws_pp.md
-                  - Infrastructure (ws_inf): fcaf/suts/wallet_solution/infrastructure/ws_inf.md
-                  - UI (ws_ui): fcaf/suts/wallet_solution/ui/ws_ui.md
-      - Templates:
-          - Overview: fcaf/templates/index.md
-          - Test spec template: fcaf/templates/test-spec-template.md
-      - References: fcaf/references.md
-      - Changelog: fcaf/CHANGELOG.md
