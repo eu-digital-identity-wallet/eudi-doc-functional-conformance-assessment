@@ -1,11 +1,20 @@
-name: Publish docs + PDFs (release)
+name: Publish docs + PDFs
 
 on:
-  push:
-    branches:
-      - submitted
-    tags:
-      - "v*"
+  workflow_call:
+    inputs:
+      content_ref:
+        description: Branch or release tag containing docs/fcaf
+        required: false
+        type: string
+        default: submitted
+  workflow_dispatch:
+    inputs:
+      content_ref:
+        description: Branch or release tag containing docs/fcaf
+        required: true
+        type: string
+        default: submitted
   release:
     types: [created]
 
@@ -30,6 +39,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
+          ref: site
           fetch-depth: 0
 
       # ------------------------------------------------------------
@@ -38,42 +48,53 @@ jobs:
       - name: Compute publish context
         id: ver
         shell: bash
+        env:
+          RELEASE_TAG: ${{ github.event.release.tag_name }}
+          REQUESTED_CONTENT_REF: ${{ inputs.content_ref }}
         run: |
           set -euo pipefail
 
-          if [ "${{ github.event_name }}" = "release" ]; then
-            TAG="${{ github.event.release.tag_name }}"
+          if [ "$GITHUB_EVENT_NAME" = "release" ]; then
+            CONTENT_REF="$RELEASE_TAG"
+          else
+            CONTENT_REF="${REQUESTED_CONTENT_REF:-submitted}"
+          fi
 
-            if [[ ! "$TAG" =~ ^v[0-9]+(\.[0-9]+)*([\-+].*)?$ ]]; then
-              echo "ERROR: Expected tag like vX.Y.Z, got: '$TAG'"
-              exit 1
-            fi
-
-            echo "kind=tag" >> "$GITHUB_OUTPUT"
-            echo "tag=${TAG}" >> "$GITHUB_OUTPUT"
-            echo "version=${TAG#v}" >> "$GITHUB_OUTPUT"
-
-          elif [[ "${GITHUB_REF}" == refs/tags/* ]]; then
-            TAG="${GITHUB_REF_NAME}"
-
-            if [[ ! "$TAG" =~ ^v[0-9]+(\.[0-9]+)*([\-+].*)?$ ]]; then
-              echo "ERROR: Expected tag like vX.Y.Z, got: '$TAG'"
-              exit 1
-            fi
-
-            echo "kind=tag" >> "$GITHUB_OUTPUT"
-            echo "tag=${TAG}" >> "$GITHUB_OUTPUT"
-            echo "version=${TAG#v}" >> "$GITHUB_OUTPUT"
-
-          elif [[ "${GITHUB_REF}" == refs/heads/submitted ]]; then
+          if [ "$CONTENT_REF" = "submitted" ]; then
             echo "kind=draft" >> "$GITHUB_OUTPUT"
             echo "tag=draft" >> "$GITHUB_OUTPUT"
             echo "version=draft" >> "$GITHUB_OUTPUT"
-
+          elif [[ "$CONTENT_REF" =~ ^v[0-9]+(\.[0-9]+)*([\-+].*)?$ ]]; then
+            echo "kind=tag" >> "$GITHUB_OUTPUT"
+            echo "tag=${CONTENT_REF}" >> "$GITHUB_OUTPUT"
+            echo "version=${CONTENT_REF#v}" >> "$GITHUB_OUTPUT"
           else
-            echo "ERROR: Unsupported ref: ${GITHUB_REF}"
+            echo "ERROR: content_ref must be 'submitted' or a vX.Y.Z release tag, got: '$CONTENT_REF'"
             exit 1
           fi
+
+          echo "content_ref=${CONTENT_REF}" >> "$GITHUB_OUTPUT"
+
+      # ------------------------------------------------------------
+      # Overlay versioned content onto the site shell
+      # ------------------------------------------------------------
+      - name: Overlay FCAF content
+        shell: bash
+        env:
+          CONTENT_REF: ${{ steps.ver.outputs.content_ref }}
+        run: |
+          set -euo pipefail
+
+          if [ -e docs/fcaf ]; then
+            echo "ERROR: site must not contain docs/fcaf before the content overlay"
+            exit 1
+          fi
+
+          git fetch --no-tags origin "$CONTENT_REF"
+          git archive --format=tar FETCH_HEAD docs/fcaf | tar -xf -
+
+          test -f docs/fcaf/.nav.yml
+          test -f docs/fcaf/index.md
 
       # ------------------------------------------------------------
       # System deps (Pandoc, LaTeX, SVG tools, fonts, zip)
