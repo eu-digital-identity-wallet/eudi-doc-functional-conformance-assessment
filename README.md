@@ -13,6 +13,27 @@ page](https://github.com/eu-digital-identity-wallet/eudi-doc-functional-conforma
 An **online rendered version** of the documentation is published at:
 https://conformance.eudi.dev.
 
+## Branch model
+
+The default `site` branch contains the single rendering shell: MkDocs configuration,
+theme assets, build tools, publication workflows, and repository governance. It does
+not contain `docs/fcaf`.
+
+Versioned framework and test content lives under `docs/fcaf` on the maturity branches:
+
+- `submitted` contains ongoing work and publishes the rendered draft
+- `reviewed` contains reviewer-approved content
+- `rc` contains release-candidate content
+- `main` contains released-baseline content
+
+Open content pull requests against `submitted`. Open site, theme, build, CI, and
+repository-governance pull requests against `site`. Fresh clones open on `site`, so
+content contributors must run `git switch submitted` before creating a branch.
+
+The publication workflow checks out the current `site` shell and overlays the requested
+content ref at build time. New releases therefore use the current shell without copying
+shell files between maturity branches.
+
 ## Versioning and maturity
 
 The FCAF follows a versioning model that reflects both **coverage** (`vX.Y.Z`) and **maturity** (`beta`, `rc`, released baseline). Versioned releases are managed through **GitHub tags**.
@@ -97,6 +118,11 @@ See the [LICENSE](./LICENSE.md) file for details.
 * [Resources for partners](https://commission.europa.eu/resources-partners_en)
 
 ## Working locally
+
+The commands below require a composed working tree containing the `site` shell plus a
+`docs/fcaf` tree from the content ref you want to preview. Use a disposable worktree for
+that overlay so content is never committed to `site`. The GitHub Pages workflow performs
+the same overlay automatically for `submitted` and release tags.
 
 ### Prerequisites
 
