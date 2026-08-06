@@ -101,6 +101,7 @@ jobs:
       # - NO Chromium install (we render mermaid via Docker image)
       # ------------------------------------------------------------
       - name: Install system deps (PDF + SVG)
+        if: steps.ver.outputs.kind == 'tag'
         shell: bash
         run: |
           sudo apt-get update
@@ -119,6 +120,7 @@ jobs:
       # Provide "mmdc" via mermaid-cli Docker image (no browser install)
       # ------------------------------------------------------------
       - name: Provide mmdc via Docker (mermaid-cli)
+        if: steps.ver.outputs.kind == 'tag'
         shell: bash
         run: |
           mkdir -p .ci/bin
