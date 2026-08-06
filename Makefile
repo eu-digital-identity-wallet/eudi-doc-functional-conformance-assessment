@@ -58,7 +58,7 @@ PDF_TOC_DEPTH   := 3
 # -----------------------------------------------------------------------------
 # Targets
 # -----------------------------------------------------------------------------
-.PHONY: help all venv install_deps mkdocs serve local_serve local_serve_versions ci_mike_deploy ci_mike_deploy_draft pdf dist clean ci_clean
+.PHONY: help all venv install_deps mkdocs serve local_serve local_serve_versions preview preview_build ci_mike_deploy ci_mike_deploy_draft pdf dist clean ci_clean
 all: mkdocs
 
 help:
@@ -66,6 +66,10 @@ help:
 	@echo "Available targets:"
 	@echo ""
 	@echo "  make install_deps                      Create venv + install requirements.txt"
+	@echo "  make preview                           Serve the shell + content composed in a temp dir"
+	@echo "  make preview CONTENT=reviewed          Preview another maturity branch"
+	@echo "  make preview CONTENT=../fcaf-content   Preview a local content checkout (live reload)"
+	@echo "  make preview_build                     Build the composed site once (no server)"
 	@echo "  make local_serve                       Run MkDocs locally (dev server)"
 	@echo "  make local_serve_versions              Run mike serve locally (versioned)"
 	@echo "  make mkdocs                            Build static HTML site"
@@ -104,14 +108,46 @@ local_serve: serve
 local_serve_versions: install_deps
 	$(MIKE) serve
 
+# -----------------------------------------------------------------------------
+# Local preview (composes the shell with FCAF content)
+# -----------------------------------------------------------------------------
+# The rendering shell lives only on `site` and the test cases live only on the
+# maturity branches, so neither half builds on its own. tools/preview.sh
+# composes them in a temporary directory, always preferring whatever is in the
+# current working tree, so uncommitted edits are previewed as-is and nothing is
+# written into this checkout.
+#
+#   make preview                            shell + content, auto-detected
+#   make preview CONTENT=reviewed           fill the missing half from a ref
+#   make preview CONTENT=../fcaf-content    or from a second local checkout
+#   make preview ADDR=0.0.0.0:9000          bind somewhere else
+#
+# From a content branch there is no Makefile. Run the script straight from
+# `site` instead:
+#
+#   git show origin/site:tools/preview.sh | bash
+#
+preview:
+	@./tools/preview.sh $(if $(CONTENT),--content "$(CONTENT)") $(if $(ADDR),--addr "$(ADDR)")
+
+preview_build:
+	@./tools/preview.sh --build $(if $(CONTENT),--content "$(CONTENT)")
+
 # CI: deploy versioned site to gh-pages
 ci_mike_deploy: install_deps
 	@if [ -z "$(VERSION)" ]; then \
 	  echo "VERSION not set. Usage: make ci_mike_deploy VERSION=0.0.1"; \
 	  exit 1; \
 	fi
+#
+# NOTE: `latest` is deliberately NOT passed here. Release tags currently render
+# the framework only: v0.0.10 contains 0 test cases, while `draft` contains 595.
+# Moving `latest` onto a release would therefore 404 every external
+# /latest/fcaf/suts/.../WS_*/ deep link that works today. Re-add `latest` here
+# only once releases actually carry the test-case corpus, and diff the URL sets
+# before flipping it.
 	@PATH="$(CURDIR)/.venv/bin:$$PATH" \
-	  $(MIKE) deploy --push --update-aliases "$(VERSION)" latest
+	  $(MIKE) deploy --push "$(VERSION)"
 	@PATH="$(CURDIR)/.venv/bin:$$PATH" \
 	  $(MIKE) set-default --allow-empty --push latest
 
