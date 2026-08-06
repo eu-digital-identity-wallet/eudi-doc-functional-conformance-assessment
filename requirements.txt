@@ -1,9 +1,0 @@
-mkdocs
-mkdocs-material
-mkdocs-material[imaging]
-mike
-
-pymdown-extensions
-mkdocs-include-markdown-plugin
-mkdocs-git-revision-date-localized-plugin
-mkdocs-awesome-pages-plugin
