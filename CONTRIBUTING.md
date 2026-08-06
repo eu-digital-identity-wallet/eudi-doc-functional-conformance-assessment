@@ -6,6 +6,21 @@ This document describes the contribution and review model for this repository.
 
 Please note that the FCAF is **work in progress** and currently in a **draft baseline phase (v0.1.x)**.
 
+## Choose the correct base branch
+
+This repository separates the site shell from versioned FCAF content.
+
+- For framework text, navigation, and test cases under `docs/fcaf`, open the pull
+  request against `submitted`.
+- For the site theme, MkDocs configuration, hooks, build tooling, CI, or repository
+  governance, open the pull request against `site`.
+- Do not combine content and site-shell changes in one pull request.
+
+The default branch is `site` and intentionally has no `docs/fcaf` directory. Content
+contributors should run `git switch submitted` before creating their topic branch.
+Content moves from `submitted` through `reviewed`, `rc`, and `main` using the controlled
+promotion process.
+
 ---
 
 ## ⚠️ Current status (important)
@@ -270,7 +285,7 @@ Questions about scope or process should be raised via:
 - **v1.0.0** – Implementation-ready baseline for certification
 
 Indicative evolution of the framework is described in:
-[roadmap.md](docs/overview/roadmap.md)
+[Roadmap](docs/roadmap.md)
 
 ---
 
