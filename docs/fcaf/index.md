@@ -181,10 +181,12 @@ Each test case is defined by the following information:
 | Test Objective | Specifies the requirement(s) addressed in this test case |
 | References | Identifies specific references to the requirement(s) addressed by this test case. |
 | Profile | Defines the profile(s) for which the test case is applicable. |
+| Technology | Lists technologies that are applicable for the test. Note: the Technology section may be omitted and may be incomplete |
 | EUDI-wallet relevancy | Indicators on relevance to EUDI-wallet ecosystem. |
 | Preconditions | Define the state in which the IUT (implementation under test) needs to be before the test case can be executed. |
 | Test scenario | Defines the test steps that shall be taken. Each step covers a simple, exactly defined operation with a measurable result that can be included in the test report. The steps shall be performed in the order listed. Each test step is defined by the following information: <ul><li>Test step ID: a consecutive number, uniquely identifying each test step and the execution order in the test case.</li><li>Description: defining the operation that has to be executed for this step.</li><li>Configuration data: optionally specifying input data required to perform this test step.</li>
 | Expected result | The expected result defines pass criteria for each test step in the test scenario. The analysis of the observed result in comparison with the expected result leads to a verdict, e.g. "Pass" or "Fail". The results of the individual test steps or the overall result, or both, of the test case are transferred to the test report. |
+| Comment | Optional comment(s) for the test case. |
 
 ### Test Case ID
 
@@ -231,7 +233,7 @@ Both labels are applicable; some combinations will be mutually exclusive (e.g. a
 
 ### Profile
 
-Profiles identify which set of functionalities are in scope for the configuration adopted in the implementation under test (IUT). If a profile is present in a Test Case, this impacts the applicability of that Test Case. 
+Profiles identify which set of functionalities are in scope for the configuration adopted in the implementation under test (IUT). If a profile is present in a Test Case, this impacts the applicability of that Test Case.
 
 The Test Case selection is based upon comparing the profile of the Test Case to the IUT information in the <span class="todo">ICS filled out by the applicant or tester</span>:
 

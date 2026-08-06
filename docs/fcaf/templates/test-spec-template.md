@@ -12,9 +12,11 @@ A Test Case specification SHOULD include:
   3. References
   4. EUDI-wallet relevancy
   5. Profile applicability
-  6. Preconditions
-  7. Test scenario
-  8. Expected results
+  6. Technology
+  7. Preconditions
+  8. Test scenario
+  9. Expected results
+  10. Comment
 
 ### 1. Test case identifier
 - **Test case ID**: unique identifier following the FCAF naming convention.
@@ -32,15 +34,26 @@ A Test Case specification SHOULD include:
 - Applicable profile(s), if any.
 - Rules for when the test is **Not Applicable**.
 
-### 6. Preconditions
+### 6. Technology
+- The specific technology, credential format, or transmission mechanism variant the
+  test targets (e.g. `Credential in SD-JWT VC format`, `Credential in mdoc format`,
+  `Presentations via Redirects`, `Presentations via the W3C Digital Credentials API`).
+- This is the discriminator between sibling test cases that share an objective but
+  differ by technology (for example the SD-JWT VC and mdoc variants of the same query).
+- Omit the field only where the test is technology-agnostic.
+
+### 7. Preconditions
 - Required initial state and configuration.
 
-### 7. Test scenario
+### 8. Test scenario
 For each step:
 
 - Step ID
 - Description
 - Inputs/configuration (if applicable)
 
-### 8. Expected results
+### 9. Expected results
 - Expected outcomes per step and pass/fail criteria.
+
+### 10. Comment
+- Optional comment(s)
