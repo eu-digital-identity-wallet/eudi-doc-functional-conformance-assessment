@@ -92,7 +92,13 @@ plugins:
   - search
   - tags
   - privacy
-  - social
+  # - social
+  #   Disabled: the social plugin renders one preview PNG per page. At the
+  #   current corpus size that was 641 images / 26 MB in `draft` alone, and the
+  #   `latest` + `latest-draft` aliases materialize `draft` twice more, so it
+  #   cost ~1,900 files / 78 MB in every full GitHub Pages sync. That pushed the
+  #   sync past the fixed ~10 minute Pages ceiling. Re-enable only together with
+  #   a publication model that does not resync the whole version archive.
   - mike
   - include-markdown            # conformance-specific
 
