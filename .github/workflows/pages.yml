@@ -218,6 +218,19 @@ jobs:
           test -f build/pages/CNAME
           test -f build/pages/draft/fcaf/index.html
 
+      - name: Replace mike aliases with lightweight redirects
+        shell: bash
+        run: |
+          python3 .github/scripts/materialize_mike_aliases.py \
+            build/pages \
+            latest \
+            latest-draft
+
+          test ! -L build/pages/latest
+          test ! -L build/pages/latest-draft
+          test -f build/pages/latest/fcaf/index.html
+          test -f build/pages/latest-draft/fcaf/index.html
+
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v6
 
