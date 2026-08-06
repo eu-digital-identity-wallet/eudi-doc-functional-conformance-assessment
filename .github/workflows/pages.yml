@@ -18,10 +18,11 @@ on:
   release:
     types: [created]
 
+# GitHub Pages publishes directly from the gh-pages branch (build_type: legacy),
+# so this workflow only needs to push mike's output. It does not create Pages
+# deployments, hence no `pages`/`id-token` permissions.
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 concurrency:
   group: "pages"
@@ -203,42 +204,12 @@ jobs:
             make ci_mike_deploy VERSION=${{ steps.ver.outputs.version }}
           fi        
 
-      # ------------------------------------------------------------
-      # Package the complete mike site for GitHub Pages
-      # ------------------------------------------------------------
-      - name: Prepare GitHub Pages artifact
-        shell: bash
-        run: |
-          set -euo pipefail
-
-          mkdir -p build/pages
-          git fetch --no-tags origin gh-pages
-          git archive --format=tar FETCH_HEAD | tar -xf - -C build/pages
-
-          test -f build/pages/CNAME
-          test -f build/pages/draft/fcaf/index.html
-
-      - name: Replace mike aliases with lightweight redirects
-        shell: bash
-        run: |
-          python3 .github/scripts/materialize_mike_aliases.py \
-            build/pages \
-            latest \
-            latest-draft
-
-          test ! -L build/pages/latest
-          test ! -L build/pages/latest-draft
-          test -f build/pages/latest/fcaf/index.html
-          test -f build/pages/latest-draft/fcaf/index.html
-
-      - name: Configure GitHub Pages
-        uses: actions/configure-pages@v6
-
-      - name: Upload GitHub Pages artifact
-        uses: actions/upload-pages-artifact@v5
-        with:
-          path: build/pages
-          include-hidden-files: true
+      # mike's push to gh-pages is the publication step. GitHub Pages is
+      # configured with build_type: legacy on that branch, so it picks the push
+      # up and syncs only what changed. Do NOT reintroduce
+      # upload-pages-artifact/deploy-pages here: that path re-uploads and
+      # reprocesses every mike version on every publish, which exceeded the
+      # action's fixed 10-minute deployment ceiling for this site.
 
       # ------------------------------------------------------------
       # Upload artifacts (Actions)
@@ -268,17 +239,3 @@ jobs:
           files: |
             build/pdf/*.pdf
             build/dist/*.zip
-
-  deploy:
-    needs: publish
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v5
