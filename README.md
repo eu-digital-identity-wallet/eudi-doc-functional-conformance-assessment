@@ -119,10 +119,42 @@ See the [LICENSE](./LICENSE.md) file for details.
 
 ## Working locally
 
-The commands below require a composed working tree containing the `site` shell plus a
-`docs/fcaf` tree from the content ref you want to preview. Use a disposable worktree for
-that overlay so content is never committed to `site`. The GitHub Pages workflow performs
-the same overlay automatically for `submitted` and release tags.
+The rendering shell (`mkdocs.yml`, theme, hooks) lives only on `site`, and the test cases
+live only on the maturity branches. **Neither half builds on its own**: a bare `site`
+checkout fails with `Required FCAF navigation file not found: docs/fcaf/.nav.yml`, and a
+content checkout has no `mkdocs.yml` at all. The GitHub Pages workflow composes the two at
+build time; `make preview` does the same thing locally.
+
+### Preview the site
+
+``` bash
+make preview                          # compose and serve on http://127.0.0.1:8000/
+make preview CONTENT=reviewed         # fill the missing half from another ref
+make preview CONTENT=../fcaf-content  # or from a second local checkout
+make preview_build                    # build once instead of serving
+```
+
+`make preview` always prefers **your working tree**. Whatever branch is checked out and
+whatever is on disk right now, uncommitted edits included, is what gets previewed; only
+the half your branch does not have is filled in from a git ref:
+
+| checked out | shell from | content from |
+| --- | --- | --- |
+| `site` | your working tree | `submitted` |
+| `submitted` or a content feature branch | `site` | your working tree |
+| a composed tree | your working tree | your working tree |
+
+Everything is composed in a temporary directory, so nothing is written into your checkout
+and content can never be committed onto `site` by accident.
+
+**From a content branch there is no `Makefile`**, so run the script straight from `site`:
+
+``` bash
+git show origin/site:tools/preview.sh | bash
+```
+
+That form needs no arguments. It detects the `docs/fcaf` in your working tree and previews
+exactly what you are editing.
 
 ### Prerequisites
 

@@ -2,6 +2,11 @@
 site/
 .cache
 
+# Overlaid FCAF content. The shell must never carry docs/fcaf: it is composed in
+# at build time by .github/workflows/pages.yml, and locally by tools/preview.sh.
+# Ignored so a local overlay can never be committed onto `site` by accident.
+docs/fcaf/
+
 # Pandoc build output
 build/
 
