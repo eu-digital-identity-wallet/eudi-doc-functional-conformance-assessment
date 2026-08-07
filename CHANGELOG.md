@@ -1,8 +1,15 @@
 # Changelog
 
 This is the **framework & site** changelog: build/CI, MkDocs configuration, styling, templates,
-governance and other scaffolding outside `docs/fcaf/`. Test-case content is tracked separately in
-the FCAF changelog ([`docs/fcaf/CHANGELOG.md`](docs/fcaf/CHANGELOG.md)).
+governance and other scaffolding outside `docs/fcaf/`.
+
+Test-case content is tracked separately, in a changelog **per maturity stage**. Each one lives on
+its own branch, because `site` carries no `docs/fcaf`:
+
+- [`submitted`](https://github.com/eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment/blob/submitted/docs/fcaf/CHANGELOG.md) - rolling latest draft
+- [`reviewed`](https://github.com/eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment/blob/reviewed/docs/fcaf/CHANGELOG.md) - beta
+- [`rc`](https://github.com/eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment/blob/rc/docs/fcaf/CHANGELOG.md) - release candidate
+- [`main`](https://github.com/eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment/blob/main/docs/fcaf/CHANGELOG.md) - released baseline
 
 Unversioned, newest first. Release versioning lives only in the FCAF changelog.
 
