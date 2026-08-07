@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - submitted
+    # Only republish when the content itself changes. Without this, a README or
+    # workflow edit on this branch rebuilds and redeploys the entire site.
+    paths:
+      - docs/fcaf/**
 
 permissions:
   contents: write
