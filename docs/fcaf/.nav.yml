@@ -18,3 +18,4 @@ nav:
   - Templates:
       - Overview: templates/index.md
       - Test spec template: templates/test-spec-template.md
+  - Changelog: CHANGELOG.md
