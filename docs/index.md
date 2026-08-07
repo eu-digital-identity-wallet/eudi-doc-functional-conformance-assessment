@@ -9,7 +9,6 @@ to support wallet certification and improve interoperability across Member State
 > ⚠️ **Status:** This documentation contains content under active development.
 >
 > Content is published early to enable **feedback, structured review, and iterative refinement**.
-> Individual releases may provide implementation-ready subsets of functionality, but may not yet cover the full scope of the framework.
 > Content progresses through defined maturity stages:
 >
 > - **Submitted** - latest working draft; not yet suitable for implementation; may contain errors
