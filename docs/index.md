@@ -30,7 +30,7 @@ The FCAF evolves through **incremental and iterative releases**, with quality an
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://github.com/eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment/blob/main/CONTRIBUTING.md) in the source repository for details on our code of conduct, and the process for contributing to the FCAF.
+Please read [CONTRIBUTING.md](https://github.com/eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment/blob/site/CONTRIBUTING.md) in the source repository for details on our code of conduct, and the process for contributing to the FCAF.
 
 ## Authors
 
@@ -42,8 +42,10 @@ See the list of [contributors](https://github.com/eu-digital-identity-wallet/eud
 
 Two changelogs are kept:
 
-- **[Framework &amp; site changelog](https://github.com/eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment/blob/main/CHANGELOG.md)** - build, MkDocs configuration, styling, templates and other scaffolding (version-based).
-- **[FCAF changelog](fcaf/CHANGELOG.md)** - changes to the test-case content itself, recorded per maturity stage.
+- **[Framework &amp; site changelog](https://github.com/eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment/blob/site/CHANGELOG.md)** - build, MkDocs configuration, styling, templates and other scaffolding (version-based).
+- **[FCAF content changelog](fcaf/CHANGELOG.md)** - changes to the test-case content itself. It is kept
+  **per maturity stage**, so this link follows whichever version you are viewing. Today only
+  `submitted` carries one; `reviewed`, `rc` and `main` get theirs as content is promoted.
 
 Versioning reflects both **coverage (vX.Y.Z)** and **maturity (beta, release candidate, released baseline)**:
 
@@ -77,4 +79,4 @@ Stability expectations apply to all released baselines (**vX.Y.Z**), which are c
 
 ## License
 
-See the [LICENSE.md](https://github.com/eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment/blob/main/LICENSE.md) file details.
+See the [LICENSE.md](https://github.com/eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment/blob/site/LICENSE.md) file details.
