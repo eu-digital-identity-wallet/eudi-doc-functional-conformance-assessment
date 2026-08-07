@@ -17,6 +17,20 @@ on:
         default: submitted
   release:
     types: [created]
+  # Shell changes land on `site` and would otherwise never reach the live site,
+  # because publication is only ever triggered by a content push or a manual run.
+  # Scoped by path so a README or governance edit does not trigger a rebuild.
+  # No content_ref input on this path, so the compute step falls back to
+  # `submitted`, i.e. this republishes `draft` against the new shell.
+  push:
+    branches:
+      - site
+    paths:
+      - mkdocs.yml
+      - requirements.txt
+      - docs/**
+      - overrides/**
+      - hooks/**
 
 # GitHub Pages publishes directly from the gh-pages branch (build_type: legacy),
 # so this workflow only needs to push mike's output. It does not create Pages
