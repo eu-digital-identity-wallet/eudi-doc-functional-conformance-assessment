@@ -211,6 +211,11 @@ jobs:
       # ------------------------------------------------------------
       - name: Deploy MkDocs with mike
         shell: bash
+        # FCAF_CONTENT_REF tells hooks/fcaf_edit_urls.py which branch or tag the
+        # content pages came from, so their edit / view-source buttons point at
+        # the branch that actually holds them instead of at the shell.
+        env:
+          FCAF_CONTENT_REF: ${{ steps.ver.outputs.content_ref }}
         run: |
           if [ "${{ steps.ver.outputs.kind }}" = "draft" ]; then
             make ci_mike_deploy_draft

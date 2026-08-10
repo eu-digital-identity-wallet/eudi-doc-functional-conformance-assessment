@@ -108,6 +108,9 @@ plugins:
 hooks:
   - hooks/precond_alpha.py
   - hooks/fcaf_nav.py
+  # Repoints the edit / view-source buttons at the branch each page lives on.
+  # edit_uri below is only the fallback for pages the hook does not touch.
+  - hooks/fcaf_edit_urls.py
 
 extra:
   version:
