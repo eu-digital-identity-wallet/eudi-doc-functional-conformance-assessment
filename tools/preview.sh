@@ -212,6 +212,14 @@ else
 fi
 
 # --- run --------------------------------------------------------------------
+# Tell hooks/fcaf_edit_urls.py which ref the content came from, so the edit and
+# view-source buttons point at the branch that actually holds these pages. For a
+# working-tree preview there is no ref to name, so fall back to the hook's own
+# default rather than inventing one.
+if [ "$CONTENT_MODE" = "ref" ]; then
+  export FCAF_CONTENT_REF="${CONTENT_SRC##*/}"
+fi
+
 # Deliberately not exec: the EXIT trap has to fire so the temp tree is removed
 # on Ctrl-C as well.
 cd "$WORK"
