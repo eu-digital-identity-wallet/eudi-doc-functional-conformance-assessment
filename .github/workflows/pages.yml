@@ -14,6 +14,7 @@ permissions:
 
 jobs:
   publish:
+    if: github.repository == 'eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment'
     uses: eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment/.github/workflows/pages.yml@site
     with:
       content_ref: submitted
