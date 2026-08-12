@@ -194,9 +194,10 @@ Test cases are grouped by SUT and Test Class (interface tested).
 
 Test case IDs are formed as follows:
 
-    SUT_TestClass_TestLayer_TestArea_TestGroup_TestUnit_*nnn*
+    SUT_TestClass_TestLayer_TestArea_TestGroup_TestUnit_*nnnmmm*
 
 Where *nnn* is a three-digit decimal number identifying the test case.
+The identifier may optionally have a postfix *mmm*, which is eiher a character, an underscore followed by the characters UF for unhappy flow ('_UF'), or a combination thereof (character first).
 
 In case one of the subdivisions is not present the name is omitted.
 
