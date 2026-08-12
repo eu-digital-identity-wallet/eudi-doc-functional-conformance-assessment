@@ -1405,18 +1405,246 @@
 <li>The JWT Referenced Token with status_list claim is stored by the Wallet.</li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_ms_credentialformats_030">WS_RP_MS_CredentialFormats_030<a class="headerlink" href="#ws_rp_ms_credentialformats_030" title="Link to this section">&para;</a></h3>
+<h3 id="ws_rp_ms_credentialformats_029a">WS_RP_MS_CredentialFormats_029a<a class="headerlink" href="#ws_rp_ms_credentialformats_029a" title="Link to this section">&para;</a></h3>
 <h4 id="objective_1">Objective<a class="headerlink" href="#objective_1" title="Link to this section">&para;</a></h4>
-<p>Verify that the EUDI Wallet can receive, hold and store an SD-JWT Referenced Token that includes a status_list claim.</p>
+<p>Verify that the Wallet includes the <code>status</code> claim in a SD-JWT VC presentation, when the issuer included the status information in the credential.</p>
 <h4 id="references_1">References<a class="headerlink" href="#references_1" title="Link to this section">&para;</a></h4>
-<ul>
-<li>[Token Status List] Section 6.2</li>
-</ul>
+<p>[ETSI TS 119 472-1] section 5.2.10
+[Token Status List] section 6.2</p>
 <h4 id="profile-applicability_1">Profile applicability<a class="headerlink" href="#profile-applicability_1" title="Link to this section">&para;</a></h4>
-<p>The Wallet supports revocation checking via the Token Status List mechanism; The Wallet supports Status List Tokens in JWT format</p>
+<p>None</p>
+<h4 id="technology">Technology<a class="headerlink" href="#technology" title="Link to this section">&para;</a></h4>
+<p>Credential in SD-JWT VC format
+Credential with revocation status information</p>
 <h4 id="eudi-wallet-relevancy_1">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_1" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_1">Preconditions<a class="headerlink" href="#preconditions_1" title="Link to this section">&para;</a></h4>
+<p>A. Wallet is set to 'default_configuration_1'
+B. Verifier requested a credential to be presented, using a valid, trusted request for 'default_credential_A' and requesting presentation in SD-JWT VC format of all claims.
+C. The presentation value of the credential is a syntactically correct serialization in compact serialization format of an SD-JWT VC.
+D. The presentation value of the credential contains a valid signed SD-JWT.</p>
+<h4 id="test-scenario_1">Test Scenario<a class="headerlink" href="#test-scenario_1" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Verify the presented SD-JWT VC credential.</li>
+</ol>
+<h4 id="expected-results_1">Expected results<a class="headerlink" href="#expected-results_1" title="Link to this section">&para;</a></h4>
+<ol>
+<li>The presented SD-JWT VC contains a top-level <code>status</code> claim in the body of the SD-JWT.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ms_credentialformats_029b">WS_RP_MS_CredentialFormats_029b<a class="headerlink" href="#ws_rp_ms_credentialformats_029b" title="Link to this section">&para;</a></h3>
+<h4 id="objective_2">Objective<a class="headerlink" href="#objective_2" title="Link to this section">&para;</a></h4>
+<p>Verify that the Wallet includes a correctly formatted <code>status</code> claim in a SD-JWT VC presentation, when the issuer included the status information in the credential.</p>
+<h4 id="references_2">References<a class="headerlink" href="#references_2" title="Link to this section">&para;</a></h4>
+<p>[ETSI TS 119 472-1] section 5.2.10
+[Token Status List] section 6.2
+[RFC8259]</p>
+<h4 id="profile-applicability_2">Profile applicability<a class="headerlink" href="#profile-applicability_2" title="Link to this section">&para;</a></h4>
+<p>None</p>
+<h4 id="technology_1">Technology<a class="headerlink" href="#technology_1" title="Link to this section">&para;</a></h4>
+<p>Credential in SD-JWT VC format
+Credential with revocation status information</p>
+<h4 id="eudi-wallet-relevancy_2">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_2" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_2">Preconditions<a class="headerlink" href="#preconditions_2" title="Link to this section">&para;</a></h4>
+<p>A. Wallet is set to 'default_configuration_1'
+B. Verifier requested a credential to be presented, using a valid, trusted request for 'default_credential_A' and requesting presentation in SD-JWT VC format of all claims.
+C. The presentation value of the credential is a syntactically correct serialization in compact serialization format of an SD-JWT VC.
+D. The presentation value of the credential contains a valid signed SD-JWT.
+E. The presented SD-JWT VC contains a <code>status</code> claim.</p>
+<h4 id="test-scenario_2">Test Scenario<a class="headerlink" href="#test-scenario_2" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Verify the <code>status</code> claim in the presented SD-JWT VC credential.</li>
+</ol>
+<h4 id="expected-results_2">Expected results<a class="headerlink" href="#expected-results_2" title="Link to this section">&para;</a></h4>
+<ol>
+<li>The value of the <code>status</code> claim in the SD-JWT is a JSON object.</li>
+</ol>
+<h4 id="comments">Comments<a class="headerlink" href="#comments" title="Link to this section">&para;</a></h4>
+<ul>
+<li>While the contents of the <code>status</code> claim is a responsibility of the issuer, the Wallet must pass the value unmodified.</li>
+</ul>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ms_credentialformats_029c">WS_RP_MS_CredentialFormats_029c<a class="headerlink" href="#ws_rp_ms_credentialformats_029c" title="Link to this section">&para;</a></h3>
+<h4 id="objective_3">Objective<a class="headerlink" href="#objective_3" title="Link to this section">&para;</a></h4>
+<p>Verify that the Wallet includes the <code>status_list</code> status mechanism in the <code>status</code> claim in a SD-JWT VC presentation, when the issuer included the status information in the credential.</p>
+<h4 id="references_3">References<a class="headerlink" href="#references_3" title="Link to this section">&para;</a></h4>
+<p>[ETSI TS 119 472-1] section 5.2.10
+[Token Status List] section 6.2</p>
+<h4 id="profile-applicability_3">Profile applicability<a class="headerlink" href="#profile-applicability_3" title="Link to this section">&para;</a></h4>
+<p>None</p>
+<h4 id="technology_2">Technology<a class="headerlink" href="#technology_2" title="Link to this section">&para;</a></h4>
+<p>Credential in SD-JWT VC format
+Credential with revocation status information</p>
+<h4 id="eudi-wallet-relevancy_3">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_3" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_3">Preconditions<a class="headerlink" href="#preconditions_3" title="Link to this section">&para;</a></h4>
+<p>A. Wallet is set to 'default_configuration_1'
+B. Verifier requested a credential to be presented, using a valid, trusted request for 'default_credential_A' and requesting presentation in SD-JWT VC format of all claims.
+C. The presentation value of the credential is a syntactically correct serialization in compact serialization format of an SD-JWT VC.
+D. The presentation value of the credential contains a valid signed SD-JWT.
+E. The presented SD-JWT VC contains a correctly formatted <code>status</code> claim.</p>
+<h4 id="test-scenario_3">Test Scenario<a class="headerlink" href="#test-scenario_3" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Verify the <code>status</code> claim in the presented SD-JWT VC credential.</li>
+</ol>
+<h4 id="expected-results_3">Expected results<a class="headerlink" href="#expected-results_3" title="Link to this section">&para;</a></h4>
+<ol>
+<li>The top-level <code>status</code> claim in the presented SD-JWT VC contains a <code>status_list</code> member.</li>
+</ol>
+<h4 id="comments_1">Comments<a class="headerlink" href="#comments_1" title="Link to this section">&para;</a></h4>
+<ul>
+<li>While the contents of the <code>status</code> claim is a responsibility of the issuer, the Wallet must pass the value unmodified.</li>
+</ul>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ms_credentialformats_029d">WS_RP_MS_CredentialFormats_029d<a class="headerlink" href="#ws_rp_ms_credentialformats_029d" title="Link to this section">&para;</a></h3>
+<h4 id="objective_4">Objective<a class="headerlink" href="#objective_4" title="Link to this section">&para;</a></h4>
+<p>Verify that the Wallet includes a correctly formatted <code>status_list</code> status mechanism in the <code>status</code> claim in a SD-JWT VC presentation, when the issuer included the status information in the credential in Token Status List format.</p>
+<h4 id="references_4">References<a class="headerlink" href="#references_4" title="Link to this section">&para;</a></h4>
+<p>[ETSI TS 119 472-1] section 5.2.10
+[Token Status List] section 6.2
+[RFC8259]</p>
+<h4 id="profile-applicability_4">Profile applicability<a class="headerlink" href="#profile-applicability_4" title="Link to this section">&para;</a></h4>
+<p>None</p>
+<h4 id="technology_3">Technology<a class="headerlink" href="#technology_3" title="Link to this section">&para;</a></h4>
+<p>Credential in SD-JWT VC format
+Credential with revocation status information
+Credential with revocation status information in Token Status List Format</p>
+<h4 id="eudi-wallet-relevancy_4">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_4" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_4">Preconditions<a class="headerlink" href="#preconditions_4" title="Link to this section">&para;</a></h4>
+<p>A. Wallet is set to 'default_configuration_1'
+B. Verifier requested a credential to be presented, using a valid, trusted request for 'default_credential_A' and requesting presentation in SD-JWT VC format of all claims.
+C. The presentation value of the credential is a syntactically correct serialization in compact serialization format of an SD-JWT VC.
+D. The presentation value of the credential contains a valid signed SD-JWT.
+E. The presented SD-JWT VC contains a correctly formatted <code>status</code> claim.
+F. The <code>status</code> claim in the presented SD-JWT VC contains a <code>status_list</code> member.</p>
+<h4 id="test-scenario_4">Test Scenario<a class="headerlink" href="#test-scenario_4" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Verify the <code>status_list</code> member of the top-level <code>status</code> claim in the presented SD-JWT VC credential.</li>
+</ol>
+<h4 id="expected-results_4">Expected results<a class="headerlink" href="#expected-results_4" title="Link to this section">&para;</a></h4>
+<ol>
+<li>The value of the <code>status_list</code> member of the top-level <code>status</code> claim in the presented SD-JWT VC is a JSON object.</li>
+</ol>
+<h4 id="comments_2">Comments<a class="headerlink" href="#comments_2" title="Link to this section">&para;</a></h4>
+<ul>
+<li>While the contents of the <code>status</code> claim is a responsibility of the issuer, the Wallet must pass the value unmodified.</li>
+</ul>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ms_credentialformats_029e">WS_RP_MS_CredentialFormats_029e<a class="headerlink" href="#ws_rp_ms_credentialformats_029e" title="Link to this section">&para;</a></h3>
+<h4 id="objective_5">Objective<a class="headerlink" href="#objective_5" title="Link to this section">&para;</a></h4>
+<p>Verify that the Wallet includes all relevant claims in the <code>status_list</code> status mechanism in the <code>status</code> claim in a SD-JWT VC presentation, when the issuer included the status information in the credential in Token Status List format.</p>
+<h4 id="references_5">References<a class="headerlink" href="#references_5" title="Link to this section">&para;</a></h4>
+<p>[ETSI TS 119 472-1] section 5.2.10
+[Token Status List] section 6.2</p>
+<h4 id="profile-applicability_5">Profile applicability<a class="headerlink" href="#profile-applicability_5" title="Link to this section">&para;</a></h4>
+<p>None</p>
+<h4 id="technology_4">Technology<a class="headerlink" href="#technology_4" title="Link to this section">&para;</a></h4>
+<p>Credential in SD-JWT VC format
+Credential with revocation status information
+Credential with revocation status information in Token Status List Format</p>
+<h4 id="eudi-wallet-relevancy_5">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_5" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_5">Preconditions<a class="headerlink" href="#preconditions_5" title="Link to this section">&para;</a></h4>
+<p>A. Wallet is set to 'default_configuration_1'
+B. Verifier requested a credential to be presented, using a valid, trusted request for 'default_credential_A' and requesting presentation in SD-JWT VC format of all claims.
+C. The presentation value of the credential is a syntactically correct serialization in compact serialization format of an SD-JWT VC.
+D. The presentation value of the credential contains a valid signed SD-JWT.
+E. The presented SD-JWT VC contains a correctly formatted <code>status</code> claim.
+F. The <code>status</code> claim in the presented SD-JWT VC contains a correctly formatted <code>status_list</code> member.</p>
+<h4 id="test-scenario_5">Test Scenario<a class="headerlink" href="#test-scenario_5" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Verify the <code>status_list</code> member in the <code>status</code> claim in the presented SD-JWT VC credential.</li>
+</ol>
+<h4 id="expected-results_5">Expected results<a class="headerlink" href="#expected-results_5" title="Link to this section">&para;</a></h4>
+<ol>
+<li>The <code>status_list</code> member in the <code>status</code> claim in the SD-JWT contains a <code>idx</code> and a <code>uri</code> claim.</li>
+</ol>
+<h4 id="comments_3">Comments<a class="headerlink" href="#comments_3" title="Link to this section">&para;</a></h4>
+<ul>
+<li>While the contents of the <code>status</code> claim is a responsibility of the issuer, the Wallet must pass the value unmodified.</li>
+</ul>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ms_credentialformats_029f">WS_RP_MS_CredentialFormats_029f<a class="headerlink" href="#ws_rp_ms_credentialformats_029f" title="Link to this section">&para;</a></h3>
+<h4 id="objective_6">Objective<a class="headerlink" href="#objective_6" title="Link to this section">&para;</a></h4>
+<p>Verify that the Wallet includes a correctly formatted <code>idx</code> claim in the <code>status_list</code> status mechanism in the <code>status</code> claim in a SD-JWT VC presentation, when the issuer included the status information in the credential in Token Status List format.</p>
+<h4 id="references_6">References<a class="headerlink" href="#references_6" title="Link to this section">&para;</a></h4>
+<p>[ETSI TS 119 472-1] section 5.2.10
+[Token Status List] section 6.2</p>
+<h4 id="profile-applicability_6">Profile applicability<a class="headerlink" href="#profile-applicability_6" title="Link to this section">&para;</a></h4>
+<p>None</p>
+<h4 id="technology_5">Technology<a class="headerlink" href="#technology_5" title="Link to this section">&para;</a></h4>
+<p>Credential in SD-JWT VC format
+Credential with revocation status information
+Credential with revocation status information in Token Status List Format</p>
+<h4 id="eudi-wallet-relevancy_6">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_6" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_6">Preconditions<a class="headerlink" href="#preconditions_6" title="Link to this section">&para;</a></h4>
+<p>A. Wallet is set to 'default_configuration_1'
+B. Verifier requested a credential to be presented, using a valid, trusted request for 'default_credential_A' and requesting presentation in SD-JWT VC format of all claims.
+C. The presentation value of the credential is a syntactically correct serialization in compact serialization format of an SD-JWT VC.
+D. The presentation value of the credential contains a valid signed SD-JWT.
+E. The presented SD-JWT VC contains a correctly formatted <code>status</code> claim.
+F. The <code>status_list</code> member in the <code>status</code> claim in the presented SD-JWT VC contains the relevant members.</p>
+<h4 id="test-scenario_6">Test Scenario<a class="headerlink" href="#test-scenario_6" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Verify the <code>idx</code> claim in the <code>status_list</code> member in the <code>status</code> claim in the presented SD-JWT VC credential.</li>
+</ol>
+<h4 id="expected-results_6">Expected results<a class="headerlink" href="#expected-results_6" title="Link to this section">&para;</a></h4>
+<ol>
+<li>The value of the <code>idx</code> claim in the <code>status_list</code> member in the <code>status</code> claim in the SD-JWT is a non-negative integer.</li>
+</ol>
+<h4 id="comments_4">Comments<a class="headerlink" href="#comments_4" title="Link to this section">&para;</a></h4>
+<ul>
+<li>While the contents of the <code>status</code> claim is a responsibility of the issuer, the Wallet must pass the value unmodified.</li>
+</ul>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ms_credentialformats_029g">WS_RP_MS_CredentialFormats_029g<a class="headerlink" href="#ws_rp_ms_credentialformats_029g" title="Link to this section">&para;</a></h3>
+<h4 id="objective_7">Objective<a class="headerlink" href="#objective_7" title="Link to this section">&para;</a></h4>
+<p>Verify that the Wallet includes a correctly formatted <code>uri</code> claim in the <code>status_list</code> status mechanism in the <code>status</code> claim in a SD-JWT VC presentation, when the issuer included the status information in the credential in Token Staus List format.</p>
+<h4 id="references_7">References<a class="headerlink" href="#references_7" title="Link to this section">&para;</a></h4>
+<p>[ETSI TS 119 472-1] section 5.2.10
+[Token Status List] section 6.2</p>
+<h4 id="profile-applicability_7">Profile applicability<a class="headerlink" href="#profile-applicability_7" title="Link to this section">&para;</a></h4>
+<p>None</p>
+<h4 id="technology_6">Technology<a class="headerlink" href="#technology_6" title="Link to this section">&para;</a></h4>
+<p>Credential in SD-JWT VC format
+Credential with revocation status information</p>
+<h4 id="eudi-wallet-relevancy_7">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_7" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_7">Preconditions<a class="headerlink" href="#preconditions_7" title="Link to this section">&para;</a></h4>
+<p>A. Wallet is set to 'default_configuration_1'
+B. Verifier requested a credential to be presented, using a valid, trusted request for 'default_credential_A' and requesting presentation in SD-JWT VC format of all claims.
+C. The presentation value of the credential is a syntactically correct serialization in compact serialization format of an SD-JWT VC.
+D. The presentation value of the credential contains a valid signed SD-JWT.
+E. The presented SD-JWT VC contains a correctly formatted <code>status</code> claim.
+F. The <code>status_list</code> member in the <code>status</code> claim in the presented SD-JWT VC contains the relevant claims.</p>
+<h4 id="test-scenario_7">Test Scenario<a class="headerlink" href="#test-scenario_7" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Verify the <code>uri</code> claim in the <code>status_list</code> member in the <code>status</code> claim in the presented SD-JWT VC credential.</li>
+</ol>
+<h4 id="expected-results_7">Expected results<a class="headerlink" href="#expected-results_7" title="Link to this section">&para;</a></h4>
+<ol>
+<li>The value of the <code>uri</code> claim in the <code>status_list</code> member in the <code>status</code> claim in the SD-JWT is a string that is a URI according to [RFC3986].</li>
+</ol>
+<h4 id="comments_5">Comments<a class="headerlink" href="#comments_5" title="Link to this section">&para;</a></h4>
+<ul>
+<li>While the contents of the <code>status</code> claim is a responsibility of the issuer, the Wallet must pass the value unmodified.</li>
+</ul>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ms_credentialformats_030">WS_RP_MS_CredentialFormats_030<a class="headerlink" href="#ws_rp_ms_credentialformats_030" title="Link to this section">&para;</a></h3>
+<h4 id="objective_8">Objective<a class="headerlink" href="#objective_8" title="Link to this section">&para;</a></h4>
+<p>Verify that the EUDI Wallet can receive, hold and store an SD-JWT Referenced Token that includes a status_list claim.</p>
+<h4 id="references_8">References<a class="headerlink" href="#references_8" title="Link to this section">&para;</a></h4>
+<ul>
+<li>[Token Status List] Section 6.2</li>
+</ul>
+<h4 id="profile-applicability_8">Profile applicability<a class="headerlink" href="#profile-applicability_8" title="Link to this section">&para;</a></h4>
+<p>The Wallet supports revocation checking via the Token Status List mechanism; The Wallet supports Status List Tokens in JWT format</p>
+<h4 id="eudi-wallet-relevancy_8">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_8" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_8">Preconditions<a class="headerlink" href="#preconditions_8" title="Link to this section">&para;</a></h4>
 <ol>
 <li>The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer</li>
 <li>The Referenced Token includes the Status element that contains the Status_list element (index and URI)</li>
@@ -1424,27 +1652,27 @@
 <li>The Status List Token is validated</li>
 <li>The Issuer issues a SD-JWT Referenced Token with a status_list claim to the EUDI Wallet.</li>
 </ol>
-<h4 id="test-scenario_1">Test Scenario<a class="headerlink" href="#test-scenario_1" title="Link to this section">&para;</a></h4>
+<h4 id="test-scenario_8">Test Scenario<a class="headerlink" href="#test-scenario_8" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Verify that the Wallet accepts and stores the SD-JWT Referenced Token.</li>
 </ol>
-<h4 id="expected-results_1">Expected results<a class="headerlink" href="#expected-results_1" title="Link to this section">&para;</a></h4>
+<h4 id="expected-results_8">Expected results<a class="headerlink" href="#expected-results_8" title="Link to this section">&para;</a></h4>
 <ol>
 <li>The SD-JWT Referenced Token with status_list claim is stored by the Wallet.</li>
 </ol>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_ms_credentialformats_031">WS_RP_MS_CredentialFormats_031<a class="headerlink" href="#ws_rp_ms_credentialformats_031" title="Link to this section">&para;</a></h3>
-<h4 id="objective_2">Objective<a class="headerlink" href="#objective_2" title="Link to this section">&para;</a></h4>
+<h4 id="objective_9">Objective<a class="headerlink" href="#objective_9" title="Link to this section">&para;</a></h4>
 <p>Verify that the EUDI Wallet can receive, hold and store an SD-JWT VC Referenced Token that includes a status_list claim.</p>
-<h4 id="references_2">References<a class="headerlink" href="#references_2" title="Link to this section">&para;</a></h4>
+<h4 id="references_9">References<a class="headerlink" href="#references_9" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[Token Status List] Section 6.2</li>
 </ul>
-<h4 id="profile-applicability_2">Profile applicability<a class="headerlink" href="#profile-applicability_2" title="Link to this section">&para;</a></h4>
+<h4 id="profile-applicability_9">Profile applicability<a class="headerlink" href="#profile-applicability_9" title="Link to this section">&para;</a></h4>
 <p>The Wallet supports revocation checking via the Token Status List mechanism; The Wallet supports Status List Tokens in JWT format</p>
-<h4 id="eudi-wallet-relevancy_2">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_2" title="Link to this section">&para;</a></h4>
+<h4 id="eudi-wallet-relevancy_9">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_9" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_2">Preconditions<a class="headerlink" href="#preconditions_2" title="Link to this section">&para;</a></h4>
+<h4 id="preconditions_9">Preconditions<a class="headerlink" href="#preconditions_9" title="Link to this section">&para;</a></h4>
 <ol>
 <li>The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer</li>
 <li>The Referenced Token includes the Status element that contains the Status_list element (index and URI)</li>
@@ -1452,27 +1680,27 @@
 <li>The Status List Token is validated</li>
 <li>The Issuer issues a SD-JWT VC Referenced Token with a status_list claim to the EUDI Wallet.</li>
 </ol>
-<h4 id="test-scenario_2">Test Scenario<a class="headerlink" href="#test-scenario_2" title="Link to this section">&para;</a></h4>
+<h4 id="test-scenario_9">Test Scenario<a class="headerlink" href="#test-scenario_9" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Verify that the Wallet accepts and stores the SD-JWT VC Referenced Token.</li>
 </ol>
-<h4 id="expected-results_2">Expected results<a class="headerlink" href="#expected-results_2" title="Link to this section">&para;</a></h4>
+<h4 id="expected-results_9">Expected results<a class="headerlink" href="#expected-results_9" title="Link to this section">&para;</a></h4>
 <ol>
 <li>The SD-JWT VC Referenced Token with status_list claim is stored by the Wallet.</li>
 </ol>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_ms_credentialformats_032">WS_RP_MS_CredentialFormats_032<a class="headerlink" href="#ws_rp_ms_credentialformats_032" title="Link to this section">&para;</a></h3>
-<h4 id="objective_3">Objective<a class="headerlink" href="#objective_3" title="Link to this section">&para;</a></h4>
+<h4 id="objective_10">Objective<a class="headerlink" href="#objective_10" title="Link to this section">&para;</a></h4>
 <p>Verify that the EUDI Wallet can receive, hold and store a CWT Referenced Token that includes a status claim.</p>
-<h4 id="references_3">References<a class="headerlink" href="#references_3" title="Link to this section">&para;</a></h4>
+<h4 id="references_10">References<a class="headerlink" href="#references_10" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[Token Status List] Section 6.3</li>
 </ul>
-<h4 id="profile-applicability_3">Profile applicability<a class="headerlink" href="#profile-applicability_3" title="Link to this section">&para;</a></h4>
+<h4 id="profile-applicability_10">Profile applicability<a class="headerlink" href="#profile-applicability_10" title="Link to this section">&para;</a></h4>
 <p>The Wallet supports revocation checking via the Token Status List mechanism; The Wallet supports Status List Tokens in CWT format</p>
-<h4 id="eudi-wallet-relevancy_3">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_3" title="Link to this section">&para;</a></h4>
+<h4 id="eudi-wallet-relevancy_10">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_10" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_3">Preconditions<a class="headerlink" href="#preconditions_3" title="Link to this section">&para;</a></h4>
+<h4 id="preconditions_10">Preconditions<a class="headerlink" href="#preconditions_10" title="Link to this section">&para;</a></h4>
 <ol>
 <li>The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer</li>
 <li>The Referenced Token includes the Status element that contains the Status_list element (index and URI)</li>
@@ -1480,27 +1708,27 @@
 <li>The Status List Token is validated</li>
 <li>The Issuer issues a CWT Referenced Token with a status claim to the EUDI Wallet.</li>
 </ol>
-<h4 id="test-scenario_3">Test Scenario<a class="headerlink" href="#test-scenario_3" title="Link to this section">&para;</a></h4>
+<h4 id="test-scenario_10">Test Scenario<a class="headerlink" href="#test-scenario_10" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Verify that the Wallet accepts and stores the CWT Referenced Token.</li>
 </ol>
-<h4 id="expected-results_3">Expected results<a class="headerlink" href="#expected-results_3" title="Link to this section">&para;</a></h4>
+<h4 id="expected-results_10">Expected results<a class="headerlink" href="#expected-results_10" title="Link to this section">&para;</a></h4>
 <ol>
 <li>The CWT Referenced Token with status claim is stored by the Wallet.</li>
 </ol>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_ms_credentialformats_033">WS_RP_MS_CredentialFormats_033<a class="headerlink" href="#ws_rp_ms_credentialformats_033" title="Link to this section">&para;</a></h3>
-<h4 id="objective_4">Objective<a class="headerlink" href="#objective_4" title="Link to this section">&para;</a></h4>
+<h4 id="objective_11">Objective<a class="headerlink" href="#objective_11" title="Link to this section">&para;</a></h4>
 <p>Verify that the EUDI Wallet can receive, hold and store an ISO mdoc Referenced Token that includes a status claim.</p>
-<h4 id="references_4">References<a class="headerlink" href="#references_4" title="Link to this section">&para;</a></h4>
+<h4 id="references_11">References<a class="headerlink" href="#references_11" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[Token Status List] Section 6.3</li>
 </ul>
-<h4 id="profile-applicability_4">Profile applicability<a class="headerlink" href="#profile-applicability_4" title="Link to this section">&para;</a></h4>
+<h4 id="profile-applicability_11">Profile applicability<a class="headerlink" href="#profile-applicability_11" title="Link to this section">&para;</a></h4>
 <p>The Wallet supports revocation checking via the Token Status List mechanism; The Wallet supports Status List Tokens in CWT format</p>
-<h4 id="eudi-wallet-relevancy_4">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_4" title="Link to this section">&para;</a></h4>
+<h4 id="eudi-wallet-relevancy_11">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_11" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_4">Preconditions<a class="headerlink" href="#preconditions_4" title="Link to this section">&para;</a></h4>
+<h4 id="preconditions_11">Preconditions<a class="headerlink" href="#preconditions_11" title="Link to this section">&para;</a></h4>
 <ol>
 <li>The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer</li>
 <li>The Referenced Token includes the Status element that contains the Status_list element (index and URI)</li>
@@ -1508,36 +1736,312 @@
 <li>The Status List Token is validated</li>
 <li>The Issuer issues a ISO mdoc Referenced Token with a status claim to the EUDI Wallet.</li>
 </ol>
-<h4 id="test-scenario_4">Test Scenario<a class="headerlink" href="#test-scenario_4" title="Link to this section">&para;</a></h4>
+<h4 id="test-scenario_11">Test Scenario<a class="headerlink" href="#test-scenario_11" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Verify that the Wallet accepts and stores the ISO mdoc Referenced Token.</li>
 </ol>
-<h4 id="expected-results_4">Expected results<a class="headerlink" href="#expected-results_4" title="Link to this section">&para;</a></h4>
+<h4 id="expected-results_11">Expected results<a class="headerlink" href="#expected-results_11" title="Link to this section">&para;</a></h4>
 <ol>
 <li>The ISO mdoc Referenced Token with status claim is stored by the Wallet.</li>
 </ol>
 <!-- END INCLUDE -->
+<h3 id="ws_rp_ms_credentialformats_033a">WS_RP_MS_CredentialFormats_033a<a class="headerlink" href="#ws_rp_ms_credentialformats_033a" title="Link to this section">&para;</a></h3>
+<h4 id="objective_12">Objective<a class="headerlink" href="#objective_12" title="Link to this section">&para;</a></h4>
+<p>Verify that the Wallet includes the <code>status</code> element in a mdoc presentation, when the issuer included the status information in the credential.</p>
+<h4 id="references_12">References<a class="headerlink" href="#references_12" title="Link to this section">&para;</a></h4>
+<p>[CIR 2024/2982 amended] annex II
+[ETSI TS 119 472-1] section 6.2.10
+[Token Status List] section 6.3</p>
+<h4 id="profile-applicability_12">Profile applicability<a class="headerlink" href="#profile-applicability_12" title="Link to this section">&para;</a></h4>
+<p>None</p>
+<h4 id="technology_7">Technology<a class="headerlink" href="#technology_7" title="Link to this section">&para;</a></h4>
+<p>Credential in mdoc format
+Credential with revocation status information</p>
+<h4 id="eudi-wallet-relevancy_12">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_12" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_12">Preconditions<a class="headerlink" href="#preconditions_12" title="Link to this section">&para;</a></h4>
+<p>A. Wallet is set to 'default_configuration_1'
+B. Verifier requested a credential to be presented, using a valid, trusted request for 'default_credential_A' and requesting presentation in mdoc of all data elements.
+C. The presentation value of the credential is a syntactically correct presentation of a mdoc.
+D. The presentation value of the credential contains a valid signed MSO.</p>
+<h4 id="test-scenario_12">Test Scenario<a class="headerlink" href="#test-scenario_12" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Verify the MSO of the presented mdoc credential.</li>
+</ol>
+<h4 id="expected-results_12">Expected results<a class="headerlink" href="#expected-results_12" title="Link to this section">&para;</a></h4>
+<ol>
+<li>The MSO of the presented mdoc contains a <code>status</code> key in the MSO.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ms_credentialformats_033b">WS_RP_MS_CredentialFormats_033b<a class="headerlink" href="#ws_rp_ms_credentialformats_033b" title="Link to this section">&para;</a></h3>
+<h4 id="objective_13">Objective<a class="headerlink" href="#objective_13" title="Link to this section">&para;</a></h4>
+<p>Verify that the Wallet includes a correctly formatted <code>status</code> claim in a mdoc presentation, when the issuer included the status information in the credential.</p>
+<h4 id="references_13">References<a class="headerlink" href="#references_13" title="Link to this section">&para;</a></h4>
+<p>[CIR 2024/2982 amended] annex II
+[ETSI TS 119 472-1] section 6.2.10
+[Token Status List] section 6.3
+[RFC8949] section 3.1</p>
+<h4 id="profile-applicability_13">Profile applicability<a class="headerlink" href="#profile-applicability_13" title="Link to this section">&para;</a></h4>
+<p>None</p>
+<h4 id="technology_8">Technology<a class="headerlink" href="#technology_8" title="Link to this section">&para;</a></h4>
+<p>Credential in mdoc format
+Credential with revocation status information</p>
+<h4 id="eudi-wallet-relevancy_13">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_13" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_13">Preconditions<a class="headerlink" href="#preconditions_13" title="Link to this section">&para;</a></h4>
+<p>A. Wallet is set to 'default_configuration_1'
+B. Verifier requested a credential to be presented, using a valid, trusted request for 'default_credential_A' and requesting presentation in mdoc of all data elements.
+C. The presentation value of the credential is a syntactically correct presentation of a mdoc.
+D. The presentation value of the credential contains a valid signed MSO.
+E. The MSO of the presented mdoc contains a <code>status</code> key.</p>
+<h4 id="test-scenario_13">Test Scenario<a class="headerlink" href="#test-scenario_13" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Verify the <code>status</code> element in the MSO of the presented mdoc credential.</li>
+</ol>
+<h4 id="expected-results_13">Expected results<a class="headerlink" href="#expected-results_13" title="Link to this section">&para;</a></h4>
+<ol>
+<li>The value of the <code>status</code> element in the MSO is a CBOR Map (major type 5).</li>
+</ol>
+<h4 id="comments_6">Comments<a class="headerlink" href="#comments_6" title="Link to this section">&para;</a></h4>
+<ul>
+<li>While the contents of the <code>status</code> claim is a responsibility of the issuer, the Wallet must pass the value unmodified.</li>
+</ul>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ms_credentialformats_033c">WS_RP_MS_CredentialFormats_033c<a class="headerlink" href="#ws_rp_ms_credentialformats_033c" title="Link to this section">&para;</a></h3>
+<h4 id="objective_14">Objective<a class="headerlink" href="#objective_14" title="Link to this section">&para;</a></h4>
+<p>Verify that the Wallet includes the <code>status_list</code> in the <code>status</code> element in a mdoc presentation, when the issuer included the status information in the credential in Token Status List format.</p>
+<h4 id="references_14">References<a class="headerlink" href="#references_14" title="Link to this section">&para;</a></h4>
+<p>[CIR 2024/2982 amended] annex II
+[ETSI TS 119 472-1] section 6.2.10
+[Token Status List] section 6.3</p>
+<h4 id="profile-applicability_14">Profile applicability<a class="headerlink" href="#profile-applicability_14" title="Link to this section">&para;</a></h4>
+<p>None</p>
+<h4 id="technology_9">Technology<a class="headerlink" href="#technology_9" title="Link to this section">&para;</a></h4>
+<p>Credential in mdoc format
+Credential with revocation status information
+Credential with Revocation status information in Token Status List Format</p>
+<h4 id="eudi-wallet-relevancy_14">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_14" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_14">Preconditions<a class="headerlink" href="#preconditions_14" title="Link to this section">&para;</a></h4>
+<p>A. Wallet is set to 'default_configuration_1'
+B. Verifier requested a credential to be presented, using a valid, trusted request for 'default_credential_A' and requesting presentation in mdoc of all data elements.
+C. The presentation value of the credential is a syntactically correct presentation of a mdoc.
+D. The presentation value of the credential contains a valid signed MSO.
+E. The MSO of the presented mdoc credential contains a correctly formatted value <code>status</code> element.</p>
+<h4 id="test-scenario_14">Test Scenario<a class="headerlink" href="#test-scenario_14" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Verify the <code>status</code> element in the MSO of the presented mdoc credential.</li>
+</ol>
+<h4 id="expected-results_14">Expected results<a class="headerlink" href="#expected-results_14" title="Link to this section">&para;</a></h4>
+<ol>
+<li>The <code>status</code> element in the MSO of the presented mdoc contains a <code>status_list</code> key.</li>
+</ol>
+<h4 id="comments_7">Comments<a class="headerlink" href="#comments_7" title="Link to this section">&para;</a></h4>
+<ul>
+<li>While the contents of the <code>status</code> claim is a responsibility of the issuer, the Wallet must pass the value unmodified.</li>
+</ul>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ms_credentialformats_033d">WS_RP_MS_CredentialFormats_033d<a class="headerlink" href="#ws_rp_ms_credentialformats_033d" title="Link to this section">&para;</a></h3>
+<h4 id="objective_15">Objective<a class="headerlink" href="#objective_15" title="Link to this section">&para;</a></h4>
+<p>Verify that the Wallet includes a correctly formatted <code>status_list</code> element in the <code>status</code> element in a mdoc presentation, when the issuer included the status information in the credential in Token Status List format.</p>
+<h4 id="references_15">References<a class="headerlink" href="#references_15" title="Link to this section">&para;</a></h4>
+<p>[CIR 2024/2982 amended] annex II
+[ETSI TS 119 472-1] section 6.2.10
+[Token Status List] section 6.3
+[RFC8949] section 3.1</p>
+<h4 id="profile-applicability_15">Profile applicability<a class="headerlink" href="#profile-applicability_15" title="Link to this section">&para;</a></h4>
+<p>None</p>
+<h4 id="technology_10">Technology<a class="headerlink" href="#technology_10" title="Link to this section">&para;</a></h4>
+<p>Credential in mdoc format
+Credential with revocation status information
+Credential with Revocation status information in Token Status List Format</p>
+<h4 id="eudi-wallet-relevancy_15">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_15" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_15">Preconditions<a class="headerlink" href="#preconditions_15" title="Link to this section">&para;</a></h4>
+<p>A. Wallet is set to 'default_configuration_1'
+B. Verifier requested a credential to be presented, using a valid, trusted request for 'default_credential_A' and requesting presentation in mdoc of all data elements.
+C. The presentation value of the credential is a syntactically correct presentation of a mdoc.
+D. The presentation value of the credential contains a valid signed MSO.
+E. The MSO of the presented mdoc contains a correctly formatted <code>status</code> element.
+F. The <code>status</code> element in the MSO of the presented mdoc contains a <code>status_list</code> key.</p>
+<h4 id="test-scenario_15">Test Scenario<a class="headerlink" href="#test-scenario_15" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Verify the <code>status_list</code> element in the <code>status</code> element in the MSO of the presented mdoc credential.</li>
+</ol>
+<h4 id="expected-results_15">Expected results<a class="headerlink" href="#expected-results_15" title="Link to this section">&para;</a></h4>
+<ol>
+<li>The value of the <code>status_list</code> element in the <code>status</code> element in the MSO is a CBOR Map (major type 5).</li>
+</ol>
+<h4 id="comments_8">Comments<a class="headerlink" href="#comments_8" title="Link to this section">&para;</a></h4>
+<ul>
+<li>While the contents of the <code>status</code> claim is a responsibility of the issuer, the Wallet must pass the value unmodified.</li>
+</ul>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ms_credentialformats_033e">WS_RP_MS_CredentialFormats_033e<a class="headerlink" href="#ws_rp_ms_credentialformats_033e" title="Link to this section">&para;</a></h3>
+<h4 id="objective_16">Objective<a class="headerlink" href="#objective_16" title="Link to this section">&para;</a></h4>
+<p>Verify that the Wallet includes all relevant elements in the <code>status_list</code> revocation mechanism in the <code>status</code> element in a mdoc presentation, when the issuer included the status information in the credential in Token Status List format.</p>
+<h4 id="references_16">References<a class="headerlink" href="#references_16" title="Link to this section">&para;</a></h4>
+<p>[CIR 2024/2982 amended] annex II
+[ETSI TS 119 472-1] section 6.2.10
+[Token Status List] section 6.3</p>
+<h4 id="profile-applicability_16">Profile applicability<a class="headerlink" href="#profile-applicability_16" title="Link to this section">&para;</a></h4>
+<p>None</p>
+<h4 id="technology_11">Technology<a class="headerlink" href="#technology_11" title="Link to this section">&para;</a></h4>
+<p>Credential in mdoc format
+Credential with revocation status information
+Credential with Revocation status information in Token Status List Format</p>
+<h4 id="eudi-wallet-relevancy_16">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_16" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_16">Preconditions<a class="headerlink" href="#preconditions_16" title="Link to this section">&para;</a></h4>
+<p>A. Wallet is set to 'default_configuration_1'
+B. Verifier requested a credential to be presented, using a valid, trusted request for 'default_credential_A' and requesting presentation in mdoc of all data elements.
+C. The presentation value of the credential is a syntactically correct presentation of a mdoc.
+D. The presentation value of the credential contains a valid signed MSO.
+E. The MSO of the presented mdoc contains a correctly formatted <code>status</code> element.
+F. The <code>status</code> element in the MSO of the presented mdoc contains a correctly formatted <code>status_list</code> element.</p>
+<h4 id="test-scenario_16">Test Scenario<a class="headerlink" href="#test-scenario_16" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Verify the <code>status_list</code> element in the <code>status</code> element in the MSO of the presented mdoc credential.</li>
+</ol>
+<h4 id="expected-results_16">Expected results<a class="headerlink" href="#expected-results_16" title="Link to this section">&para;</a></h4>
+<ol>
+<li>The <code>status_list</code> element in the <code>status</code> element in the MSO contains a <code>idx</code> and a <code>uri</code> element.</li>
+</ol>
+<h4 id="comments_9">Comments<a class="headerlink" href="#comments_9" title="Link to this section">&para;</a></h4>
+<ul>
+<li>While the contents of the <code>status</code> claim is a responsibility of the issuer, the Wallet must pass the value unmodified.</li>
+</ul>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ms_credentialformats_033f">WS_RP_MS_CredentialFormats_033f<a class="headerlink" href="#ws_rp_ms_credentialformats_033f" title="Link to this section">&para;</a></h3>
+<h4 id="objective_17">Objective<a class="headerlink" href="#objective_17" title="Link to this section">&para;</a></h4>
+<p>Verify that the Wallet includes a correctly formatted <code>idx</code> element in the <code>status_list</code> revocation mechanism in the <code>status</code> element in a mdoc presentation, when the issuer included the status information in the credential in Token Status List format.</p>
+<h4 id="references_17">References<a class="headerlink" href="#references_17" title="Link to this section">&para;</a></h4>
+<p>[CIR 2024/2982 amended] annex II
+[ETSI TS 119 472-1] section 6.2.10
+[Token Status List] section 6.3
+[RFC8949] section 3.1</p>
+<h4 id="profile-applicability_17">Profile applicability<a class="headerlink" href="#profile-applicability_17" title="Link to this section">&para;</a></h4>
+<p>None</p>
+<h4 id="technology_12">Technology<a class="headerlink" href="#technology_12" title="Link to this section">&para;</a></h4>
+<p>Credential in mdoc format
+Credential with revocation status information
+Credential with Revocation status information in Token Status List Format</p>
+<h4 id="eudi-wallet-relevancy_17">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_17" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_17">Preconditions<a class="headerlink" href="#preconditions_17" title="Link to this section">&para;</a></h4>
+<p>A. Wallet is set to 'default_configuration_1'
+B. Verifier requested a credential to be presented, using a valid, trusted request for 'default_credential_A' and requesting presentation in mdoc of all data elements.
+C. The presentation value of the credential is a syntactically correct presentation of a mdoc.
+D. The presentation value of the credential contains a valid signed MSO.
+E. The MSO of the presented mdoc contains a correctly formatted <code>status</code> element.
+F. The <code>status_list</code> element in the <code>status</code> element in the MSO of the presented mdoc contains the relevant elements.</p>
+<h4 id="test-scenario_17">Test Scenario<a class="headerlink" href="#test-scenario_17" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Verify the <code>idx</code> element in the <code>status_list</code> element in the <code>status</code> element in the MSO of the presented mdoc credential.</li>
+</ol>
+<h4 id="expected-results_17">Expected results<a class="headerlink" href="#expected-results_17" title="Link to this section">&para;</a></h4>
+<ol>
+<li>The value of the <code>idx</code> element in the <code>status_list</code> element in the <code>status</code> element in the MSO is a non-negative integer (CBOR major type 0).</li>
+</ol>
+<h4 id="comments_10">Comments<a class="headerlink" href="#comments_10" title="Link to this section">&para;</a></h4>
+<ul>
+<li>While the contents of the <code>status</code> claim is a responsibility of the issuer, the Wallet must pass the value unmodified.</li>
+</ul>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ms_credentialformats_033g">WS_RP_MS_CredentialFormats_033g<a class="headerlink" href="#ws_rp_ms_credentialformats_033g" title="Link to this section">&para;</a></h3>
+<h4 id="objective_18">Objective<a class="headerlink" href="#objective_18" title="Link to this section">&para;</a></h4>
+<p>Verify that the Wallet includes a correctly formatted <code>uri</code> element in the <code>status_list</code> revocation mechanism in the <code>status</code> element in a mdoc presentation, when the issuer included the status information in the credential in Token Status List format.</p>
+<h4 id="references_18">References<a class="headerlink" href="#references_18" title="Link to this section">&para;</a></h4>
+<p>[CIR 2024/2982 amended] annex II
+[ETSI TS 119 472-1] section 6.2.10
+[Token Status List] section 6.3
+[RFC8949] section 3.1</p>
+<h4 id="profile-applicability_18">Profile applicability<a class="headerlink" href="#profile-applicability_18" title="Link to this section">&para;</a></h4>
+<p>None</p>
+<h4 id="technology_13">Technology<a class="headerlink" href="#technology_13" title="Link to this section">&para;</a></h4>
+<p>Credential in mdoc format
+Credential with revocation status information
+Credential with Revocation status information in Token Status List Format</p>
+<h4 id="eudi-wallet-relevancy_18">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_18" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_18">Preconditions<a class="headerlink" href="#preconditions_18" title="Link to this section">&para;</a></h4>
+<p>A. Wallet is set to 'default_configuration_1'
+B. Verifier requested a credential to be presented, using a valid, trusted request for 'default_credential_A' and requesting presentation in mdoc of all data elements.
+C. The presentation value of the credential is a syntactically correct presentation of a mdoc.
+D. The presentation value of the credential contains a valid signed MSO.
+E. The MSO of the presented mdoc contains a correctly formatted <code>status</code> element.
+F. The <code>status_list</code> element in the <code>status</code> element in the MSO of the presented mdoc contains the relevant elements.</p>
+<h4 id="test-scenario_18">Test Scenario<a class="headerlink" href="#test-scenario_18" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Verify the <code>uri</code> element in the <code>status_list</code> element in the <code>status</code> element in the MSO of the presented mdoc credential.</li>
+</ol>
+<h4 id="expected-results_18">Expected results<a class="headerlink" href="#expected-results_18" title="Link to this section">&para;</a></h4>
+<ol>
+<li>The value of the <code>uri</code> element in the <code>status_list</code> element in the <code>status</code> element in the MSO is a tstr (CBOR major type 3).</li>
+</ol>
+<h4 id="comments_11">Comments<a class="headerlink" href="#comments_11" title="Link to this section">&para;</a></h4>
+<ul>
+<li>While the contents of the <code>status</code> claim is a responsibility of the issuer, the Wallet must pass the value unmodified.</li>
+</ul>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ms_credentialformats_033h">WS_RP_MS_CredentialFormats_033h<a class="headerlink" href="#ws_rp_ms_credentialformats_033h" title="Link to this section">&para;</a></h3>
+<h4 id="objective_19">Objective<a class="headerlink" href="#objective_19" title="Link to this section">&para;</a></h4>
+<p>Verify that the Wallet includes a correctly formatted value of the <code>uri</code> element in the <code>status_list</code> revocation mechanism in the <code>status</code> element in a mdoc presentation, when the issuer included the status information in the credential in Token Status List format.</p>
+<h4 id="references_19">References<a class="headerlink" href="#references_19" title="Link to this section">&para;</a></h4>
+<p>[CIR 2024/2982 amended] annex II
+[ETSI TS 119 472-1] section 6.2.10
+[Token Status List] section 6.3
+[RFC3986] section 3</p>
+<h4 id="profile-applicability_19">Profile applicability<a class="headerlink" href="#profile-applicability_19" title="Link to this section">&para;</a></h4>
+<p>None</p>
+<h4 id="technology_14">Technology<a class="headerlink" href="#technology_14" title="Link to this section">&para;</a></h4>
+<p>Credential in mdoc format
+Credential with revocation status information
+Credential with Revocation status information in Token Status List Format</p>
+<h4 id="eudi-wallet-relevancy_19">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_19" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_19">Preconditions<a class="headerlink" href="#preconditions_19" title="Link to this section">&para;</a></h4>
+<p>A. Wallet is set to 'default_configuration_1'
+B. Verifier requested a credential to be presented, using a valid, trusted request for 'default_credential_A' and requesting presentation in mdoc of all data elements.
+C. The presentation value of the credential is a syntactically correct presentation of a mdoc.
+D. The presentation value of the credential contains a valid signed MSO.
+E. The MSO of the presented mdoc contains a correctly formatted <code>status</code> element.
+F. The <code>status_list</code> element in the <code>status</code> element in the MSO of the presented mdoc contains the relevant elements.
+G. The <code>status_list</code> element in the <code>status</code> element in the MSO of the presented mdoc contains a correctly formatted <code>uri</code> element.</p>
+<h4 id="test-scenario_19">Test Scenario<a class="headerlink" href="#test-scenario_19" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Verify the <code>uri</code> element in the <code>status_list</code> element in the <code>status</code> element in the MSO of the presented mdoc credential.</li>
+</ol>
+<h4 id="expected-results_19">Expected results<a class="headerlink" href="#expected-results_19" title="Link to this section">&para;</a></h4>
+<ol>
+<li>The value of the  <code>uri</code> element in the <code>status_list</code> element in the <code>status</code> element in the MSO is a URI according to [RFC3986].</li>
+</ol>
+<h4 id="comments_12">Comments<a class="headerlink" href="#comments_12" title="Link to this section">&para;</a></h4>
+<ul>
+<li>While the contents of the <code>status</code> claim is a responsibility of the issuer, the Wallet must pass the value unmodified.</li>
+</ul>
+<!-- END INCLUDE -->
 <h3 id="ws_rp_ms_credentialformats_034">WS_RP_MS_CredentialFormats_034<a class="headerlink" href="#ws_rp_ms_credentialformats_034" title="Link to this section">&para;</a></h3>
-<h4 id="objective_5">Objective<a class="headerlink" href="#objective_5" title="Link to this section">&para;</a></h4>
+<h4 id="objective_20">Objective<a class="headerlink" href="#objective_20" title="Link to this section">&para;</a></h4>
 <p>Test that when a wallet matches a mdoc-based Credential, the CBOR values are matched by first converting to JSON.</p>
-<h4 id="references_5">References<a class="headerlink" href="#references_5" title="Link to this section">&para;</a></h4>
+<h4 id="references_20">References<a class="headerlink" href="#references_20" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[OpenID4VP] Section 6.3</li>
 <li>[RFC8949] Section 6.1</li>
 </ul>
-<h4 id="profile-applicability_5">Profile applicability<a class="headerlink" href="#profile-applicability_5" title="Link to this section">&para;</a></h4>
+<h4 id="profile-applicability_20">Profile applicability<a class="headerlink" href="#profile-applicability_20" title="Link to this section">&para;</a></h4>
 <p>value matching with ISO mdoc is implemented by wallet</p>
-<h4 id="eudi-wallet-relevancy_5">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_5" title="Link to this section">&para;</a></h4>
+<h4 id="eudi-wallet-relevancy_20">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_20" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_5">Preconditions<a class="headerlink" href="#preconditions_5" title="Link to this section">&para;</a></h4>
+<h4 id="preconditions_20">Preconditions<a class="headerlink" href="#preconditions_20" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_5">Test Scenario<a class="headerlink" href="#test-scenario_5" title="Link to this section">&para;</a></h4>
+<h4 id="test-scenario_20">Test Scenario<a class="headerlink" href="#test-scenario_20" title="Link to this section">&para;</a></h4>
 <ol>
 <li>The Wallet engages with the Verifier.</li>
 <li>The Verifier sends a DCQL query requesting a specific element from a mdoc</li>
 <li>Wallet handles Query</li>
 </ol>
-<h4 id="expected-results_5">Expected results<a class="headerlink" href="#expected-results_5" title="Link to this section">&para;</a></h4>
+<h4 id="expected-results_20">Expected results<a class="headerlink" href="#expected-results_20" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Wallet and Verifier can interact.</li>
 <li>Wallet receives the request.
@@ -1547,22 +2051,22 @@
 </ol>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_ms_credentialformats_035">WS_RP_MS_CredentialFormats_035<a class="headerlink" href="#ws_rp_ms_credentialformats_035" title="Link to this section">&para;</a></h3>
-<h4 id="objective_6">Objective<a class="headerlink" href="#objective_6" title="Link to this section">&para;</a></h4>
+<h4 id="objective_21">Objective<a class="headerlink" href="#objective_21" title="Link to this section">&para;</a></h4>
 <p>Verify that Wallet supports ISO mdoc in the presentation flow. </p>
-<h4 id="references_6">References<a class="headerlink" href="#references_6" title="Link to this section">&para;</a></h4>
+<h4 id="references_21">References<a class="headerlink" href="#references_21" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[HAIP] Section 5 (introduction)</li>
 <li>[HAIP] Section 5.3.1</li>
 <li>[HAIP] Section 6</li>
 <li>[OpenID4VP] Appendix B.2</li>
 </ul>
-<h4 id="profile-applicability_6">Profile applicability<a class="headerlink" href="#profile-applicability_6" title="Link to this section">&para;</a></h4>
+<h4 id="profile-applicability_21">Profile applicability<a class="headerlink" href="#profile-applicability_21" title="Link to this section">&para;</a></h4>
 <p>Wallet supports ISO mdoc</p>
-<h4 id="eudi-wallet-relevancy_6">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_6" title="Link to this section">&para;</a></h4>
+<h4 id="eudi-wallet-relevancy_21">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_21" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_6">Preconditions<a class="headerlink" href="#preconditions_6" title="Link to this section">&para;</a></h4>
+<h4 id="preconditions_21">Preconditions<a class="headerlink" href="#preconditions_21" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_6">Test Scenario<a class="headerlink" href="#test-scenario_6" title="Link to this section">&para;</a></h4>
+<h4 id="test-scenario_21">Test Scenario<a class="headerlink" href="#test-scenario_21" title="Link to this section">&para;</a></h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
 <li>Verifier sends presentation request for Credential in ISO mdoc format.</li>
@@ -1571,7 +2075,7 @@
 <li>Verify if Wallet presents Credential to the Verifier.</li>
 <li>Check value from Credential Format Identifier.</li>
 </ol>
-<h4 id="expected-results_6">Expected results<a class="headerlink" href="#expected-results_6" title="Link to this section">&para;</a></h4>
+<h4 id="expected-results_21">Expected results<a class="headerlink" href="#expected-results_21" title="Link to this section">&para;</a></h4>
 <ol>
 <li>This is the case</li>
 <li>This is the case.</li>
@@ -1582,22 +2086,22 @@
 </ol>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_ms_credentialformats_036">WS_RP_MS_CredentialFormats_036<a class="headerlink" href="#ws_rp_ms_credentialformats_036" title="Link to this section">&para;</a></h3>
-<h4 id="objective_7">Objective<a class="headerlink" href="#objective_7" title="Link to this section">&para;</a></h4>
+<h4 id="objective_22">Objective<a class="headerlink" href="#objective_22" title="Link to this section">&para;</a></h4>
 <p>Verify that Wallet supports IETF SD-JWT VC in the presentation flow. </p>
-<h4 id="references_7">References<a class="headerlink" href="#references_7" title="Link to this section">&para;</a></h4>
+<h4 id="references_22">References<a class="headerlink" href="#references_22" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[HAIP] Section 5 (introduction)</li>
 <li>[HAIP] Section 5.3.2</li>
 <li>[HAIP] Section 6</li>
 <li>[OpenID4VP] Appendix B.3</li>
 </ul>
-<h4 id="profile-applicability_7">Profile applicability<a class="headerlink" href="#profile-applicability_7" title="Link to this section">&para;</a></h4>
+<h4 id="profile-applicability_22">Profile applicability<a class="headerlink" href="#profile-applicability_22" title="Link to this section">&para;</a></h4>
 <p>Wallet supports IETF SD-JWT VC</p>
-<h4 id="eudi-wallet-relevancy_7">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_7" title="Link to this section">&para;</a></h4>
+<h4 id="eudi-wallet-relevancy_22">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_22" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_7">Preconditions<a class="headerlink" href="#preconditions_7" title="Link to this section">&para;</a></h4>
+<h4 id="preconditions_22">Preconditions<a class="headerlink" href="#preconditions_22" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_7">Test Scenario<a class="headerlink" href="#test-scenario_7" title="Link to this section">&para;</a></h4>
+<h4 id="test-scenario_22">Test Scenario<a class="headerlink" href="#test-scenario_22" title="Link to this section">&para;</a></h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
 <li>Verifier sends presentation request for Credential in IETF SD-JWT VC format. </li>
@@ -1606,7 +2110,7 @@
 <li>Verify if Wallet presents Credential to the Verifier.</li>
 <li>Check value from Credential Format Identifier.</li>
 </ol>
-<h4 id="expected-results_7">Expected results<a class="headerlink" href="#expected-results_7" title="Link to this section">&para;</a></h4>
+<h4 id="expected-results_22">Expected results<a class="headerlink" href="#expected-results_22" title="Link to this section">&para;</a></h4>
 <ol>
 <li>This is the case.</li>
 <li>This is the case.</li>
@@ -1617,22 +2121,22 @@
 </ol>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_ms_credentialformats_037">WS_RP_MS_CredentialFormats_037<a class="headerlink" href="#ws_rp_ms_credentialformats_037" title="Link to this section">&para;</a></h3>
-<h4 id="objective_8">Objective<a class="headerlink" href="#objective_8" title="Link to this section">&para;</a></h4>
+<h4 id="objective_23">Objective<a class="headerlink" href="#objective_23" title="Link to this section">&para;</a></h4>
 <p>Verify that Wallet supports IETF SD-JWT VC and ISO mdoc in the presentation flow. </p>
-<h4 id="references_8">References<a class="headerlink" href="#references_8" title="Link to this section">&para;</a></h4>
+<h4 id="references_23">References<a class="headerlink" href="#references_23" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[HAIP] Section 5 (introduction)</li>
 <li>[HAIP] Section 5.3.2</li>
 <li>[HAIP] Section 6</li>
 <li>[OpenID4VP] Appendix B.3</li>
 </ul>
-<h4 id="profile-applicability_8">Profile applicability<a class="headerlink" href="#profile-applicability_8" title="Link to this section">&para;</a></h4>
+<h4 id="profile-applicability_23">Profile applicability<a class="headerlink" href="#profile-applicability_23" title="Link to this section">&para;</a></h4>
 <p>Wallet supports both ISO mdoc and IETF SD-JWT VC</p>
-<h4 id="eudi-wallet-relevancy_8">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_8" title="Link to this section">&para;</a></h4>
+<h4 id="eudi-wallet-relevancy_23">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_23" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_8">Preconditions<a class="headerlink" href="#preconditions_8" title="Link to this section">&para;</a></h4>
+<h4 id="preconditions_23">Preconditions<a class="headerlink" href="#preconditions_23" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_8">Test Scenario<a class="headerlink" href="#test-scenario_8" title="Link to this section">&para;</a></h4>
+<h4 id="test-scenario_23">Test Scenario<a class="headerlink" href="#test-scenario_23" title="Link to this section">&para;</a></h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
 <li>Verifier sends presentation request for Credential in ISO mdoc format.</li>
@@ -1647,7 +2151,7 @@
 <li>Verify if Wallet presents Credential to the Verifier.</li>
 <li>Check value from Credential Format Identifier.</li>
 </ol>
-<h4 id="expected-results_8">Expected results<a class="headerlink" href="#expected-results_8" title="Link to this section">&para;</a></h4>
+<h4 id="expected-results_23">Expected results<a class="headerlink" href="#expected-results_23" title="Link to this section">&para;</a></h4>
 <ol>
 <li>This is the case</li>
 <li>This is the case.</li>
@@ -1664,19 +2168,19 @@
 </ol>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_ms_credentialformats_038">WS_RP_MS_CredentialFormats_038<a class="headerlink" href="#ws_rp_ms_credentialformats_038" title="Link to this section">&para;</a></h3>
-<h4 id="objective_9">Objective<a class="headerlink" href="#objective_9" title="Link to this section">&para;</a></h4>
+<h4 id="objective_24">Objective<a class="headerlink" href="#objective_24" title="Link to this section">&para;</a></h4>
 <p>Verify that Wallet can handle receiving authorization request with response type <code>vp_token</code> and answering properly.</p>
-<h4 id="references_9">References<a class="headerlink" href="#references_9" title="Link to this section">&para;</a></h4>
+<h4 id="references_24">References<a class="headerlink" href="#references_24" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[HAIP] Section 5 (introduction)</li>
 </ul>
-<h4 id="profile-applicability_9">Profile applicability<a class="headerlink" href="#profile-applicability_9" title="Link to this section">&para;</a></h4>
+<h4 id="profile-applicability_24">Profile applicability<a class="headerlink" href="#profile-applicability_24" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="eudi-wallet-relevancy_9">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_9" title="Link to this section">&para;</a></h4>
+<h4 id="eudi-wallet-relevancy_24">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_24" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_9">Preconditions<a class="headerlink" href="#preconditions_9" title="Link to this section">&para;</a></h4>
+<h4 id="preconditions_24">Preconditions<a class="headerlink" href="#preconditions_24" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_9">Test Scenario<a class="headerlink" href="#test-scenario_9" title="Link to this section">&para;</a></h4>
+<h4 id="test-scenario_24">Test Scenario<a class="headerlink" href="#test-scenario_24" title="Link to this section">&para;</a></h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
 <li>Verifier sends Authorization Request with response type <code>vp_token</code></li>
@@ -1685,7 +2189,7 @@
 <li>User gives consent.</li>
 <li>Verify if Wallet includes <code>vp_token</code> parameter in its response.</li>
 </ol>
-<h4 id="expected-results_9">Expected results<a class="headerlink" href="#expected-results_9" title="Link to this section">&para;</a></h4>
+<h4 id="expected-results_24">Expected results<a class="headerlink" href="#expected-results_24" title="Link to this section">&para;</a></h4>
 <ol>
 <li>This is the case.</li>
 <li>This is the case.</li>
@@ -1696,25 +2200,25 @@
 </ol>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_ms_credentialformats_039">WS_RP_MS_CredentialFormats_039<a class="headerlink" href="#ws_rp_ms_credentialformats_039" title="Link to this section">&para;</a></h3>
-<h4 id="objective_10">Objective<a class="headerlink" href="#objective_10" title="Link to this section">&para;</a></h4>
+<h4 id="objective_25">Objective<a class="headerlink" href="#objective_25" title="Link to this section">&para;</a></h4>
 <p>Verify that when the Verifier uses the <code>vp_token id_token</code> response type, the Wallet responds with an error (detailed or not) or discontinues the transaction.</p>
-<h4 id="references_10">References<a class="headerlink" href="#references_10" title="Link to this section">&para;</a></h4>
+<h4 id="references_25">References<a class="headerlink" href="#references_25" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[HAIP] Section 5 (introduction)</li>
 </ul>
-<h4 id="profile-applicability_10">Profile applicability<a class="headerlink" href="#profile-applicability_10" title="Link to this section">&para;</a></h4>
+<h4 id="profile-applicability_25">Profile applicability<a class="headerlink" href="#profile-applicability_25" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="eudi-wallet-relevancy_10">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_10" title="Link to this section">&para;</a></h4>
+<h4 id="eudi-wallet-relevancy_25">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_25" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_10">Preconditions<a class="headerlink" href="#preconditions_10" title="Link to this section">&para;</a></h4>
+<h4 id="preconditions_25">Preconditions<a class="headerlink" href="#preconditions_25" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_10">Test Scenario<a class="headerlink" href="#test-scenario_10" title="Link to this section">&para;</a></h4>
+<h4 id="test-scenario_25">Test Scenario<a class="headerlink" href="#test-scenario_25" title="Link to this section">&para;</a></h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
 <li>Verifier sends Authorization Request with response type <code>vp_token id_token</code></li>
 <li>Wallet processes the request.</li>
 </ol>
-<h4 id="expected-results_10">Expected results<a class="headerlink" href="#expected-results_10" title="Link to this section">&para;</a></h4>
+<h4 id="expected-results_25">Expected results<a class="headerlink" href="#expected-results_25" title="Link to this section">&para;</a></h4>
 <ol>
 <li>This is the case.</li>
 <li>This is the case.</li>
@@ -1725,25 +2229,25 @@ c. discontinues the interaction.</li>
 </ol>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_ms_credentialformats_040">WS_RP_MS_CredentialFormats_040<a class="headerlink" href="#ws_rp_ms_credentialformats_040" title="Link to this section">&para;</a></h3>
-<h4 id="objective_11">Objective<a class="headerlink" href="#objective_11" title="Link to this section">&para;</a></h4>
+<h4 id="objective_26">Objective<a class="headerlink" href="#objective_26" title="Link to this section">&para;</a></h4>
 <p>Verify that when the Verifier uses the <code>code</code> response type, the Wallet responds with an error (detailed or not) or discontinues the transaction.</p>
-<h4 id="references_11">References<a class="headerlink" href="#references_11" title="Link to this section">&para;</a></h4>
+<h4 id="references_26">References<a class="headerlink" href="#references_26" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[HAIP] Section 5 (introduction)</li>
 </ul>
-<h4 id="profile-applicability_11">Profile applicability<a class="headerlink" href="#profile-applicability_11" title="Link to this section">&para;</a></h4>
+<h4 id="profile-applicability_26">Profile applicability<a class="headerlink" href="#profile-applicability_26" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="eudi-wallet-relevancy_11">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_11" title="Link to this section">&para;</a></h4>
+<h4 id="eudi-wallet-relevancy_26">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_26" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_11">Preconditions<a class="headerlink" href="#preconditions_11" title="Link to this section">&para;</a></h4>
+<h4 id="preconditions_26">Preconditions<a class="headerlink" href="#preconditions_26" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_11">Test Scenario<a class="headerlink" href="#test-scenario_11" title="Link to this section">&para;</a></h4>
+<h4 id="test-scenario_26">Test Scenario<a class="headerlink" href="#test-scenario_26" title="Link to this section">&para;</a></h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request. </li>
 <li>Verifier sends an Authorization Request with response type <code>code</code></li>
 <li>Wallet processes the request.</li>
 </ol>
-<h4 id="expected-results_11">Expected results<a class="headerlink" href="#expected-results_11" title="Link to this section">&para;</a></h4>
+<h4 id="expected-results_26">Expected results<a class="headerlink" href="#expected-results_26" title="Link to this section">&para;</a></h4>
 <ol>
 <li>This is the case.</li>
 <li>This is the case.</li>
@@ -1754,21 +2258,21 @@ c. discontinues the interaction.</li>
 </ol>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_ms_credentialformats_041">WS_RP_MS_CredentialFormats_041<a class="headerlink" href="#ws_rp_ms_credentialformats_041" title="Link to this section">&para;</a></h3>
-<h4 id="objective_12">Objective<a class="headerlink" href="#objective_12" title="Link to this section">&para;</a></h4>
+<h4 id="objective_27">Objective<a class="headerlink" href="#objective_27" title="Link to this section">&para;</a></h4>
 <p>Verify that when Wallet is presenting several ISO mdocs, each ISO mdoc is returned in a separate DeviceResponse (as defined in 8.3.2.1.2.2 of [ISO.18013-5]), each matching to a respective DCQL query. Therefore, the resulting vp_token contains multiple DeviceResponse instances.</p>
-<h4 id="references_12">References<a class="headerlink" href="#references_12" title="Link to this section">&para;</a></h4>
+<h4 id="references_27">References<a class="headerlink" href="#references_27" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[HAIP] Section 5.3.1</li>
 <li>[OpenID4VP] Appendix B.2 (ISO mdoc profile)</li>
 <li>[ISO/IEC 18013-5] Section 8.3.2.1.2.2</li>
 </ul>
-<h4 id="profile-applicability_12">Profile applicability<a class="headerlink" href="#profile-applicability_12" title="Link to this section">&para;</a></h4>
+<h4 id="profile-applicability_27">Profile applicability<a class="headerlink" href="#profile-applicability_27" title="Link to this section">&para;</a></h4>
 <p>Wallet supports ISO mdoc</p>
-<h4 id="eudi-wallet-relevancy_12">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_12" title="Link to this section">&para;</a></h4>
+<h4 id="eudi-wallet-relevancy_27">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_27" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_12">Preconditions<a class="headerlink" href="#preconditions_12" title="Link to this section">&para;</a></h4>
+<h4 id="preconditions_27">Preconditions<a class="headerlink" href="#preconditions_27" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_12">Test Scenario<a class="headerlink" href="#test-scenario_12" title="Link to this section">&para;</a></h4>
+<h4 id="test-scenario_27">Test Scenario<a class="headerlink" href="#test-scenario_27" title="Link to this section">&para;</a></h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
 <li>Verifier sends 3 DCQL query to the Wallet. </li>
@@ -1779,7 +2283,7 @@ c. discontinues the interaction.</li>
 <li>Verify if <code>vp_token</code> contains multiple <code>DeviceResponse</code> instances.</li>
 <li>Verify if for each query, Wallet returns one Device Response matching each DCQL query.</li>
 </ol>
-<h4 id="expected-results_12">Expected results<a class="headerlink" href="#expected-results_12" title="Link to this section">&para;</a></h4>
+<h4 id="expected-results_27">Expected results<a class="headerlink" href="#expected-results_27" title="Link to this section">&para;</a></h4>
 <ol>
 <li>This is the case.</li>
 <li>This is the case.</li>
@@ -1792,21 +2296,21 @@ c. discontinues the interaction.</li>
 </ol>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_ms_credentialformats_049">WS_RP_MS_CredentialFormats_049<a class="headerlink" href="#ws_rp_ms_credentialformats_049" title="Link to this section">&para;</a></h3>
-<h4 id="objective_13">Objective<a class="headerlink" href="#objective_13" title="Link to this section">&para;</a></h4>
+<h4 id="objective_28">Objective<a class="headerlink" href="#objective_28" title="Link to this section">&para;</a></h4>
 <p>Verify that when the Wallet presentation to the Verifier includes <code>status</code> claim, it contains <code>status_list</code> as defined in [I-D.ietf-oauth-status-list].</p>
-<h4 id="references_13">References<a class="headerlink" href="#references_13" title="Link to this section">&para;</a></h4>
+<h4 id="references_28">References<a class="headerlink" href="#references_28" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[HAIP] Section 6.1</li>
 <li>[RFC7800]</li>
 <li>[SD-JWT VC]</li>
 </ul>
-<h4 id="profile-applicability_13">Profile applicability<a class="headerlink" href="#profile-applicability_13" title="Link to this section">&para;</a></h4>
+<h4 id="profile-applicability_28">Profile applicability<a class="headerlink" href="#profile-applicability_28" title="Link to this section">&para;</a></h4>
 <p>Wallet supports IETF SD-JWT VC </p>
-<h4 id="eudi-wallet-relevancy_13">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_13" title="Link to this section">&para;</a></h4>
+<h4 id="eudi-wallet-relevancy_28">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_28" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_13">Preconditions<a class="headerlink" href="#preconditions_13" title="Link to this section">&para;</a></h4>
+<h4 id="preconditions_28">Preconditions<a class="headerlink" href="#preconditions_28" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_13">Test Scenario<a class="headerlink" href="#test-scenario_13" title="Link to this section">&para;</a></h4>
+<h4 id="test-scenario_28">Test Scenario<a class="headerlink" href="#test-scenario_28" title="Link to this section">&para;</a></h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
 <li>Verifier sends presentation request for Credential in IETF SD-JWT VC format.</li>
@@ -1816,7 +2320,7 @@ c. discontinues the interaction.</li>
 <li>Verify if <code>status</code> claim is present.</li>
 <li>Check <code>status</code> claim content.</li>
 </ol>
-<h4 id="expected-results_13">Expected results<a class="headerlink" href="#expected-results_13" title="Link to this section">&para;</a></h4>
+<h4 id="expected-results_28">Expected results<a class="headerlink" href="#expected-results_28" title="Link to this section">&para;</a></h4>
 <ol>
 <li>This is the case.</li>
 <li>This is the case.</li>
@@ -1828,23 +2332,23 @@ c. discontinues the interaction.</li>
 </ol>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_ms_credentialformats_045">WS_RP_MS_CredentialFormats_045<a class="headerlink" href="#ws_rp_ms_credentialformats_045" title="Link to this section">&para;</a></h3>
-<h4 id="objective_14">Objective<a class="headerlink" href="#objective_14" title="Link to this section">&para;</a></h4>
+<h4 id="objective_29">Objective<a class="headerlink" href="#objective_29" title="Link to this section">&para;</a></h4>
 <p>Verify that Wallet can handle presenting Credential in IETF SD-JWT VC format using compact serialization as defined in [RFC9901] when there is key binding.</p>
-<h4 id="references_14">References<a class="headerlink" href="#references_14" title="Link to this section">&para;</a></h4>
+<h4 id="references_29">References<a class="headerlink" href="#references_29" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[HAIP] Section 6.1</li>
 <li>[RFC9901]</li>
 </ul>
-<h4 id="profile-applicability_14">Profile applicability<a class="headerlink" href="#profile-applicability_14" title="Link to this section">&para;</a></h4>
+<h4 id="profile-applicability_29">Profile applicability<a class="headerlink" href="#profile-applicability_29" title="Link to this section">&para;</a></h4>
 <p>Wallet supports IETF SD-JWT VC with key-binding</p>
-<h4 id="eudi-wallet-relevancy_14">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_14" title="Link to this section">&para;</a></h4>
+<h4 id="eudi-wallet-relevancy_29">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_29" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_14">Preconditions<a class="headerlink" href="#preconditions_14" title="Link to this section">&para;</a></h4>
+<h4 id="preconditions_29">Preconditions<a class="headerlink" href="#preconditions_29" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Credential Issuer issued Credential to the Wallet in IETF SD-JWT VC format, using compact serialization as defined in [RFC9901].</li>
 <li>There is a Key Binding JWT.</li>
 </ol>
-<h4 id="test-scenario_14">Test Scenario<a class="headerlink" href="#test-scenario_14" title="Link to this section">&para;</a></h4>
+<h4 id="test-scenario_29">Test Scenario<a class="headerlink" href="#test-scenario_29" title="Link to this section">&para;</a></h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
 <li>Verifier sends presentation request for Credential in IETF SD-JWT VC format.</li>
@@ -1852,7 +2356,7 @@ c. discontinues the interaction.</li>
 <Issuer-signed JWT><sub><D.1></sub><D.2><sub>...</sub><D.N>~
 The order of the concatenated parts is the Issuer-signed JWT, a tilde character, zero or more Disclosures each followed by a tilde character, and lastly the Key Binding JWT.</li>
 </ol>
-<h4 id="expected-results_14">Expected results<a class="headerlink" href="#expected-results_14" title="Link to this section">&para;</a></h4>
+<h4 id="expected-results_29">Expected results<a class="headerlink" href="#expected-results_29" title="Link to this section">&para;</a></h4>
 <ol>
 <li>This is the case. </li>
 <li>This is the case.</li>
@@ -1861,24 +2365,161 @@ The order of the concatenated parts is the Issuer-signed JWT, a tilde character,
 The order of the concatenated parts is the Issuer-signed JWT, a tilde character, zero or more Disclosures each followed by a tilde character, and lastly the Key Binding JWT.</li>
 </ol>
 <!-- END INCLUDE -->
+<h3 id="ws_rp_ms_credentialformats_045a">WS_RP_MS_CredentialFormats_045a<a class="headerlink" href="#ws_rp_ms_credentialformats_045a" title="Link to this section">&para;</a></h3>
+<h4 id="objective_30">Objective<a class="headerlink" href="#objective_30" title="Link to this section">&para;</a></h4>
+<p>Verify that the Wallet syntactically correctly serializes a presentation of a credential in SD-JWT VC format, when the issuer is using compact serialization, the credential has key binding and using OpenID4VP.</p>
+<h4 id="references_30">References<a class="headerlink" href="#references_30" title="Link to this section">&para;</a></h4>
+<p>[HAIP] section 6.1, 6.1.1.1
+[SD-JWT VC] section 4.1
+[RFC9901] section 4</p>
+<h4 id="profile-applicability_30">Profile applicability<a class="headerlink" href="#profile-applicability_30" title="Link to this section">&para;</a></h4>
+<p>None</p>
+<h4 id="technology_15">Technology<a class="headerlink" href="#technology_15" title="Link to this section">&para;</a></h4>
+<p>Presentation using OpenID4VP
+Credential in SD-JWT VC format
+Credential with key-binding
+Issuer uses compact serialization of SD-JWT and SD-JWT VC</p>
+<h4 id="eudi-wallet-relevancy_30">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_30" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_30">Preconditions<a class="headerlink" href="#preconditions_30" title="Link to this section">&para;</a></h4>
+<p>A. Wallet is set to 'default_configuration_1'.
+B. Verifier requested a credential to be presented, using a valid, trusted request for 'default_credential_A' (that is key-bound) and requesting presentation in SD-JWT VC format of all claims.
+C. The Wallet transmitted a syntactically correct presentation in the <code>vp_token</code> of the Authorization Response.</p>
+<h4 id="test-scenario_30">Test Scenario<a class="headerlink" href="#test-scenario_30" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Verify the presentation value in the <code>vp_token</code>.</li>
+</ol>
+<h4 id="expected-results_30">Expected results<a class="headerlink" href="#expected-results_30" title="Link to this section">&para;</a></h4>
+<ol>
+<li>The presentation value is a string consisting of:<ol>
+<li>a signed JWT, that is a series of 3 sets of base64url-encoded data concatenated by period ('.'),</li>
+<li>optionally, when including disclosure(s):<ol>
+<li>followed by a tilde ('~'),</li>
+<li>followed by disclosures, that are series of base64url-encoded data, concatenated by a tilde ('~'),</li>
+</ol>
+</li>
+<li>followed by a tilde ('~'),</li>
+<li>followed by another signed JWT, that is a series of 3 sets of base64url-encoded data concatenated by period ('.').</li>
+</ol>
+</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ms_credentialformats_045b">WS_RP_MS_CredentialFormats_045b<a class="headerlink" href="#ws_rp_ms_credentialformats_045b" title="Link to this section">&para;</a></h3>
+<h4 id="objective_31">Objective<a class="headerlink" href="#objective_31" title="Link to this section">&para;</a></h4>
+<p>Verify that the Wallet correctly serializes the SD-JWT in a presentation of a credential in SD-JWT VC format, when the issuer is using compact serialization, the credential has key binding and using OpenID4VP.</p>
+<h4 id="references_31">References<a class="headerlink" href="#references_31" title="Link to this section">&para;</a></h4>
+<p>[HAIP] section 6.1, 6.1.1.1
+[SD-JWT VC] section 4.1
+[RFC9901] section 4</p>
+<h4 id="profile-applicability_31">Profile applicability<a class="headerlink" href="#profile-applicability_31" title="Link to this section">&para;</a></h4>
+<p>None</p>
+<h4 id="technology_16">Technology<a class="headerlink" href="#technology_16" title="Link to this section">&para;</a></h4>
+<p>Presentation using OpenID4VP
+Credential in SD-JWT VC format
+Credential with key-binding
+Issuer uses compact serialization of SD-JWT and SD-JWT VC</p>
+<h4 id="eudi-wallet-relevancy_31">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_31" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_31">Preconditions<a class="headerlink" href="#preconditions_31" title="Link to this section">&para;</a></h4>
+<p>A. Wallet is set to 'default_configuration_1'.
+B. Verifier requested a credential to be presented, using a valid, trusted request for 'default_credential_A' (that is key-bound) and requesting presentation in SD-JWT VC format of all claims.
+C. The Wallet transmitted a syntactically correct presentation in the <code>vp_token</code> of the Authorization Response.
+D. The presentation value of the credential is a syntactically correct serialization in compact serialization format of an SD-JWT VC.</p>
+<h4 id="test-scenario_31">Test Scenario<a class="headerlink" href="#test-scenario_31" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Extract the SD-JWT part of the presentation value, that is the part up to not including the first tilde ('~') of the presentation, consisting of a series of 3 base64url-encoded data concatenated by period ('.').</li>
+<li>Perform all Shared_JWT_JWS test cases on the extract SD-JWT part.</li>
+</ol>
+<h4 id="expected-results_31">Expected results<a class="headerlink" href="#expected-results_31" title="Link to this section">&para;</a></h4>
+<ol>
+<li>The SD-JWT part contains a compact serialized Signed JWT (i.e. base64.base64.base64 pattern).</li>
+<li>All test cases pass.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ms_credentialformats_045c">WS_RP_MS_CredentialFormats_045c<a class="headerlink" href="#ws_rp_ms_credentialformats_045c" title="Link to this section">&para;</a></h3>
+<h4 id="objective_32">Objective<a class="headerlink" href="#objective_32" title="Link to this section">&para;</a></h4>
+<p>Verify that the Wallet correctly serializes the disclosure(s) in a presentation of a credential in SD-JWT VC format, when the issuer is using compact serialization, the credential has key binding and using OpenID4VP.</p>
+<h4 id="references_32">References<a class="headerlink" href="#references_32" title="Link to this section">&para;</a></h4>
+<p>[HAIP] section 6.1, 6.1.1.1
+[SD-JWT VC] section 4.1
+[RFC9901] section 4, 4.2</p>
+<h4 id="profile-applicability_32">Profile applicability<a class="headerlink" href="#profile-applicability_32" title="Link to this section">&para;</a></h4>
+<p>None</p>
+<h4 id="technology_17">Technology<a class="headerlink" href="#technology_17" title="Link to this section">&para;</a></h4>
+<p>Presentation using OpenID4VP
+Credential in SD-JWT VC format
+Credential with key-binding
+Issuer uses compact serialization of SD-JWT and SD-JWT VC</p>
+<h4 id="eudi-wallet-relevancy_32">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_32" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_32">Preconditions<a class="headerlink" href="#preconditions_32" title="Link to this section">&para;</a></h4>
+<p>A. Wallet is set to 'default_configuration_1'.
+B. Verifier requested a credential to be presented, using a valid, trusted request for 'default_credential_A' (that is key-bound) and requesting presentation in SD-JWT VC format of all claims.
+C. The Wallet transmitted a syntactically correct presentation in the <code>vp_token</code> of the Authorization Response.
+D. The presentation value of the credential is a syntactically correct serialization in compact serialization format of an SD-JWT VC.</p>
+<h4 id="test-scenario_32">Test Scenario<a class="headerlink" href="#test-scenario_32" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Extract the disclosure part(s) of the presentation value, that is each part  of the presentation delineated by tildes ('~'), consisting of base64url-encoded data.</li>
+<li>Perform all Shared_JSON test cases on each disclosure part.</li>
+<li>Verify each disclosure part is a JSON array.</li>
+</ol>
+<h4 id="expected-results_32">Expected results<a class="headerlink" href="#expected-results_32" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Each disclosure part contains base64url-encoded data and can be base64-decoded.</li>
+<li>All test cases pass, for each disclosure part.</li>
+<li>Each disclosure part is a JSON array, of length 2 or 3.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_ms_credentialformats_045d">WS_RP_MS_CredentialFormats_045d<a class="headerlink" href="#ws_rp_ms_credentialformats_045d" title="Link to this section">&para;</a></h3>
+<h4 id="objective_33">Objective<a class="headerlink" href="#objective_33" title="Link to this section">&para;</a></h4>
+<p>Verify that the Wallet correctly serializes the key binding JWT in a presentation of a credential in SD-JWT VC format, when the issuer is using compact serialization, the credential has key binding and using OpenID4VP.</p>
+<h4 id="references_33">References<a class="headerlink" href="#references_33" title="Link to this section">&para;</a></h4>
+<p>[HAIP] section 6.1, 6.1.1.1
+[SD-JWT VC] section 4.1
+[RFC9901] section 4</p>
+<h4 id="profile-applicability_33">Profile applicability<a class="headerlink" href="#profile-applicability_33" title="Link to this section">&para;</a></h4>
+<p>None</p>
+<h4 id="technology_18">Technology<a class="headerlink" href="#technology_18" title="Link to this section">&para;</a></h4>
+<p>Presentation using OpenID4VP
+Credential in SD-JWT VC format
+Credential with key-binding
+Issuer uses compact serialization of SD-JWT and SD-JWT VC</p>
+<h4 id="eudi-wallet-relevancy_33">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_33" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_33">Preconditions<a class="headerlink" href="#preconditions_33" title="Link to this section">&para;</a></h4>
+<p>A. Wallet is set to 'default_configuration_1'.
+B. Verifier requested a credential to be presented, using a valid, trusted request for 'default_credential_A' (that is key-bound) and requesting presentation in SD-JWT VC format of all claims.
+C. The Wallet transmitted a syntactically correct presentation in the <code>vp_token</code> of the Authorization Response.
+D. The presentation value of the credential is a syntactically correct serialization in compact serialization format of an SD-JWT VC.</p>
+<h4 id="test-scenario_33">Test Scenario<a class="headerlink" href="#test-scenario_33" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Extract the KB-JWT part of the presentation value, that is the part after to not including the last tilde ('~') of the presentation, consisting of a series of 3 base64url-encoded data concatenated by period ('.').</li>
+<li>Perform all Shared_JWT_JWS test cases on the extract KB-JWT part.</li>
+</ol>
+<h4 id="expected-results_33">Expected results<a class="headerlink" href="#expected-results_33" title="Link to this section">&para;</a></h4>
+<ol>
+<li>The key binding part contains a compact serialized Signed JWT (i.e. base64.base64.base64 pattern).</li>
+<li>All test cases pass.</li>
+</ol>
+<!-- END INCLUDE -->
 <h3 id="ws_rp_ms_credentialformats_046">WS_RP_MS_CredentialFormats_046<a class="headerlink" href="#ws_rp_ms_credentialformats_046" title="Link to this section">&para;</a></h3>
-<h4 id="objective_15">Objective<a class="headerlink" href="#objective_15" title="Link to this section">&para;</a></h4>
+<h4 id="objective_34">Objective<a class="headerlink" href="#objective_34" title="Link to this section">&para;</a></h4>
 <p>Verify that Wallet can handle being presenting Credential in IETF SD-JWT VC format using compact serialization as defined in [RFC9901] when there is no key binding.</p>
-<h4 id="references_15">References<a class="headerlink" href="#references_15" title="Link to this section">&para;</a></h4>
+<h4 id="references_34">References<a class="headerlink" href="#references_34" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[HAIP] Section 6.1</li>
 <li>[RFC9901]</li>
 </ul>
-<h4 id="profile-applicability_15">Profile applicability<a class="headerlink" href="#profile-applicability_15" title="Link to this section">&para;</a></h4>
+<h4 id="profile-applicability_34">Profile applicability<a class="headerlink" href="#profile-applicability_34" title="Link to this section">&para;</a></h4>
 <p>Wallet supports IETF SD-JWT VC without key-binding</p>
-<h4 id="eudi-wallet-relevancy_15">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_15" title="Link to this section">&para;</a></h4>
+<h4 id="eudi-wallet-relevancy_34">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_34" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_15">Preconditions<a class="headerlink" href="#preconditions_15" title="Link to this section">&para;</a></h4>
+<h4 id="preconditions_34">Preconditions<a class="headerlink" href="#preconditions_34" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Credential Issuer issued Credential to the Wallet in IETF SD-JWT VC format, using compact serialization as defined in [RFC9901].</li>
 <li>There is no Key Binding JWT.</li>
 </ol>
-<h4 id="test-scenario_15">Test Scenario<a class="headerlink" href="#test-scenario_15" title="Link to this section">&para;</a></h4>
+<h4 id="test-scenario_34">Test Scenario<a class="headerlink" href="#test-scenario_34" title="Link to this section">&para;</a></h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
 <li>Verifier sends presentation request for Credential in IETF SD-JWT VC format.</li>
@@ -1886,7 +2527,7 @@ The order of the concatenated parts is the Issuer-signed JWT, a tilde character,
 <Issuer-signed JWT><sub><D.1></sub><D.2><sub>...</sub><D.N>~
 The order of the concatenated parts is the Issuer-signed JWT, a tilde character, zero or more Disclosures each followed by a tilde character, the last element is an empty string and the last separating tilde character is not omitted."</li>
 </ol>
-<h4 id="expected-results_15">Expected results<a class="headerlink" href="#expected-results_15" title="Link to this section">&para;</a></h4>
+<h4 id="expected-results_34">Expected results<a class="headerlink" href="#expected-results_34" title="Link to this section">&para;</a></h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
 <li>Verifier sends presentation request for Credential in IETF SD-JWT VC format.</li>
@@ -1896,26 +2537,26 @@ The order of the concatenated parts is the Issuer-signed JWT, a tilde character,
 </ol>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_ms_credentialformats_048">WS_RP_MS_CredentialFormats_048<a class="headerlink" href="#ws_rp_ms_credentialformats_048" title="Link to this section">&para;</a></h3>
-<h4 id="objective_16">Objective<a class="headerlink" href="#objective_16" title="Link to this section">&para;</a></h4>
+<h4 id="objective_35">Objective<a class="headerlink" href="#objective_35" title="Link to this section">&para;</a></h4>
 <p>Verify that Wallet can handle presenting a Credential using JSON serialization if required by the Wallet profile.</p>
-<h4 id="references_16">References<a class="headerlink" href="#references_16" title="Link to this section">&para;</a></h4>
+<h4 id="references_35">References<a class="headerlink" href="#references_35" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[HAIP] Section 6.1</li>
 </ul>
-<h4 id="profile-applicability_16">Profile applicability<a class="headerlink" href="#profile-applicability_16" title="Link to this section">&para;</a></h4>
+<h4 id="profile-applicability_35">Profile applicability<a class="headerlink" href="#profile-applicability_35" title="Link to this section">&para;</a></h4>
 <p>Wallet supports IETF SD-JWT VC 
 Wallet profile supports JSON serialization and Credential profile requires it</p>
-<h4 id="eudi-wallet-relevancy_16">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_16" title="Link to this section">&para;</a></h4>
+<h4 id="eudi-wallet-relevancy_35">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_35" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_16">Preconditions<a class="headerlink" href="#preconditions_16" title="Link to this section">&para;</a></h4>
+<h4 id="preconditions_35">Preconditions<a class="headerlink" href="#preconditions_35" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_16">Test Scenario<a class="headerlink" href="#test-scenario_16" title="Link to this section">&para;</a></h4>
+<h4 id="test-scenario_35">Test Scenario<a class="headerlink" href="#test-scenario_35" title="Link to this section">&para;</a></h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
 <li>Verifier sends presentation request for Credential in IETF SD-JWT VC format.</li>
 <li>Verify if Wallet presents successfully Credential in IETF SD-JWT VC format using JSON serialization.</li>
 </ol>
-<h4 id="expected-results_16">Expected results<a class="headerlink" href="#expected-results_16" title="Link to this section">&para;</a></h4>
+<h4 id="expected-results_35">Expected results<a class="headerlink" href="#expected-results_35" title="Link to this section">&para;</a></h4>
 <ol>
 <li>This is the case.</li>
 <li>This is the case.</li>
@@ -1923,7 +2564,7 @@ Wallet profile supports JSON serialization and Credential profile requires it</p
 </ol>
 <!-- END INCLUDE -->
 
-<!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md -->
+<!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md -->
 
 
 

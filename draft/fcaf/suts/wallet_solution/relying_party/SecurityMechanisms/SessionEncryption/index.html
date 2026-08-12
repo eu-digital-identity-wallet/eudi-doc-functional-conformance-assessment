@@ -1404,26 +1404,201 @@
 <li>Verify the Encryption the wallet used is an unsigned, encrypted JWT [RFC7519]. </li>
 </ol>
 <!-- END INCLUDE -->
-<h3 id="ws_rp_sm_sessionencryption_002">WS_RP_SM_SessionEncryption_002<a class="headerlink" href="#ws_rp_sm_sessionencryption_002" title="Link to this section">&para;</a></h3>
+<h3 id="ws_rp_sm_sessionencryption_001a">WS_RP_SM_SessionEncryption_001a<a class="headerlink" href="#ws_rp_sm_sessionencryption_001a" title="Link to this section">&para;</a></h3>
 <h4 id="objective_1">Objective<a class="headerlink" href="#objective_1" title="Link to this section">&para;</a></h4>
-<p>Test the Wallet ensures that the selected Verifier JWK contains an alg parameter.</p>
+<p>Verify that the Wallet correctly serializes an encrypted Authorization Response (JWE compact serialization), when presenting (a) credential(s) using OpenID4VP.</p>
 <h4 id="references_1">References<a class="headerlink" href="#references_1" title="Link to this section">&para;</a></h4>
-<ul>
-<li>[OpenID4VP] Section 8</li>
-</ul>
+<p>[ETSI TS 119 472-2] section 6.3.3
+[HAIP] section 5
+[OpenID4VP] section 8.3
+[RFC7519] section 3
+[RFC7516] section 7.1</p>
 <h4 id="profile-applicability_1">Profile applicability<a class="headerlink" href="#profile-applicability_1" title="Link to this section">&para;</a></h4>
-<p>none</p>
+<p>None</p>
 <h4 id="eudi-wallet-relevancy_1">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_1" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_1">Preconditions<a class="headerlink" href="#preconditions_1" title="Link to this section">&para;</a></h4>
-<p>none</p>
+<p>A. Wallet is set to 'default_configuration_1'
+B. Wallet and Verifier are engaged, and a presentation using OpenID4VP has been triggered.
+C. The Verifier shared an ephemeral key as part of the Authorization Request.
+D. The Wallet successfully transmitted an Authorization Response to the Verifier in response to the Authorization Request.</p>
 <h4 id="test-scenario_1">Test Scenario<a class="headerlink" href="#test-scenario_1" title="Link to this section">&para;</a></h4>
+<ol>
+<li>For the Authorization Response, perform all Shared_JWT_JWE test cases.</li>
+</ol>
+<h4 id="expected-results_1">Expected results<a class="headerlink" href="#expected-results_1" title="Link to this section">&para;</a></h4>
+<ol>
+<li>All test cases pass.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_sm_sessionencryption_001b">WS_RP_SM_SessionEncryption_001b<a class="headerlink" href="#ws_rp_sm_sessionencryption_001b" title="Link to this section">&para;</a></h3>
+<h4 id="objective_2">Objective<a class="headerlink" href="#objective_2" title="Link to this section">&para;</a></h4>
+<p>Verify that the Wallet encrypts the Authorization Response using an appropriate encryption algorithm, when presenting (a) credential(s) using OpenID4VP.</p>
+<h4 id="references_2">References<a class="headerlink" href="#references_2" title="Link to this section">&para;</a></h4>
+<p>[ETSI TS 119 472-2] section 6.3.3
+[HAIP] section 5
+[OpenID4VP] section 8.3
+[RFC7516] section 4.1.2
+[RFC7518] section 5.1, 5.3</p>
+<h4 id="profile-applicability_2">Profile applicability<a class="headerlink" href="#profile-applicability_2" title="Link to this section">&para;</a></h4>
+<p>None</p>
+<h4 id="eudi-wallet-relevancy_2">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_2" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_2">Preconditions<a class="headerlink" href="#preconditions_2" title="Link to this section">&para;</a></h4>
+<p>A. Wallet is set to 'default_configuration_1'
+B. Wallet and Verifier are engaged, and a presentation using OpenID4VP has been triggered.
+C. The Verifier shared an emphemeral key as part of the Authorization Request
+D. The Wallet successfully transmitted an Authorization Response to the Verifier in response to the Authorization Request.
+E. The Wallet provided a correctly serialized encrypted Authorization Response.</p>
+<h4 id="test-scenario_2">Test Scenario<a class="headerlink" href="#test-scenario_2" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Verify the encryption algorithm used for encrypting the encrypted Authorization Response.</li>
+</ol>
+<h4 id="expected-results_2">Expected results<a class="headerlink" href="#expected-results_2" title="Link to this section">&para;</a></h4>
+<ol>
+<li>The algorithm for the content encryption (JWE's <code>enc</code>) is either <code>A256GCM</code> or <code>A128GCM</code>.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_sm_sessionencryption_001c">WS_RP_SM_SessionEncryption_001c<a class="headerlink" href="#ws_rp_sm_sessionencryption_001c" title="Link to this section">&para;</a></h3>
+<h4 id="objective_3">Objective<a class="headerlink" href="#objective_3" title="Link to this section">&para;</a></h4>
+<p>Verify that the Wallet encrypts the Authorization Response using an appropriate algorithm to encrypt or determine the value of the CEK, when presenting (a) credential(s) using OpenID4VP.</p>
+<h4 id="references_3">References<a class="headerlink" href="#references_3" title="Link to this section">&para;</a></h4>
+<p>[ETSI TS 119 472-2] section 6.3.3
+[HAIP] section 5
+[OpenID4VP] section 8.3
+[RFC7516] section 4.1.1
+[RFC7518] section 4.1</p>
+<h4 id="profile-applicability_3">Profile applicability<a class="headerlink" href="#profile-applicability_3" title="Link to this section">&para;</a></h4>
+<p>None</p>
+<h4 id="eudi-wallet-relevancy_3">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_3" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_3">Preconditions<a class="headerlink" href="#preconditions_3" title="Link to this section">&para;</a></h4>
+<p>A. Wallet is set to 'default_configuration_1'
+B. Wallet and Verifier are engaged, and a presentation using OpenID4VP has been triggered.
+C. The Verifier shared an emphemeral key as part of the Authorization Request
+D. The Wallet successfully transmitted an Authorization Response to the Verifier in response to the Authorization Request.
+E. The Wallet provided a correctly serialized encrypted Authorization Response.</p>
+<h4 id="test-scenario_3">Test Scenario<a class="headerlink" href="#test-scenario_3" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Verify the algorithm used to encrypt or determine the value of the CEK of the encrypted Authorization Response is appropriate.</li>
+</ol>
+<h4 id="expected-results_3">Expected results<a class="headerlink" href="#expected-results_3" title="Link to this section">&para;</a></h4>
+<ol>
+<li>The JWE <code>alg</code> header parameter has the value <code>ECDH-ES</code> and equals the value of the <code>alg</code> property of the selected Verifier JWK.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_sm_sessionencryption_001d">WS_RP_SM_SessionEncryption_001d<a class="headerlink" href="#ws_rp_sm_sessionencryption_001d" title="Link to this section">&para;</a></h3>
+<h4 id="objective_4">Objective<a class="headerlink" href="#objective_4" title="Link to this section">&para;</a></h4>
+<p>Verify that the Wallet encrypts the Authorization Response using an appropriate encryption curve, when presenting (a) credential(s) using OpenID4VP.</p>
+<h4 id="references_4">References<a class="headerlink" href="#references_4" title="Link to this section">&para;</a></h4>
+<p>[ETSI TS 119 472-2] section 6.3.3
+[HAIP] section 5
+[OpenID4VP] section 8.3
+[RFC7516] section XXX
+[RFC7518] section XYZ</p>
+<h4 id="profile-applicability_4">Profile applicability<a class="headerlink" href="#profile-applicability_4" title="Link to this section">&para;</a></h4>
+<p>None</p>
+<h4 id="eudi-wallet-relevancy_4">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_4" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_4">Preconditions<a class="headerlink" href="#preconditions_4" title="Link to this section">&para;</a></h4>
+<p>A. Wallet is set to 'default_configuration_1'
+B. Wallet and Verifier are engaged, and a presentation using OpenID4VP has been triggered.
+C. The Verifier shared an emphemeral key as part of the Authorization Request
+D. The Wallet successfully transmitted an Authorization Response to the Verifier in response to the Authorization Request.
+E. The Wallet provided a correctly serialized encrypted Authorization Response.
+F. The Wallet uses an appropriate algorithm to encrypt or determine encrypt or determine the value of the CEK of the encrypted Authorization Response.</p>
+<h4 id="test-scenario_4">Test Scenario<a class="headerlink" href="#test-scenario_4" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Verify the encryption curve used for the key used to encrypt the encrypted Authorization Response. TODO</li>
+</ol>
+<h4 id="expected-results_4">Expected results<a class="headerlink" href="#expected-results_4" title="Link to this section">&para;</a></h4>
+<ol>
+<li>The key is on the P-256 curve. TODO</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_sm_sessionencryption_001e">WS_RP_SM_SessionEncryption_001e<a class="headerlink" href="#ws_rp_sm_sessionencryption_001e" title="Link to this section">&para;</a></h3>
+<h4 id="objective_5">Objective<a class="headerlink" href="#objective_5" title="Link to this section">&para;</a></h4>
+<p>Verify that the encrypted Authorization Response from the Wallet can be decrypted, when presenting (a) credential(s) using OpenID4VP.</p>
+<h4 id="references_5">References<a class="headerlink" href="#references_5" title="Link to this section">&para;</a></h4>
+<p>[ETSI TS 119 472-2] section 6.3.3
+[HAIP] section 5
+[OpenID4VP] section 8.3
+[RFC7516] section 5.2
+[RFC7518] section 4.6, 5.3</p>
+<h4 id="profile-applicability_5">Profile applicability<a class="headerlink" href="#profile-applicability_5" title="Link to this section">&para;</a></h4>
+<p>None</p>
+<h4 id="eudi-wallet-relevancy_5">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_5" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_5">Preconditions<a class="headerlink" href="#preconditions_5" title="Link to this section">&para;</a></h4>
+<p>A. Wallet is set to 'default_configuration_1'
+B. Wallet and Verifier are engaged, and a presentation using OpenID4VP has been triggered.
+C. The Verifier provided an emphemeral key as part of (client metadata of) the Authorization Request.
+D. The Wallet successfully transmitted an Authorization Response to the Verifier in response to the Authorization Request.
+E. The Wallet provided a correctly serialized encrypted Authorization Response.
+F. The Wallet uses an appropriate algorithm to encrypt or determine encrypt or determine the value of the CEK of the encrypted Authorization Response.
+H. TODO check curve.
+G. The Wallet uses an appropriate encryption algorithm for encryption of the encrypted Authorization Response.</p>
+<h4 id="test-scenario_5">Test Scenario<a class="headerlink" href="#test-scenario_5" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Verify the encrypted Authorization Response can be decrypted.</li>
+</ol>
+<h4 id="expected-results_5">Expected results<a class="headerlink" href="#expected-results_5" title="Link to this section">&para;</a></h4>
+<ol>
+<li>The Authorization Response can be decrypted, using the emphemeral key of the Authorization Request.</li>
+</ol>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_sm_sessionencryption_001f">WS_RP_SM_SessionEncryption_001f<a class="headerlink" href="#ws_rp_sm_sessionencryption_001f" title="Link to this section">&para;</a></h3>
+<h4 id="objective_6">Objective<a class="headerlink" href="#objective_6" title="Link to this section">&para;</a></h4>
+<p>Verify that the Wallet correctly encrypted the Authorization Response as an unsigned JWT, when presenting (a) credential(s) using OpenID4VP.</p>
+<h4 id="references_6">References<a class="headerlink" href="#references_6" title="Link to this section">&para;</a></h4>
+<p>[ETSI TS 119 472-2] section 6.3.3
+[HAIP] section 5
+[OpenID4VP] section 8.3
+[RFC7519]</p>
+<h4 id="profile-applicability_6">Profile applicability<a class="headerlink" href="#profile-applicability_6" title="Link to this section">&para;</a></h4>
+<p>None</p>
+<h4 id="eudi-wallet-relevancy_6">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_6" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_6">Preconditions<a class="headerlink" href="#preconditions_6" title="Link to this section">&para;</a></h4>
+<p>A. Wallet is set to 'default_configuration_1'
+B. Wallet and Verifier are engaged, and a presentation using OpenID4VP has been triggered.
+C. The Verifier shared an ephemeral key as part of the Authorization Request.
+D. The Wallet successfully transmitted an Authorization Response to the Verifier in response to the Authorization Request.
+E. The Authorization Response is a correctly serialized encrypted Authorization Response.
+F. The Authorization Response can be decrypted.</p>
+<h4 id="test-scenario_6">Test Scenario<a class="headerlink" href="#test-scenario_6" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Perform all Shared_JSON test cases on the decrypted Authorization Response.</li>
+</ol>
+<h4 id="expected-results_6">Expected results<a class="headerlink" href="#expected-results_6" title="Link to this section">&para;</a></h4>
+<ol>
+<li>All test cases pass.</li>
+</ol>
+<h4 id="comments">Comments<a class="headerlink" href="#comments" title="Link to this section">&para;</a></h4>
+<ul>
+<li>The contents of the Authorization Response JWT are verified in MessageStructure ProtocolMessages tests.</li>
+</ul>
+<!-- END INCLUDE -->
+<h3 id="ws_rp_sm_sessionencryption_002">WS_RP_SM_SessionEncryption_002<a class="headerlink" href="#ws_rp_sm_sessionencryption_002" title="Link to this section">&para;</a></h3>
+<h4 id="objective_7">Objective<a class="headerlink" href="#objective_7" title="Link to this section">&para;</a></h4>
+<p>Test the Wallet ensures that the selected Verifier JWK contains an alg parameter.</p>
+<h4 id="references_7">References<a class="headerlink" href="#references_7" title="Link to this section">&para;</a></h4>
+<ul>
+<li>[OpenID4VP] Section 8</li>
+</ul>
+<h4 id="profile-applicability_7">Profile applicability<a class="headerlink" href="#profile-applicability_7" title="Link to this section">&para;</a></h4>
+<p>none</p>
+<h4 id="eudi-wallet-relevancy_7">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_7" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_7">Preconditions<a class="headerlink" href="#preconditions_7" title="Link to this section">&para;</a></h4>
+<p>none</p>
+<h4 id="test-scenario_7">Test Scenario<a class="headerlink" href="#test-scenario_7" title="Link to this section">&para;</a></h4>
 <ol>
 <li>The wallet engages with the verifier.</li>
 <li>The verifier sends an Authorization request to the wallet, with response mode=direct_post.jwt, and a client_metadata object containing a JWK without an alg parameter.</li>
 <li>Wallet processes request.</li>
 </ol>
-<h4 id="expected-results_1">Expected results<a class="headerlink" href="#expected-results_1" title="Link to this section">&para;</a></h4>
+<h4 id="expected-results_7">Expected results<a class="headerlink" href="#expected-results_7" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated.</li>
 <li>Wallet receives request.</li>
@@ -1431,25 +1606,25 @@
 </ol>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_sm_sessionencryption_003">WS_RP_SM_SessionEncryption_003<a class="headerlink" href="#ws_rp_sm_sessionencryption_003" title="Link to this section">&para;</a></h3>
-<h4 id="objective_2">Objective<a class="headerlink" href="#objective_2" title="Link to this section">&para;</a></h4>
+<h4 id="objective_8">Objective<a class="headerlink" href="#objective_8" title="Link to this section">&para;</a></h4>
 <p>Test the Wallet checks the JWE alg value exactly matches the alg value from the chosen JWK.</p>
-<h4 id="references_2">References<a class="headerlink" href="#references_2" title="Link to this section">&para;</a></h4>
+<h4 id="references_8">References<a class="headerlink" href="#references_8" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[OpenID4VP] Section 8</li>
 </ul>
-<h4 id="profile-applicability_2">Profile applicability<a class="headerlink" href="#profile-applicability_2" title="Link to this section">&para;</a></h4>
+<h4 id="profile-applicability_8">Profile applicability<a class="headerlink" href="#profile-applicability_8" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="eudi-wallet-relevancy_2">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_2" title="Link to this section">&para;</a></h4>
+<h4 id="eudi-wallet-relevancy_8">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_8" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_2">Preconditions<a class="headerlink" href="#preconditions_2" title="Link to this section">&para;</a></h4>
+<h4 id="preconditions_8">Preconditions<a class="headerlink" href="#preconditions_8" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_2">Test Scenario<a class="headerlink" href="#test-scenario_2" title="Link to this section">&para;</a></h4>
+<h4 id="test-scenario_8">Test Scenario<a class="headerlink" href="#test-scenario_8" title="Link to this section">&para;</a></h4>
 <ol>
 <li>The wallet engages with the verifier.</li>
 <li>The verifier sends an Authorization request to the wallet, with response mode=direct_post.jwt, and a client_metadata object containing a JWK with an alg value different to the JWE alg value</li>
 <li>Wallet processes request</li>
 </ol>
-<h4 id="expected-results_2">Expected results<a class="headerlink" href="#expected-results_2" title="Link to this section">&para;</a></h4>
+<h4 id="expected-results_8">Expected results<a class="headerlink" href="#expected-results_8" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Wallet-verifier interaction is successfully initiated</li>
 <li>Wallet receives request</li>
@@ -1457,22 +1632,22 @@
 </ol>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_sm_sessionencryption_005">WS_RP_SM_SessionEncryption_005<a class="headerlink" href="#ws_rp_sm_sessionencryption_005" title="Link to this section">&para;</a></h3>
-<h4 id="objective_3">Objective<a class="headerlink" href="#objective_3" title="Link to this section">&para;</a></h4>
+<h4 id="objective_9">Objective<a class="headerlink" href="#objective_9" title="Link to this section">&para;</a></h4>
 <p>Verify that in the encrypted response sent by the Wallet: the JWE <code>alg</code> (algorithm) header parameter (as defined in section 4.1.1 of [RFC7516]) value is set to ECDH-ES (as defined in section 4.6 of [RFC7518]), with key agreement utilizing keys on the P-256 curve (as defined in section 6.2.1.1 of [RFC7518]).</p>
-<h4 id="references_3">References<a class="headerlink" href="#references_3" title="Link to this section">&para;</a></h4>
+<h4 id="references_9">References<a class="headerlink" href="#references_9" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[HAIP] Section 5 (introduction)</li>
 <li>[OpenID4VP] Section 8.3</li>
 <li>[RFC7516] Section 4.1.1</li>
 <li>[RFC7518] Section 6.2.1.1</li>
 </ul>
-<h4 id="profile-applicability_3">Profile applicability<a class="headerlink" href="#profile-applicability_3" title="Link to this section">&para;</a></h4>
+<h4 id="profile-applicability_9">Profile applicability<a class="headerlink" href="#profile-applicability_9" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="eudi-wallet-relevancy_3">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_3" title="Link to this section">&para;</a></h4>
+<h4 id="eudi-wallet-relevancy_9">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_9" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_3">Preconditions<a class="headerlink" href="#preconditions_3" title="Link to this section">&para;</a></h4>
+<h4 id="preconditions_9">Preconditions<a class="headerlink" href="#preconditions_9" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_3">Test Scenario<a class="headerlink" href="#test-scenario_3" title="Link to this section">&para;</a></h4>
+<h4 id="test-scenario_9">Test Scenario<a class="headerlink" href="#test-scenario_9" title="Link to this section">&para;</a></h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
 <li>Verifier sends a presentation request</li>
@@ -1482,7 +1657,7 @@
 <li>Verify if, in the encrypted response, the JWE alg (algorithm) header parameter value is set ECDH-ES.</li>
 <li>Verify if key agreement uses keys on the P-256 curve.</li>
 </ol>
-<h4 id="expected-results_3">Expected results<a class="headerlink" href="#expected-results_3" title="Link to this section">&para;</a></h4>
+<h4 id="expected-results_9">Expected results<a class="headerlink" href="#expected-results_9" title="Link to this section">&para;</a></h4>
 <ol>
 <li>This is the case.</li>
 <li>This is the case.</li>
@@ -1494,46 +1669,46 @@
 </ol>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_sm_sessionencryption_006">WS_RP_SM_SessionEncryption_006<a class="headerlink" href="#ws_rp_sm_sessionencryption_006" title="Link to this section">&para;</a></h3>
-<h4 id="objective_4">Objective<a class="headerlink" href="#objective_4" title="Link to this section">&para;</a></h4>
+<h4 id="objective_10">Objective<a class="headerlink" href="#objective_10" title="Link to this section">&para;</a></h4>
 <p>Verify that Wallet raises an error if there is no <code>jwk</code> within <code>client_metadata</code> sent by the Verifier with <code>alg</code> value set to ECDH-ES.</p>
-<h4 id="references_4">References<a class="headerlink" href="#references_4" title="Link to this section">&para;</a></h4>
+<h4 id="references_10">References<a class="headerlink" href="#references_10" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[HAIP] Section 5 (introduction)</li>
 <li>TODO: [OpenID4VP] Section 8.3 The alg parameter MUST be present in the JWKs</li>
 <li>[RFC7516] Section 4.1.1</li>
 <li>[RFC7518] Section 6.2.1.1</li>
 </ul>
-<h4 id="profile-applicability_4">Profile applicability<a class="headerlink" href="#profile-applicability_4" title="Link to this section">&para;</a></h4>
+<h4 id="profile-applicability_10">Profile applicability<a class="headerlink" href="#profile-applicability_10" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="eudi-wallet-relevancy_4">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_4" title="Link to this section">&para;</a></h4>
+<h4 id="eudi-wallet-relevancy_10">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_10" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_4">Preconditions<a class="headerlink" href="#preconditions_4" title="Link to this section">&para;</a></h4>
+<h4 id="preconditions_10">Preconditions<a class="headerlink" href="#preconditions_10" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_4">Test Scenario<a class="headerlink" href="#test-scenario_4" title="Link to this section">&para;</a></h4>
+<h4 id="test-scenario_10">Test Scenario<a class="headerlink" href="#test-scenario_10" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Verify that Wallet raises an error if there is no "jwk" within "client_metadata" sent by the Verifier with "alg" value set to ECDH-ES.</li>
 </ol>
-<h4 id="expected-results_4">Expected results<a class="headerlink" href="#expected-results_4" title="Link to this section">&para;</a></h4>
+<h4 id="expected-results_10">Expected results<a class="headerlink" href="#expected-results_10" title="Link to this section">&para;</a></h4>
 <ol>
 <li>Wallet raises an error. </li>
 </ol>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_sm_sessionencryption_007">WS_RP_SM_SessionEncryption_007<a class="headerlink" href="#ws_rp_sm_sessionencryption_007" title="Link to this section">&para;</a></h3>
-<h4 id="objective_5">Objective<a class="headerlink" href="#objective_5" title="Link to this section">&para;</a></h4>
+<h4 id="objective_11">Objective<a class="headerlink" href="#objective_11" title="Link to this section">&para;</a></h4>
 <p>Verify that Wallet supports A128GCM for the JWE <code>enc</code> (encryption algorithm).</p>
-<h4 id="references_5">References<a class="headerlink" href="#references_5" title="Link to this section">&para;</a></h4>
+<h4 id="references_11">References<a class="headerlink" href="#references_11" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[HAIP] Section 5 (introduction)</li>
 <li>[OpenID4VP] Section 8.3</li>
 <li>[RFC7516] Section 4.1.2</li>
 </ul>
-<h4 id="profile-applicability_5">Profile applicability<a class="headerlink" href="#profile-applicability_5" title="Link to this section">&para;</a></h4>
+<h4 id="profile-applicability_11">Profile applicability<a class="headerlink" href="#profile-applicability_11" title="Link to this section">&para;</a></h4>
 <p>Wallet supports only A128GCM</p>
-<h4 id="eudi-wallet-relevancy_5">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_5" title="Link to this section">&para;</a></h4>
+<h4 id="eudi-wallet-relevancy_11">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_11" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_5">Preconditions<a class="headerlink" href="#preconditions_5" title="Link to this section">&para;</a></h4>
+<h4 id="preconditions_11">Preconditions<a class="headerlink" href="#preconditions_11" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_5">Test Scenario<a class="headerlink" href="#test-scenario_5" title="Link to this section">&para;</a></h4>
+<h4 id="test-scenario_11">Test Scenario<a class="headerlink" href="#test-scenario_11" title="Link to this section">&para;</a></h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
 <li>Verifier sends a presentation request.</li>
@@ -1542,7 +1717,7 @@
 <li>Verify if Wallet sends an encrypted response.</li>
 <li>Check value from JWE "enc" (encryption algorithm) header parameter used by the Wallet.</li>
 </ol>
-<h4 id="expected-results_5">Expected results<a class="headerlink" href="#expected-results_5" title="Link to this section">&para;</a></h4>
+<h4 id="expected-results_11">Expected results<a class="headerlink" href="#expected-results_11" title="Link to this section">&para;</a></h4>
 <ol>
 <li>This is the case.</li>
 <li>This is the case.</li>
@@ -1553,21 +1728,21 @@
 </ol>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_sm_sessionencryption_008">WS_RP_SM_SessionEncryption_008<a class="headerlink" href="#ws_rp_sm_sessionencryption_008" title="Link to this section">&para;</a></h3>
-<h4 id="objective_6">Objective<a class="headerlink" href="#objective_6" title="Link to this section">&para;</a></h4>
+<h4 id="objective_12">Objective<a class="headerlink" href="#objective_12" title="Link to this section">&para;</a></h4>
 <p>Verify that Wallet supports A256GCM for the JWE <code>enc</code> (encryption algorithm).</p>
-<h4 id="references_6">References<a class="headerlink" href="#references_6" title="Link to this section">&para;</a></h4>
+<h4 id="references_12">References<a class="headerlink" href="#references_12" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[HAIP] Section 5 (introduction)</li>
 <li>[OpenID4VP] Section 8.3</li>
 <li>[RFC7516] Section 4.1.2</li>
 </ul>
-<h4 id="profile-applicability_6">Profile applicability<a class="headerlink" href="#profile-applicability_6" title="Link to this section">&para;</a></h4>
+<h4 id="profile-applicability_12">Profile applicability<a class="headerlink" href="#profile-applicability_12" title="Link to this section">&para;</a></h4>
 <p>Wallet supports only A256GCM </p>
-<h4 id="eudi-wallet-relevancy_6">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_6" title="Link to this section">&para;</a></h4>
+<h4 id="eudi-wallet-relevancy_12">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_12" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_6">Preconditions<a class="headerlink" href="#preconditions_6" title="Link to this section">&para;</a></h4>
+<h4 id="preconditions_12">Preconditions<a class="headerlink" href="#preconditions_12" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_6">Test Scenario<a class="headerlink" href="#test-scenario_6" title="Link to this section">&para;</a></h4>
+<h4 id="test-scenario_12">Test Scenario<a class="headerlink" href="#test-scenario_12" title="Link to this section">&para;</a></h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
 <li>Verifier sends a presentation request.</li>
@@ -1576,7 +1751,7 @@
 <li>Verify if Wallet sends an encrypted response.</li>
 <li>Check value from JWE "enc" (encryption algorithm) header parameter used by the Wallet.</li>
 </ol>
-<h4 id="expected-results_6">Expected results<a class="headerlink" href="#expected-results_6" title="Link to this section">&para;</a></h4>
+<h4 id="expected-results_12">Expected results<a class="headerlink" href="#expected-results_12" title="Link to this section">&para;</a></h4>
 <ol>
 <li>This is the case.</li>
 <li>This is the case.</li>
@@ -1587,21 +1762,21 @@
 </ol>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_sm_sessionencryption_009">WS_RP_SM_SessionEncryption_009<a class="headerlink" href="#ws_rp_sm_sessionencryption_009" title="Link to this section">&para;</a></h3>
-<h4 id="objective_7">Objective<a class="headerlink" href="#objective_7" title="Link to this section">&para;</a></h4>
+<h4 id="objective_13">Objective<a class="headerlink" href="#objective_13" title="Link to this section">&para;</a></h4>
 <p>Verify that if both A128GCM and A256GCM are supported for the JWE <code>enc</code> (encryption algorithm), Wallet will use A256GCM for the JWE <code>enc</code></p>
-<h4 id="references_7">References<a class="headerlink" href="#references_7" title="Link to this section">&para;</a></h4>
+<h4 id="references_13">References<a class="headerlink" href="#references_13" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[HAIP] Section 5 (introduction)</li>
 <li>[OpenID4VP] Section 8.3</li>
 <li>[RFC7516] Section 4.1.2</li>
 </ul>
-<h4 id="profile-applicability_7">Profile applicability<a class="headerlink" href="#profile-applicability_7" title="Link to this section">&para;</a></h4>
+<h4 id="profile-applicability_13">Profile applicability<a class="headerlink" href="#profile-applicability_13" title="Link to this section">&para;</a></h4>
 <p>Wallet supports A128GCM and A256GCM</p>
-<h4 id="eudi-wallet-relevancy_7">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_7" title="Link to this section">&para;</a></h4>
+<h4 id="eudi-wallet-relevancy_13">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_13" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_7">Preconditions<a class="headerlink" href="#preconditions_7" title="Link to this section">&para;</a></h4>
+<h4 id="preconditions_13">Preconditions<a class="headerlink" href="#preconditions_13" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_7">Test Scenario<a class="headerlink" href="#test-scenario_7" title="Link to this section">&para;</a></h4>
+<h4 id="test-scenario_13">Test Scenario<a class="headerlink" href="#test-scenario_13" title="Link to this section">&para;</a></h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
 <li>Verifier sends a presentation request.</li>
@@ -1610,7 +1785,7 @@
 <li>Verify if Wallet sends an encrypted response.</li>
 <li>Check value from JWE "enc" (encryption algorithm) header parameter (section 4.1.2 of [RFC7516]) used by the Wallet.</li>
 </ol>
-<h4 id="expected-results_7">Expected results<a class="headerlink" href="#expected-results_7" title="Link to this section">&para;</a></h4>
+<h4 id="expected-results_13">Expected results<a class="headerlink" href="#expected-results_13" title="Link to this section">&para;</a></h4>
 <ol>
 <li>This is the case.</li>
 <li>This is the case.</li>
@@ -1621,26 +1796,26 @@
 </ol>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_sm_sessionencryption_010">WS_RP_SM_SessionEncryption_010<a class="headerlink" href="#ws_rp_sm_sessionencryption_010" title="Link to this section">&para;</a></h3>
-<h4 id="objective_8">Objective<a class="headerlink" href="#objective_8" title="Link to this section">&para;</a></h4>
+<h4 id="objective_14">Objective<a class="headerlink" href="#objective_14" title="Link to this section">&para;</a></h4>
 <p>Verify that if Verifier did not supply ephemeral encryption public keys specific to each Authorization Request via client metadata, the Wallet responds with an error (detailed or not) or discontinues the transaction.</p>
-<h4 id="references_8">References<a class="headerlink" href="#references_8" title="Link to this section">&para;</a></h4>
+<h4 id="references_14">References<a class="headerlink" href="#references_14" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[HAIP] Section 5 (introduction)</li>
 <li>[OpenID4VP] Section 8.3</li>
 </ul>
-<h4 id="profile-applicability_8">Profile applicability<a class="headerlink" href="#profile-applicability_8" title="Link to this section">&para;</a></h4>
+<h4 id="profile-applicability_14">Profile applicability<a class="headerlink" href="#profile-applicability_14" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="eudi-wallet-relevancy_8">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_8" title="Link to this section">&para;</a></h4>
+<h4 id="eudi-wallet-relevancy_14">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_14" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_8">Preconditions<a class="headerlink" href="#preconditions_8" title="Link to this section">&para;</a></h4>
+<h4 id="preconditions_14">Preconditions<a class="headerlink" href="#preconditions_14" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_8">Test Scenario<a class="headerlink" href="#test-scenario_8" title="Link to this section">&para;</a></h4>
+<h4 id="test-scenario_14">Test Scenario<a class="headerlink" href="#test-scenario_14" title="Link to this section">&para;</a></h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
 <li>Verifier sends a presentation request and does not supply ephemeral encryption public keys specific to each Authorization Request.</li>
 <li>Check Wallet behaviour.</li>
 </ol>
-<h4 id="expected-results_8">Expected results<a class="headerlink" href="#expected-results_8" title="Link to this section">&para;</a></h4>
+<h4 id="expected-results_14">Expected results<a class="headerlink" href="#expected-results_14" title="Link to this section">&para;</a></h4>
 <ol>
 <li>This is the case.</li>
 <li>This is the case.</li>
@@ -1651,26 +1826,26 @@ c. discontinues the interaction.</li>
 </ol>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_sm_sessionencryption_011">WS_RP_SM_SessionEncryption_011<a class="headerlink" href="#ws_rp_sm_sessionencryption_011" title="Link to this section">&para;</a></h3>
-<h4 id="objective_9">Objective<a class="headerlink" href="#objective_9" title="Link to this section">&para;</a></h4>
+<h4 id="objective_15">Objective<a class="headerlink" href="#objective_15" title="Link to this section">&para;</a></h4>
 <p>Verify that - for each authorization request - Wallet uses the correct ephemeral key passed via client metadata in the encryption process. </p>
-<h4 id="references_9">References<a class="headerlink" href="#references_9" title="Link to this section">&para;</a></h4>
+<h4 id="references_15">References<a class="headerlink" href="#references_15" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[HAIP] Section 5 (introduction)</li>
 <li>[OpenID4VP] Section 8.3</li>
 </ul>
-<h4 id="profile-applicability_9">Profile applicability<a class="headerlink" href="#profile-applicability_9" title="Link to this section">&para;</a></h4>
+<h4 id="profile-applicability_15">Profile applicability<a class="headerlink" href="#profile-applicability_15" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="eudi-wallet-relevancy_9">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_9" title="Link to this section">&para;</a></h4>
+<h4 id="eudi-wallet-relevancy_15">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_15" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_9">Preconditions<a class="headerlink" href="#preconditions_9" title="Link to this section">&para;</a></h4>
+<h4 id="preconditions_15">Preconditions<a class="headerlink" href="#preconditions_15" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_9">Test Scenario<a class="headerlink" href="#test-scenario_9" title="Link to this section">&para;</a></h4>
+<h4 id="test-scenario_15">Test Scenario<a class="headerlink" href="#test-scenario_15" title="Link to this section">&para;</a></h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
 <li>Verifier sends presentation request including 2 authorization requests, ephemeral public key <code>key1</code> for authorization request 1 and ephemeral public key <code>key2</code> for authorization request 2.</li>
 <li>Verify if Wallet uses the correctly ephemeral public key for each one of the authorization requests in the response encryption process.</li>
 </ol>
-<h4 id="expected-results_9">Expected results<a class="headerlink" href="#expected-results_9" title="Link to this section">&para;</a></h4>
+<h4 id="expected-results_15">Expected results<a class="headerlink" href="#expected-results_15" title="Link to this section">&para;</a></h4>
 <ol>
 <li>This is the case.</li>
 <li>Wallet uses <code>key1</code> as input for key agreement included in the encryption process of the response related to "authorization request 1".</li>
@@ -1678,20 +1853,20 @@ c. discontinues the interaction.</li>
 </ol>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_sm_sessionencryption_012">WS_RP_SM_SessionEncryption_012<a class="headerlink" href="#ws_rp_sm_sessionencryption_012" title="Link to this section">&para;</a></h3>
-<h4 id="objective_10">Objective<a class="headerlink" href="#objective_10" title="Link to this section">&para;</a></h4>
+<h4 id="objective_16">Objective<a class="headerlink" href="#objective_16" title="Link to this section">&para;</a></h4>
 <p>Verify that, in the presentation flow via Redirects, Wallet sends encrypted response when Authorization Request includes <code>response_mode</code> parameter set to <code>direct_post.jwt</code>.</p>
-<h4 id="references_10">References<a class="headerlink" href="#references_10" title="Link to this section">&para;</a></h4>
+<h4 id="references_16">References<a class="headerlink" href="#references_16" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[HAIP] Section 5.1</li>
 <li>[OpenID4VP] Section 8.3</li>
 </ul>
-<h4 id="profile-applicability_10">Profile applicability<a class="headerlink" href="#profile-applicability_10" title="Link to this section">&para;</a></h4>
+<h4 id="profile-applicability_16">Profile applicability<a class="headerlink" href="#profile-applicability_16" title="Link to this section">&para;</a></h4>
 <p>Presentations via Redirects</p>
-<h4 id="eudi-wallet-relevancy_10">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_10" title="Link to this section">&para;</a></h4>
+<h4 id="eudi-wallet-relevancy_16">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_16" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
-<h4 id="preconditions_10">Preconditions<a class="headerlink" href="#preconditions_10" title="Link to this section">&para;</a></h4>
+<h4 id="preconditions_16">Preconditions<a class="headerlink" href="#preconditions_16" title="Link to this section">&para;</a></h4>
 <p>none</p>
-<h4 id="test-scenario_10">Test Scenario<a class="headerlink" href="#test-scenario_10" title="Link to this section">&para;</a></h4>
+<h4 id="test-scenario_16">Test Scenario<a class="headerlink" href="#test-scenario_16" title="Link to this section">&para;</a></h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
 <li>Verifier sends presentation request with response mode direct_post.jwt.</li>
@@ -1700,7 +1875,7 @@ c. discontinues the interaction.</li>
 <li>Verify if Wallet sends encrypted response using parameters provided in "client_metadata".</li>
 <li>Verify if Verifier is able to decrypt response sent by the Wallet.  </li>
 </ol>
-<h4 id="expected-results_10">Expected results<a class="headerlink" href="#expected-results_10" title="Link to this section">&para;</a></h4>
+<h4 id="expected-results_16">Expected results<a class="headerlink" href="#expected-results_16" title="Link to this section">&para;</a></h4>
 <ol>
 <li>This is the case.</li>
 <li>This is the case.</li>
@@ -1710,8 +1885,52 @@ c. discontinues the interaction.</li>
 <li>Verifier is able to decrypt response sent by the Wallet.  </li>
 </ol>
 <!-- END INCLUDE -->
+<h3 id="ws_rp_sm_sessionencryption_013">WS_RP_SM_SessionEncryption_013<a class="headerlink" href="#ws_rp_sm_sessionencryption_013" title="Link to this section">&para;</a></h3>
+<h4 id="objective_17">Objective<a class="headerlink" href="#objective_17" title="Link to this section">&para;</a></h4>
+<p>Verify that the Wallet includes only valid disclosures when presenting an SD-JWT VC, using OpenID4VP.</p>
+<h4 id="references_17">References<a class="headerlink" href="#references_17" title="Link to this section">&para;</a></h4>
+<p>[HAIP] section 6, 8
+[OpenID4VP] section 8
+[SD-JWT VC] section 4
+[SD-JWT] section 4.1.1, 4.2.3, 7.1</p>
+<h4 id="profile-applicability_17">Profile applicability<a class="headerlink" href="#profile-applicability_17" title="Link to this section">&para;</a></h4>
+<p>None</p>
+<h4 id="technology">Technology<a class="headerlink" href="#technology" title="Link to this section">&para;</a></h4>
+<p>Presentation using OpenID4VP
+Credential in SD-JWT VC format
+Issuer uses compact serialization of SD-JWT and SD-JWT VC</p>
+<h4 id="eudi-wallet-relevancy_17">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_17" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
+<h4 id="preconditions_17">Preconditions<a class="headerlink" href="#preconditions_17" title="Link to this section">&para;</a></h4>
+<p>A. Wallet is set to 'default_configuration_1'.
+B. Verifier requested a credential to be presented, using a valid, trusted request for 'default_credential_A' and requesting presentation in SD-JWT VC format of all claims.
+C. The Wallet transmitted a syntactically correct presentation in the <code>vp_token</code> of the Authorization Response.
+D. The presentation value of the credential is a syntactically correct serialization in compact serialization format of an SD-JWT VC.
+E. The presentation value of the credential contains a correctly serialized SD-JWT.
+F. The presentation value of the credential contains correctly serialized disclosures.
+G. The SD-JWT contains a <code>_sd_alg</code> valid and acceptable.</p>
+<h4 id="test-scenario_17">Test Scenario<a class="headerlink" href="#test-scenario_17" title="Link to this section">&para;</a></h4>
+<ol>
+<li>Select the disclosure digest algorithm from <code>_sd_alg</code> in the SD-JWT of the presentation.</li>
+<li>Find all selective disclosures in the SD-JWT (see [RFC9901] section 7.1, step 3 b).
+       NOTE: apply recursion on substep 2 and 3 above, as described in [RFC9901] section 7.1, step 3 b and c, when applicable.</li>
+<li>Verify each Disclosure value. That is:<ol>
+<li>Calculate the digest over the Disclosure. That is apply the disclosure digest algorithm to the base64url-encoded value of the disclosure.</li>
+<li>Check the digest value of a selective disclosure in the SD-JWT matches one of the selective disclosures found in the SD-JWT.</li>
+<li>Process the Disclosure as in [RFC9901] section 7.1, step 3. c. step ii and iii). If the Disclosure needs to be rejected, fail this test case.
+   NOTE: apply recursion on substep 2 and 3 above, as described in [RFC9901] section 7.1, step 3 b and c, when applicable.</li>
+</ol>
+</li>
+</ol>
+<h4 id="expected-results_17">Expected results<a class="headerlink" href="#expected-results_17" title="Link to this section">&para;</a></h4>
+<ol>
+<li>The selective disclosure algorithm is available for processing next test steps.</li>
+<li>Selective disclosures in the SD-JWT exist.</li>
+<li>All Disclosures have a matching selective disclosure in the SD-JWT.</li>
+</ol>
+<!-- END INCLUDE -->
 
-<!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md -->
+<!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md -->
 
 
 

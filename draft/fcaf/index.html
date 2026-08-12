@@ -1756,9 +1756,10 @@ demonstrate compliance with applicable specifications and standards as applied w
 <h3 id="test-case-id">Test Case ID<a class="headerlink" href="#test-case-id" title="Link to this section">&para;</a></h3>
 <p>Test cases are grouped by SUT and Test Class (interface tested). </p>
 <p>Test case IDs are formed as follows:</p>
-<pre><code>SUT_TestClass_TestLayer_TestArea_TestGroup_TestUnit_*nnn*
+<pre><code>SUT_TestClass_TestLayer_TestArea_TestGroup_TestUnit_*nnnmmm*
 </code></pre>
-<p>Where <em>nnn</em> is a three-digit decimal number identifying the test case.</p>
+<p>Where <em>nnn</em> is a three-digit decimal number identifying the test case.
+The identifier may optionally have a postfix <em>mmm</em>, which is eiher a character, an underscore followed by the characters UF for unhappy flow ('_UF'), or a combination thereof (character first).</p>
 <p>In case one of the subdivisions is not present the name is omitted.</p>
 <h3 id="eudi-wallet-relevancy">EUDI-wallet Relevancy<a class="headerlink" href="#eudi-wallet-relevancy" title="Link to this section">&para;</a></h3>
 <p>The EUDI Wallet ecosystem uses numerous standards and technical specifications. Many of these have a broader application than EUDI Wallets, while others are specific to EUDI Wallets. Furthermore the standards and technical specifications influence each other, for example by referencing, profiling and extending each other.</p>
