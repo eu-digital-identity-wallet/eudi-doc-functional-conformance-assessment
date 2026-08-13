@@ -53,7 +53,19 @@
          <lastmod>2026-08-13</lastmod>
     </url>
     <url>
+         <loc>https://conformance.eudi.dev/draft/fcaf/suts/wallet_solution/attestation_provider/test-cases/</loc>
+         <lastmod>2026-08-13</lastmod>
+    </url>
+    <url>
          <loc>https://conformance.eudi.dev/draft/fcaf/suts/wallet_solution/attestation_provider/ws_ap/</loc>
+         <lastmod>2026-08-13</lastmod>
+    </url>
+    <url>
+         <loc>https://conformance.eudi.dev/draft/fcaf/suts/wallet_solution/attestation_provider/Interaction/</loc>
+         <lastmod>2026-08-13</lastmod>
+    </url>
+    <url>
+         <loc>https://conformance.eudi.dev/draft/fcaf/suts/wallet_solution/attestation_provider/Interaction/Engagement/</loc>
          <lastmod>2026-08-13</lastmod>
     </url>
     <url>
@@ -62,6 +74,10 @@
     </url>
     <url>
          <loc>https://conformance.eudi.dev/draft/fcaf/suts/wallet_solution/attestation_provider/Interaction/Engagement/WS_AP_IA_Engagement_007b/</loc>
+         <lastmod>2026-08-13</lastmod>
+    </url>
+    <url>
+         <loc>https://conformance.eudi.dev/draft/fcaf/suts/wallet_solution/attestation_provider/Interaction/MainInteraction/</loc>
          <lastmod>2026-08-13</lastmod>
     </url>
     <url>
@@ -93,6 +109,10 @@
          <lastmod>2026-08-13</lastmod>
     </url>
     <url>
+         <loc>https://conformance.eudi.dev/draft/fcaf/suts/wallet_solution/attestation_provider/Interaction/Supportive/</loc>
+         <lastmod>2026-08-13</lastmod>
+    </url>
+    <url>
          <loc>https://conformance.eudi.dev/draft/fcaf/suts/wallet_solution/attestation_provider/Interaction/Supportive/WS_AP_IA_Supportive_010a/</loc>
          <lastmod>2026-08-13</lastmod>
     </url>
@@ -102,6 +122,14 @@
     </url>
     <url>
          <loc>https://conformance.eudi.dev/draft/fcaf/suts/wallet_solution/attestation_provider/Interaction/Supportive/WS_AP_IA_Supportive_011b_UF/</loc>
+         <lastmod>2026-08-13</lastmod>
+    </url>
+    <url>
+         <loc>https://conformance.eudi.dev/draft/fcaf/suts/wallet_solution/attestation_provider/MessageStructure/</loc>
+         <lastmod>2026-08-13</lastmod>
+    </url>
+    <url>
+         <loc>https://conformance.eudi.dev/draft/fcaf/suts/wallet_solution/attestation_provider/MessageStructure/ProtocolMessages/</loc>
          <lastmod>2026-08-13</lastmod>
     </url>
     <url>
@@ -241,6 +269,14 @@
          <lastmod>2026-08-13</lastmod>
     </url>
     <url>
+         <loc>https://conformance.eudi.dev/draft/fcaf/suts/wallet_solution/attestation_provider/SecurityMechanisms/</loc>
+         <lastmod>2026-08-13</lastmod>
+    </url>
+    <url>
+         <loc>https://conformance.eudi.dev/draft/fcaf/suts/wallet_solution/attestation_provider/SecurityMechanisms/DeviceBinding/</loc>
+         <lastmod>2026-08-13</lastmod>
+    </url>
+    <url>
          <loc>https://conformance.eudi.dev/draft/fcaf/suts/wallet_solution/attestation_provider/SecurityMechanisms/DeviceBinding/WS_AP_SM_DeviceBinding_001a/</loc>
          <lastmod>2026-08-13</lastmod>
     </url>
@@ -302,6 +338,10 @@
     </url>
     <url>
          <loc>https://conformance.eudi.dev/draft/fcaf/suts/wallet_solution/relying_party/baseline-tests/</loc>
+         <lastmod>2026-08-13</lastmod>
+    </url>
+    <url>
+         <loc>https://conformance.eudi.dev/draft/fcaf/suts/wallet_solution/relying_party/test-cases/</loc>
          <lastmod>2026-08-13</lastmod>
     </url>
     <url>

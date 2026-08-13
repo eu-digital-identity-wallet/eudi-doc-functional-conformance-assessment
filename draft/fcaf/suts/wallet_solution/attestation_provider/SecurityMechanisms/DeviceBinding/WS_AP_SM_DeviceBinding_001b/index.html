@@ -984,6 +984,64 @@
   
   
   
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_8_2_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_8_2_2_1" id="__nav_6_8_2_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (ws_rp) Relying Party
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_6_8_2_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_8_2_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    (ws_rp) Relying Party
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../../../relying_party/ws_rp/" class="md-nav__link">
         
@@ -992,7 +1050,7 @@
   <span class="md-ellipsis">
     
   
-    Relying Party (ws_rp)
+    Overview
   
 
     
@@ -1013,14 +1071,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ws_ap/" class="md-nav__link">
+      <a href="../../../../relying_party/baseline-tests/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Attestation Provider (ws_ap)
+    Baseline tests
   
 
     
@@ -1029,6 +1087,192 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../relying_party/test-cases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test cases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_8_2_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_8_2_2_2" id="__nav_6_8_2_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    (ws_ap) Attestation Provider
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_6_8_2_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_8_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    (ws_ap) Attestation Provider
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ws_ap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../baseline-tests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Baseline tests
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../test-cases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test cases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1048,7 +1292,7 @@
   <span class="md-ellipsis">
     
   
-    PID Provider (ws_pp)
+    (ws_pp) PID Provider
   
 
     
@@ -1076,7 +1320,7 @@
   <span class="md-ellipsis">
     
   
-    Infrastructure (ws_inf)
+    (ws_inf) Infrastructure
   
 
     
@@ -1104,7 +1348,7 @@
   <span class="md-ellipsis">
     
   
-    UI (ws_ui)
+    (ws_ui) UI
   
 
     
@@ -1379,23 +1623,27 @@
 <h2 id="objective">Objective<a class="headerlink" href="#objective" title="Link to this section">&para;</a></h2>
 <p>Verify that the Wallet correctly serializes the Client Attestation Proof of Possession as a signed JWT to authenticate at the PAR Endpoint of the Authorization Server, when using Pushed Authentication Requests in the Authorization Code Flow for issuance.</p>
 <h2 id="references">References<a class="headerlink" href="#references" title="Link to this section">&para;</a></h2>
-<p>[CIR 2024/2979 amended] annex Ib
-[ETSI TS 119 472-3] section 4.4
-[HAIP] section 4.3
-[OpenID4VCI] section 5.1.4, E
-[IETF draft-attestation-based-client-auth] section 5.2</p>
+<ul>
+<li>[CIR 2024/2979 amended] annex Ib</li>
+<li>[ETSI TS 119 472-3] section 4.4</li>
+<li>[HAIP] section 4.3</li>
+<li>[OpenID4VCI] section 5.1.4, E</li>
+<li>[IETF draft-attestation-based-client-auth] section 5.2</li>
+</ul>
 <h2 id="eudi-wallet-relevancy">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy" title="Link to this section">&para;</a></h2>
 <p>EUDI_generic | EUDI_required</p>
 <h2 id="profile-applicability">Profile applicability<a class="headerlink" href="#profile-applicability" title="Link to this section">&para;</a></h2>
-<p>None.</p>
+<p>None</p>
 <h2 id="technology">Technology<a class="headerlink" href="#technology" title="Link to this section">&para;</a></h2>
 <p>Credential Issuance using the Authorization Code Flow.</p>
 <h2 id="preconditions">Preconditions<a class="headerlink" href="#preconditions" title="Link to this section">&para;</a></h2>
-<p>A. Wallet is set to 'default_configuration_1'
-B. Wallet started engagement with Credential Issuer.
-C. Wallet successfully obtained Credential Issuer Metadata.
-D. Wallet send an HTTP POST Request for a Pushed Authorization Request to the PAR Endpoint of the selected Authorization Server.
-E. The HTTP Request to the PAR Endpoint of the Authorization Server contains a syntactically correct <code>OAuth-Client-Attestation-PoP</code> HTTP Header.</p>
+<ol class="precond-alpha">
+<li>Wallet is set to 'default_configuration_1'</li>
+<li>Wallet started engagement with Credential Issuer.</li>
+<li>Wallet successfully obtained Credential Issuer Metadata.</li>
+<li>Wallet send an HTTP POST Request for a Pushed Authorization Request to the PAR Endpoint of the selected Authorization Server.</li>
+<li>The HTTP Request to the PAR Endpoint of the Authorization Server contains a syntactically correct <code>OAuth-Client-Attestation-PoP</code> HTTP Header.</li>
+</ol>
 <h2 id="test-scenario">Test Scenario<a class="headerlink" href="#test-scenario" title="Link to this section">&para;</a></h2>
 <ol>
 <li>For the value of the <code>OAuth-Client-Attestation-PoP</code> HTTP Header in the HTTP request, perform all Shared_JWT_JWE test cases.</li>
