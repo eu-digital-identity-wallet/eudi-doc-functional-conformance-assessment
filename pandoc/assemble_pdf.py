@@ -22,12 +22,13 @@ import os, re, sys, glob
 import signal
 
 DOCS_DIR = "docs"
-MKDOCS = "mkdocs.yml"
+FCAF_DIR = os.path.join(DOCS_DIR, "fcaf")
+FCAF_NAV = os.path.join(FCAF_DIR, ".nav.yml")
 
 INCLUDE_RE = re.compile(r'\{%\s*include-markdown\s+"([^"]+)"\s+heading-offset=(\d+)')
 HEADING_RE = re.compile(r'^(#{1,6})(\s.*)$')
 FENCE_RE = re.compile(r'^\s*(```+|~~~+)')
-NAV_PATH_RE = re.compile(r'fcaf/[^\s\'"]+\.md')
+NAV_PATH_RE = re.compile(r':\s+([^\s#]+\.md)\s*$', re.MULTILINE)
 PLACEHOLDER_RE = re.compile(r'^This section contains all tests applicable\b', re.IGNORECASE)
 TOC_UNLISTED_RE = re.compile(r'^(?:\d+\.\s+|\[[^\]]+\]$)')
 
@@ -36,11 +37,14 @@ if hasattr(signal, "SIGPIPE"):
 
 
 def nav_entry_paths():
-    """Ordered, de-duplicated list of `docs/fcaf/....md` page paths from the MkDocs nav."""
-    text = open(MKDOCS, encoding="utf-8").read()
+    """Ordered, de-duplicated FCAF page paths from the content-owned nav."""
+    if not os.path.isfile(FCAF_NAV):
+        raise FileNotFoundError(f"Required FCAF navigation file not found: {FCAF_NAV}")
+
+    text = open(FCAF_NAV, encoding="utf-8").read()
     seen, out = set(), []
     for match in NAV_PATH_RE.finditer(text):
-        path = os.path.join(DOCS_DIR, match.group(0))
+        path = os.path.join(FCAF_DIR, match.group(1))
         if path in seen or is_placeholder_page(path):
             continue
         seen.add(path)
