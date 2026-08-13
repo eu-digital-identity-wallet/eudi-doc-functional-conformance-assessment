@@ -1,25 +1,30 @@
 # WS_RP_MS_CredentialFormats_035
 
 ## Objective
-Verify that Wallet supports ISO mdoc in the presentation flow. 
+
+Verify that Wallet supports ISO mdoc in the presentation flow.
 
 ## References
+
 - [HAIP] Section 5 (introduction)
 - [HAIP] Section 5.3.1
 - [HAIP] Section 6
 - [OpenID4VP] Appendix B.2
 
 ## Profile applicability
+
 Wallet supports ISO mdoc
 
 ## EUDI-wallet relevancy
+
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
-none
+None
 
 ## Test Scenario
+
 1. End-user interacts with the Verifier, triggering the Verifier to send a presentation request.
 2. Verifier sends presentation request for Credential in ISO mdoc format.
 3. Verify if Wallet asks for user consent to present the Credential.
@@ -28,6 +33,7 @@ none
 6. Check value from Credential Format Identifier.
 
 ## Expected results
+
 1. This is the case
 2. This is the case.
 3. Wallet asks for user consent.

@@ -1,28 +1,33 @@
 # WS_RP_MS_ProtocolMessages_065
 
 ## Objective
+
 Test the Wallet rejects DCQL-query credential object property "id" when it consists of invalid characters (i.e. other than alphanumeric, underscore (_), or hyphen (-)).
 
 ## References
+
 - [OpenID4VP] Sections 6.1, 8.5
 
 ## Profile applicability
 
-none
+None
 
 ## EUDI-wallet relevancy
+
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
-none
+None
 
 ## Test Scenario
+
 1. The Wallet engages with the Verifier.
 2. The Verifier sends an Authorization Request with a DCQL-query with a credential with "id" property containing a character other than alphanumeric, underscore (_), or hyphen (-).
 3. The Wallet evaluates the request.
 
 ## Expected results
+
 1. Wallet and Verifier can interact.
 2. Wallet receives the request.
 3. Wallet rejects the request by either:

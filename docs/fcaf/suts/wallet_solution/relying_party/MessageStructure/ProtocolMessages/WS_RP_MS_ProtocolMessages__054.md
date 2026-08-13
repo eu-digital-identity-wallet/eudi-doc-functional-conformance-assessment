@@ -1,28 +1,33 @@
 # WS_RP_MS_ProtocolMessages_054
 
 ## Objective
+
 Test that if DCQL does not contain a property "credentials", the Wallet rejects the request.
 
 ## References
+
 - [OpenID4VP] Sections 6, 8.5
 
 ## Profile applicability
 
-none
+None
 
 ## EUDI-wallet relevancy
+
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
-none
+None
 
 ## Test Scenario
+
 1. The Wallet engages with the Verifier.
 2. The Verifier sends an Authorization Request with a DCQL-query with a missing "credentials"
 3. The wallet evaluates the request
 
 ## Expected results
+
 1. Wallet and Verifier can interact.
 2. Wallet receives the request.
 3. The wallet rejects the request by either:

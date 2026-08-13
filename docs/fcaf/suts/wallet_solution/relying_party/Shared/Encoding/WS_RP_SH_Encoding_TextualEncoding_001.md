@@ -1,19 +1,26 @@
 # WS_RP_SH_Encoding_TextualEncoding001
 
 ## Objective
+
 Test that in a claims path pointer array, a string value indicates the respected key is to be selected.
 
 ## References
+
 - [OpenID4VP] Section 7
 
 ## Profile applicability
+
 claims path pointer when applied to a JSON-based Credential
 
 ## EUDI-wallet relevancy
+
 EUDI_generic | EUDI_required
 
 ## Preconditions
+
 Wallet has a credential:
+
+```json
 {
   "name": "Arthur Dent",
   "address": {
@@ -33,8 +40,10 @@ Wallet has a credential:
   ],
   "nationalities": ["British", "Betelgeusian"]
 }
+```
 
 ## Test Scenario
+
 1. Engage wallet-verifier interaction.
 2. Verifier sends an Authorization Request with a DCQL query containing a claims path pointer where one element is a string (e.g. path: ["name"]).
 3. Wallet parses the Authorization Request and the DCQL query.
@@ -43,6 +52,7 @@ Wallet has a credential:
 6. Wallet generates and returns the Authorization Response.
 
 ## Expected results
+
 1. Wallet-verifier interaction is successfully initiated.
 2. Wallet successfully receives the Authorization Request.
 3. Wallet successfully parses the Authorization Request and the DCQL query.

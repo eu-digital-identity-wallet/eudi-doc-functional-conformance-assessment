@@ -11,7 +11,9 @@ release-candidate and released version tags.
 
 ## [Latest draft]
 
-- Rendering and formatting pass across test cases (editorial only, no functional change): Preconditions are authored as a numbered Markdown list and rendered with uppercase-alphabetic markers (A., B., C., ...) on the website and in the PDF; nested bullet lists in the date-format Expected results are correctly indented under their parent step; and missing backticks were added around claim and data-element identifiers (for example `issuance_date`).
+- Editorial and rendering cleanup across FCAF documentation and test specifications, including consistent Markdown lists and tables, baseline test pages, stable ICS selection wording, and canonical Implementing Regulation references.
+- Added baseline test reference indexes and separate test-case hierarchy pages for the Relying Party and Attestation Provider interfaces.
+- Rendering and formatting pass across test cases (editorial only, no functional change): actual Preconditions use compact numbered Markdown lists in the source and render with uppercase-alphabetic labels (A., B., C., ...) on the website and in the PDF, while Preconditions with no entries and Profile applicability with no restriction use the canonical value `None` without a list marker or trailing period; pre-existing sibling relationships in Expected results are preserved as flat numbered entries, nested results remain numbered under their parent step, nested bullet lists in the date-format Expected results are correctly indented under their parent step, and missing backticks were added around claim and data-element identifiers (for example `issuance_date`).
 - Relying Party (WS_RP) test cases for OpenID4VP sections 5-8: Authorization Request, DCQL, claims path pointer, and Response.
 - Token Status List (TSL) test cases (section 6).
 - PID data-model test cases for ISO mdoc and IETF SD-JWT VC formats (ISO/IEC 18013-5).

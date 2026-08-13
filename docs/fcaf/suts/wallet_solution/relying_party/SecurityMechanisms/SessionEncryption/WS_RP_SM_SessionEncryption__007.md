@@ -1,24 +1,29 @@
 # WS_RP_SM_SessionEncryption_007
 
 ## Objective
+
 Verify that Wallet supports A128GCM for the JWE `enc` (encryption algorithm).
 
 ## References
+
 - [HAIP] Section 5 (introduction)
 - [OpenID4VP] Section 8.3
 - [RFC7516] Section 4.1.2
 
 ## Profile applicability
+
 Wallet supports only A128GCM
 
 ## EUDI-wallet relevancy
+
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
-none
+None
 
 ## Test Scenario
+
 1. End-user interacts with the Verifier, triggering the Verifier to send a presentation request.
 2. Verifier sends a presentation request.
 3. Verify if Wallet asks for user consent to present the Credential.
@@ -27,6 +32,7 @@ none
 6. Check value from JWE "enc" (encryption algorithm) header parameter used by the Wallet.
 
 ## Expected results
+
 1. This is the case.
 2. This is the case.
 3. Wallet asks for user consent.

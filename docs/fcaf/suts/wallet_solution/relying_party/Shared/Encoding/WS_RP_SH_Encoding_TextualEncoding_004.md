@@ -1,6 +1,7 @@
 # WS_RP_SH_Encoding_TextualEncoding004
 
 ## Objective
+
 Test that the claims path pointer array is processed left to right
 
 ## References
@@ -8,12 +9,16 @@ Test that the claims path pointer array is processed left to right
 - [OpenID4VP] Sections 7, 7.1.1
 
 ## Profile applicability
+
 claims path pointer when applied to a JSON-based Credential
 
 ## EUDI-wallet relevancy
+
 EUDI_generic | EUDI_required
 
 ## Preconditions
+
+```json
 {
   "name": "Arthur Dent",
   "address": {
@@ -33,14 +38,17 @@ EUDI_generic | EUDI_required
   ],
   "nationalities": ["British", "Betelgeusian"]
 }
+```
 
 ## Test Scenario
+
 1. The Wallet engages with the Verifier
 2. A Verifier sends a request With a DCQL-query with `path` array: ["street_address", "address"].
 3. Wallet handles request
 4. Wallet responds to request.
 
 ## Expected results
+
 1. Wallet and Verifier can interact.
 2. Wallet receives the request.
 3. Wallet successfully parses the request.

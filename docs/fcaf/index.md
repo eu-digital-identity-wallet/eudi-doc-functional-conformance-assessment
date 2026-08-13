@@ -6,13 +6,13 @@ To manage this diversity in a structured and scalable way, the FCAF defines a **
 
 The hierarchy is defined as follows:
 
-- **SUT** – System Under Test  
-- **Cl** – Test Class  
-- **La** – Test Layer  
-- **Ar** – Test Area  
-- **Gr** – Test Group  
-- **Un** – Test Unit  
-- **UF** – Test Unit Fraction  
+- **SUT**: System Under Test
+- **Cl**: Test Class
+- **La**: Test Layer
+- **Ar**: Test Area
+- **Gr**: Test Group
+- **Un**: Test Unit
+- **UF**: Test Unit Fraction
 
 ```mermaid
 flowchart TD
@@ -84,6 +84,7 @@ The development of the Test Suites (set of Test Cases) will be done in the follo
   - Removing Test Objectives that are not in scope for EUDI wallets.
   - Making Test Objectives more specific where required by ETSI or the EC Technical Standards.
   - Removing duplicate Test Objectives where an item is covered in multiple places.
+
 - **Test Cases** – where the Test Objectives are turned in detailed Test Cases that define amongst other things test conditions, test steps and success criteria.
 
 Each phase refines and narrows the scope of testing, with the goal of ensuring that Test Case writing phase (the phase requiring the most effort) is as efficient as possible.
@@ -113,6 +114,7 @@ covers both:
 
 - **External interfaces**, including interactions with PID Providers, Attestation Providers, Relying Parties, and Infrastructure Components. Conformance testing should
 demonstrate compliance with applicable specifications and standards as applied within the EUDI Wallet ecosystem.
+
 - **Internal functionality**, where functional requirements are defined by regulations, implementing acts, or referenced technical standards, but cannot be fully tested via a standardised external interface.
 
 A **Test Class** groups all functionality associated with a specific interface or peer interaction.
@@ -146,10 +148,12 @@ For other potential SUTs, equivalent Test Class groupings are expected, for exam
     - AttestationProvider_WalletSolution (AP_WS)
     - AttestationProvider_RelyingParty (AP_RP)
     - AttestationProvider_Infrastructure (AP_Inf)
+
 - **PID Providers (AP)**
     - PidProvider_WalletSolution (PP_WS)
     - PidProvider_RP (PP_RP)
     - PidProvider_Infrastructure (PP_Inf)
+
 - **Relying Parties (RP)**
     - RelyingParty_WalletSolution (RP_WS)
     - RelyingParty_PidProvider (RP_PP)
@@ -173,6 +177,7 @@ To be as comprehensive as possible the following 6 test layers are defined:
 Each layer comprises various Test Areas, that vary per Test Layer. Similarly, Test Areas can be devided in Test Groups, and Test Groups in Test Units. Their goal is to organize the different tests.
 
 ## Test Cases
+
 Each test case is defined by the following information:
 
 | Term | Description  |
@@ -184,13 +189,13 @@ Each test case is defined by the following information:
 | Technology | Lists technologies that are applicable for the test. Note: the Technology section may be omitted and may be incomplete |
 | EUDI-wallet relevancy | Indicators on relevance to EUDI-wallet ecosystem. |
 | Preconditions | Define the state in which the IUT (implementation under test) needs to be before the test case can be executed. |
-| Test scenario | Defines the test steps that shall be taken. Each step covers a simple, exactly defined operation with a measurable result that can be included in the test report. The steps shall be performed in the order listed. Each test step is defined by the following information: <ul><li>Test step ID: a consecutive number, uniquely identifying each test step and the execution order in the test case.</li><li>Description: defining the operation that has to be executed for this step.</li><li>Configuration data: optionally specifying input data required to perform this test step.</li>
+| Test scenario | Defines the test steps that shall be taken. Each step covers a simple, exactly defined operation with a measurable result that can be included in the test report. The steps shall be performed in the order listed. Each test step is defined by the following information: <ul><li>Test step ID: a consecutive number, uniquely identifying each test step and the execution order in the test case.</li><li>Description: defining the operation that has to be executed for this step.</li><li>Configuration data: optionally specifying input data required to perform this test step.</li></ul> |
 | Expected result | The expected result defines pass criteria for each test step in the test scenario. The analysis of the observed result in comparison with the expected result leads to a verdict, e.g. "Pass" or "Fail". The results of the individual test steps or the overall result, or both, of the test case are transferred to the test report. |
 | Comment | Optional comment(s) for the test case. |
 
 ### Test Case ID
 
-Test cases are grouped by SUT and Test Class (interface tested). 
+Test cases are grouped by SUT and Test Class (interface tested).
 
 Test case IDs are formed as follows:
 
@@ -207,7 +212,7 @@ The EUDI Wallet ecosystem uses numerous standards and technical specifications. 
 
 During establishing the FCAF, tests have to be considered per individual standard and technical specification. As a result Test Objectives or Test Ccases can be identified for requirements that are not relevant to EUDI Wallets. Others will be explicitly and specifically applicable to EUDI Wallets.
 
-To accomodate selecting, tracking and managing these together with Standards Developing Organisations (SDOs), CABs and others, a "EUDI Wallet relevancy" is included in the Test Case template in the FCAF. 
+To accomodate selecting, tracking and managing these together with Standards Developing Organisations (SDOs), CABs and others, a "EUDI Wallet relevancy" is included in the Test Case template in the FCAF.
 
 This effectively has two labels, as follows:
 
@@ -215,20 +220,20 @@ This effectively has two labels, as follows:
 
 One of the following values shall be used for this label:
 
-| label | meaning
-| --- | ---
-| EUDI_agnostic | Requirement is defined for general purpose use, and is not relevant to EUDI Wallets.
-| EUDI_generic | Requirement is defined for general purpose use, and is relevant to EUDI Wallets.
-| EUDI_specific | Requirement is specifically defined for EUDI Wallets.
+| label | meaning |
+| --- | --- |
+| EUDI_agnostic | Requirement is defined for general purpose use, and is not relevant to EUDI Wallets. |
+| EUDI_generic | Requirement is defined for general purpose use, and is relevant to EUDI Wallets. |
+| EUDI_specific | Requirement is specifically defined for EUDI Wallets. |
 
 - A second label to select scope of a Test Objective/Case.
 
-| label | meaning
-| --- | ---
-| EUDI_required | Requirement is applicable to EUDI Wallets.
-| EUDI_optional | Requirement is optional for EUDI Wallets.
-| EUDI_forbidden | Requirement is explicitly excluded or prohibited for usage with EUDI Wallets.
-| EUDI_undefined | Applicability of requirement is up to discretion of wallet /assessor. 
+| label | meaning |
+| --- | --- |
+| EUDI_required | Requirement is applicable to EUDI Wallets. |
+| EUDI_optional | Requirement is optional for EUDI Wallets. |
+| EUDI_forbidden | Requirement is explicitly excluded or prohibited for usage with EUDI Wallets. |
+| EUDI_undefined | Applicability of requirement is up to discretion of wallet /assessor. |
 
 Both labels are applicable; some combinations will be mutually exclusive (e.g. agnostic x required, or specific x forbidden).
 

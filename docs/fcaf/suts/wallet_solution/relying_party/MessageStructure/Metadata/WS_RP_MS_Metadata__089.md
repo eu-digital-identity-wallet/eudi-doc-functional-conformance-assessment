@@ -1,24 +1,30 @@
 # WS_RP_MS_Metadata_089
 
 ## Objective
+
 Verify that the EUDI Wallet rejects a JOSE-based Referenced Token where the "uri" claim within "status_list" is malformed.
 
 ## References
+
 - [Token Status List] Section 6.2
 
 ## Profile applicability
+
 The Wallet supports revocation checking via the Token Status List mechanism; The Wallet supports Status List Tokens in JWT format
 
 ## EUDI-wallet relevancy
+
 EUDI_generic | EUDI_required
 
 ## Preconditions
+
 1. The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
 2. The Referenced Token includes the Status element that contains the Status_list element (index and URI)
 3. The Issuer has provided a JOSE-based Referenced Token to the EUDI Wallet.
 4. The Referenced Token contains the "uri" claim within "status_list" set to a malformed URI.
 
 ## Test Scenario
+
 1. Provide a Referenced Token where the "uri" value has no scheme (e.g., example.com/statuslists/1). Verify the Wallet's handling.
 2. Provide a Referenced Token where the "uri" value contains an unencoded space in the host (e.g., https://exam ple.com/statuslists/1). Verify the Wallet's handling.
 3. Provide a Referenced Token where the "uri" value contains invalid percent-encoding (e.g., https://example.com/statuslists/%GG). Verify the Wallet's handling.
@@ -26,6 +32,7 @@ EUDI_generic | EUDI_required
 5. Provide a Referenced Token where the "uri" value is an empty string. Verify the Wallet's handling.
 
 ## Expected results
+
 1. The Wallet rejects the Referenced Token (missing scheme).
 2. The Wallet rejects the Referenced Token (invalid character in host).
 3. The Wallet rejects the Referenced Token (malformed percent-encoding).

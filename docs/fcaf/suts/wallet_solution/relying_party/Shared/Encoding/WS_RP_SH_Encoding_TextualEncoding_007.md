@@ -1,19 +1,26 @@
 # WS_RP_SH_Encoding_TextualEncoding007
 
 ## Objective
+
 Test that when processing claims path pointer array, an element at the first level is selected. If the selected element is not an object, abort processing and return an error
 
 ## References
+
 - [OpenID4VP] Sections 7.2.1, 7.3
 
 ## Profile applicability
+
 claims path pointer when applied to a JSON-based Credential
 
 ## EUDI-wallet relevancy
+
 EUDI_generic | EUDI_required
 
 ## Preconditions
+
 The wallet contains the credentials
+
+```json
 {
   "name": "Arthur Dent",
   "address": {
@@ -33,7 +40,10 @@ The wallet contains the credentials
   ],
   "nationalities": ["British", "Betelgeusian"]
 }
+```
+
 ## Test Scenario
+
 1. Engage wallet-verifier interaction.
 2. Verifier sends an Authorization Request with a DCQL query containing a claims path pointer where a string element is applied to a value that is NOT a JSON object (e.g. claims path pointer: ["name", "firstname"] where name is a string).
 3. Wallet parses the Authorization Request and the DCQL query.
@@ -41,6 +51,7 @@ The wallet contains the credentials
 5. Wallet detects that the currently selected element is not an object when the string path element is applied.
 
 ## Expected results
+
 1. Wallet-verifier interaction is successfully initiated.
 2. Wallet successfully receives the Authorization Request.
 3. Wallet successfully parses the Authorization Request and the DCQL query.

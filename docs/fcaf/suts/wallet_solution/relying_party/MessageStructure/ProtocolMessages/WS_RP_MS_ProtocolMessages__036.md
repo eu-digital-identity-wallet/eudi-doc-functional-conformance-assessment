@@ -1,23 +1,27 @@
 # WS_RP_MS_ProtocolMessages_036
 
 ## Objective
+
 Test that when wallet receives a response_type of "vp_token" in an Authorization Request, that a successful response includes the vp_token parameter.
 
 ## References
+
 - [OpenID4VP] Section 5.6
 
 ## Profile applicability
 
-none
+None
 
 ## EUDI-wallet relevancy
+
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
-none
+None
 
 ## Test Scenario
+
 1. Engage wallet-verifier interaction (e.g. click link / scan QR code).
 2. Wallet receives an Authorization Request with response_type = "vp_token".
 3. Wallet parses and validates the Authorization Request.
@@ -25,6 +29,7 @@ none
 5. Wallet generates and returns the Authorization Response.
 
 ## Expected results
+
 1. Wallet-verifier interaction is successfully initiated.
 2. Wallet successfully receives the Authorization Request.
 3. Wallet successfully parses and validates the Authorization Request.

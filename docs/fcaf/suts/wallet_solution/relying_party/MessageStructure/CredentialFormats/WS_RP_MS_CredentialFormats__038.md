@@ -1,23 +1,27 @@
 # WS_RP_MS_CredentialFormats_038
 
 ## Objective
+
 Verify that Wallet can handle receiving authorization request with response type `vp_token` and answering properly.
 
 ## References
+
 - [HAIP] Section 5 (introduction)
 
 ## Profile applicability
 
-none
+None
 
 ## EUDI-wallet relevancy
+
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
-none
+None
 
 ## Test Scenario
+
 1. End-user interacts with the Verifier, triggering the Verifier to send a presentation request.
 2. Verifier sends Authorization Request with response type `vp_token`
 3. Verify if Wallet process successfully Authorization Request with response type `vp_token` sent by the Verifier.
@@ -26,6 +30,7 @@ none
 6. Verify if Wallet includes `vp_token` parameter in its response.
 
 ## Expected results
+
 1. This is the case.
 2. This is the case.
 3. Wallet process successfully Authorization Request with response type `vp_token` sent by the Verifier.

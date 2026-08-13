@@ -1,23 +1,27 @@
 # WS_RP_MS_Metadata_135
 
 ## Objective
+
 Verify that when the Wallet has indicated that encryption is required (via wallet_metadata.jwks and supported algorithms) and the Verifier returns an unencrypted Request Object, the Wallet rejects the Request Object.
 
 ## References
+
 - [OpenID4VP] Section 5.10
 
 ## Profile applicability
 
-none
+None
 
 ## EUDI-wallet relevancy
+
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
-none
+None
 
 ## Test Scenario
+
 1. Engage wallet-verifier interaction (e.g. click link / scan QR code).
 2. Wallet receives an Authorization Request with request_uri_method = post.
 3. Wallet sends a POST request with wallet_metadata.jwks indicating encryption is required.
@@ -25,6 +29,7 @@ none
 5. Wallet inspects the response.
 
 ## Expected results
+
 1. Wallet-verifier interaction is successfully initiated.
 2. Wallet successfully receives the Authorization Request.
 3. Wallet_metadata.jwks is correctly populated.

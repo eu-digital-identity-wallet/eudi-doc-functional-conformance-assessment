@@ -1,22 +1,27 @@
 # WS_RP_MS_ProtocolMessages_037
 
 ## Objective
+
 Test that when wallet receives a response_type of "vp_token" in an Authorization Request, the Wallet does NOT contain an OAuth 2.0 Authorization Code, Access Token, or Access Token Type in a successful response to the grant request.
 
 ## References
+
 - [OpenID4VP] Section 5.6
 
 ## Profile applicability
 
-none
+None
 
 ## EUDI-wallet relevancy
+
 EUDI_generic | EUDI_required
 
 ## Preconditions
-Wallet holds at least one credential matching the dcql_query in the Authorization Request.
+
+1. Wallet holds at least one credential matching the dcql_query in the Authorization Request.
 
 ## Test Scenario
+
 1. Engage wallet-verifier interaction (e.g. click link / scan QR code).
 2. Wallet receives an Authorization Request with response_type = "vp_token".
 3. Wallet parses and validates the Authorization Request.
@@ -25,6 +30,7 @@ Wallet holds at least one credential matching the dcql_query in the Authorizatio
 6. Inspect the full Authorization Response returned by the Wallet for the presence of OAuth 2.0 grant parameters (code, access_token, token_type).
 
 ## Expected results
+
 1. Wallet-verifier interaction is successfully initiated.
 2. Wallet successfully receives the Authorization Request.
 3. Wallet successfully parses and validates the Authorization Request.

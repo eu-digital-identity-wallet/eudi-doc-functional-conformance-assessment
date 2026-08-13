@@ -1,6 +1,7 @@
 # WS_RP_SH_Encoding_TextualEncoding010
 
 ## Objective
+
 Test that at step 2.3 of claims path processing If any of the currently selected element(s) is not an array, abort processing and return an error.
 
 ## References
@@ -8,12 +9,16 @@ Test that at step 2.3 of claims path processing If any of the currently selected
 - [OpenID4VP] Sections 7, 7.2.1, 7.3
 
 ## Profile applicability
+
 claims path pointer when applied to a JSON-based Credential
 
 ## EUDI-wallet relevancy
+
 EUDI_generic | EUDI_required
 
 ## Preconditions
+
+```json
 {
   "name": "Arthur Dent",
   "address": {
@@ -32,7 +37,10 @@ EUDI_generic | EUDI_required
   ],
   "nationalities": ["British", "Betelgeusian"]
 }
+```
+
 ## Test Scenario
+
 1. Engage wallet-verifier interaction.
 2. Verifier sends an Authorization Request with a DCQL query containing a claims path pointer where a non-negative integer component is applied to a currently selected element that is NOT an array (e.g. claims path pointer: ["address", "house_no", null] where house_no is a string).
 3. Wallet parses the Authorization Request and the DCQL query.
@@ -40,6 +48,7 @@ EUDI_generic | EUDI_required
 5. Wallet detects that the currently selected element is not an array when the integer component is applied.
 
 ## Expected results
+
 1. Wallet-verifier interaction is successfully initiated.
 2. Wallet successfully receives the Authorization Request.
 3. Wallet successfully parses the Authorization Request and the DCQL query.
