@@ -33,7 +33,8 @@ from collections import Counter, defaultdict
 #   FC052 final newline, FC002 section order, FC041 undefined defaults,
 #   FC043 dead placeholder text, FC042 TODO/TBD, FC040 reference tokens,
 #   FC032 empty profile applicability, FC021 step/result parity,
-#   FC003 unknown section name, FC014 duplicate test case ID.
+#   FC003 unknown section name, FC014 duplicate test case ID,
+#   FC056 invisible characters, FC057 indentation tabs.
 # Permanently advisory (large, judgement-bound backlogs):
 #   FC100 CIR/ETSI anchor, FC101/FC102 ICS vocabulary, FC011/FC013 identifiers.
 ENFORCED = {
@@ -84,6 +85,31 @@ PSEUDO_MARKER_RE = re.compile(r"^\s*(?:\d+[a-z]|[a-z]\d)[.)]\s+\S", re.M)
 LIST_ITEM_RE = re.compile(r"^(\d+)[.)]\s")
 
 LAYERS = {"DM", "MS", "IA", "SM", "UC", "SH", "O"}
+
+# Characters that look like an ordinary space but are not one. A single
+# no-break space inside a profile condition is enough to stop it matching its
+# ICS row, and nobody spots it by reading.
+INVISIBLE = {
+    "\u00a0": "no-break space",
+    "\u202f": "narrow no-break space",
+    "\u2007": "figure space",
+    "\u2009": "thin space",
+    "\u200b": "zero width space",
+    "\ufeff": "zero width no-break space",
+    "\u00ad": "soft hyphen",
+}
+
+
+def fenced_lines(text):
+    """Per line: is it inside a fenced code block? Fixes stay out of those."""
+    out, inside = [], False
+    for line in text.splitlines():
+        if line.strip().startswith("```"):
+            inside = not inside
+            out.append(True)
+        else:
+            out.append(inside)
+    return out
 
 
 class Finding:
@@ -170,6 +196,16 @@ def check_file(path: pathlib.Path, root: pathlib.Path, ctx):
     for m in PSEUDO_MARKER_RE.finditer(text):
         ln = text[: m.start()].count("\n") + 1
         add(ln, "FC022", "pseudo list marker such as '3a.' does not render as a list item")
+    fenced = fenced_lines(text)
+    for i, line in enumerate(text.splitlines(), 1):
+        if fenced[i - 1]:
+            continue
+        for ch, label in INVISIBLE.items():
+            if ch in line:
+                add(i, "FC056", f"{label} (U+{ord(ch):04X}) in the text, use a normal space")
+                break
+        if re.match(r"^[ ]*\t", line):
+            add(i, "FC057", "tab used for indentation, use spaces")
 
     # --- identity ------------------------------------------------------------
     h1 = re.search(r"^#\s+(.+?)\s*$", text, re.M)
@@ -288,6 +324,28 @@ def autofix(path: pathlib.Path):
     if stripped != text:
         applied.append("trailing whitespace")
         text = stripped
+    fenced = fenced_lines(text)
+    repaired, touched_inv, touched_tab = [], False, False
+    for i, line in enumerate(text.split("\n")):
+        if i < len(fenced) and fenced[i]:
+            repaired.append(line)
+            continue
+        before = line
+        for ch in INVISIBLE:
+            line = line.replace(ch, " " if ch not in ("\u200b", "\ufeff", "\u00ad") else "")
+        while re.match(r"^[ ]*\t", line):
+            line = re.sub(r"^([ ]*)\t", lambda m: m.group(1) + " " * (4 - len(m.group(1)) % 4), line)
+        touched_inv |= before != line and any(c in before for c in INVISIBLE)
+        touched_tab |= before != line and "\t" in before
+        repaired.append(line)
+    joined = "\n".join(repaired)
+    if joined != text:
+        if touched_inv:
+            applied.append("invisible characters")
+        if touched_tab:
+            applied.append("indentation tabs")
+        text = joined
+
     spaced = re.sub(r"^(#{1,6} .*)\n(?!\n)", r"\1\n\n", text, flags=re.M)
     if spaced != text:
         applied.append("blank line after heading")
