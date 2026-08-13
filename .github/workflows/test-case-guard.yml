@@ -45,11 +45,27 @@ jobs:
           ref: ${{ inputs.content_ref || github.ref }}
           fetch-depth: 0
 
+      # Take the guard from the very ref this workflow was called from, so a
+      # caller pinned to a branch tests that branch's rules end to end. Falls
+      # back to `site` for a direct workflow_dispatch run.
+      - name: Resolve where the guard lives
+        id: guard_src
+        env:
+          JOB_REF: ${{ github.job_workflow_ref }}
+        run: |
+          if [ -n "$JOB_REF" ]; then
+            echo "repository=${JOB_REF%%/.github/*}" >> "$GITHUB_OUTPUT"
+            echo "ref=${JOB_REF##*@}" >> "$GITHUB_OUTPUT"
+          else
+            echo "repository=eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment" >> "$GITHUB_OUTPUT"
+            echo "ref=site" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Check out the guard
         uses: actions/checkout@v4
         with:
-          repository: eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment
-          ref: site
+          repository: ${{ steps.guard_src.outputs.repository }}
+          ref: ${{ steps.guard_src.outputs.ref }}
           path: .guard
           sparse-checkout: tools/fcaf_lint.py
           sparse-checkout-cone-mode: false
