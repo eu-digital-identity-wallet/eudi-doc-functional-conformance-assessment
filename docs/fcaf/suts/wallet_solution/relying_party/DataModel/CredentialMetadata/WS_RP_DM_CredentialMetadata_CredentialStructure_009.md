@@ -31,4 +31,3 @@ None
 1. Wallet and Verifier can interact.
 2. Wallet receives the request.
 3. The wallet will either return an "invalid request" error, or an empty VP token
-

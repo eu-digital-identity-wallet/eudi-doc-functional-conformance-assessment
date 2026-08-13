@@ -9,13 +9,13 @@ This test case verifies that the DataElementValue of data element `issuing_juris
 - [PID rulebook] Annex 3.01, Section 4.1 (Table 6)
 - [ISO 3166-2:2020] 6.1
 
-## EUDI-wallet relevancy
-
-EUDI_specific | EUDI_optional
-
 ## Profile applicability
 
 The EUDI wallet contains a Credential in mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element `issuing_jurisdiction` is present in the EU PID data.
+
+## EUDI-wallet relevancy
+
+EUDI_specific | EUDI_optional
 
 ## Preconditions
 

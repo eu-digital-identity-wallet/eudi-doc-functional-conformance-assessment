@@ -11,13 +11,13 @@ Verify that the Wallet sends an Authorization Request to the Authorization Serve
 - [OpenID4VCI] section 5.1
 - [RFC8414] section 2
 
-## EUDI-wallet relevancy
-
-EUDI_generic | EUDI_required
-
 ## Profile applicability
 
 None
+
+## EUDI-wallet relevancy
+
+EUDI_generic | EUDI_required
 
 ## Technology
 

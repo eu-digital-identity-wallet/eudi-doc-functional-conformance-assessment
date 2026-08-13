@@ -35,4 +35,3 @@ None
 3. Wallet successfully parses the Request Object.
 4. Wallet validates the aud claim and detects that it does not equal "https://self-issued.me/v2".
 5. Wallet rejects the request and returns an invalid_request error due to the invalid aud value.
-

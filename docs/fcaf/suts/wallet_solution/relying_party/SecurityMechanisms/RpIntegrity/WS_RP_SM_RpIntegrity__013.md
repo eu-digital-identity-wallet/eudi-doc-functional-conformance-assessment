@@ -36,4 +36,3 @@ EUDI_generic | EUDI_required
 3. Wallet successfully parses the Request Object and the x5c JOSE header.
 4. Wallet successfully extracts the leaf certificate's public key.
 5. Wallet successfully verifies the signature; request is accepted; presentation flow proceeds.
-

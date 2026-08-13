@@ -12,13 +12,13 @@ Verify that the Wallet accepts a valid Wallet Relying Party Registration Certifi
 
 ## Profile applicability
 
-## Technology
-
-WRPRC
-
 ## EUDI-wallet relevancy
 
 EUDI_specific | EUDI_required
+
+## Technology
+
+WRPRC
 
 ## Preconditions
 

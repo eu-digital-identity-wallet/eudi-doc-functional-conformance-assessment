@@ -31,4 +31,3 @@ None
 1. Wallet-verifier interaction is successfully initiated.
 2. Wallet successfully receives the Authorization Request.
 3. Wallet successfully verifies the signature and processes the signed request; presentation flow proceeds.
-

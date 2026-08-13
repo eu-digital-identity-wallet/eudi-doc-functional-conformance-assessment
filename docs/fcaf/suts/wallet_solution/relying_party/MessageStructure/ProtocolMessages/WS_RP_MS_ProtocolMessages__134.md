@@ -33,4 +33,3 @@ None
 2. Wallet receives request.
 3. Verify the wallet sends an HTTP POST request.
 4. Body is form-encoded and contains the response parameter holding the JWT.
-

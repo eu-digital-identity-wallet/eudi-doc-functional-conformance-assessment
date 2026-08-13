@@ -30,4 +30,3 @@ EUDI_generic | EUDI_required
 
 1. Wallet-verifier interaction is successfully initiated.
 2. Wallet processes the Authorization Request successfully; iss claim is silently ignored; Verifier is identified by the client_id claim only.
-

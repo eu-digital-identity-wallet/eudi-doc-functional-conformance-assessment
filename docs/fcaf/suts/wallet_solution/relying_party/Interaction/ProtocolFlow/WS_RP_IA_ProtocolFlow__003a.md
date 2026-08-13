@@ -10,13 +10,13 @@ Verify that the Wallet, in the presentation flow via DC API using OpenID4VP, sup
 - [OpenID4VP] section 8.3, A.2
 - [DC API]
 
-## EUDI-wallet relevancy
-
-EUDI_generic | EUDI_required
-
 ## Profile applicability
 
 None
+
+## EUDI-wallet relevancy
+
+EUDI_generic | EUDI_required
 
 ## Technology
 

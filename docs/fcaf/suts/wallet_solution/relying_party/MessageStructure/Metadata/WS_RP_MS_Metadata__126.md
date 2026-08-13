@@ -34,4 +34,3 @@ None
 2. Wallet successfully receives the Request Object.
 3. Wallet successfully parses the Request Object and the x5c chain.
 4. Wallet rejects the Request Object and returns an invalid_request error due to DNS name / SAN mismatch; presentation flow is not initiated.
-

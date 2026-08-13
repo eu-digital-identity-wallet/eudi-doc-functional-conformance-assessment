@@ -52,4 +52,3 @@ None
 10. This is the case.
 11. Wallet presents Credential to the Verifier successfully.
 12. Credential presented has Credential Format Identifier value set to `dc+sd-jwt`.
-

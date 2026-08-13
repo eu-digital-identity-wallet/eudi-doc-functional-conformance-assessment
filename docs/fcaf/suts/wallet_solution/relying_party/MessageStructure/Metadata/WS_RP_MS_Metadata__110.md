@@ -33,4 +33,3 @@ None
 2. Wallet successfully receives the Authorization Request.
 3. Wallet successfully parses the Authorization Request.
 4. Wallet rejects the Authorization Request (cannot verify signature with no trusted key available for the redirect_uri prefix) and returns an invalid_request error; presentation flow is not initiated.
-

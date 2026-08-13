@@ -35,4 +35,3 @@ None
 3. wallet_nonce is correctly included in the POST request body.
 4. Wallet successfully receives the signed Request Object.
 5. Wallet validates the wallet_nonce match and continues processing the request.
-

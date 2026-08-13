@@ -32,4 +32,3 @@ None
 1. Wallet and Verifier can interact.
 2. Wallet successfully receives the DCQL query.
 3. The Wallet returns an Authorization Response containing the matching credential.
-

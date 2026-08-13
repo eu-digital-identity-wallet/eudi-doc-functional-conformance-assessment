@@ -31,4 +31,3 @@ None
 1. This is the case.
 2. This is the case.
 3. Wallet answers unsigned request successfully.
-

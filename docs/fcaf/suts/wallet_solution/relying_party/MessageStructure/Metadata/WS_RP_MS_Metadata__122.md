@@ -33,4 +33,3 @@ EUDI_generic | EUDI_required
 2. Wallet successfully receives the Request Object.
 3. Wallet successfully parses the Request Object and the attestation JWT.
 4. Wallet does not enforce redirect_uri against the attestation; request is processed normally; presentation flow proceeds.
-

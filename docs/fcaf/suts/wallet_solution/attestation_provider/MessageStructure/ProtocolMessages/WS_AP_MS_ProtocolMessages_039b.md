@@ -12,13 +12,13 @@ Verify that the Wallet sends a syntactically correct `request_uri` parameter in 
 - [RFC9126] section 4
 - [RFC9101] section 5, 5.2.2
 
-## EUDI-wallet relevancy
-
-EUDI_generic | EUDI_required
-
 ## Profile applicability
 
 None
+
+## EUDI-wallet relevancy
+
+EUDI_generic | EUDI_required
 
 ## Technology
 
@@ -40,4 +40,3 @@ Issuance via Redirects.
 ## Expected results
 
 1. The value of the `request_uri` parameter of the Authorization Request is a syntactically correct formatted URI.
-

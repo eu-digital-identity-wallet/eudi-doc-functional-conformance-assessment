@@ -36,4 +36,3 @@ None
     - (a) answers with an error with details (`invalid_client`),
     - (b) answers with an error without providing details or,
     - (c) discontinues the interaction.
-

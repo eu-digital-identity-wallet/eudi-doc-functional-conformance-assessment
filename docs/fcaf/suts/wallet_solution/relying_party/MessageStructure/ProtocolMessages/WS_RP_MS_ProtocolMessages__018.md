@@ -30,4 +30,3 @@ EUDI_generic | EUDI_required
 
 1. Wallet-verifier interaction is successfully initiated.
 2. Wallet processes transaction_data correctly and proceeds with the presentation flow.
-

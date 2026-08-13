@@ -34,4 +34,3 @@ EUDI_generic | EUDI_required
 2. Wallet successfully receives the Request Object.
 3. Wallet successfully parses the Request Object JOSE header.
 4. Wallet rejects the Request Object and returns an invalid_request error due to missing x5c header; presentation flow is not initiated.
-

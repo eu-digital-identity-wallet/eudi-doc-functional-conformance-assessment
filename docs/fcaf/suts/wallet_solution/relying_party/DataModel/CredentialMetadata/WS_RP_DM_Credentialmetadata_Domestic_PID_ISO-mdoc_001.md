@@ -8,13 +8,13 @@ This test case verifies domestic elements in an appropriate namespace are presen
 
 - [PID rulebook] Annex 3.01, Section 4.1
 
-## EUDI-wallet relevancy
-
-EUDI_specific | EUDI_required
-
 ## Profile applicability
 
 The EUDI wallet contains a Credential in mdoc format with DocType = "eu.europa.ec.eudi.pid.1", which contains data elements in a domestic namespace.
+
+## EUDI-wallet relevancy
+
+EUDI_specific | EUDI_required
 
 ## Preconditions
 

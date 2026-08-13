@@ -32,4 +32,3 @@ None
 1. Wallet-verifier interaction is successfully initiated.
 2. Wallet receives request.
 3. Verify the Encryption the wallet used is an unsigned, encrypted JWT [RFC7519].
-

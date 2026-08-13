@@ -30,4 +30,3 @@ None
 
 1. Wallet-verifier interaction is successfully initiated.
 2. Wallet successfully processes the Authorization Request and proceeds with the presentation flow. Wallet MUST NOT process request objects where the typ does not have the value oauth-authz-req+jwt
-

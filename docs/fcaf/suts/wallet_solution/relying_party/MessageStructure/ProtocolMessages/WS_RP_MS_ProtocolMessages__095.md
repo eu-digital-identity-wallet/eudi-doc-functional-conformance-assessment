@@ -31,4 +31,3 @@ None
 1. Wallet and Verifier can interact.
 2. Wallet receives the request.
 3. No errors returned, with the wallet using the Trusted List when performing credential matching.
-

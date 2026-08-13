@@ -35,4 +35,3 @@ EUDI_generic | EUDI_required
 3. Wallet successfully parses the Request Object.
 4. Wallet verifies the FQDN match.
 5. Wallet uses client_metadata for all non-key Verifier metadata; request is accepted; presentation flow proceeds.
-

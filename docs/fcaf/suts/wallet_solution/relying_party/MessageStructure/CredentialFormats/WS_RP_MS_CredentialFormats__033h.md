@@ -15,15 +15,15 @@ Verify that the Wallet includes a correctly formatted value of the `uri` element
 
 None
 
+## EUDI-wallet relevancy
+
+EUDI_generic | EUDI_required
+
 ## Technology
 
 Credential in mdoc format
 Credential with revocation status information
 Credential with Revocation status information in Token Status List Format
-
-## EUDI-wallet relevancy
-
-EUDI_generic | EUDI_required
 
 ## Preconditions
 

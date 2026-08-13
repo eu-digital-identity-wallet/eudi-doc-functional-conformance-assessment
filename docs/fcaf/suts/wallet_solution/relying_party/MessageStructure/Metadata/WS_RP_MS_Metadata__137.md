@@ -33,4 +33,3 @@ None
 2. Wallet successfully receives the Authorization Request.
 3. Wallet correctly prepares wallet_metadata.
 4. Wallet_metadata does NOT include the request_object_signing_alg_values_supported parameter.
-

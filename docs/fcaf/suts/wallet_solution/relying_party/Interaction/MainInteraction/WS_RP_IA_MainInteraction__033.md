@@ -8,13 +8,13 @@ Verify that the Wallet correctly evaluates a combination of value constraints in
 
 - [OpenID4VP] Section 6.4
 
-## EUDI-wallet relevancy
-
-EUDI_generic | EUDI_required
-
 ## Profile applicability
 
 None
+
+## EUDI-wallet relevancy
+
+EUDI_generic | EUDI_required
 
 ## Preconditions
 

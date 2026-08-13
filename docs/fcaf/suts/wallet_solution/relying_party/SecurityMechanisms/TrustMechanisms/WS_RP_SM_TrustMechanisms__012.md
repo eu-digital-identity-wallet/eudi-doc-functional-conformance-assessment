@@ -33,4 +33,3 @@ EUDI_generic | EUDI_optional
 2. Wallet receives the request.
 3. The Wallet successfully extracts the URI string
     - Wallet fetches the list, validates that it follows the ETSI TS 119 612 schema (correctly handling XML or JSON).
-

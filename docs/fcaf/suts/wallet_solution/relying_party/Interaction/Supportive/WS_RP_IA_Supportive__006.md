@@ -33,4 +33,3 @@ EUDI_generic | EUDI_required
 2. Wallet receives request.
 3. Wallet cannot process request due to RAM/disk space.
 4. Verify the Wallet does NOT return a credential; instead, it returns an error response where the error parameter is exactly wallet_unavailable.
-

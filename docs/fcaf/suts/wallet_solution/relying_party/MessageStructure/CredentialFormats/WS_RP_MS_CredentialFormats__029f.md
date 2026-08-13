@@ -13,15 +13,15 @@ Verify that the Wallet includes a correctly formatted `idx` claim in the `status
 
 None
 
+## EUDI-wallet relevancy
+
+EUDI_generic | EUDI_required
+
 ## Technology
 
 Credential in SD-JWT VC format
 Credential with revocation status information
 Credential with revocation status information in Token Status List Format
-
-## EUDI-wallet relevancy
-
-EUDI_generic | EUDI_required
 
 ## Preconditions
 

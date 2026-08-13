@@ -36,4 +36,3 @@ None
 3. Wallet successfully parses the Request Object and x5c.
 4. Wallet successfully extracts the leaf certificate public key.
 5. Wallet successfully verifies the signature; request is processed; presentation flow proceeds.
-

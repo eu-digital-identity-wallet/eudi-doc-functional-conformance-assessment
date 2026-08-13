@@ -31,4 +31,3 @@ EUDI_generic | EUDI_required
 1. Wallet-verifier interaction is successfully initiated.
 2. Wallet successfully receives and parses the Authorization Request.
 3. Wallet returns an invalid_transaction_data error; presentation flow is not initiated.
-

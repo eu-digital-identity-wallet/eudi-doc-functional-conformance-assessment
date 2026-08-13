@@ -17,15 +17,15 @@ Verify that the Wallet includes a key binding JWT with an acceptable signature a
 
 None
 
+## EUDI-wallet relevancy
+
+EUDI_generic | EUDI_required
+
 ## Technology
 
 Credential in SD-JWT VC format
 Credential with key-binding
 Issuer uses compact serialization of SD-JWT and SD-JWT VC
-
-## EUDI-wallet relevancy
-
-EUDI_generic | EUDI_required
 
 ## Preconditions
 

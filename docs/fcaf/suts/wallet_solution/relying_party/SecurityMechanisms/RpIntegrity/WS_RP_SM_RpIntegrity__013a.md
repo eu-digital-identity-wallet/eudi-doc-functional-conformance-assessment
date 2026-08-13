@@ -11,13 +11,13 @@ Verify that the Wallet accepts a signed Request Object, when using OpenID4VP pre
 - [OpenID4VP] section 5
 - [RFC9101]
 
-## EUDI-wallet relevancy
-
-EUDI_generic | EUDI_required
-
 ## Profile applicability
 
 None
+
+## EUDI-wallet relevancy
+
+EUDI_generic | EUDI_required
 
 ## Technology
 

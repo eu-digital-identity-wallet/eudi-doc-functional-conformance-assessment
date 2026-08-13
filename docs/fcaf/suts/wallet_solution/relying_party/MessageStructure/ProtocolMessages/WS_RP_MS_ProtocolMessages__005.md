@@ -34,4 +34,3 @@ None
 2. Wallet receives the Authorization Request and recognizes the request_uri parameter.
 3. Wallet successfully fetches the Request Object from the reference URI.
 4. Wallet validates the typ header value as oauth-authz-req+jwt and proceeds with the presentation flow.
-

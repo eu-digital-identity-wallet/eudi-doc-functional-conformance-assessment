@@ -32,4 +32,3 @@ EUDI_generic | EUDI_required
 1. Wallet-verifier interaction is successfully initiated.
 2. Wallet receives the Authorization Request.
 3. Wallet rejects the Authorization Request and returns an invalid_request error; no credential is presented.
-

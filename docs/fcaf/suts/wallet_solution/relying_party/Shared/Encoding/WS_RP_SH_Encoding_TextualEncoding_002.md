@@ -57,4 +57,3 @@ EUDI_generic | EUDI_required
 4. Wallet correctly resolves the path pointer up to the null element.
 5. Wallet selects all elements of the currently selected array(s) at the null position (e.g. all type values across all entries of the degrees array).
 6. Wallet returns an Authorization Response containing all selected claim values.
-

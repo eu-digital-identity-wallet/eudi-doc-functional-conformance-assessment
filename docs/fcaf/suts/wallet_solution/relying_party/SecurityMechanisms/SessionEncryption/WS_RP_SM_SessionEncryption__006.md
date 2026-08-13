@@ -30,4 +30,3 @@ None
 ## Expected results
 
 1. Wallet raises an error.
-

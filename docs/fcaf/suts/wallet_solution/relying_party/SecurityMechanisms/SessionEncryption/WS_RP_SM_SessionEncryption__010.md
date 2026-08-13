@@ -35,4 +35,3 @@ None
     - (a) answers with an error with details (`invalid_client_metadata`),
     - (b) answers with an error without providing details or,
     - (c) discontinues the interaction.
-

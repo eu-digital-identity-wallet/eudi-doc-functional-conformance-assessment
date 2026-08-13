@@ -9,13 +9,13 @@ This test case verifies that the claim `family_name` is a String encoded in UTF-
 - [PID rulebook] Annex 3.01, Section 4.2 (Table 7)
 - [RFC7049] Section 2.1
 
-## EUDI-wallet relevancy
-
-EUDI_specific | EUDI_required
-
 ## Profile applicability
 
 The EUDI wallet contains a Credential in IETF SD-JWT VC format. `vct` claim includes base type of person identification "urn:eudi:pid:1".
+
+## EUDI-wallet relevancy
+
+EUDI_specific | EUDI_required
 
 ## Preconditions
 

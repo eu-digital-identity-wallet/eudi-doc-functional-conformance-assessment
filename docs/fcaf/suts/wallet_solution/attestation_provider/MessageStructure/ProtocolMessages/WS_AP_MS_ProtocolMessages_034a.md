@@ -11,13 +11,13 @@ Verify that the Wallet sends the HTTP Request Body in the correct format when se
 - [OpenID4VCI] section 5.1.4
 - [RFC9126] section 2
 
-## EUDI-wallet relevancy
-
-EUDI_generic | EUDI_required
-
 ## Profile applicability
 
 None
+
+## EUDI-wallet relevancy
+
+EUDI_generic | EUDI_required
 
 ## Technology
 

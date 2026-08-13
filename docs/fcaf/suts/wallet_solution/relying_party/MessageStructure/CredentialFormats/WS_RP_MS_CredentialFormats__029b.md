@@ -14,14 +14,14 @@ Verify that the Wallet includes a correctly formatted `status` claim in a SD-JWT
 
 None
 
+## EUDI-wallet relevancy
+
+EUDI_generic | EUDI_required
+
 ## Technology
 
 Credential in SD-JWT VC format
 Credential with revocation status information
-
-## EUDI-wallet relevancy
-
-EUDI_generic | EUDI_required
 
 ## Preconditions
 

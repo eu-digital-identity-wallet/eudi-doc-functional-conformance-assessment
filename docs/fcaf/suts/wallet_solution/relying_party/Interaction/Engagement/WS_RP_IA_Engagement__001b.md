@@ -10,13 +10,13 @@ Verify that, in a presentation flow via Redirects, the Wallet can be invoked thr
 - [HAIP] section 5.1
 - [OpenID4VP] section 9
 
-## EUDI-wallet relevancy
-
-EUDI_specific | EUDI_required
-
 ## Profile applicability
 
 None
+
+## EUDI-wallet relevancy
+
+EUDI_specific | EUDI_required
 
 ## Technology
 
@@ -37,4 +37,3 @@ Wallet supports to be invoked through the custom URL scheme "eu-eaap://".
 
 1. User-agent presents option to End-user to engage presentation.
 2. Wallet is invoked successfully.
-

@@ -32,4 +32,3 @@ EUDI_generic | EUDI_required
 ## Expected results
 
 1. The Status CBOR Map contains a valid "status_list" entry and the token is accepted.
-

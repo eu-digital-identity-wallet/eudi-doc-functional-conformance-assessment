@@ -12,13 +12,13 @@ Verify that the Wallet does not present a credential to a Relying Party, if a Wa
 
 ## Profile applicability
 
-## Technology
-
-WRPRC
-
 ## EUDI-wallet relevancy
 
 EUDI_specific | EUDI_required
+
+## Technology
+
+WRPRC
 
 ## Preconditions
 

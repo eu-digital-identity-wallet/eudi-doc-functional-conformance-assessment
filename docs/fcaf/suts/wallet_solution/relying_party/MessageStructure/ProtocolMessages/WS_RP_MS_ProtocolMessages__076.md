@@ -31,4 +31,3 @@ EUDI_generic | EUDI_required
 1. Wallet and Verifier can interact.
 2. Wallet receives the request.
 3. The wallet responds without error and includes the requested credential
-

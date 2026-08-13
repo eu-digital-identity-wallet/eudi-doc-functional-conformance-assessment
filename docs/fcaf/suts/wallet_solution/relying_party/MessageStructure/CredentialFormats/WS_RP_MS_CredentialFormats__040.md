@@ -34,4 +34,3 @@ None
     - (a) answers with an error with details (`unsupported_response_type`),
     - (b) answers with an error without providing details or,
     - (c) discontinues the interaction.
-

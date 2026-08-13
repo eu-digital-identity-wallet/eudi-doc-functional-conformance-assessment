@@ -11,13 +11,13 @@ Verify that the Wallet can handle an incorrect response when submitting a Pushed
 - [OpenID4VCI] section 5.1.4
 - [RFC9126] section 2
 
-## EUDI-wallet relevancy
-
-EUDI_generic | EUDI_required
-
 ## Profile applicability
 
 None
+
+## EUDI-wallet relevancy
+
+EUDI_generic | EUDI_required
 
 ## Technology
 

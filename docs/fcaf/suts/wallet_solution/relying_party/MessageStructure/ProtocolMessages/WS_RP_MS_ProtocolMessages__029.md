@@ -31,4 +31,3 @@ None
 1. Wallet-verifier interaction is successfully initiated.
 2. Wallet successfully receives and parses the Authorization Request.
 3. Wallet applies the attestation to all Credentials requested in the dcql_query; presentation flow proceeds.
-

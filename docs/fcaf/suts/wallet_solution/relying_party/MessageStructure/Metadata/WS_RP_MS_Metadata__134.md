@@ -35,4 +35,3 @@ None
 3. Wallet_metadata.jwks is correctly populated with public encryption keys and algorithm preferences.
 4. Wallet successfully receives the encrypted Request Object.
 5. Wallet successfully decrypts and processes the Request Object; presentation flow proceeds.
-

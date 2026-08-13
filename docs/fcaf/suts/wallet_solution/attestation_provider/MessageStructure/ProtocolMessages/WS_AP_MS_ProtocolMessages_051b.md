@@ -11,13 +11,13 @@ Verify that the Wallet sends a correctly formatted  `jwt` in the `proofs` in the
 - [HAIP] section 4.5.1
 - [OpenID4VCI] section 8.2, F.1
 
-## EUDI-wallet relevancy
-
-EUDI_generic | EUDI_required
-
 ## Profile applicability
 
 Wallet uses the `jwt` proof type to convey a key attestation in Credential Requests.
+
+## EUDI-wallet relevancy
+
+EUDI_generic | EUDI_required
 
 ## Preconditions
 

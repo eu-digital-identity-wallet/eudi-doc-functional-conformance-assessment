@@ -35,4 +35,3 @@ None
 3. Wallet successfully parses the Request Object.
 4. Wallet successfully resolves the DID Document and obtains the public key.
 5. Wallet uses client_metadata for all non-key Verifier metadata; presentation flow proceeds.
-

@@ -33,4 +33,3 @@ None
 2. Wallet successfully receives the Authorization Request.
 3. Wallet successfully parses both sources.
 4. Wallet terminates processing and returns an invalid_request error due to client_id mismatch; presentation flow is not initiated.
-

@@ -33,4 +33,3 @@ None
 2. Wallet successfully receives the Authorization Request.
 3. Wallet successfully parses and validates the path pointer structure.
 4. Wallet aborts processing and returns an error (e.g. invalid_request) due to a non-string component in the mdoc claims path pointer; presentation flow is not initiated.
-

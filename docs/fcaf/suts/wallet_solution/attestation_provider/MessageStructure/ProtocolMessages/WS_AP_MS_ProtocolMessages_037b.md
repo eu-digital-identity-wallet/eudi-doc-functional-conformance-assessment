@@ -13,13 +13,13 @@ Verify that the Wallet sends a syntactically correct header of the Wallet Instan
 - [RFC9126] section 2.1
 - [IETF draft-attestation-based-client-auth] section 5.1
 
-## EUDI-wallet relevancy
-
-EUDI_generic | EUDI_required
-
 ## Profile applicability
 
 None
+
+## EUDI-wallet relevancy
+
+EUDI_generic | EUDI_required
 
 ## Technology
 

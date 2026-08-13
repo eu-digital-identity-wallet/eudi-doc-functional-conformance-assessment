@@ -33,4 +33,3 @@ EUDI_generic | EUDI_required
 2. Wallet successfully receives the Request Object.
 3. Wallet successfully parses the Request Object.
 4. Wallet rejects the Request Object and returns an invalid_request error due to FQDN / Client Identifier hostname mismatch; presentation flow is not initiated.
-

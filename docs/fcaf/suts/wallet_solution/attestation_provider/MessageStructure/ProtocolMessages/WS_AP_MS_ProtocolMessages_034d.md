@@ -11,13 +11,13 @@ Verify that the Wallet sends a `request` parameter in the HTTP request is a corr
 - [OpenID4VCI] section 5.1.4
 - [RFC9126] section 3
 
-## EUDI-wallet relevancy
-
-EUDI_generic | EUDI_required
-
 ## Profile applicability
 
 Wallet that uses JAR during PAR for the Authorization Request to the Authorization Server on Credential Issuance.
+
+## EUDI-wallet relevancy
+
+EUDI_generic | EUDI_required
 
 ## Technology
 

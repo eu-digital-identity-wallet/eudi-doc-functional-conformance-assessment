@@ -35,4 +35,3 @@ None
 3. Wallet successfully parses the Request Object.
 4. Wallet successfully validates the signature.
 5. Wallet processes the request and the presentation flow proceeds normally.
-

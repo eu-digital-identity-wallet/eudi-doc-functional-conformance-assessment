@@ -10,13 +10,13 @@ Verify that the Wallet can handle a correctly formatted Credential Offer, using 
 - [HAIP] section 4.2
 - [OpenID4VCI] section 4.1
 
-## EUDI-wallet relevancy
-
-EUDI_generic | EUDI_required
-
 ## Profile applicability
 
 Wallet supports the Issuer initiated issuance flow.
+
+## EUDI-wallet relevancy
+
+EUDI_generic | EUDI_required
 
 ## Technology
 

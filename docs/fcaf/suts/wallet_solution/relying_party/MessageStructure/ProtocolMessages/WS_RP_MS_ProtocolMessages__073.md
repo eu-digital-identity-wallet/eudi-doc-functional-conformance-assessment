@@ -31,4 +31,3 @@ None
 1. Wallet and Verifier can interact.
 2. Wallet receives the request.
 3. The wallet responds without error with credential matching dependent on the "meta" property.
-

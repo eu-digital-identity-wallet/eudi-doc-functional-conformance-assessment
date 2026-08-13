@@ -8,13 +8,13 @@ This test case verifies that the claim `issuing_authority` is a String encoded i
 
 - [PID rulebook] Annex 3.01, Section 4.2 (Table 8)
 
-## EUDI-wallet relevancy
-
-EUDI_specific | EUDI_required
-
 ## Profile applicability
 
 The EUDI wallet contains a Credential in SD-JWT VC format with vct = "urn:eudi:pid:". The claim `issuing_authority` is included in a person identification data.
+
+## EUDI-wallet relevancy
+
+EUDI_specific | EUDI_required
 
 ## Preconditions
 

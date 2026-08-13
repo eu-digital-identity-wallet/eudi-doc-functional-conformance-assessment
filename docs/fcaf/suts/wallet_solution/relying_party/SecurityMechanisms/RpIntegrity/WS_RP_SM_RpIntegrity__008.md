@@ -35,4 +35,3 @@ None
 3. Wallet successfully parses the Request Object.
 4. Wallet successfully extracts the public key from the cnf claim.
 5. Wallet successfully verifies proof of possession; presentation flow proceeds.
-

@@ -33,4 +33,3 @@ None
 2. Wallet successfully receives the Authorization Request.
 3. Wallet detects that the request_uri scheme is not HTTPS.
 4. Wallet refuses to connect or rejects the request and returns an invalid_request error due to non-HTTPS scheme; presentation flow is not initiated.
-

@@ -35,4 +35,3 @@ None
 3. Wallet_nonce is correctly sent in the POST request.
 4. Wallet successfully receives the Request Object.
 5. Wallet terminates request processing due to missing wallet_nonce claim; presentation flow is not initiated.
-

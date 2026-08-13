@@ -33,4 +33,3 @@ None
 2. Wallet successfully receives the Authorization Request.
 3. Wallet successfully parses the Authorization Request.
 4. Wallet ignores the unrecognized attestation type; processing continues with remaining valid request elements; presentation flow proceeds.
-

@@ -35,4 +35,3 @@ None
 3. Wallet successfully parses the Authorization Request and the DCQL query.
 4. Wallet validates the path pointer structure.
 5. Wallet aborts processing and returns an error (e.g. invalid_request) due to invalid path pointer element type; presentation flow is not initiated.
-

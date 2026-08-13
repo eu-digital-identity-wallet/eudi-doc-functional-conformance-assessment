@@ -10,13 +10,13 @@ This test case verifies that the value of the claim `address.country` contains a
 - [ISO 3166-1:2020] 6.1
 - [ISO 3166-1:2020] 8.3
 
-## EUDI-wallet relevancy
-
-EUDI_specific | EUDI_optional
-
 ## Profile applicability
 
 The EUDI wallet contains a Credential in SD-JWT VC format with vct = "urn:eudi:pid:". The claim `address.country` is included in a person identification data.
+
+## EUDI-wallet relevancy
+
+EUDI_specific | EUDI_optional
 
 ## Preconditions
 

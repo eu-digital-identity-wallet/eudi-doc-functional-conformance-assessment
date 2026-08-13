@@ -59,4 +59,3 @@ Wallet has a credential:
 4. Wallet correctly resolves the path pointer to the targeted key in the Credential.
 5. Wallet selects the value associated with that key (e.g. "Arthur Dent" for path: ["name"]).
 6. Wallet returns an Authorization Response containing only the selected claim value.
-

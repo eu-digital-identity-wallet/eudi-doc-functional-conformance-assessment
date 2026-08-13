@@ -29,4 +29,3 @@ None
 
 1. Wallet-verifier interaction is successfully initiated.
 2. The Wallet successfully receives the Authorization Request.
-

@@ -32,4 +32,3 @@ None
 1. Wallet-verifier interaction is successfully initiated.
 2. Wallet successfully receives and parses the Authorization Request.
 3. Wallet rejects the Authorization Request and returns an invalid_scope error; presentation flow is not initiated.
-

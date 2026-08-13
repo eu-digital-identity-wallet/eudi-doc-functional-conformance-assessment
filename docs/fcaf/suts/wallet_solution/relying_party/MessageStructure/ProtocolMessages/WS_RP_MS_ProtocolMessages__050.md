@@ -33,4 +33,3 @@ None
 2. Wallet successfully receives the Authorization Request.
 3. Wallet successfully parses both sources.
 4. Wallet verifies the client_id values match exactly; request is processed; presentation flow proceeds.
-

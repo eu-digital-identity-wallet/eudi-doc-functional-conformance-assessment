@@ -8,13 +8,13 @@ This test case verifies that the claim `phone_number` is a String encoded in UTF
 
 - [PID rulebook] Annex 3.01, Section 4.2 (Table 7)
 
-## EUDI-wallet relevancy
-
-EUDI_specific | EUDI_optional
-
 ## Profile applicability
 
 The EUDI wallet contains a Credential in SD-JWT VC format with vct = "urn:eudi:pid:". The claim `phone_number` is included in a person identification data.
+
+## EUDI-wallet relevancy
+
+EUDI_specific | EUDI_optional
 
 ## Preconditions
 

@@ -34,4 +34,3 @@ None
 2. Wallet successfully parses the Authorization Request.
 3. Wallet proceeds without Verifier capability information.
 4. Wallet POSTs to the request_uri with wallet_metadata containing its full set of supported capabilities; Wallet retrieves the Request Object and proceeds with the flow.
-

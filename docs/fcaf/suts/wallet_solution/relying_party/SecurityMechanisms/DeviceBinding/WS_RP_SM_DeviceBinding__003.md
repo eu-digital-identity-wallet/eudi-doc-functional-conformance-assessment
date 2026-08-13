@@ -33,4 +33,3 @@ None
 2. Wallet successfully receives the Authorization Request.
 3. Wallet successfully parses the Authorization Request and the attestation.
 4. Wallet rejects the attestation and returns an invalid_request error due to missing nonce or client_id in the signature object; presentation flow is not initiated.
-

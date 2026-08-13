@@ -12,13 +12,13 @@ Verify that the Wallet sends a correct `typ` header of the proof with Key Attest
 - [OpenID4VCI] section F.1
 - [RFC7515] section 4.1.9
 
-## EUDI-wallet relevancy
-
-EUDI_generic | EUDI_required
-
 ## Profile applicability
 
 Wallet uses the `jwt` proof type to convey a key attestation in Credential Requests.
+
+## EUDI-wallet relevancy
+
+EUDI_generic | EUDI_required
 
 ## Preconditions
 

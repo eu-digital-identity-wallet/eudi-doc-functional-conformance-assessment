@@ -29,4 +29,3 @@ EUDI_generic | EUDI_required
 
 1. Wallet-verifier interaction is successfully initiated.
 2. Wallet processes the Authorization Request successfully using the dcql_query.
-

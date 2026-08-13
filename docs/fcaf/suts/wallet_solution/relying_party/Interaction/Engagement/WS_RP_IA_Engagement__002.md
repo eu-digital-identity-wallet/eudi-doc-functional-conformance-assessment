@@ -10,13 +10,13 @@ Verify that the Wallet supports invocation via the W3C Digital Credentials API o
 - [HAIP] section 5.2
 - [OpenID4VP] section A
 
-## EUDI-wallet relevancy
-
-EUDI_generic | EUDI_required
-
 ## Profile applicability
 
 None
+
+## EUDI-wallet relevancy
+
+EUDI_generic | EUDI_required
 
 ## Technology
 

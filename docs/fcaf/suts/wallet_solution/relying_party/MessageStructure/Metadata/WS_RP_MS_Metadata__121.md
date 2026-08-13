@@ -33,4 +33,3 @@ EUDI_generic | EUDI_required
 2. Wallet successfully receives the Request Object.
 3. Wallet successfully parses the Request Object and the attestation JWT.
 4. Wallet rejects the Request Object and returns an invalid_request error due to redirect_uri mismatch; presentation flow is not initiated.
-

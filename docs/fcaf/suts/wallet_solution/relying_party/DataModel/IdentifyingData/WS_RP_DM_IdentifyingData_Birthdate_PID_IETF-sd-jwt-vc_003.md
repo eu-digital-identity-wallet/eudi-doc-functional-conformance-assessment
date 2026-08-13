@@ -9,13 +9,13 @@ This test case verifies that the format of the claim `birthdate` is correct. Not
 - [PID rulebook] Annex 3.01 paragraph 3.1.4, Section 4.2 (Table 7)
 - [RFC3339] Section 5.6
 
-## EUDI-wallet relevancy
-
-EUDI_specific | EUDI_required
-
 ## Profile applicability
 
 The EUDI wallet contains a Credential in IETF SD-JWT VC format. `vct` claim includes base type of person identification "urn:eudi:pid:1".
+
+## EUDI-wallet relevancy
+
+EUDI_specific | EUDI_required
 
 ## Preconditions
 

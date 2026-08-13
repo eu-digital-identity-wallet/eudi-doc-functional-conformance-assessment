@@ -29,4 +29,3 @@ None
 
 1. Wallet-verifier interaction is successfully initiated.
 2. Wallet accepts the claims path pointer and resolves the referenced claim successfully.
-

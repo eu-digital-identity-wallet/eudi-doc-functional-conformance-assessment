@@ -10,13 +10,13 @@ Verify that, in the presentation flow via Redirects, a non-"Request URI method `
 - [OpenID4VP] section 5, 5.1
 - [RFC9101] section 5
 
-## EUDI-wallet relevancy
-
-EUDI_generic | EUDI_optional
-
 ## Profile applicability
 
 Wallet does not support the Request URI Method `post`
+
+## EUDI-wallet relevancy
+
+EUDI_generic | EUDI_optional
 
 ## Technology
 

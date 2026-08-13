@@ -2,7 +2,7 @@
 
 ## Objective
 
-Verify that when Wallet is presenting the Credential in IETF SD-JWT VC format, the X.509 certificate of the trust anchor is not included in the `x5c` JOSE header of the SD-JWT VC.
+Verify that when Wallet is presenting the Credential in IETF SD-JWT VC format, the X.509 certificate of the trust anchor is not included in the `x5c` JOSE header of the SD-JWT VC.
 
 ## References
 

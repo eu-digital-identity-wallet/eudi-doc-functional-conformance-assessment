@@ -35,4 +35,3 @@ None
 3. Wallet_metadata.jwks is correctly populated.
 4. Wallet successfully receives the response.
 5. Wallet rejects the unencrypted Request Object and returns an invalid_request error; presentation flow is not initiated.
-

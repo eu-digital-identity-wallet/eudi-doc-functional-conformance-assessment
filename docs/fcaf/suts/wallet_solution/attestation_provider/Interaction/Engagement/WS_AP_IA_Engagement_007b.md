@@ -9,13 +9,13 @@ Verify that, for issuance via Redirects, the Wallet can be invoked through the `
 - [ETSI TS 119 472-3] section 4.1
 - [HAIP] section 4.2
 
-## EUDI-wallet relevancy
-
-EUDI_specific | EUDI_required
-
 ## Profile applicability
 
 None
+
+## EUDI-wallet relevancy
+
+EUDI_specific | EUDI_required
 
 ## Technology
 
@@ -37,4 +37,3 @@ Wallet invocation uses the required custom URL scheme `eu-eaa-offer://`.
 
 1. User-agent presents option to End-user to engage issuance.
 2. Wallet is invoked successfully.
-

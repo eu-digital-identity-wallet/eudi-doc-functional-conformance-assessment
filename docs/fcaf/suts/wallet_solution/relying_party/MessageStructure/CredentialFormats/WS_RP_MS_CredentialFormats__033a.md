@@ -14,14 +14,14 @@ Verify that the Wallet includes the `status` element in a mdoc presentation, whe
 
 None
 
+## EUDI-wallet relevancy
+
+EUDI_generic | EUDI_required
+
 ## Technology
 
 Credential in mdoc format
 Credential with revocation status information
-
-## EUDI-wallet relevancy
-
-EUDI_generic | EUDI_required
 
 ## Preconditions
 

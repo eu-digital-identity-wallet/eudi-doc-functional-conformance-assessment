@@ -10,13 +10,13 @@ Verify that the Wallet treats a Credential Error Response containing `credential
 - [HAIP] section 4
 - [OpenID4VCI] section 8.3.1.2
 
-## EUDI-wallet relevancy
-
-EUDI_generic | EUDI_required
-
 ## Profile applicability
 
 None
+
+## EUDI-wallet relevancy
+
+EUDI_generic | EUDI_required
 
 ## Technology
 

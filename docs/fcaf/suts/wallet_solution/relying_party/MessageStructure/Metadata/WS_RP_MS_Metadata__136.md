@@ -33,4 +33,3 @@ None
 2. Wallet successfully receives the Authorization Request.
 3. Wallet correctly prepares wallet_metadata.
 4. Wallet_metadata includes the request_object_signing_alg_values_supported parameter listing all supported Request Object signing algorithms.
-

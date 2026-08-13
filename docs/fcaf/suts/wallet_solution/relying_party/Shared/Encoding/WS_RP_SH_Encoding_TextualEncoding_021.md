@@ -39,4 +39,3 @@ EUDI_generic | EUDI_required
 2. Wallet successfully receives the Authorization Request.
 3. Wallet successfully selects the first_name data element value ("Alice").
 4. Wallet returns an Authorization Response containing "Alice" CBOR-encoded; presentation flow proceeds.
-

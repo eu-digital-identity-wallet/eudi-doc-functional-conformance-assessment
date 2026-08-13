@@ -2,7 +2,7 @@
 
 ## Objective
 
-Verify that Wallet supports receiving a Credential Query from the Verifier in DCQL language, including the object `trusted_authorities` (aki)-based as defined in section 6.1.1.1 of [OIDF.OID4VP].
+Verify that Wallet supports receiving a Credential Query from the Verifier in DCQL language, including the object `trusted_authorities` (aki)-based as defined in section 6.1.1.1 of [OIDF.OID4VP].
 
 ## References
 

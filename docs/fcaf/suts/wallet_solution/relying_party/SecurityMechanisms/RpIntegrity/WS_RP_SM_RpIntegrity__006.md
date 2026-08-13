@@ -35,4 +35,3 @@ None
 3. Wallet successfully parses the Request Object.
 4. Wallet successfully resolves the DID Document and locates the public key.
 5. Wallet successfully verifies the signature using the public key from the DID Document verificationMethod; request is processed.
-

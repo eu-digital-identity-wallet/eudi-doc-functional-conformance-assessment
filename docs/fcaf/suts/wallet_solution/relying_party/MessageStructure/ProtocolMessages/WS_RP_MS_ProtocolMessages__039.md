@@ -33,4 +33,3 @@ None
 2. Wallet successfully receives the Authorization Request.
 3. Wallet successfully parses the Authorization Request.
 4. Wallet rejects the Authorization Request and returns an invalid_request error due to the invalid redirect URI; presentation flow is not initiated.
-

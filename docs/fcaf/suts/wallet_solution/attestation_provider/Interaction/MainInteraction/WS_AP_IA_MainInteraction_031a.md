@@ -10,13 +10,13 @@ Verify that the Wallet handles a correct Credential Response.
 - [HAIP] section 4
 - [OpenID4VCI] section 8.3
 
-## EUDI-wallet relevancy
-
-EUDI_generic | EUDI_required
-
 ## Profile applicability
 
 None
+
+## EUDI-wallet relevancy
+
+EUDI_generic | EUDI_required
 
 ## Technology
 

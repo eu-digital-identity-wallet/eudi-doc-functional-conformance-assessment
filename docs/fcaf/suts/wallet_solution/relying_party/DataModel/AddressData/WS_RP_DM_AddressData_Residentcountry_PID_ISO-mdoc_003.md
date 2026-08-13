@@ -10,13 +10,13 @@ This test case verifies that the DataElementValue of data element `resident_coun
 - [ISO 3166-1:2020] 6.1
 - [ISO 3166-1:2020] 8.3
 
-## EUDI-wallet relevancy
-
-EUDI_specific | EUDI_optional
-
 ## Profile applicability
 
 The EUDI wallet contains a Credential in ISO-mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element `resident_country` is present in the mdoc data.
+
+## EUDI-wallet relevancy
+
+EUDI_specific | EUDI_optional
 
 ## Preconditions
 

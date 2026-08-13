@@ -31,4 +31,3 @@ None
 1. Wallet and Verifier can interact.
 2. Wallet receives the request.
 3. The wallet detects a missing credential_sets "options" property and returns an invalid_request error.
-

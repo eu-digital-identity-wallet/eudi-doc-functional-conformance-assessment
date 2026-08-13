@@ -33,4 +33,3 @@ EUDI_generic | EUDI_optional
 3. The Wallet checks the issuer of its stored credential against the entries in the Trusted List.
     - It confirms the Issuer's status according to the list's metadata.
     - The Wallet displays the credential to the user because the Issuer was found and validated in the ETSI list.
-

@@ -40,4 +40,3 @@ None
 5. Wallet asks for user consent.
 6. This is the case.
 7. Wallet answers Credential Query successfully
-

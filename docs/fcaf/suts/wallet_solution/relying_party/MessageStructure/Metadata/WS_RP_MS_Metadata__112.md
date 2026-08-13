@@ -33,4 +33,3 @@ None
 2. Wallet successfully receives the Authorization Request.
 3. Wallet successfully parses the Authorization Request.
 4. Wallet successfully validates the trust_chain, establishes Verifier trust, and proceeds with the presentation flow.
-

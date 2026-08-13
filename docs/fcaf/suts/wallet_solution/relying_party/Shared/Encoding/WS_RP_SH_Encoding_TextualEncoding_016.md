@@ -41,4 +41,3 @@ EUDI_generic | EUDI_required
 3. Wallet successfully parses the Authorization Request and the DCQL query.
 4. Wallet attempts to resolve the namespace.
 5. Wallet aborts processing and returns an error (e.g. invalid_request) due to the namespace not being present in the mdoc Credential; presentation flow is not initiated.
-

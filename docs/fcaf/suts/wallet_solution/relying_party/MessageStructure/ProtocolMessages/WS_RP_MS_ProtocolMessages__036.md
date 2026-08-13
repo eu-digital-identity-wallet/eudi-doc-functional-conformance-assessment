@@ -2,7 +2,7 @@
 
 ## Objective
 
-Test that when wallet receives a response_type of "vp_token" in an Authorization Request, that a successful response includes the vp_token parameter.
+Test that when wallet receives a response_type of "vp_token" in an Authorization Request, that a successful response includes the vp_token parameter.
 
 ## References
 
@@ -35,4 +35,3 @@ None
 3. Wallet successfully parses and validates the Authorization Request.
 4. Wallet identifies and selects a matching credential.
 5. Wallet returns a successful Authorization Response that includes the vp_token parameter.
-

@@ -2,7 +2,7 @@
 
 ## Objective
 
-Verify that when the Wallet presentation to the Verifier includes `status` claim, it contains `status_list` as defined in [I-D.ietf-oauth-status-list].
+Verify that when the Wallet presentation to the Verifier includes `status` claim, it contains `status_list` as defined in [I-D.ietf-oauth-status-list].
 
 ## References
 
@@ -41,4 +41,3 @@ None
 5. Wallet presents Credential in IETF SD-JWT VC format.
 6. `status` claim is present.
 7. `status` claim contains `status_list`.
-

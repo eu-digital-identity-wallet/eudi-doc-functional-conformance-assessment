@@ -35,4 +35,3 @@ None
 3. Wallet successfully parses the Request Object.
 4. Wallet resolves the DID Document; signing key is not found in verificationMethod.
 5. Wallet rejects the Request Object and returns an invalid_request error due to signature verification failure; presentation flow is not initiated.
-

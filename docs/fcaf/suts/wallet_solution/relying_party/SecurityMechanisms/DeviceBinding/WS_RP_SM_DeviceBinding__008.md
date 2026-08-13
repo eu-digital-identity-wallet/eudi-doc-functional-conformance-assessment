@@ -41,4 +41,3 @@ EUDI_generic | EUDI_required
 5. This is the case.
 6. Wallet presents Credential in IETF SD-JWT VC format.
 7. `cnf` claim is used within the SD-JWT component of the SD-JWT VC
-

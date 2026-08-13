@@ -32,4 +32,3 @@ EUDI_generic | EUDI_required
 1. Wallet-verifier interaction is successfully initiated.
 2. Wallet receives and parses the Authorization Request successfully.
 3. Wallet informs the user that no suitable credential is available and returns an access_denied error to the Verifier; presentation flow is not initiated.
-

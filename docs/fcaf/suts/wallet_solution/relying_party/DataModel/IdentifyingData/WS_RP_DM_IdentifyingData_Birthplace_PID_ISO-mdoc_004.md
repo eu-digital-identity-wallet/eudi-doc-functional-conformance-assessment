@@ -9,13 +9,13 @@ This test case verifies that the value of each data element present in `place_of
 - [PID rulebook] Annex 3.01 paragraph 3.1.5, Section 4.1 (Table 6)
 - [RFC7049] Section 2.1
 
-## EUDI-wallet relevancy
-
-EUDI_specific | EUDI_required
-
 ## Profile applicability
 
 The EUDI wallet contains a Credential in mdoc format with DocType = "eu.europa.ec.eudi.pid.1".
+
+## EUDI-wallet relevancy
+
+EUDI_specific | EUDI_required
 
 ## Preconditions
 

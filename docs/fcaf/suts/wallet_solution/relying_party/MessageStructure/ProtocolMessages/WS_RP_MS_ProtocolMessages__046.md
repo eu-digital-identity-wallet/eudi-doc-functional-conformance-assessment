@@ -35,4 +35,3 @@ None
 3. wallet_nonce is correctly included in the POST request body.
 4. Wallet successfully receives the Request Object.
 5. Wallet rejects the Request Object and returns an invalid_request error due to wallet_nonce mismatch or absence; presentation flow is not initiated.
-

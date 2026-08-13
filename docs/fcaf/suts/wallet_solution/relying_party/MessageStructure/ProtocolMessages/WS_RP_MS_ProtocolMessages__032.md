@@ -31,4 +31,3 @@ None
 1. Wallet-verifier interaction is successfully initiated.
 2. Wallet successfully parses the Authorization Request.
 3. Wallet processes the request successfully without returning a state in the Authorization Response.
-

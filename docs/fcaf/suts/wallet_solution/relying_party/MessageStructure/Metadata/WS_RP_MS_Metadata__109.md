@@ -33,4 +33,3 @@ None
 2. Wallet successfully receives the Authorization Request.
 3. Wallet successfully parses the Authorization Request.
 4. Wallet ignores Verifier metadata provided outside the client_metadata parameter and processes only the metadata within client_metadata; flow proceeds accordingly.
-

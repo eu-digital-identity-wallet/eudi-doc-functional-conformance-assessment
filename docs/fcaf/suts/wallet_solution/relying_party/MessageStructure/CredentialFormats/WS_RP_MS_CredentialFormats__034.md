@@ -34,4 +34,3 @@ None
 3. The Wallet retrieves the mdoc from secure storage, noting CBOR format.
     - The Wallet converts the CBOR value into a JSON-compatible representation to compare it against the query filter - it uses the guidance from Section 6.1 of [RFC8949] to avoid issues like Data Type fidelity
     - The Wallet performs the matching logic
-

@@ -10,13 +10,13 @@ Verify that the Wallet sends a Credential Request using a correctly formatted HT
 - [HAIP] section 4
 - [OpenID4VCI] section 8.2
 
-## EUDI-wallet relevancy
-
-EUDI_generic | EUDI_required
-
 ## Profile applicability
 
 None
+
+## EUDI-wallet relevancy
+
+EUDI_generic | EUDI_required
 
 ## Technology
 

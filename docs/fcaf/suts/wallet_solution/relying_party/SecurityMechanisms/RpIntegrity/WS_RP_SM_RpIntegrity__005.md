@@ -33,4 +33,3 @@ None
 2. Wallet successfully receives the Request Object.
 3. Wallet successfully parses the Request Object.
 4. Wallet rejects the Authorization Request due to signature validation failure; presentation flow is not initiated.
-

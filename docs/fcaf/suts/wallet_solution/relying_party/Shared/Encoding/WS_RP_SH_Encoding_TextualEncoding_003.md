@@ -57,4 +57,3 @@ EUDI_generic | EUDI_required
 4. Wallet correctly resolves the path pointer up to the integer element.
 5. Wallet selects the array element at the specified index (e.g. "Betelgeusian" for path: ["nationalities", 1], where nationalities[1] = "Betelgeusian").
 6. Wallet returns an Authorization Response containing only the selected array element value.
-

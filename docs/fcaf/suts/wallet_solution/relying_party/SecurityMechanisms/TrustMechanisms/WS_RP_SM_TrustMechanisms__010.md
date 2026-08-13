@@ -35,4 +35,3 @@ EUDI_generic | EUDI_optional
     - It confirms the Issuer's status according to the list's metadata.
     - The Wallet does not use the credential if the Issuer is not on the list (even if the credential is valid otherwise).
     - Wallet will make sure it only returns privacy-safe error response to verifier.
-

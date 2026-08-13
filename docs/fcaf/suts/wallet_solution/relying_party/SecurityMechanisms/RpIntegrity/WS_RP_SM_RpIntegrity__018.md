@@ -35,4 +35,3 @@ None
 3. Wallet successfully parses the Request Object and x5c.
 4. Wallet successfully validates the X.509 trust chain.
 5. Wallet successfully validates the signature; request is accepted; presentation flow proceeds.
-

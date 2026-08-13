@@ -35,4 +35,3 @@ EUDI_generic | EUDI_optional
     - It confirms the Issuer's status according to the list's metadata.
     - The wallet will not use the credential and returns an error if the Trusted List signature is invalid or if the URL in the query is unreachable.
     - Wallet will make sure it only returns privacy-safe error response to verifier.
-

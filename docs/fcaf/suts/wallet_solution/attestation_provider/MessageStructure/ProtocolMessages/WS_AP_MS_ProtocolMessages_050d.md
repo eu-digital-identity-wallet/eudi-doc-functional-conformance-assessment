@@ -10,13 +10,13 @@ Verify that the Wallet sends a correctly formatted `proofs` parameter in the Cre
 - [HAIP] section 4.5
 - [OpenID4VCI] section 8.2
 
-## EUDI-wallet relevancy
-
-EUDI_generic | EUDI_required
-
 ## Profile applicability
 
 None
+
+## EUDI-wallet relevancy
+
+EUDI_generic | EUDI_required
 
 ## Technology
 

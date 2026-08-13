@@ -8,13 +8,13 @@ Verify that the Wallet responds to a DCQL-query for two data elements with both 
 
 - [OpenID4VP] section 7.2
 
-## EUDI-wallet relevancy
-
-EUDI_generic | EUDI_required
-
 ## Profile applicability
 
 None
+
+## EUDI-wallet relevancy
+
+EUDI_generic | EUDI_required
 
 ## Technology
 
@@ -42,4 +42,3 @@ Credential in mdoc format
     1. The presentation is for a credential in mdoc format, and has the doctype as requested.
     2. The presentation contains both requested data elements.
     3. The presentation does not contain any other data elements in the mdoc credential.
-

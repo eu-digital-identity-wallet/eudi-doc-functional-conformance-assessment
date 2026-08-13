@@ -32,4 +32,3 @@ EUDI_generic | EUDI_required
 1. Wallet-verifier interaction is successfully initiated.
 2. Wallet receives and parses the Authorization Request successfully.
 3. Wallet presents the user with all matching credentials for selection; presentation flow proceeds after user selection.
-

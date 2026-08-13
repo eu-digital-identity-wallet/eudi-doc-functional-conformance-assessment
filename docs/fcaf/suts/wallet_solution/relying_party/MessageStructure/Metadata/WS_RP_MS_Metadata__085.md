@@ -32,4 +32,3 @@ EUDI_generic | EUDI_required
 ## Expected results
 
 1. The "idx" value is a non-negative integer and the token is accepted.
-

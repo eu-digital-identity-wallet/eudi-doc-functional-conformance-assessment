@@ -9,13 +9,13 @@ Verify that, for issuance via Redirects, the Wallet can be invoked through the `
 - [ETSI TS 119 472-3]  section 4.1
 - [HAIP] section 4.2
 
-## EUDI-wallet relevancy
-
-EUDI_generic | EUDI_optional
-
 ## Profile applicability
 
 Wallet supports invocation through the `haip-vci://` custom URL scheme.
+
+## EUDI-wallet relevancy
+
+EUDI_generic | EUDI_optional
 
 ## Technology
 
@@ -36,4 +36,3 @@ Wallet supports the Issuer initiated issuance flow.
 
 1. User-agent presents option to End-user to engage issuance.
 2. Wallet is invoked successfully.
-

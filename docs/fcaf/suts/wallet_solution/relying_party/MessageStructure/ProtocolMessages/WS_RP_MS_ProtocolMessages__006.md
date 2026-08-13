@@ -34,4 +34,3 @@ None
 2. Wallet receives the Authorization Request and recognizes the request_uri parameter.
 3. Wallet successfully fetches the Request Object from the reference URI.
 4. Wallet does NOT process the request and returns an invalid_request error.
-

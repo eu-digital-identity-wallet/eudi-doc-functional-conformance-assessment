@@ -55,4 +55,3 @@ EUDI_generic | EUDI_required
 3. Wallet successfully parses the Authorization Request and the DCQL query.
 4. Wallet evaluates the path pointer.
 5. Wallet aborts processing and returns an error (e.g. invalid_request) due to the null component being applied to a non-array element; presentation flow is not initiated.
-

@@ -33,4 +33,3 @@ None
 2. Wallet receives request.
 3. True: The Wallet does NOT proceed to credential selection or user authorization.
 4. Verify: The Wallet returns an error response where the error parameter is exactly invalid_request.
-

@@ -39,4 +39,3 @@ EUDI_generic | EUDI_required
 2. Wallet successfully receives the Authorization Request.
 3. Wallet successfully resolves the namespace.
 4. Wallet aborts processing and returns an error (e.g. invalid_request) because the data element identifier is not present in the namespace; presentation flow is not initiated.
-

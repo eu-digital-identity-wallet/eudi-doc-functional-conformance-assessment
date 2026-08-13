@@ -12,13 +12,13 @@ Verify that the Wallet uses a valid signature value for signing the proof with K
 - [OpenID4VCI] section 8.2, F.1
 - [ECCG ACM] section 5.2
 
-## EUDI-wallet relevancy
-
-EUDI_generic | EUDI_required
-
 ## Profile applicability
 
 Wallet uses the `jwt` proof type to convey a key attestation in Credential Requests.
+
+## EUDI-wallet relevancy
+
+EUDI_generic | EUDI_required
 
 ## Technology
 

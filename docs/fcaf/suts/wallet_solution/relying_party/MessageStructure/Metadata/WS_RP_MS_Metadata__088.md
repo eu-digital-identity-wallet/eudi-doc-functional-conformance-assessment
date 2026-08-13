@@ -32,4 +32,3 @@ EUDI_generic | EUDI_required
 ## Expected results
 
 1. The "uri" value is a valid URI and the token is accepted.
-

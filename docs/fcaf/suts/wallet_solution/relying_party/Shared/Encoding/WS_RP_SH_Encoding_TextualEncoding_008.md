@@ -56,4 +56,3 @@ EUDI_generic | EUDI_required
 4. Wallet evaluates the path pointer.
 5. Wallet removes element(s) lacking the targeted key from the selection without aborting (e.g. a degrees entry without a type field is dropped, while "Bachelor of Science" is retained).
 6. Wallet returns an Authorization Response containing only the retained selected values; presentation flow proceeds.
-

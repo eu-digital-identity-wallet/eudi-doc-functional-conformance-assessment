@@ -2,7 +2,7 @@
 
 ## Objective
 
-Verify that if the credential has cryptographic holder binding, Wallet presents a KB-JWT, as defined in [I-D.ietf-oauth-sd-jwt-vc] when presenting SD-JWT VC.
+Verify that if the credential has cryptographic holder binding, Wallet presents a KB-JWT, as defined in [I-D.ietf-oauth-sd-jwt-vc] when presenting SD-JWT VC.
 
 ## References
 

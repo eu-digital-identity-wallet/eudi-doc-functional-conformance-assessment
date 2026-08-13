@@ -35,4 +35,3 @@ None
 3. Wallet successfully parses the Request Object.
 4. Wallet processes the audience correctly per DC API rules.
 5. Wallet uses client_metadata for all non-key Verifier metadata; presentation flow proceeds within the DC API context.
-

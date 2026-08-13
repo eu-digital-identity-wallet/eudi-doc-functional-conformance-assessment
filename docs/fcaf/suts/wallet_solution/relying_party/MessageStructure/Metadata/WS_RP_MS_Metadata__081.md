@@ -32,4 +32,3 @@ EUDI_generic | EUDI_required
 ## Expected results
 
 1. The "status" claim contains a valid "status_list" object and the token is accepted.
-

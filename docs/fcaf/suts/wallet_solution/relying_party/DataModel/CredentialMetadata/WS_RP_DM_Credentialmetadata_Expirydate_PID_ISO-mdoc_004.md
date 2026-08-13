@@ -10,13 +10,13 @@ This test case verifies that the DataElementValue of data element `expiry_date` 
 - [ISO 8601-1:2019] 4.2.1, 4.3.2
 - [RFC3339] Sections 5.6, 5.7
 
-## EUDI-wallet relevancy
-
-EUDI_specific | EUDI_required
-
 ## Profile applicability
 
 The EUDI wallet contains a Credential in mdoc format with DocType ="eu.europa.ec.eudi.pid.1". Data element `expiry_date` is present in the mdoc data.
+
+## EUDI-wallet relevancy
+
+EUDI_specific | EUDI_required
 
 ## Preconditions
 

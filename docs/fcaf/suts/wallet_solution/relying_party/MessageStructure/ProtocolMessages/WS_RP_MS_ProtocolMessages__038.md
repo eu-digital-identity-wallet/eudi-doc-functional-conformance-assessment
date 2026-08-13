@@ -33,4 +33,3 @@ None
 2. Wallet successfully receives the Authorization Request.
 3. Wallet successfully parses the Authorization Request.
 4. Wallet recognizes the redirect_uri: prefix, uses the embedded URI as the redirect/response target, and processes the request successfully.
-
