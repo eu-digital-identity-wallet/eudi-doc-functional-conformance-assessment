@@ -28,17 +28,20 @@ from collections import Counter, defaultdict
 # been cleared, so an existing defect never blocks an unrelated pull request.
 # Promoting a check is a one-line change here, with a visible history.
 #
-# Phase 1 (this list): every check whose corpus backlog was already zero.
+# Phase 1: every check whose corpus backlog was already zero.
+# Phase 2: the conventions settled and normalised across the corpus, so
+#   FC002 section order, FC003 section names, FC041 defaults, FC052 final
+#   newline, FC056 invisible characters and FC057 indentation tabs now block.
 # Still reported as warnings, with counts, until their backlog is cleared:
-#   FC052 final newline, FC002 section order, FC041 undefined defaults,
-#   FC043 dead placeholder text, FC042 TODO/TBD, FC040 reference tokens,
-#   FC032 empty profile applicability, FC021 step/result parity,
-#   FC003 unknown section name, FC014 duplicate test case ID,
-#   FC056 invisible characters, FC057 indentation tabs.
+#   FC043 dead placeholder text, FC042 untracked TODO/TBD, FC040 reference
+#   tokens, FC032 empty profile applicability, FC021 step/result parity,
+#   FC014 duplicate test case ID.
 # Permanently advisory (large, judgement-bound backlogs):
 #   FC100 CIR/ETSI anchor, FC101/FC102 ICS vocabulary, FC011/FC013 identifiers.
 ENFORCED = {
     "FC001",  # required section missing
+    "FC002",  # sections not in the canonical order
+    "FC003",  # unknown section name
     "FC004",  # duplicate section heading
     "FC010",  # missing H1 test case ID
     "FC012",  # unknown test layer in the ID
@@ -47,11 +50,15 @@ ENFORCED = {
     "FC023",  # no numbered test steps
     "FC030",  # relevancy format, vocabulary and separator
     "FC031",  # mutually exclusive relevancy combination
+    "FC041",  # default_* not defined in defaults.md
     "FC050",  # CR characters
     "FC051",  # trailing whitespace
+    "FC052",  # missing or duplicated final newline
     "FC053",  # unbalanced code fence
     "FC054",  # heading without a space after the hashes
     "FC055",  # heading not followed by a blank line
+    "FC056",  # invisible character where a space belongs
+    "FC057",  # tab used for indentation
     "FC060",  # broken relative link
 }
 
