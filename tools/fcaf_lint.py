@@ -119,6 +119,29 @@ def fenced_lines(text):
     return out
 
 
+# Protocol and data element identifiers must be written in backticks. The corpus
+# writes the same one up to five ways: bare, in backticks, in straight, single
+# or typographic quotes. `vp_token` appears 41 times in backticks, 41 times bare
+# and 5 times quoted, which makes any search unreliable and reads as if the
+# variants meant different things.
+#
+# Recognised by shape rather than by a list that would need maintaining:
+# snake_case, reverse dotted names such as eu.europa.ec.eudi.pid.1, and JOSE
+# algorithm names. Test case identifiers are excluded: they start with an
+# upper-case class prefix, and the word boundaries below keep fragments of them
+# from matching inside a cross reference.
+_ID = (r"[a-z][a-z0-9]*(?:_[a-z0-9]+)+"
+       r"|[a-z]+(?:\.[a-z0-9]+){2,}"
+       r"|(?:ES|PS|RS|HS)(?:256|384|512)")
+_EDGE_L = r"(?<![\w./_`'\u201c\u201d-])"
+_EDGE_R = r"(?![\w/`'\u201c\u201d-])"
+
+QUOTED_ID = re.compile(r"(['\"\u201c\u201d])(" + _ID + r")(['\"\u201c\u201d])")
+BARE_ID = re.compile(_EDGE_L + r"(" + _ID + r")" + _EDGE_R)
+TESTCASE_ID = re.compile(r"^WS_[A-Za-z0-9_]+$")
+CURLY = re.compile(r'[\u201c\u201d]')
+
+
 class Finding:
     __slots__ = ("path", "line", "code", "message")
 
@@ -213,6 +236,13 @@ def check_file(path: pathlib.Path, root: pathlib.Path, ctx):
                 break
         if re.match(r"^[ ]*\t", line):
             add(i, "FC057", "tab used for indentation, use spaces")
+        outside = re.sub(r"`[^`\n]*`", "", re.sub(r"\]\([^)]*\)", "]()", line))
+        for m in QUOTED_ID.finditer(outside):
+            add(i, "FC070", f"identifier {m.group(2)} is quoted, write it as `{m.group(2)}`")
+        for m in BARE_ID.finditer(outside):
+            add(i, "FC071", f"identifier {m.group(1)} is unmarked, write it as `{m.group(1)}`")
+        if CURLY.search(line):
+            add(i, "FC072", "typographic quotation mark in a test case, use a straight one")
 
     # --- identity ------------------------------------------------------------
     h1 = re.search(r"^#\s+(.+?)\s*$", text, re.M)
@@ -332,12 +362,15 @@ def autofix(path: pathlib.Path):
         applied.append("trailing whitespace")
         text = stripped
     fenced = fenced_lines(text)
-    repaired, touched_inv, touched_tab = [], False, False
+    repaired, touched_inv, touched_tab, touched_quotes = [], False, False, False
     for i, line in enumerate(text.split("\n")):
         if i < len(fenced) and fenced[i]:
             repaired.append(line)
             continue
         before = line
+        line = QUOTED_ID.sub(lambda m: f"`{m.group(2)}`", line)
+        if line != before:
+            touched_quotes = True
         for ch in INVISIBLE:
             line = line.replace(ch, " " if ch not in ("\u200b", "\ufeff", "\u00ad") else "")
         while re.match(r"^[ ]*\t", line):
@@ -351,6 +384,8 @@ def autofix(path: pathlib.Path):
             applied.append("invisible characters")
         if touched_tab:
             applied.append("indentation tabs")
+        if touched_quotes:
+            applied.append("quoted identifiers")
         text = joined
 
     spaced = re.sub(r"^(#{1,6} .*)\n(?!\n)", r"\1\n\n", text, flags=re.M)
