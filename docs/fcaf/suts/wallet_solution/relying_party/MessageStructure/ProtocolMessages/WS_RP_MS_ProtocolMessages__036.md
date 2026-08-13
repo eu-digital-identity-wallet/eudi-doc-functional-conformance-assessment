@@ -2,7 +2,7 @@
 
 ## Objective
 
-Test that when wallet receives a response_type of "vp_token" in an Authorization Request, that a successful response includes the vp_token parameter.
+Test that when wallet receives a `response_type` of `vp_token` in an Authorization Request, that a successful response includes the `vp_token` parameter.
 
 ## References
 

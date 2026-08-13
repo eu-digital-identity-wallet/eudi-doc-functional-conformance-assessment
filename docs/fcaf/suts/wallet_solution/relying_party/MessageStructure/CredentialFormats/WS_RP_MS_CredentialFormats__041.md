@@ -2,7 +2,7 @@
 
 ## Objective
 
-Verify that when Wallet is presenting several ISO mdocs, each ISO mdoc is returned in a separate DeviceResponse (as defined in 8.3.2.1.2.2 of [ISO.18013-5]), each matching to a respective DCQL query. Therefore, the resulting vp_token contains multiple DeviceResponse instances.
+Verify that when Wallet is presenting several ISO mdocs, each ISO mdoc is returned in a separate `DeviceResponse` (as defined in 8.3.2.1.2.2 of [ISO.18013-5]), each matching to a respective DCQL query. Therefore, the resulting `vp_token` contains multiple `DeviceResponse` instances.
 
 ## References
 
