@@ -44,6 +44,6 @@ Credential with Key Binding.
     1. is on the list of acceptable algorithms [ECCG ACM], and
 	2. is one of `ES256`, `ES384`, or `ES512`.
 
-## Comment
+## Comments
 
 TODO consider `proof_signing_alg_values_supported` as well!

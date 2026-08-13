@@ -11,6 +11,7 @@ release-candidate and released version tags.
 
 ## [Latest draft]
 
+- Settle the test case conventions the format guard checks: sections follow one canonical order, default configurations are numbered and default credentials are lettered so the two cannot be confused, and the optional comment section is called `Comments` everywhere.
 - Editorial and rendering cleanup across FCAF documentation and test specifications, including consistent Markdown lists and tables, baseline test pages, stable ICS selection wording, and canonical Implementing Regulation references.
 - Added baseline test reference indexes and separate test-case hierarchy pages for the Relying Party and Attestation Provider interfaces.
 - Rendering and formatting pass across test cases (editorial only, no functional change): actual Preconditions use compact numbered Markdown lists in the source and render with uppercase-alphabetic labels (A., B., C., ...) on the website and in the PDF, while Preconditions with no entries and Profile applicability with no restriction use the canonical value `None` without a list marker or trailing period; pre-existing sibling relationships in Expected results are preserved as flat numbered entries, nested results remain numbered under their parent step, nested bullet lists in the date-format Expected results are correctly indented under their parent step, and missing backticks were added around claim and data-element identifiers (for example `issuance_date`).

@@ -41,7 +41,7 @@ EUDI_generic | EUDI_required
     1. a string, that has as value a syntactically correct compact serialization ([SD-JWT] section 4) of either a SD-JWT or a SD-JWT+KB,
     2. a JSON object, that is a syntactically correct JWS JSON serialization ([SD-JWT] section 8) of either a SD-JWT or a SD-JWT+KB.
 
-## comments
+## Comments
 
 - Note: the syntactically correct here can be limited to basic notation checks, since the contents and its structure will be covered in other tests. Syntactically therefor here is
     - a series of base64url-encoded data concatenated by periods ('.') and tilde ('~'), for compact serialization.
