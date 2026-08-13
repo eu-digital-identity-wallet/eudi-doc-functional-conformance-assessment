@@ -1,62 +1,66 @@
 # Default items
 
-The following define various SUT configurations, credentials and trust anchors used throughout the test case specifications.
-These definitions are intentionally logical rather than physical: they describe required structures and characteristics, but not specific values. The tester or test tooling supplies concrete values for execution.
+The following sections define the SUT configurations, credentials, and trust anchors used throughout the test case specifications.
+These definitions are intentionally logical rather than physical: they describe the required structures and characteristics, but not specific values. The tester or test tooling supplies concrete values for test execution.
 
-### Default configurations
-The following properties are defined for a SUT (EUDI-wallet unit). These are assumed to be realized in the SUT when the default configuration is used.
+## Default configurations
 
-#### `default_configuration_A`
+The following properties are defined for a SUT, specifically an EUDI Wallet Unit. The SUT is assumed to have these properties when the default configuration is used.
 
-| Property | Setting, contents or value |
+### `default_configuration_A`
+
+| Property | Setting, contents, or value |
 | --- | --- |
-| App software | Installed on (mobile) device. |
-| App permissions | All relevant permissions granted to the Wallet App as per instructions from Wallet Provider. |
-| Peripheral and sensors activated | Any companion hardware or settings of relevant sensors (NFC, BLE, USB, ...) are connected and activated, if applicable. |
-| App personalization | App instance is personalized, has local authentication configured and is registered with Wallet Provider, if applicable. |
-| WSCA/WSCD | The WSCA/WSCD of the Wallet Unit is set up, linked to the Wallet Instance and available for usage |
-| App localization | App is configured to a supported language. |
-| EUDI-wallet state | Valid. That means that as per EUDI-wallet specifications, the wallet has a valid PID, is active and has not been revoked. |
-| OS & platform | Software of the underlying system (test apparatus) is installed, configured and ready for use. |
-| Complementary software | Software such as a compliant browser (user agent) is installed and ready for use. |
-| Consent defaults | No preregistered consent for specific Relying Parties, Credentials or Attributes. |
-| Stored credentials | The Wallet Unit has been issued with the following credentials, that are still valid: `default_credential_A`, `default_credential_B` and `default_credential_C`. |
-| Network connectivity | Data connectivity is available and unrestricted. In case any filtering is applied for an isolated test network, all dependencies (DNS, NTP, ...) are facilitated as if the SUT can operate unrestricted. |
+| App software | Installed on a mobile device. |
+| App permissions | All relevant permissions are granted to the Wallet App in accordance with the Wallet Provider's instructions. |
+| Peripherals and sensors | Any companion hardware is connected, and relevant sensors, such as NFC, BLE, or USB, are enabled, if applicable. |
+| App personalisation | The App instance is personalised, has local authentication configured, and is registered with the Wallet Provider, if applicable. |
+| WSCA/WSCD | The Wallet Unit's WSCA/WSCD is set up, linked to the Wallet Instance, and available for use. |
+| App localisation | The App is configured to use a supported language. |
+| EUDI Wallet state | Valid. In accordance with the EUDI Wallet specifications, the Wallet has a valid PID, is active, and has not been revoked. |
+| Operating system and platform | The software of the underlying system, or test apparatus, is installed, configured, and ready for use. |
+| Complementary software | Software such as a compliant browser, or user agent, is installed and ready for use. |
+| Consent defaults | There is no preregistered consent for specific Relying Parties, Credentials, or Attributes. |
+| Stored credentials | The Wallet Unit has been issued `default_credential_A`, `default_credential_B`, and `default_credential_C`, and these Credentials remain valid. |
+| Network connectivity | Data connectivity is available and unrestricted. If filtering is applied for an isolated test network, all dependencies, such as DNS and NTP, are provided so that the SUT can operate without restriction. |
 
+## Default credentials
 
-### Default credentials
+### `default_credential_A`
 
-#### `default_credential_A`
+A Credential, specifically an EAA, in both mdoc and SD-JWT VC format. The Credential is issued by `Issuer A`. It may be any type of Credential, identified by an mdoc `doctype` or an SD-JWT VC `vct`.
 
-A Credential (EAA), in both 'mdoc' and 'SD-JWT VC' format. The Credential is issued by 'Issuer A'. It can be any type of Credential (mdoc 'doctype' or SD-JWT VC 'vct').
+The Credential has at least the following Attributes:
 
-The Credential has at least the following attributes:
 | Attribute | Type | Value |
 | --- | --- | --- |
 | `attribute_A` | numerical | positive number |
-| `attribute_B` | string | non-empty string consisting of latin-1 characters, maximum of 64 characters. |
-| `attribute_C` | date | a valid date in the past |
+| `attribute_B` | string | non-empty string consisting of Latin-1 characters, with a maximum length of 64 characters |
+| `attribute_C` | date | valid date in the past |
 
-#### `default_credential_B`
-
-*To be defined* TODO
-
-The Credential has at least the following attributes:
-| Attribute | Type | Value |
-| --- | --- | --- |
-
-#### `default_credential_C`
+### `default_credential_B`
 
 *To be defined* TODO
 
-The Credential has at least the following attributes:
+The Credential has at least the following Attributes:
+
 | Attribute | Type | Value |
 | --- | --- | --- |
 
-### Test - trust establishment
-Tests are designed to be executed in a controlled environment. The FCAF assumes this environment is separate from production, with control over all facets.
-A key reason to have a separate environment is to control which systems in the ecosystem can be trusted. Functional testing includes tests with explicitly trusted and non-trusted systems, as well as various unhappy flows (negative test cases), so control of trust relations is essential. This cannot be handled using production network trust infrastructure, as policies typically do not allow test systems that can produce intentionally incorrect data to be trusted.
-Another reason to have a controlled environment is so no external changes can influence or disrupt testing.
+### `default_credential_C`
 
-In order to establish trust for tests (and explicit non-trust for unhappy flows or negative tests), a trusted list of trust lists and related certificate hierarchies will be detailed below. As with credentials, these are described logically or conceptually; it is up to testers and test tools to use specific instances of trust lists and certificates.
-Specific tests rely on "trusted" lists or certificates. These tests assume trusted lists or certificates are loaded, available for the SUT to download, or otherwise configured. Managing and configuring the trust anchors for the SUT is out of scope of the FCAF.
+*To be defined* TODO
+
+The Credential has at least the following Attributes:
+
+| Attribute | Type | Value |
+| --- | --- | --- |
+
+## Test trust establishment
+
+Tests are designed to run in a controlled environment. The FCAF assumes that this environment is separate from production and that all aspects of it can be controlled.
+A separate environment is necessary to control which systems in the ecosystem are trusted. Functional testing includes tests with explicitly trusted and untrusted systems, as well as unsuccessful flows, or negative test cases, so control of trust relationships is essential. Production trust infrastructure cannot support this because its policies typically do not allow trust in test systems that intentionally produce incorrect data.
+A controlled environment also prevents external changes from influencing or disrupting testing.
+
+To establish trust for tests, and explicit non-trust for unsuccessful flows or negative tests, trusted lists, trust lists, and related certificate hierarchies will be described below. As with Credentials, these are described logically or conceptually. Testers and test tools must supply specific instances of trust lists and certificates.
+Specific tests rely on trusted lists or certificates. Those tests assume that the lists or certificates are loaded, are available for the SUT to download, or are otherwise configured. Managing and configuring the SUT's trust anchors is outside the scope of the FCAF.

@@ -1,6 +1,7 @@
 # WS_RP_SM_RpIntegrity_015
 
 ## Objective
+
 Verify that when the Wallet receives a Request Object using an X.509-based Client Identifier Prefix where the signature key does NOT correspond to the leaf certificate in x5c, the Wallet rejects the request.
 
 ## References
@@ -10,21 +11,25 @@ Verify that when the Wallet receives a Request Object using an X.509-based Clien
 
 ## Profile applicability
 
-none
+None
 
 ## EUDI-wallet relevancy
+
 EUDI_generic | EUDI_required
 
 ## Preconditions
+
 1. X.509 certificate is configured
 
 ## Test Scenario
+
 1. Engage wallet-verifier interaction (e.g. click link / scan QR code).
 2. Wallet receives a signed Request Object using an X.509-based prefix where the signature key does NOT correspond to the leaf certificate in x5c.
 3. Wallet parses the Request Object and x5c.
 4. Wallet attempts signature verification using the leaf certificate public key.
 
 ## Expected results
+
 1. Wallet-verifier interaction is successfully initiated.
 2. Wallet successfully receives the Request Object.
 3. Wallet successfully parses the Request Object and x5c.

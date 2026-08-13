@@ -1,6 +1,7 @@
 # WS_RP_MS_ProtocolMessages_048
 
 ## Objective
+
 Verify that when the Wallet receives a Request URI response with an incorrect Content-Type (not application/oauth-authz-req+jwt), the Wallet rejects or fails to parse the response.
 
 ## References
@@ -10,16 +11,18 @@ Verify that when the Wallet receives a Request URI response with an incorrect Co
 
 ## Profile applicability
 
-none
+None
 
 ## EUDI-wallet relevancy
+
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
-none
+None
 
 ## Test Scenario
+
 1. Engage wallet-verifier interaction (e.g. click link / scan QR code).
 2. Wallet receives an Authorization Request with request_uri_method = post.
 3. Wallet sends a POST request to the request_uri endpoint.
@@ -27,6 +30,7 @@ none
 5. Wallet inspects and attempts to parse the response.
 
 ## Expected results
+
 1. Wallet-verifier interaction is successfully initiated.
 2. Wallet successfully receives the Authorization Request.
 3. Wallet successfully sends the POST request.

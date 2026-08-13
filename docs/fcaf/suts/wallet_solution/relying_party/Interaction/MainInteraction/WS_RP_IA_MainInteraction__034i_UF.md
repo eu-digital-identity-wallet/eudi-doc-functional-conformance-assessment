@@ -1,25 +1,32 @@
 # WS_RP_IA_MainInteraction_034i_UF
 
 ## Objective
+
 Verify that the Wallet does not present a credential in response to a DCQL-query requesting two data elements, of which one is not present in the held credential, for a credential in mdoc format.
 
 ## References
-[OpenID4VP] section 7.2
+
+- [OpenID4VP] section 7.2
 
 ## EUDI-wallet relevancy
+
 EUDI_generic | EUDI_required
 
 ## Profile applicability
+
 None
 
 ## Technology
+
 Credential in mdoc format
 
 ## Preconditions
-A. Wallet is set to 'default_configuration_1'
-B. Wallet and Verifier are engaged, and a presentation using OpenID4VP has been initiated.
+
+1. Wallet is set to 'default_configuration_1'
+2. Wallet and Verifier are engaged, and a presentation using OpenID4VP has been initiated.
 
 ## Test Scenario
+
 1. Verifier sends a request with a valid DCQL query, with a `credentials` property that is an array containing one object with the following properties:
     1. the `format` property with the value `mso_mdoc`.
     2. the `claims` property, as an array with:
@@ -29,6 +36,7 @@ B. Wallet and Verifier are engaged, and a presentation using OpenID4VP has been 
 2. Verify the received presentation.
 
 ## Expected results
+
 1. The Wallet does not complete the presentation interaction, and
     1. informs, if applicable, the user of not having the requested credential as it does not have the requested attributes, and
     2. aborting the interaction with the Verifier, either by

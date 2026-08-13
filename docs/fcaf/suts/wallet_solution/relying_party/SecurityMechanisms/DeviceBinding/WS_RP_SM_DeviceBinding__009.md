@@ -1,6 +1,7 @@
 # WS_RP_SM_DeviceBinding_009
 
 ## Objective
+
 Verify that when the Verifier sets require_cryptographic_holder_binding=false, the Wallet still includes the cnf claim within the SD-JWT component of the SD-JWT VC, providing the underlying credential type inherently includes it.
 
 ## References
@@ -10,15 +11,19 @@ Verify that when the Verifier sets require_cryptographic_holder_binding=false, t
 - [SD-JWT VC]
 
 ## Profile applicability
+
 Wallet supports IETF SD-JWT VC
 
 ## EUDI-wallet relevancy
+
 EUDI_generic | EUDI_required
 
 ## Preconditions
-The Wallet holds a valid SD-JWT VC credential that inherently contains a cnf claim.
+
+1. The Wallet holds a valid SD-JWT VC credential that inherently contains a cnf claim.
 
 ## Test Scenario
+
 1. End-user interacts with the Verifier, triggering the Verifier to send a presentation request.
 2. Verifier requests presentation from a Credential in IETF SD-JWT VC format
 3. `require_cryptographic_holder_binding` is set to false in the Credential Query
@@ -28,6 +33,7 @@ The Wallet holds a valid SD-JWT VC credential that inherently contains a cnf cla
 7. Check `cnf` claim is present within the SD-JWT component of the response.
 
 ## Expected results
+
 1. Wallet-verifier interaction is initiated.
 2. Wallet receives the presentation request.
 3. Wallet processes the request parameter where holder binding is not mandated by the verifier.

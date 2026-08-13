@@ -1,24 +1,28 @@
 # WS_RP_IA_MainInteraction_065
 
 ## Objective
+
 Verify that Wallet supports receiving a Credential Query from the Verifier in DCQL language, including the object `trusted_authorities` (aki)-based as defined in section 6.1.1.1 of [OIDF.OID4VP].
 
 ## References
+
 - [HAIP] Section 5
 - [OpenID4VP] Section 6.1.1.1
 
 ## Profile applicability
 
-none
+None
 
 ## EUDI-wallet relevancy
+
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
-none
+None
 
 ## Test Scenario
+
 1. The wallet engages with the verifier.
 2. The verifier sends an Authorization Request containing a DCQL credential query that specifies an Authority Key Identifier (AKI) inside the trusted_authorities object.
 3. The wallet processes the DCQL query and validates the requested trusted authorities against the credentials issued to the wallet.
@@ -27,6 +31,7 @@ none
 6. The wallet transmits the Authorization Response back to the verifier.
 
 ## Expected results
+
 1. Wallet-verifier interaction is successfully initiated.
 2. Wallet receives the request.
 3. Verify that the Wallet correctly parses the trusted_authorities query without throwing a processing error or returning an invalid_request.

@@ -1,18 +1,24 @@
 # WS_RP_SH_Encoding_TextualEncoding003
 
 ## Objective
+
 Test that a non-negative integer indicates that the respective index in an array is to be selected.
 
 ## References
+
 - [OpenID4VP] Section 7
 
 ## Profile applicability
+
 claims path pointer when applied to a JSON-based Credential
 
 ## EUDI-wallet relevancy
+
 EUDI_generic | EUDI_required
 
 ## Preconditions
+
+```json
 {
   "name": "Arthur Dent",
   "address": {
@@ -32,8 +38,10 @@ EUDI_generic | EUDI_required
   ],
   "nationalities": ["British", "Betelgeusian"]
 }
+```
 
 ## Test Scenario
+
 1. Engage wallet-verifier interaction.
 2. Verifier sends an Authorization Request with a DCQL query containing a claims path pointer where one element is a non-negative integer and the currently selected element at that position is an array (e.g. path: ["nationalities", 1]).
 3. Wallet parses the Authorization Request and the DCQL query.
@@ -42,6 +50,7 @@ EUDI_generic | EUDI_required
 6. Wallet generates and returns the Authorization Response.
 
 ## Expected results
+
 1. Wallet-verifier interaction is successfully initiated.
 2. Wallet successfully receives the Authorization Request.
 3. Wallet successfully parses the Authorization Request and the DCQL query.

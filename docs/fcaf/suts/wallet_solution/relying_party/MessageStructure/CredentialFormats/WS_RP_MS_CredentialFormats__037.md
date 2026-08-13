@@ -1,25 +1,30 @@
 # WS_RP_MS_CredentialFormats_037
 
 ## Objective
-Verify that Wallet supports IETF SD-JWT VC and ISO mdoc in the presentation flow. 
+
+Verify that Wallet supports IETF SD-JWT VC and ISO mdoc in the presentation flow.
 
 ## References
+
 - [HAIP] Section 5 (introduction)
 - [HAIP] Section 5.3.2
 - [HAIP] Section 6
 - [OpenID4VP] Appendix B.3
 
 ## Profile applicability
+
 Wallet supports both ISO mdoc and IETF SD-JWT VC
 
 ## EUDI-wallet relevancy
+
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
-none
+None
 
 ## Test Scenario
+
 1. End-user interacts with the Verifier, triggering the Verifier to send a presentation request.
 2. Verifier sends presentation request for Credential in ISO mdoc format.
 3. Verify if Wallet asks for user consent to present the Credential.
@@ -27,13 +32,14 @@ none
 5. Verify if Wallet presents Credential to the Verifier.
 6. Check value from Credential Format Identifier.
 7. End-user interacts with the Verifier, triggering the Verifier to send a presentation request.
-8. Verifier sends presentation request for Credential in IETF SD-JWT VC format. 
+8. Verifier sends presentation request for Credential in IETF SD-JWT VC format.
 9. Verify if Wallet asks for user consent to present the Credential.
 10. User gives consent.
 11. Verify if Wallet presents Credential to the Verifier.
 12. Check value from Credential Format Identifier.
 
 ## Expected results
+
 1. This is the case
 2. This is the case.
 3. Wallet asks for user consent.

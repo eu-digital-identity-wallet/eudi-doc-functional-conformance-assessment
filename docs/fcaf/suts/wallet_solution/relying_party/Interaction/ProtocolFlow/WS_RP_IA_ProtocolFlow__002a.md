@@ -1,28 +1,35 @@
 # WS_RP_IA_ProtocolFlow_002a
 
 ## Objective
+
 Verify that, in the presentation flow via Redirects, the Wallet supports receiving a Signed Authorization Request using JWT-Secured Authorization Request (JAR, [RFC9101]) through the `request_uri` parameter, when the `request_uri_method` parameter has value `get`.
 
 ## References
-[HAIP] section 5.1
-[OpenID4VP] section 5, 5.1
-[RFC9101] section 5
+
+- [HAIP] section 5.1
+- [OpenID4VP] section 5, 5.1
+- [RFC9101] section 5
 
 ## EUDI-wallet relevancy
+
 EUDI_generic | EUDI_required
 
 ## Profile applicability
+
 None
 
 ## Technology
+
 Presentation via Redirects
 Same-device flow
 
 ## Preconditions
-A. Wallet is set to 'default_configuration_1'
-B. End-user interacts with Verifier using a User-agent.
+
+1. Wallet is set to 'default_configuration_1'
+2. End-user interacts with Verifier using a User-agent.
 
 ## Test Scenario
+
 1. The Verifier provides an invocation URL for a OID4VP request via redirects using Request Object by reference (i.e. `eu-eaap://` link), with
     1. a valid HTTPS link as value for the `request_uri` parameter,
     2. the value `get` for the `request_uri_method` parameter.
@@ -31,6 +38,7 @@ B. End-user interacts with Verifier using a User-agent.
 4. The Verifier responds to the HTTP request at the `request_uri` endpoint with a valid Signed Request Object requesting 'default_credential_A'.
 
 ## Expected results
+
 1. User-agent presents an option to the End-user to engage the presentation.
 2. The Wallet is invoked.
 3. Wallet makes a HTTP request at the Verifier's endpoint, using a TLS connection. The HTTP request:

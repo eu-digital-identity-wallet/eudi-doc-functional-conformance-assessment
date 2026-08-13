@@ -5,21 +5,25 @@
 Test If the Wallet cannot satisfy any of the options in the claim_sets, it MUST NOT return any claims.
 
 ## References
+
 - [OpenID4VP] Section 6.4
 
 ## Profile applicability
 
-none
+None
 
 ## EUDI-wallet relevancy
+
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
-none
+None
 
 ## Test Scenario
+
 1. Verifier sends a DCQL query with a claim_sets that includes a claim the Wallet does not have.
 
 ## Expected results
+
 1. Wallet will not return any claims.

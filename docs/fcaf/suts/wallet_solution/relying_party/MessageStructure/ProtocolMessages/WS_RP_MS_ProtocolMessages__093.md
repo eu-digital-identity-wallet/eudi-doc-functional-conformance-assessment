@@ -1,28 +1,33 @@
 # WS_RP_MS_ProtocolMessages_093
 
 ## Objective
+
 Test the Wallet Rejects a DCQL-query with a constraint on "trusted_authorities" with a `value` containing an item that is not a string.
 
 ## References
+
 - [OpenID4VP] Sections 6.1.1, 8.5
 
 ## Profile applicability
 
-none
+None
 
 ## EUDI-wallet relevancy
+
 EUDI_generic | EUDI_required
 
 ## Preconditions
 
-none
+None
 
 ## Test Scenario
+
 1. The Wallet engages with the Verifier.
 2. Verifier sends a DCQL query with a credential with a "trusted_authorities" property with its value property as an array containing an element that is not a string.
 3. The Wallet evaluates the request.
 
 ## Expected results
+
 1. Wallet and Verifier can interact.
 2. Wallet receives the request.
 3. Wallet rejects the request by either:
