@@ -45,4 +45,3 @@ EUDI_generic | EUDI_required
 3. Wallet successfully parses the Authorization Request and the DCQL query.
 4. Wallet validates the path pointer structure.
 5. Wallet aborts processing and returns an error (e.g. invalid_request) due to an unsupported component type in the claims path pointer; presentation flow is not initiated.
-

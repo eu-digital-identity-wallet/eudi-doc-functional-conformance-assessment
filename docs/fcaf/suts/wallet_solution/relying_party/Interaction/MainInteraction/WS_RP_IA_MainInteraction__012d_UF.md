@@ -9,13 +9,13 @@ Verify that the Wallet does not present a credential in response to a DCQL-query
 - [HAIP] section 5, 5.3.1
 - [OpenID4VP] section 6.1, 6.3, 6.4, 8.5, B.2.3
 
-## EUDI-wallet relevancy
-
-EUDI_generic | EUDI_required
-
 ## Profile applicability
 
 None
+
+## EUDI-wallet relevancy
+
+EUDI_generic | EUDI_required
 
 ## Preconditions
 

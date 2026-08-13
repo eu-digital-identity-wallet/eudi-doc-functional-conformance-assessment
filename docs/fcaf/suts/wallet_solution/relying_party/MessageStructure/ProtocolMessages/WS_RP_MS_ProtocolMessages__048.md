@@ -36,4 +36,3 @@ None
 3. Wallet successfully sends the POST request.
 4. Wallet receives the response.
 5. Wallet rejects or fails to parse the response as a valid Request Object; presentation flow is not initiated.
-

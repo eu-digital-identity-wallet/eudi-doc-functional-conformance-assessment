@@ -8,13 +8,13 @@ This test case verifies that the data element `issuing_country` is present in th
 
 - [PID rulebook] Annex 3.01, Section 4.1 (Table 2)
 
-## EUDI-wallet relevancy
-
-EUDI_specific | EUDI_required
-
 ## Profile applicability
 
 The EUDI wallet contains a Credential in mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element `issuing_country` is present in the mdoc data.
+
+## EUDI-wallet relevancy
+
+EUDI_specific | EUDI_required
 
 ## Preconditions
 

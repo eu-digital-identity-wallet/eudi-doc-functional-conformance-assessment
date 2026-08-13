@@ -10,13 +10,13 @@ Verify that the Wallet sends a syntactically correct `proofs` parameter in the C
 - [HAIP] section 4.5.1
 - [OpenID4VCI] section 8.2, F
 
-## EUDI-wallet relevancy
-
-EUDI_generic | EUDI_required
-
 ## Profile applicability
 
 None
+
+## EUDI-wallet relevancy
+
+EUDI_generic | EUDI_required
 
 ## Technology
 

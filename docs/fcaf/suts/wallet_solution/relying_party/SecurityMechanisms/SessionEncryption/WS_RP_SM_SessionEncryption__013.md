@@ -15,15 +15,15 @@ Verify that the Wallet includes only valid disclosures when presenting an SD-JWT
 
 None
 
+## EUDI-wallet relevancy
+
+EUDI_generic | EUDI_required
+
 ## Technology
 
 Presentation using OpenID4VP
 Credential in SD-JWT VC format
 Issuer uses compact serialization of SD-JWT and SD-JWT VC
-
-## EUDI-wallet relevancy
-
-EUDI_generic | EUDI_required
 
 ## Preconditions
 

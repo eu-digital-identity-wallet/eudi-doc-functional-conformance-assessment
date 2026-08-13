@@ -31,4 +31,3 @@ None
 1. Wallet and Verifier can interact.
 2. Wallet receives the request.
 3. The Wallet realises it doesn't have PID and sees "required": true, hence it must NOT offer this set. No other sets are available, so the transaction stops, making sure it sends a privacy preserving response.
-

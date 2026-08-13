@@ -2,7 +2,7 @@
 
 ## Objective
 
-Verify that, in the presentation flow via Redirects, Wallet processes successfully HTTP response to the Wallet's HTTP POST to the `response_uri`, including `redirect_uri`.
+Verify that, in the presentation flow via Redirects, Wallet processes successfully HTTP response to the Wallet's HTTP POST to the `response_uri`, including `redirect_uri`.
 
 ## References
 

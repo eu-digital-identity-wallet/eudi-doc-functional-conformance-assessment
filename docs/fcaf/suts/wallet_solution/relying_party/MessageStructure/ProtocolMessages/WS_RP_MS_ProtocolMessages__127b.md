@@ -11,13 +11,13 @@ Verify that the Wallet's Authorization Response has syntactically correct presen
 
 ## Profile applicability
 
-## Technology
-
-Presentation using OpenID4VP
-
 ## EUDI-wallet relevancy
 
 EUDI_generic | EUDI_required
+
+## Technology
+
+Presentation using OpenID4VP
 
 ## Preconditions
 

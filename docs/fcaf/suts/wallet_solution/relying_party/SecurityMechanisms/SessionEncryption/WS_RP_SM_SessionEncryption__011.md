@@ -32,4 +32,3 @@ None
 1. This is the case.
 2. Wallet uses `key1` as input for key agreement included in the encryption process of the response related to "authorization request 1".
 3. Wallet uses `key2` as input for key agreement included in the encryption process of the response related to "authorization request 2".
-

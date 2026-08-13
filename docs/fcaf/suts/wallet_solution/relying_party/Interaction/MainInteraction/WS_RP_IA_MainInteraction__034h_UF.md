@@ -8,13 +8,13 @@ Verify that the Wallet does not present a credential in response to a DCQL-query
 
 - [OpenID4VP] section 7.1
 
-## EUDI-wallet relevancy
-
-EUDI_generic | EUDI_required
-
 ## Profile applicability
 
 None
+
+## EUDI-wallet relevancy
+
+EUDI_generic | EUDI_required
 
 ## Technology
 

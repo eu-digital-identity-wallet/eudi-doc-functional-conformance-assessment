@@ -33,4 +33,3 @@ None
 2. Wallet successfully receives the Request Object.
 3. Wallet successfully parses the Request Object.
 4. Wallet ignores non-key Verifier metadata provided outside client_metadata and processes only the metadata within client_metadata; presentation flow proceeds.
-

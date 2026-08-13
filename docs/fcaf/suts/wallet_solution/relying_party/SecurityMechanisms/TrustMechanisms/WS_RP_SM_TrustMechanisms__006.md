@@ -34,4 +34,3 @@ EUDI_generic | EUDI_required
 2. Wallet receives the request.
 3. The Wallet allows the user to select the credential matching the certificate chain.
 4. The Wallet presents the selected credential.
-

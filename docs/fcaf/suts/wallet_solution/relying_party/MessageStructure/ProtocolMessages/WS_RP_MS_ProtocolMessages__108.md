@@ -31,4 +31,3 @@ None
 1. Wallet and Verifier can interact.
 2. Wallet receives the request.
 3. Wallet recognises missing "id" and occurring claim_sets, producing an error invalid_request.
-

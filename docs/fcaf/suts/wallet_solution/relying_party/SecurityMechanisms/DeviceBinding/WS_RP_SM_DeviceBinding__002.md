@@ -33,4 +33,3 @@ None
 2. Wallet successfully receives the Authorization Request.
 3. Wallet successfully parses the Authorization Request and the attestation.
 4. Wallet validates the signature object successfully and accepts the attestation; processing continues.
-

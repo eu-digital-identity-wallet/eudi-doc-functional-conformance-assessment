@@ -35,4 +35,3 @@ None
 3. Wallet successfully parses the Request Object.
 4. Wallet validates that the aud claim equals "https://self-issued.me/v2".
 5. Wallet accepts and processes the request; the flow proceeds normally.
-

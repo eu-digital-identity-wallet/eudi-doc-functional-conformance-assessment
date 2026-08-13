@@ -31,4 +31,3 @@ None
 1. Wallet-verifier interaction is successfully initiated.
 2. Wallet receives request.
 3. Verify the Wallet returns a response, without an error, and that it uses a default enc of A128GCM to perform its encryption.
-

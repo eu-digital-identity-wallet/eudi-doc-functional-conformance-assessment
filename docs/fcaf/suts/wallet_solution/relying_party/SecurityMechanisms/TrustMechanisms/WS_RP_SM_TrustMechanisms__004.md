@@ -32,4 +32,3 @@ EUDI_generic | EUDI_required
 1. Wallet and Verifier can interact.
 2. Wallet receives the request.
 3. The Wallet informs the user it has no matching credential available, and does not (allow to) continue to present any credential to the verifier.
-

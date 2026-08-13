@@ -9,13 +9,13 @@ This test case verifies that the value of the claim `issuing_jurisdiction` conta
 - [PID rulebook] Annex 3.01, Section 4.2 (Table 5)
 - [ISO 3166-2:2020] 8
 
-## EUDI-wallet relevancy
-
-EUDI_specific | EUDI_optional
-
 ## Profile applicability
 
 The EUDI wallet contains a Credential in SD-JWT VC format with vct = "urn:eudi:pid:". The claim `issuing_jurisdiction` is included in a person identification data.
+
+## EUDI-wallet relevancy
+
+EUDI_specific | EUDI_optional
 
 ## Preconditions
 

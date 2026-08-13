@@ -10,13 +10,13 @@ This test case verifies that each entry in the Array contains a DataElementValue
 - [ISO 3166-1:2020] 6.1
 - [ISO 3166-1:2020] 8.3
 
-## EUDI-wallet relevancy
-
-EUDI_specific | EUDI_required
-
 ## Profile applicability
 
 The EUDI wallet contains a Credential in ISO-mdoc format with DocType = “eu.europa.ec.eudi.pid.1”
+
+## EUDI-wallet relevancy
+
+EUDI_specific | EUDI_required
 
 ## Preconditions
 

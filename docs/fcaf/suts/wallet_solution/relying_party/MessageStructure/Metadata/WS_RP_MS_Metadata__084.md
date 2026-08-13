@@ -29,4 +29,3 @@ EUDI_generic | EUDI_required
 ## Expected results
 
 1.  The Wallet rejects the Referenced Token when there is no status_list JSON object present in the status JWT Claims Set
-

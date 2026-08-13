@@ -34,4 +34,3 @@ None
     1. answering with an error with details (`invalid_request`),
     2. answering with an error without providing details or,
     3. discontinuing the interaction.
-

@@ -9,13 +9,13 @@ This test case verifies that the region item of data element `place_of_birth` ha
 - [PID rulebook] Annex 3.01 paragraph 3.1.5, Section 4.1 (Table 6)
 - [ISO/IEC 3166-1]
 
-## EUDI-wallet relevancy
-
-EUDI_specific | EUDI_required
-
 ## Profile applicability
 
 The mdoc contains a Credential in mdoc format with DocType = "eu.europa.ec.eudi.pid.1".
+
+## EUDI-wallet relevancy
+
+EUDI_specific | EUDI_required
 
 ## Preconditions
 

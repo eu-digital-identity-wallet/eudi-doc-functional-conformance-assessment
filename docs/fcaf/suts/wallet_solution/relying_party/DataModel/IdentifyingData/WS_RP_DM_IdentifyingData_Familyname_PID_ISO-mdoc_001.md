@@ -8,13 +8,13 @@ This test case verifies that the data element `family_name` is present in the md
 
 - [PID rulebook] Annex 3.01, Section 4.1 (Table 1)
 
-## EUDI-wallet relevancy
-
-EUDI_specific | EUDI_required
-
 ## Profile applicability
 
 The EUDI wallet contains a Credential in ISO-mdoc format with DocType = “eu.europa.ec.eudi.pid.1”
+
+## EUDI-wallet relevancy
+
+EUDI_specific | EUDI_required
 
 ## Preconditions
 

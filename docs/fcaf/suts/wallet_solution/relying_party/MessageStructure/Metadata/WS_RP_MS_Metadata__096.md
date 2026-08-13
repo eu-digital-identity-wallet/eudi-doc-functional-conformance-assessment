@@ -30,4 +30,3 @@ EUDI_generic | EUDI_required
 ## Expected results
 
 1. The Referenced Token is rejected.
-

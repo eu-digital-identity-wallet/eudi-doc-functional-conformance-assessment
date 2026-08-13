@@ -31,4 +31,3 @@ EUDI_generic | EUDI_required
 ## Expected results
 
 1. The SD-JWT VC Referenced Token with status_list claim is stored by the Wallet.
-

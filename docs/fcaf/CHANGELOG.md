@@ -11,6 +11,7 @@ release-candidate and released version tags.
 
 ## [Latest draft]
 
+- Normalise the test case sources against the settled conventions: canonical section order, a single trailing newline, no invisible characters, and spaces instead of tabs for list indentation. No wording changes.
 - Settle the test case conventions the format guard checks: sections follow one canonical order, default configurations are numbered and default credentials are lettered so the two cannot be confused, and the optional comment section is called `Comments` everywhere.
 - Editorial and rendering cleanup across FCAF documentation and test specifications, including consistent Markdown lists and tables, baseline test pages, stable ICS selection wording, and canonical Implementing Regulation references.
 - Added baseline test reference indexes and separate test-case hierarchy pages for the Relying Party and Attestation Provider interfaces.

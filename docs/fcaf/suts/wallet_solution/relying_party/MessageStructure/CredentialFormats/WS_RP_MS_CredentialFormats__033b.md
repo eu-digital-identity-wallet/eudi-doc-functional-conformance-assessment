@@ -15,14 +15,14 @@ Verify that the Wallet includes a correctly formatted `status` claim in a mdoc p
 
 None
 
+## EUDI-wallet relevancy
+
+EUDI_generic | EUDI_required
+
 ## Technology
 
 Credential in mdoc format
 Credential with revocation status information
-
-## EUDI-wallet relevancy
-
-EUDI_generic | EUDI_required
 
 ## Preconditions
 

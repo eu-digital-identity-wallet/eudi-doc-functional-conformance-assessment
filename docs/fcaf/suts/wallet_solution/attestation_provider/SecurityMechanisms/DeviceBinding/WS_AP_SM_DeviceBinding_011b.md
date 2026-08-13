@@ -11,13 +11,13 @@ Verify that the Wallet Provider signs the Key Attestation with a valid signature
 - [HAIP] section 4.5.1
 - [OpenID4VCI] section F.1
 
-## EUDI-wallet relevancy
-
-EUDI_specific | EUDI_required
-
 ## Profile applicability
 
 Wallet uses the `jwt` proof type to convey a key attestation in Credential Requests.
+
+## EUDI-wallet relevancy
+
+EUDI_specific | EUDI_required
 
 ## Technology
 

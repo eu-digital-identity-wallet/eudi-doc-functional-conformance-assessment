@@ -31,4 +31,3 @@ None
 1. Wallet-verifier interaction is successfully initiated.
 2. Wallet successfully receives the Authorization Request.
 3. Wallet accepts the response_type value and proceeds with the presentation flow without rejecting the request.
-

@@ -33,4 +33,3 @@ None
 2. Wallet successfully receives the Authorization Request.
 3. Wallet successfully parses the Authorization Request.
 4. Wallet rejects the Authorization Request (trust chain validation failure) and returns an appropriate error per its trust policy; presentation flow is not initiated.
-

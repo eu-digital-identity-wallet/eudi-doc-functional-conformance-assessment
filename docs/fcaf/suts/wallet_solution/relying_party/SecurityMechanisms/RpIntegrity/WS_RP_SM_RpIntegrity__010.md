@@ -33,4 +33,3 @@ None
 2. Wallet successfully receives the Request Object.
 3. Wallet successfully parses the Request Object and the attestation JWT.
 4. Wallet successfully validates the signature and trust; request is processed; presentation flow proceeds.
-

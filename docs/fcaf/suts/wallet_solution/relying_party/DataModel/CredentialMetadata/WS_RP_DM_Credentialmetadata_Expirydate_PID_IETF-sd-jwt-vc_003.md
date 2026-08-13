@@ -9,13 +9,13 @@ This test case verifies that the format of the claim `date_of_expiry` is correct
 - [PID rulebook] Annex 3.01, Section 4.2 (Table 8)
 - [RFC3339] Section 5.6
 
-## EUDI-wallet relevancy
-
-EUDI_specific | EUDI_required
-
 ## Profile applicability
 
 The EUDI wallet contains a Credential in IETF SD-JWT VC format. `vct` claim includes base type of person identification "urn:eudi:pid:1".
+
+## EUDI-wallet relevancy
+
+EUDI_specific | EUDI_required
 
 ## Preconditions
 

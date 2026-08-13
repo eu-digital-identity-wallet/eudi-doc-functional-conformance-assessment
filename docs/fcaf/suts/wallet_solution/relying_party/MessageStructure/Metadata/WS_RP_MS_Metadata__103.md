@@ -38,4 +38,3 @@ EUDI_generic | EUDI_required
    key major type = 3 (tstr), key value = "uri" & value major type = 3 (tstr),
    optionally: key major type = 3 (tstr), key value = "certificate" & value major type = 2 (bstr).
 3. No unrecognized key-value pairs with key major type 3 (tstr) are present beyond those listed in step 2.
-

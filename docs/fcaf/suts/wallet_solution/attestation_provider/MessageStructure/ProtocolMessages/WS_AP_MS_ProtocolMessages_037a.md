@@ -12,13 +12,13 @@ Verify that the Wallet sends a syntactically correct body of the Wallet Instance
 - [OpenID4VCI] section E
 - [IETF draft-attestation-based-client-auth] section 5.1
 
-## EUDI-wallet relevancy
-
-EUDI_specific | EUDI_required
-
 ## Profile applicability
 
 None
+
+## EUDI-wallet relevancy
+
+EUDI_specific | EUDI_required
 
 ## Technology
 

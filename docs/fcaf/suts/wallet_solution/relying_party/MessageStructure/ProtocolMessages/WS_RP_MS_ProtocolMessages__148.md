@@ -35,4 +35,3 @@ None
 3. The Wallet proceeds to credential selection or user authorization.
 4. The wallet detects the user's denial of consent and does not proceed with credential presentation.
 5. The Wallet does NOT return a vp_token, instead it returns an error response, where the error parameter is exactly access_denied.
-

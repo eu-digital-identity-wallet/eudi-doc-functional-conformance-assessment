@@ -30,4 +30,3 @@ EUDI_generic | EUDI_required
 
 1. Wallet-verifier interaction is successfully initiated.
 2. Wallet ignores all unrecognized parameters and proceeds with the presentation flow as if those parameters were absent. No error is returned.
-

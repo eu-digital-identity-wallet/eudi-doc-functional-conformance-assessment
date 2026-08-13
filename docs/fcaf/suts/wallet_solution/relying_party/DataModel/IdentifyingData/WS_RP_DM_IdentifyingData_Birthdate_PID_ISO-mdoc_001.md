@@ -8,13 +8,13 @@ This test case verifies that the data element `birth_date` is present in the mdo
 
 - [PID rulebook] Annex 3.01 paragraph 3.1.4, Section 4.1 (Table 1)
 
-## EUDI-wallet relevancy
-
-EUDI_specific | EUDI_required
-
 ## Profile applicability
 
 The EUDI wallet contains a Credential in mdoc format with DocType = "eu.europa.ec.eudi.pid.1".
+
+## EUDI-wallet relevancy
+
+EUDI_specific | EUDI_required
 
 ## Preconditions
 

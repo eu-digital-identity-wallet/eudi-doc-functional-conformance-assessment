@@ -8,13 +8,13 @@ Verify that the Wallet responds to a DCQL-query selecting the last element of a 
 
 - [OpenID4VP] section 7.1
 
-## EUDI-wallet relevancy
-
-EUDI_generic | EUDI_required
-
 ## Profile applicability
 
 None
+
+## EUDI-wallet relevancy
+
+EUDI_generic | EUDI_required
 
 ## Technology
 
@@ -42,4 +42,3 @@ Credential in SD-JWT VC format
     1. The presentation is for a credential in SD-JWT VC format, of the verifiable credential type and with the `vct` claim as requested.
     2. The presentation contains the disclosure of the last element of the selected top-level array claim.
     3. The presentation does not contain any other disclosures for claims that allow for selective disclosure in the SD-JWT VC credential.
-

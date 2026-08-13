@@ -2,7 +2,7 @@
 
 ## Objective
 
-Verify that, in the presentation flow via Redirects, wallet can be invoked through custom URL scheme `haip-vp://` if that is supported by Wallet and Verifier profiles.
+Verify that, in the presentation flow via Redirects, wallet can be invoked through custom URL scheme `haip-vp://` if that is supported by Wallet and Verifier profiles.
 
 ## References
 
@@ -10,7 +10,7 @@ Verify that, in the presentation flow via Redirects, wallet can be invoked throu
 
 ## Profile applicability
 
-Presentations via Redirects; Wallet supports to be invoked through custom URL scheme "haip-vp://".
+Presentations via Redirects; Wallet supports to be invoked through custom URL scheme "haip-vp://".
 
 ## EUDI-wallet relevancy
 
@@ -22,11 +22,10 @@ None
 
 ## Test Scenario
 
-1. Verifier invokes the Wallet through custom URL scheme `haip-vp://`.
+1. Verifier invokes the Wallet through custom URL scheme `haip-vp://`.
 2. Verify if Wallet is invoked successfully.
 
 ## Expected results
 
 1. This is the case.
 2. Wallet is invoked successfully.
-

@@ -31,4 +31,3 @@ None
 1. Wallet-verifier interaction is successfully initiated
 2. Wallet receives request
 3. Verify the wallet does NOT send a response, instead returns an error
-

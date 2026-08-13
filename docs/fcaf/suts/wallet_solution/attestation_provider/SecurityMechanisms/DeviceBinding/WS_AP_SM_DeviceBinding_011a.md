@@ -11,13 +11,13 @@ Verify that the Wallet Provider signs the Key Attestation using an acceptable si
 - [HAIP] section 4.5.1
 - [OpenID4VCI] section F.1
 
-## EUDI-wallet relevancy
-
-EUDI_specific | EUDI_required
-
 ## Profile applicability
 
 Wallet uses the `jwt` proof type to convey a key attestation in Credential Requests.
+
+## EUDI-wallet relevancy
+
+EUDI_specific | EUDI_required
 
 ## Technology
 
@@ -41,4 +41,4 @@ Credential with Key Binding.
 
 1. The signature algorithm in `alg`:
     1. is on the list of acceptable algorithms [ECCG ACM], and
-	2. is one of `ES256`, `ES384`, or `ES512`.
+    2. is one of `ES256`, `ES384`, or `ES512`.

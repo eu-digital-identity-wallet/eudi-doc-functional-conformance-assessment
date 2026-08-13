@@ -8,13 +8,13 @@ This test case verifies that the claim `sex` is a Number. Note that `sex` is the
 
 - [PID rulebook] Annex 3.01, Section 4.2, item 4 (Table 8)
 
-## EUDI-wallet relevancy
-
-EUDI_specific | EUDI_optional
-
 ## Profile applicability
 
 The EUDI wallet contains a Credential in SD-JWT VC format with vct = "urn:eudi:pid:". The claim `sex` is included in a person identification data.
+
+## EUDI-wallet relevancy
+
+EUDI_specific | EUDI_optional
 
 ## Preconditions
 

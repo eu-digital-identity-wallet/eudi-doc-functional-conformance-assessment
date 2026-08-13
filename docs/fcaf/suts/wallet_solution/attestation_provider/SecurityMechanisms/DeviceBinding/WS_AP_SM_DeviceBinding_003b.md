@@ -13,13 +13,13 @@ Verify that the Wallet correctly signs the Client Attestation Proof of Possessio
 - [IETF draft-attestation-based-client-auth] section 5.1
 - [ECCG ACM] section 5.2
 
-## EUDI-wallet relevancy
-
-EUDI_generic | EUDI_required
-
 ## Profile applicability
 
 None
+
+## EUDI-wallet relevancy
+
+EUDI_generic | EUDI_required
 
 ## Technology
 

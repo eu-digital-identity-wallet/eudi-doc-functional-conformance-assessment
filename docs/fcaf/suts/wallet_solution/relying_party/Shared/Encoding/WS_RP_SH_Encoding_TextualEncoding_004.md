@@ -53,4 +53,3 @@ EUDI_generic | EUDI_required
 2. Wallet receives the request.
 3. Wallet successfully parses the request.
 4. Verify the wallet responds with an error
-

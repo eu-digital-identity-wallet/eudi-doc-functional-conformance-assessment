@@ -29,4 +29,3 @@ None
 
 1. Wallet-verifier interaction is successfully initiated.
 2. Wallet rejects the Authorization Request due to invalid encoding or structure and returns an invalid_request error.
-

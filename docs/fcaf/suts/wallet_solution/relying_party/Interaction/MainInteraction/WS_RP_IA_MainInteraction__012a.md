@@ -9,13 +9,13 @@ Verify that the Wallet responds to a DCQL-query for a single claim with disclosu
 - [HAIP] section 5, 5.3.2
 - [OpenID4VP] section 6.1, 6.3, B.3.5
 
-## EUDI-wallet relevancy
-
-EUDI_generic | EUDI_required
-
 ## Profile applicability
 
 None
+
+## EUDI-wallet relevancy
+
+EUDI_generic | EUDI_required
 
 ## Preconditions
 

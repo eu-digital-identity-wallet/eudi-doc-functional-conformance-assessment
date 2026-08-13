@@ -33,4 +33,3 @@ None
 2. Wallet successfully receives the Request Object.
 3. Wallet successfully parses the Request Object and x5c.
 4. Wallet rejects the Request Object and returns an invalid_request error due to failed trust chain validation; presentation flow is not initiated.
-

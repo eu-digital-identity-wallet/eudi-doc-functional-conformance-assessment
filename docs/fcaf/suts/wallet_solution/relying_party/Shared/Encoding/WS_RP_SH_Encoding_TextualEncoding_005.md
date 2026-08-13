@@ -33,4 +33,3 @@ EUDI_generic | EUDI_required
 2. Wallet receives the request.
 3. Wallet successfully parses the request.
 4. Verify the wallet responds with the credential, including selective disclosure of the named attribute.
-

@@ -13,14 +13,14 @@ Verify that the Wallet's Authorization Response has (a) syntactically correct SD
 
 ## Profile applicability
 
+## EUDI-wallet relevancy
+
+EUDI_generic | EUDI_required
+
 ## Technology
 
 Presentation using OpenID4VP
 Credential in SD-JWT VC format
-
-## EUDI-wallet relevancy
-
-EUDI_generic | EUDI_required
 
 ## Preconditions
 

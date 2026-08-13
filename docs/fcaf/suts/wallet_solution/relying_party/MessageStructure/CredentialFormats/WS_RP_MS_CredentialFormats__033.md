@@ -31,4 +31,3 @@ EUDI_generic | EUDI_required
 ## Expected results
 
 1. The ISO mdoc Referenced Token with status claim is stored by the Wallet.
-

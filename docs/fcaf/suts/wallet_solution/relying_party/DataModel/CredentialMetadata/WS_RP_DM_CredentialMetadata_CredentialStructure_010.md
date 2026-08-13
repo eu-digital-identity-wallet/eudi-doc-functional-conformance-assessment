@@ -31,4 +31,3 @@ None
 1. Wallet and Verifier can interact.
 2. Wallet receives the request.
 3. The wallet correctly uses the "claims_sets" to determine which claims to send, as per the rules in [OID4VP 6.4.1]
-

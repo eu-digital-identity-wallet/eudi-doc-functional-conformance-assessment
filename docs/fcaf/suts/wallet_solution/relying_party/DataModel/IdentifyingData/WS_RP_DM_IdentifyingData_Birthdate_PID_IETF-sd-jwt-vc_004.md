@@ -10,13 +10,13 @@ This test case verifies that the claim `birthdate` contains a valid date. Note t
 - [ISO 8601-1:2019] 4.2.1, 4.3.2
 - [RFC3339] Sections 5.6, 5.7
 
-## EUDI-wallet relevancy
-
-EUDI_specific | EUDI_required
-
 ## Profile applicability
 
 The EUDI wallet contains a Credential in IETF SD-JWT VC format. `vct` claim includes base type of person identification "urn:eudi:pid:1".
+
+## EUDI-wallet relevancy
+
+EUDI_specific | EUDI_required
 
 ## Preconditions
 

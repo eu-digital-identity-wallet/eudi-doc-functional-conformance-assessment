@@ -35,4 +35,3 @@ None
 3. The wallet submits the Authorization Response to the verifier's response_uri.
 4. The wallet receives the verifier's HTTP 200 JSON response.
 5. Wallet opens redirect_uri, shows user success page.
-

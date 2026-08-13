@@ -33,4 +33,3 @@ EUDI_generic | EUDI_required
 2. Wallet successfully receives the Request Object.
 3. Wallet successfully parses the Request Object and the attestation JWT.
 4. Wallet verifies the exact match; request is processed; presentation flow proceeds.
-

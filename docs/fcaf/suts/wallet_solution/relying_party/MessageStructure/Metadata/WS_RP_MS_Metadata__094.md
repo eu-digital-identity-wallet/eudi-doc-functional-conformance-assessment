@@ -29,4 +29,3 @@ EUDI_generic | EUDI_required
 ## Expected results
 
 1. The Wallet handles the missing "status_list" according to local policy.
-

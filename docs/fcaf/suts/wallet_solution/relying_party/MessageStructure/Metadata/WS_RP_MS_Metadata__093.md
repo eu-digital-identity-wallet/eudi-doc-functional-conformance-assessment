@@ -32,4 +32,3 @@ EUDI_generic | EUDI_required
 ## Expected results
 
 1. The "status_list" structure contains valid "idx" and "uri" fields and the token is accepted.
-

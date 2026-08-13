@@ -2,7 +2,7 @@
 
 ## Objective
 
-Verify that when Wallet is presenting several ISO mdocs, each ISO mdoc is returned in a separate DeviceResponse (as defined in 8.3.2.1.2.2 of [ISO.18013-5]), each matching to a respective DCQL query. Therefore, the resulting vp_token contains multiple DeviceResponse instances.
+Verify that when Wallet is presenting several ISO mdocs, each ISO mdoc is returned in a separate `DeviceResponse` (as defined in 8.3.2.1.2.2 of [ISO.18013-5]), each matching to a respective DCQL query. Therefore, the resulting `vp_token` contains multiple `DeviceResponse` instances.
 
 ## References
 
@@ -30,7 +30,7 @@ None
 4. Verify if Wallet can handle receiving multiple DCQL queries for Credentials in ISO mdoc format.
 5. Verify if Wallet asks for user consent to present the Credential.
 6. User gives consent.
-7. Verify if `vp_token` contains multiple `DeviceResponse` instances.
+7. Verify if `vp_token` contains multiple `DeviceResponse` instances.
 8. Verify if for each query, Wallet returns one Device Response matching each DCQL query.
 
 ## Expected results
@@ -41,6 +41,5 @@ None
 4. Wallet receives multiple DCQL queries for Credentials in ISO mdoc format successfully.
 5. Wallet asks for user consent.
 6. This is the case.
-7. `vp_token` contains multiple `DeviceResponse` instances.
+7. `vp_token` contains multiple `DeviceResponse` instances.
 8. For each query, Wallet returns one Device Response matching each DCQL query.
-

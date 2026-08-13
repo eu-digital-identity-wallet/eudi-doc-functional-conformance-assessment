@@ -31,4 +31,3 @@ EUDI_generic | EUDI_optional
 1. Wallet-verifier interaction is successfully initiated.
 2. Wallet successfully receives and parses the Authorization Request.
 3. Wallet rejects the Authorization Request due to signature or binding failure; presentation flow is not initiated.
-

@@ -13,13 +13,13 @@ Verify that the Wallet sends a HTTP Request that contains a syntactically correc
 - [RFC9126] section 2.1
 - [IETF draft-attestation-based-client-auth] section 5.2, 6.1
 
-## EUDI-wallet relevancy
-
-EUDI_generic | EUDI_required
-
 ## Profile applicability
 
 None
+
+## EUDI-wallet relevancy
+
+EUDI_generic | EUDI_required
 
 ## Technology
 

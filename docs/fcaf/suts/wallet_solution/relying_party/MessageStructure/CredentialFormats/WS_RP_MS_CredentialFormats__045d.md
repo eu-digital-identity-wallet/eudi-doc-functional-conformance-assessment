@@ -14,16 +14,16 @@ Verify that the Wallet correctly serializes the key binding JWT in a presentatio
 
 None
 
+## EUDI-wallet relevancy
+
+EUDI_generic | EUDI_required
+
 ## Technology
 
 Presentation using OpenID4VP
 Credential in SD-JWT VC format
 Credential with key-binding
 Issuer uses compact serialization of SD-JWT and SD-JWT VC
-
-## EUDI-wallet relevancy
-
-EUDI_generic | EUDI_required
 
 ## Preconditions
 

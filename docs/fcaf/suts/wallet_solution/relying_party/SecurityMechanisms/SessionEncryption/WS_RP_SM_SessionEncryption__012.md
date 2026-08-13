@@ -38,4 +38,3 @@ None
 4. This is the case.
 5. Wallet sends encrypted response using parameters provided in "client_metadata".
 6. Verifier is able to decrypt response sent by the Wallet.
-

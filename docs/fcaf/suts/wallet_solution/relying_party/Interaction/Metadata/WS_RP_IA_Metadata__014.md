@@ -33,4 +33,3 @@ None
 2. Wallet successfully receives the Authorization Request.
 3. Wallet successfully parses the Authorization Request.
 4. Wallet successfully resolves the Entity via OpenID Federation and processes the request; presentation flow proceeds.
-

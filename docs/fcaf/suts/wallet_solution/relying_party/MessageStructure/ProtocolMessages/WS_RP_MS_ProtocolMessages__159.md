@@ -33,4 +33,3 @@ None
 2. Wallet receives request.
 3. Wallet identifies that it does not hold credentials of credential_ids in transaction_data object.
 4. Verify the Wallet does NOT proceed to the user consent screen, instead it must return an error response: invalid_transaction_data.
-

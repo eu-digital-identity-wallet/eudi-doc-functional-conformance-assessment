@@ -33,4 +33,3 @@ None
 2. Wallet successfully receives the Authorization Request.
 3. Wallet correctly prepares the POST request.
 4. Wallet sends an HTTP POST request to the request_uri using HTTPS, with Content-Type: application/x-www-form-urlencoded and Accept: application/oauth-authz-req+jwt.
-

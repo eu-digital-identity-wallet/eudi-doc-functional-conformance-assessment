@@ -33,4 +33,3 @@ None
 2. Wallet successfully receives the Authorization Request.
 3. Wallet correctly prepares the POST body.
 4. All names and values in the POST body are encoded using UTF-8.
-

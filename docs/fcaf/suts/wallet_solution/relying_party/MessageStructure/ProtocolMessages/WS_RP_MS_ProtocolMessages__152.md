@@ -33,4 +33,3 @@ None
 2. Wallet receives request.
 3. The Wallet identifies it cannot fetch request object.
 4. Verify the Wallet returns an error response, where the error parameter is exactly invalid_request_uri_method.
-

@@ -31,4 +31,3 @@ None
 1. Wallet-verifier interaction is successfully initiated.
 2. Wallet processes the Request Object.
 3. Wallet processes the request without signature validation in accordance with its configured profile; presentation flow proceeds.
-

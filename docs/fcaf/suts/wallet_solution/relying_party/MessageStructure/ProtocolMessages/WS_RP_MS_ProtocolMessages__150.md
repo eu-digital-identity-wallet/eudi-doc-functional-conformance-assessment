@@ -34,4 +34,3 @@ EUDI_generic | EUDI_required
 2. Wallet receives request
 3. The Wallet identifies it cannot fulfill request due to format requirement and does NOT show credential selection screen.
 4. Verify the Wallet returns an error response, where the error parameter is exactly vp_formats_not_supported.
-

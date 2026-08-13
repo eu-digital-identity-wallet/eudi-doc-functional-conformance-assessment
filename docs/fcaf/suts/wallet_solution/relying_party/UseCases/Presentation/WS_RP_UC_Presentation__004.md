@@ -35,4 +35,3 @@ None
 3. Wallet on Device B successfully receives the Authorization Request via its registered handler.
 4. Wallet successfully parses and validates the Authorization Request.
 5. Wallet completes the presentation flow on Device B and returns the Authorization Response to the Verifier.
-

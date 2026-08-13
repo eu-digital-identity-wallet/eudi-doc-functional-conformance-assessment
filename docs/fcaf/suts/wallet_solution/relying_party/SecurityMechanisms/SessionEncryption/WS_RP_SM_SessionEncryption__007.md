@@ -39,4 +39,3 @@ None
 4. This is the case.
 5. Wallet sends an encrypted response.
 6. JWE "enc" value is set to A128GCM.
-

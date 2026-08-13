@@ -32,4 +32,3 @@ None
 1. Wallet-verifier interaction is successfully initiated.
 2. Authorization Request is processed by the Wallet.
 3. Wallet falls back to JAR processing [RFC9101] using HTTP GET and continues with the flow.
-

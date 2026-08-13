@@ -31,4 +31,3 @@ None
 1. Wallet-verifier interaction is successfully initiated.
 2. Wallet processes the Request Object.
 3. Wallet rejects the Authorization Request due to signature validation failure; presentation flow is not initiated.
-

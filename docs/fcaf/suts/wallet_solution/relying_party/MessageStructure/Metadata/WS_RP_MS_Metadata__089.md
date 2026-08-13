@@ -38,4 +38,3 @@ EUDI_generic | EUDI_required
 3. The Wallet rejects the Referenced Token (malformed percent-encoding).
 4. The Wallet rejects the Referenced Token (illegal characters <, >, | are not permitted in URIs per RFC 3986).
 5. The Wallet rejects the Referenced Token (empty URI).
-

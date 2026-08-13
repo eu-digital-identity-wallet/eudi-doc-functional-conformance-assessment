@@ -8,13 +8,13 @@ This test case verifies that the claim `nationalities` is present in the Credent
 
 - [PID rulebook] Annex 3.01 paragraph 3.1.2, Section 4.2 (Table 1)
 
-## EUDI-wallet relevancy
-
-EUDI_specific | EUDI_required
-
 ## Profile applicability
 
 The EUDI wallet contains a Credential in IETF SD-JWT VC format. `vct` claim includes base type of person identification "urn:eudi:pid:1".
+
+## EUDI-wallet relevancy
+
+EUDI_specific | EUDI_required
 
 ## Preconditions
 

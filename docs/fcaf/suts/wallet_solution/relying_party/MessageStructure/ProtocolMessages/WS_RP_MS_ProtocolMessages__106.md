@@ -31,4 +31,3 @@ None
 1. Wallet and Verifier can interact.
 2. Wallet receives the request.
 3. The Wallet correctly identifies that no credentials satisfy the query and returns access_denied (with the description that no credentials match).
-

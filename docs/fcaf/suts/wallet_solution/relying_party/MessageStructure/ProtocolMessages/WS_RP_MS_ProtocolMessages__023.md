@@ -31,4 +31,3 @@ None
 1. Wallet-verifier interaction is successfully initiated.
 2. Request parsed successfully.
 3. Wallet sends an HTTP POST to the request_uri, retrieves the Request Object, and processes the Authorization Request successfully.
-

@@ -29,4 +29,3 @@ None
 
 1. Wallet-verifier interaction is successfully initiated.
 2. Wallet accepts the request and processes only the defined metadata parameters from client_metadata.
-

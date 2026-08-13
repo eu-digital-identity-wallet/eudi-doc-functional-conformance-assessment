@@ -33,4 +33,3 @@ None
 2. Wallet successfully receives the Authorization Request.
 3. Wallet successfully parses the Authorization Request.
 4. Wallet processes all Verifier metadata exclusively from the client_metadata parameter and proceeds with the flow.
-

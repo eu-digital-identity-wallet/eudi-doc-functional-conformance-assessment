@@ -29,4 +29,3 @@ None
 
 1. This is the case.
 2. Verify if Wallet Metadata is explicit for which other algorithms and key types are supported for the cryptographic operations.
-

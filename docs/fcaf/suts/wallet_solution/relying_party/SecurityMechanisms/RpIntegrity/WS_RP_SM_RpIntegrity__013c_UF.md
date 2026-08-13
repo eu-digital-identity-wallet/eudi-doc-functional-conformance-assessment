@@ -12,13 +12,13 @@ Verify that the Wallet does not process a signed Request Object, when using Open
 - [RFC9101] section 6.2
 - [ECCG ACM] section 5.2
 
-## EUDI-wallet relevancy
-
-EUDI_generic | EUDI_required
-
 ## Profile applicability
 
 None
+
+## EUDI-wallet relevancy
+
+EUDI_generic | EUDI_required
 
 ## Technology
 

@@ -12,13 +12,13 @@ Verify that the Wallet sends a syntactically correct Pushed Authorization Reques
 - [RFC6749] section 4.1.1
 - [RFC7636] section 4.3
 
-## EUDI-wallet relevancy
-
-EUDI_generic | EUDI_required
-
 ## Profile applicability
 
 None
+
+## EUDI-wallet relevancy
+
+EUDI_generic | EUDI_required
 
 ## Technology
 

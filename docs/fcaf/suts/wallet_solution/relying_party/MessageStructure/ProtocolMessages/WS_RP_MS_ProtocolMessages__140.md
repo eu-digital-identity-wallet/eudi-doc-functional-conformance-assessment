@@ -35,4 +35,3 @@ None
 3. The wallet identifies the scope as invalid and does not proceed to credential selection or user authorization.
 4. The wallet returns an error response where the error parameter is exactly invalid_scope.
 5. The wallet terminates the session without leaving the verifier hanging; no further communication is sent.
-

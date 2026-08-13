@@ -2,7 +2,7 @@
 
 ## Objective
 
-Verify that Wallet does not support RSASSA-PSS using SHA-384 and MGF1 with SHA-384 (RS384) for validating signed presentation requests.
+Verify that Wallet does not support RSASSA-PSS using SHA-384 and MGF1 with SHA-384 (RS384) for validating signed presentation requests.
 
 ## References
 
@@ -10,7 +10,7 @@ Verify that Wallet does not support RSASSA-PSS using SHA-384 and MGF1 with SHA-3
 
 ## Profile applicability
 
-JOSE algorithm identifier ES257
+JOSE algorithm identifier ES257
 
 ## EUDI-wallet relevancy
 
@@ -36,4 +36,3 @@ None
     - (a) returns specific error `invalid_client`,
     - (b) returns general error,
     - (c) only discontinues the transaction.
-

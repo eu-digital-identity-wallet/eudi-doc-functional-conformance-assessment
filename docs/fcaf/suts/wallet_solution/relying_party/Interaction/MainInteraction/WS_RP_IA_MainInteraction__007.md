@@ -35,4 +35,3 @@ EUDI_generic | EUDI_required
 2. Wallet receives the request.
 3. The wallet allows the user to select the credential of the specified type.
 4. The wallet presents the selected credential to the verifier with a cryptographic proof of holder binding.
-

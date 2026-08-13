@@ -35,4 +35,3 @@ None
 3. Wallet successfully parses the Request Object.
 4. Wallet successfully validates signature and trust chain.
 5. Wallet obtains all non-key Verifier metadata from client_metadata; request is accepted; presentation flow proceeds.
-

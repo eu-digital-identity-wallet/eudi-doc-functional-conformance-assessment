@@ -13,13 +13,13 @@ Verify that the Wallet sends a syntactically correct Authorization Request to th
 - [RFC9101] section 5.2.2
 - [RFC6749] section 4.1.1
 
-## EUDI-wallet relevancy
-
-EUDI_generic | EUDI_required
-
 ## Profile applicability
 
 None
+
+## EUDI-wallet relevancy
+
+EUDI_generic | EUDI_required
 
 ## Technology
 
@@ -43,4 +43,3 @@ Issuance via Redirects.
 1. The Authorization Request contains the following top-level request parameters:
     1. `request_uri`
     2. `client_id`
-

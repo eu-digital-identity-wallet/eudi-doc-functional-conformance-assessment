@@ -2,7 +2,7 @@
 
 ## Objective
 
-Verify that, in the presentation flow via Redirects, the Wallet supports receiving a Signed Authorization Request using JWT-Secured Authorization Request (JAR) [RFC9101] with the `request_uri` parameter.
+Verify that, in the presentation flow via Redirects, the Wallet supports receiving a Signed Authorization Request using JWT-Secured Authorization Request (JAR) [RFC9101] with the `request_uri` parameter.
 
 ## References
 
@@ -24,7 +24,7 @@ EUDI_generic | EUDI_required
 ## Test Scenario
 
 1. End-user interacts with the Verifier, triggering the Verifier to send a presentation request.
-2. Verifier sends Signed Authorization Request using JWT-Secured Authorization Request (JAR) [RFC9101] with the `request_uri` parameter, and signature is authentic.
+2. Verifier sends Signed Authorization Request using JWT-Secured Authorization Request (JAR) [RFC9101] with the `request_uri` parameter, and signature is authentic.
 3. Verify if the Wallet obtains the request object from the `request_uri`.
 4. Wallet checks signature on the request object.
 5. Verify if Wallet asks for user consent to present the Credential.

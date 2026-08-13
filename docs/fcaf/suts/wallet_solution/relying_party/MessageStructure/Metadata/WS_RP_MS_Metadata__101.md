@@ -32,4 +32,3 @@ EUDI_generic | EUDI_required
 ## Expected results
 
 1. The status claim at label 65535 contains a valid Status CBOR structure and the token is accepted.
-

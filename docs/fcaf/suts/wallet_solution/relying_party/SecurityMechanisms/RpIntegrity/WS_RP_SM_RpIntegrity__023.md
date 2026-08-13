@@ -38,4 +38,3 @@ None
 4. Wallet asks for user consent.
 5. This is the case.
 6. Wallet presents Credential successfully.
-

@@ -31,4 +31,3 @@ None
 1. Wallet-verifier interaction is successfully initiated.
 2. Wallet receives request.
 3. Wallet does NOT show a credential selection screen to user, it will return an error response.
-

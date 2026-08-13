@@ -33,4 +33,3 @@ None
 2. Wallet successfully receives the Request Object.
 3. Wallet successfully parses the Request Object and the attestation JWT.
 4. Wallet refuses the request and returns an invalid_client error due to invalid attestation JWT signature; presentation flow is not initiated.
-

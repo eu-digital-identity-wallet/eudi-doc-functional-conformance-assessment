@@ -29,4 +29,3 @@ None
 
 1. Wallet-verifier interaction is successfully initiated.
 2. Wallet processes only the defined metadata parameters; unrecognized parameters are silently ignored; presentation flow proceeds.
-

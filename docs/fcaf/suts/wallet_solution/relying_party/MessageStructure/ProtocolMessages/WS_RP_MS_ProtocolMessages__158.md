@@ -33,4 +33,3 @@ None
 2. Wallet receives request.
 3. Wallet identifies mismatch of credential_ids.
 4. Verify the Wallet does NOT proceed to the user consent screen, instead it must return an error response: invalid_transaction_data.
-

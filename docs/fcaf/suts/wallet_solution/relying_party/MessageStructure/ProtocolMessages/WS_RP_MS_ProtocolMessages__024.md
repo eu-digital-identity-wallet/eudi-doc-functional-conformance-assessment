@@ -29,4 +29,3 @@ None
 
 1. Wallet-verifier interaction is successfully initiated.
 2. Wallet returns an invalid_transaction_data error due to the unrecognized transaction data type; presentation flow is not initiated.
-

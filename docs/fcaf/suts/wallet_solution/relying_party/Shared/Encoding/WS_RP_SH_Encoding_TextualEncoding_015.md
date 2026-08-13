@@ -37,4 +37,3 @@ EUDI_generic | EUDI_required
 4. Wallet correctly resolves org.iso.18013.5.1 as the namespace.
 5. Wallet selects the first_name data element and CBOR-encodes its value (e.g. "Alice").
 6. Wallet returns an Authorization Response containing the first_name value CBOR-encoded; presentation flow proceeds.
-

@@ -34,4 +34,3 @@ None
 2. Wallet successfully receives the Authorization Request.
 3. Wallet successfully receives the HTTP response from the request_uri endpoint.
 4. HTTP response has Content-Type: application/oauth-authz-req+jwt and the body is a signed (optionally encrypted) Request Object conforming to RFC9101; presentation flow proceeds.
-

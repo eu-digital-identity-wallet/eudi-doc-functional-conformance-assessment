@@ -29,4 +29,3 @@ EUDI_generic | EUDI_required
 ## Expected results
 
 1. The Wallet handles the absent "status" claim according to local policy.
-

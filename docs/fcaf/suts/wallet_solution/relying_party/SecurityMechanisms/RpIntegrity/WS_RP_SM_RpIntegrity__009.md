@@ -35,4 +35,3 @@ None
 3. Wallet successfully parses the Request Object.
 4. Wallet extracts the cnf claim public key.
 5. Wallet rejects the Request Object and returns an invalid_request error due to failed proof of possession; presentation flow is not initiated.
-

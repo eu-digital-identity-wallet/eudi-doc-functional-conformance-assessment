@@ -31,4 +31,3 @@ None
 1. Wallet and Verifier can interact.
 2. Wallet receives the request.
 3. The wallet recognises that one credential satisfies both queries and MUST NOT return an error for this scenario, or force the user to "pick" the credential twice.
-

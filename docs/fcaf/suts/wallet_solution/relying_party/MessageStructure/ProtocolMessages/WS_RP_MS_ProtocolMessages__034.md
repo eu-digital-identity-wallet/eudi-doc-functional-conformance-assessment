@@ -31,4 +31,3 @@ None
 1. Wallet-verifier interaction is successfully initiated.
 2. Wallet successfully parses the Authorization Request.
 3. Wallet rejects the Authorization Request and returns an invalid_request error; presentation flow is not initiated.
-

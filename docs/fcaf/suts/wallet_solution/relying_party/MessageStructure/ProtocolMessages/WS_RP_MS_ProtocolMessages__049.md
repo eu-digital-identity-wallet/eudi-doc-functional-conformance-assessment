@@ -33,4 +33,3 @@ None
 2. Wallet successfully receives the Authorization Request.
 3. Wallet successfully parses both the query string and the Request Object.
 4. Wallet uses only the parameter values from the Request Object; the conflicting query parameter value is ignored; presentation flow proceeds.
-

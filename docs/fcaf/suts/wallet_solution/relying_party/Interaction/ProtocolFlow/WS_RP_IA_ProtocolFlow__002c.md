@@ -10,13 +10,13 @@ Verify that, in the presentation flow via Redirects, the Wallet supports receivi
 - [OpenID4VP] section 5, 5.1
 - [RFC9101] section 5
 
-## EUDI-wallet relevancy
-
-EUDI_generic | EUDI_required
-
 ## Profile applicability
 
 None
+
+## EUDI-wallet relevancy
+
+EUDI_generic | EUDI_required
 
 ## Technology
 

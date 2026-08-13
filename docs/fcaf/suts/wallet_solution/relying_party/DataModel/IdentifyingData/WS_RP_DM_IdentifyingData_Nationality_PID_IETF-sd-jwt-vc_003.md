@@ -10,13 +10,13 @@ This test case verifies that each string within the array of strings in the clai
 - [ISO 3166-1:2020] 6.1
 - [ISO 3166-1:2020] 8.3
 
-## EUDI-wallet relevancy
-
-EUDI_specific | EUDI_required
-
 ## Profile applicability
 
 The EUDI wallet contains a Credential in IETF SD-JWT VC format. `vct` claim includes base type of person identification "urn:eudi:pid:1".
+
+## EUDI-wallet relevancy
+
+EUDI_specific | EUDI_required
 
 ## Preconditions
 

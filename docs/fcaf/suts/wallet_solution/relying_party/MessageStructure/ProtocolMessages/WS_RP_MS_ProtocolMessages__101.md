@@ -34,4 +34,3 @@ None
     1. The Wallet confirms the PID exists and satisfies the query. It prepares the PID for presentation.
     2. The Wallet presents the PID to the user. Because it is marked as required, the UI should indicate it is mandatory (e.g., no "skip" option for this specific set).
     3. The Wallet generates the Verifiable Presentation containing the PID as required by the Verifier
-

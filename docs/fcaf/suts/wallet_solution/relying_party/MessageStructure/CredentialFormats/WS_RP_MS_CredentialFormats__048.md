@@ -32,4 +32,3 @@ None
 1. This is the case.
 2. This is the case.
 3. Wallet presents successfully Credential in IETF SD-JWT VC format using JSON serialization.
-

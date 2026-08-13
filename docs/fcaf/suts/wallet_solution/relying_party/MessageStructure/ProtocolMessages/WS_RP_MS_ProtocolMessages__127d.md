@@ -11,14 +11,14 @@ Verify that the Wallet's Authorization Response has (a) syntactically correct md
 
 ## Profile applicability
 
+## EUDI-wallet relevancy
+
+EUDI_generic | EUDI_required
+
 ## Technology
 
 Presentation using OpenID4VP
 Credential in mdoc format
-
-## EUDI-wallet relevancy
-
-EUDI_generic | EUDI_required
 
 ## Preconditions
 

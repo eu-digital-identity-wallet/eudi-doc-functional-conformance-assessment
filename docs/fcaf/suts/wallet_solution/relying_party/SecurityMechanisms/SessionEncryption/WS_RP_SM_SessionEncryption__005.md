@@ -2,7 +2,7 @@
 
 ## Objective
 
-Verify that in the encrypted response sent by the Wallet: the JWE `alg` (algorithm) header parameter (as defined in section 4.1.1 of [RFC7516]) value is set to ECDH-ES (as defined in section 4.6 of [RFC7518]), with key agreement utilizing keys on the P-256 curve (as defined in section 6.2.1.1 of [RFC7518]).
+Verify that in the encrypted response sent by the Wallet: the JWE `alg` (algorithm) header parameter (as defined in section 4.1.1 of [RFC7516]) value is set to ECDH-ES (as defined in section 4.6 of [RFC7518]), with key agreement utilizing keys on the P-256 curve (as defined in section 6.2.1.1 of [RFC7518]).
 
 ## References
 
@@ -42,4 +42,3 @@ None
 5. Wallet sends encrypted response.
 6. In the encrypted response, JWE alg (algorithm) header parameter value is set ECDH-ES.
 7. Key agreement uses keys on the P-256 curve.
-

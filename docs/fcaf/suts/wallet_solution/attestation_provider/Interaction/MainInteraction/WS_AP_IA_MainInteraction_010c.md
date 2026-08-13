@@ -11,13 +11,13 @@ Verify that the Wallet sends a reference to a successfully Pushed Authorization 
 - [OpenID4VCI] section 5.1
 - [RFC9126] section 2.2, 4
 
-## EUDI-wallet relevancy
-
-EUDI_generic | EUDI_required
-
 ## Profile applicability
 
 None
+
+## EUDI-wallet relevancy
+
+EUDI_generic | EUDI_required
 
 ## Technology
 

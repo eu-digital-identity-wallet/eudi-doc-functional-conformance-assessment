@@ -33,4 +33,3 @@ None
 2. Wallet receives request.
 3. Verify the wallet returns an encrypted response.
 4. The decrypted JWT payload contains all response parameters as top-level JSON members, not nested inside a sub-object.
-

@@ -12,13 +12,13 @@ Verify that the Wallet correctly serializes the Client Attestation as a signed J
 - [OpenID4VCI] section 5.1.4, E
 - [IETF draft-attestation-based-client-auth] section 5.1
 
-## EUDI-wallet relevancy
-
-EUDI_generic | EUDI_required
-
 ## Profile applicability
 
 None
+
+## EUDI-wallet relevancy
+
+EUDI_generic | EUDI_required
 
 ## Technology
 

@@ -12,13 +12,13 @@ Verify that the Wallet sends a reference to a Pushed Authorization Request to th
 - [RFC9126] section 4
 - [RFC9101] section 5
 
-## EUDI-wallet relevancy
-
-EUDI_generic | EUDI_required
-
 ## Profile applicability
 
 None
+
+## EUDI-wallet relevancy
+
+EUDI_generic | EUDI_required
 
 ## Technology
 

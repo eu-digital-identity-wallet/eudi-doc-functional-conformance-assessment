@@ -33,4 +33,3 @@ None
 2. Wallet receives request
 3. The wallet processes the request successfully and prepares an Authorization Response encoded as application/x-www-form-urlencoded for submission to the response_uri.
 4. Verify the wallet submits the response including the Authorization Response encoded using format defined by application/x‑www‑form‑urlencoded.
-

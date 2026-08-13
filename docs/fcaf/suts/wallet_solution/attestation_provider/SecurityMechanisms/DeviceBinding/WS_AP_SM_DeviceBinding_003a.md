@@ -13,13 +13,13 @@ Verify that the Wallet uses an acceptable signature algorithm for signing the Cl
 - [IETF draft-attestation-based-client-auth] section 5.2
 - [ECCG ACM] section 5.2
 
-## EUDI-wallet relevancy
-
-EUDI_generic | EUDI_required
-
 ## Profile applicability
 
 None
+
+## EUDI-wallet relevancy
+
+EUDI_generic | EUDI_required
 
 ## Technology
 
@@ -42,4 +42,4 @@ Credential Issuance using the Authorization Code Flow.
 
 1. The signature algorithm in `alg`:
     1. is on the list of acceptable algorithms [ECCG ACM], and
-	2. is one of `ES256`, `ES384`, or `ES512`.
+    2. is one of `ES256`, `ES384`, or `ES512`.

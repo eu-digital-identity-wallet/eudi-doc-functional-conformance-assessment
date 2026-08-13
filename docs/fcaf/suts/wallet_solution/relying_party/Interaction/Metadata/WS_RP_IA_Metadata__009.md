@@ -29,4 +29,3 @@ None
 
 1. Wallet-verifier interaction is successfully initiated.
 2. Wallet sends an encrypted Authorization Response (JWE) to the response_uri via HTTPS.
-

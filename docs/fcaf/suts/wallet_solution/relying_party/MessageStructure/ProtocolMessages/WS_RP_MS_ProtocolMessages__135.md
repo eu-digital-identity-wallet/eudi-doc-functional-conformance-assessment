@@ -33,4 +33,3 @@ None
 2. Wallet receives request.
 3. The wallet displays the transaction_data to the user and processes the request upon user approval.
 4. The wallet submits a presentation whose JWT payload contains a transaction_data_hashes parameter referencing the transaction_data from the request; the verifier successfully identifies and validates the reference.
-

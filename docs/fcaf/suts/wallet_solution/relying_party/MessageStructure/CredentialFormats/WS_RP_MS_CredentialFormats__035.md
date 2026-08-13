@@ -40,4 +40,3 @@ None
 4. This is the case.
 5. Wallet presents Credential to the Verifier successfully.
 6. Credential presented has Credential Format Identifier value set to `mso_mdoc`.
-

@@ -36,4 +36,3 @@ EUDI_generic | EUDI_required
     - (a) answering with an error with details (`invalid_request`),
     - (b) answering with an error without providing details or,
     - (c) discontinuing the interaction.
-

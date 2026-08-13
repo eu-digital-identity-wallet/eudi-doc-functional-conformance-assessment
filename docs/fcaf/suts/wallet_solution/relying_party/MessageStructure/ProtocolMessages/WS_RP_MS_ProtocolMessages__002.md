@@ -31,4 +31,3 @@ None
 
 1. Wallet-verifier interaction is successfully initiated.
 2. Wallet successfully processes the plain RFC9700 Authorization Request and proceeds with the presentation flow.
-

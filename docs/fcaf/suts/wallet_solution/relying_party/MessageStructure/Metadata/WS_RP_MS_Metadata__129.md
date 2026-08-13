@@ -33,4 +33,3 @@ None
 2. Wallet successfully receives the Request Object.
 3. Wallet successfully parses the Request Object and the x5c chain.
 4. Wallet verifies that the Client Identifier matches the leaf certificate hash; request is accepted; presentation flow proceeds.
-

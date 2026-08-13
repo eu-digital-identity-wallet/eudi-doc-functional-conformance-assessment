@@ -10,13 +10,13 @@ Verify that the Wallet does not engage issuance based on a Credential Offer with
 - [HAIP] section 4.2
 - [OpenID4VCI] section 4.1.1
 
-## EUDI-wallet relevancy
-
-EUDI_generic | EUDI_required
-
 ## Profile applicability
 
 Wallet supports the Issuer initiated issuance flow.
+
+## EUDI-wallet relevancy
+
+EUDI_generic | EUDI_required
 
 ## Technology
 
@@ -39,4 +39,3 @@ Wallet supports invocation through the custom URL scheme `eu-eaa-offer://`.
 1. User-agent presents option to End-user to engage issuance.
 2. The Wallet does not engage for issuance. This includes:
     1. The Wallet could inform the End-user about the incorrect engagement, if applicable.
-
