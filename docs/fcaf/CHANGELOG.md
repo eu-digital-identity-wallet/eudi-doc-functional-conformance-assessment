@@ -11,6 +11,7 @@ release-candidate and released version tags.
 
 ## [Latest draft]
 
+- Write protocol and data element identifiers in backticks where they were quoted, and replace the typographic quotation marks that had crept in.
 - Add the missing `[ETSI TS 119 475]` entry to the reference catalogue, so the trust mechanism test cases that cite it resolve.
 - Normalise the test case sources against the settled conventions: canonical section order, a single trailing newline, no invisible characters, and spaces instead of tabs for list indentation. No wording changes.
 - Settle the test case conventions the format guard checks: sections follow one canonical order, default configurations are numbered and default credentials are lettered so the two cannot be confused, and the optional comment section is called `Comments` everywhere.

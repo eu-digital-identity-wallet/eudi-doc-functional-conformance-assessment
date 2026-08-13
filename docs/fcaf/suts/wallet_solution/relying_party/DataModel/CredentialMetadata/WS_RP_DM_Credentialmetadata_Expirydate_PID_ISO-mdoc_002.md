@@ -13,7 +13,7 @@ This test case verifies that the DataElementValue of data element `expiry_date` 
 
 ## Profile applicability
 
-The EUDI wallet contains a Credential in mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element `expiry_date` is present in the mdoc data.
+The EUDI wallet contains a Credential in mdoc format with DocType = `eu.europa.ec.eudi.pid.1`. Data element `expiry_date` is present in the mdoc data.
 
 ## EUDI-wallet relevancy
 
@@ -21,8 +21,8 @@ EUDI_specific | EUDI_required
 
 ## Preconditions
 
-1. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".
-2. All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested.
+1. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = `eu.europa.ec.eudi.pid.1`.
+2. All mandatory data elements within namespace `eu.europa.ec.eudi.pid.1` and all data elements indicated as present in the ICS were requested.
 3. The device retrieval mdoc response was retrieved.
 4. The presence of data element `expiry_date` in the device retrieval mdoc response was verified.
 

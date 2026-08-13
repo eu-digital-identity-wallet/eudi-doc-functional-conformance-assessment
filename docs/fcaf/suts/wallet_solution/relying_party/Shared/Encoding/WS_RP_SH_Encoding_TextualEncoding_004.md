@@ -43,7 +43,7 @@ EUDI_generic | EUDI_required
 ## Test Scenario
 
 1. The Wallet engages with the Verifier
-2. A Verifier sends a request With a DCQL-query with `path` array: ["street_address", "address"].
+2. A Verifier sends a request With a DCQL-query with `path` array: [`street_address`, "address"].
 3. Wallet handles request
 4. Wallet responds to request.
 

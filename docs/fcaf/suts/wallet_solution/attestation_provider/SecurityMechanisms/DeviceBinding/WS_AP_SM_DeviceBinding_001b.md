@@ -26,7 +26,7 @@ Credential Issuance using the Authorization Code Flow.
 
 ## Preconditions
 
-1. Wallet is set to 'default_configuration_1'
+1. Wallet is set to `default_configuration_1`
 2. Wallet started engagement with Credential Issuer.
 3. Wallet successfully obtained Credential Issuer Metadata.
 4. Wallet send an HTTP POST Request for a Pushed Authorization Request to the PAR Endpoint of the selected Authorization Server.

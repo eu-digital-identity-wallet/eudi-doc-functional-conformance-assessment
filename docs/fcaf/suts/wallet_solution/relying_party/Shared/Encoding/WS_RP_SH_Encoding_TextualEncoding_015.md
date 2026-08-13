@@ -23,7 +23,7 @@ EUDI_generic | EUDI_required
 ## Test Scenario
 
 1. Engage wallet-verifier interaction.
-2. Verifier sends an Authorization Request with a DCQL query containing a claims path pointer path: ["org.iso.18013.5.1", "first_name"].
+2. Verifier sends an Authorization Request with a DCQL query containing a claims path pointer path: [`org.iso.18013.5.1`, `first_name`].
 3. Wallet parses the Authorization Request and the DCQL query.
 4. Wallet interprets the first element of the path as a namespace and looks it up in the mdoc Credential.
 5. Wallet selects the data element identified by the second element within that namespace.

@@ -2,7 +2,7 @@
 
 ## Objective
 
-Test the Wallet when processing trusted_authorities, type "etsi_tl" is supported.
+Test the Wallet when processing trusted_authorities, type `etsi_tl` is supported.
 
 ## References
 
@@ -23,7 +23,7 @@ None
 ## Test Scenario
 
 1. The Wallet engages with the Verifier.
-2. Verifier sends a DCQL query requesting a credential with a "trusted_authorities" property with its type being "etsi_tl".
+2. Verifier sends a DCQL query requesting a credential with a `trusted_authorities` property with its type being `etsi_tl`.
 3. The Wallet evaluates the request.
 
 ## Expected results

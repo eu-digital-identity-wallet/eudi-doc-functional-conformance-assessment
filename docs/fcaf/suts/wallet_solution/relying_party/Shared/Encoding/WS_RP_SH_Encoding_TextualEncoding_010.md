@@ -42,7 +42,7 @@ EUDI_generic | EUDI_required
 ## Test Scenario
 
 1. Engage wallet-verifier interaction.
-2. Verifier sends an Authorization Request with a DCQL query containing a claims path pointer where a non-negative integer component is applied to a currently selected element that is NOT an array (e.g. claims path pointer: ["address", "house_no", null] where house_no is a string).
+2. Verifier sends an Authorization Request with a DCQL query containing a claims path pointer where a non-negative integer component is applied to a currently selected element that is NOT an array (e.g. claims path pointer: ["address", `house_no`, null] where house_no is a string).
 3. Wallet parses the Authorization Request and the DCQL query.
 4. Wallet evaluates the claims path pointer against the matching JSON-based Credential.
 5. Wallet detects that the currently selected element is not an array when the integer component is applied.

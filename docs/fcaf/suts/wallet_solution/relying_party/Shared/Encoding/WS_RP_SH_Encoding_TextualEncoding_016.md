@@ -29,7 +29,7 @@ EUDI_generic | EUDI_required
 ## Test Scenario
 
 1. Engage wallet-verifier interaction.
-2. Verifier sends an Authorization Request with a DCQL query containing a claims path pointer path: ["org.iso.18013.5.1", "first_name"] whose first element does NOT match any namespace in the Credential.
+2. Verifier sends an Authorization Request with a DCQL query containing a claims path pointer path: [`org.iso.18013.5.1`, `first_name`] whose first element does NOT match any namespace in the Credential.
 3. Wallet parses the Authorization Request and the DCQL query.
 4. Wallet attempts to locate the namespace identified by the first element in the mdoc Credential.
 5. Wallet detects that no matching namespace exists.

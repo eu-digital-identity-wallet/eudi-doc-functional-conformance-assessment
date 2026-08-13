@@ -24,7 +24,7 @@ None
 ## Test Scenario
 
 1. End-user interacts with the Verifier, triggering the Verifier to send a presentation request.
-2. In the flow via Redirects, Verifier sends a Signed Authorization Request, but it does not use JWT-Secured Authorization Request (JAR) [RFC9101] with the "request_uri" parameter.
+2. In the flow via Redirects, Verifier sends a Signed Authorization Request, but it does not use JWT-Secured Authorization Request (JAR) [RFC9101] with the `request_uri` parameter.
 3. Wallet processes the request.
 
 ## Expected results

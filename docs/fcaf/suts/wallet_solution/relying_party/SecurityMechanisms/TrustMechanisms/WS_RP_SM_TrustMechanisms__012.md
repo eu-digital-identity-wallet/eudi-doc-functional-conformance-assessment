@@ -2,7 +2,7 @@
 
 ## Objective
 
-The Wallet can parse the identifier of a Trusted List as specified in ETSI TS 119 612 [ETSI.TL], in a "trusted_authorities" request.
+The Wallet can parse the identifier of a Trusted List as specified in ETSI TS 119 612 [ETSI.TL], in a `trusted_authorities` request.
 
 ## References
 
@@ -24,7 +24,7 @@ EUDI_generic | EUDI_optional
 ## Test Scenario
 
 1. The Wallet engages with the Verifier.
-2. Verifier sends a DCQL query requesting a credential with a "trusted_authorities" property with its type being "etsi_tl".
+2. Verifier sends a DCQL query requesting a credential with a `trusted_authorities` property with its type being `etsi_tl`.
 3. The Wallet evaluates the request.
 
 ## Expected results

@@ -2,7 +2,7 @@
 
 ## Objective
 
-Verify that the EUDI Wallet rejects a COSE-based Referenced Token where the required "idx" field within "status_list" is missing.
+Verify that the EUDI Wallet rejects a COSE-based Referenced Token where the required "idx" field within `status_list` is missing.
 
 ## References
 
@@ -20,7 +20,7 @@ EUDI_generic | EUDI_required
 
 1. The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
 2. The Issuer has provided a COSE-based Referenced Token to the EUDI Wallet.
-3. The Referenced Token does not contain the "idx" field within "status_list".
+3. The Referenced Token does not contain the "idx" field within `status_list`.
 
 ## Test Scenario
 

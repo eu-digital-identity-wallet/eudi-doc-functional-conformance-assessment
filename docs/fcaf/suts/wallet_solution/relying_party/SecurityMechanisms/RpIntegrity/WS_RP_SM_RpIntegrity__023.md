@@ -25,7 +25,7 @@ None
 
 1. End-user interacts with the Verifier, triggering the Verifier to send a presentation request.
 2. Verifier sends signed presentation request.
-3. Verifier uses Client Prefix "x509_hash" correctly.
+3. Verifier uses Client Prefix `x509_hash` correctly.
 4. Verify if Wallet asks for user consent to present the Credential.
 5. User gives consent.
 6. Verify if Wallet presents Credential successfully.

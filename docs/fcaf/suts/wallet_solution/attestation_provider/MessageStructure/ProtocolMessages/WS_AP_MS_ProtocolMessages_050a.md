@@ -24,7 +24,7 @@ Issuance via Redirects.
 
 ## Preconditions
 
-1. Wallet is set to 'default_configuration_1'
+1. Wallet is set to `default_configuration_1`
 2. Wallet started engagement with Credential Issuer.
 3. Wallet successfully authenticated to the (Authorization Server of the) Credential Issuer.
 4. The Wallet obtained an Access Token from a Token Response that did not return `credential_identifiers`.

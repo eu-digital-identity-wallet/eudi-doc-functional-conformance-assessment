@@ -29,7 +29,7 @@ EUDI_generic | EUDI_required
 ## Test Scenario
 
 1. Engage wallet-verifier interaction.
-2. Verifier sends an Authorization Request with a DCQL query containing a claims path pointer path: ["org.iso.18013.5.1", "first_name"].
+2. Verifier sends an Authorization Request with a DCQL query containing a claims path pointer path: [`org.iso.18013.5.1`, `first_name`].
 3. Wallet parses the Authorization Request, resolves the namespace, and selects the data element value within it.
 4. Wallet CBOR-encodes the value and returns it in the Authorization Response.
 

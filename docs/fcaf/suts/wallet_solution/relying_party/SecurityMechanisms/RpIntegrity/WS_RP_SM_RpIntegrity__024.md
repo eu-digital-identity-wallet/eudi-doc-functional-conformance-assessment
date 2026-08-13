@@ -25,7 +25,7 @@ None
 
 1. End-user interacts with the Verifier, triggering the Verifier to send a presentation request.
 2. Verifier sends a signed presentation request.
-3. Verifier does not use Client Prefix "x509_hash".
+3. Verifier does not use Client Prefix `x509_hash`.
 4. Wallet processes the request.
 
 ## Expected results

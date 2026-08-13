@@ -24,7 +24,7 @@ Credential in SD-JWT VC format
 
 ## Preconditions
 
-1. Wallet is set to 'default_configuration_1'.
+1. Wallet is set to `default_configuration_1`.
 2. Verifier requested credential(s) to be presented, using a valid, trusted request for credential(s) in SD-JWT VC format.
 3. The Authorization Response from the Wallet is received by the Verifier.
 4. The Authorization Response is successfully decrypted by the Verifier.

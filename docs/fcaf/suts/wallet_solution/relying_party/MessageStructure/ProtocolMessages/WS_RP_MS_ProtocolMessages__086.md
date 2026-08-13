@@ -2,7 +2,7 @@
 
 ## Objective
 
-Test the Wallet rejects DCQL-query with credentials property "claim_sets" present that is not an array.
+Test the Wallet rejects DCQL-query with credentials property `claim_sets` present that is not an array.
 
 ## References
 
@@ -30,4 +30,4 @@ None
 
 1. Wallet and Verifier can interact.
 2. Wallet receives the request.
-3. The wallet detects an invalid credential "claims_sets" property and returns an invalid_request error
+3. The wallet detects an invalid credential `claims_sets` property and returns an invalid_request error

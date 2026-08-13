@@ -22,7 +22,7 @@ EUDI_generic | EUDI_required
 
 ## Preconditions
 
-1. Wallet is set to 'default_configuration_1'
+1. Wallet is set to `default_configuration_1`
 2. Wallet started engagement with Credential Issuer.
 3. Wallet successfully authenticated to the (Authorization Server of the) Credential Issuer.
 4. Wallet successfully obtained an Access Token from the Token Endpoint of the (Authorization Server of the) Credential Issuer.

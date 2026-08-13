@@ -2,7 +2,7 @@
 
 ## Objective
 
-Verify that the EUDI Wallet accepts a COSE-based Referenced Token containing a valid Status CBOR structure (Map) with at least a "status_list" entry.
+Verify that the EUDI Wallet accepts a COSE-based Referenced Token containing a valid Status CBOR structure (Map) with at least a `status_list` entry.
 
 ## References
 
@@ -23,7 +23,7 @@ EUDI_generic | EUDI_required
 3. The EUDI Wallet has retrieved a Status List Token from the referenced URI
 4. The Status List Token is validated
 5. The Issuer has provided a COSE-based Referenced Token to the EUDI Wallet.
-6. The Referenced Token contains a valid Status CBOR structure (Map) with at least a "status_list" entry.
+6. The Referenced Token contains a valid Status CBOR structure (Map) with at least a `status_list` entry.
 
 ## Test Scenario
 
@@ -31,4 +31,4 @@ EUDI_generic | EUDI_required
 
 ## Expected results
 
-1. The Status CBOR Map contains a valid "status_list" entry and the token is accepted.
+1. The Status CBOR Map contains a valid `status_list` entry and the token is accepted.

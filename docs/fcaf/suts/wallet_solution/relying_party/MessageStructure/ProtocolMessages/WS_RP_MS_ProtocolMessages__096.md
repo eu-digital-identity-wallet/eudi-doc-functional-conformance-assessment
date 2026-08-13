@@ -23,7 +23,7 @@ None
 ## Test Scenario
 
 1. The Wallet engages with the Verifier.
-2. Verifier sends a DCQL query with a "credential_sets" property, but where it is missing its "options" property.
+2. Verifier sends a DCQL query with a `credential_sets` property, but where it is missing its "options" property.
 3. The Wallet evaluates the request.
 
 ## Expected results

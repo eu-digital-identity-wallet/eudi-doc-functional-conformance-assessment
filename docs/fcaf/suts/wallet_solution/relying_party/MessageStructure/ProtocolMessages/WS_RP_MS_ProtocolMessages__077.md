@@ -2,7 +2,7 @@
 
 ## Objective
 
-Test the Wallet rejects a DCQL-query with the credential property "trusted_authorities" left empty.
+Test the Wallet rejects a DCQL-query with the credential property `trusted_authorities` left empty.
 
 ## References
 
@@ -23,7 +23,7 @@ None
 ## Test Scenario
 
 1. The Wallet engages with the Verifier.
-2. The Verifier sends an Authorization Request with a DCQL-query with a credential with an empty "trusted_authorities" property.
+2. The Verifier sends an Authorization Request with a DCQL-query with a credential with an empty `trusted_authorities` property.
 3. The Wallet evaluates the request.
 
 ## Expected results

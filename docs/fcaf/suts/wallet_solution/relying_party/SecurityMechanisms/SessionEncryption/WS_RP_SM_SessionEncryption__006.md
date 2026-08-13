@@ -25,7 +25,7 @@ None
 
 ## Test Scenario
 
-1. Verify that Wallet raises an error if there is no "jwk" within "client_metadata" sent by the Verifier with "alg" value set to ECDH-ES.
+1. Verify that Wallet raises an error if there is no "jwk" within `client_metadata` sent by the Verifier with "alg" value set to ECDH-ES.
 
 ## Expected results
 

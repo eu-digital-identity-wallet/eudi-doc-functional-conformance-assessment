@@ -22,7 +22,7 @@ Credential in SD-JWT VC format
 
 ## Preconditions
 
-1. Wallet is set to 'default_configuration_1'
+1. Wallet is set to `default_configuration_1`
 2. Wallet and Verifier are engaged, and a presentation using OpenID4VP has been initiated.
 
 ## Test Scenario

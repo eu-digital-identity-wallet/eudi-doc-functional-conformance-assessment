@@ -23,7 +23,7 @@ None
 ## Test Scenario
 
 1. Engage wallet-verifier interaction.
-2. Verifier sends an Authorization Request with a DCQL query containing a claims path pointer where a component is not a string (e.g. path: ["org.iso.18013.5.1", 123]).
+2. Verifier sends an Authorization Request with a DCQL query containing a claims path pointer where a component is not a string (e.g. path: [`org.iso.18013.5.1`, 123]).
 3. Wallet parses the Authorization Request and validates the structure of the claims path pointer.
 4. Wallet detects a non-string component.
 

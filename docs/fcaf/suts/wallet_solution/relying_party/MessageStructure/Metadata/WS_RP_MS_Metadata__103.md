@@ -19,7 +19,7 @@ EUDI_generic | EUDI_required
 ## Preconditions
 
 1. The Issuer has provided a COSE-based Referenced Token to the EUDI Wallet.
-2. The Referenced Token contains a status claim with a "status_list" CBOR structure.
+2. The Referenced Token contains a status claim with a `status_list` CBOR structure.
 3. The status_list structure passed basic CBOR well-formedness checks.
 
 ## Test Scenario

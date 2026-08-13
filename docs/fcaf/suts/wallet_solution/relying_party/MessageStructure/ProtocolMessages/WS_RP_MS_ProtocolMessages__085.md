@@ -2,7 +2,7 @@
 
 ## Objective
 
-Test the Wallet rejects DCQL-query with credentials property "claim_sets" present that is empty.
+Test the Wallet rejects DCQL-query with credentials property `claim_sets` present that is empty.
 
 ## References
 

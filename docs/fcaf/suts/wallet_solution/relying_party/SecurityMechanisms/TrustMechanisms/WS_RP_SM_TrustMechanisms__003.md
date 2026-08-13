@@ -24,7 +24,7 @@ EUDI_generic | EUDI_required
 ## Test Scenario
 
 1. The Wallet engages with the Verifier.
-2. Verifier sends a DCQL query with a "trusted_authorities" property with its type being "aki", and its value contains a specific keyIdentifier of a certificate in the certificate chain of the credential issuer
+2. Verifier sends a DCQL query with a `trusted_authorities` property with its type being "aki", and its value contains a specific keyIdentifier of a certificate in the certificate chain of the credential issuer
 3. The Wallet evaluates the request and allows the user to continue with presenting matching credentials.
 4. User selects the available credential and approves to present it.
 

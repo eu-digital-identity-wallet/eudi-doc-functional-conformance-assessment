@@ -23,7 +23,7 @@ None
 ## Test Scenario
 
 1. Engage wallet-verifier interaction (e.g. click link / scan QR code).
-2. Verifier sends an Authorization Request with response_type = "vp_token".
+2. Verifier sends an Authorization Request with response_type = `vp_token`.
 3. Wallet parses and validates the Authorization Request.
 
 ## Expected results

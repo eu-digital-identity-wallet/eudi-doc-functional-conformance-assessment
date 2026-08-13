@@ -25,7 +25,7 @@ Same-device flow
 
 ## Preconditions
 
-1. Wallet is set to 'default_configuration_1'
+1. Wallet is set to `default_configuration_1`
 2. End-user interacts with Verifier using a User-agent.
 
 ## Test Scenario

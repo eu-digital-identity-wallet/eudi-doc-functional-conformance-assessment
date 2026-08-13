@@ -2,7 +2,7 @@
 
 ## Objective
 
-Test the Wallet Rejects a DCQL-query with a constraint on "trusted_authorities" with an unspecified type.
+Test the Wallet Rejects a DCQL-query with a constraint on `trusted_authorities` with an unspecified type.
 
 ## References
 

@@ -25,7 +25,7 @@ Presentation via Redirects
 
 ## Preconditions
 
-1. Wallet is set to 'default_configuration_1'
+1. Wallet is set to `default_configuration_1`
 2. Wallet trusts the CA issuing a Relying Party's WRPAC (i.e. through the EUDI trust lists).
 3. Wallet and Verifier are engaged, and a presentation using redirects and Request Object by reference has been triggered.
 

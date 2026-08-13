@@ -2,7 +2,7 @@
 
 ## Objective
 
-Test the Wallet rejects a DCQL-query with credential property "require_cryptographic_holder_binding" present but in incorrect format (i.e. not a boolean)
+Test the Wallet rejects a DCQL-query with credential property `require_cryptographic_holder_binding` present but in incorrect format (i.e. not a boolean)
 
 ## References
 
@@ -23,7 +23,7 @@ None
 ## Test Scenario
 
 1. The Wallet engages with the Verifier.
-2. The Verifier sends an Authorization Request with a DCQL-query with a credential with the "require_cryptographic_holder_binding" property in NON-boolean form.
+2. The Verifier sends an Authorization Request with a DCQL-query with a credential with the `require_cryptographic_holder_binding` property in NON-boolean form.
 3. The Wallet evaluates the request.
 
 ## Expected results

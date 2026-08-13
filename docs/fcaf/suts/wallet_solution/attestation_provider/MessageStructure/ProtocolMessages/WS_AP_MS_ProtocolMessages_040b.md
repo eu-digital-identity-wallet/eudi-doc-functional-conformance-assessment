@@ -24,7 +24,7 @@ Issuance via Redirects.
 
 ## Preconditions
 
-1. Wallet is set to 'default_configuration_1'
+1. Wallet is set to `default_configuration_1`
 2. End-user is engaging with a Credential Issuer using a User-agent.
 3. Wallet started engagement with Credential Issuer.
 4. Wallet successfully obtained Credential Issuer Metadata.

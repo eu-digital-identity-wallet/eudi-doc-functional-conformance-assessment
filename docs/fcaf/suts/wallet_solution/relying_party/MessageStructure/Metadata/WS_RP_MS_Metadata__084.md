@@ -2,7 +2,7 @@
 
 ## Objective
 
-Verify that the EUDI Wallet handles a JOSE-based Referenced Token where the "status" claim does not contain a "status_list" object.
+Verify that the EUDI Wallet handles a JOSE-based Referenced Token where the "status" claim does not contain a `status_list` object.
 
 ## References
 
@@ -20,11 +20,11 @@ EUDI_generic | EUDI_required
 
 1. The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
 2. The Issuer has provided a JOSE-based Referenced Token to the EUDI Wallet.
-3. The Referenced Token contains the "status" claim but without a "status_list" object.
+3. The Referenced Token contains the "status" claim but without a `status_list` object.
 
 ## Test Scenario
 
-1. Verify the Wallet's handling of the absent "status_list" within the "status" claim.
+1. Verify the Wallet's handling of the absent `status_list` within the "status" claim.
 
 ## Expected results
 

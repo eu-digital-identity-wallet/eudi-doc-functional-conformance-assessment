@@ -22,7 +22,7 @@ EUDI_generic | EUDI_required
 
 ## Preconditions
 
-1. Wallet is set to 'default_configuration_1'
+1. Wallet is set to `default_configuration_1`
 2. Wallet and Verifier are engaged, and a presentation using OpenID4VP has been triggered.
 3. The Verifier shared an emphemeral key as part of the Authorization Request
 4. The Wallet successfully transmitted an Authorization Response to the Verifier in response to the Authorization Request.

@@ -2,7 +2,7 @@
 
 ## Objective
 
-Test that when wallet receives a response_type of "vp_token" in an Authorization Request, the Wallet does NOT contain an OAuth 2.0 Authorization Code, Access Token, or Access Token Type in a successful response to the grant request.
+Test that when wallet receives a response_type of `vp_token` in an Authorization Request, the Wallet does NOT contain an OAuth 2.0 Authorization Code, Access Token, or Access Token Type in a successful response to the grant request.
 
 ## References
 
@@ -23,7 +23,7 @@ EUDI_generic | EUDI_required
 ## Test Scenario
 
 1. Engage wallet-verifier interaction (e.g. click link / scan QR code).
-2. Wallet receives an Authorization Request with response_type = "vp_token".
+2. Wallet receives an Authorization Request with response_type = `vp_token`.
 3. Wallet parses and validates the Authorization Request.
 4. Wallet selects a matching credential based on the dcql_query in the Authorization Request.
 5. Wallet generates the Authorization Response to the grant request.

@@ -33,7 +33,7 @@ EUDI_generic | EUDI_required
 ## Test Scenario
 
 1. Engage wallet-verifier interaction.
-2. Verifier sends an Authorization Request with a DCQL query whose claims path pointer resolves to an empty set against the matching Credential (e.g. claims path pointer: ["address", "postal_code"] where the Credential has no postal_code field under address).
+2. Verifier sends an Authorization Request with a DCQL query whose claims path pointer resolves to an empty set against the matching Credential (e.g. claims path pointer: ["address", `postal_code`] where the Credential has no postal_code field under address).
 3. Wallet parses the Authorization Request and the DCQL query.
 4. Wallet evaluates the claims path pointer against the matching JSON-based Credential.
 5. Wallet observes that the resulting set of selected JSON elements is empty.

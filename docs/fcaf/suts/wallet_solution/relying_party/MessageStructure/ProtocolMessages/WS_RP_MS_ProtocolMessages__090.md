@@ -2,7 +2,7 @@
 
 ## Objective
 
-Test the Wallet Rejects a DCQL-query with a constraint on "trusted_authorities" with a missing `value` property.
+Test the Wallet Rejects a DCQL-query with a constraint on `trusted_authorities` with a missing `value` property.
 
 ## References
 
@@ -23,7 +23,7 @@ None
 ## Test Scenario
 
 1. The Wallet engages with the Verifier.
-2. Verifier sends a DCQL query with a credential with a "trusted_authorities" property missing its value parameter
+2. Verifier sends a DCQL query with a credential with a `trusted_authorities` property missing its value parameter
 3. The Wallet evaluates the request.
 
 ## Expected results

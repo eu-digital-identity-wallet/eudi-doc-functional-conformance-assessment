@@ -27,7 +27,7 @@ None
 2. Verifier sends presentation request with response mode direct_post.jwt.
 3. Verify if Wallet asks for user consent to present the Credential.
 4. User gives consent.
-5. Verify if Wallet sends encrypted response using parameters provided in "client_metadata".
+5. Verify if Wallet sends encrypted response using parameters provided in `client_metadata`.
 6. Verify if Verifier is able to decrypt response sent by the Wallet.
 
 ## Expected results
@@ -36,5 +36,5 @@ None
 2. This is the case.
 3. Wallet asks for user consent.
 4. This is the case.
-5. Wallet sends encrypted response using parameters provided in "client_metadata".
+5. Wallet sends encrypted response using parameters provided in `client_metadata`.
 6. Verifier is able to decrypt response sent by the Wallet.

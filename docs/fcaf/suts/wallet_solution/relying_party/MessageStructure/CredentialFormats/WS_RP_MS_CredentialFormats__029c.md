@@ -24,7 +24,7 @@ Credential with revocation status information
 
 ## Preconditions
 
-1. Wallet is set to 'default_configuration_1'
+1. Wallet is set to `default_configuration_1`
 2. Verifier requested a credential to be presented, using a valid, trusted request for 'default_credential_A' and requesting presentation in SD-JWT VC format of all claims.
 3. The presentation value of the credential is a syntactically correct serialization in compact serialization format of an SD-JWT VC.
 4. The presentation value of the credential contains a valid signed SD-JWT.

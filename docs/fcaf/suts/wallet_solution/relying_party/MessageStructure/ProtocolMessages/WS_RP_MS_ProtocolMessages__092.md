@@ -2,7 +2,7 @@
 
 ## Objective
 
-Test the Wallet Rejects a DCQL-query with a constraint on "trusted_authorities" with a `value` property in an incorrect format.
+Test the Wallet Rejects a DCQL-query with a constraint on `trusted_authorities` with a `value` property in an incorrect format.
 
 ## References
 
@@ -23,7 +23,7 @@ None
 ## Test Scenario
 
 1. The Wallet engages with the Verifier.
-2. Verifier sends a DCQL query with a credential with a "trusted_authorities" property with its value property is not an array.
+2. Verifier sends a DCQL query with a credential with a `trusted_authorities` property with its value property is not an array.
 3. The Wallet evaluates the request.
 
 ## Expected results

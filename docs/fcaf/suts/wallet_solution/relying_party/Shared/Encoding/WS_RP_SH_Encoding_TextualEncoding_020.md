@@ -29,7 +29,7 @@ EUDI_generic | EUDI_required
 ## Test Scenario
 
 1. Engage wallet-verifier interaction.
-2. Verifier sends an Authorization Request with a DCQL query containing a claims path pointer where the second component does not exist within the resolved namespace (e.g. path: ["org.iso.18013.5.1", "Bob"]).
+2. Verifier sends an Authorization Request with a DCQL query containing a claims path pointer where the second component does not exist within the resolved namespace (e.g. path: [`org.iso.18013.5.1`, "Bob"]).
 3. Wallet parses the Authorization Request, resolves the namespace, and looks up the data element identifier within it.
 4. Wallet detects that the data element is not present.
 

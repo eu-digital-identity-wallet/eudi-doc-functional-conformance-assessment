@@ -12,7 +12,7 @@ This test case verifies that the DataElementValue of data element `issuing_count
 
 ## Profile applicability
 
-The EUDI wallet contains a Credential in mdoc format with DocType = "eu.europa.ec.eudi.pid.1". Data element `issuing_country` is present in the mdoc data.
+The EUDI wallet contains a Credential in mdoc format with DocType = `eu.europa.ec.eudi.pid.1`. Data element `issuing_country` is present in the mdoc data.
 
 ## EUDI-wallet relevancy
 
@@ -20,8 +20,8 @@ EUDI_specific | EUDI_required
 
 ## Preconditions
 
-1. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = "eu.europa.ec.eudi.pid.1".
-2. All mandatory data elements within namespace "eu.europa.ec.eudi.pid.1" and all data elements indicated as present in the ICS were requested.
+1. A device retrieval mdoc request was sent to the EUDI wallet, to retrieve the document with DocType = `eu.europa.ec.eudi.pid.1`.
+2. All mandatory data elements within namespace `eu.europa.ec.eudi.pid.1` and all data elements indicated as present in the ICS were requested.
 3. The device retrieval mdoc response was retrieved.
 4. The presence of data element `issuing_country` in the device retrieval mdoc response was verified.
 

@@ -29,7 +29,7 @@ Issuer uses compact serialization of SD-JWT and SD-JWT VC
 
 ## Preconditions
 
-1. Wallet is set to 'default_configuration_1'.
+1. Wallet is set to `default_configuration_1`.
 2. Verifier requested a credential to be presented, using a valid, trusted request for 'default_credential_A', which is key bound, and requesting presentation in SD-JWT VC format.
 3. The Wallet transmitted a syntactically correct presentation in the `vp_token` of the Authorization Response.
 4. The presentation value of the credential is a syntactically correct serialization in compact serialization format of an SD-JWT VC.

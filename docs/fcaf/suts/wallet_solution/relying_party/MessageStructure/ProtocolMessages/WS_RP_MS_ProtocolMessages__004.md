@@ -19,7 +19,7 @@ EUDI_generic | EUDI_required
 
 ## Preconditions
 
-1. Wallet is set to 'default_configuration_1'.
+1. Wallet is set to `default_configuration_1`.
 2. Wallet and Verifier are engaged, and a presentation using the OpenID4VP protocol has been triggered.
 
 ## Test Scenario

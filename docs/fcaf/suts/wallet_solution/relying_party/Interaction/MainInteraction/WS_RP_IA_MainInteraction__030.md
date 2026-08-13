@@ -23,8 +23,8 @@ None
 ## Test Scenario
 
 1. The Wallet engages with the Verifier.
-2. Verifier sends a DCQL query, including a "credential_sets";
-    - "credentials" includes 1 the wallet has, 1 it does not, "credential_sets" contains one set with the existing credential in wallet.
+2. Verifier sends a DCQL query, including a `credential_sets`;
+    - "credentials" includes 1 the wallet has, 1 it does not, `credential_sets` contains one set with the existing credential in wallet.
 3. Wallet handles query
 
 ## Expected results

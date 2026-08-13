@@ -2,7 +2,7 @@
 
 ## Objective
 
-Test the Wallet Rejects a DCQL-query with a constraint on "trusted_authorities" with a `value` containing an item that is not a string.
+Test the Wallet Rejects a DCQL-query with a constraint on `trusted_authorities` with a `value` containing an item that is not a string.
 
 ## References
 
@@ -23,7 +23,7 @@ None
 ## Test Scenario
 
 1. The Wallet engages with the Verifier.
-2. Verifier sends a DCQL query with a credential with a "trusted_authorities" property with its value property as an array containing an element that is not a string.
+2. Verifier sends a DCQL query with a credential with a `trusted_authorities` property with its value property as an array containing an element that is not a string.
 3. The Wallet evaluates the request.
 
 ## Expected results

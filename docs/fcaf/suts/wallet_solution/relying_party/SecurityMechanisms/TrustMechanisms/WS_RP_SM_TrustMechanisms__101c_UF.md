@@ -22,7 +22,7 @@ WRPRC
 
 ## Preconditions
 
-1. Wallet is set to 'default_configuration_1'
+1. Wallet is set to `default_configuration_1`
 2. Wallet trusts the CA issuing a Relying Party's WRPAC (i.e. through the EUDI trust lists).
 3. Wallet trusts the CA issuing a Relying Party's WRPRC (i.e. through the EUDI trust lists).
 4. Wallet and Verifier are engaged, and a presentation using OpenID4VP has been triggered.

@@ -2,7 +2,7 @@
 
 ## Objective
 
-Verify that the EUDI Wallet handles a COSE-based Referenced Token where the Status Map does not contain a "status_list" entry.
+Verify that the EUDI Wallet handles a COSE-based Referenced Token where the Status Map does not contain a `status_list` entry.
 
 ## References
 
@@ -20,12 +20,12 @@ EUDI_generic | EUDI_required
 
 1. The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
 2. The Issuer has provided a COSE-based Referenced Token to the EUDI Wallet.
-3. The Referenced Token contains the Status Map present but without a "status_list" entry.
+3. The Referenced Token contains the Status Map present but without a `status_list` entry.
 
 ## Test Scenario
 
-1. Verify the Wallet's handling of the absent "status_list" within the Status Map.
+1. Verify the Wallet's handling of the absent `status_list` within the Status Map.
 
 ## Expected results
 
-1. The Wallet handles the missing "status_list" according to local policy.
+1. The Wallet handles the missing `status_list` according to local policy.

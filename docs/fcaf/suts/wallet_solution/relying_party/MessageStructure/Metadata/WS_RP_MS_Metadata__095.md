@@ -2,7 +2,7 @@
 
 ## Objective
 
-Verify that the EUDI Wallet accepts a COSE-based Referenced Token where the "idx" field within "status_list" is a valid unsigned integer (major type 0)
+Verify that the EUDI Wallet accepts a COSE-based Referenced Token where the "idx" field within `status_list` is a valid unsigned integer (major type 0)
 
 ## References
 
@@ -23,11 +23,11 @@ EUDI_generic | EUDI_required
 3. The EUDI Wallet has retrieved a Status List Token from the referenced URI
 4. The Status List Token is validated
 5. The Issuer has provided a COSE-based Referenced Token to the EUDI Wallet.
-6. The Referenced Token contains the "idx" field within "status_list" set to a valid unsigned integer.
+6. The Referenced Token contains the "idx" field within `status_list` set to a valid unsigned integer.
 
 ## Test Scenario
 
-1. Verify the value of the "idx" field within "status_list" is of major type 0.
+1. Verify the value of the "idx" field within `status_list` is of major type 0.
 
 ## Expected results
 

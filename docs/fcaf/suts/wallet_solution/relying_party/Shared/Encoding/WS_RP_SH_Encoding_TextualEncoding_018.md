@@ -23,7 +23,7 @@ None
 ## Test Scenario
 
 1. Engage wallet-verifier interaction.
-2. Verifier sends an Authorization Request with a DCQL query containing a claims path pointer with a wrong number of components for an mdoc (e.g. path: ["org.iso.18013.5.1"]).
+2. Verifier sends an Authorization Request with a DCQL query containing a claims path pointer with a wrong number of components for an mdoc (e.g. path: [`org.iso.18013.5.1`]).
 3. Wallet parses the Authorization Request and validates the structure of the claims path pointer.
 4. Wallet detects the wrong number of components.
 

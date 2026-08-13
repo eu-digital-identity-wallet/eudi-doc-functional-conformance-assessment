@@ -2,7 +2,7 @@
 
 ## Objective
 
-Test that the Wallet processes DCQL-query with credential property "require_cryptographic_holder_binding" with value `true`, by handling credentials without cryptographic holder binding.
+Test that the Wallet processes DCQL-query with credential property `require_cryptographic_holder_binding` with value `true`, by handling credentials without cryptographic holder binding.
 
 ## References
 
@@ -24,7 +24,7 @@ EUDI_generic | EUDI_required
 
 1. The Wallet engages with the Verifier.
 2. The Verifier sends an Authorization Request with a DCQL-query with a credential with:
-    - (a) the "require_cryptographic_holder_binding" property present with value `true`.
+    - (a) the `require_cryptographic_holder_binding` property present with value `true`.
     - (b) a 'claims' property requesting the specified credential type.
 3. The Wallet evaluates the request.
 

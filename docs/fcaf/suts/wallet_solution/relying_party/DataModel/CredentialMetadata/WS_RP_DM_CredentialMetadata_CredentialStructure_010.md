@@ -2,7 +2,7 @@
 
 ## Objective
 
-Test that if the credentials' property "claim_sets" is present then it is used as per the rules defined in [OID4VP 6.4.1]
+Test that if the credentials' property `claim_sets` is present then it is used as per the rules defined in [OID4VP 6.4.1]
 
 ## References
 
@@ -30,4 +30,4 @@ None
 
 1. Wallet and Verifier can interact.
 2. Wallet receives the request.
-3. The wallet correctly uses the "claims_sets" to determine which claims to send, as per the rules in [OID4VP 6.4.1]
+3. The wallet correctly uses the `claims_sets` to determine which claims to send, as per the rules in [OID4VP 6.4.1]

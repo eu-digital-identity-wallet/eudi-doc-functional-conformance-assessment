@@ -2,7 +2,7 @@
 
 ## Objective
 
-Verify that the EUDI Wallet rejects a COSE-based Referenced Token where the "uri" field within "status_list" is malformed.
+Verify that the EUDI Wallet rejects a COSE-based Referenced Token where the "uri" field within `status_list` is malformed.
 
 ## References
 
@@ -21,7 +21,7 @@ EUDI_generic | EUDI_required
 1. The EUDI Wallet requests and receives a valid Referenced Token issued by an Issuer
 2. The Referenced Token includes the Status element that contains the Status_list element (index and URI)
 3. The Issuer has provided a COSE-based Referenced Token to the EUDI Wallet.
-4. The Referenced Token contains the "uri" field within "status_list" set to a malformed URI.
+4. The Referenced Token contains the "uri" field within `status_list` set to a malformed URI.
 
 ## Test Scenario
 

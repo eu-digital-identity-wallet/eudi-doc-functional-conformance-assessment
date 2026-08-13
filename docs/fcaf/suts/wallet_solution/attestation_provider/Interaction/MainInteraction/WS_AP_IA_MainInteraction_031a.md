@@ -24,7 +24,7 @@ OpenID4VCI Credential Endpoint response handling.
 
 ## Preconditions
 
-1. Wallet is set to 'default_configuration_1'.
+1. Wallet is set to `default_configuration_1`.
 2. Wallet started engagement with Credential Issuer.
 3. Wallet successfully sent a valid Credential Request to the Credential Issuer.
 

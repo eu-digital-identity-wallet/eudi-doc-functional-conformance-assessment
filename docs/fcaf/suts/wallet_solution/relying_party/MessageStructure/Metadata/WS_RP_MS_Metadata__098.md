@@ -2,7 +2,7 @@
 
 ## Objective
 
-Verify that the EUDI Wallet accepts a COSE-based Referenced Token where the "uri" field within "status_list" is a valid text string URI of major type 3.
+Verify that the EUDI Wallet accepts a COSE-based Referenced Token where the "uri" field within `status_list` is a valid text string URI of major type 3.
 
 ## References
 
@@ -23,11 +23,11 @@ EUDI_generic | EUDI_required
 3. The EUDI Wallet has retrieved a Status List Token from the referenced URI
 4. The Status List Token is validated
 5. The Issuer has provided a COSE-based Referenced Token to the EUDI Wallet.
-6. The Referenced Token contains the "uri" field within "status_list" set to a valid text string URI.
+6. The Referenced Token contains the "uri" field within `status_list` set to a valid text string URI.
 
 ## Test Scenario
 
-1. Verify the value of the "uri" field within "status_list" is of major type 3.
+1. Verify the value of the "uri" field within `status_list` is of major type 3.
 
 ## Expected results
 

@@ -27,7 +27,7 @@ Credential Issuance using the Authorization Code Flow.
 
 ## Preconditions
 
-1. Wallet is set to 'default_configuration_1'.
+1. Wallet is set to `default_configuration_1`.
 2. Wallet started engagement with Credential Issuer.
 3. Wallet successfully obtained Credential Issuer Metadata.
 4. Wallet successfully obtained the Authorization Server Metadata.

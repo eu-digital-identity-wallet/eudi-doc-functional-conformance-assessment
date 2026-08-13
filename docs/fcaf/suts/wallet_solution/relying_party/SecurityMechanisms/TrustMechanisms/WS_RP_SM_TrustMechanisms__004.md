@@ -24,7 +24,7 @@ EUDI_generic | EUDI_required
 ## Test Scenario
 
 1. The Wallet engages with the Verifier.
-2. Verifier sends a DCQL query with a "trusted_authorities" property with its type being "aki", and its 'value' contains only a value not matching any AuthorizationKeyIdentifier in the credential issuer's certificate chain.
+2. Verifier sends a DCQL query with a `trusted_authorities` property with its type being "aki", and its 'value' contains only a value not matching any AuthorizationKeyIdentifier in the credential issuer's certificate chain.
 3. The Wallet evaluates the request.
 
 ## Expected results
