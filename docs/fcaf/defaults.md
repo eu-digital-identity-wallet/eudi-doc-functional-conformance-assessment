@@ -7,7 +7,7 @@ These definitions are intentionally logical rather than physical: they describe 
 
 The following properties are defined for a SUT, specifically an EUDI Wallet Unit. The SUT is assumed to have these properties when the default configuration is used.
 
-### `default_configuration_A`
+### `default_configuration_1`
 
 | Property | Setting, contents, or value |
 | --- | --- |
