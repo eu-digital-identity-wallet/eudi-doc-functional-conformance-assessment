@@ -13,6 +13,7 @@ its own branch, because `site` carries no `docs/fcaf`:
 
 Unversioned, newest first. Release versioning lives only in the FCAF changelog.
 
+- Build the PDF from the content-owned FCAF navigation and render numbered Preconditions with alphabetic markers on the website and in the PDF.
 - Fix mermaid diagram rendering on the deployed (mike) site: load the runtime from a self-hosted, page-relative script so it resolves under every version alias, instead of Material's built-in loader whose absolute URL 404s under versioned paths.
 - Point both the `latest` and `latest-draft` site aliases at the submitted draft.
 - Switch the Architecture and reference framework nav link to the ARF `/about/` page, for coherence with the ARF deployment.
