@@ -67,8 +67,6 @@ jobs:
           repository: ${{ steps.guard_src.outputs.repository }}
           ref: ${{ steps.guard_src.outputs.ref }}
           path: .guard
-          sparse-checkout: tools/fcaf_lint.py
-          sparse-checkout-cone-mode: false
 
       - name: Run the guard
         id: guard
@@ -85,6 +83,8 @@ jobs:
             git fetch --no-tags --depth=1 origin "$BASE_SHA" 2>/dev/null || true
             scope=(--changed-only "$BASE_SHA")
           fi
+          test -f .guard/tools/fcaf_lint.py || {
+            echo "::error::the guard script was not checked out"; ls -la .guard; exit 2; }
           python3 .guard/tools/fcaf_lint.py \
             --root "$ROOT" --format github "${scope[@]}" | tee guard.log
           status=${PIPESTATUS[0]}
