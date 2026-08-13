@@ -1,0 +1,24 @@
+name: Test case format guard
+
+# Thin caller. The rules live on the `site` branch in
+# .github/workflows/test-case-guard.yml, so every content branch and both
+# repositories share one implementation.
+#
+# Deliberately not restricted to one repository: the private repository runs
+# the same guard on its review branches, where the test cases are actually
+# written.
+
+on:
+  pull_request:
+    paths:
+      - docs/fcaf/**
+  push:
+    paths:
+      - docs/fcaf/**
+
+permissions:
+  contents: read
+
+jobs:
+  guard:
+    uses: eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment/.github/workflows/test-case-guard.yml@site
