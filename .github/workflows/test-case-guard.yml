@@ -1,0 +1,92 @@
+name: Test case format guard
+
+# Structural guard for FCAF test cases. It checks the conventions a test case
+# file must follow, never whether an assertion matches a specification.
+#
+# The logic lives here on `site`, next to the rest of the build shell. Content
+# branches carry only a thin caller, the same arrangement `pages.yml` uses, so
+# the rules are maintained in one place for every branch and both repositories.
+#
+# Enforcement is staged inside tools/fcaf_lint.py: a check blocks only once its
+# backlog is cleared. Everything else is reported as a warning with a count, so
+# an inherited defect never blocks an unrelated pull request.
+
+on:
+  workflow_call:
+    inputs:
+      root:
+        description: Directory holding the FCAF content
+        required: false
+        type: string
+        default: docs/fcaf
+      all_files:
+        description: Check the whole corpus instead of the files the pull request touches
+        required: false
+        type: boolean
+        default: false
+      guard_ref:
+        description: >-
+          Ref of this repository the guard script is taken from. Pin it to a
+          branch to try a rule change out before merging it.
+        required: false
+        type: string
+        default: site
+  workflow_dispatch:
+    inputs:
+      content_ref:
+        description: Branch or tag to check
+        required: true
+        type: string
+        default: submitted
+
+permissions:
+  contents: read
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the content under review
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.content_ref || github.ref }}
+          fetch-depth: 0
+
+      # github.job_workflow_ref is empty here, so the ref cannot be derived from
+      # the call itself. It is an explicit input instead, which also lets a
+      # caller try a rule change out before it is merged.
+      - name: Check out the guard
+        uses: actions/checkout@v4
+        with:
+          repository: eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment
+          ref: ${{ inputs.guard_ref || 'site' }}
+          path: .guard
+
+      - name: Run the guard
+        id: guard
+        env:
+          ROOT: ${{ inputs.root || 'docs/fcaf' }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          ALL_FILES: ${{ inputs.all_files }}
+        run: |
+          set -o pipefail
+          scope=()
+          if [ "$ALL_FILES" != "true" ] && [ -n "$BASE_SHA" ]; then
+            # Only the files this pull request touches. Inherited defects stay
+            # visible in the scheduled full run, but never block a contributor.
+            git fetch --no-tags --depth=1 origin "$BASE_SHA" 2>/dev/null || true
+            scope=(--changed-only "$BASE_SHA")
+          fi
+          test -f .guard/tools/fcaf_lint.py || {
+            echo "::error::the guard script was not checked out"; ls -la .guard; exit 2; }
+          python3 .guard/tools/fcaf_lint.py \
+            --root "$ROOT" --format github "${scope[@]}" | tee guard.log
+          status=${PIPESTATUS[0]}
+          {
+            echo "### FCAF test case format guard"
+            echo
+            echo '```'
+            tail -n 5 guard.log
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+          exit "$status"
