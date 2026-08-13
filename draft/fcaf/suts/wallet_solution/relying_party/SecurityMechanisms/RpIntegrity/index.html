@@ -1623,13 +1623,13 @@
 <!-- BEGIN INCLUDE ./[A-Z]*.md -->
 <h3 id="ws_rp_sm_rpintegrity_cryptographicsignature002">WS_RP_SM_RpIntegrity_CryptographicSignature002<a class="headerlink" href="#ws_rp_sm_rpintegrity_cryptographicsignature002" title="Link to this section">&para;</a></h3>
 <h4 id="objective">Objective<a class="headerlink" href="#objective" title="Link to this section">&para;</a></h4>
-<p>Verify that Wallet does not support RSASSA-PSS using SHA-384 and MGF1 with SHA-384 (RS384) for validating signed presentation requests.</p>
+<p>Verify that Wallet does not support RSASSA-PSS using SHA-384 and MGF1 with SHA-384 (RS384) for validating signed presentation requests.</p>
 <h4 id="references">References<a class="headerlink" href="#references" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[HAIP] Section 8</li>
 </ul>
 <h4 id="profile-applicability">Profile applicability<a class="headerlink" href="#profile-applicability" title="Link to this section">&para;</a></h4>
-<p>JOSE algorithm identifier ES257</p>
+<p>JOSE algorithm identifier ES257</p>
 <h4 id="eudi-wallet-relevancy">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions">Preconditions<a class="headerlink" href="#preconditions" title="Link to this section">&para;</a></h4>
@@ -1656,7 +1656,7 @@
 <!-- END INCLUDE -->
 <h3 id="ws_rp_sm_rpintegrity_cryptographicsignature003">WS_RP_SM_RpIntegrity_CryptographicSignature003<a class="headerlink" href="#ws_rp_sm_rpintegrity_cryptographicsignature003" title="Link to this section">&para;</a></h3>
 <h4 id="objective_1">Objective<a class="headerlink" href="#objective_1" title="Link to this section">&para;</a></h4>
-<p>Verify that Wallet supports ECDSA with P-256 and SHA-256 (COSE algorithm identifier -7) for validating signed presentation requests.</p>
+<p>Verify that Wallet supports ECDSA with P-256 and SHA-256 (COSE algorithm identifier -7) for validating signed presentation requests.</p>
 <h4 id="references_1">References<a class="headerlink" href="#references_1" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[HAIP] Section 7</li>
@@ -1671,20 +1671,20 @@
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
 <li>Verifier sends presentation request for Credential.</li>
-<li>Verify that Wallet receives signed request using ECDSA with P-256 and SHA-256 (COSE algorithm identifier -7) from the Verifier.</li>
-<li>Verify if Wallet is able to validate signed request from the Verifier that used ECDSA with P-256 and SHA-256 (COSE algorithm identifier -7)</li>
+<li>Verify that Wallet receives signed request using ECDSA with P-256 and SHA-256 (COSE algorithm identifier -7) from the Verifier.</li>
+<li>Verify if Wallet is able to validate signed request from the Verifier that used ECDSA with P-256 and SHA-256 (COSE algorithm identifier -7)</li>
 </ol>
 <h4 id="expected-results_1">Expected results<a class="headerlink" href="#expected-results_1" title="Link to this section">&para;</a></h4>
 <ol>
 <li>This is the case.</li>
 <li>This is the case.</li>
-<li>Wallet receives signed request using ECDSA with P-256 and SHA-256 (COSE algorithm identifier -7) from the Verifier.</li>
-<li>Wallet is able to validate signed request from the Verifier that used ECDSA with P-256 and SHA-256 (JOSE algorithm identifier ES256; COSE algorithm identifier -7)</li>
+<li>Wallet receives signed request using ECDSA with P-256 and SHA-256 (COSE algorithm identifier -7) from the Verifier.</li>
+<li>Wallet is able to validate signed request from the Verifier that used ECDSA with P-256 and SHA-256 (JOSE algorithm identifier ES256; COSE algorithm identifier -7)</li>
 </ol>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_sm_rpintegrity_cryptographicsignature004">WS_RP_SM_RpIntegrity_CryptographicSignature004<a class="headerlink" href="#ws_rp_sm_rpintegrity_cryptographicsignature004" title="Link to this section">&para;</a></h3>
 <h4 id="objective_2">Objective<a class="headerlink" href="#objective_2" title="Link to this section">&para;</a></h4>
-<p>Verify that Wallet supports ECDSA with P-256 and SHA-256 (COSE algorithm identifier -9) for validating signed presentation requests.</p>
+<p>Verify that Wallet supports ECDSA with P-256 and SHA-256 (COSE algorithm identifier -9) for validating signed presentation requests.</p>
 <h4 id="references_2">References<a class="headerlink" href="#references_2" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[HAIP] Section 7</li>
@@ -1699,15 +1699,15 @@
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
 <li>Verifier sends presentation request for Credential.</li>
-<li>Verify that Wallet receives signed request using ECDSA with P-256 and SHA-256 (COSE algorithm identifier -9) from the Verifier.</li>
-<li>Verify if Wallet is able to validate signed request from the Verifier that used ECDSA with P-256 and SHA-256 (COSE algorithm identifier -9)</li>
+<li>Verify that Wallet receives signed request using ECDSA with P-256 and SHA-256 (COSE algorithm identifier -9) from the Verifier.</li>
+<li>Verify if Wallet is able to validate signed request from the Verifier that used ECDSA with P-256 and SHA-256 (COSE algorithm identifier -9)</li>
 </ol>
 <h4 id="expected-results_2">Expected results<a class="headerlink" href="#expected-results_2" title="Link to this section">&para;</a></h4>
 <ol>
 <li>This is the case.</li>
 <li>This is the case.</li>
-<li>Wallet receives signed request using ECDSA with P-256 and SHA-256 (COSE algorithm identifier -9) from the Verifier.</li>
-<li>Wallet is able to validate signed request from the Verifier that used ECDSA with P-256 and SHA-256 (JOSE algorithm identifier ES256; COSE algorithm identifier -9)</li>
+<li>Wallet receives signed request using ECDSA with P-256 and SHA-256 (COSE algorithm identifier -9) from the Verifier.</li>
+<li>Wallet is able to validate signed request from the Verifier that used ECDSA with P-256 and SHA-256 (JOSE algorithm identifier ES256; COSE algorithm identifier -9)</li>
 </ol>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_sm_rpintegrity_001">WS_RP_SM_RpIntegrity_001<a class="headerlink" href="#ws_rp_sm_rpintegrity_001" title="Link to this section">&para;</a></h3>
@@ -2095,10 +2095,10 @@
 <li>[OpenID4VP] section 5</li>
 <li>[RFC9101]</li>
 </ul>
-<h4 id="eudi-wallet-relevancy_16">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_16" title="Link to this section">&para;</a></h4>
-<p>EUDI_generic | EUDI_required</p>
 <h4 id="profile-applicability_16">Profile applicability<a class="headerlink" href="#profile-applicability_16" title="Link to this section">&para;</a></h4>
 <p>None</p>
+<h4 id="eudi-wallet-relevancy_16">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_16" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="technology">Technology<a class="headerlink" href="#technology" title="Link to this section">&para;</a></h4>
 <p>Presentation via Redirects</p>
 <h4 id="preconditions_16">Preconditions<a class="headerlink" href="#preconditions_16" title="Link to this section">&para;</a></h4>
@@ -2133,10 +2133,10 @@
 <li>[OpenID4VP] section 5</li>
 <li>[RFC9101]</li>
 </ul>
-<h4 id="eudi-wallet-relevancy_17">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_17" title="Link to this section">&para;</a></h4>
-<p>EUDI_generic | EUDI_required</p>
 <h4 id="profile-applicability_17">Profile applicability<a class="headerlink" href="#profile-applicability_17" title="Link to this section">&para;</a></h4>
 <p>None</p>
+<h4 id="eudi-wallet-relevancy_17">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_17" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="technology_1">Technology<a class="headerlink" href="#technology_1" title="Link to this section">&para;</a></h4>
 <p>Presentation via Redirects</p>
 <h4 id="preconditions_17">Preconditions<a class="headerlink" href="#preconditions_17" title="Link to this section">&para;</a></h4>
@@ -2172,10 +2172,10 @@
 <li>[RFC9101] section 6.2</li>
 <li>[ECCG ACM] section 5.2</li>
 </ul>
-<h4 id="eudi-wallet-relevancy_18">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_18" title="Link to this section">&para;</a></h4>
-<p>EUDI_generic | EUDI_required</p>
 <h4 id="profile-applicability_18">Profile applicability<a class="headerlink" href="#profile-applicability_18" title="Link to this section">&para;</a></h4>
 <p>None</p>
+<h4 id="eudi-wallet-relevancy_18">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_18" title="Link to this section">&para;</a></h4>
+<p>EUDI_generic | EUDI_required</p>
 <h4 id="technology_2">Technology<a class="headerlink" href="#technology_2" title="Link to this section">&para;</a></h4>
 <p>Presentation via Redirects</p>
 <h4 id="preconditions_18">Preconditions<a class="headerlink" href="#preconditions_18" title="Link to this section">&para;</a></h4>
@@ -2619,7 +2619,7 @@
 <h4 id="test-scenario_32">Test Scenario<a class="headerlink" href="#test-scenario_32" title="Link to this section">&para;</a></h4>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
-<li>Verifier sends Signed Authorization Request using JWT-Secured Authorization Request (JAR) [RFC9101] with the <code>request_uri</code> parameter, and signature is authentic.</li>
+<li>Verifier sends Signed Authorization Request using JWT-Secured Authorization Request (JAR) [RFC9101] with the <code>request_uri</code> parameter, and signature is authentic.</li>
 <li>Verify if the Wallet obtains the request object from the <code>request_uri</code>.</li>
 <li>Wallet checks signature on the request object.</li>
 </ol>
@@ -2716,37 +2716,37 @@
 <!-- END INCLUDE -->
 <h3 id="ws_rp_sm_rpintegrity_031">WS_RP_SM_RpIntegrity_031<a class="headerlink" href="#ws_rp_sm_rpintegrity_031" title="Link to this section">&para;</a></h3>
 <h4 id="objective_36">Objective<a class="headerlink" href="#objective_36" title="Link to this section">&para;</a></h4>
-<p>Verify that Wallet supports ECDSA with P-256 and SHA-256 (JOSE algorithm identifier ES256) for validating signed presentation requests.</p>
+<p>Verify that Wallet supports ECDSA with P-256 and SHA-256 (JOSE algorithm identifier ES256) for validating signed presentation requests.</p>
 <h4 id="references_36">References<a class="headerlink" href="#references_36" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[HAIP] Section 7</li>
 </ul>
 <h4 id="profile-applicability_36">Profile applicability<a class="headerlink" href="#profile-applicability_36" title="Link to this section">&para;</a></h4>
-<p>JOSE algorithm identifier ES256</p>
+<p>JOSE algorithm identifier ES256</p>
 <h4 id="eudi-wallet-relevancy_36">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_36" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_36">Preconditions<a class="headerlink" href="#preconditions_36" title="Link to this section">&para;</a></h4>
 <p>None</p>
 <h4 id="test-scenario_36">Test Scenario<a class="headerlink" href="#test-scenario_36" title="Link to this section">&para;</a></h4>
 <ol>
-<li>Verify that Wallet receives signed request using ECDSA with P-256 and SHA-256 (JOSE algorithm identifier ES256) from the Verifier.</li>
-<li>Verify if Wallet is able to validate signed request from the Verifier that used ECDSA with P-256 and SHA-256 (JOSE algorithm identifier ES256)</li>
+<li>Verify that Wallet receives signed request using ECDSA with P-256 and SHA-256 (JOSE algorithm identifier ES256) from the Verifier.</li>
+<li>Verify if Wallet is able to validate signed request from the Verifier that used ECDSA with P-256 and SHA-256 (JOSE algorithm identifier ES256)</li>
 </ol>
 <h4 id="expected-results_36">Expected results<a class="headerlink" href="#expected-results_36" title="Link to this section">&para;</a></h4>
 <ol>
-<li>Wallet receives signed request using ECDSA with P-256 and SHA-256 (JOSE algorithm identifier ES256) from the Verifier.</li>
-<li>Wallet is able to validate signed request from the Verifier that used ECDSA with P-256 and SHA-256 (JOSE algorithm identifier ES256)</li>
+<li>Wallet receives signed request using ECDSA with P-256 and SHA-256 (JOSE algorithm identifier ES256) from the Verifier.</li>
+<li>Wallet is able to validate signed request from the Verifier that used ECDSA with P-256 and SHA-256 (JOSE algorithm identifier ES256)</li>
 </ol>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_sm_rpintegrity_032">WS_RP_SM_RpIntegrity_032<a class="headerlink" href="#ws_rp_sm_rpintegrity_032" title="Link to this section">&para;</a></h3>
 <h4 id="objective_37">Objective<a class="headerlink" href="#objective_37" title="Link to this section">&para;</a></h4>
-<p>Verify that Wallet does not support RSASSA-PSS using SHA-384 and MGF1 with SHA-384 (RS384) for validating signed presentation requests.</p>
+<p>Verify that Wallet does not support RSASSA-PSS using SHA-384 and MGF1 with SHA-384 (RS384) for validating signed presentation requests.</p>
 <h4 id="references_37">References<a class="headerlink" href="#references_37" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[HAIP] Section 8</li>
 </ul>
 <h4 id="profile-applicability_37">Profile applicability<a class="headerlink" href="#profile-applicability_37" title="Link to this section">&para;</a></h4>
-<p>JOSE algorithm identifier ES257</p>
+<p>JOSE algorithm identifier ES257</p>
 <h4 id="eudi-wallet-relevancy_37">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_37" title="Link to this section">&para;</a></h4>
 <p>EUDI_generic | EUDI_required</p>
 <h4 id="preconditions_37">Preconditions<a class="headerlink" href="#preconditions_37" title="Link to this section">&para;</a></h4>
@@ -2773,7 +2773,7 @@
 <!-- END INCLUDE -->
 <h3 id="ws_rp_sm_rpintegrity_033">WS_RP_SM_RpIntegrity_033<a class="headerlink" href="#ws_rp_sm_rpintegrity_033" title="Link to this section">&para;</a></h3>
 <h4 id="objective_38">Objective<a class="headerlink" href="#objective_38" title="Link to this section">&para;</a></h4>
-<p>Verify that Wallet supports ECDSA with P-256 and SHA-256 (COSE algorithm identifier -7) for validating signed presentation requests.</p>
+<p>Verify that Wallet supports ECDSA with P-256 and SHA-256 (COSE algorithm identifier -7) for validating signed presentation requests.</p>
 <h4 id="references_38">References<a class="headerlink" href="#references_38" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[HAIP] Section 7</li>
@@ -2788,20 +2788,20 @@
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
 <li>Verifier sends presentation request for Credential.</li>
-<li>Verify that Wallet receives signed request using ECDSA with P-256 and SHA-256 (COSE algorithm identifier -7) from the Verifier.</li>
-<li>Verify if Wallet is able to validate signed request from the Verifier that used ECDSA with P-256 and SHA-256 (COSE algorithm identifier -7)</li>
+<li>Verify that Wallet receives signed request using ECDSA with P-256 and SHA-256 (COSE algorithm identifier -7) from the Verifier.</li>
+<li>Verify if Wallet is able to validate signed request from the Verifier that used ECDSA with P-256 and SHA-256 (COSE algorithm identifier -7)</li>
 </ol>
 <h4 id="expected-results_38">Expected results<a class="headerlink" href="#expected-results_38" title="Link to this section">&para;</a></h4>
 <ol>
 <li>This is the case.</li>
 <li>This is the case.</li>
-<li>Wallet receives signed request using ECDSA with P-256 and SHA-256 (COSE algorithm identifier -7) from the Verifier.</li>
-<li>Wallet is able to validate signed request from the Verifier that used ECDSA with P-256 and SHA-256 (JOSE algorithm identifier ES256; COSE algorithm identifier -7)</li>
+<li>Wallet receives signed request using ECDSA with P-256 and SHA-256 (COSE algorithm identifier -7) from the Verifier.</li>
+<li>Wallet is able to validate signed request from the Verifier that used ECDSA with P-256 and SHA-256 (JOSE algorithm identifier ES256; COSE algorithm identifier -7)</li>
 </ol>
 <!-- END INCLUDE -->
 <h3 id="ws_rp_sm_rpintegrity_034">WS_RP_SM_RpIntegrity_034<a class="headerlink" href="#ws_rp_sm_rpintegrity_034" title="Link to this section">&para;</a></h3>
 <h4 id="objective_39">Objective<a class="headerlink" href="#objective_39" title="Link to this section">&para;</a></h4>
-<p>Verify that Wallet supports ECDSA with P-256 and SHA-256 (COSE algorithm identifier -9) for validating signed presentation requests.</p>
+<p>Verify that Wallet supports ECDSA with P-256 and SHA-256 (COSE algorithm identifier -9) for validating signed presentation requests.</p>
 <h4 id="references_39">References<a class="headerlink" href="#references_39" title="Link to this section">&para;</a></h4>
 <ul>
 <li>[HAIP] Section 7</li>
@@ -2816,15 +2816,15 @@
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
 <li>Verifier sends presentation request for Credential.</li>
-<li>Verify that Wallet receives signed request using ECDSA with P-256 and SHA-256 (COSE algorithm identifier -9) from the Verifier.</li>
-<li>Verify if Wallet is able to validate signed request from the Verifier that used ECDSA with P-256 and SHA-256 (COSE algorithm identifier -9)</li>
+<li>Verify that Wallet receives signed request using ECDSA with P-256 and SHA-256 (COSE algorithm identifier -9) from the Verifier.</li>
+<li>Verify if Wallet is able to validate signed request from the Verifier that used ECDSA with P-256 and SHA-256 (COSE algorithm identifier -9)</li>
 </ol>
 <h4 id="expected-results_39">Expected results<a class="headerlink" href="#expected-results_39" title="Link to this section">&para;</a></h4>
 <ol>
 <li>This is the case.</li>
 <li>This is the case.</li>
-<li>Wallet receives signed request using ECDSA with P-256 and SHA-256 (COSE algorithm identifier -9) from the Verifier.</li>
-<li>Wallet is able to validate signed request from the Verifier that used ECDSA with P-256 and SHA-256 (JOSE algorithm identifier ES256; COSE algorithm identifier -9)</li>
+<li>Wallet receives signed request using ECDSA with P-256 and SHA-256 (COSE algorithm identifier -9) from the Verifier.</li>
+<li>Wallet is able to validate signed request from the Verifier that used ECDSA with P-256 and SHA-256 (JOSE algorithm identifier ES256; COSE algorithm identifier -9)</li>
 </ol>
 <!-- END INCLUDE -->
 

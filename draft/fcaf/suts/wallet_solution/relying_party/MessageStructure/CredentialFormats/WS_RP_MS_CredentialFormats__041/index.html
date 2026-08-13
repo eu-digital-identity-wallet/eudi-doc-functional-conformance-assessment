@@ -1621,7 +1621,7 @@
 
 <h1 id="ws_rp_ms_credentialformats_041">WS_RP_MS_CredentialFormats_041<a class="headerlink" href="#ws_rp_ms_credentialformats_041" title="Link to this section">&para;</a></h1>
 <h2 id="objective">Objective<a class="headerlink" href="#objective" title="Link to this section">&para;</a></h2>
-<p>Verify that when Wallet is presenting several ISO mdocs, each ISO mdoc is returned in a separate DeviceResponse (as defined in 8.3.2.1.2.2 of [ISO.18013-5]), each matching to a respective DCQL query. Therefore, the resulting vp_token contains multiple DeviceResponse instances.</p>
+<p>Verify that when Wallet is presenting several ISO mdocs, each ISO mdoc is returned in a separate <code>DeviceResponse</code> (as defined in 8.3.2.1.2.2 of [ISO.18013-5]), each matching to a respective DCQL query. Therefore, the resulting <code>vp_token</code> contains multiple <code>DeviceResponse</code> instances.</p>
 <h2 id="references">References<a class="headerlink" href="#references" title="Link to this section">&para;</a></h2>
 <ul>
 <li>[HAIP] Section 5.3.1</li>
@@ -1642,7 +1642,7 @@
 <li>Verify if Wallet can handle receiving multiple DCQL queries for Credentials in ISO mdoc format.</li>
 <li>Verify if Wallet asks for user consent to present the Credential.</li>
 <li>User gives consent.</li>
-<li>Verify if <code>vp_token</code> contains multiple <code>DeviceResponse</code> instances.</li>
+<li>Verify if <code>vp_token</code> contains multiple <code>DeviceResponse</code> instances.</li>
 <li>Verify if for each query, Wallet returns one Device Response matching each DCQL query.</li>
 </ol>
 <h2 id="expected-results">Expected results<a class="headerlink" href="#expected-results" title="Link to this section">&para;</a></h2>
@@ -1653,7 +1653,7 @@
 <li>Wallet receives multiple DCQL queries for Credentials in ISO mdoc format successfully.</li>
 <li>Wallet asks for user consent.</li>
 <li>This is the case.</li>
-<li><code>vp_token</code> contains multiple <code>DeviceResponse</code> instances.</li>
+<li><code>vp_token</code> contains multiple <code>DeviceResponse</code> instances.</li>
 <li>For each query, Wallet returns one Device Response matching each DCQL query.</li>
 </ol>
 

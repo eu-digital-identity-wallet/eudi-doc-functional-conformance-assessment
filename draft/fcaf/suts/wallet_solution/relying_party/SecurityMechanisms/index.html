@@ -1953,7 +1953,7 @@
 <!-- END INCLUDE -->
 <h4 id="ws_rp_sm_devicebinding_012">WS_RP_SM_DeviceBinding_012<a class="headerlink" href="#ws_rp_sm_devicebinding_012" title="Link to this section">&para;</a></h4>
 <h5 id="objective_10">Objective<a class="headerlink" href="#objective_10" title="Link to this section">&para;</a></h5>
-<p>Verify that if the credential has cryptographic holder binding, Wallet presents a KB-JWT, as defined in [I-D.ietf-oauth-sd-jwt-vc] when presenting SD-JWT VC.</p>
+<p>Verify that if the credential has cryptographic holder binding, Wallet presents a KB-JWT, as defined in [I-D.ietf-oauth-sd-jwt-vc] when presenting SD-JWT VC.</p>
 <h5 id="references_10">References<a class="headerlink" href="#references_10" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[HAIP] Section 6.1.1.1</li>
@@ -1999,12 +1999,12 @@
 </ul>
 <h5 id="profile-applicability_11">Profile applicability<a class="headerlink" href="#profile-applicability_11" title="Link to this section">&para;</a></h5>
 <p>None</p>
+<h5 id="eudi-wallet-relevancy_11">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_11" title="Link to this section">&para;</a></h5>
+<p>EUDI_generic | EUDI_required</p>
 <h5 id="technology">Technology<a class="headerlink" href="#technology" title="Link to this section">&para;</a></h5>
 <p>Credential in SD-JWT VC format
 Credential with key-binding
 Issuer uses compact serialization of SD-JWT and SD-JWT VC</p>
-<h5 id="eudi-wallet-relevancy_11">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_11" title="Link to this section">&para;</a></h5>
-<p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions_11">Preconditions<a class="headerlink" href="#preconditions_11" title="Link to this section">&para;</a></h5>
 <ol class="precond-alpha">
 <li>Wallet is set to 'default_configuration_1'.</li>
@@ -2039,12 +2039,12 @@ Issuer uses compact serialization of SD-JWT and SD-JWT VC</p>
 </ul>
 <h5 id="profile-applicability_12">Profile applicability<a class="headerlink" href="#profile-applicability_12" title="Link to this section">&para;</a></h5>
 <p>None</p>
+<h5 id="eudi-wallet-relevancy_12">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_12" title="Link to this section">&para;</a></h5>
+<p>EUDI_generic | EUDI_required</p>
 <h5 id="technology_1">Technology<a class="headerlink" href="#technology_1" title="Link to this section">&para;</a></h5>
 <p>Credential in SD-JWT VC format
 Credential with key-binding
 Issuer uses compact serialization of SD-JWT and SD-JWT VC</p>
-<h5 id="eudi-wallet-relevancy_12">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_12" title="Link to this section">&para;</a></h5>
-<p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions_12">Preconditions<a class="headerlink" href="#preconditions_12" title="Link to this section">&para;</a></h5>
 <ol class="precond-alpha">
 <li>Wallet is set to 'default_configuration_1'.</li>
@@ -2077,12 +2077,12 @@ Issuer uses compact serialization of SD-JWT and SD-JWT VC</p>
 </ul>
 <h5 id="profile-applicability_13">Profile applicability<a class="headerlink" href="#profile-applicability_13" title="Link to this section">&para;</a></h5>
 <p>None</p>
+<h5 id="eudi-wallet-relevancy_13">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_13" title="Link to this section">&para;</a></h5>
+<p>EUDI_generic | EUDI_required</p>
 <h5 id="technology_2">Technology<a class="headerlink" href="#technology_2" title="Link to this section">&para;</a></h5>
 <p>Credential in SD-JWT VC format
 Credential with key-binding
 Issuer uses compact serialization of SD-JWT and SD-JWT VC</p>
-<h5 id="eudi-wallet-relevancy_13">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_13" title="Link to this section">&para;</a></h5>
-<p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions_13">Preconditions<a class="headerlink" href="#preconditions_13" title="Link to this section">&para;</a></h5>
 <ol class="precond-alpha">
 <li>Wallet is set to 'default_configuration_1'.</li>
@@ -2164,7 +2164,7 @@ Issuer uses compact serialization of SD-JWT and SD-JWT VC</p>
 <!-- END INCLUDE -->
 <h4 id="ws_rp_sm_issuerintegrity_014">WS_RP_SM_IssuerIntegrity_014<a class="headerlink" href="#ws_rp_sm_issuerintegrity_014" title="Link to this section">&para;</a></h4>
 <h5 id="objective_16">Objective<a class="headerlink" href="#objective_16" title="Link to this section">&para;</a></h5>
-<p>Verify that when Wallet is presenting the Credential in IETF SD-JWT VC format, the X.509 certificate of the trust anchor is not included in the <code>x5c</code> JOSE header of the SD-JWT VC.</p>
+<p>Verify that when Wallet is presenting the Credential in IETF SD-JWT VC format, the X.509 certificate of the trust anchor is not included in the <code>x5c</code> JOSE header of the SD-JWT VC.</p>
 <h5 id="references_16">References<a class="headerlink" href="#references_16" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[HAIP] Section 6.1.1</li>
@@ -2194,13 +2194,13 @@ Issuer uses compact serialization of SD-JWT and SD-JWT VC</p>
 <!-- BEGIN INCLUDE ./[A-Z]*.md -->
 <h4 id="ws_rp_sm_rpintegrity_cryptographicsignature002">WS_RP_SM_RpIntegrity_CryptographicSignature002<a class="headerlink" href="#ws_rp_sm_rpintegrity_cryptographicsignature002" title="Link to this section">&para;</a></h4>
 <h5 id="objective_17">Objective<a class="headerlink" href="#objective_17" title="Link to this section">&para;</a></h5>
-<p>Verify that Wallet does not support RSASSA-PSS using SHA-384 and MGF1 with SHA-384 (RS384) for validating signed presentation requests.</p>
+<p>Verify that Wallet does not support RSASSA-PSS using SHA-384 and MGF1 with SHA-384 (RS384) for validating signed presentation requests.</p>
 <h5 id="references_17">References<a class="headerlink" href="#references_17" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[HAIP] Section 8</li>
 </ul>
 <h5 id="profile-applicability_17">Profile applicability<a class="headerlink" href="#profile-applicability_17" title="Link to this section">&para;</a></h5>
-<p>JOSE algorithm identifier ES257</p>
+<p>JOSE algorithm identifier ES257</p>
 <h5 id="eudi-wallet-relevancy_17">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_17" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions_17">Preconditions<a class="headerlink" href="#preconditions_17" title="Link to this section">&para;</a></h5>
@@ -2227,7 +2227,7 @@ Issuer uses compact serialization of SD-JWT and SD-JWT VC</p>
 <!-- END INCLUDE -->
 <h4 id="ws_rp_sm_rpintegrity_cryptographicsignature003">WS_RP_SM_RpIntegrity_CryptographicSignature003<a class="headerlink" href="#ws_rp_sm_rpintegrity_cryptographicsignature003" title="Link to this section">&para;</a></h4>
 <h5 id="objective_18">Objective<a class="headerlink" href="#objective_18" title="Link to this section">&para;</a></h5>
-<p>Verify that Wallet supports ECDSA with P-256 and SHA-256 (COSE algorithm identifier -7) for validating signed presentation requests.</p>
+<p>Verify that Wallet supports ECDSA with P-256 and SHA-256 (COSE algorithm identifier -7) for validating signed presentation requests.</p>
 <h5 id="references_18">References<a class="headerlink" href="#references_18" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[HAIP] Section 7</li>
@@ -2242,20 +2242,20 @@ Issuer uses compact serialization of SD-JWT and SD-JWT VC</p>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
 <li>Verifier sends presentation request for Credential.</li>
-<li>Verify that Wallet receives signed request using ECDSA with P-256 and SHA-256 (COSE algorithm identifier -7) from the Verifier.</li>
-<li>Verify if Wallet is able to validate signed request from the Verifier that used ECDSA with P-256 and SHA-256 (COSE algorithm identifier -7)</li>
+<li>Verify that Wallet receives signed request using ECDSA with P-256 and SHA-256 (COSE algorithm identifier -7) from the Verifier.</li>
+<li>Verify if Wallet is able to validate signed request from the Verifier that used ECDSA with P-256 and SHA-256 (COSE algorithm identifier -7)</li>
 </ol>
 <h5 id="expected-results_18">Expected results<a class="headerlink" href="#expected-results_18" title="Link to this section">&para;</a></h5>
 <ol>
 <li>This is the case.</li>
 <li>This is the case.</li>
-<li>Wallet receives signed request using ECDSA with P-256 and SHA-256 (COSE algorithm identifier -7) from the Verifier.</li>
-<li>Wallet is able to validate signed request from the Verifier that used ECDSA with P-256 and SHA-256 (JOSE algorithm identifier ES256; COSE algorithm identifier -7)</li>
+<li>Wallet receives signed request using ECDSA with P-256 and SHA-256 (COSE algorithm identifier -7) from the Verifier.</li>
+<li>Wallet is able to validate signed request from the Verifier that used ECDSA with P-256 and SHA-256 (JOSE algorithm identifier ES256; COSE algorithm identifier -7)</li>
 </ol>
 <!-- END INCLUDE -->
 <h4 id="ws_rp_sm_rpintegrity_cryptographicsignature004">WS_RP_SM_RpIntegrity_CryptographicSignature004<a class="headerlink" href="#ws_rp_sm_rpintegrity_cryptographicsignature004" title="Link to this section">&para;</a></h4>
 <h5 id="objective_19">Objective<a class="headerlink" href="#objective_19" title="Link to this section">&para;</a></h5>
-<p>Verify that Wallet supports ECDSA with P-256 and SHA-256 (COSE algorithm identifier -9) for validating signed presentation requests.</p>
+<p>Verify that Wallet supports ECDSA with P-256 and SHA-256 (COSE algorithm identifier -9) for validating signed presentation requests.</p>
 <h5 id="references_19">References<a class="headerlink" href="#references_19" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[HAIP] Section 7</li>
@@ -2270,15 +2270,15 @@ Issuer uses compact serialization of SD-JWT and SD-JWT VC</p>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
 <li>Verifier sends presentation request for Credential.</li>
-<li>Verify that Wallet receives signed request using ECDSA with P-256 and SHA-256 (COSE algorithm identifier -9) from the Verifier.</li>
-<li>Verify if Wallet is able to validate signed request from the Verifier that used ECDSA with P-256 and SHA-256 (COSE algorithm identifier -9)</li>
+<li>Verify that Wallet receives signed request using ECDSA with P-256 and SHA-256 (COSE algorithm identifier -9) from the Verifier.</li>
+<li>Verify if Wallet is able to validate signed request from the Verifier that used ECDSA with P-256 and SHA-256 (COSE algorithm identifier -9)</li>
 </ol>
 <h5 id="expected-results_19">Expected results<a class="headerlink" href="#expected-results_19" title="Link to this section">&para;</a></h5>
 <ol>
 <li>This is the case.</li>
 <li>This is the case.</li>
-<li>Wallet receives signed request using ECDSA with P-256 and SHA-256 (COSE algorithm identifier -9) from the Verifier.</li>
-<li>Wallet is able to validate signed request from the Verifier that used ECDSA with P-256 and SHA-256 (JOSE algorithm identifier ES256; COSE algorithm identifier -9)</li>
+<li>Wallet receives signed request using ECDSA with P-256 and SHA-256 (COSE algorithm identifier -9) from the Verifier.</li>
+<li>Wallet is able to validate signed request from the Verifier that used ECDSA with P-256 and SHA-256 (JOSE algorithm identifier ES256; COSE algorithm identifier -9)</li>
 </ol>
 <!-- END INCLUDE -->
 <h4 id="ws_rp_sm_rpintegrity_001">WS_RP_SM_RpIntegrity_001<a class="headerlink" href="#ws_rp_sm_rpintegrity_001" title="Link to this section">&para;</a></h4>
@@ -2666,10 +2666,10 @@ Issuer uses compact serialization of SD-JWT and SD-JWT VC</p>
 <li>[OpenID4VP] section 5</li>
 <li>[RFC9101]</li>
 </ul>
-<h5 id="eudi-wallet-relevancy_33">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_33" title="Link to this section">&para;</a></h5>
-<p>EUDI_generic | EUDI_required</p>
 <h5 id="profile-applicability_33">Profile applicability<a class="headerlink" href="#profile-applicability_33" title="Link to this section">&para;</a></h5>
 <p>None</p>
+<h5 id="eudi-wallet-relevancy_33">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_33" title="Link to this section">&para;</a></h5>
+<p>EUDI_generic | EUDI_required</p>
 <h5 id="technology_3">Technology<a class="headerlink" href="#technology_3" title="Link to this section">&para;</a></h5>
 <p>Presentation via Redirects</p>
 <h5 id="preconditions_33">Preconditions<a class="headerlink" href="#preconditions_33" title="Link to this section">&para;</a></h5>
@@ -2704,10 +2704,10 @@ Issuer uses compact serialization of SD-JWT and SD-JWT VC</p>
 <li>[OpenID4VP] section 5</li>
 <li>[RFC9101]</li>
 </ul>
-<h5 id="eudi-wallet-relevancy_34">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_34" title="Link to this section">&para;</a></h5>
-<p>EUDI_generic | EUDI_required</p>
 <h5 id="profile-applicability_34">Profile applicability<a class="headerlink" href="#profile-applicability_34" title="Link to this section">&para;</a></h5>
 <p>None</p>
+<h5 id="eudi-wallet-relevancy_34">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_34" title="Link to this section">&para;</a></h5>
+<p>EUDI_generic | EUDI_required</p>
 <h5 id="technology_4">Technology<a class="headerlink" href="#technology_4" title="Link to this section">&para;</a></h5>
 <p>Presentation via Redirects</p>
 <h5 id="preconditions_34">Preconditions<a class="headerlink" href="#preconditions_34" title="Link to this section">&para;</a></h5>
@@ -2743,10 +2743,10 @@ Issuer uses compact serialization of SD-JWT and SD-JWT VC</p>
 <li>[RFC9101] section 6.2</li>
 <li>[ECCG ACM] section 5.2</li>
 </ul>
-<h5 id="eudi-wallet-relevancy_35">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_35" title="Link to this section">&para;</a></h5>
-<p>EUDI_generic | EUDI_required</p>
 <h5 id="profile-applicability_35">Profile applicability<a class="headerlink" href="#profile-applicability_35" title="Link to this section">&para;</a></h5>
 <p>None</p>
+<h5 id="eudi-wallet-relevancy_35">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_35" title="Link to this section">&para;</a></h5>
+<p>EUDI_generic | EUDI_required</p>
 <h5 id="technology_5">Technology<a class="headerlink" href="#technology_5" title="Link to this section">&para;</a></h5>
 <p>Presentation via Redirects</p>
 <h5 id="preconditions_35">Preconditions<a class="headerlink" href="#preconditions_35" title="Link to this section">&para;</a></h5>
@@ -3190,7 +3190,7 @@ Issuer uses compact serialization of SD-JWT and SD-JWT VC</p>
 <h5 id="test-scenario_49">Test Scenario<a class="headerlink" href="#test-scenario_49" title="Link to this section">&para;</a></h5>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
-<li>Verifier sends Signed Authorization Request using JWT-Secured Authorization Request (JAR) [RFC9101] with the <code>request_uri</code> parameter, and signature is authentic.</li>
+<li>Verifier sends Signed Authorization Request using JWT-Secured Authorization Request (JAR) [RFC9101] with the <code>request_uri</code> parameter, and signature is authentic.</li>
 <li>Verify if the Wallet obtains the request object from the <code>request_uri</code>.</li>
 <li>Wallet checks signature on the request object.</li>
 </ol>
@@ -3287,37 +3287,37 @@ Issuer uses compact serialization of SD-JWT and SD-JWT VC</p>
 <!-- END INCLUDE -->
 <h4 id="ws_rp_sm_rpintegrity_031">WS_RP_SM_RpIntegrity_031<a class="headerlink" href="#ws_rp_sm_rpintegrity_031" title="Link to this section">&para;</a></h4>
 <h5 id="objective_53">Objective<a class="headerlink" href="#objective_53" title="Link to this section">&para;</a></h5>
-<p>Verify that Wallet supports ECDSA with P-256 and SHA-256 (JOSE algorithm identifier ES256) for validating signed presentation requests.</p>
+<p>Verify that Wallet supports ECDSA with P-256 and SHA-256 (JOSE algorithm identifier ES256) for validating signed presentation requests.</p>
 <h5 id="references_53">References<a class="headerlink" href="#references_53" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[HAIP] Section 7</li>
 </ul>
 <h5 id="profile-applicability_53">Profile applicability<a class="headerlink" href="#profile-applicability_53" title="Link to this section">&para;</a></h5>
-<p>JOSE algorithm identifier ES256</p>
+<p>JOSE algorithm identifier ES256</p>
 <h5 id="eudi-wallet-relevancy_53">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_53" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions_53">Preconditions<a class="headerlink" href="#preconditions_53" title="Link to this section">&para;</a></h5>
 <p>None</p>
 <h5 id="test-scenario_53">Test Scenario<a class="headerlink" href="#test-scenario_53" title="Link to this section">&para;</a></h5>
 <ol>
-<li>Verify that Wallet receives signed request using ECDSA with P-256 and SHA-256 (JOSE algorithm identifier ES256) from the Verifier.</li>
-<li>Verify if Wallet is able to validate signed request from the Verifier that used ECDSA with P-256 and SHA-256 (JOSE algorithm identifier ES256)</li>
+<li>Verify that Wallet receives signed request using ECDSA with P-256 and SHA-256 (JOSE algorithm identifier ES256) from the Verifier.</li>
+<li>Verify if Wallet is able to validate signed request from the Verifier that used ECDSA with P-256 and SHA-256 (JOSE algorithm identifier ES256)</li>
 </ol>
 <h5 id="expected-results_53">Expected results<a class="headerlink" href="#expected-results_53" title="Link to this section">&para;</a></h5>
 <ol>
-<li>Wallet receives signed request using ECDSA with P-256 and SHA-256 (JOSE algorithm identifier ES256) from the Verifier.</li>
-<li>Wallet is able to validate signed request from the Verifier that used ECDSA with P-256 and SHA-256 (JOSE algorithm identifier ES256)</li>
+<li>Wallet receives signed request using ECDSA with P-256 and SHA-256 (JOSE algorithm identifier ES256) from the Verifier.</li>
+<li>Wallet is able to validate signed request from the Verifier that used ECDSA with P-256 and SHA-256 (JOSE algorithm identifier ES256)</li>
 </ol>
 <!-- END INCLUDE -->
 <h4 id="ws_rp_sm_rpintegrity_032">WS_RP_SM_RpIntegrity_032<a class="headerlink" href="#ws_rp_sm_rpintegrity_032" title="Link to this section">&para;</a></h4>
 <h5 id="objective_54">Objective<a class="headerlink" href="#objective_54" title="Link to this section">&para;</a></h5>
-<p>Verify that Wallet does not support RSASSA-PSS using SHA-384 and MGF1 with SHA-384 (RS384) for validating signed presentation requests.</p>
+<p>Verify that Wallet does not support RSASSA-PSS using SHA-384 and MGF1 with SHA-384 (RS384) for validating signed presentation requests.</p>
 <h5 id="references_54">References<a class="headerlink" href="#references_54" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[HAIP] Section 8</li>
 </ul>
 <h5 id="profile-applicability_54">Profile applicability<a class="headerlink" href="#profile-applicability_54" title="Link to this section">&para;</a></h5>
-<p>JOSE algorithm identifier ES257</p>
+<p>JOSE algorithm identifier ES257</p>
 <h5 id="eudi-wallet-relevancy_54">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_54" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions_54">Preconditions<a class="headerlink" href="#preconditions_54" title="Link to this section">&para;</a></h5>
@@ -3344,7 +3344,7 @@ Issuer uses compact serialization of SD-JWT and SD-JWT VC</p>
 <!-- END INCLUDE -->
 <h4 id="ws_rp_sm_rpintegrity_033">WS_RP_SM_RpIntegrity_033<a class="headerlink" href="#ws_rp_sm_rpintegrity_033" title="Link to this section">&para;</a></h4>
 <h5 id="objective_55">Objective<a class="headerlink" href="#objective_55" title="Link to this section">&para;</a></h5>
-<p>Verify that Wallet supports ECDSA with P-256 and SHA-256 (COSE algorithm identifier -7) for validating signed presentation requests.</p>
+<p>Verify that Wallet supports ECDSA with P-256 and SHA-256 (COSE algorithm identifier -7) for validating signed presentation requests.</p>
 <h5 id="references_55">References<a class="headerlink" href="#references_55" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[HAIP] Section 7</li>
@@ -3359,20 +3359,20 @@ Issuer uses compact serialization of SD-JWT and SD-JWT VC</p>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
 <li>Verifier sends presentation request for Credential.</li>
-<li>Verify that Wallet receives signed request using ECDSA with P-256 and SHA-256 (COSE algorithm identifier -7) from the Verifier.</li>
-<li>Verify if Wallet is able to validate signed request from the Verifier that used ECDSA with P-256 and SHA-256 (COSE algorithm identifier -7)</li>
+<li>Verify that Wallet receives signed request using ECDSA with P-256 and SHA-256 (COSE algorithm identifier -7) from the Verifier.</li>
+<li>Verify if Wallet is able to validate signed request from the Verifier that used ECDSA with P-256 and SHA-256 (COSE algorithm identifier -7)</li>
 </ol>
 <h5 id="expected-results_55">Expected results<a class="headerlink" href="#expected-results_55" title="Link to this section">&para;</a></h5>
 <ol>
 <li>This is the case.</li>
 <li>This is the case.</li>
-<li>Wallet receives signed request using ECDSA with P-256 and SHA-256 (COSE algorithm identifier -7) from the Verifier.</li>
-<li>Wallet is able to validate signed request from the Verifier that used ECDSA with P-256 and SHA-256 (JOSE algorithm identifier ES256; COSE algorithm identifier -7)</li>
+<li>Wallet receives signed request using ECDSA with P-256 and SHA-256 (COSE algorithm identifier -7) from the Verifier.</li>
+<li>Wallet is able to validate signed request from the Verifier that used ECDSA with P-256 and SHA-256 (JOSE algorithm identifier ES256; COSE algorithm identifier -7)</li>
 </ol>
 <!-- END INCLUDE -->
 <h4 id="ws_rp_sm_rpintegrity_034">WS_RP_SM_RpIntegrity_034<a class="headerlink" href="#ws_rp_sm_rpintegrity_034" title="Link to this section">&para;</a></h4>
 <h5 id="objective_56">Objective<a class="headerlink" href="#objective_56" title="Link to this section">&para;</a></h5>
-<p>Verify that Wallet supports ECDSA with P-256 and SHA-256 (COSE algorithm identifier -9) for validating signed presentation requests.</p>
+<p>Verify that Wallet supports ECDSA with P-256 and SHA-256 (COSE algorithm identifier -9) for validating signed presentation requests.</p>
 <h5 id="references_56">References<a class="headerlink" href="#references_56" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[HAIP] Section 7</li>
@@ -3387,15 +3387,15 @@ Issuer uses compact serialization of SD-JWT and SD-JWT VC</p>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
 <li>Verifier sends presentation request for Credential.</li>
-<li>Verify that Wallet receives signed request using ECDSA with P-256 and SHA-256 (COSE algorithm identifier -9) from the Verifier.</li>
-<li>Verify if Wallet is able to validate signed request from the Verifier that used ECDSA with P-256 and SHA-256 (COSE algorithm identifier -9)</li>
+<li>Verify that Wallet receives signed request using ECDSA with P-256 and SHA-256 (COSE algorithm identifier -9) from the Verifier.</li>
+<li>Verify if Wallet is able to validate signed request from the Verifier that used ECDSA with P-256 and SHA-256 (COSE algorithm identifier -9)</li>
 </ol>
 <h5 id="expected-results_56">Expected results<a class="headerlink" href="#expected-results_56" title="Link to this section">&para;</a></h5>
 <ol>
 <li>This is the case.</li>
 <li>This is the case.</li>
-<li>Wallet receives signed request using ECDSA with P-256 and SHA-256 (COSE algorithm identifier -9) from the Verifier.</li>
-<li>Wallet is able to validate signed request from the Verifier that used ECDSA with P-256 and SHA-256 (JOSE algorithm identifier ES256; COSE algorithm identifier -9)</li>
+<li>Wallet receives signed request using ECDSA with P-256 and SHA-256 (COSE algorithm identifier -9) from the Verifier.</li>
+<li>Wallet is able to validate signed request from the Verifier that used ECDSA with P-256 and SHA-256 (JOSE algorithm identifier ES256; COSE algorithm identifier -9)</li>
 </ol>
 <!-- END INCLUDE -->
 
@@ -3758,7 +3758,7 @@ Issuer uses compact serialization of SD-JWT and SD-JWT VC</p>
 <!-- END INCLUDE -->
 <h4 id="ws_rp_sm_sessionencryption_005">WS_RP_SM_SessionEncryption_005<a class="headerlink" href="#ws_rp_sm_sessionencryption_005" title="Link to this section">&para;</a></h4>
 <h5 id="objective_69">Objective<a class="headerlink" href="#objective_69" title="Link to this section">&para;</a></h5>
-<p>Verify that in the encrypted response sent by the Wallet: the JWE <code>alg</code> (algorithm) header parameter (as defined in section 4.1.1 of [RFC7516]) value is set to ECDH-ES (as defined in section 4.6 of [RFC7518]), with key agreement utilizing keys on the P-256 curve (as defined in section 6.2.1.1 of [RFC7518]).</p>
+<p>Verify that in the encrypted response sent by the Wallet: the JWE <code>alg</code> (algorithm) header parameter (as defined in section 4.1.1 of [RFC7516]) value is set to ECDH-ES (as defined in section 4.6 of [RFC7518]), with key agreement utilizing keys on the P-256 curve (as defined in section 6.2.1.1 of [RFC7518]).</p>
 <h5 id="references_69">References<a class="headerlink" href="#references_69" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[HAIP] Section 5 (introduction)</li>
@@ -4024,12 +4024,12 @@ Issuer uses compact serialization of SD-JWT and SD-JWT VC</p>
 </ul>
 <h5 id="profile-applicability_77">Profile applicability<a class="headerlink" href="#profile-applicability_77" title="Link to this section">&para;</a></h5>
 <p>None</p>
+<h5 id="eudi-wallet-relevancy_77">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_77" title="Link to this section">&para;</a></h5>
+<p>EUDI_generic | EUDI_required</p>
 <h5 id="technology_6">Technology<a class="headerlink" href="#technology_6" title="Link to this section">&para;</a></h5>
 <p>Presentation using OpenID4VP
 Credential in SD-JWT VC format
 Issuer uses compact serialization of SD-JWT and SD-JWT VC</p>
-<h5 id="eudi-wallet-relevancy_77">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_77" title="Link to this section">&para;</a></h5>
-<p>EUDI_generic | EUDI_required</p>
 <h5 id="preconditions_77">Preconditions<a class="headerlink" href="#preconditions_77" title="Link to this section">&para;</a></h5>
 <ol class="precond-alpha">
 <li>Wallet is set to 'default_configuration_1'.</li>
@@ -4504,10 +4504,10 @@ Issuer uses compact serialization of SD-JWT and SD-JWT VC</p>
 <li>[OpenID4VP] sections 5.1 and 5.11.1</li>
 </ul>
 <h5 id="profile-applicability_92">Profile applicability<a class="headerlink" href="#profile-applicability_92" title="Link to this section">&para;</a></h5>
-<h5 id="technology_7">Technology<a class="headerlink" href="#technology_7" title="Link to this section">&para;</a></h5>
-<p>WRPRC</p>
 <h5 id="eudi-wallet-relevancy_92">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_92" title="Link to this section">&para;</a></h5>
 <p>EUDI_specific | EUDI_required</p>
+<h5 id="technology_7">Technology<a class="headerlink" href="#technology_7" title="Link to this section">&para;</a></h5>
+<p>WRPRC</p>
 <h5 id="preconditions_92">Preconditions<a class="headerlink" href="#preconditions_92" title="Link to this section">&para;</a></h5>
 <ol class="precond-alpha">
 <li>Wallet is set to 'default_configuration_1'</li>
@@ -4548,10 +4548,10 @@ Issuer uses compact serialization of SD-JWT and SD-JWT VC</p>
 <li>[OpenID4VP] sections 5.1 and 5.11.1</li>
 </ul>
 <h5 id="profile-applicability_93">Profile applicability<a class="headerlink" href="#profile-applicability_93" title="Link to this section">&para;</a></h5>
-<h5 id="technology_8">Technology<a class="headerlink" href="#technology_8" title="Link to this section">&para;</a></h5>
-<p>WRPRC</p>
 <h5 id="eudi-wallet-relevancy_93">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_93" title="Link to this section">&para;</a></h5>
 <p>EUDI_specific | EUDI_required</p>
+<h5 id="technology_8">Technology<a class="headerlink" href="#technology_8" title="Link to this section">&para;</a></h5>
+<p>WRPRC</p>
 <h5 id="preconditions_93">Preconditions<a class="headerlink" href="#preconditions_93" title="Link to this section">&para;</a></h5>
 <ol class="precond-alpha">
 <li>Wallet is set to 'default_configuration_1'</li>
@@ -4603,10 +4603,10 @@ Issuer uses compact serialization of SD-JWT and SD-JWT VC</p>
 <li>[OpenID4VP] sections 5.1 and 5.11.1</li>
 </ul>
 <h5 id="profile-applicability_94">Profile applicability<a class="headerlink" href="#profile-applicability_94" title="Link to this section">&para;</a></h5>
-<h5 id="technology_9">Technology<a class="headerlink" href="#technology_9" title="Link to this section">&para;</a></h5>
-<p>WRPRC</p>
 <h5 id="eudi-wallet-relevancy_94">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_94" title="Link to this section">&para;</a></h5>
 <p>EUDI_specific | EUDI_required</p>
+<h5 id="technology_9">Technology<a class="headerlink" href="#technology_9" title="Link to this section">&para;</a></h5>
+<p>WRPRC</p>
 <h5 id="preconditions_94">Preconditions<a class="headerlink" href="#preconditions_94" title="Link to this section">&para;</a></h5>
 <ol class="precond-alpha">
 <li>Wallet is set to 'default_configuration_1'</li>

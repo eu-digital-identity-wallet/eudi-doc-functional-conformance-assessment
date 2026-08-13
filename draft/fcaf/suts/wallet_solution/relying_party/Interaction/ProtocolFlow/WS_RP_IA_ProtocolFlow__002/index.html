@@ -1621,7 +1621,7 @@
 
 <h1 id="ws_rp_ia_protocolflow_002">WS_RP_IA_ProtocolFlow_002<a class="headerlink" href="#ws_rp_ia_protocolflow_002" title="Link to this section">&para;</a></h1>
 <h2 id="objective">Objective<a class="headerlink" href="#objective" title="Link to this section">&para;</a></h2>
-<p>Verify that, in the presentation flow via Redirects, the Wallet supports receiving a Signed Authorization Request using JWT-Secured Authorization Request (JAR) [RFC9101] with the <code>request_uri</code> parameter.</p>
+<p>Verify that, in the presentation flow via Redirects, the Wallet supports receiving a Signed Authorization Request using JWT-Secured Authorization Request (JAR) [RFC9101] with the <code>request_uri</code> parameter.</p>
 <h2 id="references">References<a class="headerlink" href="#references" title="Link to this section">&para;</a></h2>
 <ul>
 <li>[HAIP] Section 5.1</li>
@@ -1638,7 +1638,7 @@
 <h2 id="test-scenario">Test Scenario<a class="headerlink" href="#test-scenario" title="Link to this section">&para;</a></h2>
 <ol>
 <li>End-user interacts with the Verifier, triggering the Verifier to send a presentation request.</li>
-<li>Verifier sends Signed Authorization Request using JWT-Secured Authorization Request (JAR) [RFC9101] with the <code>request_uri</code> parameter, and signature is authentic.</li>
+<li>Verifier sends Signed Authorization Request using JWT-Secured Authorization Request (JAR) [RFC9101] with the <code>request_uri</code> parameter, and signature is authentic.</li>
 <li>Verify if the Wallet obtains the request object from the <code>request_uri</code>.</li>
 <li>Wallet checks signature on the request object.</li>
 <li>Verify if Wallet asks for user consent to present the Credential.</li>
