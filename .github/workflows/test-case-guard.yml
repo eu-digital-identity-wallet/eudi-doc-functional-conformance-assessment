@@ -24,6 +24,13 @@ on:
         required: false
         type: boolean
         default: false
+      guard_ref:
+        description: >-
+          Ref of this repository the guard script is taken from. Pin it to a
+          branch to try a rule change out before merging it.
+        required: false
+        type: string
+        default: site
   workflow_dispatch:
     inputs:
       content_ref:
@@ -45,27 +52,14 @@ jobs:
           ref: ${{ inputs.content_ref || github.ref }}
           fetch-depth: 0
 
-      # Take the guard from the very ref this workflow was called from, so a
-      # caller pinned to a branch tests that branch's rules end to end. Falls
-      # back to `site` for a direct workflow_dispatch run.
-      - name: Resolve where the guard lives
-        id: guard_src
-        env:
-          JOB_REF: ${{ github.job_workflow_ref }}
-        run: |
-          if [ -n "$JOB_REF" ]; then
-            echo "repository=${JOB_REF%%/.github/*}" >> "$GITHUB_OUTPUT"
-            echo "ref=${JOB_REF##*@}" >> "$GITHUB_OUTPUT"
-          else
-            echo "repository=eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment" >> "$GITHUB_OUTPUT"
-            echo "ref=site" >> "$GITHUB_OUTPUT"
-          fi
-
+      # github.job_workflow_ref is empty here, so the ref cannot be derived from
+      # the call itself. It is an explicit input instead, which also lets a
+      # caller try a rule change out before it is merged.
       - name: Check out the guard
         uses: actions/checkout@v4
         with:
-          repository: ${{ steps.guard_src.outputs.repository }}
-          ref: ${{ steps.guard_src.outputs.ref }}
+          repository: eu-digital-identity-wallet/eudi-doc-functional-conformance-assessment
+          ref: ${{ inputs.guard_ref || 'site' }}
           path: .guard
 
       - name: Run the guard
