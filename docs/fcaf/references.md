@@ -23,10 +23,10 @@ The syntax follows that used for the EUDI Wallet Architecture and Reference Fram
 | [ISO/IEC 3166-1] | - | ISO 3166-1, Codes for the representation of names of countries and their subdivisions - Part 1: Country code. |
 | [ISO 8601-1:2019] | 2019 | ISO 8601-1:2019, Date and time - Representations for information interchange - Part 1: Basic rules. |
 | [ISO/IEC 5218:2004] | 2004 | ISO/IEC 5218:2004, Information technology - Codes for the representation of human sexes. |
-| [OpenID4VP] | 1.0 (errata set 1) | Terbu, O. et al., [OpenID for Verifiable Presentations](https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications/issues/2), OpenID Foundation. |
-| [OpenID4VCI] | 1.0 (errata set 1) | Lodderstedt, T. et al., [OpenID for Verifiable Credential Issuance](https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications/issues/3), OpenID Foundation. |
+| [OpenID4VP] | 1.0 | Terbu, O. et al., [OpenID for Verifiable Presentations](https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications/issues/2), OpenID Foundation. |
+| [OpenID4VCI] | 1.0 | Lodderstedt, T. et al., [OpenID for Verifiable Credential Issuance](https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications/issues/3), OpenID Foundation. |
 | [HAIP] | 1.0 | [OpenID4VC High Assurance Interoperability Profile](https://openid.net/specs/openid4vc-high-assurance-interoperability-profile-1_0.html), OpenID Foundation. |
-| [SD-JWT VC] | draft-16 | [SD-JWT-based Verifiable Credentials](https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications/issues/9) (SD-JWT VC). Available at <https://datatracker.ietf.org/doc/draft-ietf-oauth-sd-jwt-vc/>. |
+| [SD-JWT VC] | draft-13 | [SD-JWT-based Verifiable Credentials](https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications/issues/9) (SD-JWT VC). Available at <https://datatracker.ietf.org/doc/draft-ietf-oauth-sd-jwt-vc/>. |
 | [Token Status List] | draft-20 | [Token Status List](https://datatracker.ietf.org/doc/draft-ietf-oauth-status-list/), IETF OAuth Working Group. |
 | [DCQL] | - | Digital Credentials Query Language (DCQL), defined in [OpenID4VP]. |
 | [RFC3339] | - | [RFC 3339](https://datatracker.ietf.org/doc/html/rfc3339): Date and Time on the Internet: Timestamps. |
