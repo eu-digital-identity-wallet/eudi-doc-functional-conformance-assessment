@@ -152,6 +152,13 @@ class Finding:
         return self.code in enforced
 
 
+def is_none(value):
+    """'None' means no profile filter, so it needs no ICS entry. Read through
+    emphasis and list markers: the corpus writes it as None and as *None*, and
+    both say the same thing."""
+    return value.strip().strip(" -*+_\t").rstrip(".").lower() == "none"
+
+
 def split_sections(text):
     """[(name, start_line, body)] for every level-2 heading, in file order."""
     out, cur, buf, start = [], None, [], 0
@@ -305,8 +312,10 @@ def check_file(path: pathlib.Path, root: pathlib.Path, ctx):
     if not prof:
         add(lineno.get("Profile applicability", 1), "FC032",
             "empty Profile applicability, write 'None' when no profile restricts the test")
-    elif prof.lower().rstrip(".") != "none":
+    elif not is_none(prof):
         for line in [l.strip(" -*+\t") for l in prof.splitlines() if l.strip()]:
+            if is_none(line):
+                continue
             if line.rstrip(".").lower() not in ctx["vocab"]:
                 add(lineno.get("Profile applicability", 1), "FC101",
                     f"profile condition not found in the ICS: {line!r}")
@@ -498,7 +507,12 @@ def main(argv=None):
     for f in sorted(findings, key=lambda f: (str(f.path), f.line)):
         level = "error" if f.blocking(enforced) else "warning"
         if args.format == "github":
-            print(f"::{level} file={f.path},line={f.line},title={f.code}::{f.message}")
+            # GitHub consumes file=, line= and title= to build the annotation and
+            # prints only the message into the log, so the location has to be in
+            # the message too. Annotations are also capped at ten per level per
+            # step, which makes the log the only complete list.
+            print(f"::{level} file={f.path},line={f.line},title={f.code}"
+                  f"::{f.path.name}:{f.line}: [{f.code}] {f.message}")
         else:
             print(f"{f.path}:{f.line}: {level}: [{f.code}] {f.message}")
 

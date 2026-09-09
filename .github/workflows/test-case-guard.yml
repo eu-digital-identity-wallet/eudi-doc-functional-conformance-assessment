@@ -73,20 +73,61 @@ jobs:
           scope=()
           if [ "$ALL_FILES" != "true" ] && [ -n "$BASE_SHA" ]; then
             # Only the files this pull request touches. Inherited defects stay
-            # visible in the scheduled full run, but never block a contributor.
+            # visible in a full run (workflow_dispatch, or all_files), but never
+            # block a contributor.
             git fetch --no-tags --depth=1 origin "$BASE_SHA" 2>/dev/null || true
             scope=(--changed-only "$BASE_SHA")
           fi
           test -f .guard/tools/fcaf_lint.py || {
             echo "::error::the guard script was not checked out"; ls -la .guard; exit 2; }
+
+          # Two passes over the same files. The github formatter drives the
+          # inline annotations, which GitHub caps at ten per level per step, so
+          # on a pull request touching several files most findings never reach
+          # the diff. The text formatter produces the complete list for the job
+          # summary, which carries no such cap. A failing run must not abort the
+          # step before the summary is written, hence the explicit || status=$?.
+          status=0
           python3 .guard/tools/fcaf_lint.py \
-            --root "$ROOT" --format github "${scope[@]}" | tee guard.log
-          status=${PIPESTATUS[0]}
+            --root "$ROOT" --format github "${scope[@]}" || status=$?
+          python3 .guard/tools/fcaf_lint.py \
+            --root "$ROOT" "${scope[@]}" > guard.log || true
+
+          # Findings are printed as "path:line: level: [CODE] message", sorted
+          # by path, so grouping is a matter of noticing when the path changes.
+          # The level is dropped: the section it lands in already states it.
+          group() {
+            grep ": $1: " guard.log \
+              | sed -e "s#^${ROOT%/}/##" -e "s/: $1: /: /" \
+              | awk -F: 'f!=$1 {f=$1; if (n++) print ""; print f} {sub(/^[^:]*:/, ""); print "  " $0}'
+          }
+          # Grouped once into a file: head reading a pipe would close it early
+          # and take the step down with SIGPIPE under pipefail.
+          emit() {
+            local level=$1 label=$2 open=$3 total shown
+            total=$(grep -c ": $level: " guard.log || true)
+            if [ "$total" -eq 0 ]; then return 0; fi
+            group "$level" > "grouped-$level.txt"
+            shown=$(wc -l < "grouped-$level.txt")
+            echo "<details${open:+ open}><summary>$label ($total)</summary>"
+            echo
+            echo '```'
+            head -n 500 "grouped-$level.txt"
+            if [ "$shown" -gt 500 ]; then
+              echo "... truncated, the full list is in the step log"
+            fi
+            echo '```'
+            echo
+            echo "</details>"
+            echo
+          }
           {
             echo "### FCAF test case format guard"
             echo
-            echo '```'
-            tail -n 5 guard.log
-            echo '```'
+            grep -E '^(checked|applied fixes|blocking findings|by check|warnings by check)' guard.log \
+              | sed 's/^/    /'
+            echo
+            emit error "Blocking findings" open
+            emit warning "Warnings, not blocking" ""
           } >> "$GITHUB_STEP_SUMMARY"
           exit "$status"
