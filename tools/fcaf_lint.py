@@ -507,7 +507,12 @@ def main(argv=None):
     for f in sorted(findings, key=lambda f: (str(f.path), f.line)):
         level = "error" if f.blocking(enforced) else "warning"
         if args.format == "github":
-            print(f"::{level} file={f.path},line={f.line},title={f.code}::{f.message}")
+            # GitHub consumes file=, line= and title= to build the annotation and
+            # prints only the message into the log, so the location has to be in
+            # the message too. Annotations are also capped at ten per level per
+            # step, which makes the log the only complete list.
+            print(f"::{level} file={f.path},line={f.line},title={f.code}"
+                  f"::{f.path.name}:{f.line}: [{f.code}] {f.message}")
         else:
             print(f"{f.path}:{f.line}: {level}: [{f.code}] {f.message}")
 
