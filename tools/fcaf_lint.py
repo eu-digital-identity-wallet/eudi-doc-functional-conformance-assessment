@@ -32,6 +32,8 @@ from collections import Counter, defaultdict
 # Phase 2: the conventions settled and normalised across the corpus, so
 #   FC002 section order, FC003 section names, FC041 defaults, FC052 final
 #   newline, FC056 invisible characters and FC057 indentation tabs now block.
+# Phase 3: FC033, the spelling of None. All 378 test cases that carry no
+#   profile restriction already write a plain None, so the backlog is zero.
 # Still reported as warnings, with counts, until their backlog is cleared:
 #   FC043 dead placeholder text, FC042 untracked TODO/TBD, FC040 reference
 #   tokens, FC032 empty profile applicability, FC021 step/result parity,
@@ -50,6 +52,7 @@ ENFORCED = {
     "FC023",  # no numbered test steps
     "FC030",  # relevancy format, vocabulary and separator
     "FC031",  # mutually exclusive relevancy combination
+    "FC033",  # None written in anything but its one accepted spelling
     "FC041",  # default_* not defined in defaults.md
     "FC050",  # CR characters
     "FC051",  # trailing whitespace
@@ -76,6 +79,10 @@ SECTIONS = [
 OPTIONAL = {"Technology", "Comments"}
 REQUIRED = [s for s in SECTIONS if s not in OPTIONAL]
 ORDER = {s: i for i, s in enumerate(SECTIONS)}
+
+# Profile applicability None means no profile restricts the test, so there is
+# nothing to look up in the ICS. Exactly one spelling is accepted.
+NONE = "None"
 
 ORIGIN = ("EUDI_agnostic", "EUDI_generic", "EUDI_specific")
 SCOPE = ("EUDI_required", "EUDI_optional", "EUDI_forbidden", "EUDI_undefined")
@@ -150,13 +157,6 @@ class Finding:
 
     def blocking(self, enforced):
         return self.code in enforced
-
-
-def is_none(value):
-    """'None' means no profile filter, so it needs no ICS entry. Read through
-    emphasis and list markers: the corpus writes it as None and as *None*, and
-    both say the same thing."""
-    return value.strip().strip(" -*+_\t").rstrip(".").lower() == "none"
 
 
 def split_sections(text):
@@ -312,11 +312,20 @@ def check_file(path: pathlib.Path, root: pathlib.Path, ctx):
     if not prof:
         add(lineno.get("Profile applicability", 1), "FC032",
             "empty Profile applicability, write 'None' when no profile restricts the test")
-    elif not is_none(prof):
-        for line in [l.strip(" -*+\t") for l in prof.splitlines() if l.strip()]:
-            if is_none(line):
+    elif prof != NONE:
+        # Strip a leading list marker, but nothing else: a bare *None* is not a
+        # list item, and stripping its asterisks would hide the very defect
+        # FC033 is here to catch.
+        for raw in [l for l in prof.splitlines() if l.strip()]:
+            line = re.sub(r"^\s*[-*+]\s+", "", raw).strip()
+            if line == NONE or line.rstrip(".").lower() in ctx["vocab"]:
                 continue
-            if line.rstrip(".").lower() not in ctx["vocab"]:
+            # A value that mentions none is a decorated none, not a profile the
+            # ICS is missing. Same verdict either way, but say which one it is.
+            if "none" in line.lower():
+                add(lineno.get("Profile applicability", 1), "FC033",
+                    f"write the value {NONE} plainly, not {line!r}")
+            else:
                 add(lineno.get("Profile applicability", 1), "FC101",
                     f"profile condition not found in the ICS: {line!r}")
     for line in [l.strip(" -*+\t") for l in body.get("Technology", "").splitlines() if l.strip()]:
@@ -396,6 +405,13 @@ def autofix(path: pathlib.Path):
         if touched_quotes:
             applied.append("quoted identifiers")
         text = joined
+
+    prof = re.search(r"(?m)^## Profile applicability[ \t]*\n(.*?)(?=\n## |\Z)", text, re.S)
+    if prof and prof.group(1).strip() != NONE and "none" == re.sub(
+            r"[^a-z]", "", prof.group(1).lower()):
+        body = prof.group(1)
+        text = text[: prof.start(1)] + NONE + body[len(body.rstrip()):] + text[prof.end(1) :]
+        applied.append("None spelling")
 
     spaced = re.sub(r"^(#{1,6} .*)\n(?!\n)", r"\1\n\n", text, flags=re.M)
     if spaced != text:
