@@ -41,6 +41,10 @@ from collections import Counter, defaultdict
 #   FC043 dead placeholder text, FC042 untracked TODO/TBD, FC040 reference
 #   tokens, FC032 empty profile applicability, FC021 step/result parity,
 #   FC014 duplicate test case ID.
+# Warnings that wait on the ICS vocabulary being seeded and sorted:
+#   FC103 condition that belongs in Preconditions, FC104 two conditions in one
+#   entry. FC104 clears mechanically with --fix and can be promoted after one
+#   normalisation pass; FC103 rests on a heuristic and must stay a warning.
 # Permanently advisory (large, judgement-bound backlogs):
 #   FC100 CIR/ETSI anchor, FC101/FC102 ICS vocabulary, FC011/FC013 identifiers.
 ENFORCED = {
@@ -88,6 +92,12 @@ ORDER = {s: i for i, s in enumerate(SECTIONS)}
 # Profile applicability None means no profile restricts the test, so there is
 # nothing to look up in the ICS. Exactly one spelling is accepted.
 NONE = "None"
+
+# A profile condition states what the implementation under test can do, so an
+# implementer can declare it in the ICS: "Wallet supports X", "Wallet uses Y".
+# A statement about what is stored instead describes one test's fixture, can
+# never be declared, and belongs in Preconditions. The verb separates the two.
+PRESENCE_RE = re.compile(r"(?i)\bcontains?\b|\b(is|are) (present|included)\b")
 
 ORIGIN = ("EUDI_agnostic", "EUDI_generic", "EUDI_specific")
 SCOPE = ("EUDI_required", "EUDI_optional", "EUDI_forbidden", "EUDI_undefined")
@@ -362,9 +372,20 @@ def check_file(path: pathlib.Path, root: pathlib.Path, ctx):
                 continue
             # A value that mentions none is a decorated none, not a profile the
             # ICS is missing. Same verdict either way, but say which one it is.
+            # Same verdict in every branch, the value is not in the ICS. The
+            # branches differ only in which repair they point at, so a wrong
+            # guess costs a misleading sentence, never a wrong gate.
             if "none" in line.lower():
                 add(lineno.get("Profile applicability", 1), "FC033",
                     f"write the value {NONE} plainly, not {line!r}")
+            elif ";" in line:
+                add(lineno.get("Profile applicability", 1), "FC104",
+                    "one condition per entry, split this at the semicolon: "
+                    f"{line!r}")
+            elif PRESENCE_RE.search(line):
+                add(lineno.get("Profile applicability", 1), "FC103",
+                    "this states what the wallet contains, not what it "
+                    f"supports, so it belongs in Preconditions: {line!r}")
             else:
                 add(lineno.get("Profile applicability", 1), "FC101",
                     f"profile condition not found in the ICS: {line!r}")
@@ -474,6 +495,26 @@ def autofix(path: pathlib.Path):
             text = text[: pre.start(1)] + "\n".join(out) + text[pre.end(1):]
             applied.append("precondition numbering")
 
+    # One condition per line. The corpus already writes several conditions as
+    # several lines, so splitting a bundled entry only makes the existing shape
+    # explicit. Skipped when a half would come out empty.
+    papp = re.search(r"(?m)^## Profile applicability[ \t]*\n(.*?)(?=\n## |\Z)", text, re.S)
+    if papp and papp.group(1).strip() != NONE:
+        out, changed = [], False
+        for line in papp.group(1).splitlines():
+            parts = [x.strip() for x in line.split(";")]
+            if len(parts) > 1 and all(parts):
+                indent = re.match(r"^\s*(?:-\s+)?", line).group(0)
+                out.extend(indent + x for x in parts)
+                changed = True
+            else:
+                out.append(line)
+        if changed:
+            body = papp.group(1)
+            tail = body[len(body.rstrip("\n")):]
+            text = text[: papp.start(1)] + "\n".join(out) + tail + text[papp.end(1):]
+            applied.append("profile condition split")
+
     refs = re.search(r"(?m)^## References[ \t]*\n(.*?)(?=\n## |\Z)", text, re.S)
     if refs:
         out, inside, changed = [], False, False
@@ -490,7 +531,9 @@ def autofix(path: pathlib.Path):
             out.append("- " + (other.group(1) if other else s))
             changed = True
         if changed:
-            text = text[: refs.start(1)] + "\n".join(out) + text[refs.end(1):]
+            body = refs.group(1)
+            tail = body[len(body.rstrip("\n")):]
+            text = text[: refs.start(1)] + "\n".join(out) + tail + text[refs.end(1):]
             applied.append("reference list")
 
     spaced = re.sub(r"^(#{1,6} .*)\n(?!\n)", r"\1\n\n", text, flags=re.M)
