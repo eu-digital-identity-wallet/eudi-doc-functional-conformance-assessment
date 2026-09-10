@@ -34,6 +34,9 @@ from collections import Counter, defaultdict
 #   newline, FC056 invisible characters and FC057 indentation tabs now block.
 # Phase 3: FC033, the spelling of None. All 378 test cases that carry no
 #   profile restriction already write a plain None, so the backlog is zero.
+# Phase 4: FC034 and FC035, the shape of References and Preconditions. All
+#   1175 reference lines are already "- " items, and Preconditions is already
+#   a numbered list, a bare None, or a fenced fixture. Both backlogs are zero.
 # Still reported as warnings, with counts, until their backlog is cleared:
 #   FC043 dead placeholder text, FC042 untracked TODO/TBD, FC040 reference
 #   tokens, FC032 empty profile applicability, FC021 step/result parity,
@@ -53,6 +56,8 @@ ENFORCED = {
     "FC030",  # relevancy format, vocabulary and separator
     "FC031",  # mutually exclusive relevancy combination
     "FC033",  # None written in anything but its one accepted spelling
+    "FC034",  # References not written as a "- " list
+    "FC035",  # Preconditions neither a numbered list nor None
     "FC041",  # default_* not defined in defaults.md
     "FC050",  # CR characters
     "FC051",  # trailing whitespace
@@ -297,6 +302,41 @@ def check_file(path: pathlib.Path, root: pathlib.Path, ctx):
     if steps == 0:
         add(lineno.get("Test Scenario", 1), "FC023", "no numbered test steps")
 
+    # --- section shape -------------------------------------------------------
+    # Content lines of a section, with their file line number. Fenced blocks are
+    # skipped, and so is the line that introduces one, because a fixture and the
+    # sentence announcing it are not list items. The corpus writes that lead-in
+    # both with and without a trailing colon, so the fence decides, not the
+    # punctuation.
+    def content(name):
+        raw = body.get(name)
+        if raw is None:
+            return []
+        out, inside, lines = [], False, raw.splitlines()
+        for i, line in enumerate(lines):
+            if line.strip().startswith("```"):
+                inside = not inside
+                continue
+            if inside or not line.strip():
+                continue
+            nxt = next((l for l in lines[i + 1:] if l.strip()), "")
+            if nxt.strip().startswith("```"):
+                continue
+            out.append((lineno.get(name, 1) + 1 + i, line))
+        return out
+
+    for ln, line in content("References"):
+        if not re.match(r"^- \S", line) and not re.match(r"^\s+\S", line):
+            add(ln, "FC034",
+                f"every reference must be a '- ' list item, found {line.strip()!r}")
+
+    if body.get("Preconditions", "").strip() != NONE:
+        for ln, line in content("Preconditions"):
+            if not LIST_ITEM_RE.match(line) and not re.match(r"^\s+\S", line):
+                add(ln, "FC035",
+                    "every precondition must be a numbered list item, or the "
+                    f"whole section must read None, found {line.strip()!r}")
+
     # --- relevancy -----------------------------------------------------------
     rel_body = body.get("EUDI-wallet relevancy", "").strip()
     m = RELEVANCY_RE.match(rel_body)
@@ -406,12 +446,52 @@ def autofix(path: pathlib.Path):
             applied.append("quoted identifiers")
         text = joined
 
-    prof = re.search(r"(?m)^## Profile applicability[ \t]*\n(.*?)(?=\n## |\Z)", text, re.S)
-    if prof and prof.group(1).strip() != NONE and "none" == re.sub(
-            r"[^a-z]", "", prof.group(1).lower()):
-        body = prof.group(1)
-        text = text[: prof.start(1)] + NONE + body[len(body.rstrip()):] + text[prof.end(1) :]
-        applied.append("None spelling")
+    # Both sections take None as a whole-section value, and both are written
+    # with emphasis often enough to be worth repairing.
+    for name in ("Profile applicability", "Preconditions"):
+        sec = re.search(rf"(?m)^## {name}[ \t]*\n(.*?)(?=\n## |\Z)", text, re.S)
+        if sec and sec.group(1).strip() != NONE and "none" == re.sub(
+                r"[^a-z]", "", sec.group(1).lower()):
+            body = sec.group(1)
+            text = text[: sec.start(1)] + NONE + body[len(body.rstrip()):] + text[sec.end(1):]
+            applied.append("None spelling")
+
+    # Preconditions written with letters. The site renders the numbers as A., B.,
+    # C., so a source letter is always someone copying what they saw. Nothing in
+    # the corpus refers back to a precondition by its marker, so renumbering is
+    # safe. Only an all-lettered section is touched; anything else is reported.
+    pre = re.search(r"(?m)^## Preconditions[ \t]*\n(.*?)(?=\n## |\Z)", text, re.S)
+    if pre:
+        body_lines = pre.group(1).splitlines()
+        content = [l for l in body_lines if l.strip()]
+        if content and all(re.match(r"^[A-Za-z][.)]\s+\S", l) for l in content):
+            n, out = 0, []
+            for line in body_lines:
+                if line.strip():
+                    n += 1
+                    line = re.sub(r"^[A-Za-z][.)]\s+", f"{n}. ", line)
+                out.append(line)
+            text = text[: pre.start(1)] + "\n".join(out) + text[pre.end(1):]
+            applied.append("precondition numbering")
+
+    refs = re.search(r"(?m)^## References[ \t]*\n(.*?)(?=\n## |\Z)", text, re.S)
+    if refs:
+        out, inside, changed = [], False, False
+        for line in refs.group(1).splitlines():
+            s = line.strip()
+            if s.startswith("```"):
+                inside = not inside
+                out.append(line)
+                continue
+            if inside or not s or re.match(r"^- \S", line) or re.match(r"^\s+\S", line):
+                out.append(line)
+                continue
+            other = re.match(r"^\s*[*+]\s+(.*)$", line)
+            out.append("- " + (other.group(1) if other else s))
+            changed = True
+        if changed:
+            text = text[: refs.start(1)] + "\n".join(out) + text[refs.end(1):]
+            applied.append("reference list")
 
     spaced = re.sub(r"^(#{1,6} .*)\n(?!\n)", r"\1\n\n", text, flags=re.M)
     if spaced != text:
