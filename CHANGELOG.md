@@ -13,6 +13,8 @@ its own branch, because `site` carries no `docs/fcaf`:
 
 Unversioned, newest first. Release versioning lives only in the FCAF changelog.
 
+- Accept "This is the case." as an expected result wording; the guard no longer reports it (FC043 retired).
+- Include the shared test cases (`Shared_*.md` under `suts/shared/`) in the format guard. Their ID follows its own convention, `Shared_Family_nn`, checked as FC015, and the EUDI anchor check does not apply to them because the anchor sits in the invoking test case.
 - Update the indicative roadmap: the baseline test cases and the ICS references to ISO/IEC TS 18013-6 are usable for pilot testing at the submitted stage, a beta release follows once the public feedback on them is processed, the release candidate is targeted for the first quarter of 2027, and the timeline diagram is dropped. The home page says the same about submitted content.
 - Check that protocol and data element identifiers are written in backticks rather than in quotes or bare, recognised by shape with test case identifiers excluded, and repair the quoted ones under `--fix`.
 - Promote the test case checks whose backlog is cleared to blocking: section order and names, defaults resolution, final newline, invisible characters and indentation tabs.

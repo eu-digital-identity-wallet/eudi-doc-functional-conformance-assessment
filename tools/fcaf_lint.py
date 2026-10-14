@@ -37,8 +37,11 @@ from collections import Counter, defaultdict
 # Phase 4: FC034 and FC035, the shape of References and Preconditions. All
 #   1175 reference lines are already "- " items, and Preconditions is already
 #   a numbered list, a bare None, or a fenced fixture. Both backlogs are zero.
+# Phase 5: FC015, the shape of a shared test case ID. Shared test cases
+#   (Shared_*.md under suts/shared/) join the selection; all eleven follow
+#   Shared_Family_nn, so the backlog is zero.
 # Still reported as warnings, with counts, until their backlog is cleared:
-#   FC043 dead placeholder text, FC042 untracked TODO/TBD, FC040 reference
+#   FC042 untracked TODO/TBD, FC040 reference
 #   tokens, FC032 empty profile applicability, FC021 step/result parity,
 #   FC014 duplicate test case ID.
 # Warnings that wait on the ICS vocabulary being seeded and sorted:
@@ -54,6 +57,7 @@ ENFORCED = {
     "FC004",  # duplicate section heading
     "FC010",  # missing H1 test case ID
     "FC012",  # unknown test layer in the ID
+    "FC015",  # shared test case ID not of the form Shared_Family_nn
     "FC020",  # list numbering not consecutive
     "FC022",  # pseudo list marker such as "3a."
     "FC023",  # no numbered test steps
@@ -105,7 +109,6 @@ RELEVANCY_RE = re.compile(rf"^({'|'.join(ORIGIN)}) \| ({'|'.join(SCOPE)})$")
 EXCLUSIVE = {("EUDI_agnostic", "EUDI_required"), ("EUDI_specific", "EUDI_forbidden")}
 
 PLACEHOLDER_RE = re.compile(r"\b(TODO|TBD|FIXME|XXX|to be defined|to be completed|to be determined)\b", re.I)
-DEAD_TEXT_RE = re.compile(r"This is the case\.")
 ISSUE_REF_RE = re.compile(r"#\d+|https?://\S*/issues/\d+")
 TOKEN_RE = re.compile(r"\[([^\]\[]{1,60})\](?!\()")
 ANCHOR_RE = re.compile(r"\[(EU )?CIR \d{4}/\d+( amended)?\]|\[ETSI[^\]]*\]")
@@ -161,6 +164,12 @@ _EDGE_R = r"(?![\w/`'\u201c\u201d-])"
 QUOTED_ID = re.compile(r"(['\"\u201c\u201d])(" + _ID + r")(['\"\u201c\u201d])")
 BARE_ID = re.compile(_EDGE_L + r"(" + _ID + r")" + _EDGE_R)
 TESTCASE_ID = re.compile(r"^WS_[A-Za-z0-9_]+$")
+# Shared test cases are the one exception to SUT_Class_Layer_..._nnn. They are
+# not atomic test cases: a test case invokes a whole family in one scenario
+# step ("Perform all Shared_JSON test cases on ..."), so the ID names only the
+# family and a two-digit number, and the files live under suts/shared/.
+SHARED_ID = re.compile(r"^Shared_[A-Za-z0-9]+(?:_[A-Za-z0-9]+)*_\d{2}$")
+TESTCASE_PREFIXES = ("WS_", "Shared_")
 CURLY = re.compile(r'[\u201c\u201d]')
 
 
@@ -275,11 +284,15 @@ def check_file(path: pathlib.Path, root: pathlib.Path, ctx):
         ctx["ids"][tid].append(rel)
         if tid != path.stem:
             add(1, "FC011", f"H1 '{tid}' does not match filename '{path.stem}'")
-        parts = tid.split("_")
-        if len(parts) >= 3 and parts[2] not in LAYERS:
-            add(1, "FC012", f"unknown test layer '{parts[2]}' in the test case ID")
-        if "__" in path.stem:
-            add(1, "FC013", "double underscore in the filename marks an empty ID subdivision")
+        if tid.startswith("Shared_"):
+            if not SHARED_ID.match(tid):
+                add(1, "FC015", f"shared test case ID '{tid}' must read Shared_Family_nn")
+        else:
+            parts = tid.split("_")
+            if len(parts) >= 3 and parts[2] not in LAYERS:
+                add(1, "FC012", f"unknown test layer '{parts[2]}' in the test case ID")
+            if "__" in path.stem:
+                add(1, "FC013", "double underscore in the filename marks an empty ID subdivision")
 
     # --- sections ------------------------------------------------------------
     secs = split_sections(text)
@@ -400,7 +413,9 @@ def check_file(path: pathlib.Path, root: pathlib.Path, ctx):
         if tok not in ctx["refkeys"]:
             add(lineno.get("References", 1), "FC040",
                 f"reference token {tok} is not an Item reference in references.md")
-    if refs.strip() and not ANCHOR_RE.search(refs):
+    # A shared test case is a generic building block; the EUDI anchor sits in
+    # the test case that invokes it.
+    if refs.strip() and not ANCHOR_RE.search(refs) and not path.stem.startswith("Shared_"):
         add(lineno.get("References", 1), "FC100",
             "no [EU CIR ...] or [ETSI ...] item anchors this test in the EUDI profile")
 
@@ -417,8 +432,6 @@ def check_file(path: pathlib.Path, root: pathlib.Path, ctx):
             add(ln, "FC042",
                 f"placeholder {m.group(1)!r} needs a GitHub issue reference on the same line, "
                 f"for example 'TBD (#123)'")
-    for m in DEAD_TEXT_RE.finditer(text):
-        add(text[: m.start()].count("\n") + 1, "FC043", "placeholder text 'This is the case.'")
     for m in re.finditer(r"\]\((?!https?:|#)([^)]+)\)", text):
         target = (path.parent / m.group(1).split("#")[0]).resolve()
         if not target.exists():
@@ -596,9 +609,9 @@ def main(argv=None):
         print(f"error: {root} is not a directory", file=sys.stderr)
         return 2
 
-    universe = sorted(p for p in (root / "suts").rglob("*.md") if p.name.startswith("WS_"))
+    universe = sorted(p for p in (root / "suts").rglob("*.md") if p.name.startswith(TESTCASE_PREFIXES))
     if args.paths:
-        selected = [p for p in args.paths if p.name.startswith("WS_") and p.suffix == ".md"]
+        selected = [p for p in args.paths if p.name.startswith(TESTCASE_PREFIXES) and p.suffix == ".md"]
     elif args.changed_only:
         changed = {p.resolve() for p in changed_files(args.changed_only)}
         selected = [p for p in universe if p.resolve() in changed]
