@@ -11,7 +11,7 @@ to support wallet certification and improve interoperability across Member State
 > Content is published early to enable **feedback, structured review, and iterative refinement**.
 > Content progresses through defined maturity stages:
 >
-> - **Submitted** - latest working draft; not yet suitable for implementation; may contain errors
+> - **Submitted** - latest working draft; not yet suitable for implementation; may contain errors. Selected content, such as the baseline test cases, may be used for pilot testing and feedback.
 > - **Reviewed (beta)** - technically correct and implementable in isolation  
 > - **Release candidate (RC)** - consolidated and suitable for validation and pilot use  
 > - **Released baseline** - stable for its defined scope and suitable for regulatory use in certification  
