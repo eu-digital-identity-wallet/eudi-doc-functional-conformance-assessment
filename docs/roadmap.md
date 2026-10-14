@@ -4,68 +4,26 @@
 
 The roadmap provides a **high-level orientation only** and should not be interpreted as a binding delivery plan.
 
-From version **v0.1.0 onwards**, the FCAF follows an **iterative delivery model**:
+## Delivery model
 
-- Framework content and test cases are published early as **draft baseline content**
-- Content is refined incrementally through:
-  - structured review,
-  - issue tracking, and
-  - pull requests
+The FCAF follows an **iterative delivery model**:
 
-The **v0.x.y series represents continuous iteration**, not discrete feature-complete releases.
-Maturity is reflected through staged progression (reviewed → release candidate → released baseline) and corresponding versioned releases.
+- Framework content and test cases are published early as **draft content**.
+- Content is refined incrementally through structured review, issue tracking and pull requests.
+- Maturity is reflected through the staged progression described on the [home page](index.md) (submitted, reviewed, release candidate and released baseline) and corresponding versioned releases.
 
-While individual releases in the **v0.x.y series** provide usable and implementation-ready subsets of functionality, they represent **partial coverage** of the overall framework.
+The **v0.x.y series represents continuous iteration**, not discrete feature-complete releases. Individual releases in this series may provide usable subsets of functionality while still representing **partial coverage** of the overall framework.
 
-These releases are intended to support implementation, testing, and early validation. The **v1.0.0 release** will represent the first full-scope, sufficiently consolidated baseline suitable for certification.
+## Current focus
 
-Iterations of the core team are organised around the key functional areas outlined in the scope overview above.
+Work concentrates on completing and reviewing test cases across the functional areas of the framework, such as presentation and issuance flows, credential formats, trust and integrity mechanisms, and qualified signatures. These areas progress in parallel, at a pace that depends on their complexity and dependencies. Feedback from review and implementation continuously influences prioritisation.
 
-Work progresses iteratively across these areas, with a **primary focus typically applied in the following order**:
+## Baseline test cases
 
-- **Presentation flows** (e.g. OID4VP, HAIP, ISO/IEC 18013-5/-7, ETSI profiles)
-- **Issuance flows** (e.g. OID4VCI, HAIP, ETSI profiles)
-- **Credential formats** (e.g. SD-JWT VC, ISO mdoc, ETSI profiles)
-- **Trust and integrity mechanisms** (e.g. WUA/WIA, trust lists, verifier certificates, ETSI alignment)
-- **Qualified signatures and advanced use cases** (e.g. rQES, ETSI alignment)
+The **baseline test cases** and the Implementation Conformance Statement (ICS) references to **ISO/IEC TS 18013-6** are available at the **submitted** stage. They are a usable starting point, not the released baseline: they can already be used for pilot testing, for example by conformity assessment bodies, and feedback from such use is expected and welcome.
 
-These areas are **not addressed strictly sequentially**. Instead:
+A versioned **beta release** (reviewed stage) is planned once the public feedback on the baseline test cases has been processed. Further updates towards the release candidate are to be expected.
 
-- multiple areas are developed in parallel,
-- progress varies depending on complexity and dependencies, and
-- feedback from implementation and review continuously influences prioritisation.
+## Towards the release candidate
 
-In particular:
-
-- **Data models** (e.g. PID, EEA) are developed in parallel with presentation and issuance flows, and
-- **Regulatory alignment** (e.g. Implementing Acts) is progressively integrated as part of later consolidation stages.
-
-The scope overview reflects the **current status of coverage and progress** across these areas and should be read as a snapshot of ongoing work rather than a strictly sequential plan.
-
-This progression supports incremental consolidation across specifications, profiles, and regulatory layers.
-
-```mermaid
-timeline
-    title FCAF Roadmap (Indicative - Maturity Progression)
-
-    section Foundation (v0.0.x)
-        Completed : Initial baseline (GitHub, MkDocs)
-                            : Framework structure and test architecture
-
-    section Iterative development (v0.1.x)
-        Ongoing : Incremental delivery of functional areas
-                : Continuous review and refinement
-                : Partial but usable coverage
-
-    section Release candidate
-        mid-July : Consolidated baseline (RC)
-                 : Ready for validation and pilot use
-
-    section Validation and governance
-        September : EDICG focus meeting
-                    : Review of RC and stakeholder feedback
-
-    section Released Baseline (v1.0.0)
-        After endorsement : First full-scope baseline
-                : Suitable for certification use
-```
+The goal is a **release candidate in the first quarter of 2027**, consolidated across the applicable specifications, profiles and regulatory layers. The **v1.0.0 release** that follows will represent the first full-scope baseline suitable for certification.
