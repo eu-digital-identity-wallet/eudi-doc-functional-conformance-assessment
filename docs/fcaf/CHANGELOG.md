@@ -11,6 +11,7 @@ release-candidate and released version tags.
 
 ## [Latest draft]
 
+- Add the shared JSON, JWS and JWE test cases under `suts/shared`: eleven building blocks that the baseline test cases invoke as a family (`Shared_JSON`, `Shared_JWT_JWS`, `Shared_JWT_JWE`). They are documented in the framework index as an exception to the test case ID convention, linked from both baseline-tests pages, and the `[RFC4648]` and `[RFC8259]` catalogue rows are added.
 - Add the missing `[ETSI TS 119 475]` entry to the reference catalogue, so the trust mechanism test cases that cite it resolve.
 - Normalise the test case sources against the settled conventions: canonical section order, a single trailing newline, no invisible characters, and spaces instead of tabs for list indentation. No wording changes.
 - Settle the test case conventions the format guard checks: sections follow one canonical order, default configurations are numbered and default credentials are lettered so the two cannot be confused, and the optional comment section is called `Comments` everywhere.
