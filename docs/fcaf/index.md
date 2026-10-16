@@ -206,6 +206,16 @@ The identifier may optionally have a postfix *mmm*, which is eiher a character, 
 
 In case one of the subdivisions is not present the name is omitted.
 
+#### Shared test cases
+
+Shared test cases are the exception to this convention. They are not atomic test cases: they are not selected or executed on their own and carry no verdict of their own. A test case invokes a complete family of shared test cases in one scenario step, for example "Perform all Shared_JSON test cases on the decrypted Authorization Response". The shared test cases are then executed against the object named in that step, and their results form the result of that step.
+
+Shared test case IDs are formed as follows:
+
+    Shared_Family_*nn*
+
+Where *Family* names the structure tested (for example JSON, JWT_JWS, JWT_JWE) and *nn* is a two-digit decimal number. There is no SUT, Test Class or Test Layer, because a shared test case applies wherever a test case invokes its family. Shared test cases are located under `suts/shared/`, in one directory per family, and are listed on the [Shared test cases](suts/shared/index.md) page.
+
 ### EUDI-wallet Relevancy
 
 The EUDI Wallet ecosystem uses numerous standards and technical specifications. Many of these have a broader application than EUDI Wallets, while others are specific to EUDI Wallets. Furthermore the standards and technical specifications influence each other, for example by referencing, profiling and extending each other.

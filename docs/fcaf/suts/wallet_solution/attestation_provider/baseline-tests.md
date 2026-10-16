@@ -60,3 +60,7 @@ The following 58 Attestation Provider test cases form the baseline test set.
 - [WS_AP_SM_DeviceBinding_013a](SecurityMechanisms/DeviceBinding/WS_AP_SM_DeviceBinding_013a.md)
 - [WS_AP_IA_MainInteraction_031a](Interaction/MainInteraction/WS_AP_IA_MainInteraction_031a.md)
 - [WS_AP_IA_MainInteraction_031b_UF](Interaction/MainInteraction/WS_AP_IA_MainInteraction_031b_UF.md)
+
+## Shared test cases
+
+Several Attestation Provider baseline test cases invoke the [shared test cases](../../shared/index.md) of the families Shared_JSON, Shared_JWT_JWS and Shared_JWT_JWE. Shared test cases are not atomic test cases and are not counted above.
