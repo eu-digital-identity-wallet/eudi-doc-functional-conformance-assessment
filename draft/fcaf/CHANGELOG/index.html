@@ -1726,6 +1726,7 @@ rolling latest draft (untagged), while <code>reviewed</code>, <code>rc</code> an
 release-candidate and released version tags.</p>
 <h2 id="latest-draft">[Latest draft]<a class="headerlink" href="#latest-draft" title="Link to this section">&para;</a></h2>
 <ul>
+<li>Add the shared JSON, JWS and JWE test cases under <code>suts/shared</code>: eleven building blocks that the baseline test cases invoke as a family (<code>Shared_JSON</code>, <code>Shared_JWT_JWS</code>, <code>Shared_JWT_JWE</code>). They are documented in the framework index as an exception to the test case ID convention, linked from both baseline-tests pages, and the <code>[RFC4648]</code> and <code>[RFC8259]</code> catalogue rows are added.</li>
 <li>Add the missing <code>[ETSI TS 119 475]</code> entry to the reference catalogue, so the trust mechanism test cases that cite it resolve.</li>
 <li>Normalise the test case sources against the settled conventions: canonical section order, a single trailing newline, no invisible characters, and spaces instead of tabs for list indentation. No wording changes.</li>
 <li>Settle the test case conventions the format guard checks: sections follow one canonical order, default configurations are numbered and default credentials are lettered so the two cannot be confused, and the optional comment section is called <code>Comments</code> everywhere.</li>
