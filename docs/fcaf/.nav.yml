@@ -22,6 +22,7 @@ nav:
               - (ws_pp) PID Provider: suts/wallet_solution/pid_provider/ws_pp.md
               - (ws_inf) Infrastructure: suts/wallet_solution/infrastructure/ws_inf.md
               - (ws_ui) UI: suts/wallet_solution/ui/ws_ui.md
+      - Shared: suts/shared/index.md
   - Templates:
       - Overview: templates/index.md
       - Test spec template: templates/test-spec-template.md

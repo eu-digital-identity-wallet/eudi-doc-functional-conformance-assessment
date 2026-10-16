@@ -66,3 +66,7 @@ The following 64 Relying Party test cases form the baseline test set.
 - [WS_RP_MS_CredentialFormats__033h](MessageStructure/CredentialFormats/WS_RP_MS_CredentialFormats__033h.md)
 - [WS_RP_IA_ProtocolFlow__003a](Interaction/ProtocolFlow/WS_RP_IA_ProtocolFlow__003a.md)
 - [WS_RP_IA_ProtocolFlow__003b_UF](Interaction/ProtocolFlow/WS_RP_IA_ProtocolFlow__003b_UF.md)
+
+## Shared test cases
+
+Several Relying Party baseline test cases invoke the [shared test cases](../../shared/index.md) of the families Shared_JSON, Shared_JWT_JWS and Shared_JWT_JWE. Shared test cases are not atomic test cases and are not counted above.

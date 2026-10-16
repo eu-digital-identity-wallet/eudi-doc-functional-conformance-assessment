@@ -30,6 +30,7 @@ The syntax follows that used for the EUDI Wallet Architecture and Reference Fram
 | [Token Status List] | draft-20 | [Token Status List](https://datatracker.ietf.org/doc/draft-ietf-oauth-status-list/), IETF OAuth Working Group. |
 | [DCQL] | - | Digital Credentials Query Language (DCQL), defined in [OpenID4VP]. |
 | [RFC3339] | - | [RFC 3339](https://datatracker.ietf.org/doc/html/rfc3339): Date and Time on the Internet: Timestamps. |
+| [RFC4648] | - | [RFC 4648](https://datatracker.ietf.org/doc/html/rfc4648): The Base16, Base32, and Base64 Data Encodings. |
 | [RFC5280] | - | [RFC 5280](https://datatracker.ietf.org/doc/html/rfc5280): Internet X.509 Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile. |
 | [RFC5322] | - | [RFC 5322](https://datatracker.ietf.org/doc/html/rfc5322): Internet Message Format. |
 | [RFC6749] | - | [RFC 6749](https://datatracker.ietf.org/doc/html/rfc6749): The OAuth 2.0 Authorization Framework. |
@@ -39,6 +40,7 @@ The syntax follows that used for the EUDI Wallet Architecture and Reference Fram
 | [RFC7518] | - | [RFC 7518](https://datatracker.ietf.org/doc/html/rfc7518): JSON Web Algorithms (JWA). |
 | [RFC7519] | - | [RFC 7519](https://datatracker.ietf.org/doc/html/rfc7519): JSON Web Token (JWT). |
 | [RFC7800] | - | [RFC 7800](https://datatracker.ietf.org/doc/html/rfc7800): Proof-of-Possession Key Semantics for JSON Web Tokens (JWTs). |
+| [RFC8259] | - | [RFC 8259](https://datatracker.ietf.org/doc/html/rfc8259): The JavaScript Object Notation (JSON) Data Interchange Format. |
 | [RFC8414] | - | [RFC 8414](https://datatracker.ietf.org/doc/html/rfc8414): OAuth 2.0 Authorization Server Metadata. |
 | [RFC8610] | - | [RFC 8610](https://datatracker.ietf.org/doc/html/rfc8610): Concise Data Definition Language (CDDL). |
 | [RFC8943] | - | [RFC 8943](https://datatracker.ietf.org/doc/html/rfc8943): Concise Binary Object Representation (CBOR) Tags for Date. |
