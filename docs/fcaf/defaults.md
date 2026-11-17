@@ -56,6 +56,14 @@ The Credential has at least the following Attributes:
 | Attribute | Type | Value |
 | --- | --- | --- |
 
+### `default_credential_E`
+
+A Credential, specifically an EAA, in SD-JWT VC format only, issued by `Issuer A`, for test cases of SD-JWT VC Type Metadata. Its `vct` claim is an HTTPS URL under the tester's control that serves `default_type_metadata_A`, and it carries a `vct#integrity` claim matching that document. It has the Attributes of `default_credential_A`.
+
+### `default_credential_F`
+
+The SD-JWT VC variant of `default_credential_A`, issued by `Issuer A`, whose protected header carries no `x5c`, `x5u` or `x5t#S256` parameter; the Issuer's public key is published only through `default_jwt_vc_issuer_metadata_A`. It is not an EUDI-conformant PID or EAA ([HAIP] clause 6.1.1) and serves only the test cases of the JWT VC Issuer Metadata issuer signature mechanism ([SD-JWT VC] sections 3.5 and 5), whose relevancy is `EUDI_generic | EUDI_undefined`.
+
 ## Test trust establishment
 
 Tests are designed to run in a controlled environment. The FCAF assumes that this environment is separate from production and that all aspects of it can be controlled.
@@ -64,3 +72,40 @@ A controlled environment also prevents external changes from influencing or disr
 
 To establish trust for tests, and explicit non-trust for unsuccessful flows or negative tests, trusted lists, trust lists, and related certificate hierarchies will be described below. As with Credentials, these are described logically or conceptually. Testers and test tools must supply specific instances of trust lists and certificates.
 Specific tests rely on trusted lists or certificates. Those tests assume that the lists or certificates are loaded, are available for the SUT to download, or are otherwise configured. Managing and configuring the SUT's trust anchors is outside the scope of the FCAF.
+
+## Default metadata documents
+
+The documents below are served by the test apparatus with HTTP status `200` and content type `application/json`; [SD-JWT VC] section 6.3.1 itself requires only that the response to the GET is a JSON object as defined in its section 6.2. As with Credentials, they are described logically; the tester supplies the URLs and values.
+
+### `default_type_metadata_A`
+
+The SD-JWT VC Type Metadata document of `default_credential_E`, served at the `vct` URL of that Credential.
+
+| Member | Value |
+| --- | --- |
+| `vct` | identical to the `vct` claim of `default_credential_E` |
+| `display` | an array with one object: `locale` a supported language tag, `name` a non-empty string |
+| `claims` | an array with one object per Attribute of `default_credential_E`: `path` addressing the Attribute, `display` with `locale` and `label` |
+
+### `default_type_metadata_B`
+
+An SD-JWT VC Type Metadata document that extends `default_type_metadata_A`, served at its own HTTPS URL under the tester's control. A `default_credential_E` of this type carries that URL in its `vct` claim and a matching `vct#integrity` claim.
+
+| Member | Value |
+| --- | --- |
+| `vct` | the URL at which this document is served |
+| `extends` | the `vct` of `default_type_metadata_A` |
+| `extends#integrity` | the integrity metadata of `default_type_metadata_A` |
+
+### `default_type_metadata_C`
+
+As `default_type_metadata_B`, but extending `default_type_metadata_B`: its `extends` is the `vct` of `default_type_metadata_B` and its `extends#integrity` the integrity metadata of that document.
+
+### `default_jwt_vc_issuer_metadata_A`
+
+The JWT VC Issuer Metadata configuration of `Issuer A`, served at the location formed by inserting `/.well-known/jwt-vc-issuer` between the host component and the path component of the `iss` claim of Issuer A's SD-JWT VCs. `default_credential_F` relies on it.
+
+| Member | Value |
+| --- | --- |
+| `issuer` | identical to the `iss` claim of the SD-JWT VC |
+| `jwks` | a JWK Set containing the public key that verifies Issuer A's signature, with a `kid` |
