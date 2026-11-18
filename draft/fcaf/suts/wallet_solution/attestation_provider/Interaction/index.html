@@ -1969,37 +1969,384 @@ Credential Issuance using the Authorization Code Flow.</p>
 <!-- END INCLUDE -->
 
 <!-- END INCLUDE -->
+<h2 id="interaction-metadataexchange">Interaction - MetadataExchange<a class="headerlink" href="#interaction-metadataexchange" title="Link to this section">&para;</a></h2>
+<!-- BEGIN INCLUDE ./[A-Z]*.md -->
+<h4 id="ws_ap_ia_metadataexchange_001">WS_AP_IA_MetadataExchange_001<a class="headerlink" href="#ws_ap_ia_metadataexchange_001" title="Link to this section">&para;</a></h4>
+<h5 id="objective_9">Objective<a class="headerlink" href="#objective_9" title="Link to this section">&para;</a></h5>
+<p>When JWT VC Issuer Metadata is used for key resolution, verify that the wallet retrieves the metadata from the correct well-known URI derived from the <code>iss</code> claim.</p>
+<h5 id="references_9">References<a class="headerlink" href="#references_9" title="Link to this section">&para;</a></h5>
+<ul>
+<li>[CIR 2024/2979 amended] Article 8, Annex II</li>
+<li>[ETSI TS 119 472-1] clause 5.1 EAA-5.1-01</li>
+<li>[SD-JWT VC] sections 3.5, 5 and 5.1</li>
+</ul>
+<h5 id="profile-applicability_9">Profile applicability<a class="headerlink" href="#profile-applicability_9" title="Link to this section">&para;</a></h5>
+<p>Wallet supports the JWT VC Issuer Metadata issuer signature mechanism.</p>
+<h5 id="eudi-wallet-relevancy_9">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_9" title="Link to this section">&para;</a></h5>
+<p>EUDI_generic | EUDI_undefined</p>
+<h5 id="technology_9">Technology<a class="headerlink" href="#technology_9" title="Link to this section">&para;</a></h5>
+<p>Credential in SD-JWT VC format</p>
+<h5 id="preconditions_9">Preconditions<a class="headerlink" href="#preconditions_9" title="Link to this section">&para;</a></h5>
+<ol class="precond-alpha">
+<li>Wallet is set to <code>default_configuration_1</code>.</li>
+</ol>
+<h5 id="test-scenario_9">Test Scenario<a class="headerlink" href="#test-scenario_9" title="Link to this section">&para;</a></h5>
+<ol>
+<li>Issuer A issues <code>default_credential_F</code> to the wallet with an <code>iss</code> claim that is an HTTPS URL with a path component (for example <code>https://example.com/tenant/1234</code>); Issuer A serves <code>default_jwt_vc_issuer_metadata_A</code> at the well-known location derived from the <code>iss</code> value.</li>
+<li>Verify the wallet's JWT VC Issuer Metadata request.</li>
+</ol>
+<h5 id="expected-results_9">Expected results<a class="headerlink" href="#expected-results_9" title="Link to this section">&para;</a></h5>
+<ol>
+<li>The SD-JWT VC is accepted and made available for use.</li>
+<li>The wallet sent one HTTP request for the JWT VC Issuer Metadata:<ol>
+<li>the method is <code>GET</code>;</li>
+<li>the request URL is <code>https://example.com/.well-known/jwt-vc-issuer/tenant/1234</code>.</li>
+</ol>
+</li>
+</ol>
+<!-- END INCLUDE -->
+<h4 id="ws_ap_ia_metadataexchange_003">WS_AP_IA_MetadataExchange_003<a class="headerlink" href="#ws_ap_ia_metadataexchange_003" title="Link to this section">&para;</a></h4>
+<h5 id="objective_10">Objective<a class="headerlink" href="#objective_10" title="Link to this section">&para;</a></h5>
+<p>When processing an SD-JWT VC that uses JWT VC Issuer Metadata for key resolution and the <code>iss</code> value contains a trailing <code>/</code>, verify that the wallet constructs the well-known URI without the trailing <code>/</code>.</p>
+<h5 id="references_10">References<a class="headerlink" href="#references_10" title="Link to this section">&para;</a></h5>
+<ul>
+<li>[CIR 2024/2979 amended] Article 8, Annex II</li>
+<li>[ETSI TS 119 472-1] clause 5.1 EAA-5.1-01</li>
+<li>[SD-JWT VC] section 5.1</li>
+</ul>
+<h5 id="profile-applicability_10">Profile applicability<a class="headerlink" href="#profile-applicability_10" title="Link to this section">&para;</a></h5>
+<p>Wallet supports the JWT VC Issuer Metadata issuer signature mechanism.</p>
+<h5 id="eudi-wallet-relevancy_10">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_10" title="Link to this section">&para;</a></h5>
+<p>EUDI_generic | EUDI_undefined</p>
+<h5 id="technology_10">Technology<a class="headerlink" href="#technology_10" title="Link to this section">&para;</a></h5>
+<p>Credential in SD-JWT VC format</p>
+<h5 id="preconditions_10">Preconditions<a class="headerlink" href="#preconditions_10" title="Link to this section">&para;</a></h5>
+<ol class="precond-alpha">
+<li>Wallet is set to <code>default_configuration_1</code>.</li>
+</ol>
+<h5 id="test-scenario_10">Test Scenario<a class="headerlink" href="#test-scenario_10" title="Link to this section">&para;</a></h5>
+<ol>
+<li>Issuer A issues <code>default_credential_F</code> to the wallet with an <code>iss</code> claim that is an HTTPS URL with a path component and a terminating <code>/</code> (for example <code>https://example.com/tenant/1234/</code>); Issuer A serves <code>default_jwt_vc_issuer_metadata_A</code> at the well-known location derived from the <code>iss</code> value.</li>
+<li>Verify the wallet's JWT VC Issuer Metadata request.</li>
+</ol>
+<h5 id="expected-results_10">Expected results<a class="headerlink" href="#expected-results_10" title="Link to this section">&para;</a></h5>
+<ol>
+<li>The SD-JWT VC is accepted and made available for use.</li>
+<li>The wallet sent one HTTP request for the JWT VC Issuer Metadata:<ol>
+<li>the method is <code>GET</code>;</li>
+<li>the request URL is <code>https://example.com/.well-known/jwt-vc-issuer/tenant/1234</code>.</li>
+</ol>
+</li>
+</ol>
+<!-- END INCLUDE -->
+<h4 id="ws_ap_ia_metadataexchange_004">WS_AP_IA_MetadataExchange_004<a class="headerlink" href="#ws_ap_ia_metadataexchange_004" title="Link to this section">&para;</a></h4>
+<h5 id="objective_11">Objective<a class="headerlink" href="#objective_11" title="Link to this section">&para;</a></h5>
+<p>When processing an SD-JWT VC and retrieving its Type Metadata, verify that the wallet retrieves the Type Metadata again for a second SD-JWT VC of the same type when the first response carried <code>Cache-Control: no-store</code>.</p>
+<h5 id="references_11">References<a class="headerlink" href="#references_11" title="Link to this section">&para;</a></h5>
+<ul>
+<li>[CIR 2024/2979 amended] Article 8, Annex II</li>
+<li>[ETSI TS 119 472-1] clause 5.2.1.2 EAA-5.2.1.2-01, EAA-5.2.1.2-02, EAA-5.2.1.2-03</li>
+<li>[SD-JWT VC] section 6.3.4</li>
+</ul>
+<h5 id="profile-applicability_11">Profile applicability<a class="headerlink" href="#profile-applicability_11" title="Link to this section">&para;</a></h5>
+<p>Wallet supports retrieval of SD-JWT VC Type Metadata from a local cache.
+Wallet retrieves SD-JWT VC Type Metadata from the URL in the vct claim.
+Wallet applies the Cache-Control header to cached SD-JWT VC Type Metadata regardless of integrity protection.</p>
+<h5 id="eudi-wallet-relevancy_11">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_11" title="Link to this section">&para;</a></h5>
+<p>EUDI_generic | EUDI_optional</p>
+<h5 id="technology_11">Technology<a class="headerlink" href="#technology_11" title="Link to this section">&para;</a></h5>
+<p>Credential in SD-JWT VC format</p>
+<h5 id="preconditions_11">Preconditions<a class="headerlink" href="#preconditions_11" title="Link to this section">&para;</a></h5>
+<ol class="precond-alpha">
+<li>Wallet is set to <code>default_configuration_1</code>.</li>
+</ol>
+<h5 id="test-scenario_11">Test Scenario<a class="headerlink" href="#test-scenario_11" title="Link to this section">&para;</a></h5>
+<ol>
+<li>Issuer A issues <code>default_credential_E</code> to the wallet; the Type Metadata endpoint serves <code>default_type_metadata_A</code> with the HTTP header <code>Cache-Control: no-store</code>.</li>
+<li>Issuer A issues a second such Credential to the wallet; the endpoint responds in the same way.</li>
+<li>Verify the wallet's Type Metadata requests.</li>
+</ol>
+<h5 id="expected-results_11">Expected results<a class="headerlink" href="#expected-results_11" title="Link to this section">&para;</a></h5>
+<ol>
+<li>The first SD-JWT VC is accepted and made available for use.</li>
+<li>The second SD-JWT VC is accepted and made available for use.</li>
+<li>The wallet sent an HTTP <code>GET</code> request to the <code>vct</code> URL for each of the two SD-JWT VCs.</li>
+</ol>
+<!-- END INCLUDE -->
+<h4 id="ws_ap_ia_metadataexchange_005">WS_AP_IA_MetadataExchange_005<a class="headerlink" href="#ws_ap_ia_metadataexchange_005" title="Link to this section">&para;</a></h4>
+<h5 id="objective_12">Objective<a class="headerlink" href="#objective_12" title="Link to this section">&para;</a></h5>
+<p>When processing an SD-JWT VC and retrieving its Type Metadata, verify that the wallet retrieves the Type Metadata again for a second SD-JWT VC of the same type after the <code>Cache-Control: max-age</code> duration has expired.</p>
+<h5 id="references_12">References<a class="headerlink" href="#references_12" title="Link to this section">&para;</a></h5>
+<ul>
+<li>[CIR 2024/2979 amended] Article 8, Annex II</li>
+<li>[ETSI TS 119 472-1] clause 5.2.1.2 EAA-5.2.1.2-01, EAA-5.2.1.2-02, EAA-5.2.1.2-03</li>
+<li>[SD-JWT VC] section 6.3.4</li>
+</ul>
+<h5 id="profile-applicability_12">Profile applicability<a class="headerlink" href="#profile-applicability_12" title="Link to this section">&para;</a></h5>
+<p>Wallet supports retrieval of SD-JWT VC Type Metadata from a local cache.
+Wallet retrieves SD-JWT VC Type Metadata from the URL in the vct claim.
+Wallet applies the Cache-Control header to cached SD-JWT VC Type Metadata regardless of integrity protection.</p>
+<h5 id="eudi-wallet-relevancy_12">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_12" title="Link to this section">&para;</a></h5>
+<p>EUDI_generic | EUDI_optional</p>
+<h5 id="technology_12">Technology<a class="headerlink" href="#technology_12" title="Link to this section">&para;</a></h5>
+<p>Credential in SD-JWT VC format</p>
+<h5 id="preconditions_12">Preconditions<a class="headerlink" href="#preconditions_12" title="Link to this section">&para;</a></h5>
+<ol class="precond-alpha">
+<li>Wallet is set to <code>default_configuration_1</code>.</li>
+</ol>
+<h5 id="test-scenario_12">Test Scenario<a class="headerlink" href="#test-scenario_12" title="Link to this section">&para;</a></h5>
+<ol>
+<li>Issuer A issues <code>default_credential_E</code> to the wallet; the Type Metadata endpoint serves <code>default_type_metadata_A</code> with the HTTP header <code>Cache-Control: max-age=60</code>.</li>
+<li>After 60 seconds have elapsed, Issuer A issues a second such Credential to the wallet; the endpoint responds in the same way.</li>
+<li>Verify the wallet's Type Metadata requests.</li>
+</ol>
+<h5 id="expected-results_12">Expected results<a class="headerlink" href="#expected-results_12" title="Link to this section">&para;</a></h5>
+<ol>
+<li>The first SD-JWT VC is accepted and made available for use.</li>
+<li>The second SD-JWT VC is accepted and made available for use.</li>
+<li>The wallet sent an HTTP <code>GET</code> request to the <code>vct</code> URL for each of the two SD-JWT VCs.</li>
+</ol>
+<!-- END INCLUDE -->
+<h4 id="ws_ap_ia_metadataexchange_006">WS_AP_IA_MetadataExchange_006<a class="headerlink" href="#ws_ap_ia_metadataexchange_006" title="Link to this section">&para;</a></h4>
+<h5 id="objective_13">Objective<a class="headerlink" href="#objective_13" title="Link to this section">&para;</a></h5>
+<p>When processing an SD-JWT VC and retrieving its Type Metadata, verify that the wallet accepts a second SD-JWT VC of the same type from its cached Type Metadata while the <code>Cache-Control: max-age</code> duration has not expired.</p>
+<h5 id="references_13">References<a class="headerlink" href="#references_13" title="Link to this section">&para;</a></h5>
+<ul>
+<li>[CIR 2024/2979 amended] Article 8, Annex II</li>
+<li>[ETSI TS 119 472-1] clause 5.2.1.2 EAA-5.2.1.2-01, EAA-5.2.1.2-02, EAA-5.2.1.2-03</li>
+<li>[SD-JWT VC] section 6.3.4</li>
+</ul>
+<h5 id="profile-applicability_13">Profile applicability<a class="headerlink" href="#profile-applicability_13" title="Link to this section">&para;</a></h5>
+<p>Wallet supports retrieval of SD-JWT VC Type Metadata from a local cache.
+Wallet retrieves SD-JWT VC Type Metadata from the URL in the vct claim.
+Wallet applies the Cache-Control header to cached SD-JWT VC Type Metadata regardless of integrity protection.</p>
+<h5 id="eudi-wallet-relevancy_13">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_13" title="Link to this section">&para;</a></h5>
+<p>EUDI_generic | EUDI_optional</p>
+<h5 id="technology_13">Technology<a class="headerlink" href="#technology_13" title="Link to this section">&para;</a></h5>
+<p>Credential in SD-JWT VC format</p>
+<h5 id="preconditions_13">Preconditions<a class="headerlink" href="#preconditions_13" title="Link to this section">&para;</a></h5>
+<ol class="precond-alpha">
+<li>Wallet is set to <code>default_configuration_1</code>.</li>
+</ol>
+<h5 id="test-scenario_13">Test Scenario<a class="headerlink" href="#test-scenario_13" title="Link to this section">&para;</a></h5>
+<ol>
+<li>Issuer A issues <code>default_credential_E</code> to the wallet; the Type Metadata endpoint serves <code>default_type_metadata_A</code> with the HTTP header <code>Cache-Control: max-age=120</code>.</li>
+<li>Before 120 seconds have elapsed, while the Type Metadata endpoint is unavailable, Issuer A issues a second such Credential to the wallet.</li>
+<li>Verify the wallet's Type Metadata requests.</li>
+</ol>
+<h5 id="expected-results_13">Expected results<a class="headerlink" href="#expected-results_13" title="Link to this section">&para;</a></h5>
+<ol>
+<li>The first SD-JWT VC is accepted and made available for use.</li>
+<li>The second SD-JWT VC is accepted and made available for use.</li>
+<li>The wallet sent an HTTP <code>GET</code> request to the <code>vct</code> URL for the first SD-JWT VC.</li>
+</ol>
+<!-- END INCLUDE -->
+<h4 id="ws_ap_ia_metadataexchange_007">WS_AP_IA_MetadataExchange_007<a class="headerlink" href="#ws_ap_ia_metadataexchange_007" title="Link to this section">&para;</a></h4>
+<h5 id="objective_14">Objective<a class="headerlink" href="#objective_14" title="Link to this section">&para;</a></h5>
+<p>When processing an SD-JWT VC whose Type Metadata extends another type, verify that the wallet retrieves the Type Metadata of the extended type referenced by the <code>extends</code> property before accepting the SD-JWT VC.</p>
+<h5 id="references_14">References<a class="headerlink" href="#references_14" title="Link to this section">&para;</a></h5>
+<ul>
+<li>[CIR 2024/2979 amended] Article 8, Annex II</li>
+<li>[ETSI TS 119 472-1] clause 5.2.1.2 EAA-5.2.1.2-01, EAA-5.2.1.2-02</li>
+<li>[SD-JWT VC] section 6.3.1</li>
+<li>[SD-JWT VC] section 6.4</li>
+</ul>
+<h5 id="profile-applicability_14">Profile applicability<a class="headerlink" href="#profile-applicability_14" title="Link to this section">&para;</a></h5>
+<p>Wallet retrieves SD-JWT VC Type Metadata from the URL in the vct claim.</p>
+<h5 id="eudi-wallet-relevancy_14">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_14" title="Link to this section">&para;</a></h5>
+<p>EUDI_generic | EUDI_optional</p>
+<h5 id="technology_14">Technology<a class="headerlink" href="#technology_14" title="Link to this section">&para;</a></h5>
+<p>Credential in SD-JWT VC format</p>
+<h5 id="preconditions_14">Preconditions<a class="headerlink" href="#preconditions_14" title="Link to this section">&para;</a></h5>
+<ol class="precond-alpha">
+<li>Wallet is set to <code>default_configuration_1</code>.</li>
+</ol>
+<h5 id="test-scenario_14">Test Scenario<a class="headerlink" href="#test-scenario_14" title="Link to this section">&para;</a></h5>
+<ol>
+<li>Issuer A issues to the wallet a <code>default_credential_E</code> whose <code>vct</code> is the URL of <code>default_type_metadata_B</code> and whose <code>vct#integrity</code> matches that document.</li>
+<li>Verify the wallet's Type Metadata requests.</li>
+</ol>
+<h5 id="expected-results_14">Expected results<a class="headerlink" href="#expected-results_14" title="Link to this section">&para;</a></h5>
+<ol>
+<li>The SD-JWT VC is accepted and made available for use.</li>
+<li>Before accepting the SD-JWT VC, the wallet sent two HTTP <code>GET</code> requests, in this order:<ol>
+<li>to the <code>vct</code> URL, receiving <code>default_type_metadata_B</code>;</li>
+<li>to the URL in the <code>extends</code> property of <code>default_type_metadata_B</code>, receiving <code>default_type_metadata_A</code>.</li>
+</ol>
+</li>
+</ol>
+<!-- END INCLUDE -->
+<h4 id="ws_ap_ia_metadataexchange_008">WS_AP_IA_MetadataExchange_008<a class="headerlink" href="#ws_ap_ia_metadataexchange_008" title="Link to this section">&para;</a></h4>
+<h5 id="objective_15">Objective<a class="headerlink" href="#objective_15" title="Link to this section">&para;</a></h5>
+<p>When processing an SD-JWT VC whose Type Metadata extends a type that itself extends a third type, verify that the wallet retrieves the Type Metadata of both extended types referenced through the <code>extends</code> properties before accepting the SD-JWT VC.</p>
+<h5 id="references_15">References<a class="headerlink" href="#references_15" title="Link to this section">&para;</a></h5>
+<ul>
+<li>[CIR 2024/2979 amended] Article 8, Annex II</li>
+<li>[ETSI TS 119 472-1] clause 5.2.1.2 EAA-5.2.1.2-01, EAA-5.2.1.2-02</li>
+<li>[SD-JWT VC] section 6.3.1</li>
+<li>[SD-JWT VC] section 6.4</li>
+</ul>
+<h5 id="profile-applicability_15">Profile applicability<a class="headerlink" href="#profile-applicability_15" title="Link to this section">&para;</a></h5>
+<p>Wallet retrieves SD-JWT VC Type Metadata from the URL in the vct claim.</p>
+<h5 id="eudi-wallet-relevancy_15">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_15" title="Link to this section">&para;</a></h5>
+<p>EUDI_generic | EUDI_optional</p>
+<h5 id="technology_15">Technology<a class="headerlink" href="#technology_15" title="Link to this section">&para;</a></h5>
+<p>Credential in SD-JWT VC format</p>
+<h5 id="preconditions_15">Preconditions<a class="headerlink" href="#preconditions_15" title="Link to this section">&para;</a></h5>
+<ol class="precond-alpha">
+<li>Wallet is set to <code>default_configuration_1</code>.</li>
+</ol>
+<h5 id="test-scenario_15">Test Scenario<a class="headerlink" href="#test-scenario_15" title="Link to this section">&para;</a></h5>
+<ol>
+<li>Issuer A issues to the wallet a <code>default_credential_E</code> whose <code>vct</code> is the URL of <code>default_type_metadata_C</code> and whose <code>vct#integrity</code> matches that document.</li>
+<li>Verify the wallet's Type Metadata requests.</li>
+</ol>
+<h5 id="expected-results_15">Expected results<a class="headerlink" href="#expected-results_15" title="Link to this section">&para;</a></h5>
+<ol>
+<li>The SD-JWT VC is accepted and made available for use.</li>
+<li>Before accepting the SD-JWT VC, the wallet sent three HTTP <code>GET</code> requests, in this order:<ol>
+<li>to the <code>vct</code> URL, receiving <code>default_type_metadata_C</code>;</li>
+<li>to the URL in the <code>extends</code> property of <code>default_type_metadata_C</code>, receiving <code>default_type_metadata_B</code>;</li>
+<li>to the URL in the <code>extends</code> property of <code>default_type_metadata_B</code>, receiving <code>default_type_metadata_A</code>.</li>
+</ol>
+</li>
+</ol>
+<!-- END INCLUDE -->
+<h4 id="ws_ap_ia_metadataexchange_010">WS_AP_IA_MetadataExchange_010<a class="headerlink" href="#ws_ap_ia_metadataexchange_010" title="Link to this section">&para;</a></h4>
+<h5 id="objective_16">Objective<a class="headerlink" href="#objective_16" title="Link to this section">&para;</a></h5>
+<p>When Type Metadata has been pre-populated in the wallet's local cache before credential use, verify that the wallet accepts a subsequently issued SD-JWT VC referencing that type without requiring a live metadata fetch.</p>
+<h5 id="references_16">References<a class="headerlink" href="#references_16" title="Link to this section">&para;</a></h5>
+<ul>
+<li>[CIR 2024/2979 amended] Article 8, Annex II</li>
+<li>[ETSI TS 119 472-1] clause 5.2.1.2 EAA-5.2.1.2-01, EAA-5.2.1.2-02, EAA-5.2.1.2-03</li>
+<li>[SD-JWT VC] section 6.3.4</li>
+<li>[SD-JWT VC] section 10.4</li>
+</ul>
+<h5 id="profile-applicability_16">Profile applicability<a class="headerlink" href="#profile-applicability_16" title="Link to this section">&para;</a></h5>
+<p>Wallet supports retrieval of SD-JWT VC Type Metadata from a local cache.</p>
+<h5 id="eudi-wallet-relevancy_16">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_16" title="Link to this section">&para;</a></h5>
+<p>EUDI_generic | EUDI_optional</p>
+<h5 id="technology_16">Technology<a class="headerlink" href="#technology_16" title="Link to this section">&para;</a></h5>
+<p>Credential in SD-JWT VC format</p>
+<h5 id="preconditions_16">Preconditions<a class="headerlink" href="#preconditions_16" title="Link to this section">&para;</a></h5>
+<ol class="precond-alpha">
+<li>Wallet is set to <code>default_configuration_1</code>.</li>
+<li>Issuer A has issued <code>default_credential_E</code> to the wallet, and the wallet has retrieved <code>default_type_metadata_A</code> from its <code>vct</code> URL; the Credential's <code>vct#integrity</code> lets the wallet keep the document indefinitely.</li>
+<li>The <code>vct</code> URL is unreachable for the duration of the test.</li>
+</ol>
+<h5 id="test-scenario_16">Test Scenario<a class="headerlink" href="#test-scenario_16" title="Link to this section">&para;</a></h5>
+<ol>
+<li>Issuer A issues a second <code>default_credential_E</code> to the wallet.</li>
+</ol>
+<h5 id="expected-results_16">Expected results<a class="headerlink" href="#expected-results_16" title="Link to this section">&para;</a></h5>
+<ol>
+<li>The SD-JWT VC is accepted and made available for use.</li>
+</ol>
+<!-- END INCLUDE -->
+<h4 id="ws_ap_ia_metadataexchange_037">WS_AP_IA_MetadataExchange_037<a class="headerlink" href="#ws_ap_ia_metadataexchange_037" title="Link to this section">&para;</a></h4>
+<h5 id="objective_17">Objective<a class="headerlink" href="#objective_17" title="Link to this section">&para;</a></h5>
+<p>When the wallet supports an alternative method for retrieving SD-JWT VC Type Metadata and the <code>vct</code> URL of an SD-JWT VC is unreachable, verify that the wallet accepts the SD-JWT VC.</p>
+<h5 id="references_17">References<a class="headerlink" href="#references_17" title="Link to this section">&para;</a></h5>
+<ul>
+<li>[CIR 2024/2979 amended] Article 8, Annex II</li>
+<li>[ETSI TS 119 472-1] clause 5.2.1.2 EAA-5.2.1.2-01, EAA-5.2.1.2-02</li>
+<li>[SD-JWT VC] section 6.3.2</li>
+<li>[SD-JWT VC] section 6.3.3</li>
+<li>[SD-JWT VC] section 12.1</li>
+</ul>
+<h5 id="profile-applicability_17">Profile applicability<a class="headerlink" href="#profile-applicability_17" title="Link to this section">&para;</a></h5>
+<p>Wallet supports an alternative method for retrieving SD-JWT VC Type Metadata.</p>
+<h5 id="eudi-wallet-relevancy_17">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_17" title="Link to this section">&para;</a></h5>
+<p>EUDI_generic | EUDI_optional</p>
+<h5 id="technology_17">Technology<a class="headerlink" href="#technology_17" title="Link to this section">&para;</a></h5>
+<p>Credential in SD-JWT VC format</p>
+<h5 id="preconditions_17">Preconditions<a class="headerlink" href="#preconditions_17" title="Link to this section">&para;</a></h5>
+<ol class="precond-alpha">
+<li>Wallet is set to <code>default_configuration_1</code>.</li>
+<li><code>default_type_metadata_A</code> is available to the wallet through its alternative retrieval method.</li>
+<li>The <code>vct</code> URL of <code>default_credential_E</code> is unreachable for the duration of the test.</li>
+</ol>
+<h5 id="test-scenario_17">Test Scenario<a class="headerlink" href="#test-scenario_17" title="Link to this section">&para;</a></h5>
+<ol>
+<li>Issuer A issues <code>default_credential_E</code> to the wallet.</li>
+</ol>
+<h5 id="expected-results_17">Expected results<a class="headerlink" href="#expected-results_17" title="Link to this section">&para;</a></h5>
+<ol>
+<li>The SD-JWT VC is accepted and made available for use.</li>
+</ol>
+<h5 id="comments">Comments<a class="headerlink" href="#comments" title="Link to this section">&para;</a></h5>
+<p>An alternative method is any method of retrieving Type Metadata other than the <code>vct</code> URL, for example a registry ([SD-JWT VC] section 6.3.2) or a retrieval method defined for the type (section 6.3.3). Section 12.1 recommends methods that do not leak information about the usage of a credential to third parties.</p>
+<!-- END INCLUDE -->
+<h4 id="ws_ap_ia_metadataexchange_038">WS_AP_IA_MetadataExchange_038<a class="headerlink" href="#ws_ap_ia_metadataexchange_038" title="Link to this section">&para;</a></h4>
+<h5 id="objective_18">Objective<a class="headerlink" href="#objective_18" title="Link to this section">&para;</a></h5>
+<p>When the wallet neither retrieves SD-JWT VC Type Metadata from the <code>vct</code> URL nor supports an alternative retrieval method, verify that the wallet accepts the SD-JWT VC without retrieving its Type Metadata from the <code>vct</code> URL.</p>
+<h5 id="references_18">References<a class="headerlink" href="#references_18" title="Link to this section">&para;</a></h5>
+<ul>
+<li>[CIR 2024/2979 amended] Article 8, Annex II</li>
+<li>[ETSI TS 119 472-1] clause 5.2.1.2 EAA-5.2.1.2-01, EAA-5.2.1.2-02</li>
+<li>[SD-JWT VC] section 6.3.1</li>
+<li>[SD-JWT VC] section 12.1</li>
+</ul>
+<h5 id="profile-applicability_18">Profile applicability<a class="headerlink" href="#profile-applicability_18" title="Link to this section">&para;</a></h5>
+<p>Wallet does not retrieve SD-JWT VC Type Metadata from the URL in the vct claim.
+Wallet does not support an alternative method for retrieving SD-JWT VC Type Metadata.</p>
+<h5 id="eudi-wallet-relevancy_18">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_18" title="Link to this section">&para;</a></h5>
+<p>EUDI_generic | EUDI_optional</p>
+<h5 id="technology_18">Technology<a class="headerlink" href="#technology_18" title="Link to this section">&para;</a></h5>
+<p>Credential in SD-JWT VC format</p>
+<h5 id="preconditions_18">Preconditions<a class="headerlink" href="#preconditions_18" title="Link to this section">&para;</a></h5>
+<ol class="precond-alpha">
+<li>Wallet is set to <code>default_configuration_1</code>.</li>
+<li>The <code>vct</code> URL of <code>default_credential_E</code> is reachable and serves <code>default_type_metadata_A</code> for the duration of the test.</li>
+</ol>
+<h5 id="test-scenario_18">Test Scenario<a class="headerlink" href="#test-scenario_18" title="Link to this section">&para;</a></h5>
+<ol>
+<li>Issuer A issues <code>default_credential_E</code> to the wallet.</li>
+<li>Verify the wallet's Type Metadata requests.</li>
+</ol>
+<h5 id="expected-results_18">Expected results<a class="headerlink" href="#expected-results_18" title="Link to this section">&para;</a></h5>
+<ol>
+<li>The SD-JWT VC is accepted and made available for use.</li>
+<li>The wallet sent no HTTP request to the <code>vct</code> URL.</li>
+</ol>
+<h5 id="comments_1">Comments<a class="headerlink" href="#comments_1" title="Link to this section">&para;</a></h5>
+<ul>
+<li>Retrieving Type Metadata is a MAY in [SD-JWT VC] section 6.3.1, and no EUDI layer requires the Wallet to retrieve it, so a Wallet that does not retrieve Type Metadata is expected to accept the SD-JWT VC.</li>
+</ul>
+<!-- END INCLUDE -->
+
+<!-- END INCLUDE -->
 <h2 id="supportive-interaction">Supportive Interaction<a class="headerlink" href="#supportive-interaction" title="Link to this section">&para;</a></h2>
 <!-- BEGIN INCLUDE ./[A-Z]*.md -->
 <h4 id="ws_ap_ia_supportive_010a">WS_AP_IA_Supportive_010a<a class="headerlink" href="#ws_ap_ia_supportive_010a" title="Link to this section">&para;</a></h4>
-<h5 id="objective_9">Objective<a class="headerlink" href="#objective_9" title="Link to this section">&para;</a></h5>
+<h5 id="objective_19">Objective<a class="headerlink" href="#objective_19" title="Link to this section">&para;</a></h5>
 <p>Verify that the Wallet sends a Pushed Authorization Request (PAR) to the Authorization Server's Pushed Authentication Request Endpoint as a HTTP POST request to the endpoint.</p>
-<h5 id="references_9">References<a class="headerlink" href="#references_9" title="Link to this section">&para;</a></h5>
+<h5 id="references_19">References<a class="headerlink" href="#references_19" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[ETSI TS 119 472-3] section 4.1</li>
 <li>[HAIP] section 4</li>
 <li>[OpenID4VCI] section 5.1.4</li>
 <li>[RFC9126] section 2</li>
 </ul>
-<h5 id="profile-applicability_9">Profile applicability<a class="headerlink" href="#profile-applicability_9" title="Link to this section">&para;</a></h5>
+<h5 id="profile-applicability_19">Profile applicability<a class="headerlink" href="#profile-applicability_19" title="Link to this section">&para;</a></h5>
 <p>None</p>
-<h5 id="eudi-wallet-relevancy_9">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_9" title="Link to this section">&para;</a></h5>
+<h5 id="eudi-wallet-relevancy_19">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_19" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="technology_9">Technology<a class="headerlink" href="#technology_9" title="Link to this section">&para;</a></h5>
+<h5 id="technology_19">Technology<a class="headerlink" href="#technology_19" title="Link to this section">&para;</a></h5>
 <p>Issuance via Redirects.
 Credential Issuance using the Authorization Code Flow.</p>
-<h5 id="preconditions_9">Preconditions<a class="headerlink" href="#preconditions_9" title="Link to this section">&para;</a></h5>
+<h5 id="preconditions_19">Preconditions<a class="headerlink" href="#preconditions_19" title="Link to this section">&para;</a></h5>
 <ol class="precond-alpha">
 <li>Wallet is set to 'default_configuration_1'.</li>
 <li>Wallet started engagement with Credential Issuer.</li>
 <li>Wallet successfully obtained the Credential Issuer Metadata.</li>
 <li>Wallet successfully obtained the Authorization Server Metadata, including <code>pushed_authorization_request_endpoint</code>.</li>
 </ol>
-<h5 id="test-scenario_9">Test Scenario<a class="headerlink" href="#test-scenario_9" title="Link to this section">&para;</a></h5>
+<h5 id="test-scenario_19">Test Scenario<a class="headerlink" href="#test-scenario_19" title="Link to this section">&para;</a></h5>
 <ol>
 <li>End-user selects a Credential in the Wallet (based on <code>credential_configuration_ids</code> and Credential Issuer Metadata) to obtain such Credential from the Credential Issuer.</li>
 </ol>
-<h5 id="expected-results_9">Expected results<a class="headerlink" href="#expected-results_9" title="Link to this section">&para;</a></h5>
+<h5 id="expected-results_19">Expected results<a class="headerlink" href="#expected-results_19" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Wallet connects to the Authorization Server's Pushed Authorization Request (PAR) Endpoint using TLS, making a HTTP request:<ol>
 <li>Uses the POST method.</li>
@@ -2010,23 +2357,23 @@ Credential Issuance using the Authorization Code Flow.</p>
 </ol>
 <!-- END INCLUDE -->
 <h4 id="ws_ap_ia_supportive_011a">WS_AP_IA_Supportive_011a<a class="headerlink" href="#ws_ap_ia_supportive_011a" title="Link to this section">&para;</a></h4>
-<h5 id="objective_10">Objective<a class="headerlink" href="#objective_10" title="Link to this section">&para;</a></h5>
+<h5 id="objective_20">Objective<a class="headerlink" href="#objective_20" title="Link to this section">&para;</a></h5>
 <p>Verify that the Wallet can handle an correct response when submitting a Pushed Authorization Request (PAR) to the Authorization Server's Pushed Authentication Request Endpoint.</p>
-<h5 id="references_10">References<a class="headerlink" href="#references_10" title="Link to this section">&para;</a></h5>
+<h5 id="references_20">References<a class="headerlink" href="#references_20" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[ETSI TS 119 472-3] section 4.1</li>
 <li>[HAIP] section 4</li>
 <li>[OpenID4VCI] section 5.1.4</li>
 <li>[RFC9126] section 2</li>
 </ul>
-<h5 id="profile-applicability_10">Profile applicability<a class="headerlink" href="#profile-applicability_10" title="Link to this section">&para;</a></h5>
+<h5 id="profile-applicability_20">Profile applicability<a class="headerlink" href="#profile-applicability_20" title="Link to this section">&para;</a></h5>
 <p>None</p>
-<h5 id="eudi-wallet-relevancy_10">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_10" title="Link to this section">&para;</a></h5>
+<h5 id="eudi-wallet-relevancy_20">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_20" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="technology_10">Technology<a class="headerlink" href="#technology_10" title="Link to this section">&para;</a></h5>
+<h5 id="technology_20">Technology<a class="headerlink" href="#technology_20" title="Link to this section">&para;</a></h5>
 <p>Issuance via Redirects.
 Credential Issuance using the Authorization Code Flow.</p>
-<h5 id="preconditions_10">Preconditions<a class="headerlink" href="#preconditions_10" title="Link to this section">&para;</a></h5>
+<h5 id="preconditions_20">Preconditions<a class="headerlink" href="#preconditions_20" title="Link to this section">&para;</a></h5>
 <ol class="precond-alpha">
 <li>Wallet is set to 'default_configuration_1'.</li>
 <li>Wallet started engagement with Credential Issuer.</li>
@@ -2034,7 +2381,7 @@ Credential Issuance using the Authorization Code Flow.</p>
 <li>Wallet successfully obtained the Authorization Server Metadata, including <code>pushed_authorization_request_endpoint</code>.</li>
 <li>The Wallet sent a valid Pushed Authorization Request to the Authorization Server's Pushed Authorization Request Endpoint.</li>
 </ol>
-<h5 id="test-scenario_10">Test Scenario<a class="headerlink" href="#test-scenario_10" title="Link to this section">&para;</a></h5>
+<h5 id="test-scenario_20">Test Scenario<a class="headerlink" href="#test-scenario_20" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Issuer responds with a valid PAR Response. That is a HTTP Response:<ol>
 <li>with a HTTP Header <code>Content-Type</code> with value <code>application/json</code>, containing:</li>
@@ -2046,29 +2393,29 @@ Credential Issuance using the Authorization Code Flow.</p>
 </ol>
 </li>
 </ol>
-<h5 id="expected-results_10">Expected results<a class="headerlink" href="#expected-results_10" title="Link to this section">&para;</a></h5>
+<h5 id="expected-results_20">Expected results<a class="headerlink" href="#expected-results_20" title="Link to this section">&para;</a></h5>
 <ol>
 <li>The subsequent Authorization Request sent through the User-agent contains the exact <code>request_uri</code> value returned by the Authorization Server.</li>
 </ol>
 <!-- END INCLUDE -->
 <h4 id="ws_ap_ia_supportive_011b_uf">WS_AP_IA_Supportive_011b_UF<a class="headerlink" href="#ws_ap_ia_supportive_011b_uf" title="Link to this section">&para;</a></h4>
-<h5 id="objective_11">Objective<a class="headerlink" href="#objective_11" title="Link to this section">&para;</a></h5>
+<h5 id="objective_21">Objective<a class="headerlink" href="#objective_21" title="Link to this section">&para;</a></h5>
 <p>Verify that the Wallet can handle an incorrect response when submitting a Pushed Authorization Request (PAR) to the Authorization Server's Pushed Authentication Request Endpoint, when the response is omitting a <code>request_uri</code>.</p>
-<h5 id="references_11">References<a class="headerlink" href="#references_11" title="Link to this section">&para;</a></h5>
+<h5 id="references_21">References<a class="headerlink" href="#references_21" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[ETSI TS 119 472-3] section 4.1</li>
 <li>[HAIP] section 4</li>
 <li>[OpenID4VCI] section 5.1.4</li>
 <li>[RFC9126] section 2</li>
 </ul>
-<h5 id="profile-applicability_11">Profile applicability<a class="headerlink" href="#profile-applicability_11" title="Link to this section">&para;</a></h5>
+<h5 id="profile-applicability_21">Profile applicability<a class="headerlink" href="#profile-applicability_21" title="Link to this section">&para;</a></h5>
 <p>None</p>
-<h5 id="eudi-wallet-relevancy_11">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_11" title="Link to this section">&para;</a></h5>
+<h5 id="eudi-wallet-relevancy_21">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_21" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="technology_11">Technology<a class="headerlink" href="#technology_11" title="Link to this section">&para;</a></h5>
+<h5 id="technology_21">Technology<a class="headerlink" href="#technology_21" title="Link to this section">&para;</a></h5>
 <p>Issuance via Redirects.
 Credential Issuance using the Authorization Code Flow.</p>
-<h5 id="preconditions_11">Preconditions<a class="headerlink" href="#preconditions_11" title="Link to this section">&para;</a></h5>
+<h5 id="preconditions_21">Preconditions<a class="headerlink" href="#preconditions_21" title="Link to this section">&para;</a></h5>
 <ol class="precond-alpha">
 <li>Wallet is set to 'default_configuration_1'.</li>
 <li>Wallet started engagement with Credential Issuer.</li>
@@ -2076,7 +2423,7 @@ Credential Issuance using the Authorization Code Flow.</p>
 <li>Wallet successfully obtained the Authorization Server Metadata, including <code>pushed_authorization_request_endpoint</code>.</li>
 <li>The Wallet sent a valid Pushed Authorization Request to the Authorization Server's Pushed Authorization Request Endpoint.</li>
 </ol>
-<h5 id="test-scenario_11">Test Scenario<a class="headerlink" href="#test-scenario_11" title="Link to this section">&para;</a></h5>
+<h5 id="test-scenario_21">Test Scenario<a class="headerlink" href="#test-scenario_21" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Issuer responds with a invalid PAR Response, with the <code>response_uri</code> omitted. That is a HTTP Response:<ol>
 <li>with a HTTP Header <code>Content-Type</code> with value <code>application/json</code>, containing:</li>
@@ -2088,7 +2435,7 @@ Credential Issuance using the Authorization Code Flow.</p>
 </ol>
 </li>
 </ol>
-<h5 id="expected-results_11">Expected results<a class="headerlink" href="#expected-results_11" title="Link to this section">&para;</a></h5>
+<h5 id="expected-results_21">Expected results<a class="headerlink" href="#expected-results_21" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Wallet does not send an Authorization Request to the Authorizations Server's Authorization Endpoint, and informs the user ot cannot continue, if applicable.</li>
 </ol>
@@ -2096,7 +2443,7 @@ Credential Issuance using the Authorization Code Flow.</p>
 
 <!-- END INCLUDE -->
 
-<!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./*/index.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./*/index.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md -->
+<!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./*/index.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./*/index.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./*/index.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md -->
 
 
 

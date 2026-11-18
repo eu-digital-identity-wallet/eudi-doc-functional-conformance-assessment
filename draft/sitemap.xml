@@ -157,6 +157,50 @@
          <lastmod>2026-11-18</lastmod>
     </url>
     <url>
+         <loc>https://conformance.eudi.dev/draft/fcaf/suts/wallet_solution/attestation_provider/Interaction/MetadataExchange/</loc>
+         <lastmod>2026-11-18</lastmod>
+    </url>
+    <url>
+         <loc>https://conformance.eudi.dev/draft/fcaf/suts/wallet_solution/attestation_provider/Interaction/MetadataExchange/WS_AP_IA_MetadataExchange_001/</loc>
+         <lastmod>2026-11-18</lastmod>
+    </url>
+    <url>
+         <loc>https://conformance.eudi.dev/draft/fcaf/suts/wallet_solution/attestation_provider/Interaction/MetadataExchange/WS_AP_IA_MetadataExchange_003/</loc>
+         <lastmod>2026-11-18</lastmod>
+    </url>
+    <url>
+         <loc>https://conformance.eudi.dev/draft/fcaf/suts/wallet_solution/attestation_provider/Interaction/MetadataExchange/WS_AP_IA_MetadataExchange_004/</loc>
+         <lastmod>2026-11-18</lastmod>
+    </url>
+    <url>
+         <loc>https://conformance.eudi.dev/draft/fcaf/suts/wallet_solution/attestation_provider/Interaction/MetadataExchange/WS_AP_IA_MetadataExchange_005/</loc>
+         <lastmod>2026-11-18</lastmod>
+    </url>
+    <url>
+         <loc>https://conformance.eudi.dev/draft/fcaf/suts/wallet_solution/attestation_provider/Interaction/MetadataExchange/WS_AP_IA_MetadataExchange_006/</loc>
+         <lastmod>2026-11-18</lastmod>
+    </url>
+    <url>
+         <loc>https://conformance.eudi.dev/draft/fcaf/suts/wallet_solution/attestation_provider/Interaction/MetadataExchange/WS_AP_IA_MetadataExchange_007/</loc>
+         <lastmod>2026-11-18</lastmod>
+    </url>
+    <url>
+         <loc>https://conformance.eudi.dev/draft/fcaf/suts/wallet_solution/attestation_provider/Interaction/MetadataExchange/WS_AP_IA_MetadataExchange_008/</loc>
+         <lastmod>2026-11-18</lastmod>
+    </url>
+    <url>
+         <loc>https://conformance.eudi.dev/draft/fcaf/suts/wallet_solution/attestation_provider/Interaction/MetadataExchange/WS_AP_IA_MetadataExchange_010/</loc>
+         <lastmod>2026-11-18</lastmod>
+    </url>
+    <url>
+         <loc>https://conformance.eudi.dev/draft/fcaf/suts/wallet_solution/attestation_provider/Interaction/MetadataExchange/WS_AP_IA_MetadataExchange_037/</loc>
+         <lastmod>2026-11-18</lastmod>
+    </url>
+    <url>
+         <loc>https://conformance.eudi.dev/draft/fcaf/suts/wallet_solution/attestation_provider/Interaction/MetadataExchange/WS_AP_IA_MetadataExchange_038/</loc>
+         <lastmod>2026-11-18</lastmod>
+    </url>
+    <url>
          <loc>https://conformance.eudi.dev/draft/fcaf/suts/wallet_solution/attestation_provider/Interaction/Supportive/</loc>
          <lastmod>2026-11-18</lastmod>
     </url>
