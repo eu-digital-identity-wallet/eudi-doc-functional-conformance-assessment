@@ -29,6 +29,7 @@ The syntax follows that used for the EUDI Wallet Architecture and Reference Fram
 | [SD-JWT VC] | draft-16 | [SD-JWT-based Verifiable Credentials](https://github.com/eu-digital-identity-wallet/eudi-doc-standards-and-technical-specifications/issues/9) (SD-JWT VC). Available at <https://datatracker.ietf.org/doc/draft-ietf-oauth-sd-jwt-vc/>. |
 | [Token Status List] | draft-20 | [Token Status List](https://datatracker.ietf.org/doc/draft-ietf-oauth-status-list/), IETF OAuth Working Group. |
 | [DCQL] | - | Digital Credentials Query Language (DCQL), defined in [OpenID4VP]. |
+| [RFC2397] | - | [RFC 2397](https://datatracker.ietf.org/doc/html/rfc2397): The "data" URL scheme. |
 | [RFC3339] | - | [RFC 3339](https://datatracker.ietf.org/doc/html/rfc3339): Date and Time on the Internet: Timestamps. |
 | [RFC4648] | - | [RFC 4648](https://datatracker.ietf.org/doc/html/rfc4648): The Base16, Base32, and Base64 Data Encodings. |
 | [RFC5280] | - | [RFC 5280](https://datatracker.ietf.org/doc/html/rfc5280): Internet X.509 Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile. |

@@ -11,6 +11,7 @@ release-candidate and released version tags.
 
 ## [Latest draft]
 
+- Add nine Attestation Provider (WS_AP) test cases for SD-JWT VC credentials: three on the claim classes an issued credential may carry (`WS_AP_UC_Provisioning`) and six on SD-JWT VC Type Metadata retrieved from the `vct` URL (`WS_AP_MS_CredentialMetadata_TypeMetadata`). Adds `default_credential_E`, `default_credential_F` and the default metadata documents to the defaults, and the `[RFC2397]` entry to the reference catalogue.
 - Add the shared JSON, JWS and JWE test cases under `suts/shared`: eleven building blocks that the baseline test cases invoke as a family (`Shared_JSON`, `Shared_JWT_JWS`, `Shared_JWT_JWE`). They are documented in the framework index as an exception to the test case ID convention, linked from both baseline-tests pages, and the `[RFC4648]` and `[RFC8259]` catalogue rows are added.
 - Add the missing `[ETSI TS 119 475]` entry to the reference catalogue, so the trust mechanism test cases that cite it resolve.
 - Normalise the test case sources against the settled conventions: canonical section order, a single trailing newline, no invisible characters, and spaces instead of tabs for list indentation. No wording changes.
