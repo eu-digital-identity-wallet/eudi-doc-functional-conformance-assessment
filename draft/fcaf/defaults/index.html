@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../media/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -904,6 +904,28 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#default_credential_e" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        default_credential_E
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default_credential_f" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        default_credential_F
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -917,6 +939,67 @@
       
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#default-metadata-documents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Default metadata documents
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Default metadata documents">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#default_type_metadata_a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        default_type_metadata_A
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default_type_metadata_b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        default_type_metadata_B
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default_type_metadata_c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        default_type_metadata_C
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default_jwt_vc_issuer_metadata_a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        default_jwt_vc_issuer_metadata_A
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1928,12 +2011,88 @@ These definitions are intentionally logical rather than physical: they describe 
 </tr>
 </tbody>
 </table>
+<h3 id="default_credential_e"><code>default_credential_E</code><a class="headerlink" href="#default_credential_e" title="Link to this section">&para;</a></h3>
+<p>A Credential, specifically an EAA, in SD-JWT VC format only, issued by <code>Issuer A</code>, for test cases of SD-JWT VC Type Metadata. Its <code>vct</code> claim is an HTTPS URL under the tester's control that serves <code>default_type_metadata_A</code>, and it carries a <code>vct#integrity</code> claim matching that document. It has the Attributes of <code>default_credential_A</code>.</p>
+<h3 id="default_credential_f"><code>default_credential_F</code><a class="headerlink" href="#default_credential_f" title="Link to this section">&para;</a></h3>
+<p>The SD-JWT VC variant of <code>default_credential_A</code>, issued by <code>Issuer A</code>, whose protected header carries no <code>x5c</code>, <code>x5u</code> or <code>x5t#S256</code> parameter; the Issuer's public key is published only through <code>default_jwt_vc_issuer_metadata_A</code>. It is not an EUDI-conformant PID or EAA ([HAIP] clause 6.1.1) and serves only the test cases of the JWT VC Issuer Metadata issuer signature mechanism ([SD-JWT VC] sections 3.5 and 5), whose relevancy is <code>EUDI_generic | EUDI_undefined</code>.</p>
 <h2 id="test-trust-establishment">Test trust establishment<a class="headerlink" href="#test-trust-establishment" title="Link to this section">&para;</a></h2>
 <p>Tests are designed to run in a controlled environment. The FCAF assumes that this environment is separate from production and that all aspects of it can be controlled.
 A separate environment is necessary to control which systems in the ecosystem are trusted. Functional testing includes tests with explicitly trusted and untrusted systems, as well as unsuccessful flows, or negative test cases, so control of trust relationships is essential. Production trust infrastructure cannot support this because its policies typically do not allow trust in test systems that intentionally produce incorrect data.
 A controlled environment also prevents external changes from influencing or disrupting testing.</p>
 <p>To establish trust for tests, and explicit non-trust for unsuccessful flows or negative tests, trusted lists, trust lists, and related certificate hierarchies will be described below. As with Credentials, these are described logically or conceptually. Testers and test tools must supply specific instances of trust lists and certificates.
 Specific tests rely on trusted lists or certificates. Those tests assume that the lists or certificates are loaded, are available for the SUT to download, or are otherwise configured. Managing and configuring the SUT's trust anchors is outside the scope of the FCAF.</p>
+<h2 id="default-metadata-documents">Default metadata documents<a class="headerlink" href="#default-metadata-documents" title="Link to this section">&para;</a></h2>
+<p>The documents below are served by the test apparatus with HTTP status <code>200</code> and content type <code>application/json</code>; [SD-JWT VC] section 6.3.1 itself requires only that the response to the GET is a JSON object as defined in its section 6.2. As with Credentials, they are described logically; the tester supplies the URLs and values.</p>
+<h3 id="default_type_metadata_a"><code>default_type_metadata_A</code><a class="headerlink" href="#default_type_metadata_a" title="Link to this section">&para;</a></h3>
+<p>The SD-JWT VC Type Metadata document of <code>default_credential_E</code>, served at the <code>vct</code> URL of that Credential.</p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>vct</code></td>
+<td>identical to the <code>vct</code> claim of <code>default_credential_E</code></td>
+</tr>
+<tr>
+<td><code>display</code></td>
+<td>an array with one object: <code>locale</code> a supported language tag, <code>name</code> a non-empty string</td>
+</tr>
+<tr>
+<td><code>claims</code></td>
+<td>an array with one object per Attribute of <code>default_credential_E</code>: <code>path</code> addressing the Attribute, <code>display</code> with <code>locale</code> and <code>label</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="default_type_metadata_b"><code>default_type_metadata_B</code><a class="headerlink" href="#default_type_metadata_b" title="Link to this section">&para;</a></h3>
+<p>An SD-JWT VC Type Metadata document that extends <code>default_type_metadata_A</code>, served at its own HTTPS URL under the tester's control. A <code>default_credential_E</code> of this type carries that URL in its <code>vct</code> claim and a matching <code>vct#integrity</code> claim.</p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>vct</code></td>
+<td>the URL at which this document is served</td>
+</tr>
+<tr>
+<td><code>extends</code></td>
+<td>the <code>vct</code> of <code>default_type_metadata_A</code></td>
+</tr>
+<tr>
+<td><code>extends#integrity</code></td>
+<td>the integrity metadata of <code>default_type_metadata_A</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="default_type_metadata_c"><code>default_type_metadata_C</code><a class="headerlink" href="#default_type_metadata_c" title="Link to this section">&para;</a></h3>
+<p>As <code>default_type_metadata_B</code>, but extending <code>default_type_metadata_B</code>: its <code>extends</code> is the <code>vct</code> of <code>default_type_metadata_B</code> and its <code>extends#integrity</code> the integrity metadata of that document.</p>
+<h3 id="default_jwt_vc_issuer_metadata_a"><code>default_jwt_vc_issuer_metadata_A</code><a class="headerlink" href="#default_jwt_vc_issuer_metadata_a" title="Link to this section">&para;</a></h3>
+<p>The JWT VC Issuer Metadata configuration of <code>Issuer A</code>, served at the location formed by inserting <code>/.well-known/jwt-vc-issuer</code> between the host component and the path component of the <code>iss</code> claim of Issuer A's SD-JWT VCs. <code>default_credential_F</code> relies on it.</p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>issuer</code></td>
+<td>identical to the <code>iss</code> claim of the SD-JWT VC</td>
+</tr>
+<tr>
+<td><code>jwks</code></td>
+<td>a JWK Set containing the public key that verifies Issuer A's signature, with a <code>kid</code></td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -2033,10 +2192,10 @@ Specific tests rely on trusted lists or certificates. Those tests assume that th
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.indexes", "navigation.top", "navigation.footer", "navigation.tracking", "toc.integrate", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.action.edit", "content.action.view", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.indexes", "navigation.top", "navigation.footer", "navigation.tracking", "toc.integrate", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.action.edit", "content.action.view", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
         <script src="../../media/js/mermaid.min.js"></script>
       

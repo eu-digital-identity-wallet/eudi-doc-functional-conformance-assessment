@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../../../../../media/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -27,10 +27,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -1651,29 +1651,235 @@
 
 <h1 id="message-structure">Message Structure<a class="headerlink" href="#message-structure" title="Link to this section">&para;</a></h1>
 <!-- BEGIN INCLUDE ./*/index.md -->
+<h2 id="credential-metadata">Credential Metadata<a class="headerlink" href="#credential-metadata" title="Link to this section">&para;</a></h2>
+<!-- BEGIN INCLUDE ./[A-Z]*.md -->
+<h4 id="ws_ap_ms_credentialmetadata_typemetadata_001">WS_AP_MS_CredentialMetadata_TypeMetadata_001<a class="headerlink" href="#ws_ap_ms_credentialmetadata_typemetadata_001" title="Link to this section">&para;</a></h4>
+<h5 id="objective">Objective<a class="headerlink" href="#objective" title="Link to this section">&para;</a></h5>
+<p>When an SD-JWT VC is provisioned and its Type Metadata contains a <code>display</code> property and a <code>claims</code> property that are valid arrays of objects, verify that the SD-JWT VC is accepted.</p>
+<h5 id="references">References<a class="headerlink" href="#references" title="Link to this section">&para;</a></h5>
+<ul>
+<li>[CIR 2024/2979 amended] Article 8, Annex II</li>
+<li>[ETSI TS 119 472-1] clause 5.2.1.2</li>
+<li>[SD-JWT VC] Section 6.2</li>
+</ul>
+<h5 id="profile-applicability">Profile applicability<a class="headerlink" href="#profile-applicability" title="Link to this section">&para;</a></h5>
+<p>Wallet retrieves SD-JWT VC Type Metadata from the URL in the vct claim.</p>
+<h5 id="eudi-wallet-relevancy">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy" title="Link to this section">&para;</a></h5>
+<p>EUDI_generic | EUDI_optional</p>
+<h5 id="technology">Technology<a class="headerlink" href="#technology" title="Link to this section">&para;</a></h5>
+<p>Credential in SD-JWT VC format</p>
+<h5 id="preconditions">Preconditions<a class="headerlink" href="#preconditions" title="Link to this section">&para;</a></h5>
+<ol class="precond-alpha">
+<li>Wallet is set to <code>default_configuration_1</code>.</li>
+</ol>
+<h5 id="test-scenario">Test Scenario<a class="headerlink" href="#test-scenario" title="Link to this section">&para;</a></h5>
+<ol>
+<li>Issuer A issues <code>default_credential_E</code> to the wallet.</li>
+<li>The Type Metadata endpoint responds with:
+  - HTTP status code <code>200</code>
+  - <code>application/json</code> content type
+  - <code>default_type_metadata_A</code>, unchanged.</li>
+</ol>
+<h5 id="expected-results">Expected results<a class="headerlink" href="#expected-results" title="Link to this section">&para;</a></h5>
+<ol>
+<li>The wallet retrieves the Type Metadata using an HTTP <code>GET</code> request to the <code>vct</code> URL.</li>
+<li>The SD-JWT VC is accepted and is made available for use.</li>
+</ol>
+<!-- END INCLUDE -->
+<h4 id="ws_ap_ms_credentialmetadata_typemetadata_002">WS_AP_MS_CredentialMetadata_TypeMetadata_002<a class="headerlink" href="#ws_ap_ms_credentialmetadata_typemetadata_002" title="Link to this section">&para;</a></h4>
+<h5 id="objective_1">Objective<a class="headerlink" href="#objective_1" title="Link to this section">&para;</a></h5>
+<p>When an SD-JWT VC is provisioned and a claim metadata object in its Type Metadata contains a <code>display</code> property that is not a valid array of objects, verify that the SD-JWT VC is accepted.</p>
+<h5 id="references_1">References<a class="headerlink" href="#references_1" title="Link to this section">&para;</a></h5>
+<ul>
+<li>[CIR 2024/2979 amended] Article 8, Annex II</li>
+<li>[ETSI TS 119 472-1] clause 5.2.1.2</li>
+<li>[SD-JWT VC] Section 6.2</li>
+</ul>
+<h5 id="profile-applicability_1">Profile applicability<a class="headerlink" href="#profile-applicability_1" title="Link to this section">&para;</a></h5>
+<p>Wallet retrieves SD-JWT VC Type Metadata from the URL in the vct claim.</p>
+<h5 id="eudi-wallet-relevancy_1">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_1" title="Link to this section">&para;</a></h5>
+<p>EUDI_generic | EUDI_optional</p>
+<h5 id="technology_1">Technology<a class="headerlink" href="#technology_1" title="Link to this section">&para;</a></h5>
+<p>Credential in SD-JWT VC format</p>
+<h5 id="preconditions_1">Preconditions<a class="headerlink" href="#preconditions_1" title="Link to this section">&para;</a></h5>
+<ol class="precond-alpha">
+<li>Wallet is set to <code>default_configuration_1</code>.</li>
+</ol>
+<h5 id="test-scenario_1">Test Scenario<a class="headerlink" href="#test-scenario_1" title="Link to this section">&para;</a></h5>
+<ol>
+<li>Issuer A issues <code>default_credential_E</code> to the wallet.</li>
+<li>The Type Metadata endpoint responds with:
+  - HTTP status code <code>200</code>
+  - <code>application/json</code> content type
+  - <code>default_type_metadata_A</code>, with the <code>display</code> member of one object in <code>claims</code> replaced by the string <code>not-an-array</code>.</li>
+</ol>
+<h5 id="expected-results_1">Expected results<a class="headerlink" href="#expected-results_1" title="Link to this section">&para;</a></h5>
+<ol>
+<li>The wallet sends an HTTP GET request to the <code>vct</code> URL.</li>
+<li>The SD-JWT VC is accepted and is made available for use.</li>
+</ol>
+<h5 id="comments">Comments<a class="headerlink" href="#comments" title="Link to this section">&para;</a></h5>
+<p>That a non-conforming <code>display</code> property of a claim metadata object does not make claim metadata processing fail is defined in SD-JWT VC draft-27, section 5.6, and not in the pinned draft-13.</p>
+<!-- END INCLUDE -->
+<h4 id="ws_ap_ms_credentialmetadata_typemetadata_003">WS_AP_MS_CredentialMetadata_TypeMetadata_003<a class="headerlink" href="#ws_ap_ms_credentialmetadata_typemetadata_003" title="Link to this section">&para;</a></h4>
+<h5 id="objective_2">Objective<a class="headerlink" href="#objective_2" title="Link to this section">&para;</a></h5>
+<p>When an SD-JWT VC is provisioned and the SD-JWT VC Type Metadata does not contain a <code>display</code> property, verify that the SD-JWT VC is accepted.</p>
+<h5 id="references_2">References<a class="headerlink" href="#references_2" title="Link to this section">&para;</a></h5>
+<ul>
+<li>[CIR 2024/2979 amended] Article 8, Annex II</li>
+<li>[ETSI TS 119 472-1] clause 5.2.1.2</li>
+<li>[SD-JWT VC] Section 6.2</li>
+</ul>
+<h5 id="profile-applicability_2">Profile applicability<a class="headerlink" href="#profile-applicability_2" title="Link to this section">&para;</a></h5>
+<p>Wallet retrieves SD-JWT VC Type Metadata from the URL in the vct claim.</p>
+<h5 id="eudi-wallet-relevancy_2">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_2" title="Link to this section">&para;</a></h5>
+<p>EUDI_generic | EUDI_optional</p>
+<h5 id="technology_2">Technology<a class="headerlink" href="#technology_2" title="Link to this section">&para;</a></h5>
+<p>Credential in SD-JWT VC format</p>
+<h5 id="preconditions_2">Preconditions<a class="headerlink" href="#preconditions_2" title="Link to this section">&para;</a></h5>
+<ol class="precond-alpha">
+<li>Wallet is set to <code>default_configuration_1</code>.</li>
+</ol>
+<h5 id="test-scenario_2">Test Scenario<a class="headerlink" href="#test-scenario_2" title="Link to this section">&para;</a></h5>
+<ol>
+<li>Issuer A issues <code>default_credential_E</code> to the wallet.</li>
+<li>The Type Metadata endpoint responds with:
+  - HTTP status code <code>200</code>
+  - <code>application/json</code> content type
+  - <code>default_type_metadata_A</code>, without the <code>display</code> member.</li>
+</ol>
+<h5 id="expected-results_2">Expected results<a class="headerlink" href="#expected-results_2" title="Link to this section">&para;</a></h5>
+<ol>
+<li>The wallet sends an HTTP <code>GET</code> request to retrieve the Type Metadata from the <code>vct</code> URL.</li>
+<li>The SD-JWT VC is accepted and is made available for use.</li>
+</ol>
+<!-- END INCLUDE -->
+<h4 id="ws_ap_ms_credentialmetadata_typemetadata_005">WS_AP_MS_CredentialMetadata_TypeMetadata_005<a class="headerlink" href="#ws_ap_ms_credentialmetadata_typemetadata_005" title="Link to this section">&para;</a></h4>
+<h5 id="objective_3">Objective<a class="headerlink" href="#objective_3" title="Link to this section">&para;</a></h5>
+<p>When SD-JWT VC Type Metadata is retrieved via a <code>vct</code> claim URL and the Type Metadata contains a <code>claims</code> property, verify that an SD-JWT VC is rejected if the <code>claims</code> property is not a valid array of objects.</p>
+<h5 id="references_3">References<a class="headerlink" href="#references_3" title="Link to this section">&para;</a></h5>
+<ul>
+<li>[CIR 2024/2979 amended] Article 8, Annex II</li>
+<li>[ETSI TS 119 472-1] clause 5.2.1.2</li>
+<li>[SD-JWT VC] Section 6.2</li>
+</ul>
+<h5 id="profile-applicability_3">Profile applicability<a class="headerlink" href="#profile-applicability_3" title="Link to this section">&para;</a></h5>
+<p>Wallet retrieves SD-JWT VC Type Metadata from the URL in the vct claim.</p>
+<h5 id="eudi-wallet-relevancy_3">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_3" title="Link to this section">&para;</a></h5>
+<p>EUDI_generic | EUDI_optional</p>
+<h5 id="technology_3">Technology<a class="headerlink" href="#technology_3" title="Link to this section">&para;</a></h5>
+<p>Credential in SD-JWT VC format</p>
+<h5 id="preconditions_3">Preconditions<a class="headerlink" href="#preconditions_3" title="Link to this section">&para;</a></h5>
+<ol class="precond-alpha">
+<li>Wallet is set to <code>default_configuration_1</code>.</li>
+</ol>
+<h5 id="test-scenario_3">Test Scenario<a class="headerlink" href="#test-scenario_3" title="Link to this section">&para;</a></h5>
+<ol>
+<li>Issuer A issues <code>default_credential_E</code> to the wallet.</li>
+<li>The Type Metadata endpoint responds with:
+  - HTTP status code <code>200</code>
+  - <code>application/json</code> content type
+  - <code>default_type_metadata_A</code>, with <code>claims</code> replaced by the string <code>not-an-array</code>.</li>
+</ol>
+<h5 id="expected-results_3">Expected results<a class="headerlink" href="#expected-results_3" title="Link to this section">&para;</a></h5>
+<ol>
+<li>The wallet sends an HTTP <code>GET</code> request to retrieve the Type Metadata from the <code>vct</code> URL.</li>
+<li>The SD-JWT VC is rejected and is not made available for use.</li>
+</ol>
+<h5 id="comments_1">Comments<a class="headerlink" href="#comments_1" title="Link to this section">&para;</a></h5>
+<p>Rejection for a <code>claims</code> property that is not an array of objects is defined in SD-JWT VC draft-27, sections 5.6 and 5.7, and not in the pinned draft-13.</p>
+<!-- END INCLUDE -->
+<h4 id="ws_ap_ms_credentialmetadata_typemetadata_006">WS_AP_MS_CredentialMetadata_TypeMetadata_006<a class="headerlink" href="#ws_ap_ms_credentialmetadata_typemetadata_006" title="Link to this section">&para;</a></h4>
+<h5 id="objective_4">Objective<a class="headerlink" href="#objective_4" title="Link to this section">&para;</a></h5>
+<p>When SD-JWT VC Type Metadata is retrieved via a <code>vct</code> claim URL and the Type Metadata does not contain a <code>claims</code> property, verify that the SD-JWT VC is accepted.</p>
+<h5 id="references_4">References<a class="headerlink" href="#references_4" title="Link to this section">&para;</a></h5>
+<ul>
+<li>[CIR 2024/2979 amended] Article 8, Annex II</li>
+<li>[ETSI TS 119 472-1] clause 5.2.1.2</li>
+<li>[SD-JWT VC] Section 6.2</li>
+</ul>
+<h5 id="profile-applicability_4">Profile applicability<a class="headerlink" href="#profile-applicability_4" title="Link to this section">&para;</a></h5>
+<p>Wallet retrieves SD-JWT VC Type Metadata from the URL in the vct claim.</p>
+<h5 id="eudi-wallet-relevancy_4">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_4" title="Link to this section">&para;</a></h5>
+<p>EUDI_generic | EUDI_optional</p>
+<h5 id="technology_4">Technology<a class="headerlink" href="#technology_4" title="Link to this section">&para;</a></h5>
+<p>Credential in SD-JWT VC format</p>
+<h5 id="preconditions_4">Preconditions<a class="headerlink" href="#preconditions_4" title="Link to this section">&para;</a></h5>
+<ol class="precond-alpha">
+<li>Wallet is set to <code>default_configuration_1</code>.</li>
+</ol>
+<h5 id="test-scenario_4">Test Scenario<a class="headerlink" href="#test-scenario_4" title="Link to this section">&para;</a></h5>
+<ol>
+<li>Issuer A issues <code>default_credential_E</code> to the wallet.</li>
+<li>The Type Metadata endpoint responds with:
+  - HTTP status code <code>200</code>
+  - <code>application/json</code> content type
+  - <code>default_type_metadata_A</code>, without the <code>claims</code> member.</li>
+</ol>
+<h5 id="expected-results_4">Expected results<a class="headerlink" href="#expected-results_4" title="Link to this section">&para;</a></h5>
+<ol>
+<li>The wallet sends an HTTP <code>GET</code> request to retrieve the Type Metadata from the <code>vct</code> URL.</li>
+<li>The SD-JWT VC is accepted and is made available for use.</li>
+</ol>
+<!-- END INCLUDE -->
+<h4 id="ws_ap_ms_credentialmetadata_typemetadata_007">WS_AP_MS_CredentialMetadata_TypeMetadata_007<a class="headerlink" href="#ws_ap_ms_credentialmetadata_typemetadata_007" title="Link to this section">&para;</a></h4>
+<h5 id="objective_5">Objective<a class="headerlink" href="#objective_5" title="Link to this section">&para;</a></h5>
+<p>When an SD-JWT VC is provisioned and its Type Metadata contains additional top-level or subordinate properties that the Wallet does not understand, verify that the SD-JWT VC is accepted.</p>
+<h5 id="references_5">References<a class="headerlink" href="#references_5" title="Link to this section">&para;</a></h5>
+<ul>
+<li>[CIR 2024/2979 amended] Article 8, Annex II</li>
+<li>[ETSI TS 119 472-1] clause 5.2.1.2</li>
+<li>[SD-JWT VC] Section 6.2</li>
+</ul>
+<h5 id="profile-applicability_5">Profile applicability<a class="headerlink" href="#profile-applicability_5" title="Link to this section">&para;</a></h5>
+<p>Wallet retrieves SD-JWT VC Type Metadata from the URL in the vct claim.</p>
+<h5 id="eudi-wallet-relevancy_5">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_5" title="Link to this section">&para;</a></h5>
+<p>EUDI_generic | EUDI_optional</p>
+<h5 id="technology_5">Technology<a class="headerlink" href="#technology_5" title="Link to this section">&para;</a></h5>
+<p>Credential in SD-JWT VC format</p>
+<h5 id="preconditions_5">Preconditions<a class="headerlink" href="#preconditions_5" title="Link to this section">&para;</a></h5>
+<ol class="precond-alpha">
+<li>Wallet is set to <code>default_configuration_1</code>.</li>
+</ol>
+<h5 id="test-scenario_5">Test Scenario<a class="headerlink" href="#test-scenario_5" title="Link to this section">&para;</a></h5>
+<ol>
+<li>Issuer A issues <code>default_credential_E</code> to the wallet.</li>
+<li>The Type Metadata endpoint responds with:
+  - HTTP status code <code>200</code>
+  - <code>application/json</code> content type
+  - <code>default_type_metadata_A</code>, with additional members not defined by [SD-JWT VC].</li>
+</ol>
+<h5 id="expected-results_5">Expected results<a class="headerlink" href="#expected-results_5" title="Link to this section">&para;</a></h5>
+<ol>
+<li>The wallet sends an HTTP <code>GET</code> request to retrieve the Type Metadata from the <code>vct</code> URL.</li>
+<li>The SD-JWT VC is accepted and is made available for use.</li>
+</ol>
+<!-- END INCLUDE -->
+
+<!-- END INCLUDE -->
 <h2 id="protocol-messages">Protocol Messages<a class="headerlink" href="#protocol-messages" title="Link to this section">&para;</a></h2>
 <!-- BEGIN INCLUDE ./[A-Z]*.md -->
 <h4 id="ws_ap_ms_protocolmessages_033a">WS_AP_MS_ProtocolMessages_033a<a class="headerlink" href="#ws_ap_ms_protocolmessages_033a" title="Link to this section">&para;</a></h4>
-<h5 id="objective">Objective<a class="headerlink" href="#objective" title="Link to this section">&para;</a></h5>
+<h5 id="objective_6">Objective<a class="headerlink" href="#objective_6" title="Link to this section">&para;</a></h5>
 <p>Verify that the Wallet can handle a correctly formatted Credential Offer, using the issuer initiated flow and credential offer by value.</p>
-<h5 id="references">References<a class="headerlink" href="#references" title="Link to this section">&para;</a></h5>
+<h5 id="references_6">References<a class="headerlink" href="#references_6" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[ETSI TS 119 472-3] section 4.1</li>
 <li>[HAIP] section 4.2</li>
 <li>[OpenID4VCI] section 4.1</li>
 </ul>
-<h5 id="profile-applicability">Profile applicability<a class="headerlink" href="#profile-applicability" title="Link to this section">&para;</a></h5>
+<h5 id="profile-applicability_6">Profile applicability<a class="headerlink" href="#profile-applicability_6" title="Link to this section">&para;</a></h5>
 <p>Wallet supports the Issuer initiated issuance flow.</p>
-<h5 id="eudi-wallet-relevancy">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy" title="Link to this section">&para;</a></h5>
+<h5 id="eudi-wallet-relevancy_6">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_6" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="technology">Technology<a class="headerlink" href="#technology" title="Link to this section">&para;</a></h5>
+<h5 id="technology_6">Technology<a class="headerlink" href="#technology_6" title="Link to this section">&para;</a></h5>
 <p>Issuance via Redirects.</p>
-<h5 id="preconditions">Preconditions<a class="headerlink" href="#preconditions" title="Link to this section">&para;</a></h5>
+<h5 id="preconditions_6">Preconditions<a class="headerlink" href="#preconditions_6" title="Link to this section">&para;</a></h5>
 <ol class="precond-alpha">
 <li>End-user is engaging with a Credential Issuer using a User-agent.</li>
 <li>Wallet can be invoked for issuance using the custom URL scheme <code>eu-eaa-offer://</code>.</li>
 </ol>
-<h5 id="test-scenario">Test Scenario<a class="headerlink" href="#test-scenario" title="Link to this section">&para;</a></h5>
+<h5 id="test-scenario_6">Test Scenario<a class="headerlink" href="#test-scenario_6" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Credential Issuer provides a valid Credential Offer as parameter in a custom URL Scheme to the User-agent. The <code>credential_offer</code> parameter:<ol>
 <li>has a <code>credential_issuer</code> property with a valid issuer identifier.</li>
@@ -1682,33 +1888,33 @@
 </li>
 <li>End-user triggers link to be followed.</li>
 </ol>
-<h5 id="expected-results">Expected results<a class="headerlink" href="#expected-results" title="Link to this section">&para;</a></h5>
+<h5 id="expected-results_6">Expected results<a class="headerlink" href="#expected-results_6" title="Link to this section">&para;</a></h5>
 <ol>
 <li>User-agent presents option to End-user to engage issuance, optionally after requesting the Credential Issuer Metadata (derived using <code>.well-known</code> from <code>credential_issuer</code>, if not cached already).</li>
 <li>The Wallet connects to the Credential Issuer, to make a request at the Authorization Server's Authorization Endpoint.</li>
 </ol>
 <!-- END INCLUDE -->
 <h4 id="ws_ap_ms_protocolmessages_033b_uf">WS_AP_MS_ProtocolMessages_033b_UF<a class="headerlink" href="#ws_ap_ms_protocolmessages_033b_uf" title="Link to this section">&para;</a></h4>
-<h5 id="objective_1">Objective<a class="headerlink" href="#objective_1" title="Link to this section">&para;</a></h5>
+<h5 id="objective_7">Objective<a class="headerlink" href="#objective_7" title="Link to this section">&para;</a></h5>
 <p>Verify that the Wallet does not engage issuance based on a Credential Offer with the <code>credential_issuer</code> omitted, using the issuer initiated flow and credential offer by value.</p>
-<h5 id="references_1">References<a class="headerlink" href="#references_1" title="Link to this section">&para;</a></h5>
+<h5 id="references_7">References<a class="headerlink" href="#references_7" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[ETSI TS 119 472-3] section 4.1</li>
 <li>[HAIP] section 4.2</li>
 <li>[OpenID4VCI] sections 4.1.1 and 12.2.2</li>
 </ul>
-<h5 id="profile-applicability_1">Profile applicability<a class="headerlink" href="#profile-applicability_1" title="Link to this section">&para;</a></h5>
+<h5 id="profile-applicability_7">Profile applicability<a class="headerlink" href="#profile-applicability_7" title="Link to this section">&para;</a></h5>
 <p>Wallet supports the Issuer initiated issuance flow.</p>
-<h5 id="eudi-wallet-relevancy_1">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_1" title="Link to this section">&para;</a></h5>
+<h5 id="eudi-wallet-relevancy_7">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_7" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="technology_1">Technology<a class="headerlink" href="#technology_1" title="Link to this section">&para;</a></h5>
+<h5 id="technology_7">Technology<a class="headerlink" href="#technology_7" title="Link to this section">&para;</a></h5>
 <p>Wallet supports invocation through the custom URL scheme <code>eu-eaa-offer://</code>.</p>
-<h5 id="preconditions_1">Preconditions<a class="headerlink" href="#preconditions_1" title="Link to this section">&para;</a></h5>
+<h5 id="preconditions_7">Preconditions<a class="headerlink" href="#preconditions_7" title="Link to this section">&para;</a></h5>
 <ol class="precond-alpha">
 <li>End-user is engaging with a Credential Issuer using a User-agent.</li>
 <li>Wallet can be invoked for issuance using a custom URL scheme.</li>
 </ol>
-<h5 id="test-scenario_1">Test Scenario<a class="headerlink" href="#test-scenario_1" title="Link to this section">&para;</a></h5>
+<h5 id="test-scenario_7">Test Scenario<a class="headerlink" href="#test-scenario_7" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Credential Issuer provides a Credential Offer as parameter in a custom URL scheme to the User-agent. The <code>credential_offer</code> parameter:<ol>
 <li>has no <code>credential_issuer</code> property.</li>
@@ -1717,7 +1923,7 @@
 </li>
 <li>End-user triggers link to be followed.</li>
 </ol>
-<h5 id="expected-results_1">Expected results<a class="headerlink" href="#expected-results_1" title="Link to this section">&para;</a></h5>
+<h5 id="expected-results_7">Expected results<a class="headerlink" href="#expected-results_7" title="Link to this section">&para;</a></h5>
 <ol>
 <li>User-agent presents option to End-user to engage issuance.</li>
 <li>The Wallet does not engage for issuance. This includes:<ol>
@@ -1728,26 +1934,26 @@
 </ol>
 <!-- END INCLUDE -->
 <h4 id="ws_ap_ms_protocolmessages_033c_uf">WS_AP_MS_ProtocolMessages_033c_UF<a class="headerlink" href="#ws_ap_ms_protocolmessages_033c_uf" title="Link to this section">&para;</a></h4>
-<h5 id="objective_2">Objective<a class="headerlink" href="#objective_2" title="Link to this section">&para;</a></h5>
+<h5 id="objective_8">Objective<a class="headerlink" href="#objective_8" title="Link to this section">&para;</a></h5>
 <p>Verify that the Wallet does not engage issuance based on a Credential Offer with the <code>credential_configuration_ids</code> property omitted, using the issuer initiated flow and credential offer by value.</p>
-<h5 id="references_2">References<a class="headerlink" href="#references_2" title="Link to this section">&para;</a></h5>
+<h5 id="references_8">References<a class="headerlink" href="#references_8" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[ETSI TS 119 472-3] section 4.1</li>
 <li>[HAIP] section 4.2</li>
 <li>[OpenID4VCI] section 4.1.1</li>
 </ul>
-<h5 id="profile-applicability_2">Profile applicability<a class="headerlink" href="#profile-applicability_2" title="Link to this section">&para;</a></h5>
+<h5 id="profile-applicability_8">Profile applicability<a class="headerlink" href="#profile-applicability_8" title="Link to this section">&para;</a></h5>
 <p>Wallet supports the Issuer initiated issuance flow.</p>
-<h5 id="eudi-wallet-relevancy_2">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_2" title="Link to this section">&para;</a></h5>
+<h5 id="eudi-wallet-relevancy_8">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_8" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="technology_2">Technology<a class="headerlink" href="#technology_2" title="Link to this section">&para;</a></h5>
+<h5 id="technology_8">Technology<a class="headerlink" href="#technology_8" title="Link to this section">&para;</a></h5>
 <p>Wallet supports invocation through the custom URL scheme <code>eu-eaa-offer://</code>.</p>
-<h5 id="preconditions_2">Preconditions<a class="headerlink" href="#preconditions_2" title="Link to this section">&para;</a></h5>
+<h5 id="preconditions_8">Preconditions<a class="headerlink" href="#preconditions_8" title="Link to this section">&para;</a></h5>
 <ol class="precond-alpha">
 <li>End-user is engaging with a Credential Issuer using a User-agent.</li>
 <li>Wallet can be invoked for issuance using a custom URL scheme.</li>
 </ol>
-<h5 id="test-scenario_2">Test Scenario<a class="headerlink" href="#test-scenario_2" title="Link to this section">&para;</a></h5>
+<h5 id="test-scenario_8">Test Scenario<a class="headerlink" href="#test-scenario_8" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Credential Issuer provides a Credential Offer as parameter in a custom URL scheme to the User-agent. The <code>credential_offer</code> parameter:<ol>
 <li>has a <code>credential_issuer</code> property with a valid issuer identifier.</li>
@@ -1756,7 +1962,7 @@
 </li>
 <li>End-user triggers link to be followed.</li>
 </ol>
-<h5 id="expected-results_2">Expected results<a class="headerlink" href="#expected-results_2" title="Link to this section">&para;</a></h5>
+<h5 id="expected-results_8">Expected results<a class="headerlink" href="#expected-results_8" title="Link to this section">&para;</a></h5>
 <ol>
 <li>User-agent presents option to End-user to engage issuance.</li>
 <li>The Wallet does not engage for issuance. This includes:<ol>
@@ -1766,219 +1972,14 @@
 </ol>
 <!-- END INCLUDE -->
 <h4 id="ws_ap_ms_protocolmessages_034a">WS_AP_MS_ProtocolMessages_034a<a class="headerlink" href="#ws_ap_ms_protocolmessages_034a" title="Link to this section">&para;</a></h4>
-<h5 id="objective_3">Objective<a class="headerlink" href="#objective_3" title="Link to this section">&para;</a></h5>
-<p>Verify that the Wallet sends the HTTP Request Body in the correct format when sending a Pushed Authorization Request, when using Pushed Authorization Requests for issuance.</p>
-<h5 id="references_3">References<a class="headerlink" href="#references_3" title="Link to this section">&para;</a></h5>
-<ul>
-<li>[ETSI TS 119 472-3] section 4.4</li>
-<li>[HAIP] section 4.3</li>
-<li>[OpenID4VCI] section 5.1.4</li>
-<li>[RFC9126] section 2</li>
-</ul>
-<h5 id="profile-applicability_3">Profile applicability<a class="headerlink" href="#profile-applicability_3" title="Link to this section">&para;</a></h5>
-<p>None</p>
-<h5 id="eudi-wallet-relevancy_3">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_3" title="Link to this section">&para;</a></h5>
-<p>EUDI_generic | EUDI_required</p>
-<h5 id="technology_3">Technology<a class="headerlink" href="#technology_3" title="Link to this section">&para;</a></h5>
-<p>Issuance via Redirects.</p>
-<h5 id="preconditions_3">Preconditions<a class="headerlink" href="#preconditions_3" title="Link to this section">&para;</a></h5>
-<ol class="precond-alpha">
-<li>End-user is engaging with a Credential Issuer using a User-agent.</li>
-<li>Wallet started engagement with Credential Issuer.</li>
-<li>Wallet successfully obtained Credential Issuer Metadata.</li>
-<li>The Wallet sends an HTTP POST Request to the selected Authorization Server's PAR endpoint.</li>
-</ol>
-<h5 id="test-scenario_3">Test Scenario<a class="headerlink" href="#test-scenario_3" title="Link to this section">&para;</a></h5>
-<ol>
-<li>Verify the <code>Content-Type</code> header of the received HTTP Request.</li>
-</ol>
-<h5 id="expected-results_3">Expected results<a class="headerlink" href="#expected-results_3" title="Link to this section">&para;</a></h5>
-<ol>
-<li>The HTTP POST Request has the header <code>Content-Type</code> with value <code>application/x-www-form-urlencoded</code>.</li>
-</ol>
-<!-- END INCLUDE -->
-<h4 id="ws_ap_ms_protocolmessages_034b">WS_AP_MS_ProtocolMessages_034b<a class="headerlink" href="#ws_ap_ms_protocolmessages_034b" title="Link to this section">&para;</a></h4>
-<h5 id="objective_4">Objective<a class="headerlink" href="#objective_4" title="Link to this section">&para;</a></h5>
-<p>Verify that the Wallet sends a HTTP Request that contains a <code>request</code> parameter when sending a Pushed Authorization Request, when using Pushed Authorization Requests for issuance.</p>
-<h5 id="references_4">References<a class="headerlink" href="#references_4" title="Link to this section">&para;</a></h5>
-<ul>
-<li>[ETSI TS 119 472-3] section 4.4</li>
-<li>[HAIP] section 4.3</li>
-<li>[OpenID4VCI] section 5.1.4</li>
-<li>[RFC9126] section 2</li>
-</ul>
-<h5 id="profile-applicability_4">Profile applicability<a class="headerlink" href="#profile-applicability_4" title="Link to this section">&para;</a></h5>
-<p>Wallet that uses JAR during PAR for the Authorization Request to the Authorization Server on Credential Issuance.</p>
-<h5 id="eudi-wallet-relevancy_4">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_4" title="Link to this section">&para;</a></h5>
-<p>EUDI_generic | EUDI_required</p>
-<h5 id="technology_4">Technology<a class="headerlink" href="#technology_4" title="Link to this section">&para;</a></h5>
-<p>Issuance via Redirects.</p>
-<h5 id="preconditions_4">Preconditions<a class="headerlink" href="#preconditions_4" title="Link to this section">&para;</a></h5>
-<ol class="precond-alpha">
-<li>End-user is engaging with a Credential Issuer using a User-agent.</li>
-<li>Wallet started engagement with Credential Issuer.</li>
-<li>Wallet successfully obtained Credential Issuer Metadata.</li>
-<li>The Wallet sends an HTTP POST Request to the selected Authorization Server's PAR endpoint.</li>
-</ol>
-<h5 id="test-scenario_4">Test Scenario<a class="headerlink" href="#test-scenario_4" title="Link to this section">&para;</a></h5>
-<ol>
-<li>Verify the request parameters of the received HTTP Request.</li>
-</ol>
-<h5 id="expected-results_4">Expected results<a class="headerlink" href="#expected-results_4" title="Link to this section">&para;</a></h5>
-<ol>
-<li>The HTTP POST Request contains a parameter <code>request</code>.</li>
-</ol>
-<!-- END INCLUDE -->
-<h4 id="ws_ap_ms_protocolmessages_034c">WS_AP_MS_ProtocolMessages_034c<a class="headerlink" href="#ws_ap_ms_protocolmessages_034c" title="Link to this section">&para;</a></h4>
-<h5 id="objective_5">Objective<a class="headerlink" href="#objective_5" title="Link to this section">&para;</a></h5>
-<p>Verify that the Wallet sends a <code>request</code> parameter in the HTTP request is a JWT (Signed Request Object) when sending a Pushed Authorization Request, when using Pushed Authorization Requests for issuance.</p>
-<h5 id="references_5">References<a class="headerlink" href="#references_5" title="Link to this section">&para;</a></h5>
-<ul>
-<li>[ETSI TS 119 472-3] section 4.4</li>
-<li>[HAIP] section 4.3</li>
-<li>[OpenID4VCI] section 5.1.4</li>
-<li>[RFC9126] section 3</li>
-</ul>
-<h5 id="profile-applicability_5">Profile applicability<a class="headerlink" href="#profile-applicability_5" title="Link to this section">&para;</a></h5>
-<p>Wallet that uses JAR during PAR for the Authorization Request to the Authorization Server on Credential Issuance.</p>
-<h5 id="eudi-wallet-relevancy_5">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_5" title="Link to this section">&para;</a></h5>
-<p>EUDI_generic | EUDI_required</p>
-<h5 id="technology_5">Technology<a class="headerlink" href="#technology_5" title="Link to this section">&para;</a></h5>
-<p>Issuance via Redirects.</p>
-<h5 id="preconditions_5">Preconditions<a class="headerlink" href="#preconditions_5" title="Link to this section">&para;</a></h5>
-<ol class="precond-alpha">
-<li>End-user is engaging with a Credential Issuer using a User-agent.</li>
-<li>Wallet started engagement with Credential Issuer.</li>
-<li>Wallet successfully obtained Credential Issuer Metadata.</li>
-<li>The Wallet sends an HTTP POST Request to the selected Authorization Server's PAR endpoint.</li>
-<li>The HTTP POST Request to the selected Authorization Server's PAR endpoint contains a <code>request</code> parameter.</li>
-</ol>
-<h5 id="test-scenario_5">Test Scenario<a class="headerlink" href="#test-scenario_5" title="Link to this section">&para;</a></h5>
-<ol>
-<li>Verify the <code>request</code> parameter in the received HTTP Request.</li>
-</ol>
-<h5 id="expected-results_5">Expected results<a class="headerlink" href="#expected-results_5" title="Link to this section">&para;</a></h5>
-<ol>
-<li>The value of the <code>request</code> parameter has the structure of a signed JWT in compact serialization, that is three base64url-encoded segments separated by two period (<code>.</code>) characters.</li>
-</ol>
-<ul>
-<li>Note: validation of the signed JWT itself as Authorization Request, is done in other test cases.</li>
-</ul>
-<!-- END INCLUDE -->
-<h4 id="ws_ap_ms_protocolmessages_034d">WS_AP_MS_ProtocolMessages_034d<a class="headerlink" href="#ws_ap_ms_protocolmessages_034d" title="Link to this section">&para;</a></h4>
-<h5 id="objective_6">Objective<a class="headerlink" href="#objective_6" title="Link to this section">&para;</a></h5>
-<p>Verify that the Wallet sends a <code>request</code> parameter in the HTTP request is a correctly formatted JWT (Signed Request Object) when sending a Pushed Authorization Request, when using Pushed Authorization Requests for issuance.</p>
-<h5 id="references_6">References<a class="headerlink" href="#references_6" title="Link to this section">&para;</a></h5>
-<ul>
-<li>[ETSI TS 119 472-3] section 4.4</li>
-<li>[HAIP] section 4.3</li>
-<li>[OpenID4VCI] section 5.1.4</li>
-<li>[RFC9126] section 3</li>
-</ul>
-<h5 id="profile-applicability_6">Profile applicability<a class="headerlink" href="#profile-applicability_6" title="Link to this section">&para;</a></h5>
-<p>Wallet that uses JAR during PAR for the Authorization Request to the Authorization Server on Credential Issuance.</p>
-<h5 id="eudi-wallet-relevancy_6">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_6" title="Link to this section">&para;</a></h5>
-<p>EUDI_generic | EUDI_required</p>
-<h5 id="technology_6">Technology<a class="headerlink" href="#technology_6" title="Link to this section">&para;</a></h5>
-<p>Issuance via Redirects.</p>
-<h5 id="preconditions_6">Preconditions<a class="headerlink" href="#preconditions_6" title="Link to this section">&para;</a></h5>
-<ol class="precond-alpha">
-<li>End-user is engaging with a Credential Issuer using a User-agent.</li>
-<li>Wallet started engagement with Credential Issuer.</li>
-<li>Wallet successfully obtained Credential Issuer Metadata.</li>
-<li>The Wallet sends an HTTP POST Request to the selected Authorization Server's PAR endpoint.</li>
-<li>The HTTP POST Request to the selected Authorization Server's PAR endpoint contains a <code>request</code> parameter.</li>
-<li>The <code>request</code> parameter sent to the selected Authorization Server's PAR endpoint has the structure of a signed JWT.</li>
-</ol>
-<h5 id="test-scenario_6">Test Scenario<a class="headerlink" href="#test-scenario_6" title="Link to this section">&para;</a></h5>
-<ol>
-<li>Perform all Shared_JWT_JWS test cases on the value of the <code>request</code> parameter.</li>
-</ol>
-<h5 id="expected-results_6">Expected results<a class="headerlink" href="#expected-results_6" title="Link to this section">&para;</a></h5>
-<ol>
-<li>All test cases pass.</li>
-</ol>
-<!-- END INCLUDE -->
-<h4 id="ws_ap_ms_protocolmessages_035a">WS_AP_MS_ProtocolMessages_035a<a class="headerlink" href="#ws_ap_ms_protocolmessages_035a" title="Link to this section">&para;</a></h4>
-<h5 id="objective_7">Objective<a class="headerlink" href="#objective_7" title="Link to this section">&para;</a></h5>
-<p>Verify that the Wallet sends a HTTP Request that contains one <code>OAuth-Client-Attestation</code> HTTP header when sending a Pushed Authorization Request, when using Pushed Authorization Requests for issuance.</p>
-<h5 id="references_7">References<a class="headerlink" href="#references_7" title="Link to this section">&para;</a></h5>
-<ul>
-<li>[CIR 2024/2979 amended] annex Ib</li>
-<li>[ETSI TS 119 472-3] section 4.4</li>
-<li>[HAIP] section 4.3</li>
-<li>[OpenID4VCI] section 5.1.4</li>
-<li>[RFC9126] section 2.1</li>
-<li>[IETF draft-attestation-based-client-auth] section 6.1, 6.2</li>
-</ul>
-<h5 id="profile-applicability_7">Profile applicability<a class="headerlink" href="#profile-applicability_7" title="Link to this section">&para;</a></h5>
-<p>None</p>
-<h5 id="eudi-wallet-relevancy_7">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_7" title="Link to this section">&para;</a></h5>
-<p>EUDI_generic | EUDI_required</p>
-<h5 id="technology_7">Technology<a class="headerlink" href="#technology_7" title="Link to this section">&para;</a></h5>
-<p>Issuance via Redirects.</p>
-<h5 id="preconditions_7">Preconditions<a class="headerlink" href="#preconditions_7" title="Link to this section">&para;</a></h5>
-<ol class="precond-alpha">
-<li>End-user is engaging with a Credential Issuer using a User-agent.</li>
-<li>Wallet started engagement with Credential Issuer.</li>
-<li>Wallet successfully obtained Credential Issuer Metadata.</li>
-<li>The Wallet sends an HTTP POST Request to the selected Authorization Server's PAR endpoint.</li>
-</ol>
-<h5 id="test-scenario_7">Test Scenario<a class="headerlink" href="#test-scenario_7" title="Link to this section">&para;</a></h5>
-<ol>
-<li>Verify the HTTP Headers of the received HTTP Request.</li>
-</ol>
-<h5 id="expected-results_7">Expected results<a class="headerlink" href="#expected-results_7" title="Link to this section">&para;</a></h5>
-<ol>
-<li>The HTTP Request contains exactly one HTTP header <code>OAuth-Client-Attestation</code>.</li>
-</ol>
-<!-- END INCLUDE -->
-<h4 id="ws_ap_ms_protocolmessages_035b">WS_AP_MS_ProtocolMessages_035b<a class="headerlink" href="#ws_ap_ms_protocolmessages_035b" title="Link to this section">&para;</a></h4>
-<h5 id="objective_8">Objective<a class="headerlink" href="#objective_8" title="Link to this section">&para;</a></h5>
-<p>Verify that the Wallet sends a HTTP Request that contains a syntactically correct <code>OAuth-Client-Attestation</code> HTTP header when sending a Pushed Authorization Request, when using Pushed Authorization Requests for issuance.</p>
-<h5 id="references_8">References<a class="headerlink" href="#references_8" title="Link to this section">&para;</a></h5>
-<ul>
-<li>[CIR 2024/2979 amended] annex Ib</li>
-<li>[ETSI TS 119 472-3] section 4.4</li>
-<li>[HAIP] section 4.3</li>
-<li>[OpenID4VCI] section 5.1.4</li>
-<li>[RFC9126] section 2.1</li>
-<li>[IETF draft-attestation-based-client-auth] section 5.1, 6.1</li>
-</ul>
-<h5 id="profile-applicability_8">Profile applicability<a class="headerlink" href="#profile-applicability_8" title="Link to this section">&para;</a></h5>
-<p>None</p>
-<h5 id="eudi-wallet-relevancy_8">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_8" title="Link to this section">&para;</a></h5>
-<p>EUDI_generic | EUDI_required</p>
-<h5 id="technology_8">Technology<a class="headerlink" href="#technology_8" title="Link to this section">&para;</a></h5>
-<p>Issuance via Redirects.</p>
-<h5 id="preconditions_8">Preconditions<a class="headerlink" href="#preconditions_8" title="Link to this section">&para;</a></h5>
-<ol class="precond-alpha">
-<li>End-user is engaging with a Credential Issuer using a User-agent.</li>
-<li>Wallet started engagement with Credential Issuer.</li>
-<li>Wallet successfully obtained Credential Issuer Metadata.</li>
-<li>The Wallet sends an HTTP POST Request to the selected Authorization Server's PAR endpoint.</li>
-<li>The HTTP Request to the selected Authorization Server's PAR endpoint contains an <code>OAuth-Client-Attestation</code> HTTP header.</li>
-</ol>
-<h5 id="test-scenario_8">Test Scenario<a class="headerlink" href="#test-scenario_8" title="Link to this section">&para;</a></h5>
-<ol>
-<li>Verify the <code>OAuth-Client-Attestation</code> HTTP-Header of the received HTTP Request.</li>
-</ol>
-<h5 id="expected-results_8">Expected results<a class="headerlink" href="#expected-results_8" title="Link to this section">&para;</a></h5>
-<ol>
-<li>The value of the <code>OAuth-Client-Attestation</code> HTTP Header of the HTTP Request has the structure of a signed JWT in compact serialization, that is three Base64url-encoded parts separated by exactly two period (<code>.</code>) characters.</li>
-</ol>
-<!-- END INCLUDE -->
-<h4 id="ws_ap_ms_protocolmessages_036a">WS_AP_MS_ProtocolMessages_036a<a class="headerlink" href="#ws_ap_ms_protocolmessages_036a" title="Link to this section">&para;</a></h4>
 <h5 id="objective_9">Objective<a class="headerlink" href="#objective_9" title="Link to this section">&para;</a></h5>
-<p>Verify that the Wallet sends a HTTP Request that contains one <code>OAuth-Client-Attestation-PoP</code> HTTP header when sending a Pushed Authorization Request, when using Pushed Authorization Requests for issuance.</p>
+<p>Verify that the Wallet sends the HTTP Request Body in the correct format when sending a Pushed Authorization Request, when using Pushed Authorization Requests for issuance.</p>
 <h5 id="references_9">References<a class="headerlink" href="#references_9" title="Link to this section">&para;</a></h5>
 <ul>
-<li>[CIR 2024/2979 amended] annex Ib</li>
 <li>[ETSI TS 119 472-3] section 4.4</li>
 <li>[HAIP] section 4.3</li>
 <li>[OpenID4VCI] section 5.1.4</li>
-<li>[RFC9126] section 2.1</li>
-<li>[IETF draft-attestation-based-client-auth] section 6.1, 6.2</li>
+<li>[RFC9126] section 2</li>
 </ul>
 <h5 id="profile-applicability_9">Profile applicability<a class="headerlink" href="#profile-applicability_9" title="Link to this section">&para;</a></h5>
 <p>None</p>
@@ -1995,27 +1996,25 @@
 </ol>
 <h5 id="test-scenario_9">Test Scenario<a class="headerlink" href="#test-scenario_9" title="Link to this section">&para;</a></h5>
 <ol>
-<li>Verify the HTTP Headers of the received HTTP Request.</li>
+<li>Verify the <code>Content-Type</code> header of the received HTTP Request.</li>
 </ol>
 <h5 id="expected-results_9">Expected results<a class="headerlink" href="#expected-results_9" title="Link to this section">&para;</a></h5>
 <ol>
-<li>The HTTP Request contains exactly one HTTP header <code>OAuth-Client-Attestation-PoP</code>.</li>
+<li>The HTTP POST Request has the header <code>Content-Type</code> with value <code>application/x-www-form-urlencoded</code>.</li>
 </ol>
 <!-- END INCLUDE -->
-<h4 id="ws_ap_ms_protocolmessages_036b">WS_AP_MS_ProtocolMessages_036b<a class="headerlink" href="#ws_ap_ms_protocolmessages_036b" title="Link to this section">&para;</a></h4>
+<h4 id="ws_ap_ms_protocolmessages_034b">WS_AP_MS_ProtocolMessages_034b<a class="headerlink" href="#ws_ap_ms_protocolmessages_034b" title="Link to this section">&para;</a></h4>
 <h5 id="objective_10">Objective<a class="headerlink" href="#objective_10" title="Link to this section">&para;</a></h5>
-<p>Verify that the Wallet sends a HTTP Request that contains a syntactically correct <code>OAuth-Client-Attestation-PoP</code> HTTP header when sending a Pushed Authorization Request, when using Pushed Authorization Requests for issuance.</p>
+<p>Verify that the Wallet sends a HTTP Request that contains a <code>request</code> parameter when sending a Pushed Authorization Request, when using Pushed Authorization Requests for issuance.</p>
 <h5 id="references_10">References<a class="headerlink" href="#references_10" title="Link to this section">&para;</a></h5>
 <ul>
-<li>[CIR 2024/2979 amended] annex Ib</li>
 <li>[ETSI TS 119 472-3] section 4.4</li>
 <li>[HAIP] section 4.3</li>
 <li>[OpenID4VCI] section 5.1.4</li>
-<li>[RFC9126] section 2.1</li>
-<li>[IETF draft-attestation-based-client-auth] section 5.2, 6.1</li>
+<li>[RFC9126] section 2</li>
 </ul>
 <h5 id="profile-applicability_10">Profile applicability<a class="headerlink" href="#profile-applicability_10" title="Link to this section">&para;</a></h5>
-<p>None</p>
+<p>Wallet that uses JAR during PAR for the Authorization Request to the Authorization Server on Credential Issuance.</p>
 <h5 id="eudi-wallet-relevancy_10">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_10" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
 <h5 id="technology_10">Technology<a class="headerlink" href="#technology_10" title="Link to this section">&para;</a></h5>
@@ -2026,21 +2025,228 @@
 <li>Wallet started engagement with Credential Issuer.</li>
 <li>Wallet successfully obtained Credential Issuer Metadata.</li>
 <li>The Wallet sends an HTTP POST Request to the selected Authorization Server's PAR endpoint.</li>
-<li>The HTTP Request to the selected Authorization Server's PAR endpoint contains an <code>OAuth-Client-Attestation-PoP</code> HTTP header.</li>
 </ol>
 <h5 id="test-scenario_10">Test Scenario<a class="headerlink" href="#test-scenario_10" title="Link to this section">&para;</a></h5>
 <ol>
-<li>Verify the <code>OAuth-Client-Attestation-PoP</code> HTTP-Header of the received HTTP Request.</li>
+<li>Verify the request parameters of the received HTTP Request.</li>
 </ol>
 <h5 id="expected-results_10">Expected results<a class="headerlink" href="#expected-results_10" title="Link to this section">&para;</a></h5>
+<ol>
+<li>The HTTP POST Request contains a parameter <code>request</code>.</li>
+</ol>
+<!-- END INCLUDE -->
+<h4 id="ws_ap_ms_protocolmessages_034c">WS_AP_MS_ProtocolMessages_034c<a class="headerlink" href="#ws_ap_ms_protocolmessages_034c" title="Link to this section">&para;</a></h4>
+<h5 id="objective_11">Objective<a class="headerlink" href="#objective_11" title="Link to this section">&para;</a></h5>
+<p>Verify that the Wallet sends a <code>request</code> parameter in the HTTP request is a JWT (Signed Request Object) when sending a Pushed Authorization Request, when using Pushed Authorization Requests for issuance.</p>
+<h5 id="references_11">References<a class="headerlink" href="#references_11" title="Link to this section">&para;</a></h5>
+<ul>
+<li>[ETSI TS 119 472-3] section 4.4</li>
+<li>[HAIP] section 4.3</li>
+<li>[OpenID4VCI] section 5.1.4</li>
+<li>[RFC9126] section 3</li>
+</ul>
+<h5 id="profile-applicability_11">Profile applicability<a class="headerlink" href="#profile-applicability_11" title="Link to this section">&para;</a></h5>
+<p>Wallet that uses JAR during PAR for the Authorization Request to the Authorization Server on Credential Issuance.</p>
+<h5 id="eudi-wallet-relevancy_11">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_11" title="Link to this section">&para;</a></h5>
+<p>EUDI_generic | EUDI_required</p>
+<h5 id="technology_11">Technology<a class="headerlink" href="#technology_11" title="Link to this section">&para;</a></h5>
+<p>Issuance via Redirects.</p>
+<h5 id="preconditions_11">Preconditions<a class="headerlink" href="#preconditions_11" title="Link to this section">&para;</a></h5>
+<ol class="precond-alpha">
+<li>End-user is engaging with a Credential Issuer using a User-agent.</li>
+<li>Wallet started engagement with Credential Issuer.</li>
+<li>Wallet successfully obtained Credential Issuer Metadata.</li>
+<li>The Wallet sends an HTTP POST Request to the selected Authorization Server's PAR endpoint.</li>
+<li>The HTTP POST Request to the selected Authorization Server's PAR endpoint contains a <code>request</code> parameter.</li>
+</ol>
+<h5 id="test-scenario_11">Test Scenario<a class="headerlink" href="#test-scenario_11" title="Link to this section">&para;</a></h5>
+<ol>
+<li>Verify the <code>request</code> parameter in the received HTTP Request.</li>
+</ol>
+<h5 id="expected-results_11">Expected results<a class="headerlink" href="#expected-results_11" title="Link to this section">&para;</a></h5>
+<ol>
+<li>The value of the <code>request</code> parameter has the structure of a signed JWT in compact serialization, that is three base64url-encoded segments separated by two period (<code>.</code>) characters.</li>
+</ol>
+<ul>
+<li>Note: validation of the signed JWT itself as Authorization Request, is done in other test cases.</li>
+</ul>
+<!-- END INCLUDE -->
+<h4 id="ws_ap_ms_protocolmessages_034d">WS_AP_MS_ProtocolMessages_034d<a class="headerlink" href="#ws_ap_ms_protocolmessages_034d" title="Link to this section">&para;</a></h4>
+<h5 id="objective_12">Objective<a class="headerlink" href="#objective_12" title="Link to this section">&para;</a></h5>
+<p>Verify that the Wallet sends a <code>request</code> parameter in the HTTP request is a correctly formatted JWT (Signed Request Object) when sending a Pushed Authorization Request, when using Pushed Authorization Requests for issuance.</p>
+<h5 id="references_12">References<a class="headerlink" href="#references_12" title="Link to this section">&para;</a></h5>
+<ul>
+<li>[ETSI TS 119 472-3] section 4.4</li>
+<li>[HAIP] section 4.3</li>
+<li>[OpenID4VCI] section 5.1.4</li>
+<li>[RFC9126] section 3</li>
+</ul>
+<h5 id="profile-applicability_12">Profile applicability<a class="headerlink" href="#profile-applicability_12" title="Link to this section">&para;</a></h5>
+<p>Wallet that uses JAR during PAR for the Authorization Request to the Authorization Server on Credential Issuance.</p>
+<h5 id="eudi-wallet-relevancy_12">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_12" title="Link to this section">&para;</a></h5>
+<p>EUDI_generic | EUDI_required</p>
+<h5 id="technology_12">Technology<a class="headerlink" href="#technology_12" title="Link to this section">&para;</a></h5>
+<p>Issuance via Redirects.</p>
+<h5 id="preconditions_12">Preconditions<a class="headerlink" href="#preconditions_12" title="Link to this section">&para;</a></h5>
+<ol class="precond-alpha">
+<li>End-user is engaging with a Credential Issuer using a User-agent.</li>
+<li>Wallet started engagement with Credential Issuer.</li>
+<li>Wallet successfully obtained Credential Issuer Metadata.</li>
+<li>The Wallet sends an HTTP POST Request to the selected Authorization Server's PAR endpoint.</li>
+<li>The HTTP POST Request to the selected Authorization Server's PAR endpoint contains a <code>request</code> parameter.</li>
+<li>The <code>request</code> parameter sent to the selected Authorization Server's PAR endpoint has the structure of a signed JWT.</li>
+</ol>
+<h5 id="test-scenario_12">Test Scenario<a class="headerlink" href="#test-scenario_12" title="Link to this section">&para;</a></h5>
+<ol>
+<li>Perform all Shared_JWT_JWS test cases on the value of the <code>request</code> parameter.</li>
+</ol>
+<h5 id="expected-results_12">Expected results<a class="headerlink" href="#expected-results_12" title="Link to this section">&para;</a></h5>
+<ol>
+<li>All test cases pass.</li>
+</ol>
+<!-- END INCLUDE -->
+<h4 id="ws_ap_ms_protocolmessages_035a">WS_AP_MS_ProtocolMessages_035a<a class="headerlink" href="#ws_ap_ms_protocolmessages_035a" title="Link to this section">&para;</a></h4>
+<h5 id="objective_13">Objective<a class="headerlink" href="#objective_13" title="Link to this section">&para;</a></h5>
+<p>Verify that the Wallet sends a HTTP Request that contains one <code>OAuth-Client-Attestation</code> HTTP header when sending a Pushed Authorization Request, when using Pushed Authorization Requests for issuance.</p>
+<h5 id="references_13">References<a class="headerlink" href="#references_13" title="Link to this section">&para;</a></h5>
+<ul>
+<li>[CIR 2024/2979 amended] annex Ib</li>
+<li>[ETSI TS 119 472-3] section 4.4</li>
+<li>[HAIP] section 4.3</li>
+<li>[OpenID4VCI] section 5.1.4</li>
+<li>[RFC9126] section 2.1</li>
+<li>[IETF draft-attestation-based-client-auth] section 6.1, 6.2</li>
+</ul>
+<h5 id="profile-applicability_13">Profile applicability<a class="headerlink" href="#profile-applicability_13" title="Link to this section">&para;</a></h5>
+<p>None</p>
+<h5 id="eudi-wallet-relevancy_13">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_13" title="Link to this section">&para;</a></h5>
+<p>EUDI_generic | EUDI_required</p>
+<h5 id="technology_13">Technology<a class="headerlink" href="#technology_13" title="Link to this section">&para;</a></h5>
+<p>Issuance via Redirects.</p>
+<h5 id="preconditions_13">Preconditions<a class="headerlink" href="#preconditions_13" title="Link to this section">&para;</a></h5>
+<ol class="precond-alpha">
+<li>End-user is engaging with a Credential Issuer using a User-agent.</li>
+<li>Wallet started engagement with Credential Issuer.</li>
+<li>Wallet successfully obtained Credential Issuer Metadata.</li>
+<li>The Wallet sends an HTTP POST Request to the selected Authorization Server's PAR endpoint.</li>
+</ol>
+<h5 id="test-scenario_13">Test Scenario<a class="headerlink" href="#test-scenario_13" title="Link to this section">&para;</a></h5>
+<ol>
+<li>Verify the HTTP Headers of the received HTTP Request.</li>
+</ol>
+<h5 id="expected-results_13">Expected results<a class="headerlink" href="#expected-results_13" title="Link to this section">&para;</a></h5>
+<ol>
+<li>The HTTP Request contains exactly one HTTP header <code>OAuth-Client-Attestation</code>.</li>
+</ol>
+<!-- END INCLUDE -->
+<h4 id="ws_ap_ms_protocolmessages_035b">WS_AP_MS_ProtocolMessages_035b<a class="headerlink" href="#ws_ap_ms_protocolmessages_035b" title="Link to this section">&para;</a></h4>
+<h5 id="objective_14">Objective<a class="headerlink" href="#objective_14" title="Link to this section">&para;</a></h5>
+<p>Verify that the Wallet sends a HTTP Request that contains a syntactically correct <code>OAuth-Client-Attestation</code> HTTP header when sending a Pushed Authorization Request, when using Pushed Authorization Requests for issuance.</p>
+<h5 id="references_14">References<a class="headerlink" href="#references_14" title="Link to this section">&para;</a></h5>
+<ul>
+<li>[CIR 2024/2979 amended] annex Ib</li>
+<li>[ETSI TS 119 472-3] section 4.4</li>
+<li>[HAIP] section 4.3</li>
+<li>[OpenID4VCI] section 5.1.4</li>
+<li>[RFC9126] section 2.1</li>
+<li>[IETF draft-attestation-based-client-auth] section 5.1, 6.1</li>
+</ul>
+<h5 id="profile-applicability_14">Profile applicability<a class="headerlink" href="#profile-applicability_14" title="Link to this section">&para;</a></h5>
+<p>None</p>
+<h5 id="eudi-wallet-relevancy_14">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_14" title="Link to this section">&para;</a></h5>
+<p>EUDI_generic | EUDI_required</p>
+<h5 id="technology_14">Technology<a class="headerlink" href="#technology_14" title="Link to this section">&para;</a></h5>
+<p>Issuance via Redirects.</p>
+<h5 id="preconditions_14">Preconditions<a class="headerlink" href="#preconditions_14" title="Link to this section">&para;</a></h5>
+<ol class="precond-alpha">
+<li>End-user is engaging with a Credential Issuer using a User-agent.</li>
+<li>Wallet started engagement with Credential Issuer.</li>
+<li>Wallet successfully obtained Credential Issuer Metadata.</li>
+<li>The Wallet sends an HTTP POST Request to the selected Authorization Server's PAR endpoint.</li>
+<li>The HTTP Request to the selected Authorization Server's PAR endpoint contains an <code>OAuth-Client-Attestation</code> HTTP header.</li>
+</ol>
+<h5 id="test-scenario_14">Test Scenario<a class="headerlink" href="#test-scenario_14" title="Link to this section">&para;</a></h5>
+<ol>
+<li>Verify the <code>OAuth-Client-Attestation</code> HTTP-Header of the received HTTP Request.</li>
+</ol>
+<h5 id="expected-results_14">Expected results<a class="headerlink" href="#expected-results_14" title="Link to this section">&para;</a></h5>
+<ol>
+<li>The value of the <code>OAuth-Client-Attestation</code> HTTP Header of the HTTP Request has the structure of a signed JWT in compact serialization, that is three Base64url-encoded parts separated by exactly two period (<code>.</code>) characters.</li>
+</ol>
+<!-- END INCLUDE -->
+<h4 id="ws_ap_ms_protocolmessages_036a">WS_AP_MS_ProtocolMessages_036a<a class="headerlink" href="#ws_ap_ms_protocolmessages_036a" title="Link to this section">&para;</a></h4>
+<h5 id="objective_15">Objective<a class="headerlink" href="#objective_15" title="Link to this section">&para;</a></h5>
+<p>Verify that the Wallet sends a HTTP Request that contains one <code>OAuth-Client-Attestation-PoP</code> HTTP header when sending a Pushed Authorization Request, when using Pushed Authorization Requests for issuance.</p>
+<h5 id="references_15">References<a class="headerlink" href="#references_15" title="Link to this section">&para;</a></h5>
+<ul>
+<li>[CIR 2024/2979 amended] annex Ib</li>
+<li>[ETSI TS 119 472-3] section 4.4</li>
+<li>[HAIP] section 4.3</li>
+<li>[OpenID4VCI] section 5.1.4</li>
+<li>[RFC9126] section 2.1</li>
+<li>[IETF draft-attestation-based-client-auth] section 6.1, 6.2</li>
+</ul>
+<h5 id="profile-applicability_15">Profile applicability<a class="headerlink" href="#profile-applicability_15" title="Link to this section">&para;</a></h5>
+<p>None</p>
+<h5 id="eudi-wallet-relevancy_15">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_15" title="Link to this section">&para;</a></h5>
+<p>EUDI_generic | EUDI_required</p>
+<h5 id="technology_15">Technology<a class="headerlink" href="#technology_15" title="Link to this section">&para;</a></h5>
+<p>Issuance via Redirects.</p>
+<h5 id="preconditions_15">Preconditions<a class="headerlink" href="#preconditions_15" title="Link to this section">&para;</a></h5>
+<ol class="precond-alpha">
+<li>End-user is engaging with a Credential Issuer using a User-agent.</li>
+<li>Wallet started engagement with Credential Issuer.</li>
+<li>Wallet successfully obtained Credential Issuer Metadata.</li>
+<li>The Wallet sends an HTTP POST Request to the selected Authorization Server's PAR endpoint.</li>
+</ol>
+<h5 id="test-scenario_15">Test Scenario<a class="headerlink" href="#test-scenario_15" title="Link to this section">&para;</a></h5>
+<ol>
+<li>Verify the HTTP Headers of the received HTTP Request.</li>
+</ol>
+<h5 id="expected-results_15">Expected results<a class="headerlink" href="#expected-results_15" title="Link to this section">&para;</a></h5>
+<ol>
+<li>The HTTP Request contains exactly one HTTP header <code>OAuth-Client-Attestation-PoP</code>.</li>
+</ol>
+<!-- END INCLUDE -->
+<h4 id="ws_ap_ms_protocolmessages_036b">WS_AP_MS_ProtocolMessages_036b<a class="headerlink" href="#ws_ap_ms_protocolmessages_036b" title="Link to this section">&para;</a></h4>
+<h5 id="objective_16">Objective<a class="headerlink" href="#objective_16" title="Link to this section">&para;</a></h5>
+<p>Verify that the Wallet sends a HTTP Request that contains a syntactically correct <code>OAuth-Client-Attestation-PoP</code> HTTP header when sending a Pushed Authorization Request, when using Pushed Authorization Requests for issuance.</p>
+<h5 id="references_16">References<a class="headerlink" href="#references_16" title="Link to this section">&para;</a></h5>
+<ul>
+<li>[CIR 2024/2979 amended] annex Ib</li>
+<li>[ETSI TS 119 472-3] section 4.4</li>
+<li>[HAIP] section 4.3</li>
+<li>[OpenID4VCI] section 5.1.4</li>
+<li>[RFC9126] section 2.1</li>
+<li>[IETF draft-attestation-based-client-auth] section 5.2, 6.1</li>
+</ul>
+<h5 id="profile-applicability_16">Profile applicability<a class="headerlink" href="#profile-applicability_16" title="Link to this section">&para;</a></h5>
+<p>None</p>
+<h5 id="eudi-wallet-relevancy_16">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_16" title="Link to this section">&para;</a></h5>
+<p>EUDI_generic | EUDI_required</p>
+<h5 id="technology_16">Technology<a class="headerlink" href="#technology_16" title="Link to this section">&para;</a></h5>
+<p>Issuance via Redirects.</p>
+<h5 id="preconditions_16">Preconditions<a class="headerlink" href="#preconditions_16" title="Link to this section">&para;</a></h5>
+<ol class="precond-alpha">
+<li>End-user is engaging with a Credential Issuer using a User-agent.</li>
+<li>Wallet started engagement with Credential Issuer.</li>
+<li>Wallet successfully obtained Credential Issuer Metadata.</li>
+<li>The Wallet sends an HTTP POST Request to the selected Authorization Server's PAR endpoint.</li>
+<li>The HTTP Request to the selected Authorization Server's PAR endpoint contains an <code>OAuth-Client-Attestation-PoP</code> HTTP header.</li>
+</ol>
+<h5 id="test-scenario_16">Test Scenario<a class="headerlink" href="#test-scenario_16" title="Link to this section">&para;</a></h5>
+<ol>
+<li>Verify the <code>OAuth-Client-Attestation-PoP</code> HTTP-Header of the received HTTP Request.</li>
+</ol>
+<h5 id="expected-results_16">Expected results<a class="headerlink" href="#expected-results_16" title="Link to this section">&para;</a></h5>
 <ol>
 <li>The value of the <code>OAuth-Client-Attestation-PoP</code> HTTP Header of the HTTP Request has the structure of a signed JWT in compact serialization, that is three Base64url-encoded parts separated by exactly two period (<code>.</code>) characters.</li>
 </ol>
 <!-- END INCLUDE -->
 <h4 id="ws_ap_ms_protocolmessages_037a">WS_AP_MS_ProtocolMessages_037a<a class="headerlink" href="#ws_ap_ms_protocolmessages_037a" title="Link to this section">&para;</a></h4>
-<h5 id="objective_11">Objective<a class="headerlink" href="#objective_11" title="Link to this section">&para;</a></h5>
+<h5 id="objective_17">Objective<a class="headerlink" href="#objective_17" title="Link to this section">&para;</a></h5>
 <p>Verify that the Wallet sends a syntactically correct body of the Wallet Instance Attestation as Client Attestation, when using Pushed Authorization Requests for issuance.</p>
-<h5 id="references_11">References<a class="headerlink" href="#references_11" title="Link to this section">&para;</a></h5>
+<h5 id="references_17">References<a class="headerlink" href="#references_17" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[CIR 2024/2979 amended] annex Ib</li>
 <li>[ETSI TS 119 472-3] section 4.4</li>
@@ -2048,13 +2254,13 @@
 <li>[OpenID4VCI] section E</li>
 <li>[IETF draft-attestation-based-client-auth] section 5.1</li>
 </ul>
-<h5 id="profile-applicability_11">Profile applicability<a class="headerlink" href="#profile-applicability_11" title="Link to this section">&para;</a></h5>
+<h5 id="profile-applicability_17">Profile applicability<a class="headerlink" href="#profile-applicability_17" title="Link to this section">&para;</a></h5>
 <p>None</p>
-<h5 id="eudi-wallet-relevancy_11">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_11" title="Link to this section">&para;</a></h5>
+<h5 id="eudi-wallet-relevancy_17">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_17" title="Link to this section">&para;</a></h5>
 <p>EUDI_specific | EUDI_required</p>
-<h5 id="technology_11">Technology<a class="headerlink" href="#technology_11" title="Link to this section">&para;</a></h5>
+<h5 id="technology_17">Technology<a class="headerlink" href="#technology_17" title="Link to this section">&para;</a></h5>
 <p>Issuance via Redirects.</p>
-<h5 id="preconditions_11">Preconditions<a class="headerlink" href="#preconditions_11" title="Link to this section">&para;</a></h5>
+<h5 id="preconditions_17">Preconditions<a class="headerlink" href="#preconditions_17" title="Link to this section">&para;</a></h5>
 <ol class="precond-alpha">
 <li>Wallet is set to 'default_configuration_1'</li>
 <li>End-user is engaging with a Credential Issuer using a User-agent.</li>
@@ -2063,11 +2269,11 @@
 <li>Wallet send a HTTP POST Request for a Pushed Authorization Request to the PAR Endpoint of the selected Authorization Server.</li>
 <li>Wallet send a correctly signed and trusted Wallet Instance Attestation as a Client Attestation.</li>
 </ol>
-<h5 id="test-scenario_11">Test Scenario<a class="headerlink" href="#test-scenario_11" title="Link to this section">&para;</a></h5>
+<h5 id="test-scenario_17">Test Scenario<a class="headerlink" href="#test-scenario_17" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Verify the contents of the Wallet Instance Attestation (i.e. the JWT body).</li>
 </ol>
-<h5 id="expected-results_11">Expected results<a class="headerlink" href="#expected-results_11" title="Link to this section">&para;</a></h5>
+<h5 id="expected-results_17">Expected results<a class="headerlink" href="#expected-results_17" title="Link to this section">&para;</a></h5>
 <ol>
 <li>The WIA contains the following top-level claims:<ol>
 <li><code>wallet_name</code></li>
@@ -2086,9 +2292,9 @@
 </ol>
 <!-- END INCLUDE -->
 <h4 id="ws_ap_ms_protocolmessages_037b">WS_AP_MS_ProtocolMessages_037b<a class="headerlink" href="#ws_ap_ms_protocolmessages_037b" title="Link to this section">&para;</a></h4>
-<h5 id="objective_12">Objective<a class="headerlink" href="#objective_12" title="Link to this section">&para;</a></h5>
+<h5 id="objective_18">Objective<a class="headerlink" href="#objective_18" title="Link to this section">&para;</a></h5>
 <p>Verify that the Wallet sends a syntactically correct header of the Wallet Instance Attestation as Client Attestation, when using Pushed Authorization Requests for issuance.</p>
-<h5 id="references_12">References<a class="headerlink" href="#references_12" title="Link to this section">&para;</a></h5>
+<h5 id="references_18">References<a class="headerlink" href="#references_18" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[CIR 2024/2979 amended] annex Ib</li>
 <li>[ETSI TS 119 472-3] section 4.4</li>
@@ -2097,13 +2303,13 @@
 <li>[RFC9126] section 2.1</li>
 <li>[IETF draft-attestation-based-client-auth] section 5.1</li>
 </ul>
-<h5 id="profile-applicability_12">Profile applicability<a class="headerlink" href="#profile-applicability_12" title="Link to this section">&para;</a></h5>
+<h5 id="profile-applicability_18">Profile applicability<a class="headerlink" href="#profile-applicability_18" title="Link to this section">&para;</a></h5>
 <p>None</p>
-<h5 id="eudi-wallet-relevancy_12">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_12" title="Link to this section">&para;</a></h5>
+<h5 id="eudi-wallet-relevancy_18">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_18" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="technology_12">Technology<a class="headerlink" href="#technology_12" title="Link to this section">&para;</a></h5>
+<h5 id="technology_18">Technology<a class="headerlink" href="#technology_18" title="Link to this section">&para;</a></h5>
 <p>Issuance via Redirects.</p>
-<h5 id="preconditions_12">Preconditions<a class="headerlink" href="#preconditions_12" title="Link to this section">&para;</a></h5>
+<h5 id="preconditions_18">Preconditions<a class="headerlink" href="#preconditions_18" title="Link to this section">&para;</a></h5>
 <ol class="precond-alpha">
 <li>Wallet is set to 'default_configuration_1'</li>
 <li>End-user is engaging with a Credential Issuer using a User-agent.</li>
@@ -2112,19 +2318,19 @@
 <li>Wallet send a HTTP POST Request for a Pushed Authorization Request to the PAR Endpoint of the selected Authorization Server.</li>
 <li>Wallet send a correctly signed and trusted Wallet Instance Attestation as Client Attestation.</li>
 </ol>
-<h5 id="test-scenario_12">Test Scenario<a class="headerlink" href="#test-scenario_12" title="Link to this section">&para;</a></h5>
+<h5 id="test-scenario_18">Test Scenario<a class="headerlink" href="#test-scenario_18" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Verify the header of the Wallet Instance Attestation (i.e. the JWT header).</li>
 </ol>
-<h5 id="expected-results_12">Expected results<a class="headerlink" href="#expected-results_12" title="Link to this section">&para;</a></h5>
+<h5 id="expected-results_18">Expected results<a class="headerlink" href="#expected-results_18" title="Link to this section">&para;</a></h5>
 <ol>
 <li>The WIA JOSE header contains the required <code>typ</code> header parameter.</li>
 </ol>
 <!-- END INCLUDE -->
 <h4 id="ws_ap_ms_protocolmessages_037c">WS_AP_MS_ProtocolMessages_037c<a class="headerlink" href="#ws_ap_ms_protocolmessages_037c" title="Link to this section">&para;</a></h4>
-<h5 id="objective_13">Objective<a class="headerlink" href="#objective_13" title="Link to this section">&para;</a></h5>
+<h5 id="objective_19">Objective<a class="headerlink" href="#objective_19" title="Link to this section">&para;</a></h5>
 <p>Verify that the Wallet sends a correct <code>typ</code> header of the Wallet Instance Attestation as Client Attestation, when using Pushed Authorization Requests for issuance.</p>
-<h5 id="references_13">References<a class="headerlink" href="#references_13" title="Link to this section">&para;</a></h5>
+<h5 id="references_19">References<a class="headerlink" href="#references_19" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[CIR 2024/2979 amended] annex Ib</li>
 <li>[ETSI TS 119 472-3] section 4.4</li>
@@ -2133,13 +2339,13 @@
 <li>[RFC9126] section 2.1</li>
 <li>[IETF draft-attestation-based-client-auth] section 5.1</li>
 </ul>
-<h5 id="profile-applicability_13">Profile applicability<a class="headerlink" href="#profile-applicability_13" title="Link to this section">&para;</a></h5>
+<h5 id="profile-applicability_19">Profile applicability<a class="headerlink" href="#profile-applicability_19" title="Link to this section">&para;</a></h5>
 <p>None</p>
-<h5 id="eudi-wallet-relevancy_13">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_13" title="Link to this section">&para;</a></h5>
+<h5 id="eudi-wallet-relevancy_19">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_19" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="technology_13">Technology<a class="headerlink" href="#technology_13" title="Link to this section">&para;</a></h5>
+<h5 id="technology_19">Technology<a class="headerlink" href="#technology_19" title="Link to this section">&para;</a></h5>
 <p>Issuance via Redirects.</p>
-<h5 id="preconditions_13">Preconditions<a class="headerlink" href="#preconditions_13" title="Link to this section">&para;</a></h5>
+<h5 id="preconditions_19">Preconditions<a class="headerlink" href="#preconditions_19" title="Link to this section">&para;</a></h5>
 <ol class="precond-alpha">
 <li>Wallet is set to 'default_configuration_1'</li>
 <li>End-user is engaging with a Credential Issuer using a User-agent.</li>
@@ -2149,19 +2355,19 @@
 <li>Wallet send a correctly signed and trusted Wallet Instance Attestation as a Client Attestation.</li>
 <li>Wallet send a syntactically correct header of the Wallet Instance Attestation as Client Attestation.</li>
 </ol>
-<h5 id="test-scenario_13">Test Scenario<a class="headerlink" href="#test-scenario_13" title="Link to this section">&para;</a></h5>
+<h5 id="test-scenario_19">Test Scenario<a class="headerlink" href="#test-scenario_19" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Verify the <code>typ</code> JOSE header of the Wallet Instance Attestation (i.e. in the JWT header).</li>
 </ol>
-<h5 id="expected-results_13">Expected results<a class="headerlink" href="#expected-results_13" title="Link to this section">&para;</a></h5>
+<h5 id="expected-results_19">Expected results<a class="headerlink" href="#expected-results_19" title="Link to this section">&para;</a></h5>
 <ol>
 <li>The value of the <code>typ</code> header of the WIA has the value <code>oauth-client-attestation+jwt</code>.</li>
 </ol>
 <!-- END INCLUDE -->
 <h4 id="ws_ap_ms_protocolmessages_038a">WS_AP_MS_ProtocolMessages_038a<a class="headerlink" href="#ws_ap_ms_protocolmessages_038a" title="Link to this section">&para;</a></h4>
-<h5 id="objective_14">Objective<a class="headerlink" href="#objective_14" title="Link to this section">&para;</a></h5>
+<h5 id="objective_20">Objective<a class="headerlink" href="#objective_20" title="Link to this section">&para;</a></h5>
 <p>Verify that the Wallet sends a syntactically correct Wallet Instance Attestation Proof of Possesion, when using Pushed Authorization Requests for issuance.</p>
-<h5 id="references_14">References<a class="headerlink" href="#references_14" title="Link to this section">&para;</a></h5>
+<h5 id="references_20">References<a class="headerlink" href="#references_20" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[CIR 2024/2979 amended] annex Ib</li>
 <li>[ETSI TS 119 472-3] section 4.4</li>
@@ -2170,13 +2376,13 @@
 <li>[RFC9126] section 2.1</li>
 <li>[IETF draft-attestation-based-client-auth] section 5.2</li>
 </ul>
-<h5 id="profile-applicability_14">Profile applicability<a class="headerlink" href="#profile-applicability_14" title="Link to this section">&para;</a></h5>
+<h5 id="profile-applicability_20">Profile applicability<a class="headerlink" href="#profile-applicability_20" title="Link to this section">&para;</a></h5>
 <p>None</p>
-<h5 id="eudi-wallet-relevancy_14">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_14" title="Link to this section">&para;</a></h5>
+<h5 id="eudi-wallet-relevancy_20">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_20" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="technology_14">Technology<a class="headerlink" href="#technology_14" title="Link to this section">&para;</a></h5>
+<h5 id="technology_20">Technology<a class="headerlink" href="#technology_20" title="Link to this section">&para;</a></h5>
 <p>Issuance via Redirects.</p>
-<h5 id="preconditions_14">Preconditions<a class="headerlink" href="#preconditions_14" title="Link to this section">&para;</a></h5>
+<h5 id="preconditions_20">Preconditions<a class="headerlink" href="#preconditions_20" title="Link to this section">&para;</a></h5>
 <ol class="precond-alpha">
 <li>Wallet is set to 'default_configuration_1'</li>
 <li>End-user is engaging with a Credential Issuer using a User-agent.</li>
@@ -2185,11 +2391,11 @@
 <li>Wallet send a HTTP POST Request for a Pushed Authorization Request to the PAR Endpoint of the selected Authorization Server.</li>
 <li>Wallet send a correctly signed and trusted Wallet Instance Attestation as a Client Attestation.</li>
 </ol>
-<h5 id="test-scenario_14">Test Scenario<a class="headerlink" href="#test-scenario_14" title="Link to this section">&para;</a></h5>
+<h5 id="test-scenario_20">Test Scenario<a class="headerlink" href="#test-scenario_20" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Verify the claims set in the Wallet Instance Attestation Proof of Possession JWT.</li>
 </ol>
-<h5 id="expected-results_14">Expected results<a class="headerlink" href="#expected-results_14" title="Link to this section">&para;</a></h5>
+<h5 id="expected-results_20">Expected results<a class="headerlink" href="#expected-results_20" title="Link to this section">&para;</a></h5>
 <ol>
 <li>The Proof of Possession contains the following top-level claims:<ol>
 <li><code>iss</code></li>
@@ -2203,9 +2409,9 @@
 </ol>
 <!-- END INCLUDE -->
 <h4 id="ws_ap_ms_protocolmessages_039a">WS_AP_MS_ProtocolMessages_039a<a class="headerlink" href="#ws_ap_ms_protocolmessages_039a" title="Link to this section">&para;</a></h4>
-<h5 id="objective_15">Objective<a class="headerlink" href="#objective_15" title="Link to this section">&para;</a></h5>
+<h5 id="objective_21">Objective<a class="headerlink" href="#objective_21" title="Link to this section">&para;</a></h5>
 <p>Verify that the Wallet sends a syntactically correct Authorization Request to the Authorization Endpoint, when authentication to a Authorization Server for requesting issuance of a Credential.</p>
-<h5 id="references_15">References<a class="headerlink" href="#references_15" title="Link to this section">&para;</a></h5>
+<h5 id="references_21">References<a class="headerlink" href="#references_21" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[ETSI TS 119 472-3] section 4.4</li>
 <li>[HAIP] section 4.3</li>
@@ -2214,13 +2420,13 @@
 <li>[RFC9101] section 5.2.2</li>
 <li>[RFC6749] section 4.1.1</li>
 </ul>
-<h5 id="profile-applicability_15">Profile applicability<a class="headerlink" href="#profile-applicability_15" title="Link to this section">&para;</a></h5>
+<h5 id="profile-applicability_21">Profile applicability<a class="headerlink" href="#profile-applicability_21" title="Link to this section">&para;</a></h5>
 <p>None</p>
-<h5 id="eudi-wallet-relevancy_15">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_15" title="Link to this section">&para;</a></h5>
+<h5 id="eudi-wallet-relevancy_21">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_21" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="technology_15">Technology<a class="headerlink" href="#technology_15" title="Link to this section">&para;</a></h5>
+<h5 id="technology_21">Technology<a class="headerlink" href="#technology_21" title="Link to this section">&para;</a></h5>
 <p>Issuance via Redirects.</p>
-<h5 id="preconditions_15">Preconditions<a class="headerlink" href="#preconditions_15" title="Link to this section">&para;</a></h5>
+<h5 id="preconditions_21">Preconditions<a class="headerlink" href="#preconditions_21" title="Link to this section">&para;</a></h5>
 <ol class="precond-alpha">
 <li>Wallet is set to 'default_configuration_1'</li>
 <li>End-user is engaging with a Credential Issuer using a User-agent.</li>
@@ -2229,11 +2435,11 @@
 <li>Wallet send a valid and trusted PAR request the Authorization Server's PAR Endpoint.</li>
 <li>Wallet send a Authorization Request to the Authorization Server's Authorization Endpoint.</li>
 </ol>
-<h5 id="test-scenario_15">Test Scenario<a class="headerlink" href="#test-scenario_15" title="Link to this section">&para;</a></h5>
+<h5 id="test-scenario_21">Test Scenario<a class="headerlink" href="#test-scenario_21" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Verify the Authorization Request.</li>
 </ol>
-<h5 id="expected-results_15">Expected results<a class="headerlink" href="#expected-results_15" title="Link to this section">&para;</a></h5>
+<h5 id="expected-results_21">Expected results<a class="headerlink" href="#expected-results_21" title="Link to this section">&para;</a></h5>
 <ol>
 <li>The Authorization Request contains the following top-level request parameters:<ol>
 <li><code>request_uri</code></li>
@@ -2243,9 +2449,9 @@
 </ol>
 <!-- END INCLUDE -->
 <h4 id="ws_ap_ms_protocolmessages_039b">WS_AP_MS_ProtocolMessages_039b<a class="headerlink" href="#ws_ap_ms_protocolmessages_039b" title="Link to this section">&para;</a></h4>
-<h5 id="objective_16">Objective<a class="headerlink" href="#objective_16" title="Link to this section">&para;</a></h5>
+<h5 id="objective_22">Objective<a class="headerlink" href="#objective_22" title="Link to this section">&para;</a></h5>
 <p>Verify that the Wallet sends a syntactically correct <code>request_uri</code> parameter in the Authorization Request to the Authorization Endpoint, when authentication to a Authorization Server for requesting issuance of a Credential.</p>
-<h5 id="references_16">References<a class="headerlink" href="#references_16" title="Link to this section">&para;</a></h5>
+<h5 id="references_22">References<a class="headerlink" href="#references_22" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[ETSI TS 119 472-3] section 4.4</li>
 <li>[HAIP] section 4.3</li>
@@ -2253,13 +2459,13 @@
 <li>[RFC9126] section 4</li>
 <li>[RFC9101] section 5, 5.2.2</li>
 </ul>
-<h5 id="profile-applicability_16">Profile applicability<a class="headerlink" href="#profile-applicability_16" title="Link to this section">&para;</a></h5>
+<h5 id="profile-applicability_22">Profile applicability<a class="headerlink" href="#profile-applicability_22" title="Link to this section">&para;</a></h5>
 <p>None</p>
-<h5 id="eudi-wallet-relevancy_16">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_16" title="Link to this section">&para;</a></h5>
+<h5 id="eudi-wallet-relevancy_22">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_22" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="technology_16">Technology<a class="headerlink" href="#technology_16" title="Link to this section">&para;</a></h5>
+<h5 id="technology_22">Technology<a class="headerlink" href="#technology_22" title="Link to this section">&para;</a></h5>
 <p>Issuance via Redirects.</p>
-<h5 id="preconditions_16">Preconditions<a class="headerlink" href="#preconditions_16" title="Link to this section">&para;</a></h5>
+<h5 id="preconditions_22">Preconditions<a class="headerlink" href="#preconditions_22" title="Link to this section">&para;</a></h5>
 <ol class="precond-alpha">
 <li>Wallet is set to 'default_configuration_1'</li>
 <li>End-user is engaging with a Credential Issuer using a User-agent.</li>
@@ -2268,19 +2474,19 @@
 <li>Wallet send a valid and trusted PAR request the Authorization Server's PAR Endpoint.</li>
 <li>Wallet send a Authorization Request to the Authorization Server's Authorization Endpoint.</li>
 </ol>
-<h5 id="test-scenario_16">Test Scenario<a class="headerlink" href="#test-scenario_16" title="Link to this section">&para;</a></h5>
+<h5 id="test-scenario_22">Test Scenario<a class="headerlink" href="#test-scenario_22" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Verify the <code>request_uri</code> parameter of the Authorization Request.</li>
 </ol>
-<h5 id="expected-results_16">Expected results<a class="headerlink" href="#expected-results_16" title="Link to this section">&para;</a></h5>
+<h5 id="expected-results_22">Expected results<a class="headerlink" href="#expected-results_22" title="Link to this section">&para;</a></h5>
 <ol>
 <li>The value of the <code>request_uri</code> parameter of the Authorization Request is a syntactically correct formatted URI.</li>
 </ol>
 <!-- END INCLUDE -->
 <h4 id="ws_ap_ms_protocolmessages_040a">WS_AP_MS_ProtocolMessages_040a<a class="headerlink" href="#ws_ap_ms_protocolmessages_040a" title="Link to this section">&para;</a></h4>
-<h5 id="objective_17">Objective<a class="headerlink" href="#objective_17" title="Link to this section">&para;</a></h5>
+<h5 id="objective_23">Objective<a class="headerlink" href="#objective_23" title="Link to this section">&para;</a></h5>
 <p>Verify that the Wallet sends a syntactically correct Pushed Authorization Request, when authentication to a Authorization Server for requesting issuance of a Credential.</p>
-<h5 id="references_17">References<a class="headerlink" href="#references_17" title="Link to this section">&para;</a></h5>
+<h5 id="references_23">References<a class="headerlink" href="#references_23" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[ETSI TS 119 472-3] section 4.4</li>
 <li>[HAIP] section 4.3</li>
@@ -2288,13 +2494,13 @@
 <li>[RFC6749] section 4.1.1</li>
 <li>[RFC7636] section 4.3</li>
 </ul>
-<h5 id="profile-applicability_17">Profile applicability<a class="headerlink" href="#profile-applicability_17" title="Link to this section">&para;</a></h5>
+<h5 id="profile-applicability_23">Profile applicability<a class="headerlink" href="#profile-applicability_23" title="Link to this section">&para;</a></h5>
 <p>None</p>
-<h5 id="eudi-wallet-relevancy_17">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_17" title="Link to this section">&para;</a></h5>
+<h5 id="eudi-wallet-relevancy_23">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_23" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="technology_17">Technology<a class="headerlink" href="#technology_17" title="Link to this section">&para;</a></h5>
+<h5 id="technology_23">Technology<a class="headerlink" href="#technology_23" title="Link to this section">&para;</a></h5>
 <p>Issuance via Redirects.</p>
-<h5 id="preconditions_17">Preconditions<a class="headerlink" href="#preconditions_17" title="Link to this section">&para;</a></h5>
+<h5 id="preconditions_23">Preconditions<a class="headerlink" href="#preconditions_23" title="Link to this section">&para;</a></h5>
 <ol class="precond-alpha">
 <li>Wallet is set to 'default_configuration_1'</li>
 <li>End-user is engaging with a Credential Issuer using a User-agent.</li>
@@ -2303,11 +2509,11 @@
 <li>Wallet send a valid and trusted PAR request the Authorization Server's PAR Endpoint.</li>
 <li>Wallet send a valid Authorization Request to the Authorization Server's Authorization Endpoint.</li>
 </ol>
-<h5 id="test-scenario_17">Test Scenario<a class="headerlink" href="#test-scenario_17" title="Link to this section">&para;</a></h5>
+<h5 id="test-scenario_23">Test Scenario<a class="headerlink" href="#test-scenario_23" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Verify the Pushed Authorization Request.</li>
 </ol>
-<h5 id="expected-results_17">Expected results<a class="headerlink" href="#expected-results_17" title="Link to this section">&para;</a></h5>
+<h5 id="expected-results_23">Expected results<a class="headerlink" href="#expected-results_23" title="Link to this section">&para;</a></h5>
 <ol>
 <li>The Pushed Authorization Request  contains the following top-level request parameters:<ol>
 <li><code>scope</code></li>
@@ -2323,21 +2529,21 @@
 </ol>
 <!-- END INCLUDE -->
 <h4 id="ws_ap_ms_protocolmessages_040b">WS_AP_MS_ProtocolMessages_040b<a class="headerlink" href="#ws_ap_ms_protocolmessages_040b" title="Link to this section">&para;</a></h4>
-<h5 id="objective_18">Objective<a class="headerlink" href="#objective_18" title="Link to this section">&para;</a></h5>
+<h5 id="objective_24">Objective<a class="headerlink" href="#objective_24" title="Link to this section">&para;</a></h5>
 <p>Verify that the Wallet sends a correct Pushed Authorization Request, when authentication to a Authorization Server for requesting issuance of a Credential.</p>
-<h5 id="references_18">References<a class="headerlink" href="#references_18" title="Link to this section">&para;</a></h5>
+<h5 id="references_24">References<a class="headerlink" href="#references_24" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[ETSI TS 119 472-3] section 4.4</li>
 <li>[HAIP] section 4.3</li>
 <li>[OpenID4VCI] section 5.1.2</li>
 </ul>
-<h5 id="profile-applicability_18">Profile applicability<a class="headerlink" href="#profile-applicability_18" title="Link to this section">&para;</a></h5>
+<h5 id="profile-applicability_24">Profile applicability<a class="headerlink" href="#profile-applicability_24" title="Link to this section">&para;</a></h5>
 <p>None</p>
-<h5 id="eudi-wallet-relevancy_18">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_18" title="Link to this section">&para;</a></h5>
+<h5 id="eudi-wallet-relevancy_24">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_24" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="technology_18">Technology<a class="headerlink" href="#technology_18" title="Link to this section">&para;</a></h5>
+<h5 id="technology_24">Technology<a class="headerlink" href="#technology_24" title="Link to this section">&para;</a></h5>
 <p>Issuance via Redirects.</p>
-<h5 id="preconditions_18">Preconditions<a class="headerlink" href="#preconditions_18" title="Link to this section">&para;</a></h5>
+<h5 id="preconditions_24">Preconditions<a class="headerlink" href="#preconditions_24" title="Link to this section">&para;</a></h5>
 <ol class="precond-alpha">
 <li>Wallet is set to 'default_configuration_1'</li>
 <li>End-user is engaging with a Credential Issuer using a User-agent.</li>
@@ -2347,11 +2553,11 @@
 <li>Wallet send a valid Authorization Request to the Authorization Server's Authorization Endpoint.</li>
 <li>Wallet send a syntactically correct Authorization Request Request Object.</li>
 </ol>
-<h5 id="test-scenario_18">Test Scenario<a class="headerlink" href="#test-scenario_18" title="Link to this section">&para;</a></h5>
+<h5 id="test-scenario_24">Test Scenario<a class="headerlink" href="#test-scenario_24" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Verify the <code>scope</code> parameter in the Pushed Authorization Request.</li>
 </ol>
-<h5 id="expected-results_18">Expected results<a class="headerlink" href="#expected-results_18" title="Link to this section">&para;</a></h5>
+<h5 id="expected-results_24">Expected results<a class="headerlink" href="#expected-results_24" title="Link to this section">&para;</a></h5>
 <ol>
 <li>
 <p>The value of the <code>scope</code> parameter matches with one or more values, with whitespace(s) as separator, where each value matches a <code>scope</code> of a <code>credential_configurations_supported</code> of the Credential Issuer as stated in the Credential Issuer's metadata.</p>
@@ -2362,21 +2568,21 @@
 </ol>
 <!-- END INCLUDE -->
 <h4 id="ws_ap_ms_protocolmessages_050a">WS_AP_MS_ProtocolMessages_050a<a class="headerlink" href="#ws_ap_ms_protocolmessages_050a" title="Link to this section">&para;</a></h4>
-<h5 id="objective_19">Objective<a class="headerlink" href="#objective_19" title="Link to this section">&para;</a></h5>
+<h5 id="objective_25">Objective<a class="headerlink" href="#objective_25" title="Link to this section">&para;</a></h5>
 <p>Verify that the Wallet sends a syntactically correct Credential Request to the Credential Endpoint of the Credential Issuer, when requesting issuance of a Credential with Key Binding.</p>
-<h5 id="references_19">References<a class="headerlink" href="#references_19" title="Link to this section">&para;</a></h5>
+<h5 id="references_25">References<a class="headerlink" href="#references_25" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[ETSI TS 119 472-3] section 4.6</li>
 <li>[HAIP] section 4.5</li>
 <li>[OpenID4VCI] section 8.2</li>
 </ul>
-<h5 id="profile-applicability_19">Profile applicability<a class="headerlink" href="#profile-applicability_19" title="Link to this section">&para;</a></h5>
+<h5 id="profile-applicability_25">Profile applicability<a class="headerlink" href="#profile-applicability_25" title="Link to this section">&para;</a></h5>
 <p>None</p>
-<h5 id="eudi-wallet-relevancy_19">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_19" title="Link to this section">&para;</a></h5>
+<h5 id="eudi-wallet-relevancy_25">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_25" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="technology_19">Technology<a class="headerlink" href="#technology_19" title="Link to this section">&para;</a></h5>
+<h5 id="technology_25">Technology<a class="headerlink" href="#technology_25" title="Link to this section">&para;</a></h5>
 <p>Issuance via Redirects.</p>
-<h5 id="preconditions_19">Preconditions<a class="headerlink" href="#preconditions_19" title="Link to this section">&para;</a></h5>
+<h5 id="preconditions_25">Preconditions<a class="headerlink" href="#preconditions_25" title="Link to this section">&para;</a></h5>
 <ol class="precond-alpha">
 <li>Wallet is set to 'default_configuration_1'</li>
 <li>Wallet started engagement with Credential Issuer.</li>
@@ -2384,11 +2590,11 @@
 <li>The Wallet obtained an Access Token from a Token Response that did not return <code>credential_identifiers</code>.</li>
 <li>Wallet send a correctly formatted HTTP Request to the Credential Endpoint.</li>
 </ol>
-<h5 id="test-scenario_19">Test Scenario<a class="headerlink" href="#test-scenario_19" title="Link to this section">&para;</a></h5>
+<h5 id="test-scenario_25">Test Scenario<a class="headerlink" href="#test-scenario_25" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Verify the presence of parameters in the HTTP Request send to the Credential Endpoint.</li>
 </ol>
-<h5 id="expected-results_19">Expected results<a class="headerlink" href="#expected-results_19" title="Link to this section">&para;</a></h5>
+<h5 id="expected-results_25">Expected results<a class="headerlink" href="#expected-results_25" title="Link to this section">&para;</a></h5>
 <ol>
 <li>The HTTP Request contains the following parameters:<ol>
 <li><code>credential_identifier</code> is absent</li>
@@ -2398,27 +2604,27 @@
 </ol>
 </li>
 </ol>
-<h5 id="comments">Comments<a class="headerlink" href="#comments" title="Link to this section">&para;</a></h5>
+<h5 id="comments_2">Comments<a class="headerlink" href="#comments_2" title="Link to this section">&para;</a></h5>
 <ul>
 <li>HAIP requires the <code>scope</code> Authorization parameter; under OpenID4VCI 8.2, the Credential Request uses <code>credential_configuration_id</code> only when the Token Response did not return <code>credential_identifiers</code>.</li>
 </ul>
 <!-- END INCLUDE -->
 <h4 id="ws_ap_ms_protocolmessages_050b">WS_AP_MS_ProtocolMessages_050b<a class="headerlink" href="#ws_ap_ms_protocolmessages_050b" title="Link to this section">&para;</a></h4>
-<h5 id="objective_20">Objective<a class="headerlink" href="#objective_20" title="Link to this section">&para;</a></h5>
+<h5 id="objective_26">Objective<a class="headerlink" href="#objective_26" title="Link to this section">&para;</a></h5>
 <p>Verify that the Wallet sends a syntactically correct <code>credential_configuration_id</code> parameter in the Credential Request to the Credential Endpoint of the Credential Issuer, when requesting issuance of a Credential with Key Binding.</p>
-<h5 id="references_20">References<a class="headerlink" href="#references_20" title="Link to this section">&para;</a></h5>
+<h5 id="references_26">References<a class="headerlink" href="#references_26" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[ETSI TS 119 472-3] section 4.6</li>
 <li>[HAIP] section 4.5</li>
 <li>[OpenID4VCI] section 8.2</li>
 </ul>
-<h5 id="profile-applicability_20">Profile applicability<a class="headerlink" href="#profile-applicability_20" title="Link to this section">&para;</a></h5>
+<h5 id="profile-applicability_26">Profile applicability<a class="headerlink" href="#profile-applicability_26" title="Link to this section">&para;</a></h5>
 <p>None</p>
-<h5 id="eudi-wallet-relevancy_20">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_20" title="Link to this section">&para;</a></h5>
+<h5 id="eudi-wallet-relevancy_26">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_26" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="technology_20">Technology<a class="headerlink" href="#technology_20" title="Link to this section">&para;</a></h5>
+<h5 id="technology_26">Technology<a class="headerlink" href="#technology_26" title="Link to this section">&para;</a></h5>
 <p>Issuance via Redirects.</p>
-<h5 id="preconditions_20">Preconditions<a class="headerlink" href="#preconditions_20" title="Link to this section">&para;</a></h5>
+<h5 id="preconditions_26">Preconditions<a class="headerlink" href="#preconditions_26" title="Link to this section">&para;</a></h5>
 <ol class="precond-alpha">
 <li>Wallet is set to 'default_configuration_1'</li>
 <li>Wallet started engagement with Credential Issuer.</li>
@@ -2427,31 +2633,31 @@
 <li>Wallet send a HTTP Request to the Credential Endpoint.</li>
 <li>Wallet send a Credential Request containing the <code>credential_configuration_id</code> parameter to the Credential Endpoint.</li>
 </ol>
-<h5 id="test-scenario_20">Test Scenario<a class="headerlink" href="#test-scenario_20" title="Link to this section">&para;</a></h5>
+<h5 id="test-scenario_26">Test Scenario<a class="headerlink" href="#test-scenario_26" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Verify the <code>credential_configuration_id</code> parameter in the HTTP Request send to the Credential Endpoint.</li>
 </ol>
-<h5 id="expected-results_20">Expected results<a class="headerlink" href="#expected-results_20" title="Link to this section">&para;</a></h5>
+<h5 id="expected-results_26">Expected results<a class="headerlink" href="#expected-results_26" title="Link to this section">&para;</a></h5>
 <ol>
 <li>The <code>credential_configuration_id</code> parameter in the HTTP Request is a string.</li>
 </ol>
 <!-- END INCLUDE -->
 <h4 id="ws_ap_ms_protocolmessages_050c">WS_AP_MS_ProtocolMessages_050c<a class="headerlink" href="#ws_ap_ms_protocolmessages_050c" title="Link to this section">&para;</a></h4>
-<h5 id="objective_21">Objective<a class="headerlink" href="#objective_21" title="Link to this section">&para;</a></h5>
+<h5 id="objective_27">Objective<a class="headerlink" href="#objective_27" title="Link to this section">&para;</a></h5>
 <p>Verify that the Wallet sends a correct <code>credential_configuration_id</code> parameter in the Credential Request to the Credential Endpoint of the Credential Issuer, when requesting issuance of a Credential with Key Binding.</p>
-<h5 id="references_21">References<a class="headerlink" href="#references_21" title="Link to this section">&para;</a></h5>
+<h5 id="references_27">References<a class="headerlink" href="#references_27" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[ETSI TS 119 472-3] section 4.6</li>
 <li>[HAIP] section 4.5</li>
 <li>[OpenID4VCI] section 8.2</li>
 </ul>
-<h5 id="profile-applicability_21">Profile applicability<a class="headerlink" href="#profile-applicability_21" title="Link to this section">&para;</a></h5>
+<h5 id="profile-applicability_27">Profile applicability<a class="headerlink" href="#profile-applicability_27" title="Link to this section">&para;</a></h5>
 <p>None</p>
-<h5 id="eudi-wallet-relevancy_21">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_21" title="Link to this section">&para;</a></h5>
+<h5 id="eudi-wallet-relevancy_27">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_27" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="technology_21">Technology<a class="headerlink" href="#technology_21" title="Link to this section">&para;</a></h5>
+<h5 id="technology_27">Technology<a class="headerlink" href="#technology_27" title="Link to this section">&para;</a></h5>
 <p>Issuance via Redirects.</p>
-<h5 id="preconditions_21">Preconditions<a class="headerlink" href="#preconditions_21" title="Link to this section">&para;</a></h5>
+<h5 id="preconditions_27">Preconditions<a class="headerlink" href="#preconditions_27" title="Link to this section">&para;</a></h5>
 <ol class="precond-alpha">
 <li>Wallet is set to 'default_configuration_1'</li>
 <li>Wallet started engagement with Credential Issuer.</li>
@@ -2460,31 +2666,31 @@
 <li>Wallet send a HTTP Request to the Credential Endpoint</li>
 <li>Wallet send a Credential Request containing a syntactically correct <code>credential_configuration_id</code> parameter to the Credential Endpoint.</li>
 </ol>
-<h5 id="test-scenario_21">Test Scenario<a class="headerlink" href="#test-scenario_21" title="Link to this section">&para;</a></h5>
+<h5 id="test-scenario_27">Test Scenario<a class="headerlink" href="#test-scenario_27" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Verify the <code>credential_configuration_id</code> parameter in the HTTP Request send to the Credential Endpoint.</li>
 </ol>
-<h5 id="expected-results_21">Expected results<a class="headerlink" href="#expected-results_21" title="Link to this section">&para;</a></h5>
+<h5 id="expected-results_27">Expected results<a class="headerlink" href="#expected-results_27" title="Link to this section">&para;</a></h5>
 <ol>
 <li>The <code>credential_configuration_id</code> value identifies a key in the <code>credential_configurations_supported</code> map whose corresponding configuration contains a scope value used in the Authorization Request.</li>
 </ol>
 <!-- END INCLUDE -->
 <h4 id="ws_ap_ms_protocolmessages_050d">WS_AP_MS_ProtocolMessages_050d<a class="headerlink" href="#ws_ap_ms_protocolmessages_050d" title="Link to this section">&para;</a></h4>
-<h5 id="objective_22">Objective<a class="headerlink" href="#objective_22" title="Link to this section">&para;</a></h5>
+<h5 id="objective_28">Objective<a class="headerlink" href="#objective_28" title="Link to this section">&para;</a></h5>
 <p>Verify that the Wallet sends a correctly formatted <code>proofs</code> parameter in the Credential Request to the Credential Endpoint of the Credential Issuer, when requesting issuance of a Credential with Key Binding.</p>
-<h5 id="references_22">References<a class="headerlink" href="#references_22" title="Link to this section">&para;</a></h5>
+<h5 id="references_28">References<a class="headerlink" href="#references_28" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[ETSI TS 119 472-3] section 4.6</li>
 <li>[HAIP] section 4.5</li>
 <li>[OpenID4VCI] section 8.2</li>
 </ul>
-<h5 id="profile-applicability_22">Profile applicability<a class="headerlink" href="#profile-applicability_22" title="Link to this section">&para;</a></h5>
+<h5 id="profile-applicability_28">Profile applicability<a class="headerlink" href="#profile-applicability_28" title="Link to this section">&para;</a></h5>
 <p>None</p>
-<h5 id="eudi-wallet-relevancy_22">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_22" title="Link to this section">&para;</a></h5>
+<h5 id="eudi-wallet-relevancy_28">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_28" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="technology_22">Technology<a class="headerlink" href="#technology_22" title="Link to this section">&para;</a></h5>
+<h5 id="technology_28">Technology<a class="headerlink" href="#technology_28" title="Link to this section">&para;</a></h5>
 <p>Issuance via Redirects.</p>
-<h5 id="preconditions_22">Preconditions<a class="headerlink" href="#preconditions_22" title="Link to this section">&para;</a></h5>
+<h5 id="preconditions_28">Preconditions<a class="headerlink" href="#preconditions_28" title="Link to this section">&para;</a></h5>
 <ol class="precond-alpha">
 <li>Wallet is set to 'default_configuration_1'</li>
 <li>Wallet started engagement with Credential Issuer.</li>
@@ -2493,31 +2699,31 @@
 <li>Wallet send a HTTP Request to the Credential Endpoint.</li>
 <li>Wallet send a Credential Request containing the <code>proofs</code> parameter to the Credential Endpoint.</li>
 </ol>
-<h5 id="test-scenario_22">Test Scenario<a class="headerlink" href="#test-scenario_22" title="Link to this section">&para;</a></h5>
+<h5 id="test-scenario_28">Test Scenario<a class="headerlink" href="#test-scenario_28" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Verify the <code>proofs</code> parameter in the HTTP Request send to the Credential Endpoint.</li>
 </ol>
-<h5 id="expected-results_22">Expected results<a class="headerlink" href="#expected-results_22" title="Link to this section">&para;</a></h5>
+<h5 id="expected-results_28">Expected results<a class="headerlink" href="#expected-results_28" title="Link to this section">&para;</a></h5>
 <ol>
 <li>The <code>proofs</code> parameter in the HTTP Request is a JSON object.</li>
 </ol>
 <!-- END INCLUDE -->
 <h4 id="ws_ap_ms_protocolmessages_050e">WS_AP_MS_ProtocolMessages_050e<a class="headerlink" href="#ws_ap_ms_protocolmessages_050e" title="Link to this section">&para;</a></h4>
-<h5 id="objective_23">Objective<a class="headerlink" href="#objective_23" title="Link to this section">&para;</a></h5>
+<h5 id="objective_29">Objective<a class="headerlink" href="#objective_29" title="Link to this section">&para;</a></h5>
 <p>Verify that the Wallet sends a syntactically correct <code>proofs</code> parameter in the Credential Request to the Credential Endpoint of the Credential Issuer, when requesting issuance of a Credential with Key Binding.</p>
-<h5 id="references_23">References<a class="headerlink" href="#references_23" title="Link to this section">&para;</a></h5>
+<h5 id="references_29">References<a class="headerlink" href="#references_29" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[ETSI TS 119 472-3] section 4.6.1</li>
 <li>[HAIP] section 4.5.1</li>
 <li>[OpenID4VCI] section 8.2, F</li>
 </ul>
-<h5 id="profile-applicability_23">Profile applicability<a class="headerlink" href="#profile-applicability_23" title="Link to this section">&para;</a></h5>
+<h5 id="profile-applicability_29">Profile applicability<a class="headerlink" href="#profile-applicability_29" title="Link to this section">&para;</a></h5>
 <p>None</p>
-<h5 id="eudi-wallet-relevancy_23">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_23" title="Link to this section">&para;</a></h5>
+<h5 id="eudi-wallet-relevancy_29">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_29" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="technology_23">Technology<a class="headerlink" href="#technology_23" title="Link to this section">&para;</a></h5>
+<h5 id="technology_29">Technology<a class="headerlink" href="#technology_29" title="Link to this section">&para;</a></h5>
 <p>Issuance via Redirects.</p>
-<h5 id="preconditions_23">Preconditions<a class="headerlink" href="#preconditions_23" title="Link to this section">&para;</a></h5>
+<h5 id="preconditions_29">Preconditions<a class="headerlink" href="#preconditions_29" title="Link to this section">&para;</a></h5>
 <ol class="precond-alpha">
 <li>Wallet is set to 'default_configuration_1'</li>
 <li>Wallet started engagement with Credential Issuer.</li>
@@ -2526,30 +2732,30 @@
 <li>Wallet send a HTTP Request to the Credential Endpoint.</li>
 <li>Wallet send a Credential Request a containing syntactically correct <code>proofs</code> parameter to the Credential Endpoint.</li>
 </ol>
-<h5 id="test-scenario_23">Test Scenario<a class="headerlink" href="#test-scenario_23" title="Link to this section">&para;</a></h5>
+<h5 id="test-scenario_29">Test Scenario<a class="headerlink" href="#test-scenario_29" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Verify the presence of properties in the <code>proofs</code> parameter in the HTTP Request send to the Credential Endpoint.</li>
 </ol>
-<h5 id="expected-results_23">Expected results<a class="headerlink" href="#expected-results_23" title="Link to this section">&para;</a></h5>
+<h5 id="expected-results_29">Expected results<a class="headerlink" href="#expected-results_29" title="Link to this section">&para;</a></h5>
 <ol>
 <li>The <code>proofs</code> parameter in the HTTP Request contains either a <code>jwt</code> or <code>attestation</code> property, not both.</li>
 </ol>
 <!-- END INCLUDE -->
 <h4 id="ws_ap_ms_protocolmessages_051a">WS_AP_MS_ProtocolMessages_051a<a class="headerlink" href="#ws_ap_ms_protocolmessages_051a" title="Link to this section">&para;</a></h4>
-<h5 id="objective_24">Objective<a class="headerlink" href="#objective_24" title="Link to this section">&para;</a></h5>
+<h5 id="objective_30">Objective<a class="headerlink" href="#objective_30" title="Link to this section">&para;</a></h5>
 <p>Verify that the Wallet sends a <code>jwt</code> in the <code>proofs</code> in the Credential Request to the Credential Endpoint of a Credential Issuer, when the <code>jwt</code> Proof Type is used.</p>
-<h5 id="references_24">References<a class="headerlink" href="#references_24" title="Link to this section">&para;</a></h5>
+<h5 id="references_30">References<a class="headerlink" href="#references_30" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[CIR 2024/2979 amended] annex Ib</li>
 <li>[ETSI TS 119 472-3] section 4.6.1</li>
 <li>[HAIP] section 4.5.1</li>
 <li>[OpenID4VCI] section 8.2, F.1</li>
 </ul>
-<h5 id="profile-applicability_24">Profile applicability<a class="headerlink" href="#profile-applicability_24" title="Link to this section">&para;</a></h5>
+<h5 id="profile-applicability_30">Profile applicability<a class="headerlink" href="#profile-applicability_30" title="Link to this section">&para;</a></h5>
 <p>Wallet uses the <code>jwt</code> proof type to convey a key attestation in Credential Requests.</p>
-<h5 id="eudi-wallet-relevancy_24">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_24" title="Link to this section">&para;</a></h5>
+<h5 id="eudi-wallet-relevancy_30">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_30" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="preconditions_24">Preconditions<a class="headerlink" href="#preconditions_24" title="Link to this section">&para;</a></h5>
+<h5 id="preconditions_30">Preconditions<a class="headerlink" href="#preconditions_30" title="Link to this section">&para;</a></h5>
 <ol class="precond-alpha">
 <li>Wallet is set to 'default_configuration_1'</li>
 <li>Wallet started engagement with Credential Issuer.</li>
@@ -2558,30 +2764,30 @@
 <li>Wallet send a syntactically correct Credential Request to the Credential Endpoint of the Credential Issuer.</li>
 <li>Wallet send a syntactically correct <code>proofs</code> parameter in the Credential Request.</li>
 </ol>
-<h5 id="test-scenario_24">Test Scenario<a class="headerlink" href="#test-scenario_24" title="Link to this section">&para;</a></h5>
+<h5 id="test-scenario_30">Test Scenario<a class="headerlink" href="#test-scenario_30" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Verify the contents of the <code>proofs</code> parameter in the Credential Request.</li>
 </ol>
-<h5 id="expected-results_24">Expected results<a class="headerlink" href="#expected-results_24" title="Link to this section">&para;</a></h5>
+<h5 id="expected-results_30">Expected results<a class="headerlink" href="#expected-results_30" title="Link to this section">&para;</a></h5>
 <ol>
 <li>The <code>proofs</code> parameter contains a <code>jwt</code> property that is an array.</li>
 </ol>
 <!-- END INCLUDE -->
 <h4 id="ws_ap_ms_protocolmessages_051b">WS_AP_MS_ProtocolMessages_051b<a class="headerlink" href="#ws_ap_ms_protocolmessages_051b" title="Link to this section">&para;</a></h4>
-<h5 id="objective_25">Objective<a class="headerlink" href="#objective_25" title="Link to this section">&para;</a></h5>
+<h5 id="objective_31">Objective<a class="headerlink" href="#objective_31" title="Link to this section">&para;</a></h5>
 <p>Verify that the Wallet sends a correctly formatted  <code>jwt</code> in the <code>proofs</code> in the Credential Request to the Credential Endpoint of a Credential Issuer, when the <code>jwt</code> Proof Type is used.</p>
-<h5 id="references_25">References<a class="headerlink" href="#references_25" title="Link to this section">&para;</a></h5>
+<h5 id="references_31">References<a class="headerlink" href="#references_31" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[CIR 2024/2979 amended] annex Ib</li>
 <li>[ETSI TS 119 472-3] section 4.6.1.2</li>
 <li>[HAIP] section 4.5.1</li>
 <li>[OpenID4VCI] section 8.2, F.1</li>
 </ul>
-<h5 id="profile-applicability_25">Profile applicability<a class="headerlink" href="#profile-applicability_25" title="Link to this section">&para;</a></h5>
+<h5 id="profile-applicability_31">Profile applicability<a class="headerlink" href="#profile-applicability_31" title="Link to this section">&para;</a></h5>
 <p>Wallet uses the <code>jwt</code> proof type to convey a key attestation in Credential Requests.</p>
-<h5 id="eudi-wallet-relevancy_25">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_25" title="Link to this section">&para;</a></h5>
+<h5 id="eudi-wallet-relevancy_31">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_31" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="preconditions_25">Preconditions<a class="headerlink" href="#preconditions_25" title="Link to this section">&para;</a></h5>
+<h5 id="preconditions_31">Preconditions<a class="headerlink" href="#preconditions_31" title="Link to this section">&para;</a></h5>
 <ol class="precond-alpha">
 <li>Wallet is set to 'default_configuration_1'</li>
 <li>Wallet started engagement with Credential Issuer.</li>
@@ -2591,30 +2797,30 @@
 <li>Wallet send a syntactically correct <code>proofs</code> parameter in the Credential Request.</li>
 <li>Wallet send a <code>jwt</code> property in the <code>proofs</code> parameter of the Credential Request.</li>
 </ol>
-<h5 id="test-scenario_25">Test Scenario<a class="headerlink" href="#test-scenario_25" title="Link to this section">&para;</a></h5>
+<h5 id="test-scenario_31">Test Scenario<a class="headerlink" href="#test-scenario_31" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Verify the <code>jwt</code> property of the <code>proofs</code> parameter in the Credential Request.</li>
 </ol>
-<h5 id="expected-results_25">Expected results<a class="headerlink" href="#expected-results_25" title="Link to this section">&para;</a></h5>
+<h5 id="expected-results_31">Expected results<a class="headerlink" href="#expected-results_31" title="Link to this section">&para;</a></h5>
 <ol>
 <li>The <code>jwt</code> parameter is an array of one element.</li>
 </ol>
 <!-- END INCLUDE -->
 <h4 id="ws_ap_ms_protocolmessages_051c">WS_AP_MS_ProtocolMessages_051c<a class="headerlink" href="#ws_ap_ms_protocolmessages_051c" title="Link to this section">&para;</a></h4>
-<h5 id="objective_26">Objective<a class="headerlink" href="#objective_26" title="Link to this section">&para;</a></h5>
+<h5 id="objective_32">Objective<a class="headerlink" href="#objective_32" title="Link to this section">&para;</a></h5>
 <p>Verify that the Wallet correctly formatted value(s) for the <code>jwt</code> parameter in the Credential Request to the Credential Endpoint of a Credential Issuer, when the <code>jwt</code> Proof Type is used.</p>
-<h5 id="references_26">References<a class="headerlink" href="#references_26" title="Link to this section">&para;</a></h5>
+<h5 id="references_32">References<a class="headerlink" href="#references_32" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[CIR 2024/2979 amended] annex Ib</li>
 <li>[ETSI TS 119 472-3] section 4.6.1.2</li>
 <li>[HAIP] section 4.5.1</li>
 <li>[OpenID4VCI] section 8.2, F.1</li>
 </ul>
-<h5 id="profile-applicability_26">Profile applicability<a class="headerlink" href="#profile-applicability_26" title="Link to this section">&para;</a></h5>
+<h5 id="profile-applicability_32">Profile applicability<a class="headerlink" href="#profile-applicability_32" title="Link to this section">&para;</a></h5>
 <p>Wallet uses the <code>jwt</code> proof type to convey a key attestation in Credential Requests.</p>
-<h5 id="eudi-wallet-relevancy_26">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_26" title="Link to this section">&para;</a></h5>
+<h5 id="eudi-wallet-relevancy_32">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_32" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="preconditions_26">Preconditions<a class="headerlink" href="#preconditions_26" title="Link to this section">&para;</a></h5>
+<h5 id="preconditions_32">Preconditions<a class="headerlink" href="#preconditions_32" title="Link to this section">&para;</a></h5>
 <ol class="precond-alpha">
 <li>Wallet is set to 'default_configuration_1'</li>
 <li>Wallet started engagement with Credential Issuer.</li>
@@ -2624,19 +2830,19 @@
 <li>Wallet send a syntactically correct <code>proofs</code> parameter in the Credential Request.</li>
 <li>Wallet send a correctly formatted <code>jwt</code> property in the <code>proofs</code> parameter of the Credential Request.</li>
 </ol>
-<h5 id="test-scenario_26">Test Scenario<a class="headerlink" href="#test-scenario_26" title="Link to this section">&para;</a></h5>
+<h5 id="test-scenario_32">Test Scenario<a class="headerlink" href="#test-scenario_32" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Verify the element(s) of the <code>jwt</code> property of the <code>proofs</code> parameter in the Credential Request.</li>
 </ol>
-<h5 id="expected-results_26">Expected results<a class="headerlink" href="#expected-results_26" title="Link to this section">&para;</a></h5>
+<h5 id="expected-results_32">Expected results<a class="headerlink" href="#expected-results_32" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Any element in the <code>jwt</code> parameter is a string.</li>
 </ol>
 <!-- END INCLUDE -->
 <h4 id="ws_ap_ms_protocolmessages_052a">WS_AP_MS_ProtocolMessages_052a<a class="headerlink" href="#ws_ap_ms_protocolmessages_052a" title="Link to this section">&para;</a></h4>
-<h5 id="objective_27">Objective<a class="headerlink" href="#objective_27" title="Link to this section">&para;</a></h5>
+<h5 id="objective_33">Objective<a class="headerlink" href="#objective_33" title="Link to this section">&para;</a></h5>
 <p>Verify that the Wallet sends a syntactically correct header of the proof with Key Attestation in the Credential Request, when the <code>jwt</code> Proof Type is used.</p>
-<h5 id="references_27">References<a class="headerlink" href="#references_27" title="Link to this section">&para;</a></h5>
+<h5 id="references_33">References<a class="headerlink" href="#references_33" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[CIR 2024/2979 amended] annex Ib</li>
 <li>[ETSI TS 119 472-3] section 4.6.1.2</li>
@@ -2644,11 +2850,11 @@
 <li>[OpenID4VCI] section F.1</li>
 <li>[RFC7515] section 4</li>
 </ul>
-<h5 id="profile-applicability_27">Profile applicability<a class="headerlink" href="#profile-applicability_27" title="Link to this section">&para;</a></h5>
+<h5 id="profile-applicability_33">Profile applicability<a class="headerlink" href="#profile-applicability_33" title="Link to this section">&para;</a></h5>
 <p>Wallet uses the <code>jwt</code> proof type to convey a key attestation in Credential Requests.</p>
-<h5 id="eudi-wallet-relevancy_27">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_27" title="Link to this section">&para;</a></h5>
+<h5 id="eudi-wallet-relevancy_33">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_33" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="preconditions_27">Preconditions<a class="headerlink" href="#preconditions_27" title="Link to this section">&para;</a></h5>
+<h5 id="preconditions_33">Preconditions<a class="headerlink" href="#preconditions_33" title="Link to this section">&para;</a></h5>
 <ol class="precond-alpha">
 <li>Wallet is set to 'default_configuration_1'</li>
 <li>Wallet started engagement with Credential Issuer.</li>
@@ -2657,11 +2863,11 @@
 <li>Wallet send a syntactically correct Credential Request to the Credential Endpoint of the Credential Issuer.</li>
 <li>Wallet send a valid signed proof with Key Attestation in the Credential Request.</li>
 </ol>
-<h5 id="test-scenario_27">Test Scenario<a class="headerlink" href="#test-scenario_27" title="Link to this section">&para;</a></h5>
+<h5 id="test-scenario_33">Test Scenario<a class="headerlink" href="#test-scenario_33" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Verify the presence of parameters in the header of the proof with Key Attestation.</li>
 </ol>
-<h5 id="expected-results_27">Expected results<a class="headerlink" href="#expected-results_27" title="Link to this section">&para;</a></h5>
+<h5 id="expected-results_33">Expected results<a class="headerlink" href="#expected-results_33" title="Link to this section">&para;</a></h5>
 <ol>
 <li>The presence of parameters in the header of the proof with Key Attestation is as follows:<ol>
 <li><code>alg</code> is present.</li>
@@ -2676,9 +2882,9 @@
 </ol>
 <!-- END INCLUDE -->
 <h4 id="ws_ap_ms_protocolmessages_052b">WS_AP_MS_ProtocolMessages_052b<a class="headerlink" href="#ws_ap_ms_protocolmessages_052b" title="Link to this section">&para;</a></h4>
-<h5 id="objective_28">Objective<a class="headerlink" href="#objective_28" title="Link to this section">&para;</a></h5>
+<h5 id="objective_34">Objective<a class="headerlink" href="#objective_34" title="Link to this section">&para;</a></h5>
 <p>Verify that the Wallet sends a correctly formatted <code>typ</code> header of the proof with Key Attestation in the Credential Request, when the <code>jwt</code> Proof Type is used.</p>
-<h5 id="references_28">References<a class="headerlink" href="#references_28" title="Link to this section">&para;</a></h5>
+<h5 id="references_34">References<a class="headerlink" href="#references_34" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[CIR 2024/2979 amended] annex Ib</li>
 <li>[ETSI TS 119 472-3] section 4.6.1.2</li>
@@ -2686,11 +2892,11 @@
 <li>[OpenID4VCI] section F.1</li>
 <li>[RFC7515] section 4</li>
 </ul>
-<h5 id="profile-applicability_28">Profile applicability<a class="headerlink" href="#profile-applicability_28" title="Link to this section">&para;</a></h5>
+<h5 id="profile-applicability_34">Profile applicability<a class="headerlink" href="#profile-applicability_34" title="Link to this section">&para;</a></h5>
 <p>Wallet uses the <code>jwt</code> proof type to convey a key attestation in Credential Requests.</p>
-<h5 id="eudi-wallet-relevancy_28">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_28" title="Link to this section">&para;</a></h5>
+<h5 id="eudi-wallet-relevancy_34">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_34" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="preconditions_28">Preconditions<a class="headerlink" href="#preconditions_28" title="Link to this section">&para;</a></h5>
+<h5 id="preconditions_34">Preconditions<a class="headerlink" href="#preconditions_34" title="Link to this section">&para;</a></h5>
 <ol class="precond-alpha">
 <li>Wallet is set to 'default_configuration_1'</li>
 <li>Wallet started engagement with Credential Issuer.</li>
@@ -2700,19 +2906,19 @@
 <li>Wallet send a valid signed proof with Key Attestation in the Credential Request.</li>
 <li>The proof with Key Attestation contains a <code>typ</code> header.</li>
 </ol>
-<h5 id="test-scenario_28">Test Scenario<a class="headerlink" href="#test-scenario_28" title="Link to this section">&para;</a></h5>
+<h5 id="test-scenario_34">Test Scenario<a class="headerlink" href="#test-scenario_34" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Verify the <code>typ</code> header of the proof with Key Attestation.</li>
 </ol>
-<h5 id="expected-results_28">Expected results<a class="headerlink" href="#expected-results_28" title="Link to this section">&para;</a></h5>
+<h5 id="expected-results_34">Expected results<a class="headerlink" href="#expected-results_34" title="Link to this section">&para;</a></h5>
 <ol>
 <li>The value of the <code>typ</code> header is a string.</li>
 </ol>
 <!-- END INCLUDE -->
 <h4 id="ws_ap_ms_protocolmessages_052c">WS_AP_MS_ProtocolMessages_052c<a class="headerlink" href="#ws_ap_ms_protocolmessages_052c" title="Link to this section">&para;</a></h4>
-<h5 id="objective_29">Objective<a class="headerlink" href="#objective_29" title="Link to this section">&para;</a></h5>
+<h5 id="objective_35">Objective<a class="headerlink" href="#objective_35" title="Link to this section">&para;</a></h5>
 <p>Verify that the Wallet sends a correct <code>typ</code> header of the proof with Key Attestation in the Credential Request, when the <code>jwt</code> Proof Type is used.</p>
-<h5 id="references_29">References<a class="headerlink" href="#references_29" title="Link to this section">&para;</a></h5>
+<h5 id="references_35">References<a class="headerlink" href="#references_35" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[CIR 2024/2979 amended] annex Ib</li>
 <li>[ETSI TS 119 472-3] section 4.6.1.2</li>
@@ -2720,11 +2926,11 @@
 <li>[OpenID4VCI] section F.1</li>
 <li>[RFC7515] section 4.1.9</li>
 </ul>
-<h5 id="profile-applicability_29">Profile applicability<a class="headerlink" href="#profile-applicability_29" title="Link to this section">&para;</a></h5>
+<h5 id="profile-applicability_35">Profile applicability<a class="headerlink" href="#profile-applicability_35" title="Link to this section">&para;</a></h5>
 <p>Wallet uses the <code>jwt</code> proof type to convey a key attestation in Credential Requests.</p>
-<h5 id="eudi-wallet-relevancy_29">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_29" title="Link to this section">&para;</a></h5>
+<h5 id="eudi-wallet-relevancy_35">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_35" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="preconditions_29">Preconditions<a class="headerlink" href="#preconditions_29" title="Link to this section">&para;</a></h5>
+<h5 id="preconditions_35">Preconditions<a class="headerlink" href="#preconditions_35" title="Link to this section">&para;</a></h5>
 <ol class="precond-alpha">
 <li>Wallet is set to 'default_configuration_1'</li>
 <li>Wallet started engagement with Credential Issuer.</li>
@@ -2734,19 +2940,19 @@
 <li>Wallet send a valid signed proof with Key Attestation in the Credential Request.</li>
 <li>The proof with Key Attestation contains a syntactically correct <code>typ</code> header.</li>
 </ol>
-<h5 id="test-scenario_29">Test Scenario<a class="headerlink" href="#test-scenario_29" title="Link to this section">&para;</a></h5>
+<h5 id="test-scenario_35">Test Scenario<a class="headerlink" href="#test-scenario_35" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Verify the <code>typ</code> header of the proof with Key Attestation.</li>
 </ol>
-<h5 id="expected-results_29">Expected results<a class="headerlink" href="#expected-results_29" title="Link to this section">&para;</a></h5>
+<h5 id="expected-results_35">Expected results<a class="headerlink" href="#expected-results_35" title="Link to this section">&para;</a></h5>
 <ol>
 <li>The value of the <code>typ</code> header is <code>openid4vci-proof+jwt</code>.</li>
 </ol>
 <!-- END INCLUDE -->
 <h4 id="ws_ap_ms_protocolmessages_053a">WS_AP_MS_ProtocolMessages_053a<a class="headerlink" href="#ws_ap_ms_protocolmessages_053a" title="Link to this section">&para;</a></h4>
-<h5 id="objective_30">Objective<a class="headerlink" href="#objective_30" title="Link to this section">&para;</a></h5>
+<h5 id="objective_36">Objective<a class="headerlink" href="#objective_36" title="Link to this section">&para;</a></h5>
 <p>Verify that the Wallet sends a syntactically correct body of the proof with Key Attestation in the Credential Request, when the <code>jwt</code> Proof Type is used.</p>
-<h5 id="references_30">References<a class="headerlink" href="#references_30" title="Link to this section">&para;</a></h5>
+<h5 id="references_36">References<a class="headerlink" href="#references_36" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[CIR 2024/2979 amended] annex Ib</li>
 <li>[ETSI TS 119 472-3] section 4.6.1.2</li>
@@ -2754,13 +2960,13 @@
 <li>[OpenID4VCI] section F.1</li>
 <li>[RFC7519] section 4</li>
 </ul>
-<h5 id="profile-applicability_30">Profile applicability<a class="headerlink" href="#profile-applicability_30" title="Link to this section">&para;</a></h5>
+<h5 id="profile-applicability_36">Profile applicability<a class="headerlink" href="#profile-applicability_36" title="Link to this section">&para;</a></h5>
 <p>Wallet uses the <code>jwt</code> proof type to convey a key attestation in Credential Requests.</p>
-<h5 id="eudi-wallet-relevancy_30">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_30" title="Link to this section">&para;</a></h5>
+<h5 id="eudi-wallet-relevancy_36">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_36" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="technology_24">Technology<a class="headerlink" href="#technology_24" title="Link to this section">&para;</a></h5>
+<h5 id="technology_30">Technology<a class="headerlink" href="#technology_30" title="Link to this section">&para;</a></h5>
 <p>Credential with Key Binding.</p>
-<h5 id="preconditions_30">Preconditions<a class="headerlink" href="#preconditions_30" title="Link to this section">&para;</a></h5>
+<h5 id="preconditions_36">Preconditions<a class="headerlink" href="#preconditions_36" title="Link to this section">&para;</a></h5>
 <ol class="precond-alpha">
 <li>Wallet is set to 'default_configuration_1'</li>
 <li>Wallet started engagement with Credential Issuer.</li>
@@ -2769,11 +2975,11 @@
 <li>Wallet send a syntactically correct Credential Request to the Credential Endpoint of the Credential Issuer.</li>
 <li>Wallet send a valid signed proof with Key Attestation in the Credential Request.</li>
 </ol>
-<h5 id="test-scenario_30">Test Scenario<a class="headerlink" href="#test-scenario_30" title="Link to this section">&para;</a></h5>
+<h5 id="test-scenario_36">Test Scenario<a class="headerlink" href="#test-scenario_36" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Verify the presence of parameters in the body of the proof with Key Attestation.</li>
 </ol>
-<h5 id="expected-results_30">Expected results<a class="headerlink" href="#expected-results_30" title="Link to this section">&para;</a></h5>
+<h5 id="expected-results_36">Expected results<a class="headerlink" href="#expected-results_36" title="Link to this section">&para;</a></h5>
 <ol>
 <li>The presence of parameters in the body of the proof with Key Attestation is as follows:<ol>
 <li>(optionally) <code>iss</code> can be present.</li>
@@ -2785,9 +2991,9 @@
 </ol>
 <!-- END INCLUDE -->
 <h4 id="ws_ap_ms_protocolmessages_053b">WS_AP_MS_ProtocolMessages_053b<a class="headerlink" href="#ws_ap_ms_protocolmessages_053b" title="Link to this section">&para;</a></h4>
-<h5 id="objective_31">Objective<a class="headerlink" href="#objective_31" title="Link to this section">&para;</a></h5>
+<h5 id="objective_37">Objective<a class="headerlink" href="#objective_37" title="Link to this section">&para;</a></h5>
 <p>Verify that the Wallet sends a correctly formatted <code>aud</code> claim in the proof with Key Attestation in the Credential Request, when the <code>jwt</code> Proof Type is used.</p>
-<h5 id="references_31">References<a class="headerlink" href="#references_31" title="Link to this section">&para;</a></h5>
+<h5 id="references_37">References<a class="headerlink" href="#references_37" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[CIR 2024/2979 amended] annex Ib</li>
 <li>[ETSI TS 119 472-3] section 4.6.1.2</li>
@@ -2795,13 +3001,13 @@
 <li>[OpenID4VCI] section F.1</li>
 <li>[RFC7519] section 4</li>
 </ul>
-<h5 id="profile-applicability_31">Profile applicability<a class="headerlink" href="#profile-applicability_31" title="Link to this section">&para;</a></h5>
+<h5 id="profile-applicability_37">Profile applicability<a class="headerlink" href="#profile-applicability_37" title="Link to this section">&para;</a></h5>
 <p>Wallet uses the <code>jwt</code> proof type to convey a key attestation in Credential Requests.</p>
-<h5 id="eudi-wallet-relevancy_31">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_31" title="Link to this section">&para;</a></h5>
+<h5 id="eudi-wallet-relevancy_37">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_37" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="technology_25">Technology<a class="headerlink" href="#technology_25" title="Link to this section">&para;</a></h5>
+<h5 id="technology_31">Technology<a class="headerlink" href="#technology_31" title="Link to this section">&para;</a></h5>
 <p>Credential with Key Binding.</p>
-<h5 id="preconditions_31">Preconditions<a class="headerlink" href="#preconditions_31" title="Link to this section">&para;</a></h5>
+<h5 id="preconditions_37">Preconditions<a class="headerlink" href="#preconditions_37" title="Link to this section">&para;</a></h5>
 <ol class="precond-alpha">
 <li>Wallet is set to 'default_configuration_1'</li>
 <li>Wallet started engagement with Credential Issuer.</li>
@@ -2811,19 +3017,19 @@
 <li>Wallet send a valid signed proof with Key Attestation in the Credential Request.</li>
 <li>the proof with Key Attestation contains a <code>aud</code> claim.</li>
 </ol>
-<h5 id="test-scenario_31">Test Scenario<a class="headerlink" href="#test-scenario_31" title="Link to this section">&para;</a></h5>
+<h5 id="test-scenario_37">Test Scenario<a class="headerlink" href="#test-scenario_37" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Verify the <code>aud</code> claim in the proof with Key Attestation.</li>
 </ol>
-<h5 id="expected-results_31">Expected results<a class="headerlink" href="#expected-results_31" title="Link to this section">&para;</a></h5>
+<h5 id="expected-results_37">Expected results<a class="headerlink" href="#expected-results_37" title="Link to this section">&para;</a></h5>
 <ol>
 <li>The value of the <code>aud</code> claim is a string.</li>
 </ol>
 <!-- END INCLUDE -->
 <h4 id="ws_ap_ms_protocolmessages_053c">WS_AP_MS_ProtocolMessages_053c<a class="headerlink" href="#ws_ap_ms_protocolmessages_053c" title="Link to this section">&para;</a></h4>
-<h5 id="objective_32">Objective<a class="headerlink" href="#objective_32" title="Link to this section">&para;</a></h5>
+<h5 id="objective_38">Objective<a class="headerlink" href="#objective_38" title="Link to this section">&para;</a></h5>
 <p>Verify that the Wallet sends a correctly formatted <code>aud</code> claim in the proof with Key Attestation in the Credential Request, when the <code>jwt</code> Proof Type is used.</p>
-<h5 id="references_32">References<a class="headerlink" href="#references_32" title="Link to this section">&para;</a></h5>
+<h5 id="references_38">References<a class="headerlink" href="#references_38" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[CIR 2024/2979 amended] annex Ib</li>
 <li>[ETSI TS 119 472-3] section 4.6.1.2</li>
@@ -2831,13 +3037,13 @@
 <li>[OpenID4VCI] section F.1</li>
 <li>[RFC7519] section 4</li>
 </ul>
-<h5 id="profile-applicability_32">Profile applicability<a class="headerlink" href="#profile-applicability_32" title="Link to this section">&para;</a></h5>
+<h5 id="profile-applicability_38">Profile applicability<a class="headerlink" href="#profile-applicability_38" title="Link to this section">&para;</a></h5>
 <p>Wallet uses the <code>jwt</code> proof type to convey a key attestation in Credential Requests.</p>
-<h5 id="eudi-wallet-relevancy_32">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_32" title="Link to this section">&para;</a></h5>
+<h5 id="eudi-wallet-relevancy_38">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_38" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="technology_26">Technology<a class="headerlink" href="#technology_26" title="Link to this section">&para;</a></h5>
+<h5 id="technology_32">Technology<a class="headerlink" href="#technology_32" title="Link to this section">&para;</a></h5>
 <p>Credential with Key Binding.</p>
-<h5 id="preconditions_32">Preconditions<a class="headerlink" href="#preconditions_32" title="Link to this section">&para;</a></h5>
+<h5 id="preconditions_38">Preconditions<a class="headerlink" href="#preconditions_38" title="Link to this section">&para;</a></h5>
 <ol class="precond-alpha">
 <li>Wallet is set to 'default_configuration_1'</li>
 <li>Wallet started engagement with Credential Issuer.</li>
@@ -2847,19 +3053,19 @@
 <li>Wallet send a valid signed proof with Key Attestation in the Credential Request.</li>
 <li>The proof with Key Attestation contains a syntactically correct <code>aud</code> claim.</li>
 </ol>
-<h5 id="test-scenario_32">Test Scenario<a class="headerlink" href="#test-scenario_32" title="Link to this section">&para;</a></h5>
+<h5 id="test-scenario_38">Test Scenario<a class="headerlink" href="#test-scenario_38" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Verify the <code>aud</code> claim in the proof with Key Attestation.</li>
 </ol>
-<h5 id="expected-results_32">Expected results<a class="headerlink" href="#expected-results_32" title="Link to this section">&para;</a></h5>
+<h5 id="expected-results_38">Expected results<a class="headerlink" href="#expected-results_38" title="Link to this section">&para;</a></h5>
 <ol>
 <li>The value of the <code>aud</code> claim is equal to the Credential Issuer Identifier.</li>
 </ol>
 <!-- END INCLUDE -->
 <h4 id="ws_ap_ms_protocolmessages_053d">WS_AP_MS_ProtocolMessages_053d<a class="headerlink" href="#ws_ap_ms_protocolmessages_053d" title="Link to this section">&para;</a></h4>
-<h5 id="objective_33">Objective<a class="headerlink" href="#objective_33" title="Link to this section">&para;</a></h5>
+<h5 id="objective_39">Objective<a class="headerlink" href="#objective_39" title="Link to this section">&para;</a></h5>
 <p>Verify that the Wallet sends a correctly formatted <code>nonce</code> claim in the proof with Key Attestation in the Credential Request, when the <code>jwt</code> Proof Type is used.</p>
-<h5 id="references_33">References<a class="headerlink" href="#references_33" title="Link to this section">&para;</a></h5>
+<h5 id="references_39">References<a class="headerlink" href="#references_39" title="Link to this section">&para;</a></h5>
 <ul>
 <li>[CIR 2024/2979 amended] annex Ib</li>
 <li>[ETSI TS 119 472-3] section 4.6.1.2</li>
@@ -2867,13 +3073,13 @@
 <li>[OpenID4VCI] section F.1</li>
 <li>[RFC7519] section 4</li>
 </ul>
-<h5 id="profile-applicability_33">Profile applicability<a class="headerlink" href="#profile-applicability_33" title="Link to this section">&para;</a></h5>
+<h5 id="profile-applicability_39">Profile applicability<a class="headerlink" href="#profile-applicability_39" title="Link to this section">&para;</a></h5>
 <p>Wallet uses the <code>jwt</code> proof type to convey a key attestation in Credential Requests.</p>
-<h5 id="eudi-wallet-relevancy_33">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_33" title="Link to this section">&para;</a></h5>
+<h5 id="eudi-wallet-relevancy_39">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_39" title="Link to this section">&para;</a></h5>
 <p>EUDI_generic | EUDI_required</p>
-<h5 id="technology_27">Technology<a class="headerlink" href="#technology_27" title="Link to this section">&para;</a></h5>
+<h5 id="technology_33">Technology<a class="headerlink" href="#technology_33" title="Link to this section">&para;</a></h5>
 <p>Credential with Key Binding.</p>
-<h5 id="preconditions_33">Preconditions<a class="headerlink" href="#preconditions_33" title="Link to this section">&para;</a></h5>
+<h5 id="preconditions_39">Preconditions<a class="headerlink" href="#preconditions_39" title="Link to this section">&para;</a></h5>
 <ol class="precond-alpha">
 <li>Wallet is set to 'default_configuration_1'</li>
 <li>Wallet started engagement with Credential Issuer.</li>
@@ -2883,11 +3089,11 @@
 <li>Wallet send a valid signed proof with Key Attestation in the Credential Request.</li>
 <li>the proof with Key Attestation contains a <code>nonce</code> claim.</li>
 </ol>
-<h5 id="test-scenario_33">Test Scenario<a class="headerlink" href="#test-scenario_33" title="Link to this section">&para;</a></h5>
+<h5 id="test-scenario_39">Test Scenario<a class="headerlink" href="#test-scenario_39" title="Link to this section">&para;</a></h5>
 <ol>
 <li>Verify the <code>nonce</code> claim in the proof with Key Attestation.</li>
 </ol>
-<h5 id="expected-results_33">Expected results<a class="headerlink" href="#expected-results_33" title="Link to this section">&para;</a></h5>
+<h5 id="expected-results_39">Expected results<a class="headerlink" href="#expected-results_39" title="Link to this section">&para;</a></h5>
 <ol>
 <li>The value of the <code>nonce</code> claim is a string.</li>
 </ol>
@@ -2895,7 +3101,7 @@
 
 <!-- END INCLUDE -->
 
-<!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md -->
+<!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./*/index.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md -->
 
 
 
@@ -2957,10 +3163,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.indexes", "navigation.top", "navigation.footer", "navigation.tracking", "toc.integrate", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.action.edit", "content.action.view", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.indexes", "navigation.top", "navigation.footer", "navigation.tracking", "toc.integrate", "toc.follow", "search.suggest", "search.highlight", "search.share", "content.action.edit", "content.action.view", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
         <script src="../../../../../media/js/mermaid.min.js"></script>
       
