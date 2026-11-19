@@ -12,7 +12,7 @@ Verify that, in the presentation flow via Redirects, a "Request URI method `post
 
 ## Profile applicability
 
-Wallet does support the Request URI Method `post`
+Wallet supports the Request URI Method `post`.
 
 ## EUDI-wallet relevancy
 

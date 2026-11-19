@@ -55,6 +55,18 @@ The details in a completed ICS can therefore be used to guide and configure test
 
 If an implementation supports multiple deployment settings or configurations, each matching a different ICS, the tester is responsible for executing tests for every valid configuration. A SUT must conform to its ICS because the ICS defines which requirements are relevant to the compliance evaluation and what is tested.
 
+##### Examples: ICS and Profile applicability
+
+The following examples show how the ICS and `Profile applicability` relate.
+
+A test case with the Profile applicability `None` applies to every configuration.
+
+A test case with one Profile applicability statement matches one ICS item, and the statement repeats that item word for word. For example, a test case with the Profile applicability "Wallet supports the Request URI Method `post`." applies only if the ICS of the implementation under test has "Yes" for the ICS item P.2, "Wallet supports the Request URI Method `post`."
+
+A test case with several Profile applicability statements applies only if the ICS has "Yes" for every one of them. For example, a test case has the two Profile applicability statements "The Wallet sends `Accept-Language` header in the HTTP GET request to indicate the language(s) preferred for display is supported." and "The Wallet has more than one preferred language." This test case applies if and only if the ICS has "Yes" for both items.
+
+Some ICS items do not select test cases. They provide input for test execution, for example the cipher suites that the implementation supports.
+
 #### Test preparation
 
 Before a Wallet can be used by an End-user, it typically must pass through several steps. These often include installation on a supported mobile device and configuration of local user authentication, such as a fingerprint or PIN.
