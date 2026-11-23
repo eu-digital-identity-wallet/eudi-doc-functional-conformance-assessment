@@ -109,3 +109,12 @@ The JWT VC Issuer Metadata configuration of `Issuer A`, served at the location f
 | --- | --- |
 | `issuer` | identical to the `iss` claim of the SD-JWT VC |
 | `jwks` | a JWK Set containing the public key that verifies Issuer A's signature, with a `kid` |
+
+### `default_jwt_vc_issuer_metadata_B`
+
+A variant of `default_jwt_vc_issuer_metadata_A` for test cases in which the Issuer publishes its key by reference. Where a test case names it, `Issuer A` serves it at the same location in place of `default_jwt_vc_issuer_metadata_A`. It carries no `jwks` member.
+
+| Member | Value |
+| --- | --- |
+| `issuer` | identical to the `iss` claim of the SD-JWT VC |
+| `jwks_uri` | an HTTPS URL under the tester's control that serves a JWK Set containing the public key that verifies Issuer A's signature, with a `kid` |
