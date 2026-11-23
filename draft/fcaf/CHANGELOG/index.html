@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../media/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.2">
     
     
       
@@ -1726,6 +1726,7 @@ rolling latest draft (untagged), while <code>reviewed</code>, <code>rc</code> an
 release-candidate and released version tags.</p>
 <h2 id="latest-draft">[Latest draft]<a class="headerlink" href="#latest-draft" title="Link to this section">&para;</a></h2>
 <ul>
+<li>Add fourteen Attestation Provider (WS_AP) test cases on how a Wallet processes an issued SD-JWT VC (<code>WS_AP_MS_Metadata</code>): the <code>typ</code> header and the <code>vct</code> claim, the claims that must not be selectively disclosable (<code>iss</code>, <code>nbf</code>, <code>exp</code>, <code>cnf</code>, <code>vct</code>, <code>vct#integrity</code>, <code>status</code>), the JWT VC Issuer Metadata issuer signature mechanism (keys referenced through <code>jwks_uri</code>, no valid key in the metadata, an <code>issuer</code> value that does not match <code>iss</code>), and retrieval of SD-JWT VC Type Metadata from the <code>vct</code> URL. Adds <code>default_jwt_vc_issuer_metadata_B</code> to the defaults.</li>
 <li>Add examples to the page on using the FCAF that show how the Implementation Conformance Statement (ICS) and <code>Profile applicability</code> relate: a test case without a restriction, a test case with one statement that repeats its ICS item word for word, and a test case with several statements. The profile line of <code>WS_RP_IA_ProtocolFlow__002b</code> and <code>WS_RP_IA_ProtocolFlow__002e_UF</code> now quotes ICS item P.2.</li>
 <li>Add ten Attestation Provider (WS_AP) test cases on how a Wallet retrieves SD-JWT VC metadata (<code>WS_AP_IA_MetadataExchange</code>): JWT VC Issuer Metadata from the well-known location, SD-JWT VC Type Metadata caching under <code>Cache-Control</code>, the <code>extends</code> chain, and alternative retrieval methods.</li>
 <li>Add nine Attestation Provider (WS_AP) test cases for SD-JWT VC credentials: three on the claim classes an issued credential may carry (<code>WS_AP_UC_Provisioning</code>) and six on SD-JWT VC Type Metadata retrieved from the <code>vct</code> URL (<code>WS_AP_MS_CredentialMetadata_TypeMetadata</code>). Adds <code>default_credential_E</code>, <code>default_credential_F</code> and the default metadata documents to the defaults, and the <code>[RFC2397]</code> entry to the reference catalogue.</li>

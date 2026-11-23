@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../media/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.2">
     
     
       
@@ -992,6 +992,17 @@
     <span class="md-ellipsis">
       
         default_jwt_vc_issuer_metadata_A
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default_jwt_vc_issuer_metadata_b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        default_jwt_vc_issuer_metadata_B
       
     </span>
   </a>
@@ -2090,6 +2101,26 @@ Specific tests rely on trusted lists or certificates. Those tests assume that th
 <tr>
 <td><code>jwks</code></td>
 <td>a JWK Set containing the public key that verifies Issuer A's signature, with a <code>kid</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="default_jwt_vc_issuer_metadata_b"><code>default_jwt_vc_issuer_metadata_B</code><a class="headerlink" href="#default_jwt_vc_issuer_metadata_b" title="Link to this section">&para;</a></h3>
+<p>A variant of <code>default_jwt_vc_issuer_metadata_A</code> for test cases in which the Issuer publishes its key by reference. Where a test case names it, <code>Issuer A</code> serves it at the same location in place of <code>default_jwt_vc_issuer_metadata_A</code>. It carries no <code>jwks</code> member.</p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>issuer</code></td>
+<td>identical to the <code>iss</code> claim of the SD-JWT VC</td>
+</tr>
+<tr>
+<td><code>jwks_uri</code></td>
+<td>an HTTPS URL under the tester's control that serves a JWK Set containing the public key that verifies Issuer A's signature, with a <code>kid</code></td>
 </tr>
 </tbody>
 </table>
