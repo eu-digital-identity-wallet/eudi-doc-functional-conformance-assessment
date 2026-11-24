@@ -26,6 +26,8 @@ The following properties are defined for a SUT, specifically an EUDI Wallet Unit
 
 ## Default credentials
 
+Unless a test case states a deviation, the SD-JWT VC variant of every default credential carries the issuer's signing certificate and its chain, excluding the trust anchor, in the `x5c` header parameter ([HAIP] clause 6.1.1, applied through [CIR 2024/2982 amended] Annex II OIDFVP-HAIP-GEN-05); where the Credential is a QEAA or a PuB-EAA, the protected header also carries `x5u` and `x5t#S256` ([ETSI TS 119 472-1] QEAA-5.6.2-02 and PuB-EAA-5.6.3-02). The mdoc variant carries the MSO signing certificate in the `x5chain` element of the `IssuerAuth` header ([ISO/IEC 18013-5]). A Credential that deviates from this is a named default item (`default_credential_F`), never an unnamed variation in a test step.
+
 ### `default_credential_A`
 
 A Credential, specifically an EAA, in both mdoc and SD-JWT VC format. The Credential is issued by `Issuer A`. It may be any type of Credential, identified by an mdoc `doctype` or an SD-JWT VC `vct`.
