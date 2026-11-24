@@ -2137,8 +2137,412 @@
 <!-- END INCLUDE -->
 
 <!-- END INCLUDE -->
+<h2 id="security-mechanisms-issuer-integrity">Security Mechanisms - Issuer Integrity<a class="headerlink" href="#security-mechanisms-issuer-integrity" title="Link to this section">&para;</a></h2>
+<!-- BEGIN INCLUDE ./[A-Z]*.md -->
+<h4 id="ws_ap_sm_issuerintegrity_001">WS_AP_SM_IssuerIntegrity_001<a class="headerlink" href="#ws_ap_sm_issuerintegrity_001" title="Link to this section">&para;</a></h4>
+<h5 id="objective_13">Objective<a class="headerlink" href="#objective_13" title="Link to this section">&para;</a></h5>
+<p>When a SD-JWT VC credential is provisioned, if the JWS Signature is not present in the SD-JWT VC, verify the SD-JWT VC is rejected by the wallet and the credential is not made available for use.</p>
+<h5 id="references_13">References<a class="headerlink" href="#references_13" title="Link to this section">&para;</a></h5>
+<ul>
+<li>[CIR 2024/2982 amended] Article 4(3)(d)</li>
+<li>[CIR 2024/2979 amended] Article 8, Annex II</li>
+<li>[ETSI TS 119 472-1] clause 5.1 EAA-5.1-01</li>
+<li>[SD-JWT VC] section 3.4</li>
+<li>[RFC9901] sections 4.1, 7.1 and 7.2</li>
+</ul>
+<h5 id="profile-applicability_13">Profile applicability<a class="headerlink" href="#profile-applicability_13" title="Link to this section">&para;</a></h5>
+<p>None</p>
+<h5 id="eudi-wallet-relevancy_13">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_13" title="Link to this section">&para;</a></h5>
+<p>EUDI_generic | EUDI_required</p>
+<h5 id="technology_13">Technology<a class="headerlink" href="#technology_13" title="Link to this section">&para;</a></h5>
+<p>Credential in SD-JWT VC format</p>
+<h5 id="preconditions_13">Preconditions<a class="headerlink" href="#preconditions_13" title="Link to this section">&para;</a></h5>
+<ol class="precond-alpha">
+<li>Wallet is set to <code>default_configuration_1</code>.</li>
+</ol>
+<h5 id="test-scenario_13">Test Scenario<a class="headerlink" href="#test-scenario_13" title="Link to this section">&para;</a></h5>
+<ol>
+<li>Issuer A issues the SD-JWT VC variant of <code>default_credential_A</code> to the wallet with the <code>alg</code> header value <code>none</code> and an empty signature.</li>
+</ol>
+<h5 id="expected-results_13">Expected results<a class="headerlink" href="#expected-results_13" title="Link to this section">&para;</a></h5>
+<ol>
+<li>The Wallet does not store the Credential and does not make it available for use. The End-user is informed that the Credential was not accepted, if applicable.</li>
+</ol>
+<!-- END INCLUDE -->
+<h4 id="ws_ap_sm_issuerintegrity_002">WS_AP_SM_IssuerIntegrity_002<a class="headerlink" href="#ws_ap_sm_issuerintegrity_002" title="Link to this section">&para;</a></h4>
+<h5 id="objective_14">Objective<a class="headerlink" href="#objective_14" title="Link to this section">&para;</a></h5>
+<p>When an SD-JWT VC using a JWT VC Issuer Metadata Issuer Signature Mechanism is provisioned to a wallet, if the SD-JWT VC issuer signature is incorrect, the SD-JWT VC is rejected by the wallet and the credential is not made available for use.</p>
+<h5 id="references_14">References<a class="headerlink" href="#references_14" title="Link to this section">&para;</a></h5>
+<ul>
+<li>[CIR 2024/2982 amended] Article 4(3)(d)</li>
+<li>[CIR 2024/2979 amended] Article 8, Annex II</li>
+<li>[ETSI TS 119 472-1] clause 5.1 EAA-5.1-01</li>
+<li>[SD-JWT VC] sections 3.4, 3.5 and 5.2</li>
+<li>[RFC9901] sections 7.1 and 7.2</li>
+</ul>
+<h5 id="profile-applicability_14">Profile applicability<a class="headerlink" href="#profile-applicability_14" title="Link to this section">&para;</a></h5>
+<p>Wallet supports the JWT VC Issuer Metadata issuer signature mechanism.</p>
+<h5 id="eudi-wallet-relevancy_14">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_14" title="Link to this section">&para;</a></h5>
+<p>EUDI_generic | EUDI_undefined</p>
+<h5 id="technology_14">Technology<a class="headerlink" href="#technology_14" title="Link to this section">&para;</a></h5>
+<p>Credential in SD-JWT VC format</p>
+<h5 id="preconditions_14">Preconditions<a class="headerlink" href="#preconditions_14" title="Link to this section">&para;</a></h5>
+<ol class="precond-alpha">
+<li>Wallet is set to <code>default_configuration_1</code>.</li>
+</ol>
+<h5 id="test-scenario_14">Test Scenario<a class="headerlink" href="#test-scenario_14" title="Link to this section">&para;</a></h5>
+<ol>
+<li>Issuer A issues <code>default_credential_F</code> to the wallet with a signature of the Issuer-signed JWT that does not verify with the key in <code>default_jwt_vc_issuer_metadata_A</code>; Issuer A serves <code>default_jwt_vc_issuer_metadata_A</code> at the well-known location derived from the <code>iss</code> value.</li>
+</ol>
+<h5 id="expected-results_14">Expected results<a class="headerlink" href="#expected-results_14" title="Link to this section">&para;</a></h5>
+<ol>
+<li>The Wallet does not store the Credential and does not make it available for use. The End-user is informed that the Credential was not accepted, if applicable.</li>
+</ol>
+<!-- END INCLUDE -->
+<h4 id="ws_ap_sm_issuerintegrity_002a">WS_AP_SM_IssuerIntegrity_002a<a class="headerlink" href="#ws_ap_sm_issuerintegrity_002a" title="Link to this section">&para;</a></h4>
+<h5 id="objective_15">Objective<a class="headerlink" href="#objective_15" title="Link to this section">&para;</a></h5>
+<p>When an SD-JWT VC using X509 Certificate Issuer Signature Mechanism is provisioned to a wallet, if the SD-JWT VC issuer signature is incorrect, the SD-JWT VC is rejected by the wallet and the credential is not made available for use.</p>
+<h5 id="references_15">References<a class="headerlink" href="#references_15" title="Link to this section">&para;</a></h5>
+<ul>
+<li>[CIR 2024/2982 amended] Article 4(3)(d)</li>
+<li>[CIR 2024/2979 amended] Article 8, Annex II</li>
+<li>[ETSI TS 119 472-1] clause 5.1 EAA-5.1-01</li>
+<li>[SD-JWT VC] sections 3.4 and 3.5</li>
+<li>[RFC9901] sections 7.1 and 7.2</li>
+</ul>
+<h5 id="profile-applicability_15">Profile applicability<a class="headerlink" href="#profile-applicability_15" title="Link to this section">&para;</a></h5>
+<p>None</p>
+<h5 id="eudi-wallet-relevancy_15">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_15" title="Link to this section">&para;</a></h5>
+<p>EUDI_generic | EUDI_required</p>
+<h5 id="technology_15">Technology<a class="headerlink" href="#technology_15" title="Link to this section">&para;</a></h5>
+<p>Credential in SD-JWT VC format</p>
+<h5 id="preconditions_15">Preconditions<a class="headerlink" href="#preconditions_15" title="Link to this section">&para;</a></h5>
+<ol class="precond-alpha">
+<li>Wallet is set to <code>default_configuration_1</code>.</li>
+</ol>
+<h5 id="test-scenario_15">Test Scenario<a class="headerlink" href="#test-scenario_15" title="Link to this section">&para;</a></h5>
+<ol>
+<li>Issuer A issues the SD-JWT VC variant of <code>default_credential_A</code> to the wallet with a signature of the Issuer-signed JWT that does not verify with the public key of the end-entity certificate in the <code>x5c</code> header.</li>
+</ol>
+<h5 id="expected-results_15">Expected results<a class="headerlink" href="#expected-results_15" title="Link to this section">&para;</a></h5>
+<ol>
+<li>The Wallet does not store the Credential and does not make it available for use. The End-user is informed that the Credential was not accepted, if applicable.</li>
+</ol>
+<!-- END INCLUDE -->
+<h4 id="ws_ap_sm_issuerintegrity_003a">WS_AP_SM_IssuerIntegrity_003a<a class="headerlink" href="#ws_ap_sm_issuerintegrity_003a" title="Link to this section">&para;</a></h4>
+<h5 id="objective_16">Objective<a class="headerlink" href="#objective_16" title="Link to this section">&para;</a></h5>
+<p>When an SD-JWT VC using X509 Certificate Issuer Signature Mechanism is provisioned to a wallet, if the SD-JWT VC issuer signature is correct, the SD-JWT VC is accepted by the wallet and the credential is made available for use.</p>
+<h5 id="references_16">References<a class="headerlink" href="#references_16" title="Link to this section">&para;</a></h5>
+<ul>
+<li>[CIR 2024/2982 amended] Article 4(3)(d)</li>
+<li>[CIR 2024/2979 amended] Article 8, Annex II</li>
+<li>[ETSI TS 119 472-1] clause 5.1 EAA-5.1-01</li>
+<li>[SD-JWT VC] sections 3.4 and 3.5</li>
+<li>[HAIP] section 6.1.1</li>
+</ul>
+<h5 id="profile-applicability_16">Profile applicability<a class="headerlink" href="#profile-applicability_16" title="Link to this section">&para;</a></h5>
+<p>None</p>
+<h5 id="eudi-wallet-relevancy_16">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_16" title="Link to this section">&para;</a></h5>
+<p>EUDI_generic | EUDI_required</p>
+<h5 id="technology_16">Technology<a class="headerlink" href="#technology_16" title="Link to this section">&para;</a></h5>
+<p>Credential in SD-JWT VC format</p>
+<h5 id="preconditions_16">Preconditions<a class="headerlink" href="#preconditions_16" title="Link to this section">&para;</a></h5>
+<ol class="precond-alpha">
+<li>Wallet is set to <code>default_configuration_1</code>.</li>
+</ol>
+<h5 id="test-scenario_16">Test Scenario<a class="headerlink" href="#test-scenario_16" title="Link to this section">&para;</a></h5>
+<ol>
+<li>Issuer A issues the SD-JWT VC variant of <code>default_credential_A</code> to the wallet, signed with the <code>ES256</code> algorithm.</li>
+</ol>
+<h5 id="expected-results_16">Expected results<a class="headerlink" href="#expected-results_16" title="Link to this section">&para;</a></h5>
+<ol>
+<li>The SD-JWT VC is accepted and made available for use.</li>
+</ol>
+<!-- END INCLUDE -->
+<h4 id="ws_ap_sm_issuerintegrity_004">WS_AP_SM_IssuerIntegrity_004<a class="headerlink" href="#ws_ap_sm_issuerintegrity_004" title="Link to this section">&para;</a></h4>
+<h5 id="objective_17">Objective<a class="headerlink" href="#objective_17" title="Link to this section">&para;</a></h5>
+<p>When an SD-JWT VC using X509 Certificate Issuer Signature Mechanism is provisioned to a wallet, if the Issuer-signed JWT x5c parameter certificate chain is invalid, the SD-JWT VC is rejected and the credential is not made available for use.</p>
+<h5 id="references_17">References<a class="headerlink" href="#references_17" title="Link to this section">&para;</a></h5>
+<ul>
+<li>[CIR 2024/2982 amended] Article 4(3)(d)</li>
+<li>[CIR 2024/2979 amended] Article 8, Annex II</li>
+<li>[ETSI TS 119 472-1] clause 5.1 EAA-5.1-01</li>
+<li>[SD-JWT VC] section 3.5</li>
+<li>[RFC7515] section 4.1.6</li>
+<li>[HAIP] section 6.1.1</li>
+</ul>
+<h5 id="profile-applicability_17">Profile applicability<a class="headerlink" href="#profile-applicability_17" title="Link to this section">&para;</a></h5>
+<p>None</p>
+<h5 id="eudi-wallet-relevancy_17">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_17" title="Link to this section">&para;</a></h5>
+<p>EUDI_generic | EUDI_required</p>
+<h5 id="technology_17">Technology<a class="headerlink" href="#technology_17" title="Link to this section">&para;</a></h5>
+<p>Credential in SD-JWT VC format</p>
+<h5 id="preconditions_17">Preconditions<a class="headerlink" href="#preconditions_17" title="Link to this section">&para;</a></h5>
+<ol class="precond-alpha">
+<li>Wallet is set to <code>default_configuration_1</code>.</li>
+</ol>
+<h5 id="test-scenario_17">Test Scenario<a class="headerlink" href="#test-scenario_17" title="Link to this section">&para;</a></h5>
+<ol>
+<li>Issuer A issues the SD-JWT VC variant of <code>default_credential_A</code> to the wallet with the protected header of the Issuer-signed JWT containing an <code>x5c</code> parameter with an invalid certificate chain: the signature of the intermediate CA certificate does not verify with the public key of the trust anchor of Issuer A.</li>
+</ol>
+<h5 id="expected-results_17">Expected results<a class="headerlink" href="#expected-results_17" title="Link to this section">&para;</a></h5>
+<ol>
+<li>The Wallet does not store the Credential and does not make it available for use. The End-user is informed that the Credential was not accepted, if applicable.</li>
+</ol>
+<!-- END INCLUDE -->
+<h4 id="ws_ap_sm_issuerintegrity_005">WS_AP_SM_IssuerIntegrity_005<a class="headerlink" href="#ws_ap_sm_issuerintegrity_005" title="Link to this section">&para;</a></h4>
+<h5 id="objective_18">Objective<a class="headerlink" href="#objective_18" title="Link to this section">&para;</a></h5>
+<p>When an SD-JWT VC using X509 Certificate Issuer Signature Mechanism is provisioned to a wallet, if the protected header of the Issuer-signed JWT contains the <code>x5c</code> parameter with an invalid end-entity certificate and a credential signature created by the end-entity's key, verify the SD-JWT VC is rejected by the wallet and the credential is not made available for use.</p>
+<h5 id="references_18">References<a class="headerlink" href="#references_18" title="Link to this section">&para;</a></h5>
+<ul>
+<li>[CIR 2024/2982 amended] Article 4(3)(d)</li>
+<li>[CIR 2024/2979 amended] Article 8, Annex II</li>
+<li>[ETSI TS 119 472-1] clause 5.1 EAA-5.1-01</li>
+<li>[SD-JWT VC] section 3.5</li>
+<li>[RFC7515] section 4.1.6</li>
+<li>[HAIP] section 6.1.1</li>
+</ul>
+<h5 id="profile-applicability_18">Profile applicability<a class="headerlink" href="#profile-applicability_18" title="Link to this section">&para;</a></h5>
+<p>None</p>
+<h5 id="eudi-wallet-relevancy_18">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_18" title="Link to this section">&para;</a></h5>
+<p>EUDI_generic | EUDI_required</p>
+<h5 id="technology_18">Technology<a class="headerlink" href="#technology_18" title="Link to this section">&para;</a></h5>
+<p>Credential in SD-JWT VC format</p>
+<h5 id="preconditions_18">Preconditions<a class="headerlink" href="#preconditions_18" title="Link to this section">&para;</a></h5>
+<ol class="precond-alpha">
+<li>Wallet is set to <code>default_configuration_1</code>.</li>
+</ol>
+<h5 id="test-scenario_18">Test Scenario<a class="headerlink" href="#test-scenario_18" title="Link to this section">&para;</a></h5>
+<ol>
+<li>Issuer A issues the SD-JWT VC variant of <code>default_credential_A</code> to the wallet with the protected header of the Issuer-signed JWT containing an <code>x5c</code> parameter with an invalid end-entity certificate: its signature does not verify with the public key of the CA certificate that issued it. The signature of the Issuer-signed JWT verifies with the public key of the end-entity certificate.</li>
+</ol>
+<h5 id="expected-results_18">Expected results<a class="headerlink" href="#expected-results_18" title="Link to this section">&para;</a></h5>
+<ol>
+<li>The Wallet does not store the Credential and does not make it available for use. The End-user is informed that the Credential was not accepted, if applicable.</li>
+</ol>
+<!-- END INCLUDE -->
+<h4 id="ws_ap_sm_issuerintegrity_006">WS_AP_SM_IssuerIntegrity_006<a class="headerlink" href="#ws_ap_sm_issuerintegrity_006" title="Link to this section">&para;</a></h4>
+<h5 id="objective_19">Objective<a class="headerlink" href="#objective_19" title="Link to this section">&para;</a></h5>
+<p>When an SD-JWT VC using a JWT VC Issuer Metadata Issuer Signature Mechanism is provisioned to a wallet, if the value of the iss claim is an HTTPS URI but neither jwks nor jwks_uri Issuer Metadata configuration parameters are returned, verify that the wallet rejects the credential.</p>
+<h5 id="references_19">References<a class="headerlink" href="#references_19" title="Link to this section">&para;</a></h5>
+<ul>
+<li>[CIR 2024/2982 amended] Article 4(3)(d)</li>
+<li>[CIR 2024/2979 amended] Article 8, Annex II</li>
+<li>[ETSI TS 119 472-1] clause 5.1 EAA-5.1-01</li>
+<li>[SD-JWT VC] sections 3.5, 5.1 and 5.2</li>
+</ul>
+<h5 id="profile-applicability_19">Profile applicability<a class="headerlink" href="#profile-applicability_19" title="Link to this section">&para;</a></h5>
+<p>Wallet supports the JWT VC Issuer Metadata issuer signature mechanism.</p>
+<h5 id="eudi-wallet-relevancy_19">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_19" title="Link to this section">&para;</a></h5>
+<p>EUDI_generic | EUDI_undefined</p>
+<h5 id="technology_19">Technology<a class="headerlink" href="#technology_19" title="Link to this section">&para;</a></h5>
+<p>Credential in SD-JWT VC format</p>
+<h5 id="preconditions_19">Preconditions<a class="headerlink" href="#preconditions_19" title="Link to this section">&para;</a></h5>
+<ol class="precond-alpha">
+<li>Wallet is set to <code>default_configuration_1</code>.</li>
+</ol>
+<h5 id="test-scenario_19">Test Scenario<a class="headerlink" href="#test-scenario_19" title="Link to this section">&para;</a></h5>
+<ol>
+<li>Issuer A issues <code>default_credential_F</code> to the wallet with an <code>iss</code> claim that is an HTTPS URL; Issuer A serves <code>default_jwt_vc_issuer_metadata_A</code> at the well-known location derived from the <code>iss</code> value, without the <code>jwks</code> member and without a <code>jwks_uri</code> member.</li>
+<li>Verify the wallet's JWT VC Issuer Metadata request.</li>
+</ol>
+<h5 id="expected-results_19">Expected results<a class="headerlink" href="#expected-results_19" title="Link to this section">&para;</a></h5>
+<ol>
+<li>The wallet sent an HTTP <code>GET</code> request for the JWT VC Issuer Metadata to the well-known location derived from the <code>iss</code> value.</li>
+<li>The Wallet does not store the Credential and does not make it available for use. The End-user is informed that the Credential was not accepted, if applicable.</li>
+</ol>
+<!-- END INCLUDE -->
+<h4 id="ws_ap_sm_issuerintegrity_006c">WS_AP_SM_IssuerIntegrity_006c<a class="headerlink" href="#ws_ap_sm_issuerintegrity_006c" title="Link to this section">&para;</a></h4>
+<h5 id="objective_20">Objective<a class="headerlink" href="#objective_20" title="Link to this section">&para;</a></h5>
+<p>When an SD-JWT VC using a JWT VC Issuer Metadata Issuer Signature Mechanism is provisioned to a wallet, if the value of the iss claim is an HTTPS URI, the jwks_uri Issuer Metadata configuration parameter supplies a URL but it does not point to the correct JWK Set, verify that the wallet rejects the credential.</p>
+<h5 id="references_20">References<a class="headerlink" href="#references_20" title="Link to this section">&para;</a></h5>
+<ul>
+<li>[CIR 2024/2982 amended] Article 4(3)(d)</li>
+<li>[CIR 2024/2979 amended] Article 8, Annex II</li>
+<li>[ETSI TS 119 472-1] clause 5.1 EAA-5.1-01</li>
+<li>[SD-JWT VC] sections 3.5, 5.1 and 5.2</li>
+</ul>
+<h5 id="profile-applicability_20">Profile applicability<a class="headerlink" href="#profile-applicability_20" title="Link to this section">&para;</a></h5>
+<p>Wallet supports the JWT VC Issuer Metadata issuer signature mechanism.</p>
+<h5 id="eudi-wallet-relevancy_20">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_20" title="Link to this section">&para;</a></h5>
+<p>EUDI_generic | EUDI_undefined</p>
+<h5 id="technology_20">Technology<a class="headerlink" href="#technology_20" title="Link to this section">&para;</a></h5>
+<p>Credential in SD-JWT VC format</p>
+<h5 id="preconditions_20">Preconditions<a class="headerlink" href="#preconditions_20" title="Link to this section">&para;</a></h5>
+<ol class="precond-alpha">
+<li>Wallet is set to <code>default_configuration_1</code>.</li>
+</ol>
+<h5 id="test-scenario_20">Test Scenario<a class="headerlink" href="#test-scenario_20" title="Link to this section">&para;</a></h5>
+<ol>
+<li>Issuer A issues <code>default_credential_F</code> to the wallet with an <code>iss</code> claim that is an HTTPS URL; Issuer A serves <code>default_jwt_vc_issuer_metadata_B</code> at the well-known location derived from the <code>iss</code> value, and at the <code>jwks_uri</code> it contains a JWK Set without the key that signed the Credential.</li>
+<li>Verify the wallet's JWT VC Issuer Metadata and JWK Set requests.</li>
+</ol>
+<h5 id="expected-results_20">Expected results<a class="headerlink" href="#expected-results_20" title="Link to this section">&para;</a></h5>
+<ol>
+<li>The wallet sent two HTTP <code>GET</code> requests, in this order:<ol>
+<li>to the well-known location derived from the <code>iss</code> value, receiving <code>default_jwt_vc_issuer_metadata_B</code>;</li>
+<li>to the <code>jwks_uri</code> in <code>default_jwt_vc_issuer_metadata_B</code>, receiving the JWK Set.</li>
+</ol>
+</li>
+<li>The Wallet does not store the Credential and does not make it available for use. The End-user is informed that the Credential was not accepted, if applicable.</li>
+</ol>
+<!-- END INCLUDE -->
+<h4 id="ws_ap_sm_issuerintegrity_009">WS_AP_SM_IssuerIntegrity_009<a class="headerlink" href="#ws_ap_sm_issuerintegrity_009" title="Link to this section">&para;</a></h4>
+<h5 id="objective_21">Objective<a class="headerlink" href="#objective_21" title="Link to this section">&para;</a></h5>
+<p>When an SD-JWT VC with claims supporting selective disclosure is provisioned to a wallet, if a disclosure does not correspond to a digest value in the SD-JWT VC, the SD-JWT VC is rejected by the wallet and the credential is not made available for use.</p>
+<h5 id="references_21">References<a class="headerlink" href="#references_21" title="Link to this section">&para;</a></h5>
+<ul>
+<li>[CIR 2024/2982 amended] Article 4(3)(d)</li>
+<li>[CIR 2024/2979 amended] Article 8, Annex II</li>
+<li>[ETSI TS 119 472-1] clause 5.1 EAA-5.1-01</li>
+<li>[SD-JWT VC] section 3.4</li>
+<li>[RFC9901] sections 7.1 and 7.2</li>
+</ul>
+<h5 id="profile-applicability_21">Profile applicability<a class="headerlink" href="#profile-applicability_21" title="Link to this section">&para;</a></h5>
+<p>None</p>
+<h5 id="eudi-wallet-relevancy_21">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_21" title="Link to this section">&para;</a></h5>
+<p>EUDI_generic | EUDI_required</p>
+<h5 id="technology_21">Technology<a class="headerlink" href="#technology_21" title="Link to this section">&para;</a></h5>
+<p>Credential in SD-JWT VC format</p>
+<h5 id="preconditions_21">Preconditions<a class="headerlink" href="#preconditions_21" title="Link to this section">&para;</a></h5>
+<ol class="precond-alpha">
+<li>Wallet is set to <code>default_configuration_1</code>.</li>
+</ol>
+<h5 id="test-scenario_21">Test Scenario<a class="headerlink" href="#test-scenario_21" title="Link to this section">&para;</a></h5>
+<ol>
+<li>Issuer A issues the SD-JWT VC variant of <code>default_credential_A</code> to the wallet with one additional Disclosure whose digest is not contained in the Issuer-signed JWT.</li>
+</ol>
+<h5 id="expected-results_21">Expected results<a class="headerlink" href="#expected-results_21" title="Link to this section">&para;</a></h5>
+<ol>
+<li>The Wallet does not store the Credential and does not make it available for use. The End-user is informed that the Credential was not accepted, if applicable.</li>
+</ol>
+<!-- END INCLUDE -->
+<h4 id="ws_ap_sm_issuerintegrity_010">WS_AP_SM_IssuerIntegrity_010<a class="headerlink" href="#ws_ap_sm_issuerintegrity_010" title="Link to this section">&para;</a></h4>
+<h5 id="objective_22">Objective<a class="headerlink" href="#objective_22" title="Link to this section">&para;</a></h5>
+<p>When a SD-JWT VC credential is provisioned by an Issuer publishing JWT VC Issuer Metadata, if the response to the JWT VC Issuer Metadata request is not a 200 HTTP status code, verify the credential is rejected by the wallet and the credential is not made available for use.</p>
+<h5 id="references_22">References<a class="headerlink" href="#references_22" title="Link to this section">&para;</a></h5>
+<ul>
+<li>[CIR 2024/2982 amended] Article 4(3)(d)</li>
+<li>[CIR 2024/2979 amended] Article 8, Annex II</li>
+<li>[ETSI TS 119 472-1] clause 5.1 EAA-5.1-01</li>
+<li>[SD-JWT VC] sections 3.5, 5.1 and 5.2</li>
+</ul>
+<h5 id="profile-applicability_22">Profile applicability<a class="headerlink" href="#profile-applicability_22" title="Link to this section">&para;</a></h5>
+<p>Wallet supports the JWT VC Issuer Metadata issuer signature mechanism.</p>
+<h5 id="eudi-wallet-relevancy_22">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_22" title="Link to this section">&para;</a></h5>
+<p>EUDI_generic | EUDI_undefined</p>
+<h5 id="technology_22">Technology<a class="headerlink" href="#technology_22" title="Link to this section">&para;</a></h5>
+<p>Credential in SD-JWT VC format</p>
+<h5 id="preconditions_22">Preconditions<a class="headerlink" href="#preconditions_22" title="Link to this section">&para;</a></h5>
+<ol class="precond-alpha">
+<li>Wallet is set to <code>default_configuration_1</code>.</li>
+</ol>
+<h5 id="test-scenario_22">Test Scenario<a class="headerlink" href="#test-scenario_22" title="Link to this section">&para;</a></h5>
+<ol>
+<li>Issuer A issues <code>default_credential_F</code> to the wallet; the well-known location derived from the <code>iss</code> value answers the request for the JWT VC Issuer Metadata with the HTTP status code <code>204</code> and no content.</li>
+<li>Verify the wallet's JWT VC Issuer Metadata request.</li>
+</ol>
+<h5 id="expected-results_22">Expected results<a class="headerlink" href="#expected-results_22" title="Link to this section">&para;</a></h5>
+<ol>
+<li>The wallet sent an HTTP <code>GET</code> request for the JWT VC Issuer Metadata to the well-known location derived from the <code>iss</code> value.</li>
+<li>The Wallet does not store the Credential and does not make it available for use. The End-user is informed that the Credential was not accepted, if applicable.</li>
+</ol>
+<!-- END INCLUDE -->
+<h4 id="ws_ap_sm_issuerintegrity_011">WS_AP_SM_IssuerIntegrity_011<a class="headerlink" href="#ws_ap_sm_issuerintegrity_011" title="Link to this section">&para;</a></h4>
+<h5 id="objective_23">Objective<a class="headerlink" href="#objective_23" title="Link to this section">&para;</a></h5>
+<p>When a SD-JWT VC credential is issued, if it explicitly specifies it uses the SHA-256 digest algorithm for selective disclosure, verify the credential is accepted by the wallet and the credential is made available for use.</p>
+<h5 id="references_23">References<a class="headerlink" href="#references_23" title="Link to this section">&para;</a></h5>
+<ul>
+<li>[CIR 2024/2982 amended] Article 4(3)(d)</li>
+<li>[CIR 2024/2979 amended] Article 8, Annex II</li>
+<li>[ETSI TS 119 472-1] clause 5.1 EAA-5.1-01</li>
+<li>[RFC9901] section 4.1.1</li>
+<li>[HAIP] section 8</li>
+</ul>
+<h5 id="profile-applicability_23">Profile applicability<a class="headerlink" href="#profile-applicability_23" title="Link to this section">&para;</a></h5>
+<p>None</p>
+<h5 id="eudi-wallet-relevancy_23">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_23" title="Link to this section">&para;</a></h5>
+<p>EUDI_generic | EUDI_required</p>
+<h5 id="technology_23">Technology<a class="headerlink" href="#technology_23" title="Link to this section">&para;</a></h5>
+<p>Credential in SD-JWT VC format</p>
+<h5 id="preconditions_23">Preconditions<a class="headerlink" href="#preconditions_23" title="Link to this section">&para;</a></h5>
+<ol class="precond-alpha">
+<li>Wallet is set to <code>default_configuration_1</code>.</li>
+</ol>
+<h5 id="test-scenario_23">Test Scenario<a class="headerlink" href="#test-scenario_23" title="Link to this section">&para;</a></h5>
+<ol>
+<li>Issuer A issues the SD-JWT VC variant of <code>default_credential_A</code> to the wallet with selectively disclosable claims and an <code>_sd_alg</code> claim with the value <code>sha-256</code>.</li>
+</ol>
+<h5 id="expected-results_23">Expected results<a class="headerlink" href="#expected-results_23" title="Link to this section">&para;</a></h5>
+<ol>
+<li>The SD-JWT VC is accepted and made available for use.</li>
+</ol>
+<!-- END INCLUDE -->
+<h4 id="ws_ap_sm_issuerintegrity_012">WS_AP_SM_IssuerIntegrity_012<a class="headerlink" href="#ws_ap_sm_issuerintegrity_012" title="Link to this section">&para;</a></h4>
+<h5 id="objective_24">Objective<a class="headerlink" href="#objective_24" title="Link to this section">&para;</a></h5>
+<p>When a SD-JWT VC credential is issued, if it does not explicitly specify the digest algorithm for selective disclosures but uses the default SHA-256 hash for selective disclosure hashes, verify the credential is accepted by the wallet and the credential is made available for use.</p>
+<h5 id="references_24">References<a class="headerlink" href="#references_24" title="Link to this section">&para;</a></h5>
+<ul>
+<li>[CIR 2024/2982 amended] Article 4(3)(d)</li>
+<li>[CIR 2024/2979 amended] Article 8, Annex II</li>
+<li>[ETSI TS 119 472-1] clause 5.1 EAA-5.1-01</li>
+<li>[RFC9901] section 4.1.1</li>
+<li>[HAIP] section 8</li>
+</ul>
+<h5 id="profile-applicability_24">Profile applicability<a class="headerlink" href="#profile-applicability_24" title="Link to this section">&para;</a></h5>
+<p>None</p>
+<h5 id="eudi-wallet-relevancy_24">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_24" title="Link to this section">&para;</a></h5>
+<p>EUDI_generic | EUDI_required</p>
+<h5 id="technology_24">Technology<a class="headerlink" href="#technology_24" title="Link to this section">&para;</a></h5>
+<p>Credential in SD-JWT VC format</p>
+<h5 id="preconditions_24">Preconditions<a class="headerlink" href="#preconditions_24" title="Link to this section">&para;</a></h5>
+<ol class="precond-alpha">
+<li>Wallet is set to <code>default_configuration_1</code>.</li>
+</ol>
+<h5 id="test-scenario_24">Test Scenario<a class="headerlink" href="#test-scenario_24" title="Link to this section">&para;</a></h5>
+<ol>
+<li>Issuer A issues the SD-JWT VC variant of <code>default_credential_A</code> to the wallet with selectively disclosable claims, without an <code>_sd_alg</code> claim and with digests calculated with SHA-256.</li>
+</ol>
+<h5 id="expected-results_24">Expected results<a class="headerlink" href="#expected-results_24" title="Link to this section">&para;</a></h5>
+<ol>
+<li>The SD-JWT VC is accepted and made available for use.</li>
+</ol>
+<!-- END INCLUDE -->
+<h4 id="ws_ap_sm_issuerintegrity_013">WS_AP_SM_IssuerIntegrity_013<a class="headerlink" href="#ws_ap_sm_issuerintegrity_013" title="Link to this section">&para;</a></h4>
+<h5 id="objective_25">Objective<a class="headerlink" href="#objective_25" title="Link to this section">&para;</a></h5>
+<p>When a SD-JWT VC credential is issued using the X.509 Certificate Issuer Signature Mechanism, if the signing X.509 certificate in <code>x5c</code> is self-signed, verify that the wallet rejects the credential.</p>
+<h5 id="references_25">References<a class="headerlink" href="#references_25" title="Link to this section">&para;</a></h5>
+<ul>
+<li>[CIR 2024/2982 amended] Article 4(3)(d)</li>
+<li>[CIR 2024/2979 amended] Article 8, Annex II</li>
+<li>[ETSI TS 119 472-1] clause 5.1 EAA-5.1-01</li>
+<li>[SD-JWT VC] section 3.5</li>
+<li>[RFC7515] section 4.1.6</li>
+<li>[HAIP] section 6.1.1</li>
+</ul>
+<h5 id="profile-applicability_25">Profile applicability<a class="headerlink" href="#profile-applicability_25" title="Link to this section">&para;</a></h5>
+<p>None</p>
+<h5 id="eudi-wallet-relevancy_25">EUDI-wallet relevancy<a class="headerlink" href="#eudi-wallet-relevancy_25" title="Link to this section">&para;</a></h5>
+<p>EUDI_generic | EUDI_required</p>
+<h5 id="technology_25">Technology<a class="headerlink" href="#technology_25" title="Link to this section">&para;</a></h5>
+<p>Credential in SD-JWT VC format</p>
+<h5 id="preconditions_25">Preconditions<a class="headerlink" href="#preconditions_25" title="Link to this section">&para;</a></h5>
+<ol class="precond-alpha">
+<li>Wallet is set to <code>default_configuration_1</code>.</li>
+</ol>
+<h5 id="test-scenario_25">Test Scenario<a class="headerlink" href="#test-scenario_25" title="Link to this section">&para;</a></h5>
+<ol>
+<li>Issuer A issues the SD-JWT VC variant of <code>default_credential_A</code> to the wallet with an <code>x5c</code> header that contains one self-signed certificate, which is not a trust anchor of the wallet, and with a signature of the Issuer-signed JWT that verifies with the public key of that certificate.</li>
+</ol>
+<h5 id="expected-results_25">Expected results<a class="headerlink" href="#expected-results_25" title="Link to this section">&para;</a></h5>
+<ol>
+<li>The Wallet does not store the Credential and does not make it available for use. The End-user is informed that the Credential was not accepted, if applicable.</li>
+</ol>
+<!-- END INCLUDE -->
 
-<!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md -->
+<!-- END INCLUDE -->
+
+<!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./*/index.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md --><!-- BEGIN INCLUDE ./[A-Z]*.md -->
 
 
 
